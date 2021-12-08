@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="Ds_List" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sPlanNo" name="sPlanNo"/>
+                        <w2:column dataType="text" id="sInrpsCd" name="sInrpsCd"/>
+                        <w2:column dataType="text" id="nInsCnt" name="nInsCnt"/>
+                        <w2:column dataType="text" id="nCtrtCnt" name="nCtrtCnt"/>
+                        <w2:column dataType="text" id="nMntnCnt" name="nMntnCnt"/>
+                        <w2:column dataType="text" id="nLapsCnt" name="nLapsCnt"/>
+                        <w2:column dataType="text" id="nInjrHschgCnt" name="nInjrHschgCnt"/>
+                        <w2:column dataType="text" id="nInjrHschg" name="nInjrHschg"/>
+                        <w2:column dataType="text" id="nDsasHschgCnt" name="nDsasHschgCnt"/>
+                        <w2:column dataType="text" id="nDsasHschg" name="nDsasHschg"/>
+                        <w2:column dataType="text" id="nCancrHospCurrCnt" name="nCancrHospCurrCnt"/>
+                        <w2:column dataType="text" id="nCancrHospCurr" name="nCancrHospCurr"/>
+                        <w2:column dataType="text" id="nCancrDgnsCnt" name="nCancrDgnsCnt"/>
+                        <w2:column dataType="text" id="nCancrDgns" name="nCancrDgns"/>
+                        <w2:column dataType="text" id="nCancrOpcrgCnt" name="nCancrOpcrgCnt"/>
+                        <w2:column dataType="text" id="nCancrOpcrg" name="nCancrOpcrg"/>
+                        <w2:column dataType="text" id="nSpclDsasOpcrgCnt" name="nSpclDsasOpcrgCnt"/>
+                        <w2:column dataType="text" id="nSpclDsasOpcrg" name="nSpclDsasOpcrg"/>
+                        <w2:column dataType="text" id="nInjrDeadSeqlObstCnt" name="nInjrDeadSeqlObstCnt"/>
+                        <w2:column dataType="text" id="nInjrDeadSeqlObst" name="nInjrDeadSeqlObst"/>
+                        <w2:column dataType="text" id="n8AbovSeqlObstCnt" name="n8AbovSeqlObstCnt"/>
+                        <w2:column dataType="text" id="n8AbovSeqlObst" name="n8AbovSeqlObst"/>
+                        <w2:column dataType="text" id="n5AbovSeqlObstCnt" name="n5AbovSeqlObstCnt"/>
+                        <w2:column dataType="text" id="n5AbovSeqlObst" name="n5AbovSeqlObst"/>
+                        <w2:column dataType="text" id="nSeqlObstCnt" name="nSeqlObstCnt"/>
+                        <w2:column dataType="text" id="nSeqlObst" name="nSeqlObst"/>
+                        <w2:column dataType="text" id="nBrainDsasCnt" name="nBrainDsasCnt"/>
+                        <w2:column dataType="text" id="nBrainDsas" name="nBrainDsas"/>
+                        <w2:column dataType="text" id="nBldDsasDgnsCnt" name="nBldDsasDgnsCnt"/>
+                        <w2:column dataType="text" id="nBldDsasDgns" name="nBldDsasDgns"/>
+                        <w2:column dataType="text" id="nFractureCnt" name="nFractureCnt"/>
+                        <w2:column dataType="text" id="nFracture" name="nFracture"/>
+                        <w2:column dataType="text" id="nCarExtraSuptCnt" name="nCarExtraSuptCnt"/>
+                        <w2:column dataType="text" id="nCarExtraSupt" name="nCarExtraSupt"/>
+                        <w2:column dataType="text" id="nHoleInOneCnt" name="nHoleInOneCnt"/>
+                        <w2:column dataType="text" id="nHoleInOne" name="nHoleInOne"/>
+                        <w2:column dataType="text" id="nCrmcsAgSuptCnt" name="nCrmcsAgSuptCnt"/>
+                        <w2:column dataType="text" id="nCrmcsAgSupt" name="nCrmcsAgSupt"/>
+                        <w2:column dataType="text" id="nTthInsurCnt" name="nTthInsurCnt"/>
+                        <w2:column dataType="text" id="nTthInsur" name="nTthInsur"/>
+                        <w2:column dataType="text" id="nDfnsCostCnt" name="nDfnsCostCnt"/>
+                        <w2:column dataType="text" id="nDfnsCost" name="nDfnsCost"/>
+                        <w2:column dataType="text" id="nDfnsCostInfmCnt" name="nDfnsCostInfmCnt"/>
+                        <w2:column dataType="text" id="nDfnsCostInfm" name="nDfnsCostInfm"/>
+                        <w2:column dataType="text" id="nInjrOpcrgCnt" name="nInjrOpcrgCnt"/>
+                        <w2:column dataType="text" id="nInjrOpcrg" name="nInjrOpcrg"/>
+                        <w2:column dataType="text" id="nDsasOpcrgCnt" name="nDsasOpcrgCnt"/>
+                        <w2:column dataType="text" id="nDsasOpcrg" name="nDsasOpcrg"/>
+                        <w2:column dataType="text" id="nInjrLtrmHschgCnt" name="nInjrLtrmHschgCnt"/>
+                        <w2:column dataType="text" id="nInjrLtrmHschg" name="nInjrLtrmHschg"/>
+                        <w2:column dataType="text" id="nDsasLtrmHschgCnt" name="nDsasLtrmHschgCnt"/>
+                        <w2:column dataType="text" id="nDsasLtrmHschg" name="nDsasLtrmHschg"/>
+                        <w2:column dataType="text" id="sInptDler" name="sInptDler"/>
+                        <w2:column dataType="text" id="sInptDlerIP" name="sInptDlerIP"/>
+                        <w2:column dataType="text" id="sInptDate" name="sInptDate"/>
+                        <w2:column dataType="text" id="sInptHms" name="sInptHms"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_LinkList" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="DsWs_Warning" repeatNode="map" userData2="//*/WARNING"/>
+                <w2:dataList baseNode="list" id="DsWs_List" repeatNode="map" userData2="//*/LTIDA47"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+ <script src="/cm/js/common.js"/>
+ <script src="/cm/js/val_lib.js"/>
+ <script src="/cm/js/util.js"/>
+ <script src="/cm/js/transSub.js"/>
+ <script src="/cm/js/callService.js"/>
+ <script src="/cm/js/gds.js"/>
+ <script src="/cm/js/wconv.js"/>
+ <script src="/cm/js/convertJs/Global_Script.js"/>
+ <script src="/cm/js/convertJs/comm_Webservice.js"/>
+ <script src="/cm/js/convertJs/NewGen_Script.js"/>
+ <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+        <script><![CDATA[
+/****************************************************************************
+ * 프로그램번호   : B450
+ * 프로그램명     : 정액담보 보험담보별 가입현황
+ * 파일명         : B450.xml
+ * 프로그램 내용  : 정액담보 보험담보별 가입현황
+ * 관련 프로그램  : 
+ * 작성자         : 김상운
+ * 작성일         : 2010-11-01
+   저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+
+var sPlanNo;
+var sInrpsCd;
+var sInrpsName;
+var fv_args;
+
+//---------------------------------------------------------------------------
+// function 명 : form_OnLoadCompleted)
+// 내용        : 화면 오픈시처리
+//---------------------------------------------------------------------------
+scwin.init = function() {
+	var indata = $w.getParameter("param");//
+	try {
+		fv_args = JSON.parse(indata);
+	} catch(e) {}
+	
+    Edt_InrpsCd.setValue(fv_args.sInrpsCd);
+    Edt_InrpsName.setValue(fv_args.sInrpsName);
+    scwin.lfn_search();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_search()
+// 내용        : 진단대상건조회
+//---------------------------------------------------------------------------
+//비동기호출 
+scwin.lfn_search = function() {
+	util.eventAsyncCall(this, scwin.lfn_search_sync, arguments);
+};
+
+scwin.lfn_search_sync = function() {
+    wconv.clear(Ds_List);//.removeAll();
+    wconv.clear(DsWs_List);
+    /*
+    SOBJ_Search.WSDL = gds.gWsdlBasis;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Search, "com.inswave.longterm.ssr.sst.task.DBB450Task", "selectDetail", "", "");
+    gfn_SetParam(MethodObj, "sPlanNo", sPlanNo);
+    gfn_SetParam(MethodObj, "sInrpsCd", Edt_InrpsCd.getValue());
+    gfn_CallService(SOBJ_Search, DOBJ_Search, MethodObj);
+	*/
+console.log("★★★★★★★"+	fv_args.sPlanNo +":"+Edt_InrpsCd.getValue());
+	var MethodObj = new callService("com.inswave.longterm.ssr.sst.task.DBB450Task", "selectDetail");
+	MethodObj.setId("selectDetail");
+	MethodObj.setParam("sPlanNo", fv_args.sPlanNo);
+	MethodObj.setParam("sInrpsCd", Edt_InrpsCd.getValue());	
+	MethodObj.setUrl("/contract/CBSC137PController.do");
+	MethodObj.setXPath("//*/LTIDA47");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_Team.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDA47"), "DsWs_List");
+	util.setCompBindRefresh("DsWs_List");
+	util.setRowPosition(DsWs_List, 0);
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDA47"), "Ds_List");
+	util.setCompBindRefresh("Ds_List");
+	util.setRowPosition(Ds_List, 0);
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+	
+    //에러처리
+    if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    }
+    if (DsWs_List.getRowCount() == 0) {
+        wprom.alert("조회건이 없습니다.");
+    } else {
+        //wconv.copy(Ds_List, "DsWs_List");
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_OnClose()
+// 내용        : 창닫기
+//---------------------------------------------------------------------------
+scwin.lfn_OnClose = function(e) {
+    wprom.close();
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B370"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;  /*height:464px;*/ left:8px; top:8px;/* width:632px;"
+            userData1="정액담보 보험담보별 가입현황" userData2=" OnLoadCompleted:scwin.form_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+            </ServiceObjects>
+            <xf:group arcsize="8" class="sty_area_form" id="Shape5"
+                style="position:absolute; right:627px;    border-color:user23;  bottom:454px;height:435px;left:0px;top:80px;width:620px;" userData3="RoundRect"/>
+            <xf:group arcsize="6" class="search_area" id="Shape0"
+                style="left:0px;top:30px;width:622px;" userData3="RoundRect"/>
+            <w2:textbox id="Static5" label="정액담보 보험담보별 가입현황" style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; " tagname="" class="sub_pop_title01">
+</w2:textbox>
+            
+            <w2:textbox class="sty_lb_Search" id="Static1" label="피보험자명"
+                style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:243px;top:40px; width:64px;" tagname=""/>
+            <xf:input class="sty_ipt_search" disabled="true" id="Edt_InrpsName" ref="data:Ds_List."
+                style="position:absolute; ImeMode:none;    height:20px;left:323px;top:39px; width:121px;" tabIndex="6"/>
+            <xf:input dataType="text" disabled="true" displayFormat="######-#######" ev:onblur="scwin.medt_InsuCode_OnKeyDown"
+                id="Edt_InrpsCd" style="position:absolute;height:20px;left:89px;top:39px;width:134px;" tabIndex="7"/>
+            <xf:trigger class="btn_Comm_Search " ev:onclick="scwin.lfn_search_sync" id="btn_search"
+                style="position:absolute; Transparent:TRUE;  ImageID:btn_Comm_Search;left:550px;top:38px;width:45px;" tabIndex="9" type="anchor">
+                <xf:label><![CDATA[조회]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_OnClose" id="btn_Close"
+                style="position:absolute;
+ ImageID:btn_Comm_Close;
+  height:20px;left:573px;top:0px;
+ width:25px;
+;" tabIndex="8" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+            <w2:wframe id="div0" scope="true" src="/ui/cbsc/CBSC164S.xml" style="position:absolute;height:435px;left:0px;top:80px;width:623px;"/>
+            <w2:textbox class="sty_lb_Search" id="Static0" label="피보험자코드"
+                style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:-6px;top:40px; width:79px;" tagname=""/>
+        </xf:group>
+    </body>
+</html>

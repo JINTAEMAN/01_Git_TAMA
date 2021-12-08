@@ -1,0 +1,1732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/new.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataList baseNode="list" id="Ds_View"
+					repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="LEV" name="LEV" dataType="text" />
+						<w2:column id="sDeptCode" name="sDeptCode"
+							dataType="text" />
+						<w2:column id="TEXT" name="TEXT"
+							dataType="text" />
+						<w2:column id="sColor" name="sColor"
+							dataType="text" />
+						<w2:column id="sBkColor" name="sBkColor"
+							dataType="text" />
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList baseNode="list" id="Ds_List"
+					repeatNode="map" />
+				<w2:dataList baseNode="list" id="warning"
+					repeatNode="map" userData2="//*/WARNING" />
+				<w2:dataList baseNode="list" id="DsWs_List"
+					repeatNode="map" userData2="//*/CCCBF00">
+					<w2:columnInfo>
+						<w2:column id="dp1" name="dp1"
+							dataType="text">
+						</w2:column>
+						<w2:column id="dp2" name="dp2"
+							dataType="text">
+						</w2:column>
+						<w2:column id="dp3" name="dp3"
+							dataType="text">
+						</w2:column>
+						<w2:column id="dp4" name="dp4"
+							dataType="text">
+						</w2:column>
+						<w2:column id="dp5" name="dp5"
+							dataType="text">
+						</w2:column>
+						<w2:column id="dp6" name="dp6"
+							dataType="text">
+						</w2:column>
+						<w2:column id="dp7" name="dp7"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sLEVEL" name="sLEVEL"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sDeptCode" name="sDeptCode"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sDeptName" name="sDeptName"
+							dataType="text">
+						</w2:column>
+						<w2:column id="nGurntCt" name="nGurntCt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nGurntMpyAmt" name="nGurntMpyAmt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nGurntNmpyAmt"
+							name="nGurntNmpyAmt" dataType="number">
+						</w2:column>
+						<w2:column id="nGurntStotAmt"
+							name="nGurntStotAmt" dataType="number">
+						</w2:column>
+						<w2:column id="nGurntMpayCnvsAmt"
+							name="nGurntMpayCnvsAmt" dataType="number">
+						</w2:column>
+						<w2:column id="nSviCt" name="nSviCt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nSviMpyAmt" name="nSviMpyAmt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nSviNmpyAmt" name="nSviNmpyAmt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nSviStotAmt" name="nSviStotAmt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nSviMpayCnvsAmt"
+							name="nSviMpayCnvsAmt" dataType="number">
+						</w2:column>
+						<w2:column id="nSviOcpyAmt" name="nSviOcpyAmt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nSviSumAmt" name="nSviSumAmt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nSumCt" name="nSumCt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nSumMpyAmt" name="nSumMpyAmt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nSumNmpyAmt" name="nSumNmpyAmt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nSumStotAmt" name="nSumStotAmt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nSumMpayCnvsAmt"
+							name="nSumMpayCnvsAmt" dataType="number">
+						</w2:column>
+						<w2:column id="nSumOcpyAmt" name="nSumOcpyAmt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nSumSumAmt" name="nSumSumAmt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nAutoTrnfCnt" name="nAutoTrnfCnt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nCardPaymCnt" name="nCardPaymCnt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nDrctRecvCnt" name="nDrctRecvCnt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nRecvTrnfCnt" name="nRecvTrnfCnt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nNonAcctRecvCnt"
+							name="nNonAcctRecvCnt" dataType="number">
+						</w2:column>
+						<w2:column id="nGroupRecvCnt"
+							name="nGroupRecvCnt" dataType="number">
+						</w2:column>
+						<w2:column id="nHpSamtAprvlCnt"
+							name="nHpSamtAprvlCnt" dataType="number">
+						</w2:column>
+						<w2:column id="nAutoTrnfAmt" name="nAutoTrnfAmt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nCardPaymAmt" name="nCardPaymAmt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nDrctRecvAmt" name="nDrctRecvAmt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nRecvTrnfAmt" name="nRecvTrnfAmt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nNonAcctRecvAmt"
+							name="nNonAcctRecvAmt" dataType="number">
+						</w2:column>
+						<w2:column id="nGroupRecvAmt"
+							name="nGroupRecvAmt" dataType="number">
+						</w2:column>
+						<w2:column id="nHpSamtAprvlAmt"
+							name="nHpSamtAprvlAmt" dataType="number">
+						</w2:column>
+						<w2:column id="nSumCnt" name="nSumCnt"
+							dataType="number">
+						</w2:column>
+						<w2:column id="nSumAmt" name="nSumAmt"
+							dataType="number">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList id="WARNING" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="msg" name="msg"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList baseNode="list" id="Ds_StatusDiv"
+					repeatNode="map">
+					<w2:columnInfo>
+						<w2:column dataType="text" id="CODE"
+							name="CODE">
+						</w2:column>
+						<w2:column dataType="text" id="TEXT"
+							name="TEXT">
+						</w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<CODE><![CDATA[all]]></CODE>
+							<TEXT><![CDATA[전   체]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[1]]></CODE>
+							<TEXT><![CDATA[완   전]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[2]]></CODE>
+							<TEXT><![CDATA[불완전]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[3]]></CODE>
+							<TEXT><![CDATA[미   결]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[5]]></CODE>
+							<TEXT><![CDATA[보완완료]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[4]]></CODE>
+							<TEXT><![CDATA[기   타]]></TEXT>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataList baseNode="list" id="DsWs_totCnt"
+					repeatNode="map" userData2="//*/vector">
+					<w2:columnInfo>
+						<w2:column id="totalRows" name="name1"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList baseNode="list" id="DsWs_search"
+					repeatNode="map"
+					userData2="//*/hashtable/data/vector/data/CCCMA01Doc">
+					<w2:columnInfo>
+						<w2:column id="sPolicyType" name="name1"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sPolicyYM" name="name2"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sPolicySer" name="name3"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sPolicyNo" name="name4"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sCustType" name="name5"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sProductType" name="name6"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sContractDate" name="name7"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sInsrdID" name="name8"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sInsrdName" name="name9"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sFmdt" name="name10"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sTodt" name="name11"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sPlateNo" name="name12"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sCenterCode" name="name13"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sTeamCode" name="name14"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sGroupCode" name="name15"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sPartCode" name="name16"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sAgentCode" name="name17"
+							dataType="text">
+						</w2:column>
+						<w2:column id="nInsrdTelSeq" name="name18"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sCrossSell" name="name19"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sCreateDate" name="name20"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sCreateTime" name="name21"
+							dataType="text">
+						</w2:column>
+						<w2:column id="nListSerial" name="name22"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sMonitorDate" name="name23"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sMonitorTime" name="name24"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sMonitorCenter" name="name25"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sMonitorTeam" name="name26"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sMonitorGroup" name="name27"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sMonitorPart" name="name28"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sMonitorAgent" name="name29"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sAgentName" name="name30"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sAgentName2" name="name31"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sChangeCarriage" name="name32"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sProportion" name="name33"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sSupplementYN" name="name34"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sStatus" name="name35"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sPolicyTypeName" name="name36"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sIssueDate" name="name37"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sCancelReason" name="name38"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList baseNode="list" id="DsWs_SearchWarning"
+					repeatNode="map" userData2="//*/WARNING">
+					<w2:columnInfo>
+						<w2:column id="msg" name="name1"
+							dataType="text">
+						</w2:column>
+						<w2:column id="level" name="name2"
+							dataType="text">
+						</w2:column>
+						<w2:column id="detail" name="name3"
+							dataType="text">
+						</w2:column>
+						<w2:column id="timestamp" name="name4"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" id="dst_LginAuthInqrVo">
+					<w2:keyInfo>
+						<w2:key id="empNo" name="사번" dataType="text"></w2:key>
+						<w2:key id="name" name="이름" dataType="text"></w2:key>
+						<w2:key id="pstnDeptCd" name="소속부서코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="bizAdmrYn" name="업무관리자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="geafAdmrYn" name="대면총무여부,지점장여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gaEducMngrAdmrYn" name="GA교육매니저여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="agncyAdmrYn" name="대리점사용인관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="superAuthYn" name="super권한여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="drctMangYn" name="직영여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="crossYn" name="교차여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="atchYn" name="전속여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gAYn" name="GA여부" dataType="text"></w2:key>
+						<w2:key id="drctMangAdmrYn" name="직영관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="crossAdmrYn" name="교차관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="atchAdmrYn" name="전속관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gAAdmrYn" name="GA관리자여부"
+							dataType="text">
+						</w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" id="dst_NotcMattInfoVo">
+					<w2:keyInfo>
+						<w2:key id="noticMattId" name="공지사항id"
+							dataType="text">
+						</w2:key>
+						<w2:key id="rgtrEmpNo" name="등록자사번"
+							dataType="text">
+						</w2:key>
+						<w2:key id="rgtrEmpNm" name="등록자이름"
+							dataType="text">
+						</w2:key>
+						<w2:key id="rgstDate" name="등록일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="seqno" name="순번" dataType="text"></w2:key>
+						<w2:key id="noticMattFlag" name="공지사항구분"
+							dataType="text">
+						</w2:key>
+						<w2:key id="noticMattName" name="공지사항명"
+							dataType="text">
+						</w2:key>
+						<w2:key id="noticMattCont" name="공지사항내용"
+							dataType="text">
+						</w2:key>
+						<w2:key id="rgtrPstnCd" name="등록자소속코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="apdxFileName" name="첨부파일명"
+							dataType="text">
+						</w2:key>
+						<w2:key id="apdxFilePath" name="첨부파일경로"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inqrNum" name="조회수"
+							dataType="text">
+						</w2:key>
+						<w2:key id="drctMangAuthYn" name="직영권한여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="crossAuthYn" name="교차권한여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="atchAuthYn" name="전속권한여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gAAuthYn" name="GA권한여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="noticDate" name="게시일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="noticEnddt" name="게시종료일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="delYn" name="삭제여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptDler" name="입력처리자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptDlerIP" name="입력처리자IP"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptDate" name="입력일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptHms" name="입력시간"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcDler" name="수정처리자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcDlerIP" name="수정처리자IP"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcDate" name="수정일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcHms" name="수정시간"
+							dataType="text">
+						</w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList id="dst_NotcMattInfoListVo" baseNode="list"
+					saveRemovedData="true" repeatNode="map" attributeMap="">
+					<w2:columnInfo>
+						<w2:column id="noticMattId" name="공지사항id"
+							dataType="text">
+						</w2:column>
+						<w2:column id="rgtrEmpNo" name="등록자사번"
+							dataType="text">
+						</w2:column>
+						<w2:column id="rgtrEmpNm" name="등록자이름"
+							dataType="text">
+						</w2:column>
+						<w2:column id="rgstDate" name="등록일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="seqno" name="순번"
+							dataType="text">
+						</w2:column>
+						<w2:column id="noticMattFlag" name="공지사항구분"
+							dataType="text">
+						</w2:column>
+						<w2:column id="noticMattName" name="공지사항명"
+							dataType="text">
+						</w2:column>
+						<w2:column id="noticMattCont" name="공지사항내용"
+							dataType="text">
+						</w2:column>
+						<w2:column id="rgtrPstnCd" name="등록자소속코드"
+							dataType="text">
+						</w2:column>
+						<w2:column id="apdxFileName" name="첨부파일명"
+							dataType="text">
+						</w2:column>
+						<w2:column id="apdxFilePath" name="첨부파일경로"
+							dataType="text">
+						</w2:column>
+						<w2:column id="inqrNum" name="조회수"
+							dataType="text">
+						</w2:column>
+						<w2:column id="drctMangAuthYn" name="직영권한여부"
+							dataType="text">
+						</w2:column>
+						<w2:column id="crossAuthYn" name="교차권한여부"
+							dataType="text">
+						</w2:column>
+						<w2:column id="atchAuthYn" name="전속권한여부"
+							dataType="text">
+						</w2:column>
+						<w2:column id="gAAuthYn" name="GA권한여부"
+							dataType="text">
+						</w2:column>
+						<w2:column id="noticDate" name="게시일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="noticEnddt" name="게시종료일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="delYn" name="삭제여부"
+							dataType="text">
+						</w2:column>
+						<w2:column id="inptDler" name="입력처리자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="inptDlerIP" name="입력처리자IP"
+							dataType="text">
+						</w2:column>
+						<w2:column id="inptDate" name="입력일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="inptHms" name="입력시간"
+							dataType="text">
+						</w2:column>
+						<w2:column id="mdfcDler" name="수정처리자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="mdfcDlerIP" name="수정처리자IP"
+							dataType="text">
+						</w2:column>
+						<w2:column id="mdfcDate" name="수정일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="mdfcHms" name="수정시간"
+							dataType="text">
+						</w2:column>
+						<w2:column id="seqNo" name="테이블시퀀스"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList id="dsl_noticMattFlag" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="CODE" name="CODE"
+							dataType="text">
+						</w2:column>
+						<w2:column id="TEXT" name="TEXT"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<CODE><![CDATA[01]]></CODE>
+							<TEXT><![CDATA[중요공지]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[02]]></CODE>
+							<TEXT><![CDATA[상품]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[03]]></CODE>
+							<TEXT><![CDATA[인수]]></TEXT>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" id="dst_FrstScrnMngmVo">
+					<w2:keyInfo>
+						<w2:key id="startDate" name="시작일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="endDate" name="종료일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="stndDate" name="기준일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="doer" name="취급자" dataType="text"></w2:key>
+						<w2:key id="doerUser" name="사용인"
+							dataType="text">
+						</w2:key>
+						<w2:key id="month" name="기준월" dataType="text"></w2:key>
+						<w2:key id="price" name="기준가격"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gdFlgcd" name="상품구분코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="orgCrCt" name="원계약건수"
+							dataType="text">
+						</w2:key>
+						<w2:key id="premSum" name="보험료합계"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mpayPremSum" name="월납보험료합계"
+							dataType="text">
+						</w2:key>
+						<w2:key id="ensrSaleCnt" name="영업건수(보장성)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="saveSaleCnt" name="영업건수(저축성)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="ensrPremSum" name="보험료합계(보장성)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="savePremSum" name="보험료합계(저축성)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="ensrMpayPremSum" name="월납보험료합계(보장성)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="saveMpayPremSum" name="월납보험료합계(저축성)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="conuResltCd" name="품의결과코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="conuResltCdCt" name="품의결과코드건수"
+							dataType="text">
+						</w2:key>
+						<w2:key id="progJugmCrstCnt" name="심사진행현황(진행중)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="compJugmCrstCnt" name="심사진행현황(완료)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="secuJugmCrstCnt" name="심사진행현황(보안)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="refuJugmCrstCnt" name="심사진행현황(거절)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="pectSaleStatCd" name="완전판매상태코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="pectSaleStatCdCt" name="완전판매상태코드건수"
+							dataType="text">
+						</w2:key>
+						<w2:key id="compPectSaleMntrCrstCnt"
+							name="월별완전판매모니터링현황(완전)" dataType="text">
+						</w2:key>
+						<w2:key id="inmpPectSaleMntrCrstCnt"
+							name="월별완전판매모니터링현황(불완전)" dataType="text">
+						</w2:key>
+						<w2:key id="pendPectSaleMntrCrstCnt"
+							name="월별완전판매모니터링현황(미결)" dataType="text">
+						</w2:key>
+						<w2:key id="othrPectSaleMntrCrstCnt"
+							name="월별완전판매모니터링현황(기타)" dataType="text">
+						</w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" id="FrstScrnMngmVo">
+					<w2:keyInfo>
+						<w2:key id="startDate" name="시작일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="endDate" name="종료일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="stndDate" name="기준일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="doer" name="취급자" dataType="text"></w2:key>
+						<w2:key id="doerUser" name="사용인"
+							dataType="text">
+						</w2:key>
+						<w2:key id="month" name="기준월" dataType="text"></w2:key>
+						<w2:key id="price" name="기준가격"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gdFlgcd" name="상품구분코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="orgCrCt" name="원계약건수"
+							dataType="text">
+						</w2:key>
+						<w2:key id="premSum" name="보험료합계"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mpayPremSum" name="월납보험료합계"
+							dataType="text">
+						</w2:key>
+						<w2:key id="ensrSaleCnt" name="영업건수(보장성)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="saveSaleCnt" name="영업건수(저축성)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="ensrPremSum" name="보험료합계(보장성)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="savePremSum" name="보험료합계(저축성)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="ensrMpayPremSum" name="월납보험료합계(보장성)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="saveMpayPremSum" name="월납보험료합계(저축성)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="conuResltCd" name="품의결과코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="conuResltCdCt" name="품의결과코드건수"
+							dataType="text">
+						</w2:key>
+						<w2:key id="progJugmCrstCnt" name="심사진행현황(진행중)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="compJugmCrstCnt" name="심사진행현황(완료)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="secuJugmCrstCnt" name="심사진행현황(보안)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="refuJugmCrstCnt" name="심사진행현황(거절)"
+							dataType="text">
+						</w2:key>
+						<w2:key id="pectSaleStatCd" name="완전판매상태코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="pectSaleStatCdCt" name="완전판매상태코드건수"
+							dataType="text">
+						</w2:key>
+						<w2:key id="compPectSaleMntrCrstCnt"
+							name="월별완전판매모니터링현황(완전)" dataType="text">
+						</w2:key>
+						<w2:key id="inmpPectSaleMntrCrstCnt"
+							name="월별완전판매모니터링현황(불완전)" dataType="text">
+						</w2:key>
+						<w2:key id="pendPectSaleMntrCrstCnt"
+							name="월별완전판매모니터링현황(미결)" dataType="text">
+						</w2:key>
+						<w2:key id="othrPectSaleMntrCrstCnt"
+							name="월별완전판매모니터링현황(기타)" dataType="text">
+						</w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList id="FrstScrnMngmListVo" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="startDate" name="시작일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="endDate" name="종료일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="stndDate" name="기준일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="doer" name="취급자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="doerUser" name="사용인"
+							dataType="text">
+						</w2:column>
+						<w2:column id="month" name="기준월"
+							dataType="text">
+						</w2:column>
+						<w2:column id="price" name="기준가격"
+							dataType="text">
+						</w2:column>
+						<w2:column id="gdFlgcd" name="상품구분코드"
+							dataType="text">
+						</w2:column>
+						<w2:column id="orgCrCt" name="원계약건수"
+							dataType="text">
+						</w2:column>
+						<w2:column id="premSum" name="보험료합계"
+							dataType="text">
+						</w2:column>
+						<w2:column id="mpayPremSum" name="월납보험료합계"
+							dataType="text">
+						</w2:column>
+						<w2:column id="ensrSaleCnt" name="영업건수(보장성)"
+							dataType="text">
+						</w2:column>
+						<w2:column id="saveSaleCnt" name="영업건수(저축성)"
+							dataType="text">
+						</w2:column>
+						<w2:column id="ensrPremSum" name="보험료합계(보장성)"
+							dataType="text">
+						</w2:column>
+						<w2:column id="savePremSum" name="보험료합계(저축성)"
+							dataType="text">
+						</w2:column>
+						<w2:column id="ensrMpayPremSum"
+							name="월납보험료합계(보장성)" dataType="text">
+						</w2:column>
+						<w2:column id="saveMpayPremSum"
+							name="월납보험료합계(저축성)" dataType="text">
+						</w2:column>
+						<w2:column id="conuResltCd" name="품의결과코드"
+							dataType="text">
+						</w2:column>
+						<w2:column id="conuResltCdCt" name="품의결과코드건수"
+							dataType="text">
+						</w2:column>
+						<w2:column id="progJugmCrstCnt"
+							name="심사진행현황(진행중)" dataType="text">
+						</w2:column>
+						<w2:column id="compJugmCrstCnt"
+							name="심사진행현황(완료)" dataType="text">
+						</w2:column>
+						<w2:column id="secuJugmCrstCnt"
+							name="심사진행현황(보안)" dataType="text">
+						</w2:column>
+						<w2:column id="refuJugmCrstCnt"
+							name="심사진행현황(거절)" dataType="text">
+						</w2:column>
+						<w2:column id="pectSaleStatCd" name="완전판매상태코드"
+							dataType="text">
+						</w2:column>
+						<w2:column id="pectSaleStatCdCt"
+							name="완전판매상태코드건수" dataType="text">
+						</w2:column>
+						<w2:column id="compPectSaleMntrCrstCnt"
+							name="월별완전판매모니터링현황(완전)" dataType="text">
+						</w2:column>
+						<w2:column id="inmpPectSaleMntrCrstCnt"
+							name="월별완전판매모니터링현황(불완전)" dataType="text">
+						</w2:column>
+						<w2:column id="pendPectSaleMntrCrstCnt"
+							name="월별완전판매모니터링현황(미결)" dataType="text">
+						</w2:column>
+						<w2:column id="othrPectSaleMntrCrstCnt"
+							name="월별완전판매모니터링현황(기타)" dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList id="dsl_selectNwcrPrreList" baseNode="list"
+					repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="sDeptName" name="sDeptName"
+							dataType="text">
+						</w2:column>
+						<w2:column id="nGurntCt" name="nGurntCt"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList id="dsl_curmmAchvList" baseNode="list"
+					repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="ensrSaleCnt" name="ensrSaleCnt"
+							dataType="text">
+						</w2:column>
+						<w2:column id="saveSaleCnt" name="saveSaleCnt"
+							dataType="text">
+						</w2:column>
+						<w2:column id="ensrPremSum" name="ensrPremSum"
+							dataType="text">
+						</w2:column>
+						<w2:column id="savePremSum" name="savePremSum"
+							dataType="text">
+						</w2:column>
+						<w2:column id="ensrMpayPremSum"
+							name="ensrMpayPremSum" dataType="text">
+						</w2:column>
+						<w2:column id="saveMpayPremSum"
+							name="saveMpayPremSum" dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList id="dsl_jugmCrstList" baseNode="list"
+					repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="progJugmCrstCnt"
+							name="progJugmCrstCnt" dataType="text">
+						</w2:column>
+						<w2:column id="compJugmCrstCnt"
+							name="compJugmCrstCnt" dataType="text">
+						</w2:column>
+						<w2:column id="secuJugmCrstCnt"
+							name="secuJugmCrstCnt" dataType="text">
+						</w2:column>
+						<w2:column id="refuJugmCrstCnt"
+							name="refuJugmCrstCnt" dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList id="dsl_completeSalesList" baseNode="list"
+					repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="compPectSaleMntrCrstCnt"
+							name="compPectSaleMntrCrstCnt" dataType="text">
+						</w2:column>
+						<w2:column id="inmpPectSaleMntrCrstCnt"
+							name="inmpPectSaleMntrCrstCnt" dataType="text">
+						</w2:column>
+						<w2:column id="pendPectSaleMntrCrstCnt"
+							name="pendPectSaleMntrCrstCnt" dataType="text">
+						</w2:column>
+						<w2:column id="othrPectSaleMntrCrstCnt"
+							name="othrPectSaleMntrCrstCnt" dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList id="dsl_completeSalesList_bak"
+					baseNode="list" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="compPectSaleMntrCrstCnt"
+							name="compPectSaleMntrCrstCnt" dataType="text">
+						</w2:column>
+						<w2:column id="inmpPectSaleMntrCrstCnt"
+							name="inmpPectSaleMntrCrstCnt" dataType="text">
+						</w2:column>
+						<w2:column id="pendPectSaleMntrCrstCnt"
+							name="pendPectSaleMntrCrstCnt" dataType="text">
+						</w2:column>
+						<w2:column id="othrPectSaleMntrCrstCnt"
+							name="othrPectSaleMntrCrstCnt" dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<compPectSaleMntrCrstCnt><![CDATA[2]]></compPectSaleMntrCrstCnt>
+							<inmpPectSaleMntrCrstCnt><![CDATA[8]]></inmpPectSaleMntrCrstCnt>
+							<pendPectSaleMntrCrstCnt><![CDATA[2]]></pendPectSaleMntrCrstCnt>
+							<othrPectSaleMntrCrstCnt><![CDATA[1]]></othrPectSaleMntrCrstCnt>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataList id="DsWs_CCCEF00" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+				</w2:dataList>
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>
+			
+		</xf:model>
+		<script src="/cm/js/gds.js"/>
+		<script src="/cm/js/init.js"/>
+		<script src="/cm/js/util.js"/>
+		<script src="/cm/js/wconv.js"/>
+		<script src="/cm/js/common.js"/>
+		<script src="/cm/js/val_lib.js"/>
+		<script src="/cm/js/transSub.js"/>
+		<script src="/cm/js/callService.js"/>
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/NewGen_Script.js"/>
+		<script src="/cm/js/convertJs/LongTerm_Script.js"/>
+		<script src="/cm/js/convertJs/Marine_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/>
+		<script src="/websquare/externalJS/FusionCharts3.7/fusioncharts.js"/>
+		<script type="javascript"><![CDATA[
+/****************************************************************************
+ * 프로그램번호   : CBSO0022
+ * 프로그램명     : 초기 화면
+ * 파일명         : CBSO0020.xml
+ * 프로그램 내용  : 초기 화면
+ * 관련 프로그램  : 
+ * 작성자         : none
+ * 작성일         : 2017-10-27
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/	
+
+var gsSysDate;			//global 현재일자
+var gsDate;				//global 현재일자
+var gsDateYYYYMM	= 	"";
+var gsFromDate 		=	"";
+var gsToDate		=	"";
+var gsTime			=	"";
+var gUserID; 			//global 사용자 ID
+var gUserEmpName; 	    //global 부서명
+var gUserDuty;			//global UserDuty
+
+//이미지시스템
+var gsImageSysUrlR	=	"https://limg.thekins.co.kr:1443/imgsys/jsp/index.jsp?";
+var gsImageSysUrlD	=	"http://10.1.1.131:8090/imgsys/jsp/index.jsp?";
+
+//보장분석시스템
+var gsBojangSysUrl	=	"http://thek.bojang114.com";
+
+//홈페이지
+var gsHomepgSysUrl	=	"http://www.educar.co.kr";
+
+
+//**********************************************************
+// 초기화
+//**********************************************************
+scwin.init = function () {
+	//call 로드 function
+	scwin.fnFrstScrnMngmLoad();	
+};
+
+//**********************************************************
+//로드 function
+//**********************************************************
+scwin.fnFrstScrnMngmLoad = function() {
+	util.gfn_getServerTime();
+	gsSysDate		= wconv.substr(gds.gDs_ServerTime.getCellData(0, "sToday"), 0, 8);
+	gsDateYYYYMM 	= wconv.mid(gsSysDate, 0, 6);
+	gsFromDate 		= wconv.mid(gsSysDate, 0, 6) + "01";
+	gsToDate 		= wconv.mid(gsSysDate, 0, 6) + util.getLastDay(gsDateYYYYMM);
+	gsTime 			= wconv.mid(gsSysDate, 8, 6);
+	
+	gUserID 		= util.getGdsValue("gUserID");    					//global 사용자 ID
+	gUserEmpName 	= util.getGdsValue("gUserEmpName");    				//global 부서명
+	gUserDuty		= util.getGdsValue("gUserDuty");					//global UserDuty
+	
+	//call 월실적현황(infterface)
+	scwin.fnRetrieveNwcrPrreList();
+	
+	//call 초기 화면(품의결과(심사진행현황)) 검색
+	scwin.fnRetrieveJugmCrst();
+	
+	//call 초기 화면(완전판매상태(월별 완전판매 모니터링 현황)) 검색
+	scwin.fnRetrieveCompleteSalesList();
+	
+	//로그인ID권한조회(공지사항 조회를 위한 권한조회)
+	scwin.getLginAuthInfo();
+};
+
+//**********************************************************
+//Fusion Chart Data Load(신계약속보 selectNwcrPrreList 호출)
+//**********************************************************
+scwin.fnRetrieveNwcrPrreList = function() {
+	//초기화
+    wconv.clear(warning);
+	wconv.clear(Ds_View);
+	wconv.clear(Ds_List);
+       
+	var sOrgnFlag = "2";
+	if(gUserDuty == "30" || gUserDuty == "33" || gUserDuty == "35") {
+		sOrgnFlag = "3";
+	}
+	
+	var MethodObj = new callService("com.inswave.sales.sam.task.NwcrPrreTask", "selectNwcrPrreList", "", ""); 
+	MethodObj.setId("selectNwcrPrreList");
+    MethodObj.setParam("sFromDate", 	gsFromDate);//조회기간 년월일 시작
+    MethodObj.setParam("sToDate", 		gsToDate);	//조회기간 년월일 종료
+    MethodObj.setParam("sInqrFlag", 	"2");	//조회구분 1:조직별 2:상품별
+	MethodObj.setParam("display", 		"1"); 	//화면형태 1:납입주기 2:입금방법
+	MethodObj.setParam("sOrgnFlag", 	sOrgnFlag);	//조직,사용자 구분 2:취급자 3:사용인
+	MethodObj.setParam("sOrgnCd", 		gUserID);	//구분 코드
+	MethodObj.setParam("sGdGroupCd", 	"");	//상품군
+	MethodObj.setParam("sInskd", 		"1");	//보종구분 1:장기 2:일반
+	MethodObj.setParam("sInqrCond", 	"3");	//조회조건 3:신계약-철회취소민원해지
+	MethodObj.setParam("sGdCd", 		"");	//상품코드
+	MethodObj.setUrl("/contract/CBSC180MController.do");
+	MethodObj.setXPath("//*/CCCBF00");	
+	MethodObj.addXPath("//WARNING");
+	MethodObj.callBack("scwin.subCallBackfunction");
+	MethodObj.async();
+	MethodObj.send();
+};
+
+//**********************************************************
+//초기 화면(품의결과(심사진행현황)) 검색
+//**********************************************************
+scwin.fnRetrieveJugmCrst = function() {
+	FrstScrnMngmVo.set("stndDate", 	gsSysDate);
+	FrstScrnMngmVo.set("startDate", gsSysDate);
+	FrstScrnMngmVo.set("endDate", 	gsSysDate);
+	
+	if(gUserDuty == "30" || gUserDuty == "33" || gUserDuty == "35") {
+		FrstScrnMngmVo.set("doerUser", 	gUserID);
+	} else {
+		FrstScrnMngmVo.set("doer", 		gUserID);
+	}
+	
+	var trans = new transSub();						// transaction 보낼 객체 생성
+	trans.setId("retrieveJugmCrstList");			// transaction 보낼 SubmissionID
+	trans.setUrl("/common/CBSO0005.do");			// Controller 쪽으로 보낼 주소
+	trans.setDs("FrstScrnMngmVo");
+	trans.targetDs("FrstScrnMngmListVo");
+	trans.callBack("scwin.subCallBackfunction");	// 받을 Dataset을 처리시 콜백함수
+	trans.async();
+	trans.send();
+}; 
+
+//**********************************************************
+//초기 화면(완전판매상태(월별 완전판매 모니터링 현황)) 검색-완전판매모니터링명세(/CBSB021M.xml)
+//**********************************************************
+scwin.fnRetrieveCompleteSalesList = function() {
+	//초기화
+	wconv.clear(DsWs_totCnt);
+    wconv.clear(DsWs_search);
+    wconv.clear(DsWs_SearchWarning);
+    
+	var MethodObj = new callService("com.inswave.ccc.task.CSStatisticsTask", "getCompleteSalesList", 500, 1);
+	MethodObj.setId("getCompleteSalesList");
+ 	MethodObj.setParam("nKind", "2");		//모집조직 2:사번
+ 	MethodObj.setParam("sEmpNo", gUserID);
+ 	MethodObj.setParam("sStatus", "all");	//상태 all:전체
+	MethodObj.setParam("sType", "all");		//보종 all:전체
+	MethodObj.setParam("sTypeDetail", "all");	//세부보종 all:전체
+	MethodObj.setParam("sKey", "all");	//검색어조건 all:전체
+	MethodObj.setParam("sWord", "");	//검색어	
+	MethodObj.setParam("sIncompletGubun", "1");	//불완전사유
+	MethodObj.setParam("sEtcChk", "");		//기타포함
+	MethodObj.setParam("sIncomChk", "Y");	//불완전기타 전체(1)로 세팅
+	MethodObj.setParam("sFromDate", gsFromDate);
+	MethodObj.setParam("sToDate", gsToDate);
+	MethodObj.setParam("more65YearsYN", "");
+	MethodObj.setParam("sCustType", "");
+	MethodObj.setParam("sPersonalInfo", "");	// 개인정보적법성
+	MethodObj.setUrl("/common/retrieveCompleteSalesList.do");
+	MethodObj.setXPath("//*/hashtable/data/vector/data/CCCMA01Doc");
+	MethodObj.addXPath("//*/vector");  
+	MethodObj.addXPath("//*/WARNING");
+	MethodObj.callBack("scwin.subCallBackfunction");
+	MethodObj.async();
+	MethodObj.send();
+};
+
+scwin.subCallBackfunction = function(e) {
+	switch(e.subID){
+		// 초기화 fusion chart(신계약정보) 검색
+		case "selectNwcrPrreList":
+			//Set Fusion Chart Option
+			var options = { caption : "",
+				subCaption : "",
+				yAxisName : "",
+				formatnumberscale: "0",
+				yAxisValueDecimals:"0",
+				yAxisMinValue:"0", 
+				yAxisMaxValue:"10",
+				xAxisName : "",
+				numberPrefix:"" };
+			mfct_selectNwcrPrreList.setChartAttribute(options);
+			
+			//Get Return Value
+			util.jSonDsCreate(_tranSync.getDsJson("CCCBF00"), DsWs_CCCEF00.getID());
+			if(DsWs_CCCEF00.getRowCount() > 0) {
+				for(var i=0;i<DsWs_CCCEF00.getRowCount();i++) {
+					if (DsWs_CCCEF00.getCellData(i, "sLEVEL") == "1") {
+						var sEnsrSaleCnt 		= util.appendComma(DsWs_CCCEF00.getCellData(i, "nGurntCt")); 
+						var sSaveSaleCnt 		= util.appendComma(DsWs_CCCEF00.getCellData(i, "nSviCt")); 
+						var sEnsrPremSum 		= util.appendComma(DsWs_CCCEF00.getCellData(i, "nGurntStotAmt")); 
+						var sSavePremSum 		= util.appendComma(DsWs_CCCEF00.getCellData(i, "nSviStotAmt")); 
+						var sEnsrMpayPremSum 	= util.appendComma(DsWs_CCCEF00.getCellData(i, "nGurntMpayCnvsAmt")); 
+						var sSaveMpayPremSum 	= util.appendComma(DsWs_CCCEF00.getCellData(i, "nSviMpayCnvsAmt")); 
+						
+						msta_nEnsrSaleCnt.setValue(sEnsrSaleCnt);
+						msta_nSaveSaleCnt.setValue(sSaveSaleCnt);
+						msta_nEnsrPremSum.setValue(sEnsrPremSum);
+						msta_nSavePremSum.setValue(sSavePremSum);
+						msta_nEnsrMpayPremSum.setValue(sEnsrMpayPremSum);
+						msta_nSaveMpayPremSum.setValue(sSaveMpayPremSum);
+					} else if (DsWs_CCCEF00.getCellData(i, "sLEVEL") == "3") {
+						util.appendRow(DsWs_List);
+						
+						var currRow = DsWs_List.getRowCount()-1;
+						wconv.mi_copyRow(DsWs_CCCEF00.getID(), i, DsWs_List.getID(), currRow);
+					}
+				}
+			}
+			else {
+				//월별실적현황(default)
+				msta_nEnsrSaleCnt.setValue("0");
+				msta_nSaveSaleCnt.setValue("0");
+				msta_nEnsrPremSum.setValue("0");
+				msta_nSavePremSum.setValue("0");
+				msta_nEnsrMpayPremSum.setValue("0");
+				msta_nSaveMpayPremSum.setValue("0");
+				
+				//chart(default)
+				util.appendRow(DsWs_List);
+								
+				DsWs_List.setCellData(0, "nGurntCt",	0);
+				DsWs_List.setCellData(0, "sDeptName",	" ");
+			}
+			
+			//bind Fusion Chart Load
+			util.setRowPosition(DsWs_List, 0);
+		break;
+		
+		//품의결과(심사진행현황) 검색
+		case "retrieveJugmCrstList":
+			if(e.flag == "s") {
+				dsl_jugmCrstList.setJSON(e.result.listfrstScrnMngmVo);
+
+				//bind 초기 화면(품의결과(심사진행현황)) 검색
+				util.setRowPosition(dsl_jugmCrstList, 0);
+			}else {
+				//wprom.alert(e.msg);
+			}
+		break;	
+		
+		//완전판매상태(월별 완전판매 모니터링 현황)) 검색
+		case "getCompleteSalesList":
+			//	util.interfaceKey(_tranSync.result.serviceDs);
+			//console.log(JSON.stringify(_tranSync.result));
+			dsl_completeSalesList.setJSON(_tranSync.result.serviceDs.listfrstScrnMngmVo);	// dataset 데이터//
+			
+			//bind 초기 화면(완전판매상태(월별 완전판매 모니터링 현황)) 검색
+			//util.setRowPosition(DsWs_search, 0);
+			util.setRowPosition(dsl_completeSalesList, 0);
+			//msta_nCompPectSaleMntrCrstCnt.getValue();
+		break;
+		
+		// 로그인ID권한조회
+		case "retrieveLginIDAuthInqr":
+			if(e.flag == "s") {
+				//console.log("main retrieveLginIDAuthInqr: " + e.result);
+				dst_LginAuthInqrVo.setJSON(e.result);
+				
+				scwin.getNotcMattList();
+			}else {
+				//wprom.alert(e.msg);
+			}															
+		break;
+		
+		//공지사항조회
+		case "retrieveNotcMattList":
+			if(e.flag == "s") {
+				dst_NotcMattInfoListVo.setJSON(e.result.notcMattInfoVo);
+				
+				//bind 공지사항 조회
+				util.setRowPosition(dst_NotcMattInfoListVo, 0);
+				
+				//generator setting
+				if(dst_NotcMattInfoListVo.getRowCount() > 0) {
+					for(var i=0;i<dst_NotcMattInfoListVo.getRowCount();i++) {
+						var noticMattName	=	dst_NotcMattInfoListVo.getCellData(i, "noticMattName");
+						var rgstDate		=	wconv.dateformat(dst_NotcMattInfoListVo.getCellData(i, "rgstDate"), "yyyy-MM-dd");
+						//console.log(noticMattName + " : " + rgstDate);
+
+						if(dst_NotcMattInfoListVo.getRowCount() < 2) {
+							grd_generator.insert();
+							grd_generator.getChild(i, "noticMattName").setValue(noticMattName ? noticMattName : "Not Found Data");
+					  		grd_generator.getChild(i, "rgstDate").setValue("");
+					  	} else {
+							
+							if(i < 5) {
+								if((noticMattName == null && noticMattName == "")
+									&& (rgstDate == null && rgstDate == ""))
+								{
+									grd_generator.insert();
+									grd_generator.getChild(i, "noticMattName").setValue(noticMattName ? noticMattName : "Not Found Data");
+							  		grd_generator.getChild(i, "rgstDate").setValue("");
+								} else {
+									grd_generator.insert();
+									grd_generator.getChild(i, "noticMattName").setValue(noticMattName ? noticMattName : "Not Found Data");
+							  		grd_generator.getChild(i, "rgstDate").setValue(rgstDate ? rgstDate : "");
+							  	}
+							}
+						}
+					}
+				} else {
+					grd_generator.insert();
+					grd_generator.getChild(0, "noticMattName").setValue("Not Found Data");
+			  		grd_generator.getChild(0, "rgstDate").setValue("");
+			  	}
+
+			} else {
+				//wprom.alert(e.msg);
+			}														
+		break;
+	}
+};
+
+//**********************************************************
+// 로그인자 권한조회 /common/CBSO005.do 로그인자 권한조회
+//**********************************************************
+scwin.getLginAuthInfo = function() {
+	dst_LginAuthInqrVo.set("empNo" , gUserID);
+	
+	var trans = new transSub();                  	// transaction 보낼 객체 생성
+	trans.setId("retrieveLginIDAuthInqr");        	// transaction 보낼 SubmissionID
+	trans.setUrl("/common/CBSO0015.do");   			// Controller 쪽으로 보낼 주소
+	trans.setDs("dst_LginAuthInqrVo");					
+	trans.targetDs("dst_LginAuthInqrVo");		
+	trans.callBack("scwin.subCallBackfunction");  	// 받을 Dataset을 처리시 콜백함수
+	trans.async();
+	trans.send();
+};
+
+//**********************************************************
+// 공지사항리스트조회(초기 화면(공지사항) 검색) - fnRetrieveNotcFrst
+//**********************************************************
+scwin.getNotcMattList = function() {
+	// INPUT DS 세팅					
+	dst_NotcMattInfoVo.set("rgtrEmpNo" , 		gUserID);	//조회사원번호
+	dst_NotcMattInfoVo.set("noticDate", 		gsFromDate); //"20171030"); //gsSysDate); //게시일자
+	dst_NotcMattInfoVo.set("noticEnddt", 		gsToDate);	//종료일자
+	dst_NotcMattInfoVo.set("noticMattFlag", 	"");		//공지사항구분
+	dst_NotcMattInfoVo.set("noticMattName", 	"");		//공지사항명
+	dst_NotcMattInfoVo.set("noticMattCont", 	"");		//공지사항내용
+	
+	if(dst_LginAuthInqrVo.get("bizAdmrYn") == "Y"){
+		dst_NotcMattInfoVo.set("drctMangAuthYn", "");//직영권한
+		dst_NotcMattInfoVo.set("crossAuthYn", "");//교차권한
+		dst_NotcMattInfoVo.set("atchAuthYn", "");//전속권한
+		dst_NotcMattInfoVo.set("gAAuthYn", "");	//ga권한
+		
+	}else{
+		dst_NotcMattInfoVo.set("drctMangAuthYn", dst_LginAuthInqrVo.get("drctMangYn"));//직영권한
+		dst_NotcMattInfoVo.set("crossAuthYn", dst_LginAuthInqrVo.get("crossYn"));//교차권한
+		dst_NotcMattInfoVo.set("atchAuthYn", dst_LginAuthInqrVo.get("atchAuthYn"));//전속권한
+		dst_NotcMattInfoVo.set("gAAuthYn", dst_LginAuthInqrVo.get("gAYn"));	//ga권한		
+	}
+				
+	var trans = new transSub();                  	// transaction 보낼 객체 생성
+	trans.setId("retrieveNotcMattList");        	// transaction 보낼 SubmissionID
+	trans.setUrl("/common/CBSO0009.do");			// Controller 쪽으로 보낼 주소
+	trans.setDs("dst_NotcMattInfoVo");				
+	trans.targetDs("dst_NotcMattInfoListVo");		
+	trans.callBack("scwin.subCallBackfunction");  	// 받을 Dataset을 처리시 콜백함수
+	trans.async();
+	trans.send();
+};
+
+//메뉴 OPEN 링크
+scwin.openLink_onclick = function(arg){
+	gfn_OpenLinkPage(arg); // 넘어온 화면ID를 OPEN한다.
+};
+
+
+//공지사항 상세창 OPEN
+scwin.openNotiDetailLink_onclick = function() {
+	//debugger;
+	//alert(this.getGeneratedIndex());
+	//console.log(row);
+	var row = this.getGeneratedIndex();
+	var sNoticMattId = dst_NotcMattInfoListVo.getCellData(row, "noticMattId"); 
+	//console.log(sNoticMattId);	
+	var promise = Promise.resolve();
+    promise = promise.then(function(rtnVal) {
+    	scwin.openPopupCBSO006P(sNoticMattId);
+	});
+};
+//**********************************************************
+// 공지사항등록[CBSO006P]팝업화면 오픈
+//**********************************************************
+scwin.openPopupCBSO006P = function(sNoticMattId) {
+	var promise = Promise.resolve();	        
+	promise = promise.then(function(rtnVal) {
+		var indata  = {"noticMattId" 	: sNoticMattId};
+		var popInfo = {
+		    "width"     : 740,
+		    "height"    : 340,
+		    "top"       : 100,
+		    "left"      : 100,
+		    "indata"    : indata,
+		    //"callback"  : scwin.popupCallback,
+		    "title"     : "공지사항 등록 및 조회"
+		};
+		return wprom.popupOpen("/ui/cbso/CBSO006P.xml", popInfo);
+	});
+};
+
+//NEW OPEN 링크
+scwin.newLink_onclick = function(arg){
+	//window.open(arg, "_blank", ""); // 넘어온 URL을 NEW OPEN한다.
+	if(arg == "ImageSys") {
+		if (window.top.gds.gDs_Resource.getCellData(0, "gProfile") == "prod") {
+			window.open(gsImageSysUrlR, "_blank", "toolbar=yes, menubar=yes, scrollbars=yes, location=yes, resizable=yes");
+		} else {
+			window.open(gsImageSysUrlD, "_blank", "toolbar=yes, menubar=yes, scrollbars=yes, location=yes, resizable=yes");
+		}
+	}
+	if(arg == "BojangSys") {
+		window.open(gsBojangSysUrl, "_blank", "toolbar=yes, menubar=yes, scrollbars=yes, location=yes, resizable=yes");
+	}
+	if(arg == "HomepgSys") {
+		window.open(gsHomepgSysUrl, "_blank", "toolbar=yes, menubar=yes, scrollbars=yes, location=yes, resizable=yes");
+	}
+
+};
+	]]></script>
+	</head>
+	<body>
+		<xf:group class="contentWrap" id="main" style="">
+			
+			<xf:group class="l" id="" style="">
+				<!-- group:s -->
+				<xf:group class="section report_box" id="" style="">
+					<w2:textbox label="월 실적현황" class="tt" id="" style="">
+					</w2:textbox>
+					<xf:group class="graph" id=""
+						style="position:absolute;left:21px;top:64px;right:260px;">
+						<!-- <xf:image id="" src="/cm/images/contents/img_main_graph.png" style="" /> -->
+						
+						<w2:fusionchart seriesType="simple"
+							axisnameInsert="false"
+							runflashAt="IE6,IE7,IE8,IE9,IE10,IE11,Chrome"
+							id="mfct_selectNwcrPrreList" chartType="Column2D"
+							formatnumberscale="0" yAxisValueDecimals="0" yAxisMinValue="0" yAxisMaxValue="100"
+							style="position: relative;height:200px;width:100%;margin-top: -20px;"
+							drawType="javascript" accessibility="false" ref="data:DsWs_List"
+							seriesColumns="nGurntCt" labelNode="sDeptName">
+						</w2:fusionchart> 
+					</xf:group>
+					<xf:group class="info_list" id="msta_retrieveCurmmAchvList" 
+						style="position: absolute;width:230px;right: 0px;"
+						tagname="ul">
+						<xf:group class="l1" id="" style=""
+							tagname="li">
+							<w2:textbox label="영업건수" class="list_tt"
+								id="" style="">
+							</w2:textbox>
+							<xf:group class="data" id="" style="width: 100%;">
+								<w2:textbox label="보장성: "
+									tagname="span" />
+								<w2:textbox label="330" tagname="span"
+									class="txt_blue" ref="data:dsl_curmmAchvList.ensrSaleCnt"
+									id="msta_nEnsrSaleCnt" />
+								<w2:textbox label="건" tagname="span" />
+							</xf:group>
+							<xf:group class="data" id="" style="width: 100%;">
+								<w2:textbox label="저축성: "
+									tagname="span" />
+								<w2:textbox label="330" tagname="span"
+									class="txt_red" ref="data:dsl_curmmAchvList.saveSaleCnt"
+									id="msta_nSaveSaleCnt" />
+								<w2:textbox label="건" tagname="span" />
+							</xf:group>
+						</xf:group>
+						<xf:group class="l2" id="" style="width:100%"
+							tagname="li">
+							<w2:textbox label="보험료&lt;br/&gt;합계"
+								class="list_tt" id="" style="">
+							</w2:textbox>
+							<xf:group class="data" id="" style="width: 100%;">
+								<w2:textbox label="보장성: "
+									tagname="span" />
+								<w2:textbox label="330" tagname="span"
+									class="txt_blue" ref="data:dsl_curmmAchvList.ensrPremSum"
+									id="msta_nEnsrPremSum" style=""/>
+								<w2:textbox label="천원" tagname="span" />
+							</xf:group>
+							<xf:group class="data" id="" style="width: 100%;">
+								<w2:textbox label="저축성: "
+									tagname="span" />
+								<w2:textbox label="330" tagname="span"
+									class="txt_red" ref="data:dsl_curmmAchvList.savePremSum" 
+									id="msta_nSavePremSum"/>
+								<w2:textbox label="천원" tagname="span" />
+							</xf:group>
+						</xf:group>
+						<xf:group class="l3" id="" style="width:100%"
+							tagname="li">
+							<w2:textbox label="월납&lt;br/&gt;보험료"
+								class="list_tt" id="" style="">
+							</w2:textbox>
+							<xf:group class="data" id="" style="width: 100%;">
+								<w2:textbox label="보장성: "
+									tagname="span" />
+								<w2:textbox label="330" tagname="span"
+									class="txt_blue" ref="data:dsl_curmmAchvList.ensrMpayPremSum" 
+									id="msta_nEnsrMpayPremSum"/>
+								<w2:textbox label="천원" tagname="span" />
+							</xf:group>
+							<xf:group class="data" id="" style="width: 100%;">
+								<w2:textbox label="저축성: "
+									tagname="span" />
+								<w2:textbox label="330" tagname="span"
+									class="txt_red" ref="data:dsl_curmmAchvList.saveMpayPremSum" 
+									id="msta_nSaveMpayPremSum"/>
+								<w2:textbox label="천원" tagname="span" />
+							</xf:group>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+				<!-- group:e -->
+				
+				<xf:group class="cb" id="" style="">
+					<!-- group:s -->
+					<xf:group class="l" id="" style="">
+						<xf:group class="section notice_box"
+							id="mnot_notibox" style="">
+							<xf:group class="tt_wrap" id="" style="">
+								<w2:textbox label="공지사항" class="tt"
+									id="mnot_notiboxtitle" style="cursor: pointer;" ev:onclick="scwin.openLink_onclick('CBSO005M')">
+								</w2:textbox>
+							</xf:group>
+
+							<!-- grid test -->
+							<!-- 
+							<w2:gridView ignoreCellClick="false"
+								ev:onrowindexchange="" autoFit="allColumn" rowStatusWidth="20"
+								visibleRowNum="" class="list" wheelRows="" ev:onviewchange=""
+								fixedColumnWithHidden="" dataList="dst_NotcMattInfoListVo" id="grd_notcMattInfoList"
+								style="height:130px;margin-top: 0px;" scrollByColumn="false" useShiftKey="true"
+								rowStatusVisible="" ev:onafteredit="" rowStatusHeaderValue="상태"
+								ev:oncellclick="" rowNumVisible="true" rowNumWidth="30" rowNumHeaderValue="No" readOnly="true">
+								<w2:header id="header1" style="">
+									<w2:row id="row2" style="">
+										<w2:column id="column4" blockSelect="false"
+											style="height:20px;" width="180" inputType="text" value="제목"
+											displayMode="label">
+										</w2:column>
+										<w2:column id="column7" blockSelect="false"
+											style="height:20px;" width="80" inputType="text" value="등록일"
+											displayMode="label">
+										</w2:column>
+									</w2:row>
+								</w2:header>
+								<w2:gBody id="gBody4" style="">
+									<w2:row id="row5" style="">
+										<w2:column id="noticMattName" blockSelect="false"
+											style="" width="180" inputType="" displayMode="label">
+										</w2:column>
+										<w2:column id="rgstDate" blockSelect="false"
+											style="" width="80" inputType="" displayMode="label">
+										</w2:column>
+									</w2:row>
+								</w2:gBody>
+							</w2:gridView>
+							-->
+							<!-- generator li test -->
+							<xf:group class="list" id="" style="" tagname="ul">
+							
+								<w2:generator id="grd_generator" style="width: 99%;margin-top:10px;height: 110px;" class="list">
+									<xf:group class="" id="grd_generator_li" style="" tagname="li">
+										<w2:anchor id="noticMattName" outerDiv="false" style="left:0px;top:0px;" ev:onclick="scwin.openNotiDetailLink_onclick">
+											<xf:label></xf:label>
+										</w2:anchor>
+										<w2:textbox class="date" label="" id="rgstDate" style="" tagname="span" ></w2:textbox>
+									</xf:group>
+								</w2:generator>
+								
+							</xf:group>
+							
+						</xf:group>
+					</xf:group>
+					<!-- group:e -->
+					
+					<!-- group:s -->
+					<xf:group class="r" id="" style="">
+						<xf:group class="section screening_box" id="" style="">
+							<xf:group class="tt_wrap" id="" style="">
+								<w2:textbox label="심사진행현황" class="tt" id="" style="cursor: pointer;" ev:onclick="scwin.openLink_onclick('CBSC111M')"></w2:textbox>
+							</xf:group>
+							
+							<xf:group class="list" id="" style="" tagname="ul">
+								<xf:group class="l1" id="" style="" tagname="li">
+									<xf:group class="icon" id=""></xf:group>
+									<w2:textbox label="진행중" class="txt" />
+									<w2:textbox label="7" tagname="span" class="value" id="msta_nProgJugmCrstCnt" ref="data:dsl_jugmCrstList.progJugmCrstCnt"/>
+									<w2:textbox label="건" tagname="span" />
+								</xf:group>
+								
+								<xf:group class="l2" id="" style="" tagname="li">
+									<xf:group class="icon" id=""></xf:group>
+									<w2:textbox label="완료" class="txt" />
+									<w2:textbox label="7" tagname="span" class="value" id="msta_nCompJugmCrstCnt" ref="data:dsl_jugmCrstList.compJugmCrstCnt"/>
+									<w2:textbox label="건" tagname="span" />
+								</xf:group>
+								
+								<xf:group class="l3" id="" style="" tagname="li">
+									<xf:group class="icon" id=""></xf:group>
+									<w2:textbox label="보완" class="txt" />
+									<w2:textbox label="7" tagname="span" class="value" id="msta_nSecuJugmCrstCnt" ref="data:dsl_jugmCrstList.secuJugmCrstCnt"/>
+									<w2:textbox label="건" tagname="span" />
+								</xf:group>
+								
+								<xf:group class="l4" id="" style="" tagname="li">
+									<xf:group class="icon" id=""></xf:group>
+									<w2:textbox label="거절" class="txt" />
+									<w2:textbox label="7" tagname="span" class="value" id="msta_nRefuJugmCrstCnt" ref="data:dsl_jugmCrstList.refuJugmCrstCnt"/>
+									<w2:textbox label="건" tagname="span" />
+								</xf:group>
+								
+							</xf:group>
+						</xf:group>
+					</xf:group>
+					
+					<!-- group:e -->
+				</xf:group>
+				
+								
+				<!-- group:s -->
+				<xf:group class="section link_box" id="" style="">
+					<xf:group class="tt_wrap" id="" style="">
+						<w2:textbox label="업무지원시스템" class="tt" id="" style=""></w2:textbox>
+					</xf:group>
+					<xf:group class="list" id="" style="" tagname="ul">
+						<xf:group class="l1" id="" style="" tagname="li">
+							<xf:group class="" id="" style=""
+								tagname="a">
+								<w2:attributes>
+									<w2:href>
+										javascript:void(null)
+									</w2:href>
+								</w2:attributes>
+								<xf:group class="icon" id=""
+									ev:onclick='scwin.newLink_onclick("ImageSys")'>
+								</xf:group>
+								<w2:textbox label="이미지시스템" class="txt"
+									ev:onclick='scwin.newLink_onclick("ImageSys")' />
+							</xf:group>
+						</xf:group>
+						
+						<xf:group class="l2" id="" style="" tagname="li">
+							<xf:group class="" id="" style=""
+								tagname="a">
+								<w2:attributes>
+									<w2:href>
+										javascript:void(null)
+									</w2:href>
+								</w2:attributes>
+								<xf:group class="icon" id=""
+									ev:onclick='scwin.newLink_onclick("BojangSys")'>
+								</xf:group>
+								<w2:textbox label="보장분석시스템" class="txt"
+									ev:onclick='scwin.newLink_onclick("BojangSys")' />
+							</xf:group>
+						</xf:group>
+						
+						<xf:group class="l3" id="" style="" tagname="li">
+							<xf:group class="" id="" style=""
+								tagname="a">
+								<w2:attributes>
+									<w2:href>
+										javascript:void(null)
+									</w2:href>
+								</w2:attributes>
+								<xf:group class="icon" id=""
+									ev:onclick='scwin.newLink_onclick("HomepgSys")'>
+								</xf:group>
+								<w2:textbox label="홈페이지" class="txt"
+									ev:onclick='scwin.newLink_onclick("HomepgSys")' />
+							</xf:group>
+						</xf:group>
+						
+						<xf:group class="l4" id="" style="" tagname="li">
+							<xf:group class="" id="" style=""
+								tagname="a">
+								<w2:attributes>
+									<w2:href>
+										javascript:void(null)
+									</w2:href>
+								</w2:attributes>
+								<xf:group class="icon" id=""
+									ev:onclick="scwin.openLink_onclick('CBSC103M')">
+								</xf:group>
+								<w2:textbox label="출력물" class="txt"
+									ev:onclick="scwin.openLink_onclick('CBSC103M')" />
+							</xf:group>
+						</xf:group>
+						
+					</xf:group>
+				</xf:group>
+				<!-- group:e -->
+				
+			</xf:group>
+			
+			<xf:group class="r" id="" style="">
+				<!-- group:s -->
+				<xf:group class="section banner_box" id="" style="">
+					<w2:textbox label="배너" class="tt" id="" style=""></w2:textbox>
+					<w2:anchor id="" outerDiv="true" class="banner1" ev:onclick=''>
+					    <xf:label>국내최초 교직원 전용 맞춤 보험 The-K에듀플러스 생활보장보험</xf:label>
+					</w2:anchor>
+					<w2:anchor id="" outerDiv="true" class="banner2" ev:onclick=''>
+					    <xf:label>믿을수 있는 에듀카의특별한 할인 혜택을 누려보세요. 내 차 알아보기</xf:label>
+					</w2:anchor>
+				</xf:group>
+				<!-- group:e -->
+				
+				<!-- group:s -->
+				<xf:group class="section monitoring_box" id="" style="top:-5px">
+					<xf:group class="tt_wrap" id="" style="">
+						<w2:textbox label="월별 완전판매 모니터링 현황" class="tt" id="" style="cursor: pointer;" ev:onclick="scwin.openLink_onclick('CBSB021M')"></w2:textbox>
+					</xf:group>
+					<xf:group class="list" id="" style="" tagname="ul">
+						<xf:group class="l1" id="" style="" tagname="li">
+							<w2:textbox label="완전" class="txt" />
+							<xf:group class="icon" id=""></xf:group>
+							<w2:textbox label="50" tagname="span" class="value" id="msta_nCompPectSaleMntrCrstCnt" ref="data:dsl_completeSalesList.compPectSaleMntrCrstCnt"/>
+						</xf:group>
+						<xf:group class="l2" id="" style="" tagname="li">
+							<w2:textbox label="불완전" class="txt" />
+							<xf:group class="icon" id=""></xf:group>
+							<w2:textbox label="3" tagname="span" class="value" id="msta_nInmpPectSaleMntrCrstCnt" ref="data:dsl_completeSalesList.inmpPectSaleMntrCrstCnt"/>
+						</xf:group>
+						<xf:group class="l3" id="" style="" tagname="li">
+							<w2:textbox label="미결" class="txt" />
+							<xf:group class="icon" id=""></xf:group>
+							<w2:textbox label="61" tagname="span" class="value" id="msta_nPendPectSaleMntrCrstCnt" ref="data:dsl_completeSalesList.pendPectSaleMntrCrstCnt"/>
+						</xf:group>
+						<xf:group class="l4" id="" style="" tagname="li">
+							<w2:textbox label="기타" class="txt" />
+							<xf:group class="icon" id=""></xf:group>
+							<w2:textbox label="32" tagname="span" class="value" id="msta_nOthrPectSaleMntrCrstCnt" ref="data:dsl_completeSalesList.othrPectSaleMntrCrstCnt"/>
+						</xf:group>
+						
+					</xf:group>
+				</xf:group>
+				<!-- group:e -->
+			</xf:group>
+			
+			
+		</xf:group>
+	</body>
+</html>

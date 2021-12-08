@@ -1,0 +1,1301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+  <head>
+   <!-- 
+	       ###################################################
+	        파일명 : CBSC169S.xml
+	        프로그램명 : 운전자고지사항[B230_Div4_Pop]
+	        설 명 :  피보험자고지사항
+	        작성자 : 진태만
+	        작성일 : 2017.10.21
+	
+	        수정일자            수정자                  수정내용
+	       ==================================================
+	      2017.10.20        진태만          최초작성
+	       ###################################################
+	    -->  
+		<w2:type>DEFAULT</w2:type>
+		
+		<w2:type>DEFAULT</w2:type>
+        <w2:buildDate></w2:buildDate>
+        <xf:model>
+            <xf:instance>
+                <data></data>
+            </xf:instance>
+            <w2:dataCollection>
+            	<!--// 운전 용도 용도 Ds(Ds_Yn_2)  //-->
+            	<w2:dataList baseNode="list" id="Ds_Yn_2" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column dataType="text" id="CODE" name="CODE"></w2:column>
+						<w2:column dataType="text" id="TEXT1" name="TEXT1"></w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<CODE><![CDATA[1]]></CODE>
+							<TEXT1><![CDATA[자가용]]></TEXT1>
+						</w2:row>
+						<w2:row>
+						<CODE><![CDATA[2]]></CODE>
+							<TEXT1><![CDATA[영업용]]></TEXT1>	<!--// 수정([2]영업용 추가): 2017.12.20, by 진태만 //-->  
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+                
+                <w2:dataList baseNode="list" id="Ds_Yn_1" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="CODE" name="CODE"></w2:column>
+                        <w2:column dataType="text" id="TEXT1" name="TEXT1"></w2:column>
+                        <w2:column dataType="text" id="TEXT2" name="TEXT2"></w2:column>
+                        <w2:column dataType="text" id="TEXT3" name="TEXT3"></w2:column>
+                        <w2:column dataType="text" id="TEXT4" name="TEXT4"></w2:column>
+                        <w2:column dataType="text" id="TEXT5" name="TEXT5"></w2:column>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <CODE><![CDATA[Y]]></CODE>
+                            <TEXT1><![CDATA[예]]></TEXT1>
+                            <TEXT2><![CDATA[예]]></TEXT2>
+                            <TEXT3><![CDATA[예]]></TEXT3>
+                            <TEXT4><![CDATA[예]]></TEXT4>
+                            <TEXT5><![CDATA[있다]]></TEXT5>
+                        </w2:row>
+                        <w2:row>
+                            <CODE><![CDATA[N]]></CODE>
+                            <TEXT1><![CDATA[아니오]]></TEXT1>
+                            <TEXT2><![CDATA[안한다]]></TEXT2>
+                            <TEXT3><![CDATA[아니오]]></TEXT3>
+                            <TEXT4><![CDATA[아니오 (아니오 선택시 계약체결 불가)]]></TEXT4>
+                            <TEXT5><![CDATA[없다]]></TEXT5>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_Yn_3" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="CODE" name="CODE"></w2:column>
+                        <w2:column dataType="text" id="TEXT1" name="TEXT1"></w2:column>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <CODE><![CDATA[1]]></CODE>
+                            <TEXT1><![CDATA[소유]]></TEXT1>
+                        </w2:row>
+                        <w2:row>
+                            <CODE><![CDATA[2]]></CODE>
+                            <TEXT1><![CDATA[탑승]]></TEXT1>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_hobby" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCd" name="sCd"></w2:column>
+                        <w2:column dataType="text" id="sHnglCdName" name="sHnglCdName"></w2:column>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <sCd></sCd>
+                            <sHnglCdName><![CDATA[- 선택 -]]></sHnglCdName>
+                        </w2:row>
+                        <w2:row>
+                            <sCd><![CDATA[01]]></sCd>
+                            <sHnglCdName><![CDATA[스쿠버다이빙]]></sHnglCdName>
+                        </w2:row>
+                        <w2:row>
+                            <sCd><![CDATA[02]]></sCd>
+                            <sHnglCdName><![CDATA[행글라이딩, 페러글라이딩]]></sHnglCdName>
+                        </w2:row>
+                        <w2:row>
+                            <sCd><![CDATA[03]]></sCd>
+                            <sHnglCdName><![CDATA[스카이다이빙]]></sHnglCdName>
+                        </w2:row>
+                        <w2:row>
+                            <sCd><![CDATA[04]]></sCd>
+                            <sHnglCdName><![CDATA[수상스키]]></sHnglCdName>
+                        </w2:row>
+                        <w2:row>
+                            <sCd><![CDATA[05]]></sCd>
+                            <sHnglCdName><![CDATA[자동차,오토바이 경주]]></sHnglCdName>
+                        </w2:row>
+                        <w2:row>
+                            <sCd><![CDATA[06]]></sCd>
+                            <sHnglCdName><![CDATA[번지점프]]></sHnglCdName>
+                        </w2:row>
+                        <w2:row>
+                            <sCd><![CDATA[07]]></sCd>
+                            <sHnglCdName><![CDATA[빙벽, 암벽등반]]></sHnglCdName>
+                        </w2:row>
+                        <w2:row>
+                            <sCd><![CDATA[08]]></sCd>
+                            <sHnglCdName><![CDATA[제트스키]]></sHnglCdName>
+                        </w2:row>
+                        <w2:row>
+                            <sCd><![CDATA[09]]></sCd>
+                            <sHnglCdName><![CDATA[래프팅]]></sHnglCdName>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_LTIDA07" repeatNode="map"></w2:dataList>
+                
+                <w2:dataList baseNode="list" id="Ds_recurrence" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCd" name="sCd"></w2:column>
+                        <w2:column dataType="text" id="sHnglCdName" name="sHnglCdName"></w2:column>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <sCd></sCd>
+                            <sHnglCdName><![CDATA[- 선택 -]]></sHnglCdName>
+                        </w2:row>
+                        <w2:row>
+                            <sCd><![CDATA[00]]></sCd>
+                            <sHnglCdName><![CDATA[없음]]></sHnglCdName>
+                        </w2:row>
+                        <w2:row>
+                            <sCd><![CDATA[01]]></sCd>
+                            <sHnglCdName><![CDATA[있음]]></sHnglCdName>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection></w2:workflowCollection>
+        </xf:model>
+		
+		<!--// js Script include //--> 
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/>   
+	 	<script src="/cm/js/convertJs/LongTerm_Script.js"/>
+		<script src="/cm/js/convertJs/Acd_Script.js"/>
+		
+        <script><![CDATA[
+/****************************************************************************
+ * 프로그램번호   : B230_Div4_Pop
+ * 프로그램명     : 운전자고지사항.
+ * 파일명         : B230_Div4_Pop.xml
+ * 프로그램 내용  : 운전자고지사항 등록/조회
+ * 관련 프로그램  : 
+ * 작성자         : 김경일
+ * 작성일         : 2010-10-30
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+ 
+ var CBSC129P = parent;		// parent  선언
+ var sScnNm;
+  
+ //---------------------------------------------------------------------------
+// function 명 : body1_onpageload
+// 내용        : 화면로딩시 처리
+//---------------------------------------------------------------------------
+scwin.init = function() {  
+	//console.log("[/CBSC169S.xml] [init()] ==> [폼 로딩] [운전자고지사항[B230_Div4_Pop]] [TEST_01] ===========> @@" );
+ 
+	if (sScnNm == "E110") {
+        var sStatic33 = Static33.getValue();
+        
+        sStatic33 = Static33 + "\n\u203B 부활(효력회복)시에는 계약전 알릴의무 대상 기간을\u300C최초 계약해당일(또는 직전 부활(효력회복)일) 이후로부터 부활(효력회복)을 청약한 날까지의 기간\u300D과 \u300C계약전 알릴의무 대상기간(아래질문의 최근 1년, 5년)\u300D중 짧은 기간으로 합니다.";
+        Static33.setValue(sStatic33);
+    }	
+  
+  	CBSC129P.scwin.lfn_Search();   // 피보험자고지사항[B230_Pop] (/CBSC129P.xml)에서 조회
+    //console.log("[/CBSC169S.xml] [init()] ==> [폼 로딩] [TEST_03]" );
+ 	
+  	CBSC129P.scwin.lfn_ComponentsSort();	// 피보험자고지사항[B230_Pop] (/CBSC129P.xml)에서 Components 정렬시킴
+  
+	console.log("[/CBSC169S.xml] [init()] ==> [폼 로딩] [운전자고지사항[B230_Div4_Pop]] [TEST_end] ========================> @@@@  \n\n\n" ); 
+};
+ 
+//---------------------------------------------------------------------------
+// function 명 : lfn_RadioOnChanged
+// 내용        : 예/아니오 선택시 아니오일 경우 연관객체 초기화 시킴
+//--------------------------------------------------------------------------- 
+lfn_RadioOnChanged = function(info) {
+	//console.log("[/CBSC169S.xml] [lfn_RadioOnChanged()] ==> [Radio 변경 이벤트 처리] [TEST_01] [this.getID()] "+ this.getID() );
+ 
+    var comp;
+    var arrList;
+    var arrListTmp;  
+	arrList = this.getID().split("_");	 // split 처리
+    var compCnt = B230_Div1.getChildrenCount();		// Components 총 수 
+  	//console.log("[/CBSC169S.xml] [lfn_RadioOnChanged()] ==> [Radio 변경 이벤트 처리] [TEST_02] [this.getID()] "+ this.getID() +"[this.getValue()]"+ this.getValue() +"[compCnt]"+ compCnt ); 
+ 
+	for (i = 0; i < compCnt; i++) {	 //정렬할 배열 담기 
+   		comp = B230_Div1.getAllChildren()[i];		// Components 담기 
+		//console.log("[/CBSC169S.xml] [lfn_RadioOnChanged()] ==> [Radio 변경 이벤트 처리] [TEST_02_1] [i_번째]"+ i +"[this.getID()]"+ this.getID() );
+        
+   		 if (util.isNull(comp)) {		// comp가 널 이면 다음 i번째로 진행
+        	continue;
+        }
+ 		if (comp.id.indexOf("Static") > -1 || comp.id.indexOf("static") > -1) {	     // static 존재하면(제외 시킴)  
+ 	  		continue;
+        }   
+        if (comp.id.indexOf("group") > -1) {	     // group 존재하면(제외 시킴) ;
+ 	  		continue;
+        }          
+		if (comp.id.indexOf("Shape") > -1) {	     // Shape 존재하면(제외 시킴)  
+ 	  		continue;
+        }         
+        if (comp.id.indexOf("wq_uuid") > -1) {	     // wq_uuid 존재하면(제외 시킴)  
+ 	  		continue;
+        }  
+          
+    	var comp2 = {};  
+    	comp2.id = comp.id;	// Component ID 
+     	var tmpObj = WebSquare.util.getComponentById(comp2.id);   
+     	comp2.getType = tmpObj.getPluginName();		// Component 타입
+    	comp2.value = tmpObj.getValue();			// Component value  
+    	comp2.enable = !tmpObj.getDisabled();	 		// Component disabled  Obj.getValue()
+    	comp2.Obj   = tmpObj; 
+    	
+		if (comp2.id.indexOf(parent.sDrveType) > 0) {	   // 같은 sDrveType이 존재하면
+     		//console.log("[/CBSC169S.xml] [lfn_RadioOnChanged()] ==> [Radio 변경 이벤트 처리] [TEST_M_21] [i_번째]"+ i +"[comp2.id]"+ comp2.id +"[arrList[1]]"+ arrList[1] +"[substr(arrList[1], 0, 4)]"+ wconv.substr(arrList[1], 0, 4)  +"[comp2.id.indexOf(wconv.substr(arrList[1], 0, 4))]"+ comp2.id.indexOf(wconv.substr(arrList[1], 0, 4)) );
+   	     
+			 if (comp2.id.indexOf(wconv.substr(arrList[1], 0, 4)) > 0) {	 // 4자리 같은 질의코드가 존재하면
+            	arrListTmp = comp2.id.split("_");	 // split 처리
+          		//console.log("[/CBSC169S.xml] [lfn_RadioOnChanged()] ==> [Radio 변경 이벤트 처리] [TEST_M_51] [i_번째]"+ i +"[comp2.id]"+ comp2.id +"[arrList[1]]"+ arrList[1] +"[this.getID()]"+ this.getID() +"[this.getValue()]"+ this.getValue() );
+   			     			 	  
+				if (CBSC129P.sSvtYn != "Y" && arrListTmp[1] == "B0703") {	 	// 저축보험용은 비활성화  
+	      			comp2.Obj.setValue("");   // 해당 컴포넌트와 관련된 하위 컴포넌트 널 처리   
+	           		comp2.enable = false;
+	           		comp2.Obj.setDisabled(true);		//  비활성화 처리 
+					comp2.Obj.setReadOnly(true);		// 비 활성화 처리(ReadOnly)
+	            	//console.log("[/CBSC169S.xml] [lfn_RadioOnChanged()] ==> [Radio 변경 이벤트 처리] [TEST_97] [비활성화 처리] [i_번째]"+ i +"[comp2.id]"+ comp2.id +"[this.getID()] "+ this.getID() +"[this.getValue()]"+ this.getValue() );
+	   		 	 }  // end of if ==> 저축보험용은 비활성화  
+				    
+				if (wconv.substr(arrListTmp[1], 4, 1) != "0" && ((arrListTmp[1] >= "B0704" && arrListTmp[1] <= "B0706"))) {	   //예/아니오 객체는 빼고 나머지만 초기화 
+					if (rad_B0900_1_1_0.getValue() == "N" && rad_B0700_1_1_0.getValue() == "N") {
+						if (this.getValue() == "N") {		//  아니오 이면   
+							comp2.Obj.setValue("");   // 해당 컴포넌트와 관련된 하위 컴포넌트 널 처리  
+							comp2.enable = false;
+							comp2.Obj.setDisabled(true);		// 비활성화 처리 
+							comp2.Obj.setReadOnly(true);		// 비 활성화 처리(ReadOnly)
+							//console.log("[/CBSC169S.xml] [lfn_RadioOnChanged()] ==> [Radio 변경 이벤트 처리] [TEST_91_2] [비활성화 처리] [i_번째]"+ i +"[comp2.id]"+ comp2.id +"[this.getID()] "+ this.getID() +"[this.getValue()]"+ this.getValue() );
+						} else { 
+							comp2.enable = true;
+							comp2.Obj.setDisabled(false);		// 활성화 처리
+							comp2.Obj.setReadOnly(false);	// 활성화 처리(ReadOnly)
+						}
+					} else { 
+						comp2.enable = true;
+						comp2.Obj.setDisabled(false);		// 활성화 처리
+						comp2.Obj.setReadOnly(false);	// 활성화 처리(ReadOnly)
+					}
+				} else if (wconv.substr(arrListTmp[1], 4, 1) != "0" && arrListTmp[1] != "B0600") { 
+					if (this.getValue() == "N") {		//  아니오 이면    
+						comp2.Obj.setValue("");   // 해당 컴포넌트와 관련된 하위 컴포넌트 널 처리  
+						comp2.enable = false;
+						comp2.Obj.setDisabled(true);		// 비활성화 처리  
+						comp2.Obj.setReadOnly(true);		// 비 활성화 처리(ReadOnly)
+					} else {  
+						comp2.enable = true;
+						comp2.Obj.setDisabled(false);		// 활성화 처리
+						comp2.Obj.setReadOnly(false);	// 활성화 처리(ReadOnly)
+
+					}		
+				} // end of if ==>   //예/아니오 객체는 빼고 나머지만 초기화 
+            }  //  end of if ==> 4자리 같은 질의코드가 존재하면
+            
+           if (this.getID().indexOf( "B070") > 0) {		//질의 B090, B070 인 경우 예외 처리(5.최근5년내 치료 radio, 6.10대질병 radio)
+				arrListTmp = this.getID().split("_");	 // split 처리
+                
+                if (wconv.substr(arrListTmp[1], 4, 1) != "0" && ((arrListTmp[1] >= "B0704" && arrListTmp[1] <= "B0706"))) {  //  
+                    if (rad_B0900_1_1_0.getValue() == "N" && rad_B0700_1_1_0.getValue() == "N") {
+						if (this.getValue() == "N") {		//  아니오 이면   
+							comp2.Obj.setValue("");   // 해당 컴포넌트와 관련된 하위 컴포넌트 널 처리  
+							comp2.enable = false;
+							comp2.Obj.setDisabled(true);		// 비활성화 처리
+							comp2.Obj.setReadOnly(true);		// 비 활성화 처리(ReadOnly)							
+						} else { 
+							comp2.enable = true;
+							comp2.Obj.setDisabled(false);		// 활성화 처리
+							comp2.Obj.setReadOnly(false);	// 활성화 처리(ReadOnly)
+						}
+					} else { 
+						comp2.enable = true;
+						comp2.Obj.setDisabled(false);		// 활성화 처리
+						comp2.Obj.setReadOnly(false);	// 활성화 처리(ReadOnly)
+					}
+                }
+            }  // end of if ==>  //질의 B090, B070 인 경우 예외 처리 
+			
+		}  	// end of if ==> 같은 sDrveType이 존재하면
+		// console.log("[/CBSC169S.xml] [lfn_RadioOnChanged()] ==> [Radio 변경 이벤트 처리] [TEST_12_end] [같은 질의코드를 찾음][i_번째]"+ i +"[comp2.id]"+ comp2.id +"[comp2.Obj.getValue()]"+ comp2.Obj.getValue() +"[parent.sDrveType]"+ parent.sDrveType );
+	}	// end of for() 
+	
+	// console.log("[/CBSC169S.xml] [lfn_RadioOnChanged()] ==> [Radio 변경 이벤트 처리] [TEST_end]" );
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_cal_OnCharChanged
+// 내용        : 년월일 변경시 셋팅처리
+//---------------------------------------------------------------------------
+scwin.lfn_cal_OnCharChanged = function(info) { 	 // onviewchange
+	//console.log("[/CBSC169S.xml] [lfn_cal_OnCharChanged()] ==> [년월일 변경시 셋팅처리] [TEST_01] [this.getID()]"+ this.getID() );
+
+    var fromDate = ""; 
+    var toDate = ""; 
+    var carePriod = ""; 
+    var newValue = info.newValue;   //선택 된 값
+    //console.log("[/CBSC169S.xml] [lfn_cal_OnCharChanged()] ==> [년월일 변경시 셋팅처리] [TEST_01] [this.getID()]"+ this.getID() +"[newValue]"+ newValue );
+    
+    if (wconv.length(newValue) == 8) {  
+        fromDate = wconv.substr(this.getID(), 0, 17) + "7";
+        //dateText = "시작년월";
+        toDate = wconv.substr(this.getID(), 0, 17) + "8";
+        //toDateText = "종료년월";
+        carePriod = "edt" + wconv.substr(this.getID(), 3, 14) + "2";
+        //console.log("[/CBSC169S.xml] [lfn_cal_OnCharChange()] ==> [TEST_04] [this.getID()]"+ this.getID() +"[newValue]"+ newValue +"[carePriod]"+ carePriod +"[fromDate]"+ fromDate +"[toDate]"+ toDate );		
+		
+        eval(carePriod).setValue(eval(fromDate).getValue() + "~" + eval(toDate).getValue());   
+		//console.log("[/CBSC169S.xml] [lfn_RadioOnChanged()] ==> [년월일 변경시 셋팅처리] [TEST_end] [eval(carePriod).getValue()]"+ eval(carePriod).getValue() );
+		//console.log("[/CBSC169S.xml] [lfn_RadioOnChanged()] ==> [년월일 변경시 셋팅처리] [TEST_end] [edt_B0704_2_2_2_02.getValue()]"+ edt_B0704_2_2_2_02.getValue() );
+ 	} 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_FromToCheck
+// 내용        : 날짜 기간 입력시 시작/종료 체크
+//---------------------------------------------------------------------------
+var check = false;
+
+//이벤트 중복발생 방지 
+lfn_FromToCheck = function(obj) {
+	//console.log("[/CBSC171S.xml] [lfn_FromToCheck()] ==> [날짜 기간 입력시 시작/종료 체크] [TEST_01] [obj.id]"+ obj.id );
+	
+    var fromDate = "";
+    var dateText = "";
+    var toDate = "";
+    var toDateText = "";
+    var fFlag = false;
+
+    //시작일자
+    if (wconv.substr(obj.id, 17, 1) == "7") {
+        fromDate = wconv.substr(obj.id, 0, 17) + "7";
+        dateText = "시작년월";
+        toDate = wconv.substr(obj.id, 0, 17) + "8";
+        toDateText = "종료년월";
+    }
+
+    //시작 종료 체크
+    if (eval(fromDate).getValue() > 0) {
+        if (wconv.length(wconv.replace(eval(fromDate).getValue(), "-", "")) != 8) {
+            if (wconv.length(wconv.replace(eval(fromDate).getValue(), "-", "")) != 6) {
+                wprom.alert(dateText + "을 정확히 입력해 주세요");
+                eval(fromDate).setValue("");
+                eval(fromDate).focus();
+                fFlag = true;
+            }
+        } else if (wconv.length(wconv.replace(eval(toDate).getValue(), "-", "")) != 8) {
+            if (wconv.length(wconv.replace(eval(toDate).getValue(), "-", "")) != 6) {
+                wprom.alert(toDateText + "을 정확히 입력해 주세요");
+                eval(toDate).setValue("");
+                eval(toDate).focus();
+                fFlag = true;
+            }
+        } else if (wconv.toNumber(wconv.replace(eval(fromDate).getValue(), "-", "")) > wconv.toNumber(wconv.replace(eval(toDate).getValue(), "-", ""))) {
+            wprom.alert(dateText + "이 더 큽니다.");
+            obj.setValue("");
+            obj.focus();
+            fFlag = true;
+        }
+    } else {}
+    
+    //console.log("[/CBSC171S.xml] [lfn_FromToCheck()] ==> [날짜 기간 입력시 시작/종료 체크] [TEST_end] [fFlag]"+fFlag);
+    
+    return fFlag;
+}; 
+	]]></script>
+    </head>
+  <body id="body1" ev:onpageload="scwin.body1_onpageload"
+  	lazy="false">
+  	<xf:group class="" id="B230_Div1"
+  		style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;height:1179px; left:8px; top:8px;width:810px;"
+  		userData1="운전자고지사항"
+  		userData2=" OnLoadCompleted:scwin.B230_Div1_OnLoadCompleted; ">
+  		<!--        <xf:group class="cont_wrap" id="B230_Div1" style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;  height:744px; left:8px; top:8px;width:820px;" userData1="운전자고지사항" userData2=" OnLoadCompleted:scwin.B230_Div1_OnLoadCompleted; ">-->
+  		<xf:group arcsize="8" class="sty_area_form" id="group1"
+  			style="width:810px; position:absolute;  border-color:user23;  bottom:228px;height:109px; left:0px;top:188px;right:0;"
+  			userData3="RoundRect">
+  		</xf:group>
+  		<xf:group arcsize="8" class="sty_area_form" id="group3"
+  			style="width:810px; position:absolute;  border-color:user23;  bottom:228px;height:77px; left:0px;top:480px;right:0;"
+  			userData3="RoundRect">
+  		</xf:group>
+  		<xf:group arcsize="8" class="sty_area_form" id="group4"
+  			style="width:810px; position:absolute;  border-color:user23;  bottom:228px;height:88px; left:0px;top:556px;right:0;"
+  			userData3="RoundRect">
+  		</xf:group>
+  		<xf:group arcsize="8" class="sty_area_form" id="group6"
+  			style="width:800px; position:absolute;  border-color:user23;  bottom:228px;height:128px; left:10px;top:746px;right:0;"
+  			userData3="RoundRect">
+  		</xf:group>
+  		<xf:group arcsize="8" class="sty_area_form" id="group5"
+  			style="width:810px; position:absolute;  border-color:user23;  bottom:228px;height:104px; left:0px;top:643px;right:0;"
+  			userData3="RoundRect">
+  		</xf:group>
+  		<xf:group arcsize="8" class="sty_area_form" id="group8"
+  			style="width:810px; position:absolute;  border-color:user23;  bottom:228px;height:142px; left:0px;top:1050px;right:0;"
+  			userData3="RoundRect">
+  		</xf:group>
+  		<xf:group arcsize="8" class="sty_area_form" id="group2"
+  			style="width:810px; position:absolute;  border-color:user23;  bottom:228px;height:185px; left:0px;top:296px;right:0;"
+  			userData3="RoundRect">
+  			<xf:group class="" id=""
+  				style="border-left:1px dotted #b6b6b6; position: relative;width:1px;height:40px;margin-left:235px;margin-top:69px;">
+  			</xf:group>
+  			<xf:group class="" id=""
+  				style="border-left:1px dotted #b6b6b6; position: relative;width:1px;height:40px;margin-left:390px;margin-top:-42px;top:0px;">
+  			</xf:group>
+  			<xf:group class="" id=""
+  				style="border-left:1px dotted #b6b6b6; position: relative;width:1px;height:40px;margin-left:537px;margin-top:-42px;top:0px;">
+  			</xf:group>
+  			<xf:group class="" id=""
+  				style="border-left:1px dotted #b6b6b6; position: relative;width:1px;height:40px;margin-left:234px;margin-top:23px;top:0px;">
+  			</xf:group>
+  			<xf:group class="" id=""
+  				style="border-left:1px dotted #b6b6b6; position: relative;width:1px;height:40px;margin-left:392px;margin-top:-41px;top:0px;">
+  			</xf:group>
+  			<xf:group class="" id=""
+  				style="border-left:1px dotted #b6b6b6; position: relative;width:1px;height:20px;margin-left:686px;margin-top:477px;top:0px;">
+  			</xf:group>
+  			<xf:group class="" id=""
+  				style="border-left:1px dotted #b6b6b6; position: relative;width:1px;height:20px;margin-left:686px;margin-top:12px;top:0px;">
+  			</xf:group>
+  			<xf:group class="" id=""
+  				style="border-left:1px dotted #b6b6b6; position: relative;width:1px;height:20px;margin-left:686px;margin-top:18px;top:0px;">
+  			</xf:group>
+  		</xf:group>
+  		<xf:group arcsize="8" class="sty_area_form" id="group9"
+  			style="border:none;width:810px; position:absolute;  border-color:user23;  bottom:228px;height:24px; left:0px;top:1188px;right:0;"
+  			userData3="RoundRect">
+  		</xf:group>
+  		<w2:textbox class="sty_lb_Basic" id="Static21" label="2.운전여부"
+  			style="padding-top:5px;position:absolute; VAlign:Middle;  border-style:solid;height:181px;top:293px;width:80px;left:-8px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static0"
+  			label="현재 눈,코 귀,언어 씹는 기능,정신 또는 신경기능에 장애가 있습니까?"
+  			style="top:493px;left:107px;WordWrap:TRUE;VAlign:Middle;width:680px;position:absolute;height:26px;"
+  			tagname="">
+  		</w2:textbox>
+  		<xf:select1 appearance="full" class="sty_ipt_search" cols="2"
+  			ev:onviewchange="lfn_RadioOnChanged" id="rad_B0200_1_1_0" ref=""
+  			rows="1"
+  			style="position:absolute; ColumnCount:2;   height:20px;left:676px;top:496px; width:110px;"
+  			tabIndex="12">
+  			<xf:choices>
+  				<xf:itemset nodeset="data:Ds_Yn_1">
+  					<xf:label ref="TEXT1"></xf:label>
+  					<xf:value ref="CODE"></xf:value>
+  				</xf:itemset>
+  			</xf:choices>
+  		</xf:select1>
+  		<w2:textbox class="sty_lb_Basic" id="Static2" label="3.기능적장애"
+  			style="padding-top:5px;position:absolute; VAlign:Middle;  border-style:solid;height:70px;top:480px;width:80px;left:-8px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static3"
+  			label="현재 팔,다리,손(손가락 포함),발(발가락 포함),척추에 손실 또는 변형으로 인한 외관상 신체의 장애가 있습니까?"
+  			style="top:570px;left:107px;WordWrap:TRUE;width:680px;position:absolute;height:21px;"
+  			tagname="">
+  		</w2:textbox>
+  		<xf:select1 appearance="full" class="sty_ipt_search" cols="2"
+  			ev:onviewchange="lfn_RadioOnChanged" id="rad_B0300_1_1_0" ref=""
+  			rows="1"
+  			style="position:absolute; ColumnCount:2;  height:20px;left:676px;top:589px; width:110px;"
+  			tabIndex="12">
+  			<xf:choices>
+  				<xf:itemset nodeset="data:Ds_Yn_1">
+  					<xf:label ref="TEXT1"></xf:label>
+  					<xf:value ref="CODE"></xf:value>
+  				</xf:itemset>
+  			</xf:choices>
+  		</xf:select1>
+  		<w2:textbox class="sty_lb_Basic" id="Static5" label="4.신체적장애"
+  			style="padding-top:5px;position:absolute; VAlign:Middle;  border-style:solid;height:82px;top:556px;width:80px;left:-8px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static6"
+  			label="최근 1년 이내에 다음과 같은 취미를 자주 반복적으로 하고 있거나 관련 자격증을 가지고 있습니까?"
+  			style="top:1061px;left:107px;WordWrap:TRUE;VAlign:Middle;width:680px;position:absolute;height:25px;"
+  			tagname="">
+  		</w2:textbox>
+  		<xf:select1 appearance="full" class="sty_ipt_search" cols="2"
+  			ev:onviewchange="lfn_RadioOnChanged" id="rad_B0400_1_1_0" ref=""
+  			rows="1"
+  			style="position:absolute; ColumnCount:2;   height:20px;left:676px;top:1062px; width:110px;"
+  			tabIndex="12">
+  			<xf:choices>
+  				<xf:itemset nodeset="data:Ds_Yn_1">
+  					<xf:label ref="TEXT3"></xf:label>
+  					<xf:value ref="CODE"></xf:value>
+  				</xf:itemset>
+  			</xf:choices>
+  		</xf:select1>
+  		<w2:textbox class="sty_lb_Basic" id="Static8" label="7.취미활동"
+  			style="padding-top:5px;position:absolute; VAlign:Middle;  border-style:solid;height:135px;top:1050px;width:80px;left:-8px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static9"
+  			label="(빈도: 년간/월간  회) (자격증명칭:     )"
+  			style="top:1085px;left:107px;VAlign:Middle;width:230px;position:absolute;height:20px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static7" label="승용차"
+  			style="top:367px;left:107px;width:114px;position:absolute;height:19px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static18"
+  			label="오토바이 (50CC미만포함)"
+  			style="top:367px;left:557px;WordWrap:TRUE;VAlign:Middle;width:170px;position:absolute;height:19px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static20" label="건설기계"
+  			style="top:426px;left:105px;WordWrap:TRUE;VAlign:Middle;width:59px;position:absolute;height:20px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static24" label="화물차"
+  			style="top:367px;left:260px;WordWrap:TRUE;VAlign:Middle;width:115px;position:absolute;height:19px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static22"
+  			label="현재 운전을 하고 계십니까? (기타에 해당하는 경우 차종을 구체적으로 기재하고,둘 이상의 차량을 운전하거나 하나의 차량을 둘 이상의 목적으로 사용하는 경우 해당되는 사항을 모두 기재하십시오)"
+  			style="top:306px;left:107px;WordWrap:TRUE;VAlign:Middle;width:680px;position:absolute;height:37px;"
+  			tagname="">
+  		</w2:textbox>
+  		<xf:select1 appearance="full" class="sty_ipt_search" cols="2"
+  			id="rad_B0101_2_2_2_03" rows="1"
+  			style="position:absolute;height:20px;width:130px;left:559px;ColumnCount:2;top:387px;"
+  			tabIndex="23" ref="data:Ds_Yn_2.CODE">	<!--// 1. 자가용, 승용차 radio[2. 운전여부 > 오토바이] ==> 추가(주석): 2017.12.20, by 진태만 //-->  
+  			<xf:choices>
+  				<xf:itemset nodeset="data:Ds_Yn_2">
+  					<xf:label ref="TEXT1"></xf:label>
+  					<xf:value ref="CODE"></xf:value>
+  				</xf:itemset>
+  			</xf:choices>
+  		</xf:select1>
+  		<xf:select1 appearance="full" class="sty_ipt_search" cols="2"
+  			id="rad_B0101_2_2_2_01" rows="1"
+  			style="position:absolute; ColumnCount:2;  height:20px;left:108px;top:387px; width:130px;"
+  			tabIndex="22" ref="data:Ds_Yn_2.CODE">	<!--// 1. 자가용, 승용차 radio[2. 운전여부 > 승용차] ==> 추가(주석): 2017.12.20, by 진태만 //-->  
+  			<xf:choices>
+  				<xf:itemset nodeset="data:Ds_Yn_2">
+  					<xf:label ref="TEXT1"></xf:label>
+  					<xf:value ref="CODE"></xf:value>
+  				</xf:itemset>
+  			</xf:choices>
+  		</xf:select1>
+  		<xf:select1 appearance="full" class="sty_ipt_search" cols="2"
+  			ev:onviewchange="lfn_RadioOnChanged" id="rad_B0100_1_1_0" ref=""
+  			rows="1"
+  			style="position:absolute; ColumnCount:2;   height:20px;left:676px;top:329px; width:110px;"
+  			tabIndex="12">
+  			<xf:choices>
+  				<xf:itemset nodeset="data:Ds_Yn_1">
+  					<xf:label ref="TEXT1"></xf:label>
+  					<xf:value ref="CODE"></xf:value>
+  				</xf:itemset>
+  			</xf:choices>
+  		</xf:select1>
+  		<w2:textbox class="sty_lb_Detail" id="Static30" label="내용"
+  			style="position:absolute; display:none;  VAlign:Middle;  border-style:solid;  text-align:right; height:20px; left:82px; top:425px; width:64px;"
+  			tagname="">
+  		</w2:textbox>
+  		<xf:input class="sty_ipt_form" id="edt_B0304_2_2_0"
+  			style="position:absolute; border-style:solid;  height:20px;left:107px;top:612px; width:680px;"
+  			tabIndex="24">
+  		</xf:input>
+  		<w2:textbox class="sty_lb_Detail" id="Static10" label="기 타"
+  			style="top:426px;left:411px;WordWrap:TRUE;VAlign:Middle;width:111px;position:absolute;height:20px;"
+  			tagname="">
+  		</w2:textbox>
+  		<xf:input class="sty_ipt_form" id="edt_B0204_2_2_0"
+  			style="position:absolute; border-style:solid;  height:20px;left:107px;top:521px; width:680px;"
+  			tabIndex="28">
+  		</xf:input>
+  		<w2:textbox class="sty_lb_Detail" id="Static14" label="내용"
+  			style="position:absolute; display:none;  VAlign:Middle;  border-style:solid;  text-align:right; height:20px; left:82px; top:366px; width:64px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static91"
+  			label="최근 5년이내에 아래 10대질병으로 의사로부터 진찰 또는 검사를 통하여  다음과 같은 의료행위를 받은 사실이 있습니까?"
+  			style="top:756px;left:107px;WordWrap:TRUE;width:680px;position:absolute;height:21px;"
+  			tagname="">
+  		</w2:textbox>
+  		<xf:select1 appearance="full" class="sty_ipt_search" cols="2"
+  			ev:onviewchange="lfn_RadioOnChanged" id="rad_B0700_1_1_0" rows="1"
+  			style="position:absolute; ColumnCount:2;   height:20px;left:676px;top:778px; width:110px;"
+  			tabIndex="88">
+  			<xf:choices>
+  				<xf:itemset nodeset="data:Ds_Yn_1">
+  					<xf:label ref="TEXT1"></xf:label>
+  					<xf:value ref="CODE"></xf:value>
+  				</xf:itemset>
+  			</xf:choices>
+  		</xf:select1>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0701_2_2_2_01"
+  			style="position:absolute; Value:FALSE;  height:20px;left:119px;top:791px; width:46px;"
+  			tabIndex="30">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[암]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0701_2_2_2_02"
+  			style="position:absolute; Value:FALSE;  height:20px;left:168px;top:791px; width:61px;"
+  			tabIndex="31">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[백혈병]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0701_2_2_2_03"
+  			style="position:absolute; Value:FALSE;  height:20px;left:239px;top:791px; width:72px;"
+  			tabIndex="32">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[고혈압]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0701_2_2_2_05"
+  			style="position:absolute; Value:FALSE;  height:20px;left:408px;top:791px; width:72px;"
+  			tabIndex="34">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[심근경색]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0701_2_2_2_06"
+  			style="position:absolute; Value:FALSE;  height:20px;left:501px;top:791px; width:88px;"
+  			tabIndex="35">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[심장판막증]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0701_2_2_2_04"
+  			style="position:absolute; Value:FALSE;  height:20px;left:319px;top:791px; width:64px;"
+  			tabIndex="33">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[협심증]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0701_2_2_2_07"
+  			style="position:absolute; Value:FALSE;height:20px;left:119px;top:814px;width:90px;"
+  			tabIndex="36">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[간경화증]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0701_2_2_2_08"
+  			style="position:absolute; Value:FALSE;  height:20px;left:239px;top:815px; width:152px;"
+  			tabIndex="37">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[뇌졸중증(뇌출혈,뇌경색)]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0701_2_2_2_09"
+  			style="position:absolute; Value:FALSE;  height:20px;left:408px;top:815px; width:56px;"
+  			tabIndex="38">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[당뇨병]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0701_2_2_2_10"
+  			style="position:absolute; Value:FALSE;  height:20px;left:501px;top:815px; width:120px;"
+  			tabIndex="39">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[에이즈,HIV보균 ]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0702_2_2_2_01"
+  			style="position:absolute; Value:FALSE;height:20px;left:119px;top:838px;width:115px;"
+  			tabIndex="42">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[질병확정진단]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0702_2_2_2_03"
+  			style="position:absolute; Value:FALSE;  height:20px;left:319px;top:838px; width:56px;"
+  			tabIndex="44">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[입원]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0702_2_2_2_02"
+  			style="position:absolute; Value:FALSE;  height:20px;left:239px;top:838px; width:64px;"
+  			tabIndex="43">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[치료]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0702_2_2_2_04"
+  			style="position:absolute; Value:FALSE;  height:20px;left:408px;top:838px; width:64px;"
+  			tabIndex="45">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[수술]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0702_2_2_2_05"
+  			style="position:absolute; Value:FALSE;  height:20px;left:501px;top:838px; width:80px;"
+  			tabIndex="46">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[투약]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<w2:textbox class="sty_lb_Basic" id="Static19" label="6.10대질병"
+  			style="padding-top:5px;position:absolute; VAlign:Middle;  border-style:solid;height:125px;top:742px;width:80px;left:-8px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static26"
+  			label="피보험자에 관한 다음 사항은 회사가 보험계약의 청약을 심사하고 인수하는데 필요한 자료이므로 보험계약자 및 피보험자는 아래 질문들에 대해 사실대로 알려야 하며 직접 작성하시기 바랍니다. 만약 아래 질문들에 대하여 만약 사실대로 알리지 않거나 사실과 다르게 알린 경우에는 보험가입이 거절될 수 있으며, 특히 질문 1번～7번에 대하여 알린 내용이 '중요한 사항'에 해당하는 경우 회사는 보험약관에 따라 이 보험계약을 일방적으로 해지할 수 있고, 이미 보험사고가 발생하였더라도 보험금 지급을 거절하는 등 보장이 제한될 수 있습니다. 반면, 보험설계사 등이 보험계약자 또는 피보험자에게 고지할 기회를 주지 않았거나 사실대로 고지하는 것을 방해하는 등의 경우에는 보험계약을 해지하거나 보장을 제한할 수 없습니다."
+  			style="left:10px;WordWrap:TRUE;VAlign:Middle;width:747px;position:absolute;height:94px;top:2px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static11"
+  			label="1.귀하의 직업은 무엇입니까?"
+  			style="top:197px;left:108px;WordWrap:TRUE;VAlign:Middle;width:679px;position:absolute;height:26px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static13" label="근무처"
+  			style="top:226px;left:113px;VAlign:Middle;width:46px;position:absolute;;height:20px;"
+  			tagname="">
+  		</w2:textbox>
+  		<xf:input class="sty_ipt_form" id="edt_B0801_2_2_0"
+  			style="position:absolute; border-style:solid;  height:20px;left:162px;top:225px; width:151px;"
+  			tabIndex="50">
+  		</xf:input>
+  		<w2:textbox class="sty_lb_Detail" id="Static27" label="근무지역"
+  			style="top:226px;left:328px;VAlign:Middle;width:80px;position:absolute;text-align:right;height:20px;"
+  			tagname="">
+  		</w2:textbox>
+  		<xf:input class="sty_ipt_form" id="edt_B0802_2_2_0"
+  			style="position:absolute; border-style:solid;  height:20px;left:420px;top:225px; width:151px;"
+  			tabIndex="51">
+  		</xf:input>
+  		<w2:textbox class="sty_lb_Detail" id="Static28" label="업종"
+  			style="top:226px;left:585px;VAlign:Middle;width:55px;position:absolute;text-align:right;height:20px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static29"
+  			label="취급하는 업무(구체적으로 기재하여 주십시오)"
+  			style="top:260px;left:102px;VAlign:Middle;width:261px;position:absolute;text-align:right;height:20px;"
+  			tagname="">
+  		</w2:textbox>
+  		<xf:input class="sty_ipt_form" id="edt_B0804_2_2_0"
+  			style="position:absolute; border-style:solid;  height:20px;left:369px;top:260px; width:416px;"
+  			tabIndex="53">
+  		</xf:input>
+  		<xf:input class="sty_ipt_form" id="edt_B0803_2_2_0"
+  			style="position:absolute; border-style:solid;  height:20px;left:650px;top:225px; width:135px;"
+  			tabIndex="52">
+  		</xf:input>
+  		<w2:textbox class="sty_lb_Basic" id="Static31" label="1.직업"
+  			style="PADDING-TOP:5PX;position:absolute; VAlign:Middle;  border-style:solid;height:102px;top:188px;width:80px;left:-8px;"
+  			tagname="">
+  		</w2:textbox>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0403_2_2_2_01"
+  			style="position:absolute; Value:FALSE;  height:20px;left:108px;top:1155px; width:94px;"
+  			tabIndex="60">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[스쿠버다이빙]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0403_2_2_2_02"
+  			style="position:absolute; Value:FALSE;  height:20px;left:252px;top:1155px; width:159px;"
+  			tabIndex="61">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[행글라이딩,패러글라이딩]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0403_2_2_2_03"
+  			style="position:absolute; Value:FALSE;  height:20px;left:437px;top:1155px; width:96px;"
+  			tabIndex="62">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[스카이다이빙]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0403_2_2_2_04"
+  			style="position:absolute; Value:FALSE;  height:20px;left:554px;top:1155px; width:88px;"
+  			tabIndex="63">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[수상스키]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0403_2_2_2_05"
+  			style="position:absolute; Value:FALSE;  height:20px;left:108px;top:1126px; width:139px;"
+  			tabIndex="64">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[자동차,오토바이 경주]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0403_2_2_2_06"
+  			style="position:absolute; Value:FALSE;  height:20px;left:252px;top:1126px; width:70px;"
+  			tabIndex="65">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[번지점프]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0403_2_2_2_07"
+  			style="position:absolute; Value:FALSE;  height:20px;left:333px;top:1126px; width:99px;"
+  			tabIndex="66">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[빙벽,암벽등반]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0403_2_2_2_08"
+  			style="position:absolute; Value:FALSE;  height:20px;left:437px;top:1126px; width:72px;"
+  			tabIndex="67">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[제트스키]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0403_2_2_2_09"
+  			style="position:absolute; Value:FALSE;  height:20px;left:554px;top:1126px; width:56px;"
+  			tabIndex="67">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[래프팅]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<w2:textbox class="pointer_txt01" id="Static33"
+  			label="☞ &quot;중요한 사항&quot;이란 ? 회사가 그 사실을 알았더라면 보험계약의 청약을 거절하거나 보험가입금액 한도제한, 일부 보장 제외, 보험금 삭감, 보험료할증과  같이 조건부로 인수하는 등 계약인수에 영향을 미치는 사항을 말합니다."
+  			style="top:131px;WordWrap:TRUE;VAlign:Middle;width:762px;position:absolute;height:36px;left:10px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static93" label="병명"
+  			style="top:918px;left:-7px;WordWrap:TRUE;VAlign:Middle;width:149px;position:absolute;height:26px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static98" label="치료기간"
+  			style="top:918px;left:130px;WordWrap:TRUE;VAlign:Middle;width:160px;position:absolute;height:25px;"
+  			tagname="">
+  		</w2:textbox>
+  		<xf:input class="sty_ipt_form" id="edt_B0704_2_2_2_01"
+  			maxlength="24"
+  			style="position:absolute; border-style:solid;  height:20px;left:-7px;top:942px; width:130px;"
+  			tabIndex="98">
+  		</xf:input>
+  		<xf:input class="sty_ipt_form" id="edt_B0704_2_2_2_03"
+  			maxlength="24"
+  			style="position:absolute; border-style:solid;height:20px;left:339px;top:942px;width:142px;"
+  			tabIndex="101">
+  		</xf:input>
+  		<xf:input class="sty_ipt_form" id="edt_B0704_2_2_2_04"
+  			maxlength="12"
+  			style="position:absolute; border-style:solid;height:20px;left:484px;top:942px;width:85px;"
+  			tabIndex="102">
+  		</xf:input>
+  		<xf:input class="sty_ipt_search" id="edt_B0704_2_2_2_02"
+  			maxlength="22"
+  			style="border:none; position:absolute;height:20px;left:127px;top:942px;width:80px;"
+  			tabIndex="105">
+  		</xf:input>
+  		<xf:input class="sty_ipt_form" id="edt_B0401_2_2_0"
+  			style="position:absolute; border-style:solid;  height:20px;left:339px;top:1085px; width:206px;"
+  			tabIndex="73">
+  		</xf:input>
+  		<w2:inputCalendar class="sty_ipt_search" ev:onchange=""
+  			id="cal_B0704_2_2_2_07"
+  			style="top:944px;left:130px;SaturdayTextColor:blue;width:100px;position:absolute;SundayTextColor:red;height:20px;"
+  			tabIndex="107" validCheck="true"
+  			ev:onviewchange="scwin.lfn_cal_OnCharChanged">
+  		</w2:inputCalendar>
+  		<w2:inputCalendar class="sty_ipt_search" ev:onchange=" "
+  			id="cal_B0704_2_2_2_08"
+  			style="top:944px;left:234px;SaturdayTextColor:blue;width:100px;position:absolute;SundayTextColor:red;height:20px;"
+  			tabIndex="108" validCheck="true"
+  			ev:onviewchange="scwin.lfn_cal_OnCharChanged">
+  		</w2:inputCalendar>
+  		<xf:input class="sty_ipt_search" id="edt_B0705_2_2_2_02"
+  			maxlength="22"
+  			style="border:none; position:absolute;height:20px;left:127px;top:977px;width:80px;"
+  			tabIndex="105">
+  		</xf:input>
+  		<xf:input class="sty_ipt_form" id="edt_B0705_2_2_2_03"
+  			maxlength="24"
+  			style="position:absolute; border-style:solid;height:20px;left:339px;top:974px;width:142px;"
+  			tabIndex="109">
+  		</xf:input>
+  		<xf:input class="sty_ipt_form" id="edt_B0705_2_2_2_04"
+  			maxlength="12"
+  			style="position:absolute; border-style:solid;  height:20px;left:484px;top:973px; width:85px;"
+  			tabIndex="118">
+  		</xf:input>
+  		<xf:select1 appearance="full" class="sty_ipt_search" cols="2"
+  			id="rad_B0705_2_2_2_05" rows="1"
+  			style="position:absolute; ColumnCount:2; height:26px;left:575px;top:970px;width:106px;"
+  			tabIndex="111">
+  			<xf:choices>
+  				<xf:itemset nodeset="data:Ds_Yn_1">
+  					<xf:label ref="TEXT5"></xf:label>
+  					<xf:value ref="CODE"></xf:value>
+  				</xf:itemset>
+  			</xf:choices>
+  		</xf:select1>
+  		<xf:select1 appearance="full" class="sty_ipt_search" cols="2"
+  			id="rad_B0705_2_2_2_06" rows="1"
+  			style="position:absolute;height:26px;width:107px;left:698px;top:970px;"
+  			tabIndex="104">
+  			<xf:choices>
+  				<xf:itemset nodeset="data:Ds_Yn_1">
+  					<xf:label ref="TEXT3"></xf:label>
+  					<xf:value ref="CODE"></xf:value>
+  				</xf:itemset>
+  			</xf:choices>
+  		</xf:select1>
+  		<w2:inputCalendar class="sty_ipt_search" ev:onchange=""
+  			id="cal_B0705_2_2_2_07"
+  			style="top:974px;left:130px;SaturdayTextColor:blue;width:100px;position:absolute;SundayTextColor:red;height:20px;"
+  			tabIndex="107" validCheck="true"
+  			ev:onviewchange="scwin.lfn_cal_OnCharChanged">
+  		</w2:inputCalendar>
+  		<w2:inputCalendar class="sty_ipt_search" ev:onchange=""
+  			id="cal_B0705_2_2_2_08"
+  			style="top:974px;left:234px;SaturdayTextColor:blue;width:100px;position:absolute;SundayTextColor:red;height:20px;"
+  			tabIndex="108" validCheck="true"
+  			ev:onviewchange="scwin.lfn_cal_OnCharChanged">
+  		</w2:inputCalendar>
+  		<xf:select1 appearance="full" class="sty_ipt_search" cols="2"
+  			id="rad_B0101_2_2_2_02" rows="1"
+  			style="position:absolute;height:20px;width:130px;left:415px;ColumnCount:2;top:387px;"
+  			tabIndex="75" ref="data:Ds_Yn_2.CODE">	<!--// 1. 자가용, 승용차 radio[2. 운전여부 > 승합차] ==> 추가(주석): 2017.12.20, by 진태만 //-->  
+  			<xf:choices>
+  				<xf:itemset nodeset="data:Ds_Yn_2">
+  					<xf:label ref="TEXT1"></xf:label>
+  					<xf:value ref="CODE"></xf:value>
+  				</xf:itemset>
+  			</xf:choices>
+  		</xf:select1>
+  		<xf:select1 appearance="full" class="sty_ipt_search" cols="2"
+  			id="rad_B0101_2_2_2_06" rows="1"
+  			style="position:absolute;height:20px;width:130px;left:262px;ColumnCount:2;top:387px;"
+  			tabIndex="76" ref="data:Ds_Yn_2.CODE">	<!--// 1. 자가용, 승용차 radio[2. 운전여부 > 화물차] ==> 추가(주석): 2017.12.20, by 진태만 //-->  
+  			<xf:choices>
+  				<xf:itemset nodeset="data:Ds_Yn_2">
+  					<xf:label ref="TEXT1"></xf:label>
+  					<xf:value ref="CODE"></xf:value>
+  				</xf:itemset>
+  			</xf:choices>
+  		</xf:select1>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0101_2_2_2_04"
+  			style="position:absolute; Value:FALSE;  height:20px;left:114px;top:447px; width:40px;"
+  			tabIndex="77"> <!-- // 2. 운전여부[질의]:  [1.4. 건설기계]  //-->
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<w2:textbox class="sty_lb_Detail" id="Static25" label="승합차"
+  			style="top:367px;left:414px;WordWrap:TRUE;VAlign:Middle;width:114px;position:absolute;height:19px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static35" label="농기계"
+  			style="top:426px;left:258px;WordWrap:TRUE;VAlign:Middle;width:59px;position:absolute;height:20px;"
+  			tagname="">
+  		</w2:textbox>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0101_2_2_2_07"
+  			style="position:absolute; Value:FALSE;  height:20px;left:266px;top:447px; width:40px;"
+  			tabIndex="79">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:input class="sty_ipt_form" id="edt_B0101_2_2_2_05"
+  			style="position:absolute; border-style:solid;  height:20px;left:411px;top:446px; width:104px;"
+  			tabIndex="27">
+  		</xf:input>
+  		<w2:textbox class="sty_lb_Detail" id="Static37"
+  			label="최근 5년 이내에 의사로부터 진찰 또는 검사를 통하여 다음과 같은 의료행위를 받은 사실이 있습니까?"
+  			style="top:654px;left:107px;WordWrap:TRUE;VAlign:Middle;width:680px;position:absolute;height:25px;"
+  			tagname="">
+  		</w2:textbox>
+  		<xf:select1 appearance="full" class="sty_ipt_search" cols="2"
+  			ev:onviewchange="lfn_RadioOnChanged" id="rad_B0900_1_1_0" ref=""
+  			rows="1"
+  			style="position:absolute; ColumnCount:2;   height:20px;left:676px;top:657px; width:110px;"
+  			tabIndex="83">
+  			<xf:choices>
+  				<xf:itemset nodeset="data:Ds_Yn_1">
+  					<xf:label ref="TEXT3"></xf:label>
+  					<xf:value ref="CODE"></xf:value>
+  				</xf:itemset>
+  			</xf:choices>
+  		</xf:select1>
+  		<w2:textbox class="sty_lb_Basic" id="Static38" label="5.최근5년내"
+  			style="padding-top:5px;position:absolute; VAlign:Middle;  border-style:solid;height:97px;top:643px;width:80px;left:-8px;"
+  			tagname="">
+  		</w2:textbox>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0901_2_2_2_01"
+  			style="position:absolute; Value:FALSE;  height:20px;left:120px;top:694px; width:94px;"
+  			tabIndex="83">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[입원]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0901_2_2_2_02"
+  			style="position:absolute; Value:FALSE;  height:20px;left:224px;top:694px; width:159px;"
+  			tabIndex="84">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[수술(제왕절개 포함)]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0901_2_2_2_03"
+  			style="position:absolute; Value:FALSE;  height:20px;left:385px;top:694px; width:152px;"
+  			tabIndex="85">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[계속하여 7일이상 치료]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+  		<xf:select appearance="full" class="sty_ipt_search"
+  			id="chk_B0901_2_2_2_04"
+  			style="position:absolute; Value:FALSE;  height:20px;left:550px;top:694px; width:155px;"
+  			tabIndex="86">
+  			<xf:choices>
+  				<xf:item>
+  					<xf:label><![CDATA[계속하여 30일 이상 투약]]></xf:label>
+  					<xf:value><![CDATA[1]]></xf:value>
+  				</xf:item>
+  			</xf:choices>
+  		</xf:select>
+
+
+
+
+  		<xf:select1 appearance="full" class="sty_ipt_search" cols="2"
+  			id="rad_B0704_2_2_2_05" rows="1"
+  			style="position:absolute; ColumnCount:2; height:26px;left:575px;top:938px;width:106px;"
+  			tabIndex="103">
+  			<xf:choices>
+  				<xf:itemset nodeset="data:Ds_Yn_1">
+  					<xf:label ref="TEXT5"></xf:label>
+  					<xf:value ref="CODE"></xf:value>
+  				</xf:itemset>
+  			</xf:choices>
+  		</xf:select1>
+
+  		<xf:input class="sty_ipt_form" id="edt_B0705_2_2_2_01"
+  			maxlength="24"
+  			style="position:absolute; border-style:solid;  height:20px;left:-7px;top:974px; width:130px;"
+  			tabIndex="106">
+  		</xf:input>
+
+
+  		<xf:select1 appearance="full" class="sty_ipt_search" cols="2"
+  			id="edt_B0704_2_2_2_06" rows="1"
+  			style="position:absolute;height:26px;left:698px;top:938px;width:107px;"
+  			tabIndex="104">
+  			<xf:choices>
+  				<xf:itemset nodeset="data:Ds_Yn_1">
+  					<xf:label ref="TEXT3"></xf:label>
+  					<xf:value ref="CODE"></xf:value>
+  				</xf:itemset>
+  			</xf:choices>
+  		</xf:select1>
+
+  		<xf:input class="sty_ipt_form" id="edt_B0706_2_2_2_01"
+  			maxlength="24"
+  			style="position:absolute; border-style:solid;  height:20px;left:-7px;top:1008px; width:130px;"
+  			tabIndex="114">
+  		</xf:input>
+  		<xf:input class="sty_ipt_search" id="edt_B0706_2_2_2_02"
+  			maxlength="22"
+  			style="border:none;position:absolute;  height:20px;left:127px;top:1008px;width:80px;"
+  			tabIndex="114">
+  		</xf:input>
+  		<xf:input class="sty_ipt_form" id="edt_B0706_2_2_2_03"
+  			maxlength="24"
+  			style="position:absolute; border-style:solid;height:20px;left:339px;top:1008px;width:142px;"
+  			tabIndex="117">
+  		</xf:input>
+
+  		<xf:input class="sty_ipt_form" id="edt_B0706_2_2_2_04"
+  			maxlength="12"
+  			style="position:absolute; border-style:solid;  height:20px;left:484px;top:1008px; width:85px;"
+  			tabIndex="118">
+  		</xf:input>
+  		<xf:select1 id="rad_B0706_2_2_2_05" cols="2" appearance="full"
+  			style="position:absolute; ColumnCount:2; height:26px;left:575px;top:1009px;width:106px;"
+  			tabIndex="111" class="sty_ipt_search" rows="1">
+  			<xf:choices>
+  				<xf:itemset nodeset="data:Ds_Yn_1">
+  					<xf:label ref="TEXT5"></xf:label>
+  					<xf:value ref="CODE"></xf:value>
+  				</xf:itemset>
+  			</xf:choices>
+  		</xf:select1>
+  		<xf:select1 appearance="full" class="sty_ipt_search" cols="2"
+  			id="rad_B0706_2_2_2_06" rows="1"
+  			style="position:absolute;height:26px;width:107px;left:697px;top:1009px;"
+  			tabIndex="104">
+  			<xf:choices>
+  				<xf:itemset nodeset="data:Ds_Yn_1">
+  					<xf:label ref="TEXT3"></xf:label>
+  					<xf:value ref="CODE"></xf:value>
+  				</xf:itemset>
+  			</xf:choices>
+  		</xf:select1>
+  		<w2:inputCalendar class="sty_ipt_search" ev:onchange=""
+  			id="cal_B0706_2_2_2_07"
+  			style="top:1009px;left:130px;SaturdayTextColor:blue;width:100px;position:absolute;SundayTextColor:red;height:20px;"
+  			tabIndex="107" validCheck="true"
+  			ev:onviewchange="scwin.lfn_cal_OnCharChanged">
+  		</w2:inputCalendar>
+  		<w2:inputCalendar class="sty_ipt_search" ev:onchange=""
+  			ev:onviewchange="scwin.lfn_cal_OnCharChanged"
+  			id="cal_B0706_2_2_2_08"
+  			style="top:1009px;left:234px;SaturdayTextColor:blue;width:100px;position:absolute;SundayTextColor:red;height:20px;"
+  			tabIndex="108" validCheck="true">
+  		</w2:inputCalendar>
+  		<w2:textbox class="sty_lb_Detail" id="Static39"
+  			label="※ 여기서 “계속하여”란 같은 원인으로 치료 시작후 완료일까지 실제 치료, 투약 받은 일수를 말합니다."
+  			style="top:720px;left:107px;WordWrap:TRUE;VAlign:Middle;width:680px;position:absolute;height:25px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static41"
+  			label="상기항목 중 5~6번 질문에 대해 “예”인 경우 그 내용을 정확하게 기재하여 주십시오."
+  			style="top:885px;WordWrap:TRUE;VAlign:Middle;width:762px;position:absolute;height:25px;left:-8px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static42" label="치료내용"
+  			style="top:918px;left:339px;WordWrap:TRUE;VAlign:Middle;width:138px;position:absolute;height:26px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static44" label="재발경험"
+  			style="top:918px;left:576px;WordWrap:TRUE;VAlign:Middle;width:100px;position:absolute;height:26px;"
+  			tagname="">
+  		</w2:textbox>
+
+
+
+
+  		<w2:textbox class="sty_lb_Detail" id="Static45" label="완치여부"
+  			style="top:918px;left:698px;WordWrap:TRUE;VAlign:Middle;width:100px;position:absolute;height:26px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="sty_lb_Detail" id="Static43" label="치료병원"
+  			style="top:918px;left:484px;WordWrap:TRUE;VAlign:Middle;width:80px;position:absolute;height:26px;"
+  			tagname="">
+  		</w2:textbox>
+  		<w2:textbox class="" id="textbox2" label="치료"
+  			style="bordare:none; padding-top:5px;position:absolute; VAlign:Middle; height:12px;top:671px;width:29px;left:17px;"
+  			tagname="">
+  		</w2:textbox>
+
+
+  	</xf:group>
+
+
+
+
+  </body>
+</html>

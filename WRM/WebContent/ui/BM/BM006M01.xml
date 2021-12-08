@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<!--
+			#####################################################################
+			파일명 : BM006M01.xml
+			프로그램명 : 파일 관리
+			설 명 : 파일을 관리하는 화면
+			작성자 : Inswave Systems
+			작성일 : 2019.01.09
+			
+			수정일자	  수정자			수정내용
+			=====================================================================
+			2019.01.09  Inswave Systems 최초작성
+			#####################################################################
+		-->
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataList baseNode="list" repeatNode="map" id="dlt_fileGroup" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="FILE_GRP_SEQ" name="FILE_GRP_SEQ" dataType="text"></w2:column>
+						<w2:column id="FILE_GRP_SEQ_PARENT" name="FILE_GRP_SEQ_PARENT" dataType="text"></w2:column>
+						<w2:column id="FILE_GRP_CD" name="FILE_GRP_CD" dataType="text"></w2:column>
+						<w2:column id="FILE_GRP_NM" name="FILE_GRP_NM" dataType="text"></w2:column>
+						<w2:column id="FILE_STORED_PATH" name="FILE_STORED_PATH" dataType="text"></w2:column>
+						<w2:column id="SORT_ORDER" name="SORT_ORDER" dataType="text"></w2:column>
+						<w2:column id="FILE_MAX_COUNT" name="FILE_MAX_COUNT" dataType="text"></w2:column>
+						<w2:column id="FILE_MAX_SIZE" name="FILE_MAX_SIZE" dataType="text"></w2:column>
+						<w2:column id="ALLOWED_EXTENSION" name="ALLOWED_EXTENSION" dataType="text"></w2:column>
+						<w2:column id="DENIED_EXTENSION" name="DENIED_EXTENSION" dataType="text"></w2:column>
+						<w2:column id="MENU_DEPTH" name="MENU_DEPTH" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" id="dma_fileGroup">
+					<w2:keyInfo>
+						<w2:key id="FILE_GRP_SEQ" name="FILE_GRP_SEQ" dataType="text"></w2:key>
+						<w2:key id="FILE_GRP_SEQ_PARENT" name="FILE_GRP_SEQ_PARENT" dataType="text"></w2:key>
+						<w2:key id="FILE_GRP_CD" name="FILE_GRP_CD" dataType="text"></w2:key>
+						<w2:key id="FILE_GRP_NM" name="FILE_GRP_NM" dataType="text"></w2:key>
+						<w2:key id="FILE_STORED_PATH" name="FILE_STORED_PATH" dataType="text"></w2:key>
+						<w2:key id="SORT_ORDER" name="SORT_ORDER" dataType="text"></w2:key>
+						<w2:key id="FILE_MAX_COUNT" name="FILE_MAX_COUNT" dataType="text"></w2:key>
+						<w2:key id="FILE_MAX_SIZE" name="FILE_MAX_SIZE" dataType="text"></w2:key>
+						<w2:key id="ALLOWED_EXTENSION" name="ALLOWED_EXTENSION" dataType="text"></w2:key>
+						<w2:key id="DENIED_EXTENSION" name="DENIED_EXTENSION" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+			<xf:submission id="sbm_selectFileGrp" ref="data:json,dma_fileGroup" target="data:json,dlt_fileGroup"
+				action="/file/selectFileGrp" method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler=""
+				customHandler="" mode="asynchronous" processMsg="" ev:submit="" ev:submitdone="" ev:submiterror="" abortTrigger="">
+			</xf:submission>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[ 
+
+	/**
+	 * 초기 스크립트 수행 함수 정의
+	 */
+	scwin.onpageload = function() {
+		com.setEnterKeyEvent(tbl_search, scwin.btn_search_onclick);
+		scwin.btn_search_onclick();
+	};
+	
+	scwin.onpageunload = function() {
+ 		
+	};
+	
+	/**
+	 * 파일 그룹을 조회한다.
+	 */
+	scwin.btn_search_onclick = function() {
+		com.executeSubmission(sbm_selectFileGrp);
+	};
+	
+	/**
+	 * 파일 그룹을 생성한다.
+	 */
+	scwin.btn_add_onclick = function() {
+		var fileGrpSeq = 0;
+		var fileGrpSeqParent = 0;
+		
+		if (dlt_fileGroup.getRowCount() > 0) {
+			var selectRowIdx = dlt_fileGroup.getRowPosition();
+			if (selectRowIdx === null) {
+				com.alert("새로 생성할 파일 그룹의 부모 파일 그룹을 선택하세요.");
+			} else {
+				var fileGrpSeq = dlt_fileGroup.getCellData(selectRowIdx, "FILE_GRP_SEQ");
+				var fileGrpSeqParent = dlt_fileGroup.getCellData(selectRowIdx, "FILE_GRP_SEQ_PARENT");
+			}
+		}
+		
+		var data = { fileGrpSeq : fileGrpSeq, fileGrpSeqParent : fileGrpSeqParent, 
+					 mode:"add", callbackFn : "scwin.addCallback" };
+		var options = {
+			id : "FilegroupPop",
+			popupName : "파일 그룹 생성",
+			modal : true,
+			width : 600, height: 200 };
+		com.openPopup(com.getFullPath("/ui/BM/BM006P01.xml"), options, data);
+	};
+	
+	/**
+	 * 파일 그룹 등록 완료 후 콜백 함수.
+	 */
+	scwin.addCallback = function(){
+		scwin.btn_search_onclick();
+	};
+		
+	/**
+	 * 파일 그룹을 수정한다.
+	 */
+	scwin.btn_modify_onclick = function() {
+		var data = {data : {}, mode : "mod", callbackFn : "scwin.modCallback" };
+		var options = {
+			id : "FilegroupPop",
+			popupName : "파일 그룹 설정",
+			modal : true,
+			width : 600, height: 200 };
+		com.openPopup(com.getFullPath("/ui/BM/BM006P01.xml"), options, data);
+	};
+	
+	/**
+	 * 파일 그룹 수정 후 콜백 함수.
+	 */
+	scwin.modCallback = function(){
+		scwin.btn_search_onclick();
+	};
+	
+	/**
+	 * 파일 그룹을 삭제한다.
+	 */
+	scwin.btn_delete_onclick = function() {
+		com.confirm("파일 그룹을 삭제하시면, 해당 파일 그룹에 업로드된 모든 첨부 파일이 삭제됩니다. 삭제하시겠습니까?", "scwin.deleteCallback");
+	};
+	
+	/**
+	 * 삭제 confirm 버튼 클릭 콜백함수
+	 */
+	scwin.deleteCallback = function(data){
+	   if(data){
+		   // TODO
+		   // 삭제 submission
+	   }
+	};
+	
+	/**
+	 * 메뉴 drag drop 이벤트
+	 */
+	scwin.trv_fileGroup_ondrop = function(dragNode,dropNode,dragControl,dropControl,e) {
+		com.confirm("해당 파일 그룹의 위치를 이동하시겠습니까?", "scwin.dropCallback");
+	};
+	
+	/**
+	 * 메뉴 drag drop 콜백함수
+	 */
+	scwin.dropCallback = function(data){
+	   if(data){
+		   // TODO
+		   // drop submission 실행 후 재조회
+		   
+	   }
+	};
+	
+	/**
+	 * udc 파일 업로드 후 콜백함수
+	 */
+	scwin.udc_multi_onDone = function(data) {
+	
+	};
+	
+	/**
+	 * 트리뷰 파일 그룹 label 클릭
+	 */
+	scwin.trv_fileGroup_onlabelclick = function(value,nodeElement,index) {
+		// 멀티업로드 udc에서 사용할 파일그룹순번 셋팅
+		udc_multi.setFileGrpSeq(index + 1);
+	};
+	
+	]]></script>
+		<w2:require src="/cm/udc/udc_Multiupload.xml"></w2:require>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="contentWrap" id="" style="">
+			<w2:wframe id="wfm_header" style="" src="/cm/common/wf_titleFav.xml"></w2:wframe>
+			<xf:group id="" style="" class="section">
+				<xf:group id="tbl_search" style="" class="tbl_search">
+					<xf:group id="" style="" adaptive="layout" class="w2tb tbl_sc" adaptiveThreshold="768" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:57.00px;" tagname="col"></xf:group>
+							<xf:group style="width:170.00px;" tagname="col"></xf:group>
+							<xf:group style="width:44px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+							<xf:group style="width:435px;" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="" class="w2tb_th" tagname="th">파일그룹</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" chooseOptionLabel="-전체-"
+									direction="auto" chooseOption="true" displayMode="label" ev:onblur="scwin.sbx_PositionCd_onblur" optionOrder="false" id="sbx_GrpCd"
+									ref="" style="width: 43.5%;height: 21px;float:left;display:none;" allOption="" textAlign="center" submenuSize="auto"
+									disabled="false">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_CommonSearchItem">
+											<xf:label ref="GRP_CD"></xf:label>
+											<xf:value ref="GRP_CD"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+								<xf:input adjustMaxLength="false" id="" ref="" style="width:120px;height:21px;"></xf:input>
+							</xf:group>
+							<xf:group class="w2tb_th" tagname="th">파일명</xf:group>
+							<xf:group class="w2tb_td" tagname="td">
+								<xf:input adjustMaxLength="false" id="" ref="" style="width:297px;height:21px;"></xf:input>
+							</xf:group>
+							<xf:group style="float: right;" class="w2tb_td" tagname="td">
+								<w2:anchor id="btn_search" style="margin-right: 5px;" clickEventElement="outerDiv"
+									ev:onclick="scwin.btn_search_onclick" class="btn_sh" outerDiv="true">
+									<xf:label><![CDATA[검색]]></xf:label>
+								</w2:anchor>
+							</xf:group>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group id="" style="padding-top:10px;" class="section">
+				<xf:group id="" style="" class="defaultbox">
+					<xf:group id="" style="float:left;" class="">
+					</xf:group>
+				</xf:group>
+				<xf:group class="ofh" id="" style="">
+					<xf:group class="ly_column col_3" id="" style="">
+						<xf:group class="mr10" id="" style="">
+							<xf:group class="defaultbox" id="" style="">
+								<w2:textbox class="df_tt fl" id="" label="파일그룹" style="margin-right: 10px;"></w2:textbox>
+							<xf:group class="" id="" style="float:right;">
+									<xf:group class="ml5 fr" id="" style="">
+										<w2:anchor class="btn_gcm" clickEventElement="outerDiv" ev:onclick="scwin.btn_add_onclick" id="btn_add" outerDiv="true" style="">
+											<xf:label><![CDATA[등록]]></xf:label>
+										</w2:anchor>
+										<w2:anchor class="btn_gcm" clickEventElement="outerDiv" ev:onclick="scwin.btn_modify_onclick" id="btn_modify" outerDiv="true" style="">
+											<xf:label><![CDATA[수정]]></xf:label>
+										</w2:anchor>
+										<w2:anchor class="btn_gcm" clickEventElement="outerDiv" ev:onclick="scwin.btn_delete_onclick" id="btn_delete" outerDiv="true" style="">
+											<xf:label><![CDATA[삭제]]></xf:label>
+										</w2:anchor>
+									</xf:group>
+								</xf:group></xf:group>
+							<w2:treeview lineShow="" id="trv_fileGroup" dataType="listed" tooltipGroupClass="false"
+								style="width: 100%;height: 400px;margin-left:0px;margin-top:10px;" useDrag="true" dynamicAppend="true"
+								renderType="" ev:ondrop="scwin.trv_fileGroup_ondrop" class="tw_sub"
+								ev:onlabelclick="scwin.trv_fileGroup_onlabelclick">
+								<w2:itemset nodeset="data:dlt_fileGroup">
+									<w2:label ref="FILE_GRP_NM"></w2:label>
+									<w2:value ref="FILE_GRP_CD"></w2:value>
+									<w2:depth ref="MENU_DEPTH"></w2:depth>
+									<w2:folder ref=""></w2:folder>
+									<w2:checkbox ref=""></w2:checkbox>
+									<w2:checkboxDisabled ref=""></w2:checkboxDisabled>
+									<w2:image ref=""></w2:image>
+									<w2:iconImage ref=""></w2:iconImage>
+									<w2:selectedImage ref=""></w2:selectedImage>
+									<w2:expandedImage ref=""></w2:expandedImage>
+									<w2:leafImage ref=""></w2:leafImage>
+								</w2:itemset>
+							</w2:treeview>
+						</xf:group>
+					</xf:group>
+					<xf:group class="ly_column col_7" id="" style="">
+						<xf:group id="" style="">
+							<w2:udc_Multiupload autoCloseInterval="1000" style="height: 250px;" maxSize="10" id="udc_multi"
+								maxCount="10" autoClosePop="true" accept="*/*">
+							</w2:udc_Multiupload>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

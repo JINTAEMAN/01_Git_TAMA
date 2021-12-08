@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+		</xf:model>
+
+		<script type="text/javascript" lazy="false"><![CDATA[
+	
+	/**
+	 * 화면 초기 로딩시 수행 스크립트
+	 */
+	scwin.onpageload = function() {
+		console.log("[/header.xml] [onpageload()] ==> [TEST_01_7] [Head 화면 로딩...@@@]");
+		
+		//console.log("[/header.xml] [onpageload()] ==> [TEST_02] [notice_Info]"+ notice_Info.hasClass(className) );
+		
+		console.log("[/header.xml] [onpageload()] ==> [TEST_02] ");
+		
+		$(".notice").hide();		// notice Group 안보이기
+		console.log("[/header.xml] [onpageload()] ==> [TEST_41] ");
+		
+//		$(".notice").show();		// notice Group 보이기
+//		console.log("[/header.xml] [onpageload()] ==> [TEST_42] ");
+//		
+//		$(".notice").css({ "opacity" : "0" }).animate({ bottom : "46px", "opacity" : "1" }, 1000);
+		console.log("[/header.xml] [onpageload()] ==> [TEST_43] ");
+		
+		//notice_Info.addClass("success");		// noticeInfo Group에 'success' Class 추가  ==> 배경색: 초록색
+		// ==> ERROR메뉴정보 조회도중 오류가 발생하였습니다.  tbx_status
+		
+		// notice_Info.addClass("warning");		// noticeInfo Group에 'warning' Class 추가  ==> 배경색: 노란색
+		// ==> ERROR메뉴정보 조회도중 오류가 발생하였습니다. 
+		//console.log("[/header.xml] [onpageload()] ==> [TEST_51] [notice_Info]"+ notice_Info );
+		
+		console.log("[/header.xml] [onpageload()] ==> [TEST_91] ");
+	};
+	
+	scwin.onpageunload = function() {
+	
+	};
+	
+	/** 
+	 * 좌측 메뉴를 생성한다.
+	 */
+	scwin.setGenerator = function() {
+		gen_firstGenerator.removeAll();
+	
+		var tmpDataArr = $p.parent().wfm_side.getWindow().dlt_menu.getAllJSON();
+		var tmpParentIdx = 0;
+		var thirdIndex = 0;
+	
+		//첫번째 메뉴 세팅
+		for (var i = 0; i < tmpDataArr.length; i++) {
+			var headerData_obj = tmpDataArr[i];
+			var menuDepth = headerData_obj.MENU_LEVEL;
+			var parentKey = headerData_obj.PARENT_MENU_CD; // m1, m2, m3
+			var tmpIdx = 0, tmpIdx2 = 0;
+	
+			if (menuDepth == "1") {
+				tmpParentIdx = gen_firstGenerator.insertChild();
+				var firstMenuLabel = gen_firstGenerator.getChild(tmpParentIdx, "btn_menu1_Label");
+				firstMenuLabel.setValue(headerData_obj.MENU_NM);
+				firstMenuLabel.setUserData("ins_webPath", headerData_obj.SRC_PATH);
+				firstMenuLabel.setUserData("ins_key", headerData_obj.PARENT_MENU_CD);
+				firstMenuLabel.setUserData("ins_label", headerData_obj.MENU_NM);
+				firstMenuLabel.setUserData("ins_code", headerData_obj.MENU_CD);
+			} else if (menuDepth == "2") {
+				var secondGene = gen_firstGenerator.getChild(tmpParentIdx, "gen_SecondGenerator");
+				tmpIdx = secondGene.insertChild();
+				var secondMenuLabel = secondGene.getChild(tmpIdx, "btn_menu2_Label");
+				secondMenuLabel.setValue(headerData_obj.MENU_NM);
+				thirdIndex = tmpIdx;
+			} else if (menuDepth == "3") {
+				var thirdGene = secondGene.getChild(thirdIndex, "gen_thirdGenerator");
+				tmpIdx2 = thirdGene.insertChild();
+				var thirdMenuLabel = thirdGene.getChild(tmpIdx2, "btn_menu3_Label");
+				thirdMenuLabel.setValue(headerData_obj.MENU_NM);
+				thirdMenuLabel.setUserData("ins_webPath", headerData_obj.SRC_PATH);
+				thirdMenuLabel.setUserData("ins_key", headerData_obj.PARENT_MENU_CD);
+				thirdMenuLabel.setUserData("ins_label", headerData_obj.MENU_NM);
+				thirdMenuLabel.setUserData("ins_code", headerData_obj.MENU_CD);
+			}
+		}
+	};
+	
+	/** 
+	 * 생성된 메뉴의 css 적용한다.
+	 */
+	scwin.setMenuCss = function() {
+		$(".nav > li > a").click(function() {
+			$(this).parent().parent().find("li a").removeClass("on");
+			$(this).addClass("on");
+	
+			if (!$(this).parent().find(".submenu").hasClass("on")) {
+				$(".nav").find(".submenu").removeClass("on");
+				$(".submenu").find(".depth3").removeClass("on");
+				$(this).parent().find(".submenu").addClass("on");
+			} else {
+				$(this).removeClass("on");
+				$(this).parent().find(".submenu").removeClass("on");
+				$(".nav").find("a").removeClass("on");
+			}
+		});
+	
+		$(".submenu > li > a").mouseover(function() {
+			$(".nav").find(".submenu").removeClass("on");
+			$(this).parent().parent().find("a").removeClass("on");
+			$(this).addClass("on");
+			$(".submenu").find(".depth3").removeClass("on");
+			$(this).parent().find(".depth3").addClass("on");
+			$(this).parent().parent().addClass("on");
+		}).mouseleave(function() {
+			$(this).find(".depth3").removeClass("on");
+			$(this).parent().parent().children("a").removeClass("on");
+			$(this).parent().removeClass("on");
+			$(this).children("a").removeClass("on");
+		});
+		
+		if(!WebSquare.util.isMobile()){
+			$(".submenu").on({
+				mouseleave:function(){
+					$(this).removeClass("on");
+					$(this).prev().removeClass("on");
+				}
+			});
+		}
+	};
+	
+	scwin.btn_Hid_Menu_onclick = function() {
+		if (!search_box.hasClass("hid")) {
+			$p.parent().wrap.setStyle("overflow", "hidden");
+			search_box.addClass("hid");
+			$(".head_box .nav").addClass("show");
+		} else {
+			$p.parent().wrap.setStyle("overflow", "visible");
+			search_box.removeClass("hid");
+			$(".head_box .nav").removeClass("show");
+		}
+	};
+	
+	$('html').click(function() {
+		if ($(".submenu").hasClass('on')) {
+			$(".submenu").removeClass('on');
+		}
+		if (search_box.hasClass('hid')) {
+			search_box.removeClass('hid');
+			$(".nav").removeClass('show');
+			$p.parent().wrap.setStyle("overflow", "visible");
+		}
+	});
+	
+	scwin.btn_NotiClose_onclick = function() {
+		if (txa_messageDetail.hasClass("show")) {
+			$(".notice").animate({ "bottom" : "-300px", "opacity" : "0" }, 700);
+		} else {
+			$(".notice").animate({ "bottom" : "-42px", "opacity" : "0" }, 1000);
+		}
+	};
+	
+	scwin.btn_notiMore_onclick = function() {
+		txa_messageDetail.toggleClass("show");
+	};
+	
+	/**
+	 * header에 속한 메뉴 클릭 이벤트
+	 */
+	scwin.btn_topMenu_onclick = function() {
+		var urlPath = this.getUserData("ins_webPath");
+		var label = this.getUserData("ins_label");
+		var pageCode = this.getUserData("ins_code");
+	
+		$p.top().wfm_side.getWindow().scwin.setMenuRelation(label, urlPath, pageCode);
+	
+		$(".submenu").removeClass('on');
+		$(".search_box").removeClass('hid');
+		$(".nav").removeClass('show');
+		$p.parent().wrap.setStyle('overflow', 'visible');
+	};
+	
+	/**
+	 * header에 속한 메뉴 클릭 이벤트 1depth
+	 */
+	scwin.btn_menu1_Label_onclick = function() {
+		var urlPath = this.getUserData("ins_webPath");
+		if(urlPath != ""){
+			var label = this.getUserData("ins_label");
+			var pageCode = this.getUserData("ins_code");
+		
+			$p.top().wfm_side.getWindow().scwin.setMenuRelation(label, urlPath, pageCode);
+			
+			$(".submenu").removeClass('on');
+			$(".search_box").removeClass('hid');
+			$(".nav").removeClass('show');
+			$p.parent().wrap.setStyle('overflow', 'visible');
+		}
+	};
+	
+	/** 
+	 * 환경설정 관리 팝업창을 오픈한다.
+	 */
+	scwin.btn_setting_onclick = function() {
+		var data = { "data" : "", callbackFn : "scwin.callbackSetting" };
+		var options = { id : "mainSettingPop", popupName : "환경설정 관리", width : "402", height : "182"};
+		com.openPopup("/cm/common/settingPop.xml", options, data);
+	};
+	
+	scwin.callbackSetting = function() {
+		com.confirm("정상 처리되었습니다. 화면을 갱신하시겠습니까?", "scwin.execUpdateMainSettingConfirmCallback");
+	};
+	
+	scwin.execUpdateMainSettingConfirmCallback = function(isConfirm) {
+		if (isConfirm === true) {
+			com.goHome();
+		}
+	};
+	
+	scwin.btn_toggle_onclick = function() {
+		scwin.toggleMenu();
+	};
+	
+	scwin.toggleMenu = function() {
+		$(".main_container").toggleClass("sd_slide");
+		$(".dim").toggleClass("hide");
+	}
+	
+	scwin.btn_logout_onclick = function(e) {
+		com.logout();
+	};
+
+	/**
+	 * 로그인된 사용자의 비밀번호를 변경한다.
+	 */
+	scwin.btn_changePassword_onclick = function(e) {
+		var popupHeight = "202";
+		if (com.isAdmin()) {
+			popupHeight -= 30;
+		}
+	
+		var data = { "empCd" : $p.parent().wfm_side.getWindow().dma_defInfo.get("EMP_CD") };
+		var options = { id : "settingPassword", popupName : "비밀번호 변경", width : "402", height : popupHeight};
+		com.openPopup("/cm/common/settingPassword.xml", options, data);
+	};
+
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group id="" style="" class="head_box">
+			<xf:group id="" style="" class="logo" tagname="a">
+				<w2:attributes>
+					<w2:href>javascript:com.goHome()</w2:href>
+				</w2:attributes>
+				<xf:image id="" style="" alt="inswave" src="/cm/images/inc/w5_logo.png" ev:onclick=""></xf:image>
+			</xf:group>
+			<w2:anchor id="btn_toggle" outerDiv="false" class="btn_aside" ev:onclick="scwin.btn_toggle_onclick">
+				<xf:label><![CDATA[사이드메뉴 열기/닫기]]></xf:label>
+			</w2:anchor>
+			<w2:generator style="" id="gen_firstGenerator" tagname="ul" class="nav">
+				<xf:group style="" id="" class="" tagname="li">
+					<w2:anchor outerDiv="false" style="" id="btn_menu1_Label" ev:onclick="scwin.btn_menu1_Label_onclick">
+						<xf:label><![CDATA[MenuList]]></xf:label>
+					</w2:anchor>
+					<w2:generator style="" id="gen_SecondGenerator" tagname="ul" class="submenu">
+						<xf:group style="" id="" class="" tagname="li">
+							<w2:anchor outerDiv="false" style="" id="btn_menu2_Label">
+								<xf:label><![CDATA[Insert Text]]></xf:label>
+							</w2:anchor>
+							<w2:generator style="width: 100%;" id="gen_thirdGenerator" tagname="ul" class="depth3">
+								<xf:group style="" id="" class="" tagname="li">
+									<w2:anchor outerDiv="false" style="" id="btn_menu3_Label" ev:onclick="scwin.btn_topMenu_onclick">
+										<xf:label><![CDATA[Insert Text]]></xf:label>
+									</w2:anchor>
+								</xf:group>
+							</w2:generator>
+						</xf:group>
+					</w2:generator>
+				</xf:group>
+			</w2:generator>
+			<xf:group id="search_box" style="" class="search_box">
+				<w2:textbox id="" style="" class="search_tit" label="통합검색" tagname="span"></w2:textbox>
+			</xf:group>
+			<xf:group class="infobox" id="" style="">
+				<w2:textbox class="info_tit name_tit" id="txt_empNm" label="" style=""></w2:textbox>  <!--// 사용자명 //-->
+				<xf:trigger class="changePassword" ev:onclick="scwin.btn_changePassword_onclick" id="btn_changePassword" style="" type="button">
+					<xf:label><![CDATA[비밀번호변경]]></xf:label>
+				</xf:trigger>
+				<xf:trigger class="logout" id="btn_logout" style="" type="button" ev:onclick="scwin.btn_logout_onclick">
+					<xf:label><![CDATA[로그아웃]]></xf:label>
+				</xf:trigger>
+			</xf:group>
+			<xf:group class="gmbox" id="" style="">
+				<w2:anchor class="topicon1" id="btn_setting" outerDiv="false" style="" ev:onclick="scwin.btn_setting_onclick">
+					<xf:label><![CDATA[설정]]></xf:label>
+				</w2:anchor>
+			</xf:group>
+		</xf:group>
+		<xf:group id="grp_Notice" style="" class="notice">
+			<xf:group id="notice_Info" style="" class="info">
+				<w2:span id="tbx_status" style="font-weight: bold;text-transform: uppercase;" label="ERROR"></w2:span>
+				<w2:textbox id="tbx_message" style="display:inline;" label="메뉴정보 조회도중 오류가 발생하였습니다."></w2:textbox>
+				<w2:anchor id="btn_NotiClose" style="position:absolute; right:10px; top:10px; font-size: 15px;	font-weight: bold;	text-shadow: 0 1px 0 #fff;	opacity: .3;line-height: 15px;" outerDiv="false"
+					ev:onclick="scwin.btn_NotiClose_onclick">
+					<xf:label><![CDATA[x]]></xf:label>
+				</w2:anchor>
+				<w2:anchor id="btn_notiMore" outerDiv="false"
+					style="position:absolute; right:23px; top:12px; font-size: 15px;	font-weight: bold;	text-shadow: 0 1px 0 #fff;	opacity: .3;	font-family: inherit;line-height: 15px;" ev:onclick="scwin.btn_notiMore_onclick">
+					<xf:label><![CDATA[+]]></xf:label>
+				</w2:anchor>
+				<xf:textarea id="txa_messageDetail" style="width: 99%;height:200px;margin:10px 0;color:red;display:none;"></xf:textarea>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

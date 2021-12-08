@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css"" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ev="http://www.w3.org/2001/xml-events"
+	xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<!-- 
+		#####################################################################
+		파일명 : HM003S03.xml
+		프로그램명 : 프로젝트 정보 입력
+		설 명 : 프로젝트 정보를 입력하는 화면
+		작성자 : Inswave Systems
+		작성일 : 2017.12.26
+		
+		수정일자	  수정자			 수정내용
+		=====================================================================
+		2017.12.26	Inswave Systems	최초작성
+		2018.01.26	Inswave Systems	WebSquare5 SP2 기능을 적용하도록 소스 업그레이드
+		2018.11.12	Inswave Systems	WebSquare5 SP3 기능을 적용하도록 소스 업그레이드
+		#####################################################################
+		-->
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+			<w2:dataList id="dlt_memberProject" baseNode="list" style="" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="chk" name="선택" dataType="text" ignoreStatus="true"></w2:column>
+						<w2:column id="EMP_CD" name="사원코드" dataType="text"></w2:column>
+						<w2:column id="SEQ" name="순번" dataType="number"></w2:column>
+						<w2:column id="PROJECT_NM" name="프로젝트명" dataType="text"></w2:column>
+						<w2:column id="PROJECT_DESC" name="프로젝트 개요" dataType="text"></w2:column>
+						<w2:column id="START_DATE" name="참여시작기간" dataType="date"></w2:column>
+						<w2:column id="END_DATE" name="참여종료기간" dataType="date"></w2:column>
+						<w2:column id="ASSIGNED_TASK" name="담당업무" dataType="text"></w2:column>
+						<w2:column id="ORDERING_ORG" name="발주처" dataType="text"></w2:column>
+						<w2:column id="COMPANY" name="소속사" dataType="text"></w2:column>
+						<w2:column id="NOTE" name="비고" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:aliasDataMap id="sdm_memberBasic" scope="../dma_MemberBasic" studioSrc="/ui/HM/HM003M01.xml" />
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>
+			<xf:submission id="sbm_getMemberProjectList" ref='data:json,{"id":"sdm_memberBasic","key":"dma_MemberBasic"}' target='data:json,{"id":"dlt_memberProject","key":"data"}' action="/member/selectMemberProject"
+				method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous"
+				processMsg="" ev:submit="" ev:submitdone="" ev:submiterror="" abortTrigger="">
+			</xf:submission>
+			<xf:submission id="sbm_saveMemberProject"
+				ref='data:json,{"id":"dlt_memberProject","action":"modified","key":"project"}'
+				target="" action="/member/saveMemberProject" method="post" mediatype="application/json" encoding="UTF-8" instance="" replace=""
+				errorHandler="" customHandler="" mode="asynchronous" processMsg="" ev:submit="" ev:submitdone="scwin.sbm_saveMemberProject_submitdone"
+				ev:submiterror="" abortTrigger="">
+			</xf:submission>
+		</xf:model>
+		 <script type="text/javascript" lazy="false"><![CDATA[
+		
+	scwin.onpageload = function() {
+		com.executeSubmission(sbm_getMemberProjectList);
+		com.setGridViewDelCheckBox([grd_memberProject]);
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+	
+	/**
+	 * 프로젝트 정보를 추가한다.
+	 */
+	scwin.btn_insertProject_onclick = function() {
+		var rowIndex = dlt_memberProject.insertRow();
+		dlt_memberProject.setCellData(rowIndex, "EMP_CD", $p.parent().dma_MemberBasic.get("EMP_CD"));
+		grd_memberProject.setFocusedCell(rowIndex, "PROJECT_NM");
+	};
+	
+	scwin.btn_saveProject_onclick = function() {
+		var projectInfo = [ { id : "PROJECT_NM", mandatory : true }, 
+							{ id : "START_DATE", mandatory : true }, 
+							{ id : "END_DATE", mandatory : true } ];
+		if (dlt_memberProject.getModifiedIndex().length > 0) {
+			if (com.validateGridView(grd_memberProject, projectInfo)) {
+				com.confirm("변경된 사원 정보를 저장하시겠습니까?", "scwin.saveMemberProjectConfirmCallback");
+			}
+		} else {
+			com.alert("변경된 사원 정보가 없습니다.");
+		}
+	};
+	
+	scwin.saveMemberProjectConfirmCallback = function(isReturnVal) {
+		if (isReturnVal) {
+			com.executeSubmission(sbm_saveMemberProject);
+		}
+	};
+	
+	scwin.btn_cancelProject_onclick = function() {
+		dlt_memberProject.undoAll();
+		dlt_memberProject.removeRows(dlt_memberProject.getInsertedIndex());
+	};
+	
+	scwin.sbm_saveMemberProject_submitdone = function(e) {
+		com.executeSubmission(sbm_getMemberProjectList);
+	};
+	]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+	<xf:group style="padding:9px 9px 0px 9px;" id="grp_memberProject"><xf:group style="" id="group5" class="defaultbox">
+			<xf:group style="" id="group8" class="fr">
+				<w2:anchor ev:onclick="scwin.btn_insertProject_onclick" outerDiv="" style="" id="btn_insertProject" class="btn_gcm">
+					<xf:label><![CDATA[등록]]></xf:label>
+				</w2:anchor>
+				<w2:anchor class="btn_gcm" ev:onclick="scwin.btn_cancelProject_onclick" id="btn_cancelProject" outerDiv="" style="">
+					<xf:label><![CDATA[취소]]></xf:label>
+				</w2:anchor><w2:anchor class="btn_gcm" ev:onclick="scwin.btn_saveProject_onclick" id="btn_saveProject" outerDiv="" style="">
+					<xf:label><![CDATA[저장]]></xf:label>
+				</w2:anchor>
+				
+			</xf:group>
+</xf:group>
+		<w2:gridView rowStatusWidth="40" useShiftKey="false" keepDefaultColumnWidth="true" scrollByColumn="false" rowStatusHeaderValue="상태"
+			rowStatusVisible="true" fixedColumnWithHidden="true" dataList="dlt_memberProject" keyMoveEditMode="true"
+			style="width: 100%;height: 130px;" autoFit="allColumn" id="grd_memberProject" visibleRowNum="4" class="cm_grid" adaptive="crosstab">
+			<w2:header style="" id="header2">
+				<w2:row style="" id="row3">
+					<w2:column width="40" inputType="checkbox" style="height:25px" id="chk" blockSelect="false"></w2:column>
+					<w2:column width="172" inputType="text" style="height:25px" id="column29" value="프로젝트명" blockSelect="false"></w2:column>
+					<w2:column width="183" inputType="text" style="height:25px" id="column27" value="프로젝트 개요" blockSelect="false"></w2:column>
+					<w2:column width="120" inputType="text" style="height:25px" id="column25" value="참여시작기간" blockSelect="false"></w2:column>
+					<w2:column width="120" inputType="text" style="height:25px" id="column23" value="참여종료기간" blockSelect="false"></w2:column>
+					<w2:column width="107" inputType="text" style="height:25px" id="column21" value="담당업무" blockSelect="false"></w2:column>
+					<w2:column width="102" inputType="text" style="height:25px" id="column19" value="발주처" blockSelect="false"></w2:column>
+					<w2:column width="102" inputType="text" style="height:25px" id="column17" value="소속사" blockSelect="false"></w2:column>
+					<w2:column width="134" inputType="text" style="height:25px" id="column15" value="비고" blockSelect="false"></w2:column>
+				</w2:row>
+			</w2:header>
+			<w2:gBody style="" id="gBody2">
+				<w2:row style="" id="row4">
+					<w2:column width="40" inputType="checkbox" style="height:25px" id="chk" blockSelect="false" fixColumnWidth="true"></w2:column>
+					<w2:column width="172" inputType="text" style="height:25px" id="PROJECT_NM" blockSelect="false" class="req"></w2:column>
+					<w2:column width="183" inputType="text" style="height:25px" id="PROJECT_DESC" blockSelect="false"></w2:column>
+					<w2:column width="120" inputType="calendar" style="height:25px" id="START_DATE" blockSelect="false" class="req"></w2:column>
+					<w2:column width="105" inputType="calendar" style="height:25px" id="END_DATE" blockSelect="false" class="req"></w2:column>
+					<w2:column width="107" inputType="text" style="height:25px" id="ASSIGNED_TASK" blockSelect="false"></w2:column>
+					<w2:column width="102" inputType="text" style="height:25px" id="ORDERING_ORG" blockSelect="false"></w2:column>
+					<w2:column width="102" inputType="text" style="height:25px" id="COMPANY" blockSelect="false"></w2:column>
+					<w2:column width="134" inputType="text" style="height:25px" id="NOTE" blockSelect="false"></w2:column>
+				</w2:row>
+			</w2:gBody>
+		</w2:gridView></xf:group></body>
+</html>

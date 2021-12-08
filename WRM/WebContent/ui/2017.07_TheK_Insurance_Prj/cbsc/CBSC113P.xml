@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    <!-- 
+        ###################################################
+         파일명 : CBSC113P.xml
+         프로그램명 : 취급자 변경내역 조회
+         설 명 :  취급자 변경내역 조회
+         작성자 : 이경일
+         작성일 : 2017.09.19
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.09.19        이경일          최초작성
+        ###################################################
+     -->
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="Ds_LTIEA26"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column id="nRvsnSeqno" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInptDate" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChbfDoer" name="name3"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChbfDoerName" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChbfDoerUser" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChbfDoerUserName" name="name6"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChafDoer" name="name7"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChafDoerName" name="name8"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChafDoerUser" name="name9"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChafDoerUserName" name="name10"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInptDler" name="name11"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInptDlerNm" name="name12"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_LTIEA26"
+                	repeatNode="map" userData2="//*/vector/data/LTIEA26">
+                	<w2:columnInfo>
+                		<w2:column id="nRvsnSeqno" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInptDate" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChbfDoer" name="name3"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChbfDoerName" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChbfDoerUser" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChbfDoerUserName" name="name6"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChafDoer" name="name7"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChafDoerName" name="name8"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChafDoerUser" name="name9"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChafDoerUserName" name="name10"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInptDler" name="name11"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInptDlerNm" name="name12"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="warning" repeatNode="map" userData2="//*/WARNING"/>
+                <w2:dataList baseNode="list" id="DsWs_LTIEA00"
+                	repeatNode="map"
+                	userData2="//*/hashtable/data/LTIEA00">
+                	<w2:columnInfo>
+                		<w2:column id="result" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sPhone" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sFax2" name="name3"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sFax3" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sPartCode" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCenterCode" name="name6"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sDoerName" name="name7"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCenterName" name="name8"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sFax1" name="name9"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sOfficeTel2" name="name10"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sOfficeTel3" name="name11"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sOfficeTel1" name="name12"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sGroupCode" name="name13"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sHomeTel2" name="name14"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sHomeTel1" name="name15"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sHomeTel3" name="name16"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCellPhone3" name="name17"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sTeamCode" name="name18"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sGroupName" name="name19"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCellPhone1" name="name20"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sFax" name="name21"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCellPhone2" name="name22"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sTeamName" name="name23"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sDoerUserName" name="name24"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sManageEmpName" name="name25"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sAgentName" name="name26"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInnerPhone" name="name27"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sPartName" name="name28"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/>
+		<script src="/cm/js/convertJs/LongTerm_Script.js"/>
+        <script><![CDATA[
+/*■■■■■■■■■■■■■■■■■■■■■스크립트 변환 결과■■■■■■■■■■■■■■■■■■■■■
+※본 주석은 수작업 변환 참고용입니다. ★개발완료 후에는 필히 삭제해주세요.★
+변환시간:  Fri Sep 01 2017 14:10:35 GMT+0900 (대한민국 표준시)
+파일ID:  D540_Pop.xml
+
+아래의 작업을 먼저 해주세요.
+
+
+1. scwin.init() 함수에 아래의 글로벌 데이터리스트를 선언합니다.
+--> 해당 화면에는 추가할 글로벌 변수가 없습니다. 
+
+2. 공통.JS 파일을 include해주세요.
+</xf:model>
+ ***include 위치(하단에 주석처리 되어 있습니다.)***
+<script><![CDATA[
+
+예시)
+</xf:model>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script><![CDATA[
+
+3. 표준에 어긋난 코딩인 경우 ✖ 으로 return 되어 있습니다. 검색으로 ✖이 나온다면 ASIS 소스를 확인해주세요.
+ex) ASIS if(a = 1 and b = 2) {} ------> TOBE if (✖ = 2) {}
+
+4. dialog함수로 팝업을 호출 할 경우에는 실제 파일이 있는 경로로 변경해주세요
+ex) 현재 PROJECT_PATH_TEMP입니다. 
+
+-호출구조-
+
+호출구조는 모든 화면이 아닌 변환대상화면을 기준으로 분석하였습니다.
+선언하지 않은 변수를 사용중이라면 caller 에서 넘겼을 가능성이 높습니다.
+파일 ID는 소스의 form ID로 가정했습니다. 아래의 결과는 따로 확인해주세요.
+D540_Pop.xml에서 호출 (callee ID):  
+D540_Pop.xml을 호출   (caller ID):  
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+/****************************************************************************
+ * 프로그램번호   : D541_Pop
+ * 프로그램명     : 취급자 변경내역조회
+ * 파일명         : D541_Pop.xml
+ * 프로그램 내용  : 취급자 변경내역조회
+ * 관련 프로그램  : 
+ * 작성자         : 이용주
+ * 작성일         : 2011-02-14
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+// <script src="/cm/js/common.js"/>
+// <script src="/cm/js/val_lib.js"/>
+// <script src="/cm/js/util.js"/>
+// <script src="/cm/js/transSub.js"/>
+// <script src="/cm/js/callService.js"/>
+// <script src="/cm/js/gds.js"/>
+// <script src="/cm/js/convertJs/conv.js"/>
+// <script src="/cm/js/convertJs/Global_Script.js"/>
+// <script src="/cm/js/convertJs/comm_Webservice.js"/>
+// <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+// 계약번호
+var sCrNo = "";
+
+//---------------------------------------------------------------------------
+// function 명 : D040_OnLoadCompleted
+// 내용        : OnLoadCompleted
+//---------------------------------------------------------------------------
+scwin.init = function() {
+
+var pro = Promise.resolve();
+
+window.top.util.winTopShowModalChk = "T";
+util.winTopShowModal();
+wprom.setPopupInit(913, 453, "취급자 변경내역 조회");
+
+pro = pro.then(function(rv) {
+	return util.winTopShowModalPromise();
+});
+
+pro = pro.then(function(rv) {
+
+	wprom.windowOpenInit(D540_Pop);
+    // 화면 초기화
+    scwin.lfn_clearDisplay();
+    
+});
+
+pro = pro.then(function(rv) {
+	util.winTopHideModal();
+});
+
+return pro;
+
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 취급자 변경내역조회
+//---------------------------------------------------------------------------
+scwin.lfn_Search = function(obj) {
+	
+	// 입력값 chk
+    if (!scwin.lfn_inputChk()) {
+        return;
+    }
+
+	var transObj = new callService("com.inswave.longterm.psv.ens.task.EAD540Task", "getCngDoerList", "", "");
+	transObj.setUrl("/contract/CBSC113PController.do");
+	transObj.setId("getCngDoerList");
+	transObj.setParam("sCrNo", msk_sCrNo.getValue()); // 계약번호
+	transObj.setXPath("//*/hashtable/data/LTIEA00");
+	transObj.addXPath("//*/vector/data/LTIEA26");
+	transObj.addXPath("//*/WARNING");
+	//transObj.callBack("scwin.subCallBackfunction");
+	transObj.sync();
+	transObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "warning");
+	// 오류처리
+    if (warning.getRowCount() != 0) {
+        wprom.alert(warning.getCellData(0, "msg"));
+        return;
+    }
+    
+    wconv.clear(DsWs_LTIEA00);
+	DsWs_LTIEA00.setJSON(_tranSync.getDsJson("LTIEA00"));
+	util.setRowPosition(DsWs_LTIEA00, 0);
+
+	wconv.clear(DsWs_LTIEA26);
+	DsWs_LTIEA26.setJSON(_tranSync.getDsJson("LTIEA26"));
+	util.setRowPosition(DsWs_LTIEA26, 0);
+
+	wconv.clear(Ds_LTIEA26);
+	Ds_LTIEA26.setJSON(DsWs_LTIEA26.getAllJSON());
+	util.setRowPosition(Ds_LTIEA26, 0);
+	
+	//_tranSync.getGridColumn(Grd_Resv)
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_inputChk
+// 내용        : 입력값체크(조회시)
+//---------------------------------------------------------------------------
+scwin.lfn_inputChk = function(obj) {
+    // 계약자코드
+    if (msk_sCrNo.getValue() == "") {
+        wprom.alert("계약번호를 입력하세요.");
+        return false;
+    }
+    return true;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : Btn_Close_OnClick
+// 내용        : 화면닫기
+//---------------------------------------------------------------------------
+scwin.lfn_Btn_Close_OnClick = function() {
+    wprom.close("");
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_clearDisplay
+// 내용        : 화면초기화
+//---------------------------------------------------------------------------
+scwin.lfn_clearDisplay = function(obj) {
+
+	//팜업화면 오픈 시점에 보낸자료 검색
+	var inJson; 
+	var indata = $w.getParameter("param");
+	inJson = JSON.parse(indata);
+	
+    // 계약번호 유무에 따른 화면처리
+    if (wconv.trim(inJson.sCrNo) == "" || wconv.trim(inJson.sCrNo) == null) {
+        msk_sCrNo.setDisabled(false);
+        msk_sCrNo.show();
+    } else {
+        // datamove
+        msk_sCrNo.setValue((inJson.sCrNo).toUpperCase());
+        msk_sCrNo.hide();
+        msk_sCrNo.setDisabled(true);
+        scwin.lfn_Search(); //입출금내역조회
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : common_OnKeyDown
+// 내용        : 계약번호에 return입력 할경우
+//---------------------------------------------------------------------------
+scwin.common_OnKeyDown_Async = function(e) {
+	util.eventAsyncCall(this, scwin.common_OnKeyDown, arguments);
+}
+scwin.common_OnKeyDown = function(e) {
+    if (e.keyCode == 13) {
+        scwin.lfn_Search();
+    }
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="D540_Pop"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7; left:0px; top:0px;"
+            userData1="취급자 변경내역 조회[D541_Pop]" userData2=" OnLoadCompleted:scwin.F540_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+            </ServiceObjects>
+            <xf:group arcsize="8" class="sty_area_form" id="Shape1"
+                style="position:absolute; right:813px;    border-color:user23;  bottom:82px;height:51px; left:0px; top:30px;width:870px;" userData3="RoundRect">
+            	<xf:group class="form_w_line" id="" style="top:24px;" />
+            </xf:group>
+            <w2:textbox id="Static5" label="취급자 변경내역 조회" style="position:absolute; VAlign:Middle;  height:24px; left:0px; top:0px; " tagname="" class="sub_pop_title01">
+</w2:textbox>
+            
+            <xf:switch id="switch_97" style=" ">
+                <xf:case id="Default_98" style=" ">
+                    <w2:gridView class="sty_Grid" dataList="Ds_LTIEA26"
+                    	focusMode="row" id="Grd_Resv" inputType="text"
+                    	readOnly="true"
+                    	style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  AutoFitEndLine:Hide;height:301px; left:0px; right:809px; top:93px;width:870px;"
+                    	tabIndex="4" autoFit="allColumn">
+                    	<w2:header>
+                    		<w2:row>
+                    			<w2:column dataType="text"
+                    				id="head_id_773" inputType="text"
+                    				readOnly="true" userData1="0" userData3="0"
+                    				value="순번" width="30" />
+                    			<w2:column dataType="text"
+                    				id="head_id_774" inputType="text"
+                    				readOnly="true" userData1="1" userData3="0"
+                    				value="변경일" width="80" />
+                    			<w2:column colSpan="2" dataType="text"
+                    				id="head_id_775" inputType="text"
+                    				readOnly="true" userData1="2" userData3="0"
+                    				value="변경전취급자" width="60" />
+                    			<w2:column colSpan="2" dataType="text"
+                    				id="head_id_776" inputType="text"
+                    				readOnly="true" userData1="4" userData3="0"
+                    				value="변경전사용인" width="60" />
+                    			<w2:column colSpan="2" dataType="text"
+                    				id="head_id_777" inputType="text"
+                    				readOnly="true" userData1="6" userData3="0"
+                    				value="변경후취급자" width="60" />
+                    			<w2:column colSpan="2" dataType="text"
+                    				id="head_id_778" inputType="text"
+                    				readOnly="true" userData1="8" userData3="0"
+                    				value="변경후사용인" width="60" />
+                    			<w2:column dataType="text"
+                    				id="head_id_779" inputType="text"
+                    				readOnly="true" userData1="10" userData3="0"
+                    				value="처리자" width="60" />
+                    			<w2:column dataType="text"
+                    				id="head_id_780" inputType="text"
+                    				readOnly="true" userData1="11" userData3="0"
+                    				value="처리자명" width="80" />
+                    		</w2:row>
+                    	</w2:header>
+                    	<w2:gBody>
+                    		<w2:row>
+                    			<w2:column dataType="number"
+                    				displayFormat="#,###" id="nRvsnSeqno"
+                    				inputType="text" readOnly="true"
+                    				textAlign="center" userData1="0" userData3="0"
+                    				width="30" style="height:20px;" />
+                    			<w2:column dataType="text"
+                    				displayFormat="####-##-##" id="sInptDate"
+                    				inputType="text" readOnly="true"
+                    				textAlign="center" userData1="1" userData3="0"
+                    				width="80" style="height:20px;" value=""/>
+                    			<w2:column dataType="text"
+                    				id="sChbfDoer" inputType="text" readOnly="true"
+                    				textAlign="right" userData1="2" userData3="0"
+                    				width="60" style="height:20px;" value=""/>
+                    			<w2:column dataType="text"
+                    				id="sChbfDoerName" inputType="text"
+                    				readOnly="true" textAlign="left" userData1="3"
+                    				userData3="0" width="80" style="height:20px;" value=""/>
+                    			<w2:column dataType="text"
+                    				id="sChbfDoerUser" inputType="text"
+                    				readOnly="true" textAlign="right" userData1="4"
+                    				userData3="0" width="60" style="height:20px;" value=""/>
+                    			<w2:column dataType="text"
+                    				id="sChbfDoerUserName" inputType="text"
+                    				readOnly="true" textAlign="left" userData1="5"
+                    				userData3="0" width="80" style="height:20px;" value=""/>
+                    			<w2:column dataType="text"
+                    				id="sChafDoer" inputType="text" readOnly="true"
+                    				textAlign="right" userData1="6" userData3="0"
+                    				width="60" style="height:20px;" value=""/>
+                    			<w2:column dataType="text"
+                    				id="sChafDoerName" inputType="text"
+                    				readOnly="true" textAlign="left" userData1="7"
+                    				userData3="0" width="80" style="height:20px;" value=""/>
+                    			<w2:column dataType="text"
+                    				id="sChafDoerUser" inputType="text"
+                    				readOnly="true" textAlign="right" userData1="8"
+                    				userData3="0" width="60" style="height:20px;" value=""/>
+                    			<w2:column dataType="text"
+                    				id="sChafDoerUserName" inputType="text"
+                    				readOnly="true" textAlign="left" userData1="9"
+                    				userData3="0" width="80" style="height:20px;" value=""/>
+                    			<w2:column dataType="text"
+                    				id="sInptDler" inputType="text" readOnly="true"
+                    				textAlign="center" userData1="10" userData3="0"
+                    				width="60" style="height:20px;" value=""/>
+                    			<w2:column dataType="text"
+                    				id="sInptDlerNm" inputType="text"
+                    				readOnly="true" textAlign="center"
+                    				userData1="11" userData3="0" width="80"
+                    				style="height:20px;" value=""/>
+                    		</w2:row>
+                    	</w2:gBody>
+                    </w2:gridView>
+                </xf:case>
+            </xf:switch>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Btn_Close_OnClick" id="btn_close"
+                style="position:absolute; ImageID:btn_Comm_Close;  height:20px;left:815px;top:0px; width:25px;" tabIndex="5" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+            <xf:input class="sty_ipt_search" dataType="text" displayFormat="#-####-#######" ev:onblur="scwin.common_OnKeyDown_Async"
+                id="msk_sCrNo"
+                style="position:absolute;  InputPanel:FALSE;    height:20px; left:240px; top:4px; width:104px;" tabIndex="6"/>
+            <xf:input class="sty_ipt_form" disabled="true" id="edt_sAplcTeamName" ref="data:DsWs_LTIEA00.sManageEmpName"
+                style="position:absolute;height:20px;width:110px;left:208px;top:33px;" tabIndex="10"/>
+            <w2:textbox class="sty_lb_Basic" id="Static0" label="지도사원"
+                style="position:absolute;height:24px;left:101px;VAlign:Middle;top:30px;" tagname=""/>
+            <xf:input class="sty_ipt_form" disabled="true" id="edt_sAplcCentrName" ref="data:DsWs_LTIEA00.sDoerName"
+                style="position:absolute;height:20px;width:110px;left:435px;top:33px;" tabIndex="8"/>
+            <xf:input class="sty_ipt_form" disabled="true" id="edt_sAplcGroupName" ref="data:DsWs_LTIEA00.sDoerUserName"
+                style="position:absolute;   height:20px;left:662px;top:33px; width:117px;" tabIndex="9"/>
+            <w2:textbox class="sty_lb_Basic" id="Static2" label="사용인"
+                style="position:absolute;height:24px;left:555px;VAlign:Middle;top:30px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static7" label="취급자"
+                style="position:absolute;height:24px;left:328px;VAlign:Middle;top:30px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static67" label="현재 취급자"
+                style="position:absolute; VAlign:Middle; height:49px; left:0px; top:30px; width:60px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static3" label="전화"
+                style="position:absolute;height:24px;left:101px;VAlign:Middle;top:55px;" tagname=""/>
+            <xf:input class="sty_ipt_form" disabled="true" id="Edit0" ref="data:DsWs_LTIEA00.sPhone"
+                style="position:absolute;height:20px;width:110px;left:208px;top:58px;" tabIndex="15"/>
+            <w2:textbox class="sty_lb_Basic" id="Static4" label="팩스"
+                style="position:absolute;height:24px;left:328px;VAlign:Middle;top:54px;" tagname=""/>
+            <xf:input class="sty_ipt_form" disabled="true" id="Edit1" ref="data:DsWs_LTIEA00.sFax"
+                style="position:absolute;height:20px;width:110px;left:435px;top:58px;" tabIndex="17"/>
+        </xf:group>
+    </body>
+</html>

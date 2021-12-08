@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[ 
+	/**
+	 * 초기 스크립트 수행 함수 정의
+	 */
+	scwin.onpageload = function() {
+		var type = com.getParameter("type");
+	
+		if (type === "alert") {
+			btn_cancel.hide();
+		} else {
+			btn_cancel.show(""); // show의 옵션중에 default가 block처리임으로, ""을 사용해야 원상태로 보여진다.
+		}
+	
+		scwin.param = com.getParameter();
+		ibx_confirmReceive.setValue(scwin.param.msg);
+	};
+	
+	scwin.onpageunload = function() {
+	
+	};
+	
+	/**
+	 * 확인버튼 클릭시 함수 실행 후, 팝업창을 닫는다.
+	 */
+	scwin.btn_ok_onclick = function() {
+		if (scwin.param.callbackFn) {
+			com.closePopup(scwin.param.callbackFn, ibx_confirmSend.getValue());
+		}
+		com.closePopup();
+	};
+	
+	/**
+	 * 취소버튼 클릭시 함수 실행하지 않고, 팝업창을 닫는다.
+	 */
+	scwin.btn_cancel_onclick = function() {
+		com.closePopup();
+	};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group id="" style="" class="pop_M">
+			<xf:group id="" style='' class="pop_con">
+				<xf:group class="defaultbox" id="" style="">
+					<w2:textbox class="df_tt" id="" label="CONFIRM 팝업 Parameter" style=""></w2:textbox>
+					<xf:group class="fr" id="" style="height:22px;">
+						<xf:group class="fr" id="" style=""></xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="width:100%;" class="w2tb tb" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:120px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">수신&amp;nbsp;Parameter</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:input minlength="" id="ibx_confirmReceive" applyFormat="" ref="" maxlength="" style="height:24px;" mandatory="" displayFormat="" allowChar="" displayFormatter="">
+							</xf:input>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">전송&amp;nbsp;Parameter</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:input minlength="" id="ibx_confirmSend" applyFormat="" ref="" maxlength="" style="height:24px;" mandatory="" displayFormat="" allowChar="" displayFormatter="">
+							</xf:input>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group class="btn_fix" id="" style="border:0">
+				<xf:group class="tac" id="" style="">
+					<w2:anchor class="btn_com" id="" outerDiv="true" style="">
+						<xf:label><![CDATA[닫기]]></xf:label>
+					</w2:anchor>
+				</xf:group>
+			</xf:group>
+			<xf:group class="btn_fix" id="" style="border:0">
+				<xf:group class="tac" id="" style="">
+					<w2:anchor class="btn_com" ev:onclick="scwin.btn_ok_onclick" id="btn_confirm" outerDiv="true" style="">
+						<xf:label><![CDATA[확인]]></xf:label>
+					</w2:anchor>
+					<w2:anchor class="btn_com" id="btn_cancel" outerDiv="true" style="" ev:onclick="scwin.btn_cancel_onclick">
+						<xf:label><![CDATA[취소]]></xf:label>
+					</w2:anchor>
+				</xf:group>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

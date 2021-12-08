@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="Ds_TrtyList" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCrNo" name="sCrNo"/>
+                        <w2:column dataType="text" id="nChngSeqno" name="nChngSeqno"/>
+                        <w2:column dataType="text" id="nCrChngNo" name="nCrChngNo"/>
+                        <w2:column dataType="text" id="sChngStndDate" name="sChngStndDate"/>
+                        <w2:column dataType="text" id="sChngDlngDate" name="sChngDlngDate"/>
+                        <w2:column dataType="text" id="sCrStatCd" name="sCrStatCd"/>
+                        <w2:column dataType="text" id="sCrStatFlgcd " name="sCrStatFlgcd "/>
+                        <w2:column dataType="text" id="sInptDler" name="sInptDler"/>
+                        <w2:column dataType="text" id="sInptDlerIp" name="sInptDlerIp"/>
+                        <w2:column dataType="text" id="sInptDate" name="sInptDate"/>
+                        <w2:column dataType="text" id="sInptHms" name="sInptHms"/>
+                        <w2:column dataType="text" id="sMdfcDler" name="sMdfcDler"/>
+                        <w2:column dataType="text" id="sMdfcDlerIp" name="sMdfcDlerIp"/>
+                        <w2:column dataType="text" id="sMdfcDate" name="sMdfcDate"/>
+                        <w2:column dataType="text" id="sMdfcHms" name="sMdfcHms"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_TrtyList"
+                	repeatNode="map"
+                	userData2="//*/hashtable/data/vector/data/LTIEZ91">
+                	<w2:columnInfo>
+                		<w2:column id="sTrtyName" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sRenwlBfInsurStrtdate"
+                			name="name2" dataType="text">
+                		</w2:column>
+                		<w2:column id="sRenwlAfInsurStrtdate"
+                			name="name3" dataType="text">
+                		</w2:column>
+                		<w2:column id="nAddPaymPrem" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sRenwlBfInsurEndDate"
+                			name="name5" dataType="text">
+                		</w2:column>
+                		<w2:column id="nRenwlSeq" name="name6"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nRenwlAfGrntPrem" name="name7"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sResvAmtKey" name="name8"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nRiskChngAddPaymPrem"
+                			name="name9" dataType="text">
+                		</w2:column>
+                		<w2:column id="nRenwlAfAccuPrem" name="name10"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nRenwlBfAccuPrem" name="name11"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sTrtyCd" name="name12"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nAgeChngAddPaymIncRat"
+                			name="name13" dataType="text">
+                		</w2:column>
+                		<w2:column id="nRenwlBfBussPrem" name="name14"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nRenwlBfGrntPrem" name="name15"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nAddPaymIncRat" name="name16"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nRenwlAfBussPrem" name="name17"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nRiskChngAddPaymIncRat"
+                			name="name18" dataType="text">
+                		</w2:column>
+                		<w2:column id="nTrtyInsAmt" name="name19"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nAgeChngAddPaymPrem"
+                			name="name20" dataType="text">
+                		</w2:column>
+                		<w2:column id="sRenwlDate" name="name21"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sAutoRenwlCyclCd" name="name22"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sRenwlAfInsurEndDate" name="name23"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_DataWarning" repeatNode="map" userData2="//*/WARNING"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <script src="/cm/js/gds.js" />
+        <script src="/cm/js/util.js" />
+        <script src="/cm/js/wconv.js" />
+        <script src="/cm/js/common.js" />
+		<script src="/cm/js/transSub.js" />
+		<script src="/cm/js/callService.js" />
+		<script src="/cm/js/val_lib.js" />
+        <script src="/cm/js/convertJs/Global_Script.js" />
+        <script src="/cm/js/convertJs/comm_Webservice.js" />
+		<script src="/cm/js/convertJs/LongTerm_Script.js" />
+		<script src="/cm/js/convertJs/NewGen_Script.js"/>
+		<script src="/cm/js/convertJs/Marine_Script.js"/>
+		<script src="/cm/js/convertJs/GrdPassword_Script.js"/>
+		<script><![CDATA[
+/****************************************************************************
+ * 프로그램번호   : D810_POP
+ * 프로그램명     : 갱신특약정보
+ * 파일명         : D810_POP.xml
+ * 프로그램 내용  : 갱신특약정보
+ * 관련 프로그램  : 
+ * 작성자         : 정한진
+ * 작성일         : 2015-06-26
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+ 
+//#include "Script::Global_Script.js";
+//#include "Script::comm_Webservice.js";
+//#include "Script::LongTerm_Script.js";
+//#include "Script::NewGen_Script.js";
+//#include "Script::GrdPassword_Script.js";
+
+var sCrNo="";
+var nInrpsSeqno="";
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_OnLoadCompleted
+// 내용        : 폼로드할때 처리할 내용
+//---------------------------------------------------------------------------
+scwin.init = function() {
+	var indata = $w.getParameter("param");
+	//var inJSON = null;
+	try {
+		console.log("==CBSC022P popup indata \n"+indata);
+		//inJSON = JSON.parse(indata);
+		//console.log("==CBSC022P popup inJSON \n"+inJSON);
+		
+		fv_args = JSON.parse(indata);
+		console.log("==CBSC022P popup fv_args \n"+fv_args);
+		if (wconv.length(fv_args.sCrNo) > 0) {
+	        sCrNo = fv_args.sCrNo;
+	    }
+	    if (wconv.length(fv_args.nInrpsSeqno) > 0) {
+	        nInrpsSeqno = fv_args.nInrpsSeqno;
+	    }
+	    //alert(nInrpsSeqno+" :sCrNo : "+sCrNo);
+		
+	} catch(e) {
+	
+	};
+
+    scwin.lfn_Search();
+}
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 계약상태이력 조회
+//---------------------------------------------------------------------------
+scwin.lfn_Search = function() {
+/* OLD S	
+	wconv.clear(Ds_TrtyList);
+    wconv.clear(DsWs_TrtyList);
+    wconv.clear(DsWs_DataWarning);
+    
+    SOBJ_Search.WSDL = gWsdlBasis;
+	
+	var MethodObj = gfn_CreateMethodObj(SOBJ_Search, "com.inswave.longterm.psv.ens.task.EAD510Task", "InquiryTrtyList", "", "");
+	trace("sCrNo ==>  " + sCrNo);
+	trace("nInrpsSeqno ==>  " + nInrpsSeqno);
+	gfn_SetParam(MethodObj, "sCrNo", sCrNo);
+	gfn_SetParam(MethodObj, "nInrpsSeqno", nInrpsSeqno);
+	
+	var result=gfn_CallService(SOBJ_Search, DOBJ_DataSearch, MethodObj);
+OLD E */
+    console.log("[/CBSC022P.xml] [lfn_Search()] ==> [갱신특약정보 조회] [TEST_01]" );
+    //console.log("[/CBSC022P.xml] [lfn_Search()] ==> [갱신특약정보 조회] [Ds_LTIDA00,갯수_01]"+ Ds_LTIDA00.getRowCount() +"[Ds_LTIDA00]"+ WebSquare.xml.serialize(Ds_LTIDA00.getAllXML()) );   
+    
+    Ds_TrtyList.removeAll();
+	DsWs_TrtyList.removeAll();
+	DsWs_DataWarning.removeAll();
+
+	var MethodObj = new callService("com.inswave.longterm.psv.ens.task.EAD510Task", "InquiryTrtyList", "", "");
+	MethodObj.setId("InquiryTrtyList"); 
+	MethodObj.setParam("sCrNo", sCrNo);
+	MethodObj.setParam("nInrpsSeqno", nInrpsSeqno);
+	console.log("[/CBSC022P.xml] [sCrNo] ==>"+sCrNo  );
+	console.log("[/CBSC022P.xml] [nInrpsSeqno] ==>"+nInrpsSeqno  );
+	MethodObj.setUrl("/contract/CBSC022PController.do"); 		// 서버단 호출 URL 
+	MethodObj.setXPath("//*/hashtable/data/vector/data/LTIEZ91");
+	MethodObj.addXPath("//*/WARNING");
+	//MethodObj.setXPathDs();
+	//MethodObj.setHashTable();
+	MethodObj.sync();
+	MethodObj.send();
+	console.log("[/CBSC022P.xml] [lfn_Search()] ==> [갱신특약정보 조회, 전송_완료] [TEST_91]");
+ 	//util.interfaceKey(_tranSync.result.serviceDs);
+	DsWs_TrtyList.setJSON(_tranSync.getDsJson("LTIEZ91"));
+	Ds_TrtyList.setJSON(_tranSync.getDsJson("LTIEZ91"));
+	DsWs_DataWarning.setJSON(_tranSync.getDsJson("WARNING"));
+	//util.jSonDsCreate(_tranSync.getDsJson("LTIEZ91"), "DsWs_TrtyList");
+	//util.jSonDsCreate(_tranSync.getDsJson("LTIEZ91"), "Ds_TrtyList");
+	//util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_DataWarning");
+	//util.setCompBindRefresh("DsWs_TrtyList");
+	//util.setRowPosition(DsWs_TrtyList, 0);
+	
+	//Ds_TrtyList.setJSON(_tranSync.getDsJson("//*/LTIEZ91"));		// 갱신보험료Ds 셋팅 
+	//DsWs_DataWarning.setJSON(_tranSync.getDsJson("//*/WARNING"));	// Warning DS 셋팅(조회 결과)    
+	//console.log("[/CBSC022P.xml] [lfn_Search()] ==> [Ds_TrtyList갯수]"+ Ds_TrtyList.getRowCount() +"[Ds_TrtyList]"+ WebSquare.xml.serialize(Ds_TrtyList.getAllXML()) );  
+ 	
+ 	//trace(DOBJ_DataSearch.Value);
+	//if (DsWs_Warning.getRowCount() != 0) {
+	//	alert(DsWs_Warning.getCellData(0, "msg"));
+	//	return;
+	//}
+ 	if (DsWs_DataWarning.getRowCount() != 0) {
+        wprom.alert(DsWs_DataWarning.getCellData(0, "msg"));
+        return;
+    }
+    //Ds_TrtyList.Copy("DsWs_TrtyList");
+    Ds_TrtyList.setJSON(DsWs_TrtyList.getAllJSON());
+    //console.log("[/CBSC022P.xml] [lfn_Search()] ==> [갱신특약정보 조회] [TEST_end]" );  
+}
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_close
+// 내용        : 팝업클로즈
+//---------------------------------------------------------------------------
+scwin.lfn_close = function(e) {
+    //wconv.close();
+    wprom.close();
+}
+scwin.ExprDis = function(gridId,colId,rowIndex){
+
+	var rtnValue = "";
+	try {
+		var grdOb = eval(gridId);
+		var dataListOb = eval(eval(gridId).getDataList());
+	console.log("[rtnValue] "+rtnValue);	
+		if(colId == "temp_id_895"){
+			//Round((Sum("nAddPaymPrem")/Sum("nRenwlBfGrntPrem"))*100, 2)
+			rtnValue = Sum("nAddPaymPrem");
+		}else{
+		};
+	}catch(e){
+		console.log("[ExprDis Error] "+rtnValue);
+	};	
+	return rtnValue;
+};]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="D810_Pop"
+            style="position:absolute; left:0px; top:0px;"
+            userData1="갱신특약정보" userData2=" OnLoadCompleted:scwin.lfn_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+            </ServiceObjects>
+            <w2:textbox id="Static5" label="갱신특약정보" style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; width:196px;" tagname="" class="sub_pop_title01"/>
+            <xf:group arcsize="8" class="" id="Shape5"
+                style="position:absolute; right:835px;  bottom:297px; height:264px; left:0px; top:30px; width:827px;" userData3="RoundRect"/>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_close" id="btn_close"
+                style="position:absolute; Transparent:TRUE;  ImageID:btn_Comm_Close;left:778px;top:0px; width:45px;" tabIndex="4" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+            <xf:switch id="switch_104" style=" ">
+                <xf:case id="Default_105" style=" ">
+                    <w2:gridView class="sty_Grid"
+                    	dataList="DsWs_TrtyList" focusMode="row"
+                    	id="grd_LTIEZ90s" inputType="text" readOnly="true"
+                    	style="position:absolute;  height:255px; left:0px; right:831px; top:30px; width:824px;"
+                    	tabIndex="5">
+                    	<w2:header>
+                    		<w2:row>
+                    			<w2:column dataType="text"
+                    				id="head_id_859" inputType="text"
+                    				readOnly="true" rowSpan="2" style="height:20px;"
+                    				userData1="0" userData3="0" value="특약코드"
+                    				width="60" />
+                    			<w2:column dataType="text"
+                    				id="head_id_860" inputType="text"
+                    				readOnly="true" rowSpan="2" style="height:20px;"
+                    				userData1="1" userData3="0" value="특약명"
+                    				width="269" />
+                    			<w2:column dataType="text"
+                    				id="head_id_861" inputType="text"
+                    				readOnly="true" rowSpan="2" style="height:20px;"
+                    				userData1="2" userData3="0" value="갱신일자"
+                    				width="75" />
+                    			<w2:column colSpan="2" dataType="text"
+                    				id="head_id_862" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="3" userData3="0" value="계약시작일자"
+                    				width="140" />
+                    			<w2:column colSpan="2" dataType="text"
+                    				id="head_id_870" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="5" userData3="0" value="계약종료일자"
+                    				width="140" />
+                    			<w2:column colSpan="2" dataType="text"
+                    				id="head_id_873" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="7" userData3="0" value="보장보험료"
+                    				width="140" />
+                    			<w2:column colSpan="2" dataType="text"
+                    				id="head_id_876" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="9" userData3="0" value="추가 납입 보험료"
+                    				width="140" />
+                    			<w2:column colSpan="2" dataType="text"
+                    				id="head_id_879" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="11" userData3="0" value="연령 반영분"
+                    				width="140" />
+                    			<w2:column colSpan="2" dataType="text"
+                    				id="head_id_882" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="13" userData3="0" value="위험률 반영분"
+                    				width="140" />
+                    			<w2:column dataType="text"
+                    				id="head_id_863" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="15" userData3="0" width="0" />
+                    			<w2:column dataType="text"
+                    				id="head_id_864" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="16" userData3="0" width="0" />
+                    			<w2:column dataType="text"
+                    				id="head_id_865" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="17" userData3="0" width="0" />
+                    			<w2:column dataType="text"
+                    				id="head_id_866" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="18" userData3="0" width="0" />
+                    			<w2:column dataType="text"
+                    				id="head_id_867" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="19" userData3="0" width="0" />
+                    		</w2:row>
+                    		<w2:row>
+                    			<w2:column dataType="text"
+                    				id="head_id_868" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="3" userData3="1" value="갱신 전"
+                    				width="70" />
+                    			<w2:column dataType="text"
+                    				id="head_id_869" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="4" userData3="1" value="갱신 후"
+                    				width="70" />
+                    			<w2:column dataType="text"
+                    				id="head_id_871" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="5" userData3="1" value="갱신 전"
+                    				width="70" />
+                    			<w2:column dataType="text"
+                    				id="head_id_872" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="6" userData3="1" value="갱신 후"
+                    				width="70" />
+                    			<w2:column dataType="text"
+                    				id="head_id_874" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="7" userData3="1" value="갱신 전"
+                    				width="70" />
+                    			<w2:column dataType="text"
+                    				id="head_id_875" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="8" userData3="1" value="갱신 후"
+                    				width="70" />
+                    			<w2:column dataType="text"
+                    				id="head_id_877" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="9" userData3="1" value="금액"
+                    				width="70" />
+                    			<w2:column dataType="text"
+                    				id="head_id_878" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="10" userData3="1" value="증감률"
+                    				width="70" />
+                    			<w2:column dataType="text"
+                    				id="head_id_880" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="11" userData3="1" value="금액"
+                    				width="70" />
+                    			<w2:column dataType="text"
+                    				id="head_id_881" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="12" userData3="1" value="증감률"
+                    				width="70" />
+                    			<w2:column dataType="text"
+                    				id="head_id_883" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="13" userData3="1" value="금액"
+                    				width="70" />
+                    			<w2:column dataType="text"
+                    				id="head_id_884" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="14" userData3="1" value="증감률"
+                    				width="70" />
+                    		</w2:row>
+                    	</w2:header>
+                    	<w2:gBody>
+                    		<w2:row>
+                    			<w2:column dataType="text" id="sTrtyCd"
+                    				inputType="text" readOnly="true"
+                    				style="height:20px;" textAlign="center"
+                    				userData1="0" userData3="0" width="60" />
+                    			<w2:column dataType="text"
+                    				id="sTrtyName" inputType="text" readOnly="true"
+                    				textAlign="center" userData1="1" userData3="0"
+                    				width="269" />
+                    			<w2:column dataType="date"
+                    				id="sRenwlDate" inputType="text" readOnly="true"
+                    				textAlign="center" userData1="2" userData3="0"
+                    				width="75" />
+                    			<w2:column dataType="date"
+                    				id="sRenwlBfInsurStrtdate" inputType="text"
+                    				readOnly="true" textAlign="center" userData1="3"
+                    				userData3="0" width="70" displayFormat="" />
+                    			<w2:column dataType="date"
+                    				id="sRenwlAfInsurStrtdate" inputType="text"
+                    				readOnly="true" textAlign="center" userData1="4"
+                    				userData3="0" width="70" />
+                    			<w2:column dataType="date"
+                    				id="sRenwlBfInsurEndDate" inputType="text"
+                    				readOnly="true" textAlign="center" userData1="5"
+                    				userData3="0" width="70" />
+                    			<w2:column dataType="date"
+                    				id="sRenwlAfInsurEndDate" inputType="text"
+                    				readOnly="true" textAlign="center" userData1="6"
+                    				userData3="0" width="70" />
+                    			<w2:column dataType="text"
+                    				id="nRenwlBfGrntPrem" inputType="text"
+                    				readOnly="true" textAlign="right" userData1="7"
+                    				userData3="0" width="70" displayFormat="#,###" />
+                    			<w2:column dataType="text"
+                    				id="nRenwlAfGrntPrem" inputType="text"
+                    				readOnly="true" textAlign="right" userData1="8"
+                    				userData3="0" width="70" displayFormat="#,###" />
+                    			<w2:column dataType="text"
+                    				id="nAddPaymPrem" inputType="text"
+                    				readOnly="true" textAlign="right" userData1="9"
+                    				userData3="0" width="70" displayFormat="#,###" />
+                    			<w2:column dataType="text"
+                    				id="nAddPaymIncRat" inputType="text"
+                    				readOnly="true" textAlign="right" userData1="10"
+                    				userData3="0" width="70" />
+                    			<w2:column dataType="text"
+                    				id="nAgeChngAddPaymPrem" inputType="text"
+                    				readOnly="true" textAlign="right" userData1="11"
+                    				userData3="0" width="70" displayFormat="#,###" />
+                    			<w2:column dataType="text"
+                    				id="nAgeChngAddPaymIncRat" inputType="text"
+                    				readOnly="true" textAlign="right" userData1="12"
+                    				userData3="0" width="70" />
+                    			<w2:column dataType="text"
+                    				id="nRiskChngAddPaymPrem" inputType="text"
+                    				readOnly="true" textAlign="right" userData1="13"
+                    				userData3="0" width="70" displayFormat="#,###" />
+                    			<w2:column dataType="text"
+                    				id="nRiskChngAddPaymIncRat" inputType="text"
+                    				readOnly="true" textAlign="right" userData1="14"
+                    				userData3="0" width="70" />
+                    		</w2:row>
+                    	</w2:gBody>
+                    	<w2:footer>
+                    		<w2:row>
+                    			<w2:column dataType="text"
+                    				id="temp_id_885" inputType="text"
+                    				readOnly="true" style="height:23px;"
+                    				textAlign="center" userData1="0" value="합계"
+                    				width="329" colSpan="2" rowSpan="" />
+                    			<w2:column dataType="text"
+                    				id="temp_id_887" inputType="text"
+                    				readOnly="true" textAlign="right" userData1="2"
+                    				width="75" />
+                    			<w2:column dataType="text"
+                    				id="temp_id_888" inputType="text"
+                    				readOnly="true" textAlign="right" userData1="3"
+                    				width="70" />
+                    			<w2:column dataType="text"
+                    				id="temp_id_889" inputType="text"
+                    				readOnly="true" textAlign="right" userData1="4"
+                    				width="70" />
+                    			<w2:column dataType="text"
+                    				id="temp_id_890" inputType="text"
+                    				readOnly="true" textAlign="right" userData1="5"
+                    				width="70" />
+                    			<w2:column dataType="text"
+                    				id="temp_id_891" inputType="text"
+                    				readOnly="true" textAlign="right" userData1="6"
+                    				width="70" />
+                    			<w2:column dataType="text"
+                    				expression="Sum(&quot;nRenwlBfGrntPrem&quot;)"
+                    				id="temp_id_892" inputType="expression"
+                    				readOnly="true" textAlign="right" userData1="7"
+                    				width="70" displayFormat="#,###" />
+                    			<w2:column dataType="text"
+                    				expression="Sum(&quot;nRenwlAfGrntPrem&quot;)"
+                    				id="temp_id_893" inputType="expression"
+                    				readOnly="true" textAlign="right" userData1="8"
+                    				width="70" displayFormat="#,###" />
+                    			<w2:column dataType="text"
+                    				expression="Sum(&quot;nAddPaymPrem&quot;)"
+                    				id="temp_id_894" inputType="expression"
+                    				readOnly="true" textAlign="right" userData1="9"
+                    				width="70" displayFormat="#,###" />
+                    			<w2:column dataType="text"
+                    				expression='Math.round(Sum("nAddPaymPrem") / Sum("nRenwlBfGrntPrem") * 100 * 100) / 100'
+                    				id="temp_id_895" inputType="expression"
+                    				readOnly="true" textAlign="right" userData1="10"
+                    				width="70" displayFormat="" />
+                    			<w2:column dataType="text"
+                    				expression="Sum(&quot;nAddPaymPrem&quot;)"
+                    				id="temp_id_896" inputType="expression"
+                    				readOnly="true" textAlign="right" userData1="11"
+                    				width="70" displayFormat="#,###" />
+                    			<w2:column dataType="text"
+                    				expression='Math.round(Sum("nAgeChngAddPaymPrem") / Sum("nRenwlBfGrntPrem") *100 * 100) / 100'
+                    				id="temp_id_897" inputType="expression"
+                    				readOnly="true" textAlign="right" userData1="12"
+                    				width="70" />
+                    			<w2:column dataType="text"
+                    				expression="Sum(&quot;nRiskChngAddPaymPrem&quot;)"
+                    				id="temp_id_898" inputType="expression"
+                    				readOnly="true" textAlign="right" userData1="13"
+                    				width="70" displayFormat="#,###" />
+                    			<w2:column dataType="text"
+                    				expression='Math.round(Sum("nAddPaymPrem")/Sum(nRenwlBfGrntPrem)*100 * 100) / 100'
+                    				id="temp_id_899" inputType="expression"
+                    				readOnly="true" textAlign="right" userData1="14"
+                    				width="70" />
+                    		</w2:row>
+                    	</w2:footer>
+                    </w2:gridView>
+                </xf:case>
+            </xf:switch>
+        </xf:group>
+    </body>
+</html>

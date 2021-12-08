@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataList id="dataList1" baseNode="list" style="" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="title" name="title" dataType="text"></w2:column>
+						<w2:column id="start" name="start" dataType="text"></w2:column>
+						<w2:column id="end" name="end" dataType="text"></w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<title><![CDATA[이벤트1]]></title>
+							<start><![CDATA[20180701120000]]></start>
+							<end><![CDATA[20180702050000]]></end>
+						</w2:row>
+						<w2:row>
+							<title><![CDATA[이벤트2]]></title>
+							<start><![CDATA[20180707080000]]></start>
+							<end><![CDATA[20180710090000]]></end>
+						</w2:row>
+						<w2:row>
+							<title><![CDATA[이벤트3]]></title>
+							<start><![CDATA[20180709]]></start>
+							<end><![CDATA[20180709]]></end>
+
+
+						</w2:row>
+						<w2:row>
+							<title><![CDATA[이벤트4]]></title>
+							<start><![CDATA[20180712]]></start>
+							<end><![CDATA[20180712]]></end>
+
+
+						</w2:row>
+						<w2:row>
+							<title><![CDATA[이벤트5]]></title>
+							<start><![CDATA[2019013]]></start>
+							<end><![CDATA[20180713]]></end>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>
+		</xf:model>
+		<script type="javascript" lazy="false"><![CDATA[
+
+        scwin.onpageload = function() {
+    		if (!scwin.promise) {
+    			scwin.promise = {};
+    		}
+		};
+        
+        scwin.onpageunload = function() {
+        
+        }; 
+        
+		/**
+		 * 
+		 */
+		scwin.trigger1_onclick = function(e) {
+			var obj = {
+				"id":"test123",
+				"title":"test123",
+				"start":"20190820",
+				"end":"20190821"
+			};
+			schdule1.addSchedule(obj);
+		};
+		
+		/**
+		 * 
+		 */
+		scwin.trigger2_onclick = function(e) {
+			schdule1.removeschedule("test123");
+		};
+		
+		/**
+		 * 
+		 */
+		scwin.trigger3_onclick = function(e) {
+			/*headerLeftBtn 왼쪽 위 (오늘)
+			headerRightBtn:false 오른쪽 위(주일월)
+			headerTitle:true 년월 */
+			var opt = {headerLeftBtn:true, headerRightBtn:false, headerTitle:true };
+			schdule1.setHeaderBtn(opt);
+		};
+		
+		/**
+		 * 
+		 */
+		scwin.trigger4_onclick = function(e) {
+			var opt = {
+				"sun" : {
+					"header" : {
+						"color" : "#ff0000"
+					},
+					"body" : {
+						"background-color":"#ff0000", "opacity" : "0.2"
+					},
+					"num" : {
+						"color" : "#ff0000"
+					}
+				}, "sat" : {
+					"header" : {
+						"color" : "#0000ff"
+					},
+					"body" : {
+						"background-color":"#ff0000", "opacity" : "0.2"
+					},
+					"num" : {
+						"color" : "#ff0000"
+					}
+				}
+			};
+			schdule1.setDayNameStyle(opt);
+		};
+		//schdule1.setHeaderBtn({headerLeftBtn:false,headerRightBtn:false,headerTitle:false});
+		
+	scwin.schdule1_onclick = function(retObj) {
+		//debugger;
+	};
+    scwin.schdule1_onheaderbtnclick = function(retObj) {
+        /*
+        * retObj는 오른쪽 상단(월/주/일) 을 클릭했을 때와
+        * 현재 달력모양이 '일'인경우 이전,다음 버튼을 클릭했을 때 발생합니다.
+        * 
+        * 오른쪽 상단 버튼을 클릭했을 때 retObj는 
+        * buttonType, viewType 를 가지며,
+        * 왼쪽 상단 버튼을 클릭했을 때 retObj는
+        * buttonType, date 를 가지고 있습니다.
+        */
+        console.log(retObj);
+        if(retObj) {
+            if(retObj.date) {
+                alert(retObj.buttonType + " " + retObj.date);
+            } else if(retObj.viewType) {
+                alert(retObj.viewType);
+            }
+        }
+    };
+	]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group id="" style="" class="cont_wrap type1">
+			<xf:group class="w2tb tbl_lo" id="" style="width:100%;" tagname="table">
+				<w2:attributes>
+					<w2:summary></w2:summary>
+				</w2:attributes>
+				<xf:group tagname="colgroup">
+					<xf:group style="width:100.00%" tagname="col"></xf:group>
+				</xf:group>
+				<xf:group tagname="tr">
+					<xf:group class="w2tb_td" style="" tagname="td">
+						<xf:group class="grpbox" id="" style="">
+							<xf:group class="stit_01" id="" style="">
+								<w2:textbox id="" label="ScheduleCalendar" style="" tagname="h3"></w2:textbox>
+							</xf:group>
+							<xf:group class="sub_cont" id="" style="">
+								<w2:scheduleCalendar id="schdule1" style="height:360px; width: 800px;" defaultDate="" editable="true" eventLimit="true" version="3.6" defaultView="month"
+									selectable="true" dataList="dataList1" titleColumn="title" startColumn="start" endColumn="end" ev:onclick="scwin.schdule1_onclick" headerLeftBtn="" ev:onheaderbtnclick="scwin.schdule1_onheaderbtnclick" headerRightBtn="">
+								</w2:scheduleCalendar>
+							</xf:group>
+							<xf:group class="btnbox" id="" style="">
+								<xf:group class="lta" id="">
+									<xf:trigger id="trigger1" style="width: 180px;height: 23px;" type="button" ev:onclick="scwin.trigger1_onclick" class="">
+										<xf:label><![CDATA['test123' addSchedule]]></xf:label>
+									</xf:trigger>
+									<xf:trigger id="trigger2" style="width: 180px;height: 23px;" type="button" ev:onclick="scwin.trigger2_onclick" class="">
+										<xf:label><![CDATA['test123' removeSchedule]]></xf:label>
+									</xf:trigger>
+								</xf:group>
+								<xf:group class="rta" id="" style="">
+									<xf:trigger type="button" id="trigger3" style="width: 80px;height: 23px;" ev:onclick="scwin.trigger3_onclick" class="">
+										<xf:label><![CDATA[주/일/월]]></xf:label>
+									</xf:trigger>
+									<xf:trigger ev:onclick="scwin.trigger4_onclick" id="trigger4" style="width: 80px;height: 23px;" type="button" class="">
+										<xf:label><![CDATA[색]]></xf:label>
+									</xf:trigger>
+								</xf:group>
+							</xf:group>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

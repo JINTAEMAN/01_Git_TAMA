@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+            	<w2:dataList baseNode="list" id="Ds_List"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sCustNo"
+            				name="sCustNo" />
+            			<w2:column dataType="text" id="nSeqNo"
+            				name="nSeqNo" />
+            			<w2:column dataType="text" id="sCustType"
+            				name="sCustType" />
+            			<w2:column dataType="text" id="sName"
+            				name="sName" />
+            			<w2:column dataType="text" id="sAdrsType"
+            				name="sAdrsType" />
+            			<w2:column dataType="text" id="sZip1"
+            				name="sZip1" />
+            			<w2:column dataType="text" id="sZip2"
+            				name="sZip2" />
+            			<w2:column dataType="text" id="sAdrs1"
+            				name="sAdrs1" />
+            			<w2:column dataType="text" id="sAdrs2"
+            				name="sAdrs2" />
+            			<w2:column dataType="text" id="sAdrs3"
+            				name="sAdrs3" />
+            			<w2:column dataType="text" id="sAdrsAdd"
+            				name="sAdrsAdd" />
+            			<w2:column dataType="text" id="sAdrsAdd2"
+            				name="sAdrsAdd2" />
+            			<w2:column dataType="text" id="sHomeTel1"
+            				name="sHomeTel1" />
+            			<w2:column dataType="text" id="sHomeTel2"
+            				name="sHomeTel2" />
+            			<w2:column dataType="text" id="sHomeTel3"
+            				name="sHomeTel3" />
+            			<w2:column dataType="text" id="sOfficeTel1"
+            				name="sOfficeTel1" />
+            			<w2:column dataType="text" id="sOfficeTel2"
+            				name="sOfficeTel2" />
+            			<w2:column dataType="text" id="sOfficeTel3"
+            				name="sOfficeTel3" />
+            			<w2:column dataType="text" id="sInnerPhone"
+            				name="sInnerPhone" />
+            			<w2:column dataType="text" id="sCellPhone1"
+            				name="sCellPhone1" />
+            			<w2:column dataType="text" id="sCellPhone2"
+            				name="sCellPhone2" />
+            			<w2:column dataType="text" id="sCellPhone3"
+            				name="sCellPhone3" />
+            			<w2:column dataType="text" id="sClass"
+            				name="sClass" />
+            			<w2:column dataType="text" id="sCorpNo"
+            				name="sCorpNo" />
+            			<w2:column dataType="text" id="sMainCustNo"
+            				name="sMainCustNo" />
+            			<w2:column dataType="text" id="sContactType"
+            				name="sContactType" />
+            			<w2:column dataType="text" id="sContactTime"
+            				name="sContactTime" />
+            			<w2:column dataType="text" id="sJobGroup"
+            				name="sJobGroup" />
+            			<w2:column dataType="text" id="sJobCode"
+            				name="sJobCode" />
+            			<w2:column dataType="text" id="sMarry"
+            				name="sMarry" />
+            			<w2:column dataType="text" id="sReasonCode"
+            				name="sReasonCode" />
+            			<w2:column dataType="text" id="sSource"
+            				name="sSource" />
+            			<w2:column dataType="text" id="sCustAptd"
+            				name="sCustAptd" />
+            			<w2:column dataType="text" id="sContactPath"
+            				name="sContactPath" />
+            			<w2:column dataType="text" id="sActionChar"
+            				name="sActionChar" />
+            			<w2:column dataType="text" id="sVoiceChar"
+            				name="sVoiceChar" />
+            			<w2:column dataType="text" id="sMutualYn"
+            				name="sMutualYn" />
+            			<w2:column dataType="text" id="sMutuFamilyYn"
+            				name="sMutuFamilyYn" />
+            			<w2:column dataType="text" id="sMutualName"
+            				name="sMutualName" />
+            			<w2:column dataType="text" id="sMutualCode"
+            				name="sMutualCode" />
+            			<w2:column dataType="text" id="sMutualZip1"
+            				name="sMutualZip1" />
+            			<w2:column dataType="text" id="sMutualZip2"
+            				name="sMutualZip2" />
+            			<w2:column dataType="text" id="sMutualAdrs1"
+            				name="sMutualAdrs1" />
+            			<w2:column dataType="text" id="sMutualAdrs2"
+            				name="sMutualAdrs2" />
+            			<w2:column dataType="text" id="sMutualAdrs3"
+            				name="sMutualAdrs3" />
+            			<w2:column dataType="text" id="sMutualAdrsAdd"
+            				name="sMutualAdrsAdd" />
+            			<w2:column dataType="text" id="sMutualRel"
+            				name="sMutualRel" />
+            			<w2:column dataType="text" id="sTeachYn"
+            				name="sTeachYn" />
+            			<w2:column dataType="text" id="sTeachFamilyYn"
+            				name="sTeachFamilyYn" />
+            			<w2:column dataType="text" id="sTeachName"
+            				name="sTeachName" />
+            			<w2:column dataType="text" id="sTeachCode"
+            				name="sTeachCode" />
+            			<w2:column dataType="text" id="sTeachZip1"
+            				name="sTeachZip1" />
+            			<w2:column dataType="text" id="sTeachZip2"
+            				name="sTeachZip2" />
+            			<w2:column dataType="text" id="sTeachAdrs1"
+            				name="sTeachAdrs1" />
+            			<w2:column dataType="text" id="sTeachAdrs2"
+            				name="sTeachAdrs2" />
+            			<w2:column dataType="text" id="sTeachAdrs3"
+            				name="sTeachAdrs3" />
+            			<w2:column dataType="text" id="sTeachAdrsAdd"
+            				name="sTeachAdrsAdd" />
+            			<w2:column dataType="text" id="sTeachRel"
+            				name="sTeachRel" />
+            			<w2:column dataType="text" id="sTeachRank"
+            				name="sTeachRank" />
+            			<w2:column dataType="text" id="sTeachGrade"
+            				name="sTeachGrade" />
+            			<w2:column dataType="text" id="sTeachLesson"
+            				name="sTeachLesson" />
+            			<w2:column dataType="text" id="sCreateDate"
+            				name="sCreateDate" />
+            			<w2:column dataType="text" id="sCreateTime"
+            				name="sCreateTime" />
+            			<w2:column dataType="text" id="sCreateID"
+            				name="sCreateID" />
+            			<w2:column dataType="text" id="sInputDate"
+            				name="sInputDate" />
+            			<w2:column dataType="text" id="sInputTime"
+            				name="sInputTime" />
+            			<w2:column dataType="text" id="sUserID"
+            				name="sUserID" />
+            			<w2:column dataType="text" id="sSchoolCode"
+            				name="sSchoolCode" />
+            			<w2:column dataType="text" id="sJobMemo"
+            				name="sJobMemo" />
+            			<w2:column dataType="text" id="sSchoolName"
+            				name="sSchoolName" />
+            			<w2:column dataType="text"
+            				id="sAffiliatedConcern" name="sAffiliatedConcern" />
+            			<w2:column dataType="text" id="sNoticeMsg"
+            				name="sNoticeMsg" />
+            			<w2:column dataType="text" id="sCancelYN"
+            				name="sCancelYN" />
+            			<w2:column dataType="text" id="sLotteGb"
+            				name="sLotteGb" />
+            			<w2:column dataType="text" id="sEventDiv"
+            				name="sEventDiv" />
+            			<w2:column dataType="text" id="sOrganiCode"
+            				name="sOrganiCode" />
+            			<w2:column dataType="text" id="sOrganiName"
+            				name="sOrganiName" />
+            			<w2:column dataType="text" id="sFamJobCode"
+            				name="sFamJobCode" />
+            			<w2:column dataType="text" id="sFamJobGroup"
+            				name="sFamJobGroup" />
+            			<w2:column dataType="text" id="nChangeNo"
+            				name="nChangeNo" />
+            			<w2:column dataType="text" id="sLast"
+            				name="sLast" />
+            			<w2:column dataType="text" id="sFax1"
+            				name="sFax1" />
+            			<w2:column dataType="text" id="sFax2"
+            				name="sFax2" />
+            			<w2:column dataType="text" id="sFax3"
+            				name="sFax3" />
+            			<w2:column dataType="text" id="sEtcType"
+            				name="sEtcType" />
+            			<w2:column dataType="text" id="sEtcTel1"
+            				name="sEtcTel1" />
+            			<w2:column dataType="text" id="sEtcTel2"
+            				name="sEtcTel2" />
+            			<w2:column dataType="text" id="sEtcTel3"
+            				name="sEtcTel3" />
+            			<w2:column dataType="text" id="sEmail1"
+            				name="sEmail1" />
+            			<w2:column dataType="text" id="sEmail2"
+            				name="sEmail2" />
+            			<w2:column dataType="text" id="rowNum"
+            				name="rowNum" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_TotCnt"
+            		repeatNode="map" userData2="//*/vector">
+            		<w2:columnInfo>
+            			<w2:column id="result" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="afterEJBCall" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="currPage" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="totalRows" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="beforeEJBCall" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="data" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="pageSize" name="name7"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_Search"
+            		repeatNode="map" userData2="//*/vector/data/CUSA002">
+            		<w2:columnInfo>
+            			<w2:column id="sCreateID" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSeqNo" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nAddrStdSeq" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOrgZipType" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachRel" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCorpNo" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSource" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSchoolCode" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUserID" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCreateTime" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCUSAC02YN" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nMutualAddrStdSeq" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachAddrMgtNo" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOrganiCode" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nChangeNo" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sClass" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMutuFamilyYn" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachFamilyYn" name="name18"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sZipType" name="name19"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInnerPhone" name="name20"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sJobCode" name="name21"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachRank" name="name22"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sContactTime" name="name23"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sZip2" name="name24"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sContactPath" name="name25"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sFax2" name="name26"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdrsAdd" name="name27"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sFax3" name="name28"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdrsType" name="name29"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMarry" name="name30"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sZip1" name="name31"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sFax1" name="name32"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMutualOrgAddr" name="name33"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMutualRel" name="name34"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachGrade" name="name35"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sJobGroup" name="name36"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAddrMgtNo" name="name37"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name38"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMutualAddrMgtNo" name="name39"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCustNo" name="name40"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachYn" name="name41"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachZipType" name="name42"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachOrgZipCode" name="name43"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sContactType" name="name44"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHomepageUrl" name="name45"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachLesson" name="name46"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMutualCode" name="name47"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachOrgZipType" name="name48"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMutualAdrs1" name="name49"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMutualAdrs2" name="name50"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdrs3" name="name51"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdrs2" name="name52"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCreateDate" name="name53"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMutualName" name="name54"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdrs1" name="name55"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sLast" name="name56"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachZip2" name="name57"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachZip1" name="name58"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMutualOrgZipCode" name="name59"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMutualAdrs3" name="name60"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeTel2" name="name61"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeTel3" name="name62"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMutualZip2" name="name63"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeTel1" name="name64"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSchoolName" name="name65"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRealCustNo" name="name66"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMutualZip1" name="name67"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachAdrsAdd" name="name68"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEtcTel3" name="name69"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEtcTel2" name="name70"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdrsAdd2" name="name71"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMutualZipType" name="name72"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEtcTel1" name="name73"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCustAptd" name="name74"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputTime" name="name75"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sFamJobCode" name="name76"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMutualAdrsAdd" name="name77"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachAdrs1" name="name78"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nTeachAddrStdSeq" name="name79"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachAdrs2" name="name80"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachAdrs3" name="name81"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachOrgAddr" name="name82"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachName" name="name83"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sJobMemo" name="name84"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMutualYn" name="name85"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sActionChar" name="name86"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEtcType" name="name87"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOrganiName" name="name88"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOrgZipCode" name="name89"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHomeTel2" name="name90"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCustType" name="name91"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHomeTel1" name="name92"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOrgAddr" name="name93"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEmail2" name="name94"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEmail1" name="name95"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHomeTel3" name="name96"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMainCustNo" name="name97"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sFamJobGroup" name="name98"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellPhone3" name="name99"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReasonCode" name="name100"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellPhone1" name="name101"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellPhone2" name="name102"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMutualOrgZipType" name="name103"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sVoiceChar" name="name104"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeachCode" name="name105"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sName" name="name106"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="rowNum" name="name107"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_Warning"
+            		repeatNode="map" userData2="//*/WARNING" />
+            	<w2:dataList baseNode="list" repeatNode="map"
+            		id="WARNING" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+ <script src="/cm/js/common.js"/>
+ <script src="/cm/js/val_lib.js"/>
+ <script src="/cm/js/util.js"/>
+ <script src="/cm/js/transSub.js"/>
+ <script src="/cm/js/callService.js"/>
+ <script src="/cm/js/gds.js"/>
+ <script src="/cm/js/wconv.js"/>
+ <script src="/cm/js/convertJs/Global_Script.js"/>
+ <script src="/cm/js/convertJs/comm_Webservice.js"/>
+        <script><![CDATA[
+var CusName;
+var fv_args;
+
+scwin.init = function() {
+	var indata = $w.getParameter("param");
+	try {
+		fv_args = JSON.parse(indata);
+	} catch(e) {}
+	
+	Btn_Search.hide();
+	
+    CusName = fv_args.sName;
+    if (wconv.length(CusName) == 0) {
+        Ed_CusName.focus();
+    } else {
+        Ed_CusName.setValue(CusName);
+        scwin.Btn_Search_OnClick();
+    }
+};
+
+scwin.Ed_CusName_OnKeyDown = function(e){//obj, nChar, bShift, bCtrl, bAlt, LLParam, HLParam) {
+    if (e.keyCode == 13) {
+        scwin.Btn_Search_OnClick();
+    }
+};
+
+scwin.Btn_Search_OnClick = function(e) {
+    if (wconv.length(Ed_CusName.getValue()) < 2) {
+        wprom.alertF("이름을 두자이상 입력을 해주세요",{},Ed_CusName);
+        Ed_CusName.focus();
+        return;
+    }
+
+    scwin.Search("1");
+    St_TotCnt.setValue(DsWs_TotCnt.getCellData(0, "totalRows"));
+    //----- Paging 처리 Start
+    gfn_MakePagingData(Ds_Page, DsWs_TotCnt.getCellData(0, "totalRows"), 10, 10);
+    Cmb_Page.setValue("1"); 
+    //----- End
+};
+scwin.Search = function(pageNo) {
+    wconv.clear(DsWs_TotCnt);
+    wconv.clear(DsWs_Search);
+    wconv.clear(DsWs_Warning);
+	/*orign 
+    SOBJ_Search.WSDL = gds.gWsdlCustomer;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Search, "CustTask", "searchCustInfo", "10", pageNo);
+    gfn_SetParam(MethodObj, "sName", Ed_CusName.getValue());
+    gfn_CallService(SOBJ_Search, DOBJ_Search, MethodObj);
+	*/
+	var MethodObj = new callService("com.inswave.customer.task.CustTask", "searchCustInfo", "10", pageNo);
+	MethodObj.setId("searchCustInfo");
+	MethodObj.setParam("sName", Ed_CusName.getValue());
+	MethodObj.setUrl("/common/CBSO043PController.do");
+	MethodObj.setXPath("//*/vector/data/CUSA002");
+	MethodObj.addXPath("//*/vector");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+
+	util.interfaceKey(_tranSync.result.serviceDs);
+	DsWs_Search.setJSON (_tranSync.getDsJson("CUSA002")); // dataset 데이터 	
+	DsWs_TotCnt.setJSON (_tranSync.getDsJson("vector")); // dataset 데이터 	
+
+    //trace(MethodObj.in0);
+    //trace(replace(gfn_XmlEncoder(DOBJ_Search.Contents), "><", ">\n<"));	
+    //wconv.trace(wconv.saveXml(DsWs_Search));
+    //trace(DsWs_TotCnt.SaveXML());
+    if (WARNING.getRowCount() != 0) {
+        Ed_CusName.focus();
+        wprom.alert(WARNING.getCellData(0, "msg"));
+        return;
+    }
+    if (DsWs_Search.getRowCount() == 0) {
+        Ed_CusName.focus();
+        wprom.alert("찾으시는 고객이 없습니다.");
+    }
+    for (var i = 0; i < DsWs_Search.getRowCount(); i++) {
+        DsWs_Search.setCellData(i, "rowNum", wconv.toString((((wconv.toNumber(pageNo) - 1)) * 10) + i + 1));
+   }
+    Ds_List.removeAll();
+    wconv.copy(Ds_List, "DsWs_Search");
+    //Grd_List.hide();
+    //Grd_List.BindDataset = "Ds_List";
+    //Ds_List.row = 0;
+    //Grd_List.show();
+};
+
+scwin.Cmb_Page_OnChanged = function(info){//obj, strCode, strText, nOldIndex, nNewIndex) {
+    scwin.Search(info.newValue);
+};
+
+scwin.Btn_PreV_OnClick = function(e) {
+    var ftVal = wconv.toNumber(Ds_Page.getCellData(Ds_Page.getRowPosition(), "FILTERCD")) - 1;
+    if (wconv.toNumber(maxFilterVal) < wconv.toNumber(ftVal))
+        return;
+    else if (wconv.toNumber(ftVal) < 1)
+        return;
+    wconv.filter(Ds_Page, "FILTERCD=='" + ftVal + "'",true);
+    Cmb_Page.setValue(Ds_Page.getCellData(0, "CODE"));
+    scwin.Search(Cmb_Page.getValue());
+};
+
+scwin.Btn_Pre_OnClick = function(e) {
+    var Idx = Cmb_Page.getValue();
+    if (wconv.toNumber(Idx) - 1 < 1)
+        return;
+    scwin.Search(wconv.toString(wconv.toNumber(Idx) - 1));
+    if (Ds_Page.getCellData(0, "CODE") == Idx) {
+        wconv.filter(Ds_Page, "FILTERCD=='" + wconv.toString(wconv.toNumber(Ds_Page.getCellData(0, "FILTERCD")) - 1) + "'",true);
+        Cmb_Page.setValue(Ds_Page.getCellData(Ds_Page.getTotalRow(), "CODE"));
+        /*수작업 변환 가이드 (getTotalRow)
+            필터 적용이 되어있는 row의 건수는 getRowCount API를 사용합니다.*/
+    } else
+        Cmb_Page.setValue(wconv.toNumber(Idx) - 1);
+};
+
+scwin.Btn_Next_OnClick = function(e) {
+    var Idx = Cmb_Page.getValue();
+    if (wconv.toNumber(maxPage) < wconv.toNumber(Idx) + 1)
+        return;
+    scwin.Search(wconv.toString(wconv.toNumber(Idx) + 1));
+    if (Ds_Page.getCellData(Ds_Page.getTotalRow(), "CODE") == Idx
+    ) {
+        wconv.filter(Ds_Page, "FILTERCD=='" + wconv.toString(wconv.toNumber(Ds_Page.getCellData(Ds_Page.getTotalRow(), "FILTERCD")) + 1 ) + "'",true);
+    }
+    Cmb_Page.setValue(wconv.toNumber(Idx) + 1);
+};
+
+scwin.Btn_NextV_OnClick = function(e) {
+    var ftVal = wconv.toNumber(Ds_Page.getCellData(Ds_Page.getRowPosition(), "FILTERCD")) + 1;
+    if (wconv.toNumber(maxFilterVal) < wconv.toNumber(ftVal))
+        return;
+    wconv.filter(Ds_Page, "FILTERCD=='" + ftVal + "'",true);
+    Cmb_Page.setValue(Ds_Page.getCellData(0, "CODE"));
+    scwin.Search(Cmb_Page.getValue());
+};
+
+scwin.Btn_Close_OnClick = function(e) {
+    wprom.close("");
+};
+
+scwin.Grd_List_OnCellClick = function(row,col){
+    wprom.close(Ds_List.getCellData(row, "sCustNo"));
+};
+//expression
+scwin.fn_exprHomeTel = function(data, formattedData, rowIndex, colIndex) {
+	var sHomeTel1 = DsWs_Search.getCellData( rowIndex , "sHomeTel1" );
+	var sHomeTel2 = DsWs_Search.getCellData( rowIndex , "sHomeTel2" );
+	var sHomeTel3 = DsWs_Search.getCellData( rowIndex , "sHomeTel3" );
+	return sHomeTel1+"-"+sHomeTel2+"-"+sHomeTel3;
+};	
+scwin.fn_exprOfficeTel = function(data, formattedData, rowIndex, colIndex) {
+	var sOfficeTel1 = DsWs_Search.getCellData( rowIndex , "sOfficeTel1" );
+	var sOfficeTel2 = DsWs_Search.getCellData( rowIndex , "sOfficeTel2" );
+	var sOfficeTel3 = DsWs_Search.getCellData( rowIndex , "sOfficeTel3" );
+	return sOfficeTel1+"-"+sOfficeTel2+"-"+sOfficeTel3;
+};
+scwin.fn_exprCellPhoneTel = function(data, formattedData, rowIndex, colIndex) {
+	var sCellPhone1 = DsWs_Search.getCellData( rowIndex , "sCellPhone1" );
+	var sCellPhone2 = DsWs_Search.getCellData( rowIndex , "sCellPhone2" );
+	var sCellPhone3 = DsWs_Search.getCellData( rowIndex , "sCellPhone3" );
+	return sCellPhone1+"-"+sCellPhone2+"-"+sCellPhone3;
+};
+
+scwin.fn_exprAddr = function(data, formattedData, rowIndex, colIndex) {
+	var sZip1 = DsWs_Search.getCellData( rowIndex , "sZip1" );
+	var sZip2 = DsWs_Search.getCellData( rowIndex , "sZip2" );
+	var sAdrs1 = DsWs_Search.getCellData( rowIndex , "sAdrs1" );
+	var sAdrs2 = DsWs_Search.getCellData( rowIndex , "sAdrs2" );
+	var sAdrs3 = DsWs_Search.getCellData( rowIndex , "sAdrs3" );
+	var sAdrsAdd = DsWs_Search.getCellData( rowIndex , "sAdrsAdd" );
+	var sAdrsAdd2 = DsWs_Search.getCellData( rowIndex , "sAdrsAdd2" );
+	return sZip1+"-"+sZip2+ "  "+sAdrs1+" "+sAdrs2+" "+sAdrs3+" "+sAdrsAdd+" "+sAdrsAdd2;
+};
+
+	]]></script>
+    </head>
+    <body>
+    	<xf:group class="cont_wrap layer" id="3701"
+    		style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;"
+    		userData1="고객검색[3701]"
+    		userData2=" OnLoadCompleted:scwin.OnLoad; ">
+    		<DataObjects>
+    			<DataObject />
+    		</DataObjects>
+    		<ServiceObjects>
+    			<ServiceObject />
+    		</ServiceObjects>
+    		<xf:group arcsize="6" class="search_area" id="Shape9"
+    			style="left:0px;top:30px;width:710px;" userData3="RoundRect">
+    		<w2:anchor class="btn_search" disabled="" id="Btn_Search1" outerDiv="false" style="" tabIndex="7" ev:onclick="scwin.Btn_Search_OnClick">
+    		<xf:label><![CDATA[조회]]></xf:label>
+    	</w2:anchor></xf:group>
+    		<w2:textbox id="Static5" label="고객검색"
+    			style="position:absolute; VAlign:Middle;  height:22px; left:0px; top:0px; width:253px;"
+    			tagname="" class="sub_pop_title01" />
+    		<xf:trigger class="popup_top_btn"
+    			ev:onclick="scwin.Btn_Close_OnClick" id="Btn_Close"
+    			style="position:absolute; ImageID:btn_Comm_Close;  height:20px;left:646px;top:0px;"
+    			tabIndex="2" type="anchor">
+    			<xf:label><![CDATA[닫기]]></xf:label>
+    		</xf:trigger>
+    		<w2:textbox class="sty_lb_Search" id="Static0" label="고객명"
+    			style="position:absolute; VAlign:Middle; height:20px;left:10px;top:39px; width:56px;"
+    			tagname="" />
+    		<xf:input class="sty_ipt_search"
+    			ev:onblur="scwin.Ed_CusName_OnKeyDown" id="Ed_CusName"
+    			style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:71px;top:38px; width:110px;"
+    			tabIndex="1" />
+    		<w2:textbox id="Static19" label="총 건수 :"
+    			style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:-1px;top:83px; width:50px;"
+    			tagname="" />
+    		<w2:textbox id="Static4" label="건"
+    			style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:77px;top:83px; width:10px;"
+    			tagname="" />
+    		<w2:textbox id="St_TotCnt"
+    			style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:51px;top:83px; width:22px;"
+    			tagname="" />
+    		<xf:switch id="switch_48" style=" ">
+    			<xf:case id="Default_49" style="height:625px;">
+    				<w2:gridView ignoreCellClick="false"
+    					summaryAuto="false" ignoreToggleOnDisabled="false"
+    					summaryOnlyAuto="false" useFilterList="false"
+    					fixedColumnWithHidden="true" scrollByColumnAdaptive="false"
+    					dataList="DsWs_Search" id="Grd_List"
+    					style="position: relative;width:712px;height:529px;left:0px;top:87px;margin-top:20px;margin-left:0px;"
+    					useShiftKey="true" scrollByColumn="false"
+    					showSortableUseFilter="false" class="sty_Grid"
+    					autoFit="allColumn" autoFitMinWidth="100" ev:oncellclick="scwin.Grd_List_OnCellClick">
+    					<w2:caption id="caption1" style=""
+    						value="this is a grid caption.">
+    					</w2:caption>
+    					<w2:header id="header1" style="">
+    						<w2:row id="row1" style="">
+    							<w2:column id="column13"
+    								blockSelect="false" style="height:15px;" width="70"
+    								inputType="text" value="No" displayMode="label"
+    								rowSpan="2">
+    							</w2:column>
+    							<w2:column id="column11"
+    								blockSelect="false" style="height:15px;" width="110"
+    								inputType="text" value="고객코드" displayMode="label"
+    								rowSpan="2">
+    							</w2:column>
+    							<w2:column id="column9"
+    								blockSelect="false" style="height:15px;" width="70"
+    								inputType="text" value="고객명" displayMode="label"
+    								rowSpan="2">
+    							</w2:column>
+    							<w2:column id="column7"
+    								blockSelect="false" style="height:15px;" width="140"
+    								inputType="text" value="주소" displayMode="label"
+    								colSpan="3">
+    							</w2:column>
+    						</w2:row>
+    						<w2:row id="row3" style="">
+    							<w2:column id="column18"
+    								blockSelect="false" style="height:15px;" inputType="text"
+    								width="140" displayMode="label" value="자택전화번호">
+    							</w2:column>
+    							<w2:column blockSelect="false"
+    								id="column23" style="height:15px;" inputType="text"
+    								width="140" displayMode="label" value="직장전화번호">
+    							</w2:column>
+    							<w2:column blockSelect="false"
+    								id="column20" style="height:15px;" inputType="text"
+    								width="140" displayMode="label" colSpan="1" value="H.P">
+    							</w2:column>
+    						</w2:row>
+    					</w2:header>
+    					<w2:gBody id="gBody1" style="">
+    						<w2:row id="row2" style="">
+    							<w2:column id="rowNum"
+    								blockSelect="false" style="height:30px;" width="70"
+    								inputType="text" displayMode="label" rowSpan="2">
+    							</w2:column>
+    							<w2:column id="sCustNo"
+    								blockSelect="false" style="height:30px;" width="110"
+    								inputType="link" displayMode="label" rowSpan="2">
+    							</w2:column>
+    							<w2:column id="sName"
+    								blockSelect="false" style="height:30px;" width="70"
+    								inputType="text" displayMode="label" rowSpan="2">
+    							</w2:column>
+    							<w2:column id="temp_id_377"
+    								blockSelect="false" style="height:15px;" width="140"
+    								inputType="expression" displayMode="label" colSpan="3"
+    								customFormatter="scwin.fn_exprAddr">
+    							</w2:column>
+    						</w2:row>
+    						<w2:row style="" id="row4">
+    							<w2:column width="140"
+    								inputType="expression" style="height:15px;" id="column29"
+    								blockSelect="false" displayMode="label"
+    								customFormatter="scwin.fn_exprHomeTel">
+    							</w2:column>
+    							<w2:column width="140"
+    								inputType="expression" style="height:15px;" id="column28"
+    								blockSelect="false" displayMode="label"
+    								customFormatter="scwin.fn_exprOfficeTel">
+    							</w2:column>
+    							<w2:column width="140"
+    								inputType="expression" style="height:15px;" id="column26"
+    								blockSelect="false" displayMode="label"
+    								customFormatter="scwin.fn_exprCellPhoneTel">
+    							</w2:column>
+    						</w2:row>
+    					</w2:gBody>
+    				</w2:gridView>
+    			</xf:case>
+    		</xf:switch>
+    		<xf:trigger class="popup_top_btn"
+    			ev:onclick="scwin.Btn_Search_OnClick" id="Btn_Search"
+    			style="position:absolute; ImageID:btn_Comm_Search;left:583px;top:0px;"
+    			tabIndex="12" type="anchor">
+    			<xf:label><![CDATA[조회]]></xf:label>
+    		</xf:trigger>
+    		<w2:wframe id="div1" scope="false"
+    			src="/cm/common/Main_btn_GridControl.xml"
+    			style="position:absolute; height:20px;left:452px;top:73px; width:219px;" />
+
+    	</xf:group>
+    	
+    </body>
+</html>

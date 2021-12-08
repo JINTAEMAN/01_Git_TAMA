@@ -1,0 +1,1377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    <!-- 
+        ###################################################
+         파일명 : CBSC050P.xml
+         프로그램명 : 명기가재등록[B670_Pop]
+         설 명 :  명기가재등록[B670_Pop] 화면
+         작성자 : 이경일
+         작성일 : 2017.09.30
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.09.30        이경일          최초작성
+        ###################################################
+     -->
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="Ds_LTIDA62" repeatNode="map" ev:oncelldatachange="scwin.Ds_LTIDA62_celldatachange" ev:onrowpositionchange="scwin.Ds_LTIDA62_onrowpositionchange">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sPlanNo" name="sPlanNo"/>
+                        <w2:column dataType="text" id="nInsrdObjctSeqno" name="nInsrdObjctSeqno"/>
+                        <w2:column dataType="text" id="nSwHsHldGdsSeqno" name="nSwHsHldGdsSeqno"/>
+                        <w2:column dataType="text" id="nCrChngNo" name="nCrChngNo"/>
+                        <w2:column dataType="text" id="sSwHsHldGdsFlagCd" name="sSwHsHldGdsFlagCd"/>
+                        <w2:column dataType="text" id="sSwHsHldGdsItemNm" name="sSwHsHldGdsItemNm"/>
+                        <w2:column dataType="text" id="sSwHsHldGdsStdd" name="sSwHsHldGdsStdd"/>
+                        <w2:column dataType="text" id="nSwHsHldGdsQant" name="nSwHsHldGdsQant"/>
+                        <w2:column dataType="text" id="sProdCmpn" name="sProdCmpn"/>
+                        <w2:column dataType="text" id="sPurcYm" name="sPurcYm"/>
+                        <w2:column dataType="text" id="nInsurVlamt" name="nInsurVlamt"/>
+                        <w2:column dataType="text" id="sInptDler" name="sInptDler"/>
+                        <w2:column dataType="text" id="sInptDlerIP" name="sInptDlerIP"/>
+                        <w2:column dataType="text" id="sInptDate" name="sInptDate"/>
+                        <w2:column dataType="text" id="sInptHms" name="sInptHms"/>
+                        <w2:column dataType="text" id="sMdfcDler" name="sMdfcDler"/>
+                        <w2:column dataType="text" id="sMdfcDlerIP" name="sMdfcDlerIP"/>
+                        <w2:column dataType="text" id="sMdfcDate" name="sMdfcDate"/>
+                        <w2:column dataType="text" id="sMdfcHms" name="sMdfcHms"/>
+                        <w2:column dataType="text" id="sPsnPrptFlgCd" name="sPsnPrptFlgCd"/>
+                        <w2:column dataType="text" id="sCheckSel" name="sCheckSel" valueType="" defaultValue=""/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_LTIDA62Tran" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sPlanNo" name="sPlanNo"/>
+                        <w2:column dataType="text" id="nInsrdObjctSeqno" name="nInsrdObjctSeqno"/>
+                        <w2:column dataType="text" id="nSwHsHldGdsSeqno" name="nSwHsHldGdsSeqno"/>
+                        <w2:column dataType="text" id="nCrChngNo" name="nCrChngNo"/>
+                        <w2:column dataType="text" id="sSwHsHldGdsFlagCd" name="sSwHsHldGdsFlagCd"/>
+                        <w2:column dataType="text" id="sSwHsHldGdsItemNm" name="sSwHsHldGdsItemNm"/>
+                        <w2:column dataType="text" id="sSwHsHldGdsStdd" name="sSwHsHldGdsStdd"/>
+                        <w2:column dataType="text" id="nSwHsHldGdsQant" name="nSwHsHldGdsQant"/>
+                        <w2:column dataType="text" id="sProdCmpn" name="sProdCmpn"/>
+                        <w2:column dataType="text" id="sPurcYm" name="sPurcYm"/>
+                        <w2:column dataType="text" id="nInsurVlamt" name="nInsurVlamt"/>
+                        <w2:column dataType="text" id="sInptDler" name="sInptDler"/>
+                        <w2:column dataType="text" id="sInptDlerIP" name="sInptDlerIP"/>
+                        <w2:column dataType="text" id="sInptDate" name="sInptDate"/>
+                        <w2:column dataType="text" id="sInptHms" name="sInptHms"/>
+                        <w2:column dataType="text" id="sMdfcDler" name="sMdfcDler"/>
+                        <w2:column dataType="text" id="sMdfcDlerIP" name="sMdfcDlerIP"/>
+                        <w2:column dataType="text" id="sMdfcDate" name="sMdfcDate"/>
+                        <w2:column dataType="text" id="sMdfcHms" name="sMdfcHms"/>
+                        <w2:column dataType="text" id="sPsnPrptFlgCd" name="sPsnPrptFlgCd"/>
+                        <w2:column dataType="text" id="execFlag" name="execFlag"/>
+                        <w2:column dataType="text" id="sCheckSel" name="sCheckSel"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_LTIDA62TranReq" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sPlanNo" name="sPlanNo"/>
+                        <w2:column dataType="text" id="nInsrdObjctSeqno" name="nInsrdObjctSeqno"/>
+                        <w2:column dataType="text" id="sPsnPrptFlgCd" name="sPsnPrptFlgCd"/>
+                        <w2:column dataType="text" id="nCrChngNo" name="nCrChngNo"/>
+                        <w2:column dataType="text" id="gUserID" name="gUserID"/>
+                        <w2:column dataType="text" id="gUserIP" name="gUserIP"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_LTIEA62" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCrNo" name="sCrNo"/>
+                        <w2:column dataType="text" id="nInsrdObjctSeqno" name="nInsrdObjctSeqno"/>
+                        <w2:column dataType="text" id="nSwHsHldGdsSeqno" name="nSwHsHldGdsSeqno"/>
+                        <w2:column dataType="text" id="nCrChngNo" name="nCrChngNo"/>
+                        <w2:column dataType="text" id="sSwHsHldGdsFlagCd" name="sSwHsHldGdsFlagCd"/>
+                        <w2:column dataType="text" id="sSwHsHldGdsItemNm" name="sSwHsHldGdsItemNm"/>
+                        <w2:column dataType="text" id="sSwHsHldGdsStdd" name="sSwHsHldGdsStdd"/>
+                        <w2:column dataType="text" id="nSwHsHldGdsQant" name="nSwHsHldGdsQant"/>
+                        <w2:column dataType="text" id="sProdCmpn" name="sProdCmpn"/>
+                        <w2:column dataType="text" id="sPurcYm" name="sPurcYm"/>
+                        <w2:column dataType="text" id="nInsurVlamt" name="nInsurVlamt"/>
+                        <w2:column dataType="text" id="sInptDler" name="sInptDler"/>
+                        <w2:column dataType="text" id="sInptDlerIP" name="sInptDlerIP"/>
+                        <w2:column dataType="text" id="sInptDate" name="sInptDate"/>
+                        <w2:column dataType="text" id="sInptHms" name="sInptHms"/>
+                        <w2:column dataType="text" id="sMdfcDler" name="sMdfcDler"/>
+                        <w2:column dataType="text" id="sMdfcDlerIP" name="sMdfcDlerIP"/>
+                        <w2:column dataType="text" id="sMdfcDate" name="sMdfcDate"/>
+                        <w2:column dataType="text" id="sMdfcHms" name="sMdfcHms"/>
+                        <w2:column dataType="text" id="sPsnPrptFlgCd" name="sPsnPrptFlgCd"/>
+                        <w2:column dataType="text" id="sCheckSel" name="sCheckSel"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_LTIEA62Tran" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCrNo" name="sCrNo"/>
+                        <w2:column dataType="text" id="nInsrdObjctSeqno" name="nInsrdObjctSeqno"/>
+                        <w2:column dataType="text" id="nSwHsHldGdsSeqno" name="nSwHsHldGdsSeqno"/>
+                        <w2:column dataType="text" id="nCrChngNo" name="nCrChngNo"/>
+                        <w2:column dataType="text" id="sSwHsHldGdsFlagCd" name="sSwHsHldGdsFlagCd"/>
+                        <w2:column dataType="text" id="sSwHsHldGdsItemNm" name="sSwHsHldGdsItemNm"/>
+                        <w2:column dataType="text" id="sSwHsHldGdsStdd" name="sSwHsHldGdsStdd"/>
+                        <w2:column dataType="text" id="nSwHsHldGdsQant" name="nSwHsHldGdsQant"/>
+                        <w2:column dataType="text" id="sProdCmpn" name="sProdCmpn"/>
+                        <w2:column dataType="text" id="sPurcYm" name="sPurcYm"/>
+                        <w2:column dataType="text" id="nInsurVlamt" name="nInsurVlamt"/>
+                        <w2:column dataType="text" id="sInptDler" name="sInptDler"/>
+                        <w2:column dataType="text" id="sInptDlerIP" name="sInptDlerIP"/>
+                        <w2:column dataType="text" id="sInptDate" name="sInptDate"/>
+                        <w2:column dataType="text" id="sInptHms" name="sInptHms"/>
+                        <w2:column dataType="text" id="sMdfcDler" name="sMdfcDler"/>
+                        <w2:column dataType="text" id="sMdfcDlerIP" name="sMdfcDlerIP"/>
+                        <w2:column dataType="text" id="sMdfcDate" name="sMdfcDate"/>
+                        <w2:column dataType="text" id="sMdfcHms" name="sMdfcHms"/>
+                        <w2:column dataType="text" id="sPsnPrptFlgCd" name="sPsnPrptFlgCd"/>
+                        <w2:column dataType="text" id="execFlag" name="execFlag"/>
+                        <w2:column dataType="text" id="sCheckSel" name="sCheckSel"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_LTIEA62TranReq" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCrNo" name="sCrNo"/>
+                        <w2:column dataType="text" id="nInsrdObjctSeqno" name="nInsrdObjctSeqno"/>
+                        <w2:column dataType="text" id="sPsnPrptFlgCd" name="sPsnPrptFlgCd"/>
+                        <w2:column dataType="text" id="gUserID" name="gUserID"/>
+                        <w2:column dataType="text" id="gUserIP" name="gUserIP"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_LTIDA62" repeatNode="map" userData2="//hashtable/data[@hashkey='lTIDA62ListDoc']/vector/data/LTIDA62"/>
+                <w2:dataList baseNode="list" id="DsWs_Wanning" repeatNode="map" userData2="//*/WARNING"/>
+                <w2:dataList baseNode="list" id="DsWs_SwHsHldGdsFlagCd"
+                	repeatNode="map"
+                	userData2="//hashtable/data[@hashkey='com_SwHsHldGdsFlagCd']/vector/data/com_SwHsHldGdsFlagCd" ev:oncelldatachange="">
+                	<w2:columnInfo>
+                		<w2:column id="sCd" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sHnglCdName" name="name2"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_LTIEA62" repeatNode="map" userData2="//hashtable/data[@hashkey='lTIEA62ListDoc']/vector/data/LTIEA62"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/>
+		<script src="/cm/js/convertJs/Marine_Script.js"/>
+		<script src="/cm/js/convertJs/LongTerm_Script.js"/>
+        <script><![CDATA[
+/*■■■■■■■■■■■■■■■■■■■■■스크립트 변환 결과■■■■■■■■■■■■■■■■■■■■■
+※본 주석은 수작업 변환 참고용입니다. ★개발완료 후에는 필히 삭제해주세요.★
+변환시간:  Fri Sep 01 2017 14:10:28 GMT+0900 (대한민국 표준시)
+파일ID:  B670_Pop.xml
+
+아래의 작업을 먼저 해주세요.
+
+
+1. scwin.init() 함수에 아래의 글로벌 데이터리스트를 선언합니다.
+--> 해당 화면에는 추가할 글로벌 변수가 없습니다. 
+
+2. 공통.JS 파일을 include해주세요.
+</xf:model>
+ ***include 위치(하단에 주석처리 되어 있습니다.)***
+<script><![CDATA[
+
+예시)
+</xf:model>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script><![CDATA[
+
+3. 표준에 어긋난 코딩인 경우 ✖ 으로 return 되어 있습니다. 검색으로 ✖이 나온다면 ASIS 소스를 확인해주세요.
+ex) ASIS if(a = 1 and b = 2) {} ------> TOBE if (✖ = 2) {}
+
+4. dialog함수로 팝업을 호출 할 경우에는 실제 파일이 있는 경로로 변경해주세요
+ex) 현재 PROJECT_PATH_TEMP입니다. 
+
+-호출구조-
+
+호출구조는 모든 화면이 아닌 변환대상화면을 기준으로 분석하였습니다.
+선언하지 않은 변수를 사용중이라면 caller 에서 넘겼을 가능성이 높습니다.
+파일 ID는 소스의 form ID로 가정했습니다. 아래의 결과는 따로 확인해주세요.
+B670_Pop.xml에서 호출 (callee ID):  
+B670_Pop.xml을 호출   (caller ID):  D020,O210_Div2
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+/****************************************************************************
+ * 프로그램번호   : B670
+ * 프로그램명     : 명기가재등록
+ * 파일명         : B670_Pop.xml
+ * 프로그램 내용  : 명기가재등록
+ * 관련 프로그램  : 
+ * 작성자         : 백현재
+ * 작성일         : 2010-10-12
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+//var sPlanNo = "N20130007348";//설계번호
+//var nInsrdObjctSeqno = "1";//피보험목적물일련번호
+var sNo;// 설계/계약번호
+var sGb;// 설계/계약구분 
+var nSeq;// 피보험목적물순번
+var sFlgCd = "";// 인,물 구분코드
+var nCrChngNo;// 변경순번
+var applyEnable;
+var parentWin;
+var sGolfYn = "";
+// 변경순번
+//---------------------------------------------------------------------------
+// function 명 : B670_OnLoadCompleted
+// 내용        : 화면로딩시 메인으로부터 파라메터값 담음
+//---------------------------------------------------------------------------
+scwin.init = function() {
+
+var pro = Promise.resolve();
+
+window.top.util.winTopShowModalChk = "T";
+util.winTopShowModal();
+
+pro = pro.then(function(rv) {
+	return util.winTopShowModalPromise();
+});
+
+pro = pro.then(function(rv) {
+
+	var inJson;
+	var indata = $w.getParameter("param");
+	inJson = JSON.parse(indata);
+	if (typeof inJson != "object") return;
+	sNo        = util.nvl(inJson.sNo,"");
+	sGb        = util.nvl(inJson.sGb,"");
+	nSeq       = util.nvl(inJson.nSeq,"");
+	sFlgCd     = util.nvl(inJson.sFlgCd,"");
+	nCrChngNo  = util.nvl(inJson.nCrChngNo,"");
+	applyEnable = util.nvl(inJson.applyEnable,"");
+	//Ds_Trty
+	parentWin = wprom.getParamObject();
+
+	//2014.05.27
+    if (applyEnable != "Y") {
+        Button0.setDisabled(true);
+        Button1.setDisabled(true);
+        Button2.setDisabled(true);
+        btn_save.setDisabled(true);
+    } else {
+        Button0.setDisabled(false);
+        Button1.setDisabled(false);
+        Button2.setDisabled(false);
+        btn_save.setDisabled(false);
+    }
+
+    //화면초기화
+    scwin.lfn_init();
+
+    // 조회
+    scwin.lfn_Search();
+    
+});
+
+pro = pro.then(function(rv) {
+	util.winTopHideModal();
+});
+
+return pro;
+
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_init()
+// 내용        : 화면초기화
+//---------------------------------------------------------------------------
+scwin.lfn_init = function() {
+    //공통코드dataset에 코드가 없으면 조회해 온다.
+    if (DsWs_SwHsHldGdsFlagCd.getRowCount() == 0) {
+        gfn_getCommonCodes("DsWs_SwHsHldGdsFlagCd", "SwHsHldGdsFlagCd", "", "");
+    }
+
+    //2014.08.29 (N1408-00279)
+    //명기가재의 목적물 구분(인/물)
+    var nPrprtFindRow = wconv.findRow(parentWin.Ds_Prprt, "sel1", "1");
+
+    //설계화면과 계약화면에서 넘어올경우 피보험자의 객체명이 상이함
+    var nPiboFindRow = -1;
+    if (sGb == "1") {
+        nPiboFindRow = wconv.findRow(parentWin.Ds_Pibo, "sel", "1");
+        if (nPiboFindRow != -1 && nPiboFindRow != null) {
+            nSeq = parentWin.Ds_Pibo.getCellData(nPiboFindRow, "nInrpsSeqno");
+        }
+    }
+    if (sGb == "2") {
+        nPiboFindRow = wconv.findRow(parentWin.Ds_PiboList, "sel", "1");
+        if (nPiboFindRow != -1 && nPiboFindRow != null) {
+            nSeq = parentWin.Ds_PiboList.getCellData(nPiboFindRow, "nInrpsSeqno");
+        }
+    }
+    if (nPrprtFindRow != -1 && nPrprtFindRow != null) {
+        sFlgCd = "2"; //물담보를 선택하고 왔으면 물(2)로 세팅
+        //2015.08.13(N1506-00250)
+        nSeq = wconv.toNumber(parentWin.Ds_Prprt.getCellData(nPrprtFindRow, "nInsrdObjctSeqno"));
+        if (nSeq == 0) {
+            nSeq = wconv.toNumber(nPrprtFindRow) + 1;
+        }
+    }
+    if (nPiboFindRow != -1 && nPiboFindRow != null) {
+        sFlgCd = "1"; //인담보를 선택하고 왔으면 인(1)로 세팅
+    }
+    //scwin.lfn_Search();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 명기가재설계 조회
+//---------------------------------------------------------------------------
+//비동기호출 
+scwin.lfn_Search = function() {
+	util.eventAsyncCall(this, scwin.lfn_Search_sync, arguments);
+};
+
+scwin.lfn_Search_sync = function() {
+    //데이터셋 초기화
+    //2015.08.17(N1506-00250)
+    if (wconv.toNumber(nSeq) == 0) {
+        wprom.alert("명기가재 입력(조회)을 위한 해당 목적물의 정보가 없습니다. 설계사항을 재 조회한 후 처리하시기 바랍니다.");
+        return false;
+    }
+    wconv.clear(DsWs_LTIDA62);
+    wconv.clear(Ds_LTIDA62);
+    var transObj
+    if (wconv.trim(sGb) == "1") //설계화면에서 오픈될때
+    	transObj = new callService("com.inswave.longterm.ssr.pln.task.DBB670Task", "getLtida62List", "", "");
+    else
+    	transObj = new callService("com.inswave.longterm.ssr.pln.task.DBB670Task", "getLtiea62List", "", "");
+	transObj.setUrl("/contract/CBSC050PController.do");
+	transObj.setId("getLtida62List");
+	transObj.setParam("sPlanNo", wconv.trim(sNo)); // 설계/계약 번호
+	transObj.setParam("sGb", wconv.trim(sGb)); // 설계/계약 구분
+	transObj.setParam("sPsnPrptFlgCd", wconv.trim(sFlgCd)); // 인,물 구분 (명기가재가 인담보인지,물담보인지 구분하는 코드 1(인),2(물)
+	transObj.setParam("nInsrdObjctSeqno", wconv.trim(nSeq)); // 피보험물목적물순번
+	transObj.setXPath("//hashtable/data[@hashkey='lTIDA62ListDoc']/vector/data/LTIDA62");
+	transObj.addXPath("//*/WARNING");
+	//transObj.callBack("scwin.subCallBackfunction");
+	transObj.sync();
+	transObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Wanning");
+	if (wconv.length(DsWs_Wanning.getCellData(0, "msg")) > 0) {
+        wprom.alert(DsWs_Wanning.getCellData(0, "msg"));
+    } else {
+    	util.jSonDsCreate(_tranSync.getDsJson("LTIDA62"), "DsWs_LTIDA62");
+    	if (DsWs_LTIDA62.getRowCount() != 0) {
+    		util.jSonDsCreate(_tranSync.getDsJson("LTIDA62"), "Ds_LTIDA62");
+    		util.setCompBindRefresh("Ds_LTIDA62");
+			util.setRowPosition(Ds_LTIDA62, 0);
+			//parentWin.sGolfYn = "Y"; //명기가재 등록여부
+			sGolfYn = "Y";
+		}
+    }
+	/*
+    var MethodObj;
+    wconv.clear(DsWs_LTIDA62);
+    SOBJ_LTIDA62.WSDL = gds.gWsdlBasis; //기본웹서비스
+    if (wconv.trim(sGb) == "1") //설계화면에서 오픈될때
+        MethodObj = gfn_CreateMethodObj(SOBJ_LTIDA62, "com.inswave.longterm.ssr.pln.task.DBB670Task", "getLtida62List", "", "");
+    else
+        MethodObj = gfn_CreateMethodObj(SOBJ_LTIDA62, "com.inswave.longterm.ssr.pln.task.DBB670Task", "getLtiea62List", "", "");
+    gfn_SetParam(MethodObj, "sPlanNo", wconv.trim(sNo)); // 설계/계약 번호
+    gfn_SetParam(MethodObj, "sGb", wconv.trim(sGb)); // 설계/계약 구분
+    gfn_SetParam(MethodObj, "sPsnPrptFlgCd", wconv.trim(sFlgCd)); // 인,물 구분 (명기가재가 인담보인지,물담보인지 구분하는 코드 1(인),2(물)
+    gfn_SetParam(MethodObj, "nInsrdObjctSeqno", wconv.trim(nSeq)); // 피보험물목적물순번
+    gfn_CallService(SOBJ_LTIDA62, DOBJ_LTIDA62, MethodObj);
+    if (wconv.Length(DsWs_Wanning.getCellData(0, "msg")) > 0) {
+        wprom.alert(DsWs_Wanning.getCellData(0, "msg"));
+    }
+    if (DsWs_LTIDA62.getRowCount() != 0) {
+        //trace("DsWs_LTIDA62.SaveXML ===" + DsWs_LTIDA62.SaveXML());
+        wconv.copy(Ds_LTIDA62, "DsWs_LTIDA62");
+        parentWin.sGolfYn = "Y"; //명기가재 등록여부
+    }
+    */
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_addRow
+// 내용        : 행추가
+//---------------------------------------------------------------------------
+scwin.lfn_addRow_Async = function(e) {
+	util.eventAsyncCall(this, scwin.lfn_addRow, arguments);
+}
+scwin.lfn_addRow = function(e) {
+	try{
+    	var nRowCnt = parentWin.Ds_Trty.getRowCount();
+    }catch(e){
+    	var nRowCnt = 0;
+    }	
+    var sTrtyCd = "";
+    var nTrtyPrem = 0;
+    var nCnt = 0;
+    var nCnt1 = 0;
+    var nCnt2 = 0;
+    /*
+    if (typeof parentWin.Ds_Trty == "object") {
+    	nRowCnt = parentWin.Ds_Trty.getRowCount();
+    } else {
+    	nRowCnt = 0;
+    }
+    */
+//alert(nRowCnt);
+    
+    for (var i = 0; i < nRowCnt; i++) {
+    	try{
+        	sTrtyCd = parentWin.Ds_Trty.getCellData(i, "sTrtyCd");
+        	nTrtyPrem = wconv.toNumber(parentWin.Ds_Trty.getCellData(i, "nTrtyPrem"));
+        }catch(e){
+        	sTrtyCd = "";
+        	nTrtyPrem = "";
+        }	
+        //trace( "특약코드 ["  + sTrtyCd + "] 보장보험료 [" + nTrtyPrem + "원]" );
+		if( sTrtyCd == "25000002" || sTrtyCd == "25000302"  ||
+			sTrtyCd == "25010002" || sTrtyCd == "25010302"  ||
+			sTrtyCd == "25020002" || sTrtyCd == "25020302"  ||
+			sTrtyCd == "25030002" || sTrtyCd == "25030302"  ||
+			sTrtyCd == "25040002" || sTrtyCd == "25040302" 
+		 || sTrtyCd == "28080002" || sTrtyCd == "28080302" 
+		 || sTrtyCd == "25050002" || sTrtyCd == "25050302" 
+		 || sTrtyCd == "28110002" || sTrtyCd == "28110302" 
+		 || sTrtyCd == "25060002" || sTrtyCd == "25060302" 
+		 || sTrtyCd == "25070002" || sTrtyCd == "25070302"
+		 || sTrtyCd == "25080002" || sTrtyCd == "25080302" 	   // 2018 상품개정	 
+		 || sTrtyCd == "28130002" || sTrtyCd == "28130302" 
+		 || sTrtyCd == "28140002" || sTrtyCd == "28140302" 
+		 || sTrtyCd == "28160002" || sTrtyCd == "28160302"     // 2018 상품개정
+			) {
+            if (nTrtyPrem > 0 && sFlgCd == "2") {
+                nCnt++;
+            }
+        }
+ 
+
+
+        //골프용품손해(골프장내) 2014.06.19
+        //에듀플러스 종합보험 2015.04.06 (N1503-00329)
+        //1508 상품개정 2015.07.23 (N1507-00088)
+		if( (sTrtyCd == "25021701" 
+		  || sTrtyCd == "25031701" 
+		  || sTrtyCd== "25041701" 
+		  || sTrtyCd == "25061701"
+		  || sTrtyCd == "25071701"
+		  || sTrtyCd == "25081701"     // 2018 상품개정
+		  || sTrtyCd == "21074001" 
+		  || sTrtyCd == "21104001"
+		  || sTrtyCd == "28081701"
+		  || sTrtyCd == "25051701"
+		  || sTrtyCd == "28111701"
+		  || sTrtyCd == "21134001"
+		  || sTrtyCd == "28100901"
+		  || sTrtyCd == "21164001"
+		  || sTrtyCd == "24001301"
+		  || sTrtyCd == "28120901"
+		  || sTrtyCd == "28150901"    // 2018 상품개정
+		  || sTrtyCd == "21204001"
+		  || sTrtyCd == "21264001"    // 2018 상품개정
+		  || sTrtyCd == "24011301"
+		  || sTrtyCd == "24021301"   // 2018 상품개정
+		     ) &&  sFlgCd == "1") {
+            if (nTrtyPrem > 0) {
+                nCnt1++; //trace ("인물구분="+sFlgCd);
+            }
+        }
+
+
+
+        //6대가전제품 2014.06.19 ,1508 상품개정 2015.07.23 (N1507-00088)
+		if( (sTrtyCd == "25021901" || sTrtyCd == "25031901" || sTrtyCd == "25041901" || sTrtyCd == "28081901"
+		     || sTrtyCd == "25051901" || sTrtyCd == "28111901"
+		     || sTrtyCd == "25061901" || sTrtyCd == "28131901"
+		     || sTrtyCd == "25071901" || sTrtyCd == "28141901"
+		     || sTrtyCd == "25081901" || sTrtyCd == "28161901"     // 2018 상품개정
+		     ) 
+		   &&  sFlgCd == "2") {
+            if (nTrtyPrem > 0) {
+                nCnt2++;
+            }
+        }
+    }
+
+
+    // 화재손해(가재도구), 도난손해(명기) 미가입시 명기물건 등록불가
+    if (nCnt == 0 && nCnt1 == 0 && nCnt2 == 0) {
+        //2014.06.19
+        wprom.alert("화재손해(가재도구), 도난손해(명기),\n골프용품손해(골프장내), 6대가전제품 미가입 건입니다.\n명기물건 등록 불가합니다.");
+    } else {
+    	util.appendRow(Ds_LTIDA62);
+        var nRow = Ds_LTIDA62.getRowCount() - 1;
+        Ds_LTIDA62.setCellData(nRow, "sCheckSel", "1");
+        if (wconv.length(wconv.toString(nCrChngNo)) > 0) {
+            Ds_LTIDA62.setCellData(nRow, "nCrChngNo", nCrChngNo);
+        }
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_delete
+// 내용        : 삭제
+//---------------------------------------------------------------------------
+scwin.lfn_delete_Async = function(obj) {
+	util.eventAsyncCall(this, scwin.lfn_delete, arguments);
+}
+scwin.lfn_delete = function(obj) {
+    //체크박스선택체크
+    var nChkCnt = Ds_LTIDA62.getMatchedColumnData("sCheckSel","1","sCheckSel"); //Ds_LTIDA62.CaseCount("sCheckSel=='1'");
+    if (nChkCnt.length < 1) {
+        wprom.alert("선택된 자료가 없습니다.");
+        return false;
+    }
+
+    // 선택 항목 삭제
+    var nCnt = Ds_LTIDA62.getRowCount();
+    for (var i = nCnt; i >= 0; i--) {
+        if (Ds_LTIDA62.getCellData(i, "sCheckSel") == 1) {
+            util.removeRow(Ds_LTIDA62, i);
+        }
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_cancel
+// 내용        : 취소
+//---------------------------------------------------------------------------
+scwin.lfn_cancel_Async = function(obj) {
+	util.eventAsyncCall(this, scwin.lfn_cancel, arguments);
+}
+scwin.lfn_cancel = function(obj) {
+    //if (Ds_LTIDA62.getRowCount() == 0) return;
+    if (!confirm("원래대로 되돌리시겠습니까?")) {
+        return;
+    }
+    //Ds_LTIDA62.undoAll();
+    scwin.lfn_Search();
+};
+
+//**************************************************************************************************
+// 그리드 focus 셋팅
+//**************************************************************************************************
+scwin.setCellPosition = function(obj, nRow, nCell) {
+    grd_LTIDA62.setFocusedCell( nRow , nCell, true);
+    //grd_LTIDA62.focus();
+};
+
+
+//
+scwin.lfn_ValidChk = function() {
+	try{
+    	var nRowCnt = parentWin.Ds_Trty.getRowCount();
+    }catch(e){
+    	var nRowCnt = 0;
+    }    	
+    var sTrtyCd = ""; // 특약코드
+    var nGrntPrem = 0; // 보장보험료
+    var nInsAmt = 0; // 가입금액
+    var sFireDemagInsYn = false; // 화재손해해(가재도구)가입여부
+    var nFireDemagInsAmt = 0; // 화재손해해(가재도구)가입금액
+    var sRobDemagInsYn = false; // 도난손해(명기) 가입여부
+    var sRobDemagInsAmt = 0; // 도난손해(명기) 가입금액
+    var sGolfGoodInsYn = false; // 골프용품손해(골프장내)여부
+    var nGolfGoodInsAmt = 0; // 골프용품손해(골프장내)가입금액
+    var sOtordRpairInsYn = false; // 6대가전제품고장수리비용여부
+    var nOtordRpairInsAmt = 0; // 6대가전제품고장수리비용가입금액
+    var nPsnPrprtGroupSeqno = 0;
+    /*
+    if (typeof parentWin.Ds_Trty == "object") {
+    	nRowCnt = parentWin.Ds_Trty.getRowCount();
+    } else {
+    	nRowCnt = 0;
+    }
+	*/
+    for (var i = 0; i < nRowCnt; i++) {
+        /**
+         * 화재손해(가재도구), 도난손해(명기) 특약가입 체크
+         **/
+        //trace( "특약코드 ["  + sTrtyCd + "] 보장보험료 [" + nTrtyPrem + "원]" );
+        try{
+        	sTrtyCd = parentWin.Ds_Trty.getCellData(i, "sTrtyCd");
+        	nGrntPrem = wconv.toNumber(parentWin.Ds_Trty.getCellData(i, "nGrntPrem"));
+        	nInsAmt = wconv.toNumber(parentWin.Ds_Trty.getCellData(i, "nTrtyInsAmt"));
+        }catch(e){
+        	sTrtyCd = "";
+        	nGrntPrem = "";
+        	nInsAmt = 0;
+        }	
+
+        //화재손해(가재도구)
+		if( (sTrtyCd == "25000002" && nGrntPrem > 0) ||
+			(sTrtyCd == "25010002" && nGrntPrem > 0) ||
+			(sTrtyCd == "25020002" && nGrntPrem > 0) ||
+			(sTrtyCd == "25030002" && nGrntPrem > 0) ||
+			(sTrtyCd == "25040002" && nGrntPrem > 0) ||
+			(sTrtyCd == "28080002" && nGrntPrem > 0) 
+		 || (sTrtyCd == "25050002" && nGrntPrem > 0) 
+		 || (sTrtyCd == "28110002" && nGrntPrem > 0) 
+		 || (sTrtyCd == "25060002" && nGrntPrem > 0) 
+		 || (sTrtyCd == "25070002" && nGrntPrem > 0) 
+		 || (sTrtyCd == "25080002" && nGrntPrem > 0) // 2018 상품개정
+		 || (sTrtyCd == "28130002" && nGrntPrem > 0) 
+		 || (sTrtyCd == "28140002" && nGrntPrem > 0) 
+		 || (sTrtyCd == "28160002" && nGrntPrem > 0)  // 2018 상품개정
+		 ) {
+            sFireDemagInsYn = true;
+            nFireDemagInsAmt = nInsAmt;
+        }
+
+        //도난손해(명기) 
+		if( (sTrtyCd == "25000302" && nGrntPrem > 0) ||
+		    (sTrtyCd == "25010302" && nGrntPrem > 0) ||
+		    (sTrtyCd == "25020302" && nGrntPrem > 0) ||
+		    (sTrtyCd == "25030302" && nGrntPrem > 0) ||
+		    (sTrtyCd == "25040302" && nGrntPrem > 0) ||
+		    (sTrtyCd == "28080302" && nGrntPrem > 0) 
+		 || (sTrtyCd == "25050302" && nGrntPrem > 0) 
+		 || (sTrtyCd == "28110302" && nGrntPrem > 0) 
+		 || (sTrtyCd == "25060302" && nGrntPrem > 0) 
+		 || (sTrtyCd == "25070302" && nGrntPrem > 0) 
+		 || (sTrtyCd == "25080302" && nGrntPrem > 0)  // 2018 상품개정
+		 || (sTrtyCd == "28130302" && nGrntPrem > 0) 
+		 || (sTrtyCd == "28140302" && nGrntPrem > 0) 
+		 || (sTrtyCd == "28160302" && nGrntPrem > 0)  // 2018 상품개정
+		  ){
+            sRobDemagInsYn = true;
+            sRobDemagInsAmt = nInsAmt;
+        }
+
+        //골프용품손해(골프장내) 2014.06.19
+        //에듀플러스 종합보험 적용 2015.04.06 (N1503-00329)
+        //1508 상품개정 2015.07.23(N1507-00088)
+		if( (sTrtyCd == "25021701" 
+		  || sTrtyCd == "25031701" 
+		  || sTrtyCd == "25041701" 
+		  || sTrtyCd == "21074001" 
+		  || sTrtyCd == "21104001"
+		  || sTrtyCd == "28081701"
+		  || sTrtyCd == "25051701"
+		  || sTrtyCd == "25061701"
+		  || sTrtyCd == "25071701"
+		  || sTrtyCd == "25081701" // 2018 상품개정
+		  || sTrtyCd == "28111701"
+		  || sTrtyCd == "21134001"
+		  || sTrtyCd == "28100901"
+		  || sTrtyCd == "21164001"
+		  || sTrtyCd == "24001301"
+		  || sTrtyCd == "28120901"
+		  || sTrtyCd == "28150901"  // 2018 상품개정
+		  || sTrtyCd == "21204001"
+		  || sTrtyCd == "21264001"    // 2018 상품개정
+		  || sTrtyCd == "24011301"
+		  || sTrtyCd == "24021301"    // 2018 상품개정
+		    ) &&  nGrntPrem > 0 ) {
+              sGolfGoodInsYn = true;
+              nGolfGoodInsAmt = nInsAmt;
+        }
+
+        //6대가전제품고장수리비용 2014.06.19
+		if( (sTrtyCd == "25021901" || sTrtyCd == "25031901" || sTrtyCd == "25041901" || 
+				sTrtyCd == "25051901"|| sTrtyCd == "28081901" || sTrtyCd == "28111901"
+			 || sTrtyCd == "25061901" || sTrtyCd == "28131901"
+			 || sTrtyCd == "25071901" || sTrtyCd == "28141901"
+			 || sTrtyCd == "25081901" || sTrtyCd == "28161901"  // 2018 상품개정
+			) && nGrntPrem > 0 ) {
+            sOtordRpairInsYn = true;
+            nOtordRpairInsAmt = nInsAmt;
+        }
+    }
+
+
+
+
+    //var nAmt    = Ds_LTIDA62.TotalCaseSum( "sSwHsHldGdsFlagCd=='02'", "nInsurVlamt" );    // 귀중품보험가액 합
+    //var nCnt    = Ds_LTIDA62.TotalCaseCount( "sSwHsHldGdsFlagCd=='02'" );    // 귀중품건수
+    //var nTotAmt = Ds_LTIDA62.TotalSum( "nInsurVlamt" ) ; // 명기물건 전체금액
+    var nTotAmt = 0; // 명기물건 전체금액
+    var nAmt = 0; // 귀중품보험가액 합
+    var nCnt = 0; // 귀중품건수
+    var nAmt1 = 0; // 골프용품손해(골프장내)보험가액 합
+    var nCnt1 = 0; // 골프용품손해(골프장내)건수
+    var nAmt2 = 0; // 6대가전제품보험가액 합
+    var nCnt2 = 0; // 6대가전제품건수
+    var sRowType = "";
+    var nRowCnt = Ds_LTIDA62.getRowCount();
+    for (var i = 0; i < nRowCnt; i++) {
+        sRowType = Ds_LTIDA62.getRowStatus(i);
+        //if (sRowType != "delete") {
+        if (sRowType != "D" && sRowType != "V") {
+            nTotAmt = nTotAmt + wconv.toNumber(Ds_LTIDA62.getCellData(i, "nInsurVlamt"));
+
+            //귀중품
+            if (Ds_LTIDA62.getCellData(i, "sSwHsHldGdsFlagCd") == "02") {
+                nAmt = nAmt + wconv.toNumber(Ds_LTIDA62.getCellData(i, "nInsurVlamt"));
+                nCnt++;
+            }
+
+            //골프용품손해 2014.06.19
+            if (Ds_LTIDA62.getCellData(i, "sSwHsHldGdsFlagCd") == "04") {
+                nAmt1 = nAmt1 + wconv.toNumber(Ds_LTIDA62.getCellData(i, "nInsurVlamt"));
+                nCnt1++;
+            }
+
+            //6대가전제품 2014.06.19
+            if (Ds_LTIDA62.getCellData(i, "sSwHsHldGdsFlagCd") == "05") {
+                nAmt2 = nAmt2 + wconv.toNumber(Ds_LTIDA62.getCellData(i, "nInsurVlamt"));
+                nCnt2++;
+            }
+        }
+    }
+
+
+
+
+
+    //trace( "귀중품금액[" + nAmt + "] 귀중품건수[" + nCnt + "] 전체금액[" + nTotAmt +"]" );
+    //trace( "골프금액[" + nAmt1 + "] 골프건수[" + nCnt1 + "] 전체금액[" + nTotAmt +"]" );
+    //trace( "6대가전금액[" + nAmt2 + "] 6대가전건수[" + nCnt2 + "] 전체금액[" + nTotAmt +"]" );
+    /**
+     * 화재손해해(가재도구), 도난손해(명기) 모두 가입 시
+     **/
+    //trace( sFireDemagInsYn + "/" + sRobDemagInsYn );
+    if (sFireDemagInsYn && sRobDemagInsYn) {
+        // 명기물건 저장시 귀중품 항목 없을 경우 처리불가
+        if (nCnt == 0) {
+            wprom.alert("도난손해(명기) 담보 가입시 명기물건중 귀중품을 등록해야 합니다.");
+            return false;
+        }
+
+
+        // 명기물건 저장시 전체 금액이 화재손해(가재도구) 가입금액 초과 불가
+        if (nTotAmt > nFireDemagInsAmt) {
+            wprom.alert("전체 금액이 화재손해(가재도구) 가입금액(" + util.appendComma(nFireDemagInsAmt) + "원)을 초과할수 없습니다.");
+            return false;
+        }
+
+
+        // 명기물건 저장시 귀중품 금액이 도난손해(명기) 가입금액 초과 불가
+        if (nAmt > sRobDemagInsAmt) {
+            wprom.alert("귀중품 금액이 도난손해(명기) 가입금액(" + util.appendComma(sRobDemagInsAmt) + "원)을 초과할수 없습니다.");
+            return false;
+        }
+    }
+
+
+
+    /**
+     * 화재손해(가재도구) 가입, 도난손해(명기) 미가입시
+     **/
+    if (sFireDemagInsYn && !sRobDemagInsYn) {
+        // 명기물건 저장시 전체 금액이 화재손해(가재도구) 가입금액 초과 불가
+        if (nTotAmt > nFireDemagInsAmt) {
+            wprom.alert("전체 금액이 화재손해(가재도구) 가입금액(" + util.appendComma(nFireDemagInsAmt) + "원)을 초과할수 없습니다.");
+            return false;
+        }
+
+
+
+        // 명기물건중 귀중품 가입시 금액이 300만원 미만인 경우 저장 처리 불가
+        if (nCnt > 0 && nAmt < 3000000) {
+            wprom.alert("화재손해(가재도구) 담보 가입시 명기물건중 귀중품의 금액은 300만원이상이어야 합니다");
+            return false;
+        }
+    }
+
+
+
+    /**
+     * 화재손해(가재도구) 미가입, 도난손해(명기) 가입시
+     **/
+    if (!sFireDemagInsYn && sRobDemagInsYn) {
+        // 명기물건 저장시 귀중품 항목 없을 경우 처리불가
+        if (nCnt == 0) {
+            wprom.alert("도난손해(명기) 담보 가입시 명기물건중 귀중품을 등록해야 합니다.");
+            return false;
+        }
+
+
+        // 명기물건 저장시 귀중품 금액이 도난손해(명기) 가입금액 초과 불가
+        if (nAmt > sRobDemagInsAmt) {
+            wprom.alert("귀중품 금액이 도난손해(명기) 가입금액(" + util.appendComma(sRobDemagInsAmt) + "원)을 초과할수 없습니다.");
+            return false;
+        }
+    }
+
+
+
+    /**
+     * 골프용품손해(골프장내) 가입시 2014.06.19
+     **/
+    if (sGolfGoodInsYn) {
+        // 명기물건 저장시 골프용품손해 항목 없을 경우 처리불가
+        if (nCnt1 == 0) {
+            wprom.alert(" 골프용품손해(골프장내) 담보 가입시 명기물건중 골프용품을 등록해야 합니다.");
+            return false;
+        }
+
+        // 명기물건 저장시 귀중품 금액이 도난손해(명기) 가입금액 초과 불가
+        if (nAmt1 > nGolfGoodInsAmt) {
+            wprom.alert("골프용품 금액이 골프용품손해(골프장내) 가입금액(" + util.appendComma(nGolfGoodInsAmt) + "원)을 초과할수 없습니다.");
+            return false;
+        }
+    }
+
+
+
+    /**
+     * 6대가전제품 고장수리비용 가입시 2014.06.19
+     **/
+    if (sOtordRpairInsYn) {
+        // 명기물건 저장시 귀중품 항목 없을 경우 처리불가
+        if (nCnt2 == 0) {
+            wprom.alert("6대가전제품 고장수리비용담보 가입시 명기물건중 6대가전제품을 등록해야 합니다.");
+            return false;
+        }
+
+        // 명기물건 저장시 귀중품 금액이 도난손해(명기) 가입금액 초과 불가
+        if (nAmt2 > nOtordRpairInsAmt) {
+            wprom.alert("귀중품 금액이 6대가전제품 고장수리비용 가입금액(" + util.appendComma(nOtordRpairInsAmt) + "원)을 초과할수 없습니다.");
+            return false;
+        }
+    }
+    if (sFlgCd == "1") {
+        if (nCnt > 0 || nCnt2 > 0) {
+            wprom.alert("골프용품 외 다른 명기물건은 등록할 수 없습니다.");
+            return false;
+        }
+    }
+    if (sFlgCd == "2") {
+        if (nCnt1 > 0) {
+            wprom.alert("골프용품은 인담보를 선택한 후 등록 가능합니다.");
+            return false;
+        }
+    }
+
+
+
+    /**미선택담보 명기물건 선택시 제어*/
+    if (!sFireDemagInsYn && !sRobDemagInsYn) {
+        if (nCnt > 0) {
+            wprom.alert("귀중품은 화재손해(가재도구),도난손해(명기) 담보 가입시 선택가능합니다.");
+            return false;
+        }
+    }
+    if (!sGolfGoodInsYn) {
+        if (nCnt1 > 0) {
+            wprom.alert("골프용품은 골프용품손해(골프장내) 담보 가입시 선택가능합니다.");
+            return false;
+        }
+    }
+    if (!sOtordRpairInsYn) {
+        if (nCnt2 > 0) {
+            wprom.alert("6대가전제품은 6대가전제품 고장수리비용 담보 가입시 선택가능합니다.");
+            return false;
+        }
+    }
+    return true;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Input
+// 내용        : 저장
+//---------------------------------------------------------------------------
+scwin.lfn_Input_Async = function(obj) {
+	util.eventAsyncCall(this, scwin.lfn_Input, arguments);
+}
+scwin.lfn_Input = function(obj) {
+
+    //if (Ds_LTIDA62.getRowCount() == 0 && DsWs_LTIDA62.getRowCount() == 0) {
+    if (Ds_LTIDA62.getModifiedData().length <= 0) {
+        wprom.alert("저장할 명기가재설계정보가 없습니다.");
+        return false;
+    }
+
+    //2015.08.17(N1506-00250)
+    if (wconv.toNumber(nSeq) == 0) {
+        wprom.alert("명기가재 입력을 위한 해당 목적물의 정보가 없습니다. 설계사항을 재 조회한 후 처리하시기 바랍니다.");
+        return false;
+    }
+
+    //END
+    //trace("0000" +Ds_LTIDA62.SaveXML());
+    var colID = "";
+
+    //유효값 체크
+    for (var i = 0; i < Ds_LTIDA62.getRowCount(); i++) {
+        //if (Ds_LTIDA62.GetColumn(i, "sCheckSel") != 1 ) continue;
+        for (var j = 0; j < Ds_LTIDA62.getTotalCol(); j++) {
+            colID = Ds_LTIDA62.getColumnID(j); //Ds_LTIDA62.getColumnID(Ds_LTIDA62.GetColIDXbyorder(j));
+
+            //명기가재구분
+            if (colID == "sSwHsHldGdsFlagCd") {
+                if (util.isNull(Ds_LTIDA62.getCellData(i, colID))) {
+                    wprom.alert("명기가재구분을 선택해주세요.");
+                    scwin.setCellPosition(obj, i, 1);
+                    Ds_LTIDA62.setCellData(i, "sCheckSel", "1");
+                    return false;
+                }
+            }
+
+
+            //품목
+            if (colID == "sSwHsHldGdsItemNm") {
+                if (util.isNull(Ds_LTIDA62.getCellData(i, colID))) {
+                    wprom.alert("품목명을 입력해주세요.");
+                    scwin.setCellPosition(obj, i, 2);
+                    Ds_LTIDA62.setCellData(i, "sCheckSel", "1");
+                    return false;
+                }
+            }
+
+
+            //규격
+            //if(colID == "sSwHsHldGdsStdd"){
+            //	if(util.isNull(Ds_LTIDA62.GetColumn(i, colID))){
+            //		alert("규격명을 입력해주세요.");
+            //		setCellPosition(obj, i, 3);
+            //		Ds_LTIDA62.SetColumn( i, "sCheckSel", "1");
+            //		return false;
+            //	}				
+            //}
+            //수량
+            //if(colID == "nSwHsHldGdsQant"){
+            //	if( util.isNull(Ds_LTIDA62.GetColumn(i, colID))
+            //	   || ToNumber( Ds_LTIDA62.GetColumn(i, colID) ) <= 0
+            //	){
+            //		alert("수량을 입력해주세요.");
+            //		setCellPosition(obj, i, 4);
+            //		Ds_LTIDA62.SetColumn( i, "sCheckSel", "1");
+            //		return false;
+            //	}				
+            //}
+            //제조회사(용품번호)
+            //if(colID == "sProdCmpn"){
+            //	if(util.isNull(Ds_LTIDA62.GetColumn(i, colID))){
+            //		alert("제조회사(용품번호)를 입력해주세요.");
+            //		setCellPosition(obj, i, 5);
+            //		Ds_LTIDA62.SetColumn( i, "sCheckSel", "1");
+            //		return false;
+            //	}				
+            //}
+            //구입년월
+            //if(colID == "sPurcYm"){
+            //	if(util.isNull(Ds_LTIDA62.GetColumn(i, colID))){
+            //		alert("구입년월을 입력해주세요.");
+            //		setCellPosition(obj, i, 6);
+            //		Ds_LTIDA62.SetColumn( i, "sCheckSel", "1");
+            //		return false;
+            //	}				
+            //}
+            //보험가액(원)
+            if (colID == "nInsurVlamt") {
+                if (util.isNull(Ds_LTIDA62.getCellData(i, colID)) || Ds_LTIDA62.getCellData(i, colID) == 0) {
+                    wprom.alert("보험가액(원)을 입력해주세요.");
+                    scwin.setCellPosition(obj, i, 7);
+                    Ds_LTIDA62.setCellData(i, "sCheckSel", "1");
+                    return false;
+                }
+            }
+        }
+    }
+
+
+
+
+
+    //체크박스선택체크
+    //	var nChkCnt=0;
+    //	for(var i=0; i<Ds_LTIDA62.GetTotalRowCount(); i++){
+    //		if (Ds_LTIDA62.GetColumn(i, "sCheckSel") == 1 ){
+    //			nChkCnt++;
+    //		}
+    //	}
+    //	if ( nChkCnt < 1){
+    //		alert("선택된 자료가 없습니다.");
+    //		return false;	
+    //	}
+
+    //  선택된 특약에 따른 유효성 체크
+    if (!scwin.lfn_ValidChk()) return false;
+
+    var execFlag = ""; //상태
+    //Ds_LTIDA62Tran.removeAll();
+    wconv.clear(Ds_LTIDA62Tran);
+    var pppR = Ds_LTIDA62.getRowPosition();
+    util.insertColumn(Ds_LTIDA62, [["execFlag","execFlag","text"]]);
+    util.setCompBindRefresh("Ds_LTIDA62");
+    util.setRowPosition(Ds_LTIDA62, pppR);
+    
+    var cnt = 0;
+
+	//util.copyEmptyDataList(Ds_LTIDA62, "Ds_LTIDA62Tran");
+    //그리드에서 insert,update구분
+    for (var i = 0; i < Ds_LTIDA62.getRowCount(); i++) {
+        execFlag = "";
+        //if (Ds_LTIDA62.getRowStatus(i) == "insert") {
+        if (Ds_LTIDA62.getRowStatus(i) == "C") {
+            execFlag = "I";
+        //} else if (Ds_LTIDA62.getRowStatus(i) == "update") {
+        } else if (Ds_LTIDA62.getRowStatus(i) == "U") {
+            execFlag = "U";
+        }
+        if (execFlag != "") {
+            Ds_LTIDA62.setCellData(i, "execFlag", execFlag);
+            //var insRow = util.insertRow(Ds_LTIDA62Tran, cnt);
+            //wconv.mi_copyRow(Ds_LTIDA62Tran, cnt++, Ds_LTIDA62, i); //trace("Ds_LTIDA62Tran=="+Ds_LTIDA62Tran.savexml());
+            util.appendRow(Ds_LTIDA62Tran);
+            Ds_LTIDA62Tran.setRowJSON(Ds_LTIDA62Tran.getRowCount() - 1, Ds_LTIDA62.getRowJSON(i), true);
+        }
+    }
+
+	if (Ds_LTIDA62.getRemovedJSON().length > 0) {
+		//그리드에서 delete 구분
+		var rmDl = Ds_LTIDA62.getRemovedJSON();
+    	for (var i = 0; i < rmDl.length; i++) {
+    		util.appendRow(Ds_LTIDA62Tran);
+    		Ds_LTIDA62Tran.setRowJSON(Ds_LTIDA62Tran.getRowCount() - 1, rmDl[i], true);
+    		Ds_LTIDA62Tran.setCellData(Ds_LTIDA62Tran.getRowCount() - 1, "execFlag", "D");
+    		Ds_LTIDA62Tran.setCellData(Ds_LTIDA62Tran.getRowCount() - 1, "sCheckSel", "1");
+    		cnt++;
+    	}
+	}
+
+	/*
+    //그리드에서 delete 구분
+    for (var i = 0; i < Ds_LTIDA62.wconv.getDelRowCount(); i++) {
+        Ds_LTIDA62.setCellData(i, "execFlag", execFlag);
+        var insRow = util.insertRow(Ds_LTIDA62Tran, cnt);
+        for (var j = 0; j < Ds_LTIDA62.getColCnt(); j++) {
+            if (Ds_LTIDA62.getColumnID(j) == "execFlag") {
+                Ds_LTIDA62Tran.setCellData(cnt, Ds_LTIDA62.getColumnID(j), "D");
+            } else if (Ds_LTIDA62.getColumnID(j) == "sCheckSel") {
+                Ds_LTIDA62.setCellData(cnt, Ds_LTIDA62.getColumnID(j), "1");
+                Ds_LTIDA62Tran.setCellData(cnt, Ds_LTIDA62.getColumnID(j), "1");
+            } else {
+                Ds_LTIDA62Tran.setCellData(cnt, Ds_LTIDA62.getColumnID(j), Ds_LTIDA62.wconv.getDelColumn(i, Ds_LTIDA62.getColumnID(j)));
+            }
+        }
+        cnt++;
+    }
+    */
+
+	
+	util.jSonDsCreate([{
+		 "sPlanNo" : sNo //설계번호
+		,"nInsrdObjctSeqno" : nSeq //피보험목적물일련번호
+		,"nCrChngNo" : nCrChngNo //변경일련번호
+		,"sPsnPrptFlgCd" : sFlgCd //인,물 구분
+		,"gUserID" : util.getGdsValue("gUserID")
+		,"gUserID" : util.getGdsValue("gUserID")
+	}], "Ds_LTIDA62TranReq");
+	Ds_LTIDA62TranReq.modifyRowStatus(0, "C");
+
+	var transObj = new callService("com.inswave.longterm.ssr.pln.task.DBB670Task", "saveLtida62", "", "");
+	transObj.setUrl("/contract/CBSC050PController.do");
+	transObj.setId("saveLtida62");
+	transObj.addVectorData("vLTIDA62Tran", "vLTIDA62", "Ds_LTIDA62Tran"); //그리드정보
+	transObj.addSingleData("LTIDA62TranReq", "tranReq", "Ds_LTIDA62TranReq"); //기타정보
+	transObj.setHashTable();   // 저장할 때
+	transObj.setXPath("//*/WARNING");
+	transObj.sync();
+	transObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Wanning");
+	if (DsWs_Wanning.getRowCount() != 0) {
+        wprom.alert(DsWs_Wanning.getCellData(0, "msg"));
+        return;
+    } else {
+        wprom.alert("정상 처리되었습니다.");
+        scwin.lfn_Search();
+    }
+
+	/*
+    //나머지 정보 담는다
+    Ds_LTIDA62TranReq.removeAll();
+    util.appendRow(Ds_LTIDA62TranReq);
+    Ds_LTIDA62TranReq.setCellData(0, "sPlanNo", sNo); //설계번호
+    Ds_LTIDA62TranReq.setCellData(0, "nInsrdObjctSeqno", nSeq); //피보험목적물일련번호
+    Ds_LTIDA62TranReq.setCellData(0, "nCrChngNo", nCrChngNo); //변경일련번호
+    Ds_LTIDA62TranReq.setCellData(0, "sPsnPrptFlgCd", sFlgCd); //인,물 구분
+    Ds_LTIDA62TranReq.setCellData(0, "gUserID", gds.gUserID);
+    Ds_LTIDA62TranReq.setCellData(0, "gUserIP", gds.gUserIP);
+    var MethodObj = SOBJ_LTIDA62.CreateMethodObj("perform");
+    setHeader("hashtable", "com.inswave.longterm.ssr.pln.task.DBB670Task", "saveLtida62");
+    addVectorData("vLTIDA62Tran", "vLTIDA62", Ds_LTIDA62Tran); //그리드정보
+    addSingleData("LTIDA62TranReq", "tranReq", Ds_LTIDA62TranReq, "tranReq"); //기타정보
+    setTail("hashtable");
+    SOBJ_LTIDA62.CreateObj("in0");
+    MethodObj.in0 = insertStr;
+    var result = gfn_CallService(SOBJ_LTIDA62, DOBJ_req, MethodObj);
+    if (DsWs_Wanning.getRowCount() != 0) {
+        wprom.alert(DsWs_Wanning.getCellData(0, "msg"));
+        return;
+    } else {
+        wprom.alert("정상 처리되었습니다.");
+        scwin.lfn_Search(obj);
+    }
+    */
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Close
+// 내용        : 팝업닫기
+//---------------------------------------------------------------------------
+scwin.lfn_Close_OnClick = function(obj) {
+    wprom.close(sGolfYn); // parent.sGolfYn 에대한 return
+};
+
+//---------------------------------------------------------------------------
+// function 명 : grd_LTIDA62_OnCellPosChanged
+// 내용        : 그리드 탭키이동시
+//---------------------------------------------------------------------------
+/*
+scwin.grd_LTIDA62_OnCellPosChanged = function(obj, nRow, nCell, nOldRow, nOldCell, nPivotIndex, nOldPivotIndex) {
+    if (nOldCell == 6) {
+        var sYm = grd_LTIDA62.getCellData(nRow, nOldCell);
+        if (wconv.Length(sYm) > 0)
+            if (!fnIsDateYm(sYm))
+                grd_LTIDA62.setFocusedCell(nOldCell);
+    }
+};
+
+scwin.fnIsDateYM = function(sYm) {
+    if (wconv.Length(sYm) < 1) {
+        return false;
+    }
+
+
+    // 숫자 확인
+    if (isDigit(sYm) == -1) {
+        wprom.alert("날짜는 숫자만 입력하십시오.!!!");
+        return false;
+    }
+
+
+    // 길이 확인
+    if (wconv.Length(sYm) != 6) {
+        wprom.alert("일자의 형식을 확인하여 주십시요.");
+        return false;
+    }
+    var iYear = wconv.toNumber(sYm.substr(0, 4)); // 년도 입력(YYYY)
+    var iMonth = wconv.toNumber(sYm.substr(4, 2)); //월입력(MM)
+    if ((iMonth < 1) || (iMonth > 12)) {
+        wprom.alert(iMonth + "월의 입력이 잘못 되었습니다.!!!");
+        return false;
+    }
+    return true;
+};
+*/
+
+scwin.Button3_OnClick = function(obj) {};
+
+scwin.Ds_LTIDA62_celldatachange = function(info) {
+	//console.log(info);
+	if (grd_LTIDA62.getColumnID(info.colIndex) != "sCheckSel") {
+		if (Ds_LTIDA62.getCellData(info.rowIndex, "sCheckSel") != "1") {
+			Ds_LTIDA62.setCellData(info.rowIndex, "sCheckSel", "");
+		}
+	}
+	scwin.grd_LTIDA62_readOnly(info.rowIndex);
+};
+
+scwin.Ds_LTIDA62_onrowpositionchange = function(info) {
+	//console.log(info);
+	scwin.grd_LTIDA62_readOnly(info.newRowIndex);
+};
+
+scwin.grd_LTIDA62_readOnly = function(rowIndex) {
+	for (var colIndex = 0; colIndex < grd_LTIDA62.getTotalCol(); colIndex++) {
+		if (grd_LTIDA62.getColumnID(colIndex) != "sCheckSel") {
+			if (Ds_LTIDA62.getCellData(rowIndex, "sCheckSel") == "1") {
+				grd_LTIDA62.setCellReadOnly(rowIndex, colIndex, false);
+			} else {
+				grd_LTIDA62.setCellReadOnly(rowIndex, colIndex, "true");
+			}
+		}
+		//console.log(rowIndex + ":" + colIndex);
+	}
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B670_Pop"
+            style="position:absolute; left:0px; top:0px;"
+            userData1="명기가재등록[B670_Pop]" userData2=" OnLoadCompleted:scwin.B670_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+                <ServiceObject/>
+                <ServiceObject/>
+                <ServiceObject/>
+            </ServiceObjects>
+            <w2:textbox id="Static5" label="명기가재등록" style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; width:249px;" tagname="" class='sub_pop_title01'/>
+            <xf:switch id="switch_137" style=" ">
+                <xf:case id="Default_138" style=" ">
+                    <w2:gridView dataList="Ds_LTIDA62"
+                    	ev:oncellindexchange="" focusMode="row"
+                    	id="grd_LTIDA62" inputType="text" readOnly="false"
+                    	style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  AutoEnter:TRUE;  height:288px; left:0px; right:770px; top:30px; width:762px;"
+                    	tabIndex="3" class="sty_Grid" autoFit="allColumn"
+                    	autoFitMinWidth="100">
+                    	<w2:header>
+                    		<w2:row>
+                    			<w2:column dataType="text"
+                    				id="head_id_1140" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="0" userData3="0" value="선택"
+                    				width="40" />
+                    			<w2:column dataType="text"
+                    				id="head_id_1141" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="1" userData3="0" value="구분"
+                    				width="107" />
+                    			<w2:column dataType="text"
+                    				id="head_id_1142" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="2" userData3="0" value="품목"
+                    				width="111" />
+                    			<w2:column dataType="text"
+                    				id="head_id_1143" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="3" userData3="0" value="규격"
+                    				width="129" />
+                    			<w2:column dataType="text"
+                    				id="head_id_1144" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="4" userData3="0" value="수량"
+                    				width="77" />
+                    			<w2:column dataType="text"
+                    				id="head_id_1145" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="5" userData3="0" value="제조회사(용품번호)"
+                    				width="116" />
+                    			<w2:column dataType="text"
+                    				id="head_id_1146" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="6" userData3="0" value="구입년월"
+                    				width="97" />
+                    			<w2:column dataType="text"
+                    				id="head_id_1147" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="7" userData3="0" value="보험가액(원)"
+                    				width="78" />
+                    		</w2:row>
+                    	</w2:header>
+                    	<w2:gBody>
+                    		<w2:row>
+                    			<w2:column dataType="text"
+                    				id="sCheckSel" inputType="checkbox"
+                    				readOnly="false"
+                    				style="height:20px; dataType:checkbox; "
+                    				textAlign="center" userData1="0" userData3="0"
+                    				width="40" valueType="other" trueValue="1" />
+                    			<w2:column id="sSwHsHldGdsFlagCd"
+                    				inputType="select" readOnly="false"
+                    				style="height:20px;" textAlign="center"
+                    				userData1="1"
+                    				userData2=" expr:iif(sCheckSel=&quot;1&quot;,&quot;combo&quot;,&quot;none&quot;) ;"
+                    				userData3="0" width="107" selectedData="false"
+                    				editModeEvent="onsecondclick"
+                    				editType="select">
+                    				<w2:choices>
+                    					<w2:itemset
+                    						nodeset="data:DsWs_SwHsHldGdsFlagCd">
+                    						<w2:label
+                    							ref="sHnglCdName">
+                    						</w2:label>
+                    						<w2:value ref="sCd">
+                    						</w2:value>
+                    					</w2:itemset>
+                    				</w2:choices>
+                    			</w2:column>
+                    			<w2:column dataType="text"
+                    				id="sSwHsHldGdsItemNm" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				textAlign="center" userData1="2"
+                    				userData2=" expr:iif(sCheckSel=&quot;1&quot;,&quot;normal&quot;,&quot;none&quot;) ;"
+                    				userData3="0" width="111" editType="select"
+                    				editModeEvent="onclick" />
+                    			<w2:column dataType="text"
+                    				id="sSwHsHldGdsStdd" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				textAlign="center" userData1="3"
+                    				userData2=" expr:iif(sCheckSel=&quot;1&quot;,&quot;normal&quot;,&quot;none&quot;) ;"
+                    				userData3="0" width="129" editType="select"
+                    				editModeEvent="onclick" />
+                    			<w2:column dataType="number"
+                    				displayFormat="#,###" id="nSwHsHldGdsQant"
+                    				inputType="text" readOnly="true"
+                    				style="height:20px;" textAlign="center"
+                    				userData1="4"
+                    				userData2=" expr:iif(sCheckSel=&quot;1&quot;,&quot;number&quot;,&quot;none&quot;) ;"
+                    				userData3="0" width="77" editType="select"
+                    				editModeEvent="onclick" />
+                    			<w2:column dataType="text"
+                    				id="sProdCmpn" inputType="text" readOnly="true"
+                    				style="height:20px;" textAlign="center"
+                    				userData1="5"
+                    				userData2=" expr:iif(sCheckSel=&quot;1&quot;,&quot;normal&quot;,&quot;none&quot;) ;"
+                    				userData3="0" width="116" editType="select"
+                    				editModeEvent="onclick" />
+                    			<w2:column dataType="date" id="sPurcYm"
+                    				inputType="calendar" readOnly="false"
+                    				userData1="6" userData3="0" width="97"
+                    				calendarValueType="yearMonth"
+                    				dateValidCheck="true" editType="select"
+                    				editModeEvent="onclick" blockSelect="false"
+                    				style="height:20px;" />
+                    			<w2:column dataType="number"
+                    				displayFormat="#,###" id="nInsurVlamt"
+                    				inputType="text" readOnly="true"
+                    				style="height:20px;" textAlign="center"
+                    				userData1="7"
+                    				userData2=" expr:iif(sCheckSel=&quot;1&quot;,&quot;integer&quot;,&quot;none&quot;) ;"
+                    				userData3="0" width="78" editType="select"
+                    				editModeEvent="onclick" />
+                    		</w2:row>
+                    	</w2:gBody>
+                    </w2:gridView>
+                </xf:case>
+            </xf:switch>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Input_Async" id="btn_save"
+                style="position:absolute;height:20px;ImageID:btn_Input_02;width:54px;left:662px;top:0px;" tabIndex="4" type="anchor">
+                <xf:label><![CDATA[저장]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Close_OnClick" id="btn_close"
+                style="position:absolute;height:20px;ImageID:btn_Comm_Close;Transparent:TRUE;width:58px;left:713px;top:0px;" tabIndex="5" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_addRow_Async" id="Button0"
+                style="position:absolute;height:20px;ImageID:btn_Input_02;width:54px;left:509px;top:0px;" tabIndex="7" type="anchor">
+                <xf:label><![CDATA[추가]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_delete_Async" id="Button1"
+                style="position:absolute;height:20px;ImageID:btn_Input_02;width:54px;left:560px;top:0px;" tabIndex="8" type="anchor">
+                <xf:label><![CDATA[삭제]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_cancel_Async" id="Button2"
+                style="position:absolute;height:20px;ImageID:btn_Input_02;width:54px;left:611px;top:0px;" tabIndex="9" type="anchor">
+                <xf:label><![CDATA[취소]]></xf:label>
+            </xf:trigger>
+            <w2:textbox id="Static" label="☞  추가, 수정, 삭제 후에 반드시 저장버튼을 클릭 하셔야 반영이 됩니다.   "
+                style="position:absolute; VAlign:Middle;  height:22px;left:0px;top:327px; width:457px;" tagname=""/>
+            <xf:trigger ev:onclick="scwin.Button3_OnClick" id="Button3"
+                style="position:absolute; display:none;  height:14px; left:139px; top:7px; width:58px;" tabIndex="11">
+                <xf:label><![CDATA[Button3]]></xf:label>
+            </xf:trigger>
+        </xf:group>
+    </body>
+</html>

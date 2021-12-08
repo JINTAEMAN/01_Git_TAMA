@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inswave.template.dao.SpReleaseInfoDao">
+	<select id="selectReleaseForSummary" resultType="Map" parameterType="Map">
+		SELECT SEQ, TITLE, CONTENT, CAST(CREATED_DATE AS CHAR(10)) AS CREATED_DATE
+		FROM SP_RELEASE_INFO
+		WHERE IS_USE = #{IS_USE} 
+		<choose>
+			<when test="SEQ_ORDER == 'DESC'">
+				ORDER BY SEQ DESC
+			</when>
+			<when test="SEQ_ORDER == 'ASC'">
+				ORDER BY SEQ ASC
+			</when>
+		</choose>
+		LIMIT #{START_NUM} , #{END_NUM}
+	</select>
+	
+	<insert id="insertRelease" parameterType="Map">
+		INSERT INTO SP_RELEASE_INFO(SEQ, TITLE, CONTENT, CREATED_DATE)
+		VALUES ((SELECT MAX(SEQ)+1 FROM SP_RELEASE_INFO AS SP_REL_INFO), #{TITLE}, #{CONTENT}, #{CREATED_DATE})
+	</insert>
+
+	<update id="updateRelease" parameterType="Map">
+		UPDATE SP_RELEASE_INFO
+		   SET TITLE = #{TITLE}, CONTENT = #{CONTENT}, CREATED_DATE = #{CREATED_DATE}
+		WHERE SEQ = #{SEQ}
+	</update>
+
+	<delete id="deleteRelease" parameterType="Map">
+		DELETE FROM SP_RELEASE_INFO WHERE SEQ = #{SEQ}
+	</delete>
+		
+	<select id="selectReleaseCnt" resultType="Map">
+		select count(*) AS CNT from SP_RELEASE_INFO
+	</select>	
+		
+</mapper>				
+	
+	

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inswave.template.dao.LoginDao">
+
+	<select id="selectMemberInfoForLogin" resultType="java.util.Map" parameterType="java.util.Map">
+		/* 사용자 정보 조회 ==> [/login_mapper.xml] [selectMemberInfoForLogin()] [2020.07.16, by 진태만] */ 
+		SELECT P.EMP_CD, P.EMP_NM, P.PASSWORD, B.MAIN_LAYOUT_PAGE_CODE, B.IS_USE_SHORTCUT
+		FROM (SELECT * FROM HM_MEMBER_BASIC 
+		WHERE EMP_CD = #{EMP_CD} ) P
+			LEFT JOIN BM_MAIN_SETTING B ON P.EMP_CD = B.EMP_CD
+	</select>
+	
+	<update id="updatePassword" parameterType="java.util.Map">
+		/* 비밀번호 수정 ==> [/login_mapper.xml] [updatePassword()] [2020.07.16, by 진태만] */ 
+		UPDATE HM_MEMBER_BASIC
+		SET PASSWORD = #{NEW_PASSWORD}
+		 WHERE EMP_CD = #{EMP_CD}
+	</update>
+	
+</mapper>

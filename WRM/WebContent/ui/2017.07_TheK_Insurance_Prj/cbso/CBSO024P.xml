@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="DsPhoneNo1" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCode" name="sCode"/>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <sCode><![CDATA[010]]></sCode>
+                        </w2:row>
+                        <w2:row>
+                            <sCode><![CDATA[011]]></sCode>
+                        </w2:row>
+                        <w2:row>
+                            <sCode><![CDATA[016]]></sCode>
+                        </w2:row>
+                        <w2:row>
+                            <sCode><![CDATA[017]]></sCode>
+                        </w2:row>
+                        <w2:row>
+                            <sCode><![CDATA[018]]></sCode>
+                        </w2:row>
+                        <w2:row>
+                            <sCode><![CDATA[019]]></sCode>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_Warning" repeatNode="map" userData2="//*/WARNING"/>
+                <w2:dataList baseNode="list" id="DsWs_TotalCnt" repeatNode="map" userData2="//*/vector"/>
+                <w2:dataList baseNode="list" id="DsWs_Search" repeatNode="map" userData2="//*/ACCAH01"/>
+                <w2:dataList baseNode="list" id="DsWs_Warning2" repeatNode="map" userData2="//*/WARNING"/>
+                <w2:dataList baseNode="list" id="DsWs_TotalCnt2" repeatNode="map" userData2="//*/vector"/>
+                <w2:dataList baseNode="list" id="DsWs_Search2" repeatNode="map" userData2="//*/ACCAH01"/>
+                <w2:dataList baseNode="list" id="DsWs_Warning3" repeatNode="map" userData2="//*/WARNING"/>
+                <w2:dataList baseNode="list" id="DsWs_TotalCnt3" repeatNode="map" userData2="//*/vector"/>
+                <w2:dataList baseNode="list" id="DsWs_Search3" repeatNode="map" userData2="//*/ACCAH01"/>
+                <w2:dataList baseNode="list" id="DsWs_Search4" repeatNode="map" userData2="//*/ACCAH01"/>
+                <w2:dataList baseNode="list" id="DsWs_Warning4" repeatNode="map" userData2="//*/WARNING"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+ <script src="/cm/js/common.js"/>
+ <script src="/cm/js/val_lib.js"/>
+ <script src="/cm/js/util.js"/>
+ <script src="/cm/js/transSub.js"/>
+ <script src="/cm/js/callService.js"/>
+ <script src="/cm/js/gds.js"/>
+ <script src="/cm/js/wconv.js"/>
+ <script src="/cm/js/convertJs/Global_Script.js"/>
+ <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+ <script src="/cm/js/convertJs/comm_Webservice.js"/>
+ <script src="/cm/js/convertJs/Accounting_Script.js"/>
+        <script><![CDATA[
+/*===================================File description================================================
+ * Create Date : 2017/10/09
+ * Creator     : 구종식
+ * Desc        : 휴대폰 승인요청 
+ *====================================================================================================*/
+var sSysDate;
+var sSysTime;
+var gsRspCode;
+var gsAdmitNo;
+var gsCellDealNo;
+var gsCellDealNo2;
+var isPopup = false;
+var sPhoneid = "";
+//var pCustCom; //파라미터로 받는
+var fv_args; 
+//USEKEY
+//*************************************
+//form load
+//*************************************
+scwin.init = function() {
+	var indata = $w.getParameter("param");//
+	try {
+		fv_args = JSON.parse(indata);
+	} catch(e) {}
+
+    //Div0.url = "accpopup::9995_Div1.xml"; //휴대폰 승인결과화면	
+	//wdiv0.setSrc( "/ui/cbso/CBSO051S.xml" );
+	
+    //SOBJ_Account.WSDL = gds.gWsdlAccounting;
+    //-----서버 시간 받기
+    //transaction("getServerTime", "NewGen::getServerTime.jsp", "", "gDs_ServerTime=output", "", "tr_callback");
+    gfn_getServerTime();
+    scwin.tr_callback("getServerTime","0","");
+};
+
+//*************************************
+// tr_callback
+//*************************************
+scwin.tr_callback = function(ServiceId, errorCd, errorMsg) {
+    if (ServiceId == "getServerTime") {
+        if (errorCd != 0) {
+            wprom.alert("errorCd:::[" + errorCd + "] errorMsg:::[" + errorMsg + "]");
+            return;
+        }
+
+        // 날짜 세팅
+        sSysDate = gds.gDs_ServerTime.getCellData(0, "sToday").substr(0, 8);
+        sSysTime = gds.gDs_ServerTime.getCellData(0, "sToday").substr(8, 14);
+     
+        scwin.initialize();
+    }
+};
+
+//*************************************
+// initialize 화면 초기화 설정  
+//*************************************
+scwin.initialize = function() {
+    Div0.show();
+    wdiv0.show();
+    Div1.hide();
+    wdiv1.hide();
+    //Div1.url = "accpopup::9995_Div2.xml";
+//    Div0.hide();
+//    Div1.show();
+    wdiv1.setSrc( "/ui/cbso/CBSO052S.xml" );
+    
+    sApprovalNo.setDisabled(true);// false;
+    sApplyType.setValue("");
+    sApplyYM.setValue("");
+    sApplySer.setValue("");
+    sCellPhoneNo1.setValue( "010");
+    sCellPhoneNo2.setValue("");
+    sCellPhoneNo3.setValue("");
+    sCustCom.setValue("SKT");
+    nReqAmt.setValue(0);
+    sCellPhoneOwner.setValue("");
+    sCellPhoneOwnerID.setValue("");
+    sApprovalNo.setValue("");
+    sReqAgnt.setValue("");
+    sReqAgntName.setValue("");
+    sBeginDate.setValue("");
+
+    //popup 오픈시 데이터 세팅 +  disabled 
+    if (wconv.length(fv_args.pCustCom) != 0) {
+        isPopup = true;
+        sCustCom.setValue( fv_args.pCustCom);
+        sApplyType.setValue(fv_args.pApplyType); //청약번호 
+        sApplyYM.setValue(fv_args.pApplyYM);
+        sApplySer.setValue(fv_args.pApplySer);
+        sCellPhoneOwner.setValue(fv_args.pCellPhoneOwner); // 휴대폰 가입자명
+        //2015.04.14 이재정. 휴대폰 결제 전문 양식 변경 요청
+        //Div0.sCellPhoneOwnerID.value = pCellPhoneOwnerID  ;	// 휴대폰  가입자 주민번호
+        sCellPhoneOwnerID.setValue(pCellPhoneOwnerID.substr(0, 7)) ; // 휴대폰  가입자 생년월일,성별
+        sCellPhoneNo1.setValue(fv_args.pCellPhoneNo1); // 휴대폰 번호
+        sCellPhoneNo2.setValue(fv_args.pCellPhoneNo2); // 휴대폰 번호
+        sCellPhoneNo3.setValue(fv_args.pCellPhoneNo3); // 휴대폰 번호
+        nReqAmt.setValue(fv_args.pReqAmt); // 승인요청금액
+        sBeginDate.setValue(fv_args.pBeginDate); // 책임개시일 
+        sReqAgnt.setValue(fv_args.pReqAgnt);
+        sReqAgntName.setValue(fv_args.pReqAgntName);
+        //
+        sCustCom.setDisabled(true);//
+        sApplyType.setDisabled(true);//
+        sApplyYM.setDisabled(true);//
+        sApplySer.setDisabled(true);//
+        sCellPhoneOwner.setDisabled(true);//
+        sCellPhoneOwnerID.setDisabled(true);//
+        sCellPhoneNo1.setDisabled(true);//
+        sCellPhoneNo2.setDisabled(true);//
+        sCellPhoneNo3.setDisabled(true);//
+        nReqAmt.setDisabled(true);//
+        sReqAgnt.setDisabled(true);//
+        bNew.setDisabled(true);//
+    }
+};
+
+//*************************************
+// 승인요청  - 필수 사항 체크 
+//*************************************  
+scwin.checkValue = function() {
+    if (wconv.length(sCellPhoneNo1.getValue()) == 0 || 
+        wconv.length(sCellPhoneNo2.getValue()) == 0 || 
+        wconv.length(sCellPhoneNo3.getValue()) == 0) {
+        wprom.alert("휴대폰 번호를 입력해주세요.");
+        sCellPhoneNo2.focus();
+        return false;
+    }
+    if (sApprovalNo.getValue() == "") {
+        wprom.alert("승인을 받기 위한 인증번호가 필요합니다.");
+        return false;
+    }
+    if (sCellDealNo.getValue() == "") {
+        wprom.alert("인증거래번호가 필요합니다. SMS인증을 다시 받으세요.");
+        return false;
+    }
+    if (sPhoneid.getValue() == "") {
+        wprom.alert("USEKEY 필요합니다. 관리자에게 문의하십시요.");
+        return false;
+    }
+    if (wconv.length(sCellPhoneOwner.getValue()) == 0) {
+        wprom.alert("가입자명을 입력해주세요.");
+        sCellPhoneOwner.focus();
+        return false;
+    }
+    if (wconv.toNumber(nReqAmt.getValue()) < 10 || wconv.toNumber(nReqAmt.getValue()) > 5000) {
+        wprom.alert("금액은 10원 부터 5,000원 이하 입니다.");
+        nReqAmt.focus();
+        return false;
+    }
+    if (wconv.length(sCellPhoneOwnerID.getValue()) == 0) {
+        wprom.alert("가입자주민번호 앞7자리를 입력해주세요.");
+        sCellPhoneOwnerID.focus();
+        return false;
+    }
+    if (wconv.length(sReqAgnt.getValue()) == 0) {
+        wprom.alert("취급자를 입력해주세요.");
+        sReqAgnt.focus();
+        return false;
+    }
+
+
+    //주민번호 확인
+    if (wconv.length(sCellPhoneOwnerID.getValue()) != 7) {
+        wprom.alert("가입자주민번호 앞7자리를 확인하십시오.");
+        sCellPhoneOwnerID.focus();
+        return false;
+    }
+    if (wconv.length(sBeginDate.getValue()) == 0) {
+        //책임개시일을 입력하지 않은 경우 Server에서 현재일자로 세팅한다.
+        sBeginDate.setValue("");
+    } else if (wconv.length(sBeginDate.getValue()) == 8) {
+        if (Div0.sBeginDate < sSysDate) {
+            if (!wprom.confirm("책임개시일은 오늘보다 크거나 같아야 합니다. 계속 작업하시겠습니까?")) {
+                return false; 
+            }
+        }
+    } else {
+        wprom.alert("책임개시일을 확인하십시오.");
+        sBeginDate.focus();
+        return false;
+    }
+    if (wconv.length(sCustCom.getValue()) == 0) {
+        wprom.alert("통신사를 선택하십시오.");
+        return false;
+    }
+    return true;
+};
+
+//*************************************
+// 인증요청  2014-02-26 정연호
+//************************************* 
+scwin.requestApproval = function() {
+    if (wconv.length(sCellPhoneNo1.getValue()) == 0 || 
+        wconv.length(sCellPhoneNo2.getValue()) == 0 || 
+        wconv.length(sCellPhoneNo3.getValue()) == 0) {
+        wprom.alert("휴대폰 번호를 입력해주세요.");
+        sCellPhoneNo2.focus();
+        return false;
+    }
+    if (wconv.length(sCellPhoneOwner.getValue()) == 0) { 
+        wprom.alert("가입자명을 입력해주세요.");
+        sCellPhoneOwner.focus();
+        return false;
+    }
+    if (wconv.toNumber(nReqAmt.getValue()) < 10 || wconv.toNumber(nReqAmt.getValue()) > 5000) {
+        wprom.alert("금액은 10원 부터 5,000원 이하 입니다.");
+        nReqAmt.focus();
+        return false;
+    }
+    if (wconv.length(sCellPhoneOwnerID.getValue()) == 0) {
+        wprom.alert("가입자주민번호 앞7자리를 입력해주세요.");
+        sCellPhoneOwnerID.focus();
+        return false;
+    }
+
+
+    //주민번호 확인
+    if (wconv.length(sCellPhoneOwnerID.getValue()) != 7) {
+        wprom.alert("가입자주민번호 앞7자리를 확인하십시오.");
+        sCellPhoneOwnerID.focus();
+        return false;
+    }
+    if (wconv.length(sCustCom.getValue()) == 0) {
+        wprom.alert("통신사를 선택하십시오.");
+        return false;
+    }
+    wconv.clear(DsWs_Search4); // 조회목록
+    wconv.clear(DsWs_Warning4); // 오류
+	/*    
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Account, "com.inswave.accounting.task.AccountingPhoneTask", "requestApproval", "999", "1");
+    var sCellPhoneNo = sCellPhoneNo1.getValue() + sCellPhoneNo2.getValue() + sCellPhoneNo3.getValue();
+    // 조회조건
+    gfn_SetParam(MethodObj, "sCellPhoneNo", sCellPhoneNo);
+    gfn_SetParam(MethodObj, "sCellPhoneNo1", sCellPhoneNo1.getValue());
+    gfn_SetParam(MethodObj, "sCellPhoneNo2", sCellPhoneNo2.getValue());
+    gfn_SetParam(MethodObj, "sCellPhoneNo3", sCellPhoneNo3.getValue());
+    gfn_SetParam(MethodObj, "sCustCom", sCustCom.getValue());
+    gfn_SetParam(MethodObj, "nReqAmt", nReqAmt.getValue());
+    gfn_SetParam(MethodObj, "sCellPhoneOwner", sCellPhoneOwner.getValue());
+    gfn_SetParam(MethodObj, "sCellPhoneOwnerID", sCellPhoneOwnerID.getValue());
+    gfn_SetParam(MethodObj, "sUserID", util.getGdsValue("gUserID"));
+    gfn_CallService(SOBJ_Account, DOBJ_Search4, MethodObj);
+	*/
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingPhoneTask","requestApproval", "999", "1");
+	MethodObj.setId("requestApproval");
+    var sCellPhoneNo = sCellPhoneNo1.getValue() + sCellPhoneNo2.getValue() + sCellPhoneNo3.getValue();
+    // 조회조건
+    MethodObj.setParam( "sCellPhoneNo", sCellPhoneNo);
+    MethodObj.setParam( "sCellPhoneNo1", sCellPhoneNo1.getValue());
+    MethodObj.setParam( "sCellPhoneNo2", sCellPhoneNo2.getValue());
+    MethodObj.setParam( "sCellPhoneNo3", sCellPhoneNo3.getValue());
+    MethodObj.setParam( "sCustCom", sCustCom.getValue());
+    MethodObj.setParam( "nReqAmt", nReqAmt.getValue());
+    MethodObj.setParam( "sCellPhoneOwner", sCellPhoneOwner.getValue());
+    MethodObj.setParam( "sCellPhoneOwnerID", sCellPhoneOwnerID.getValue());
+    MethodObj.setParam( "sUserID", util.getGdsValue("gUserID"));
+    //
+	MethodObj.setUrl("/common/CBSO024PController.do");
+	MethodObj.setXPath("//*/ACCAH01");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	util.jSonDsCreate(_tranSync.getDsJson("ACCAH01"), "DsWs_Search4");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning4");
+	util.setCompBindRefresh("DsWs_Search4");
+	util.setRowPosition(DsWs_Search4, 0);
+	
+    if (DsWs_Warning4.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning4.getCellData(0, "msg"));
+        return;
+    }
+    
+    var sRspCode = DsWs_Search4.getCellData(0, "sRspCode");
+    var sCellDealNo = DsWs_Search4.getCellData(0, "sCellDealNo");
+    //승인번호와 응답코드를 전역변수에 할당한다.
+    gsRspCode = sRspCode;
+    gsCellDealNo2 = sCellDealNo;
+    sPhoneid = DsWs_Search4.getCellData(0, "sPhoneid");
+    sCellDealNo.setValue(gsCellDealNo2);
+    sPhoneid.setValue(sPhoneid);
+    if (sRspCode == "0000") {
+        wprom.alert("휴대폰 인증이 완료되었습니다.");
+        sApprovalNo.setDisabled(false);
+    }
+};
+
+//*************************************
+// 승인요청  
+//************************************* 
+scwin.doCheckRequestAdmit = function() {
+    if (!scwin.checkValue()) {
+        return;
+    }
+    wconv.clear(DsWs_Search); // 조회목록
+    wconv.clear(DsWs_Warning); // 오류
+    wconv.clear(DsWs_TotalCnt); // 총건수
+    var sCellPhoneNo = sCellPhoneNo1.getValue() + sCellPhoneNo2.getValue() + sCellPhoneNo3.getValue();
+	/*    
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Account, "com.inswave.accounting.task.AccountingPhoneTask", "selectSameAdmitCount", "999", "1");
+    // 조회조건
+    gfn_SetParam(MethodObj, "sReqDate", sSysDate);
+    gfn_SetParam(MethodObj, "sCellPhoneNo", sCellPhoneNo);
+    // 조회실행
+    gfn_CallService(SOBJ_Account, DOBJ_Search, MethodObj);
+	*/
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingPhoneTask","selectSameAdmitCount", "999", "1");
+	MethodObj.setId("selectSameAdmitCount");
+    // 조회조건
+    MethodObj.setParam( "sReqDate", sSysDate);
+    MethodObj.setParam( "sCellPhoneNo", sCellPhoneNo);
+    //
+	MethodObj.setUrl("/common/CBSO024PController.do");
+	MethodObj.setXPath("//*/ACCAH01");
+	MethodObj.addXPath("//*/vector");
+	MethodObj.addXPath("//WARNING");
+	
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_Team.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("ACCAH01"), "DsWs_Search");
+	util.jSonDsCreate(_tranSync.getDsJson("vector"), "DsWs_TotalCnt");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+	util.setCompBindRefresh("DsWs_Search");
+	util.setRowPosition(DsWs_Search, 0);
+	    
+    if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    }
+    if (DsWs_Search.getCellData(0, "nSameCnt") >= 2) {
+        wprom.alert("당일 해당 휴대폰으로 동일한 금액의 결제건이 " + DsWs_Search.getCellData(0, "nSameCnt") + "회 이상 있습니다.\n" + "결제건을 확인한 후 처리하세요.");
+        return;
+    }
+    scwin.doRequestAdmit();
+};
+
+//*************************************************************************************** 
+//  승인 요청  
+//***************************************************************************************  
+scwin.doRequestAdmit = function() {
+    wconv.clear(DsWs_Search2); // 조회목록
+    wconv.clear(DsWs_Warning2); // 오류
+    wconv.clear(DsWs_TotalCnt2); // 총건수
+    //승인후 받는 변수값 초기화
+    var sRspCode = "";
+    var sResultmsg = "";
+    var sAdmitNo = "";
+    var sCellDealNo = "";
+    if (!wprom.confirm("고객님이 가입하신 휴대폰번호로 The-K 손해보험 보험료 " + nReqAmt.getValue() + "원이 결제됩니다.\n" + "휴대폰으로 결제하신 보험료는 책임개시일과" + "상관없이 익월 휴대폰요금과 합산하여 청구됩니다." + "\n위 사항에 동의하시겠습니까?")) {
+        return;
+    }
+    var sCellPhoneNo = sCellPhoneNo1.getValue() + sCellPhoneNo2.getValue() + sCellPhoneNo3.getValue();
+	/*    
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Account, "com.inswave.accounting.task.AccountingPhoneTask", "requestPhoneAdmit", "999", "1");
+    var sCellPhoneNo = sCellPhoneNo1.getValue() + sCellPhoneNo2.getValue() + sCellPhoneNo3.getValue();
+
+    // 조회조건
+    gfn_SetParam(MethodObj, "sApplyType", sApplyType.getValue());
+    gfn_SetParam(MethodObj, "sApplyYM", sApplyYM.getValue());
+    gfn_SetParam(MethodObj, "sApplySer", sApplySer.getValue());
+    gfn_SetParam(MethodObj, "sCellPhoneNo", sCellPhoneNo);
+    gfn_SetParam(MethodObj, "sCellPhoneNo1", sCellPhoneNo1.getValue());
+    gfn_SetParam(MethodObj, "sCellPhoneNo2", sCellPhoneNo2.getValue());
+    gfn_SetParam(MethodObj, "sCellPhoneNo3", sCellPhoneNo3.getValue());
+    gfn_SetParam(MethodObj, "sCustCom", sCustCom.getValue());
+    gfn_SetParam(MethodObj, "nReqAmt", nReqAmt.getValue());
+    gfn_SetParam(MethodObj, "sCellPhoneOwner", sCellPhoneOwner.getValue());
+    gfn_SetParam(MethodObj, "sCellPhoneOwnerID", sCellPhoneOwnerID.getValue());
+    gfn_SetParam(MethodObj, "sBeginDate", sBeginDate.getValue());
+    gfn_SetParam(MethodObj, "sReqAgnt", sReqAgnt.getValue());
+    gfn_SetParam(MethodObj, "sSettleStat", "R");
+    gfn_SetParam(MethodObj, "sUserID", util.getGdsValue("gUserID"));
+    gfn_SetParam(MethodObj, "sCellDealNo", sCellDealNo.getValue()); // 거래번호
+    gfn_SetParam(MethodObj, "sPhoneid", sPhoneid.getValue()); // USEKEY
+    gfn_SetParam(MethodObj, "sApprovalNo", sApprovalNo.getValue()); // 인증번호
+    gfn_CallService(SOBJ_Account, DOBJ_Search2, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingPhoneTask","requestPhoneAdmit", "999", "1");
+	MethodObj.setId("requestPhoneAdmit");
+    // 조회조건
+    MethodObj.setParam( "sApplyType", sApplyType.getValue());
+    MethodObj.setParam( "sApplyYM", sApplyYM.getValue());
+    MethodObj.setParam( "sApplySer", sApplySer.getValue());
+    MethodObj.setParam( "sCellPhoneNo", sCellPhoneNo);
+    MethodObj.setParam( "sCellPhoneNo1", sCellPhoneNo1.getValue());
+    MethodObj.setParam( "sCellPhoneNo2", sCellPhoneNo2.getValue());
+    MethodObj.setParam( "sCellPhoneNo3", sCellPhoneNo3.getValue());
+    MethodObj.setParam( "sCustCom", sCustCom.getValue());
+    MethodObj.setParam( "nReqAmt", nReqAmt.getValue());
+    MethodObj.setParam( "sCellPhoneOwner", sCellPhoneOwner.getValue());
+    MethodObj.setParam( "sCellPhoneOwnerID", sCellPhoneOwnerID.getValue());
+    MethodObj.setParam( "sBeginDate", sBeginDate.getValue());
+    MethodObj.setParam( "sReqAgnt", sReqAgnt.getValue());
+    MethodObj.setParam( "sSettleStat", "R");
+    MethodObj.setParam( "sUserID", util.getGdsValue("gUserID"));
+    MethodObj.setParam( "sCellDealNo", sCellDealNo.getValue()); // 거래번호
+    MethodObj.setParam( "sPhoneid", sPhoneid.getValue()); // USEKEY
+    MethodObj.setParam( "sApprovalNo", sApprovalNo.getValue()); // 인증번호
+    //
+	MethodObj.setUrl("/common/CBSO024PController.do");
+	MethodObj.setXPath("//*/ACCAH01");
+	MethodObj.addXPath("//*/vector");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_Team.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("ACCAH01"), "DsWs_Search2");
+	util.jSonDsCreate(_tranSync.getDsJson("vector"), "DsWs_TotalCnt2");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning2");
+	util.setCompBindRefresh("DsWs_Search2");
+	util.setRowPosition(DsWs_Search2, 0);
+	    
+    if (DsWs_Warning2.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning2.getCellData(0, "msg"));
+        return;
+    }
+    var sRspCode = DsWs_Search2.getCellData(0, "sRspCode");
+    var sResultmsg = DsWs_Search2.getCellData(0, "sResultmsg");
+    var sAdmitNo = DsWs_Search2.getCellData(0, "sAdmitNo");
+    var sCellDealNo = DsWs_Search2.getCellData(0, "sCellDealNo");
+
+    //승인번호와 응답코드를 전역변수에 할당한다.
+    gsRspCode = sRspCode;
+    gsAdmitNo = sAdmitNo;
+    gsCellDealNo = sCellDealNo;
+    if (sRspCode == "0000") {
+        wprom.alert("휴대폰 승인이 완료되었습니다.\n\n승인번호는 [" + sAdmitNo + "] 입니다.");
+    } else {
+        wprom.alert("[승인]에러코드 : " + sRspCode + "\n에러메시지 : " + sResultmsg);
+        // 인증처리부터 다시 시작
+        sApprovalNo.setValue("");
+        sApprovalNo.setDisabled(true);//
+        return;
+    }
+    scwin.getPhoneAdmitResult();
+};
+
+//*************************************************************************************** 
+//  승인후 조회  
+//***************************************************************************************   
+scwin.getPhoneAdmitResult = function() {
+    wconv.clear(DsWs_Search3); // 조회목록
+    wconv.clear(DsWs_Warning3); // 오류
+    wconv.clear(DsWs_TotalCnt3); // 총건수
+	/*    
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Account, "com.inswave.accounting.task.AccountingPhoneTask", "selectPhoneAdmitDetail", "999", "1");
+    gfn_SetParam(MethodObj, "sCellDealNo", gsCellDealNo);
+    gfn_CallService(SOBJ_Account, DOBJ_Search3, MethodObj);
+	*/
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingPhoneTask","selectPhoneAdmitDetail", "999", "1");
+	MethodObj.setId("selectPhoneAdmitDetail");
+    // 조회조건
+    MethodObj.setParam( "sCellDealNo", gsCellDealNo);
+    //
+	MethodObj.setUrl("/common/CBSO024PController.do");
+	MethodObj.setXPath("//*/ACCAH01");
+	MethodObj.addXPath("//*/vector");
+	MethodObj.addXPath("//WARNING");
+	
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_Team.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("ACCAH01"), "DsWs_Search3");
+	util.jSonDsCreate(_tranSync.getDsJson("vector"), "DsWs_TotalCnt3");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning3");
+	util.setCompBindRefresh("DsWs_Search3");
+	util.setRowPosition(DsWs_Search3, 0);	
+    //휴대폰 승인결과화면	
+    //alert(DsWs_Search3.saveXML()); 
+    if (DsWs_Search3.getCellData(0, "result") == "0") {
+        wprom.alert("해당 데이터가 존재하지 않습니다.");
+        return;
+    }
+    Div1.show();
+    Div0.hide();
+    Div1_sCustCom.setValue( DsWs_Search3.getCellData(0, "sCustCom"));
+    Div1_sCellDealNo.setValue(DsWs_Search3.getCellData(0, "sCellDealNo") );
+    Div1_sCellPhoneNo.setValue( DsWs_Search3.getCellData(0, "sCellPhoneNo1") + "-" + DsWs_Search3.getCellData(0, "sCellPhoneNo2") + "-" + DsWs_Search3.getCellData(0, "sCellPhoneNo3"));
+    Div1_sCellPhoneOwner.setValue( DsWs_Search3.getCellData(0, "sCellPhoneOwner") );
+    Div1_nReqAmt.setValue( DsWs_Search3.getCellData(0, "nReqAmt") + "원" );
+    Div1_sCellPhoneOwnerID.setValue( DsWs_Search3.getCellData(0, "sCellPhoneOwnerID") );
+    Div1_sReqAgnt.setValue( DsWs_Search3.getCellData(0, "sReqAgnt") + "   " + DsWs_Search3.getCellData(0, "sReqAgntName") );
+    Div1_sBeginDate.setValue( DsWs_Search3.getCellData(0, "sBeginDate") );
+    Div1_sReqDate.setValue( DsWs_Search3.getCellData(0, "sReqDate") + DsWs_Search3.getCellData(0, "sReqTime") );
+    Div1_sAdmitDate.setValue( DsWs_Search3.getCellData(0, "sAdmitDate") + DsWs_Search3.getCellData(0, "sAdmitTime") );
+    Div1_sRspCode.setValue( DsWs_Search3.getCellData(0, "sRspCode") + "   " + DsWs_Search3.getCellData(0, "sRspCodeName") );
+    Div1_sAdmitNo.setValue( DsWs_Search3.getCellData(0, "sAdmitNo") );
+
+
+    // 팝업에서 승인이 완료된 경우에는 '새작업' 불가
+    if (isPopup) {
+        Div1_bNew.setDisabled(true);//
+    } else {
+        Div1_bClose.setDisabled(true);//
+    }
+};
+
+//*************************************************************************************** 
+//  승인요청자 이름  
+//***************************************************************************************  
+scwin.sReqAgnt_OnKillFocus = function() {
+    if (wconv.length(sReqAgnt.getValue()) == 0) {
+        sReqAgnt.setValue("");
+        sReqAgntName.setValue("");
+        return;
+    }
+    
+    var sPopParm = " psButton=" + "";
+    var argArry = agf_Pop("사원목록", sReqAgnt, sReqAgntName, "", sPopParm);
+    
+    if (wconv.length(argArry) > 0) {
+        if (argArry[0] == "noneClose") {
+            sReqAgnt.setValue("");
+            sReqAgntName.setValue("");
+        }
+    }
+};
+
+//*************************************************************************************** 
+//  신규승인 
+//***************************************************************************************  
+scwin.bNew_OnClick = function(e) {
+    scwin.initialize();
+};
+
+scwin.bClose_OnClick = function(e) {
+    if (isPopup) {
+        var sArg = gsRspCode + "^" + gsAdmitNo + "^" + gsCellDealNo;
+        wprom.close(sArg);
+    } else {
+        wprom.alert("팝업으로 열린 경우에만 닫을 수 있습니다.");
+        return;
+    }
+};
+
+//장현 2014-07-24 화면의 닫기버튼을 누르지 않고 'X' 버튼으로 화면 닫을때 승인번호가 세팅되지 않아
+//bClose_OnClick 메소드 호출하도록 변경 처리 함
+scwin.OnUnloadCompleted = function(obj) {
+    scwin.bClose_OnClick();
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="9995"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;  height:450px; left:0px; top:0px; width:700px;"
+            userData1="휴대폰 승인요청" userData2=" OnUnloadCompleted:scwin.OnUnloadCompleted;  OnLoadCompleted:scwin.OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+            </ServiceObjects>
+            <xf:group class="" id="Div0"
+            	style="position:absolute; height:435px; left:0px; top:0px; width:725px;"
+            	tabIndex="1" userData1="Div0">
+            	<w2:wframe
+            		style="position:absolute; height:435px; left:0px; top:0px; width:725px;"
+            		id="wdiv0" src="/ui/cbso/CBSO051S.xml" scope="false">
+            	</w2:wframe>
+            </xf:group>
+            <xf:group class="" id="Div1"
+            	style="position:absolute;display:none;  height:432px; left:1px; top:7px; width:725px;"
+            	tabIndex="2" userData1="승인번호">
+            	<w2:wframe
+            		style="position:absolute; height:435px; left:0px; top:0px; width:725px;"
+            		id="wdiv1" scope="false" src="">
+            	</w2:wframe>
+            </xf:group>
+        </xf:group>
+    </body>
+</html>

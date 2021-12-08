@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="DsWs_Cnt" repeatNode="map" userData2="//*/hashtable/data/LTICA01Count"/>
+                <w2:dataList baseNode="list" id="DsWs_List" repeatNode="map" userData2="//*/vector/data/LTIEA01"/>
+                <w2:dataList baseNode="list" id="DsWs_Warning" repeatNode="map" userData2="//*/WARNING"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+            <script src="/cm/js/convertJs/Global_Script.js" />
+	<script src="/cm/js/convertJs/LongTerm_Script.js" />
+	<script src="/cm/js/convertJs/comm_Webservice.js" />   
+        <script><![CDATA[
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 조회버튼  이벤트 처리
+//---------------------------------------------------------------------------
+var pageNo;
+var pageSize;
+var fv_args;
+var sInqrFlag = "";
+var sInqrValue = "";
+
+scwin.init = function() {
+	var pro = Promise.resolve();
+		window.top.util.winTopShowModalChk = "T";
+		util.winTopShowModal();
+	pro = pro.then(function(rv) {
+    	return util.winTopShowModalPromise();
+	}); 
+	pro = pro.then(function(rv) {
+     //init 부분 함수 입력하는곳
+wprom.setPopupInit(448,330, "피보험자조회");
+	var indata = $w.getParameter("param");
+	try {
+		fv_args = JSON.parse(indata);
+		sInqrFlag = fv_args.sInqrFlag;
+		sInqrValue = fv_args.sInqrValue;
+	} catch(e) {
+	};
+    scwin.lfn_Search_Async();
+    
+        return ;		// init 함수를 종료하고자 할때 사용
+		// return Promise.reject("오류관련처리"); 
+	});
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});	
+	pro = pro.catch(function(rj) {
+		util.winTopHideModal();
+		//alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+	});	 
+	return pro; 
+};
+
+scwin.lfn_Search_Async = function(e) {
+	util.eventAsyncCall(this, scwin.lfn_Search, arguments);
+};
+scwin.lfn_Search = function(e) {
+    wconv.clear(DsWs_List); //리스트 내용삭제
+    
+//    SOBJ_List.WSDL = gds.gWsdlBasis; // 서비스 Obj WSDC 설정
+//    var MethodObj = gfn_CreateMethodObj(SOBJ_List, "com.inswave.longterm.psv.ens.task.EAD023Task", "selectInsInrpsList");
+//    gfn_SetParam(MethodObj, "sInqrFlag", wconv.trim(sInqrFlag));
+//    gfn_SetParam(MethodObj, "sInqrValue", wconv.trim(sInqrValue));
+//    var result = gfn_CallService(SOBJ_List, DOBJ_List, MethodObj);
+    
+	var MethodObj = new callService("com.inswave.longterm.psv.ens.task.EAD023Task", "selectInsInrpsList");
+	MethodObj.setId("selectInsInrpsList");
+	//MethodObj.setParam("sAgentCode", gUserID);
+	MethodObj.setParam( "sInqrFlag", wconv.trim(sInqrFlag));
+	MethodObj.setParam( "sInqrValue", wconv.trim(sInqrValue));
+	
+	MethodObj.setUrl("/contract/CBSC151PController.do");//배포후변경할것(controller위치와 이름)
+	MethodObj.setXPath("//*/vector/data/LTIEA01");
+	MethodObj.addXPath("//*/WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	
+	util.jSonDsCreate(_tranSync.getDsJson("LTIEA01"), "DsWs_List");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+
+	util.setCompBindRefresh("DsWs_List");//바인딩을 해줌
+
+	util.setRowPosition(DsWs_List, 0);	
+	
+ 	//에러처리 	
+ 	if (DsWs_Warning.getRowCount() != 0) {
+       wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+       return;
+    }
+};
+
+scwin.lfn_Grd_InsInrpsList_OnCellClick = function(row, col) {
+    var ind = row;
+    // 계약정보 넘겨줌(그리드의 컬럼순).
+    var returnMsg = DsWs_List.getCellData(row, "sInrpsCd") + "^" + //피보험자코드
+        DsWs_List.getCellData(row, "sInrpsName") + "^" + //피보험자명
+        DsWs_List.getCellData(row, "sCrtorRelnNm"); //계약자와의관계
+        //alert(returnMsg);
+    wprom.close(returnMsg);
+};
+
+scwin.btn_close_OnClick = function(e) {
+    wprom.close();
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="D023_Pop"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7; left:0px; top:0px; width:416px;"
+            userData1="피보험자조회" userData2=" OnLoadCompleted:scwin.lfn_D023_Pop_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+            </ServiceObjects>
+            <w2:textbox id="Static5" label="피보험자리스트" style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; width:249px;" tagname="" class="sub_pop_title01" />
+            <xf:switch id="switch_88" style=" ">
+                <xf:case id="Default_89" style=" ">
+                    <w2:gridView autoFit="allColumn" autoFitMinWidth="100" class="sty_Grid" dataList="DsWs_List"
+                        ev:oncellclick="scwin.lfn_Grd_InsInrpsList_OnCellClick" focusMode="row" id="Grd_InsInrpsList" inputType="text"
+                        readOnly="true"
+                        style="position:absolute; UseDBuff:true;  ScrollCell:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  AutoFitEndLine:Hide;  height:241px; left:0px; top:30px; width:416px;" tabIndex="4">
+                        <w2:header>
+                            <w2:row>
+                                <w2:column dataType="text" id="head_id_673" inputType="text" readOnly="true" style="height:30px;"
+                                    userData1="0" userData3="0" value="순번" width="38"/>
+                                <w2:column dataType="text" id="head_id_674" inputType="text" readOnly="true" style="height:30px;"
+                                    userData1="1" userData3="0" value="계약자와의관계" width="104"/>
+                                <w2:column dataType="text" id="head_id_675" inputType="text" readOnly="true" style="height:30px;"
+                                    userData1="2" userData3="0" value="피보험자명" width="131"/>
+                                <w2:column dataType="text" id="head_id_676" inputType="text" readOnly="true" style="height:30px;"
+                                    userData1="3" userData3="0" value="피보험자주민번호" width="120"/>
+                            </w2:row>
+                        </w2:header>
+                        <w2:gBody>
+                            <w2:row>
+                                <w2:column dataType="text" expression="rowIndex()+1" id="sMainCode" inputType="expression" readOnly="true"
+                                    style="height:27px;" textAlign="center" userData1="0" userData3="0" width="38"/>
+                                <w2:column dataType="text" id="sCrtorRelnNm" inputType="text" readOnly="true" style="" textAlign="center"
+                                    userData1="1" userData3="0" width="104"/>
+                                <w2:column dataType="text" id="sInrpsName" inputType="text" readOnly="true" style="" textAlign="left"
+                                    userData1="2" userData3="0" width="131"/>
+                                <w2:column dataType="text" displayFormat="######-#######" id="sInrpsCd" inputType="text" readOnly="true"
+                                    style="" textAlign="center" userData1="3" userData3="0" width="120"/>
+                            </w2:row>
+                        </w2:gBody>
+                    </w2:gridView>
+                </xf:case>
+            </xf:switch>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.btn_close_OnClick" id="btn_close"
+                style="position:absolute; ImageID:btn_Comm_Close;  height:20px;left:367px;top:0px;" tabIndex="5" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+        </xf:group>
+    </body>
+</html>

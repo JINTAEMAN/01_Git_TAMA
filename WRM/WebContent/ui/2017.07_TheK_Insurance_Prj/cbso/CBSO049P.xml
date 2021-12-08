@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="Ds_BntpCd" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="chk" name="chk"/>
+                        <w2:column dataType="text" id="sBntpLargClsfCd" name="sBntpLargClsfCd"/>
+                        <w2:column dataType="text" id="sBntpDurnClsfCd" name="sBntpDurnClsfCd"/>
+                        <w2:column dataType="text" id="sBntpCd" name="sBntpCd"/>
+                        <w2:column dataType="text" id="sBntpCdName" name="sBntpCdName"/>
+                        <w2:column dataType="text" id="nRato" name="nRato"/>
+                        <w2:column dataType="text" id="sBntpExpln1" name="sBntpExpln1"/>
+                        <w2:column dataType="text" id="sBntpExpln2" name="sBntpExpln2"/>
+                        <w2:column dataType="text" id="sUdrtkStndCont1" name="sUdrtkStndCont1"/>
+                        <w2:column dataType="text" id="sUdrtkStndCont2" name="sUdrtkStndCont2"/>
+                        <w2:column dataType="text" id="sBntpEqmtUnit" name="sBntpEqmtUnit"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_Warning" repeatNode="map" userData2="//*/WARNING"/>
+                <w2:dataList baseNode="list" id="DsWs_BntpCd" repeatNode="map" userData2="//*/vector/data/LTIBB01RprtnBntpCd"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+ <script src="/cm/js/common.js"/>
+ <script src="/cm/js/val_lib.js"/>
+ <script src="/cm/js/util.js"/>
+ <script src="/cm/js/transSub.js"/>
+ <script src="/cm/js/callService.js"/>
+ <script src="/cm/js/gds.js"/>
+ <script src="/cm/js/wconv.js"/>
+ <script src="/cm/js/convertJs/Global_Script.js"/>
+ <script src="/cm/js/convertJs/comm_Webservice.js" />
+ <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+
+        <script><![CDATA[
+/****************************************************************************
+ * 프로그램번호   : B650_Pop
+ * 프로그램명     : 시설소유자업종코드조회ㅣ
+ * 파일명         : B650_Pop.xml
+ * 프로그램 내용  : 시설소유자업종코드조회ㅣ
+ * 관련 프로그램  : 
+ * 작성자         : 
+ * 작성일         : 2013-06-04
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+var sStndDate = "";
+
+// 기준일자
+//========================================================//
+// 파라메터 정보 및 리턴정보 영역(사용설명 포함)
+//========================================================//
+// * param
+//
+// * return
+//
+//   retArr[0] : 업종코드
+//   retArr[1] : 업종명
+//   retArr[2] : 업종시설단위
+//
+//========================================================//
+scwin.init = function() {
+    // 현재시간 setting
+    //global.http.Sync = true;
+    gfn_getServerTime();
+    var sToday = wconv.substr(gDs_ServerTime.getCellData(0, "sToday"),0,8);
+    //global.http.Sync = false;	
+    //sToday = wconv.subStr(gfn_GetSysTime(), 0, 8);
+    sStndDate = sToday;
+    scwin.lfn_Search();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_search_OnClick
+// 내용        : 조회버튼클
+//---------------------------------------------------------------------------
+scwin.btn_search_OnClick = function(obj) {
+    var sBntpCd = wconv.trim(Edt_GdCd.getValue());
+    if (wconv.length(sBntpCd) > 0 && wconv.length(sBntpCd) < 2) {
+        wprom.alert("시설업종코드를 바르게 입력하세요.");
+    } else {
+        scwin.lfn_Search();
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 현재판매중인 상품리스트를 조회
+//---------------------------------------------------------------------------
+//비동기호출 
+scwin.lfn_Search = function() {
+	util.eventAsyncCall(this, scwin.lfn_Search_sync, arguments);
+};
+
+scwin.lfn_Search_sync = function() {
+    //	trace("DBB650Task lfn_Search");
+    // DataSet 초기화
+    wconv.clear(Ds_BntpCd);
+    wconv.clear(DsWs_BntpCd);
+	/*
+    // Service Object 설정
+    SOBJ_Search.WSDL = gds.gWsdlBasis;
+
+    // 서비스 호출 메소드 정의(서비스 오브젝트, 타스크, 액션, 페이지당 사이즈, 가져올 현재 페이지)
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Search, "com.inswave.longterm.ssr.pln.task.DBB650Task", "getEqmtOwnRprtnBntpCd", "", "");
+    gfn_SetParam(MethodObj, "sBntpFlagCd", "03");
+    gfn_SetParam(MethodObj, "sBntpLargClsfCd", "99");
+    gfn_SetParam(MethodObj, "sBntpDurnClsfCd", "99");
+    gfn_SetParam(MethodObj, "sBntpCd", wconv.trim(Edt_GdCd.getValue()));
+    gfn_SetParam(MethodObj, "sBntpCdName", wconv.trim(Edt_GdName.getValue()));
+
+    //trace("~~~~~~~~~~~~~" + trim(Edt_GdName.Text));
+    gfn_SetParam(MethodObj, "sStndDate", wconv.trim(sStndDate)); // 기준일자
+    // 서비스 호출 결과
+    var result = gfn_CallService(SOBJ_Search, DOBJ_Search, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB650Task", "getEqmtOwnRprtnBntpCd");
+	MethodObj.setId("getEqmtOwnRprtnBntpCd");
+	MethodObj.setParam("sBntpFlagCd", "03");
+    MethodObj.setParam( "sBntpLargClsfCd", "99");
+    MethodObj.setParam( "sBntpDurnClsfCd", "99");
+    MethodObj.setParam( "sBntpCd", wconv.trim(Edt_GdCd.getValue()));
+    MethodObj.setParam( "sBntpCdName", wconv.trim(Edt_GdName.getValue()));
+    MethodObj.setParam( "sStndDate", wconv.trim(sStndDate)); // 기준일자
+	
+	MethodObj.setUrl("/common/CBSO049PController.do");
+	MethodObj.setXPath("//*/vector/data/LTIBB01RprtnBntpCd");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_Team.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("LTIBB01RprtnBntpCd"), "DsWs_BntpCd");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+	util.setCompBindRefresh("DsWs_BntpCd");
+	util.setRowPosition(DsWs_BntpCd, 0);
+    
+    if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    }
+
+
+    //trace("DOBJ_Search=="+replace(gfn_XmlEncoder(DOBJ_Search.Value), "><", ">\n<"));
+    wconv.copy(Ds_BntpCd, "DsWs_BntpCd"); //trace("Ds_BntpCd===" + Ds_BntpCd.SaveXML());	
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_apply_OnClick(obj)
+// 내용        : 적용버튼 클릭
+//---------------------------------------------------------------------------
+scwin.btn_apply_OnClick = function(e) {
+console.log("btn_apply_OnClick : " + Ds_BntpCd.getRowPosition());
+    if (Ds_BntpCd.getRowPosition() < 0 || util.isNull(Ds_BntpCd.getRowPosition())) {
+        wprom.alert("업종을 선택하세요!");
+        return;
+    }
+    var retArr = new Array();
+    var i = 0;
+    retArr[0] = Ds_BntpCd.getCellData(Ds_BntpCd.getRowPosition(), "sBntpCd"); // 업종코드
+    retArr[1] = Ds_BntpCd.getCellData(Ds_BntpCd.getRowPosition(), "sBntpCdName"); // 업종명
+    retArr[2] = Ds_BntpCd.getCellData(Ds_BntpCd.getRowPosition(), "sBntpEqmtUnit"); // 업종시설단위
+    //trace("### 적용버튼 클릭 :" + retArr);
+    wprom.close(retArr);
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_Close_OnClick(obj)
+// 내용        : 프로그램종료
+//---------------------------------------------------------------------------
+scwin.btn_Close_OnClick = function(e) {
+    wprom.close();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : bGrd_BntpCd_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+// 내용        : 선택
+//---------------------------------------------------------------------------
+scwin.Grd_BntpCd_OnCellClick = function( nRow, nCell) {
+    if (nCell == 0) {
+        for (var i = 0; i < Ds_BntpCd.getRowCount(); i++) {
+            if (i == nRow) {
+                Ds_BntpCd.setCellData(i, "chk", "1");
+            } else {
+                Ds_BntpCd.setCellData(i, "chk", "0");
+            }
+        }
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : Grd_BntpCd_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+// 내용        : 그리드더블클릭
+//---------------------------------------------------------------------------
+scwin.Grd_BntpCd_OnCellDblClick = function( nRow, nCell) {
+    var retArr = new Array();
+    var i = 0;
+    retArr[0] = Ds_BntpCd.getCellData(Ds_BntpCd.getRowPosition(), "sBntpCd"); // 업종코드
+    retArr[1] = Ds_BntpCd.getCellData(Ds_BntpCd.getRowPosition(), "sBntpCdName"); // 업종명
+    retArr[2] = Ds_BntpCd.getCellData(Ds_BntpCd.getRowPosition(), "sBntpEqmtUnit"); // 업종시설단위
+    
+    //trace("### retArr :" + retArr);
+    wprom.close(retArr);
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B060"
+        	style="position:absolute; left:0px; top:0px;"
+        	userData1="시설소유자배상업종코드조회[B060_Pop]"
+        	userData2=" OnLoadCompleted:scwin.B650_OnLoadCompleted; ">
+        	<DataObjects>
+        		<DataObject />
+        	</DataObjects>
+        	<ServiceObjects>
+        		<ServiceObject />
+        	</ServiceObjects>
+        	<xf:group arcsize="6" class="search_area" id="Shape9" style="left:0px;top:30px; width:680px;" userData3="RoundRect">
+        	</xf:group><w2:textbox class="sty_lb_Search" id="Static0"
+        		label="시설코드번호"
+        		style="position:absolute;height:20px;width:87px;left:9px;VAlign:Middle;top:39px;"
+        		tagname="" />
+        	<xf:group arcsize="8" class="" id="Shape7"
+        		style="position:absolute;  bottom:496px; height:430px; left:4px; top:66px; width:675px;"
+        		userData3="RoundRect" />
+        	<xf:switch id="switch_136" style=" ">
+        		<xf:case id="Default_137" style=" ">
+        			<w2:gridView autoFit="allColumn"
+        				autoFitMinWidth="100" class="sty_Grid" dataList="Ds_BntpCd"
+        				ev:oncellclick="scwin.Grd_BntpCd_OnCellClick"
+        				ev:oncelldblclick="scwin.Grd_BntpCd_OnCellDblClick"
+        				focusMode="row" id="Grd_BntpCd" inputType="text"
+        				readOnly="true"
+        				style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  AutoEnter:TRUE;  height:419px; left:0 px; right:684px; top:72px; width:680px;"
+        				tabIndex="5">
+        				<w2:header>
+        					<w2:row>
+        						<w2:column dataType="text"
+        							id="head_id_1136" inputType="text" readOnly="true"
+        							style="height:20px;" userData1="0" userData3="0"
+        							value="선택" width="36" />
+        						<w2:column dataType="text"
+        							id="head_id_1137" inputType="text" readOnly="true"
+        							style="height:20px;" userData1="1" userData3="0"
+        							value="코드" width="114" />
+        						<w2:column dataType="text"
+        							id="head_id_1138" inputType="text" readOnly="true"
+        							style="height:20px;" userData1="2" userData3="0"
+        							value="코드명" width="416" />
+        						<w2:column dataType="text"
+        							id="head_id_1139" inputType="text" readOnly="true"
+        							style="height:20px;" userData1="3" userData3="0"
+        							value="적용기준" width="102" />
+        					</w2:row>
+        				</w2:header>
+        				<w2:gBody>
+        					<w2:row>
+        						<w2:column dataType="text" id="chk"
+        							inputType="checkbox" readOnly="false"
+        							style="height:27px; dataType:checkbox; " userData1="0"
+        							userData3="0" width="36" />
+        						<w2:column dataType="text" id="sBntpCd"
+        							inputType="text" readOnly="true" style="" userData1="1"
+        							userData3="0" width="114" />
+        						<w2:column dataType="text"
+        							id="sBntpCdName" inputType="text" readOnly="true"
+        							style="" userData1="2" userData3="0" width="416" />
+        						<w2:column dataType="text"
+        							id="sBntpEqmtUnit" inputType="text" readOnly="true"
+        							style="" userData1="3" userData3="0" width="102" />
+        					</w2:row>
+        				</w2:gBody>
+        			</w2:gridView>
+        		</xf:case>
+        	</xf:switch>
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.btn_Close_OnClick" id="btn_Close"
+        		style="position:absolute; ImageID:btn_Comm_Close;  height:20px;left:631px;top:0px;"
+        		tabIndex="2" type="anchor">
+        		<xf:label><![CDATA[닫기]]></xf:label>
+        	</xf:trigger>
+        	<w2:textbox id="Static5" label="시설소유자업종코드조회"
+        		style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; width:197px;"
+        		tagname="" class="sub_pop_title01" />
+        	<xf:trigger class="btn_Comm_Search"
+        		ev:onclick="scwin.btn_search_OnClick" id="btn_search"
+        		style="position:absolute; ImageID:btn_Comm_Search;  height:20px;left:611px;top:38px;width:45px;"
+        		tabIndex="1" type="anchor">
+        		<xf:label><![CDATA[조회]]></xf:label>
+        	</xf:trigger>
+        	<xf:input class="sty_ipt_search" id="Edt_GdCd" maxlength="2"
+        		style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:102px;top:37px; width:104px;"
+        		tabIndex="3" />
+        	<xf:input class="sty_ipt_search" id="Edt_GdName"
+        		style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:303px;top:37px; width:152px;"
+        		tabIndex="4" />
+        	<w2:textbox class="sty_lb_Search" id="Static1" label="시설코드명"
+        		style="position:absolute;height:20px;width:78px;left:216px;VAlign:Middle;top:39px;"
+        		tagname="" />
+        	<xf:trigger class="detail_bu02"
+        		ev:onclick="scwin.btn_apply_OnClick" id="btn_apply"
+        		style="position:absolute; ImageID:btn_Input_02;  height:20px;left:580px;top:0px; width:45px;"
+        		tabIndex="6" type="anchor">
+        		<xf:label><![CDATA[적용]]></xf:label>
+        	</xf:trigger>
+        	
+        </xf:group>
+    </body>
+</html>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+    <!-- 
+        ###################################################
+         파일명 : CBSC046P.xml
+         프로그램명 : 단체피보험자명세
+         설 명 :  단체피보험자명세
+         작성자 : 진태만
+         작성일 : 2017.10.06
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.10.06        진태만          최초작성
+        ###################################################
+     -->
+	 <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+            
+         		<w2:dataList baseNode="list" id="Ds_Pibo" repeatNode="map">
+	                <w2:columnInfo>
+	                    <w2:column dataType="text" id="sel" name="sel"/> 
+						<w2:column dataType="text" id="sGroupInrpsCd" name="주민번호"/>
+						<w2:column dataType="text" id="sGroupInrpsName" name="성명"/> 
+						<w2:column dataType="text" id="nGroupInrpsAge" name="나이"/>
+	                    <w2:column dataType="text" id="sGroupInrpsJobName" name="직업"/>
+	                    <w2:column dataType="text" id="sGroupInrpsJobGradCd" name="급수"/>
+	                    <w2:column dataType="text" id="sGroupInrpsDrveFlagCd" name="운전구분"/>
+	                    <w2:column dataType="text" id="sPftbpName" name="사망수익자"/>
+	                </w2:columnInfo>
+	           	 </w2:dataList>
+
+         		<w2:dataList baseNode="list" id="Ds_Drive"
+         			repeatNode="map">
+         			<w2:columnInfo>
+         				<w2:column id="sHnglCdName" name="name1"
+         					dataType="text">
+         				</w2:column>
+         				<w2:column id="sCd" name="name2"
+         					dataType="text">
+         				</w2:column>
+         			</w2:columnInfo>
+         		</w2:dataList>
+         		<w2:dataList baseNode="list" id="Ds_CrtorRelnCd" repeatNode="map"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        
+   		<!--// js Script include //--> 
+	 	<script src="/cm/js/convertJs/NewGen_Script.js"/>
+	 	
+        <script><![CDATA[
+		
+ /****************************************************************************
+ * 프로그램번호   : B180
+ * 프로그램명     : 단체피보험자명세
+ * 파일명         : B180_Pop.xml
+ * 프로그램 내용  : 단체피보험자명세 조회
+ * 관련 프로그램  : 
+ * 작성자         : 김경일
+ * 작성일         : 2010-10-30
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+
+var parent_Ds_Pibo;				// 부모창 피보험자 정보 Ds Set 
+
+//---------------------------------------------------------------------------
+// function 명 : B180_OnLoadCompleted
+// 내용        : 화면로딩시 메인에서 데이터를 받아서 그리드에 출력함
+//---------------------------------------------------------------------------
+scwin.init = function() {
+	console.log("[/CBSC046P.xml] [init()] ==> [폼 로딩] [TEST_01]" ); 
+	
+	var pro = Promise.resolve();
+	window.top.util.winTopShowModalChk = "T";
+	util.winTopShowModal();
+
+	pro = pro.then(function(rv) {
+		return util.winTopShowModalPromise();
+	});
+
+	pro = pro.then(function(rv) {
+		// init 부분 함수 입력하는곳  // =================================================>
+		
+		var parentWin = wprom.getParamObject();				// 부모창 피보험자 정보 Ds Set 
+		wconv.copy(Ds_Drive ,parentWin.DsWs_Drive);//운전구분공통코드
+		wconv.copy(Ds_CrtorRelnCd, parentWin.DsWs_CrtorRelnCd);
+	  	wconv.copy(Ds_Pibo, parentWin.Ds_Pibo); 	//피보험자정보 
+	  	//console.log("[/CBSC046P.xml] [init()] ==> [iparent_Ds_Pibo_갯수]"+ parent_Ds_Pibo.getRowCount() +"[parent_Ds_Pibo]"+ WebSquare.xml.serialize(parent_Ds_Pibo.getAllXML()) );
+	
+		grd_Pibo.setColumnNodeSet(6,"data:Ds_Drive", "sHnglCdName","sCd"); 
+ 		
+		return ;		// init 함수를 종료하고자 할때 사용
+		// return Promise.reject("오류관련처리"); // =================================================>
+	});
+
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});
+	
+	//pro = pro.catch(function(rj) {
+		//util.winTopHideModal();
+		//alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+	//});
+	 
+	return pro; 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_CopyGridCell
+// 내용        : 그리드의 선택영역을 Clipboard로 Copy 한다.
+//--------------------------------------------------------------------------- 
+var strSeparator = "\t";
+
+scwin.lfn_CopyGridCell = function(obj, nChar, bShift, bCtrl, bAlt, nLLParam, nHLParam) {
+     
+    if (bCtrl == 1 && nChar == 67) {
+        scwin.lfn_ClipboardCopy(obj, strSeparator);
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_CopyGridCell
+// 내용        : 그리드의 선택영역을 Clipboard로 Copy 한다.
+//--------------------------------------------------------------------------- 
+scwin.lfn_ClipboardCopy = function(objGrid, strSeparator) {
+    var orgDataset = eval(objGrid.BindDataset);
+    var strColID;
+    var strValue;
+    var strClipboard = "";
+    var nAreaStartRow;
+    var nAreaEndRow;
+    var nAreaStartCol;
+    var nAreaEndCol;
+    if (objGrid.AreaSelect == true) {
+        nAreaStartRow = objGrid.GetAreaStartRow();
+        nAreaEndRow = objGrid.GetAreaEndRow();
+        nAreaStartCol = objGrid.GetAreaStartCol();
+        nAreaEndCol = objGrid.GetAreaEndCol();
+    } else {
+        nAreaStartRow = objGrid.CurrentRow;
+        nAreaEndRow = objGrid.CurrentRow;
+        nAreaStartCol = objGrid.CurrentCell;
+        nAreaEndCol = objGrid.CurrentCell + 1;
+    }
+    for (var nRow = nAreaStartRow; nRow <= nAreaEndRow; nRow++) {
+        for (var nCell = nAreaStartCol; nCell <= nAreaEndCol; nCell++) {
+            if (objGrid.GetColProp(nCell, "Width") > 0) {
+                strColID = eval(objGrid_ID).GetCellProp("body", nCell, "colid");
+                //strValue = orgDataset.GetColumn(nRow,strColID);
+                strValue = objGrid.GetCellText("body", nRow, nCell);
+                strClipboard = strClipboard + strValue + strSeparator;
+            }
+        }
+        strClipboard = wconv.subStr(strClipboard, 0, wconv.Length(strClipboard) - 1);
+        strClipboard = strClipboard + "\n";
+    }
+    strClipboard = wconv.subStr(strClipboard, 0, wconv.Length(strClipboard) - 1);
+    ClearClipboard();
+    SetClipBoard("CF_UNICODETEXT", strClipboard);
+    return;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Close_OnClick
+// 내용        : 팝업닫기
+//---------------------------------------------------------------------------
+scwin.lfn_Close_OnClick = function(obj) {
+     wprom.close("");
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B180_Pop"
+            style="position:absolute; WorkArea:true; left:0px; top:0px;"
+            userData1="단체피보험자명세[B180_Pop]" userData2=" OnLoadCompleted:scwin.B180_OnLoadCompleted; ">
+            <w2:textbox id="Static5" label="단체피보험자명세"
+                style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; width:249px;" tagname="" class="sub_pop_title01"/>
+            <xf:switch id="switch_141" style=" ">
+                <xf:case id="Default_142" style=" ">
+                    <w2:gridView class="sty_Grid" dataList="Ds_Pibo" ev:onblur="scwin.lfn_CopyGridCell" focusMode="row" id="grd_Pibo"
+                        inputType="text" readOnly="true"
+                        style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  AutoEnter:TRUE;  readOnly:false;  height:341px; left:0px; right:751px; top:30px; width:742px;" tabIndex="3" autoFit="allColumn" autoFitMinWidth="100">
+                        <w2:header>
+                            <w2:row>
+                                <w2:column dataType="text" id="head_id_1181" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="0" userData3="0" value="순서" width="56"/>
+                                <w2:column dataType="text" id="head_id_1182" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="1" userData3="0" value="주민번호" width="117"/>
+                                <w2:column dataType="text" id="head_id_1183" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="2" userData3="0" value="성명" width="117"/>
+                                <w2:column dataType="text" id="head_id_1184" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="3" userData3="0" value="나이" width="36"/>
+                                <w2:column dataType="text" id="head_id_1185" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="4" userData3="0" value="직업" width="198"/>
+                                <w2:column dataType="text" id="head_id_1186" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="5" userData3="0" value="급수" width="59"/>
+                                <w2:column dataType="text" id="head_id_1187" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="6" userData3="0" value="운전구분" width="74"/>
+                                <w2:column dataType="text" id="head_id_1188" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="7" userData3="0" value="사망수익자" width="80"/>
+                            </w2:row>
+                        </w2:header>
+                        <w2:gBody>
+                            <w2:row>
+                                <w2:column dataType="text" expression="rowIndex+1" id="순서" inputType="expression" readOnly="true"
+                                    style="height:20px;" textAlign="center" userData1="0" userData3="0" width="56"/>
+                                <w2:column dataType="text" displayFormat="######-#######" id="sGroupInrpsCd" inputType="text"
+                                    readOnly="false" style="height:20px;" textAlign="center" userData1="1" userData3="0" width="117"/>
+                                <w2:column dataType="text" id="sGroupInrpsName" inputType="text" readOnly="true" style="height:20px;" textAlign="center"
+                                    userData1="2" userData3="0" width="117"/>
+                                <w2:column dataType="text" id="nGroupInrpsAge" inputType="text" readOnly="true" style="height:20px;" textAlign="center"
+                                    userData1="3" userData3="0" width="36"/>
+                                <w2:column dataType="text" id="sGroupInrpsJobName" inputType="text" readOnly="true" style="height:20px;"
+                                    textAlign="center" userData1="4" userData3="0" width="198" value=""/>
+                                <w2:column dataType="text" id="sGroupInrpsJobGradCd" inputType="text" readOnly="true" style="height:20px;"
+                                    textAlign="center" userData1="5" userData3="0" width="59"/>
+                                <w2:column dataType="text"
+                                	id="sGroupInrpsDrveFlagCd"
+                                	inputType="select" readOnly="false"
+                                	style="height:20px;" textAlign="center"
+                                	userData1="6" userData3="0" width="74"
+                                	allOption="" chooseOption="">
+                                	<w2:choices></w2:choices>
+                                </w2:column>
+                                <w2:column dataType="text"
+                                	id="sPftbpName" inputType="text"
+                                	readOnly="true" style="height:20px;"
+                                	textAlign="center" userData1="7"
+                                	userData3="0" width="80">
+                                </w2:column>
+                            </w2:row>
+                        </w2:gBody>
+                    </w2:gridView>
+                </xf:case>
+            </xf:switch>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Close_OnClick" id="btn_close"
+                style="position:absolute; ImageID:btn_Comm_Close;  height:20px;left:692px;top:0px; width:58px;" tabIndex="4" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+        </xf:group>
+    </body>
+</html>

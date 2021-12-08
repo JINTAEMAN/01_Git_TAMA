@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="DS_Com" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="code" name="code"/>
+                        <w2:column dataType="text" id="code_nm" name="code_nm"/>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <code><![CDATA[0]]></code>
+                            <code_nm><![CDATA[회원아님]]></code_nm>
+                        </w2:row>
+                        <w2:row>
+                            <code><![CDATA[1]]></code>
+                            <code_nm><![CDATA[공제회원:현직]]></code_nm>
+                        </w2:row>
+                        <w2:row>
+                            <code><![CDATA[2]]></code>
+                            <code_nm><![CDATA[공제회원:퇴직]]></code_nm>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DS_COM_WS" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="DS_fCut01015" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sSchoolCode" name="sSchoolCode"/>
+                        <w2:column dataType="text" id="sSerialNo" name="sSerialNo"/>
+                        <w2:column dataType="text" id="sLast" name="sLast"/>
+                        <w2:column dataType="text" id="sSchoolName" name="sSchoolName"/>
+                        <w2:column dataType="text" id="sZip1" name="sZip1"/>
+                        <w2:column dataType="text" id="sZip2" name="sZip2"/>
+                        <w2:column dataType="text" id="sAdrs1" name="sAdrs1"/>
+                        <w2:column dataType="text" id="sAdrs2" name="sAdrs2"/>
+                        <w2:column dataType="text" id="sAdrs3" name="sAdrs3"/>
+                        <w2:column dataType="text" id="sAdrsAdd" name="sAdrsAdd"/>
+                        <w2:column dataType="text" id="sFoundationDiv" name="sFoundationDiv"/>
+                        <w2:column dataType="text" id="sBranchDiv" name="sBranchDiv"/>
+                        <w2:column dataType="text" id="sTel1" name="sTel1"/>
+                        <w2:column dataType="text" id="sTel2" name="sTel2"/>
+                        <w2:column dataType="text" id="sTel3" name="sTel3"/>
+                        <w2:column dataType="text" id="sFaxNo1" name="sFaxNo1"/>
+                        <w2:column dataType="text" id="sFaxNo2" name="sFaxNo2"/>
+                        <w2:column dataType="text" id="sFaxNo3" name="sFaxNo3"/>
+                        <w2:column dataType="text" id="sSchoolDiv" name="sSchoolDiv"/>
+                        <w2:column dataType="text" id="sSchoolDivName" name="sSchoolDivName"/>
+                        <w2:column dataType="text" id="nClassCnt" name="nClassCnt"/>
+                        <w2:column dataType="text" id="nStudentCnt" name="nStudentCnt"/>
+                        <w2:column dataType="text" id="nTeacherCnt" name="nTeacherCnt"/>
+                        <w2:column dataType="text" id="sHomePage" name="sHomePage"/>
+                        <w2:column dataType="text" id="sCustNo" name="sCustNo"/>
+                        <w2:column dataType="text" id="sUserID" name="sUserID"/>
+                        <w2:column dataType="text" id="sInputDate" name="sInputDate"/>
+                        <w2:column dataType="text" id="sInputTime" name="sInputTime"/>
+                        <w2:column dataType="text" id="sMemo" name="sMemo"/>
+                        <w2:column dataType="text" id="sEmail" name="sEmail"/>
+                        <w2:column dataType="text" id="sType" name="sType"/>
+                        <w2:column dataType="text" id="sZipType" name="sZipType"/>
+                        <w2:column dataType="text" id="sAddrMgtNo" name="sAddrMgtNo"/>
+                        <w2:column dataType="text" id="nAddrStdSeq" name="nAddrStdSeq"/>
+                        <w2:column dataType="text" id="sOrgZipType" name="sOrgZipType"/>
+                        <w2:column dataType="text" id="sOrgZipCode" name="sOrgZipCode"/>
+                        <w2:column dataType="text" id="sOrgAddr" name="sOrgAddr"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DSWs_fCut01015" repeatNode="map" userData2="//*/CODCA01"/>
+                <w2:dataList baseNode="list" id="dsWs_totCnt" repeatNode="map" userData2="//*/vector"/>
+                <w2:dataList baseNode="list" id="ds_Wanning" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="DsWs_Area"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column id="code" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="name" name="name2"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                	<w2:data>
+                		<w2:row>
+                			<code><![CDATA[01]]></code>
+                			<name><![CDATA[서울]]></name>
+                		</w2:row>
+                	</w2:data>
+                </w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+ <script src="/cm/js/common.js"/>
+ <script src="/cm/js/val_lib.js"/>
+ <script src="/cm/js/util.js"/>
+ <script src="/cm/js/transSub.js"/>
+ <script src="/cm/js/callService.js"/>
+ <script src="/cm/js/gds.js"/>
+ <script src="/cm/js/wconv.js"/>
+ <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+ <script src="/cm/js/convertJs/comm_Webservice.js"/>
+ <script src="/cm/js/convertJs/Global_Script.js"/>
+ <script src="/cm/js/convertJs/PolicyCommon_Script.js"/>        
+        <script><![CDATA[
+/****************************************************************************
+ * 프로그램번호   : A090_Pop
+ * 프로그램명     : 직업정보 관리
+ * 파일명         : A090_Pop.xml
+ * 프로그램 내용  : 직업정보를 조회한다.
+ * 관련 프로그램  : 
+ * 작성자         : 김용석 
+ * 작성일         : 2010-11-08
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+
+// 변수 
+var jobargs;
+var gbn;
+var sSchoolCode;
+var sJobGroup;//자동차 사용코드
+var sJobCode;//자동차 사용코드
+var sTeachType;//자동차 사용코드
+//  pagesize , pagecount 
+var pageSize = "20";
+var pageCount = "10";
+var Edt_1_sAdrs1 = "";
+var Edt_1_sAdrs2 = "";
+var Edt_1_sAdrs3 = "";
+var fv_args;
+
+scwin.init = function() {
+
+	var indata = $w.getParameter("param");//
+	try {
+		fv_args = JSON.parse(indata);
+	} catch(e) {}
+
+    var resultArr = fv_args.jobargs.split( "^" );
+    
+    Edt_JobGroup.setValue(wconv.trim(resultArr[0]));
+    Edt_JobCode.setValue(wconv.trim(resultArr[1]));
+    //cd_gubn1.setSelectedIndex(0);
+    if (wconv.length(wconv.trim(resultArr[2])) > 0) {
+        gbn = wconv.trim(resultArr[2]);
+    }
+    if (wconv.length(wconv.trim(resultArr[3])) > 0) {
+        sJobGroup = wconv.trim(resultArr[3]);
+    }
+    if (wconv.length(wconv.trim(resultArr[4])) > 0) {
+        sJobCode = wconv.trim(resultArr[4]);
+    }
+    if (wconv.length(wconv.trim(resultArr[5])) > 0) {
+        sTeachType = wconv.trim(resultArr[5]);
+    }
+
+    //gbn, sJobGroup, sJobCode, sTeachType
+    gfn_getCommonCodes("DsWs_Area", "Area", "cd_gubn1", "A");
+    //wconv.trace("group" + Edt_JobGroup);
+    //wconv.trace("code" + Edt_JobCode);
+};
+
+// 조회 
+scwin.bt_search_OnClick = function(e) {
+    wconv.clear(DSWs_fCut01015);
+    //SOBJ.WSDL = gds.gWsdlCode; // 서비스 Obj WSDC 설정
+    //var MethodObj = gfn_CreateMethodObj(SOBJ, "CodeTask", "selectSchoolByName", "", "");
+	var MethodObj = new callService("com.inswave.code.task.CodeTask", "selectSchoolByName");
+	MethodObj.setId("selectSchoolByName");
+    
+    var sSchoolName = wconv.trim(ED_sSchoolName.getValue());
+    if (sSchoolName.length < 2) {
+        wprom.alert("기관명을 2자이상으로 입력하세요");
+        return;
+    }
+
+
+
+    //사용할수 없는 검색어 추가
+    //이 단어만을 사용할 경우 data조회가 불가하게
+    //지명근 2004-10-12 9:16오전
+    if ( //Substr("sSchoolName", 0, 2)
+        wconv.substr(sSchoolName, 0, 2) == "유치" || wconv.substr(sSchoolName, 0, 2) == "초등" || 
+        wconv.substr(sSchoolName, 0, 2) == "등학" || wconv.substr(sSchoolName, 0, 2) == "학교" || 
+        wconv.substr(sSchoolName, 0, 2) == "중등" || wconv.substr(sSchoolName, 0, 2) == "중학" || 
+        wconv.substr(sSchoolName, 0, 2) == "고등" || wconv.substr(sSchoolName, 0, 2) == "대학" || 
+        wconv.substr(sSchoolName, 0, 2) == "연구" || wconv.substr(sSchoolName, 0, 2) == "부설" || 
+        wconv.substr(sSchoolName, 0, 2) == "구소" || wconv.substr(sSchoolName, 0, 2) == "기술") {
+        wprom.alert("유치/초등/중등/중학/고등/학교/대학/연구/부설/구소/기술 으로 시작되는 단어로는 조회할 수 없습니다\n\n단어를 변경하여 다시 조회하세요");
+        return;
+    }
+
+
+    //직업군에 따른 조회 변경 2007-07-03 이윤주
+    //가족정보 입력시
+    //전체고객관리에서 가족정보 추가 2007-07-24 이윤주
+    if (gbn == "2" || (gbn == "1" && sTeachRel != "" && sTeachRel != "1001")) {
+        //var jobform = document.jobform;
+        var sJobGroupTmp = sJobGroup;//.TEXT;
+        var sJobCodeTmp = sJobCode;//.TEXT;
+        if (isTeachJob4(sJobGroupTmp, sJobCodeTmp)) {
+            MethodObj.setParam( "sSchoolDiv", "Teach");
+        } else if (sJobCodeTmp == "0913") {
+            //롯데
+            MethodObj.setParam( "sSchoolDiv", "Lotte");
+        } else if (sJobGroupTmp == "07") {
+            //소방공무원
+            MethodObj.setParam( "sSchoolDiv", "17");
+        } else if (sJobCodeTmp == "0402") {
+            //지방행정공제
+            MethodObj.setParam( "sSchoolDiv", "12");
+        } else if (sJobCodeTmp == "0401" || sJobCodeTmp == "0914") {
+            //과학기술인공제회 2007-08-31
+            MethodObj.setParam( "sSchoolDiv", "Science");
+        } else if (sJobCodeTmp == "0403") {
+            //체신공무원 2007-09-10
+            MethodObj.setParam( "sSchoolDiv", "21");
+        } else if (sJobCodeTmp == "0404") {
+            //세무공무원 2007-09-10
+            MethodObj.setParam( "sSchoolDiv", "18");
+        } else if (sJobCodeTmp == "0405") {
+            //교정공무원 2007-09-10
+            MethodObj.setParam( "sSchoolDiv", "24");
+        } else if (sJobCodeTmp == "0406") {
+            //법원공무원 2007-09-10
+            MethodObj.setParam( "sSchoolDiv", "22");
+        } else if (sJobCodeTmp == "0407") {
+            //관세공무원 2007-11-22
+            MethodObj.setParam( "sSchoolDiv", "26");
+        } else if (sJobCodeTmp == "0607" || sJobCodeTmp == "0608" || sJobCodeTmp == "0609") {
+            //검찰공무원 2007-11-30
+            MethodObj.setParam( "sSchoolDiv", "25");
+        } else if (sJobCodeTmp == "0916") {
+            //건강관리협회(공기업/직능단체(제휴처)) 2008-02-28
+            //setString(xmlDoc, "sSchoolDiv", "27");	
+            MethodObj.setParam( "sSchoolDiv", "Cooperate"); //복지사협회 추가 2008-05-27   
+        } else if (sJobCodeTmp == "2105") {
+            //의과대학생 2008-06-30
+            MethodObj.setParam( "sSchoolDiv", "Doctor");
+        } else {
+            //alert("선택된 직업군의 학교정보 또는 업체정보가 없습니다.");
+            wprom.alert("선택된 직업군의 기관정보가 없습니다.");
+            return;
+        }
+    } else if (gbn == "POP" || (gbn == "1" && sTeachRel == "1001")) {
+        if (isTeachJob4(sJobGroup, sJobCode)) {
+            MethodObj.setParam( "sSchoolDiv", "Teach");
+        } else if (sJobCode == "0913") {
+            //롯데
+            MethodObj.setParam( "sSchoolDiv", "Lotte");
+        } else if (sJobGroup == "07") {
+            //소방공무원
+            MethodObj.setParam( "sSchoolDiv", "17");
+        } else if (sJobCode == "0402") {
+            //지방행정공제
+            MethodObj.setParam( "sSchoolDiv", "12");
+        } else if (sJobCode == "0401" || sJobCode == "0914") {
+            //과학기술인공제회 2007-08-31
+            MethodObj.setParam( "sSchoolDiv", "Science");
+        } else if (sJobCode == "0403") {
+            //체신공무원 2007-09-10
+            MethodObj.setParam( "sSchoolDiv", "21");
+        } else if (sJobCode == "0404") {
+            //세무공무원 2007-09-10
+            MethodObj.setParam( "sSchoolDiv", "18");
+        } else if (sJobCode == "0405") {
+            //교정공무원 2007-09-10
+            MethodObj.setParam( "sSchoolDiv", "24");
+        } else if (sJobCode == "0406") {
+            //법원공무원 2007-09-10
+            MethodObj.setParam( "sSchoolDiv", "22");
+        } else if (sJobCode == "0407") {
+            //관세공무원 2007-11-22
+            MethodObj.setParam( "sSchoolDiv", "26");
+        } else if (sJobCode == "0607" || sJobCode == "0608" || sJobCode == "0609") {
+            //검찰공무원 2007-11-30
+            MethodObj.setParam( "sSchoolDiv", "25");
+        } else if (sJobCode == "0916") {
+            //건강관리협회(공기업/직능단체(제휴처)) 2008-02-28
+            //setString(xmlDoc, "sSchoolDiv", "27");	   	
+            MethodObj.setParam( "sSchoolDiv", "Cooperate"); //복지사협회 추가 2008-05-27    		
+        } else if (sJobCode == "2105") {
+            //의과대학생 2008-06-30
+            MethodObj.setParam( "sSchoolDiv", "Doctor");
+        } else {
+            MethodObj.setParam( "sSchoolDiv", "");
+        }
+    } else if (gbn == "3") {
+        MethodObj.setParam( "sSchoolDiv", ""); //학교만 조회시   	  
+    } else if (wconv.left(Edt_JobGroup.getValue(), 2) == "01" || wconv.left(Edt_JobGroup.getValue(), 2) == "02") {
+        MethodObj.setParam( "sSchoolDiv", "Teach"); //법인 청약( 파라메터 없슴)	   	  
+    } else {
+        MethodObj.setParam( "sSchoolDiv", "");
+    }
+    MethodObj.setParam( "sSchoolName", sSchoolName);
+    MethodObj.setParam( "sCityCode", "");//goo wconv.trim(cd_gubn1.getValue()));
+    //var result = gfn_CallService(SOBJ, DOBJ, MethodObj);
+	MethodObj.setUrl("/common/CBSO042PController.do");
+	MethodObj.setXPath("//*/CODCA01");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_Team.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("CODCA01"), "DSWs_fCut01015");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "WARNING");
+	util.setCompBindRefresh("DSWs_fCut01015");
+	util.setRowPosition(DSWs_fCut01015, 0);
+	util.jSonDsCreate(_tranSync.getDsJson("CODCA01"), "DS_fCut01015");
+	util.setCompBindRefresh("DS_fCut01015");
+	util.setRowPosition(DS_fCut01015, 0);
+    
+    //gfn_MakeDsReturn(DSWs_fCut01015, DS_fCut01015);
+    if (WARNING.getRowCount() != false) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+    if (DS_fCut01015.getRowCount() < 1) {
+        wprom.alert("데이터가 존재하지 않습니다.");
+        return;
+    }
+};
+
+// 내역 조회 
+//function btn_list_OnClick(obj){
+//	var args="args="+custNo+"^"+seqNo;
+//	open("cut::fCut01014s.xml", args, 100, 100, true, 300, 100);
+//}
+scwin.btn_close_OnClick = function(e) {
+    wprom.close();
+};
+
+//기관 주소 
+scwin.bt_gigwan_OnClick = function(obj) { 
+    var promise = Promise.resolve();
+    var args = "";
+    promise = promise.then(function(rtnVal) {
+        //"Ds_AddrHome^0^sZip1^sZip2^sAdrs^sAdrsAdd^sAdrs1^sAdrs2^sAdrs3";
+        return wprom.promise.popupOpen("PROJECT_PATH_TEMP/com/fCom01060s.xml", "parentInfo=" + args /*wprom.popupOpen(가이드참조)*/ , 100, 100, true, 300, 100);
+    });
+    promise = promise.then(function(ret) {
+        var retArr = wconv.split(ret, "|");
+        /*
+    retArr[0] = 우편번호 앞 3 자리
+    retArr[1] = 우편번호 뒤 3 자리
+    retArr[2] = 주소 ex(서울 종로구 번1동)	
+    retArr[3] = 빌딩명
+    retArr[4] = 번지
+    retArr[5] = ex(서울)
+    retArr[6] = ex(종로구)
+    retArr[7] = ex(번1동)
+    */
+        Edt_1_Zip1.setValue(wconv.trim(retArr[0]));
+        Edt_1_Zip2.setValue(wconv.trim(retArr[1]));
+        Edt_1_sAdrs.setValue(wconv.trim(retArr[2]));
+        Edt_1_AdrsAdd.setValue(wconv.trim(retArr[4] + " " + retArr[3]));
+    });
+    return promise;
+};
+
+//  데이터를 받아서 닫는다. 
+scwin.bt_recive_OnClick = function(obj) {
+    var sRecSchoolName = scwin.lfn_null2space(ED_sSchoolName.getValue());
+    var sRecZip1 = scwin.lfn_null2space(Edt_1_Zip1.getValue());
+    var sRecZip2 = scwin.lfn_null2space(Edt_1_Zip2.getValue());
+    var sRecAdrs1 = scwin.lfn_null2space(Edt_1_sAdrs1);
+    var sRecAdrs2 = scwin.lfn_null2space(Edt_1_sAdrs2);
+    var sRecAdrs3 = scwin.lfn_null2space(Edt_1_sAdrs3);
+    var sRecAdrsAdd = scwin.lfn_null2space(Edt_1_AdrsAdd.getValue());
+    var ret = wconv.trim(sSchoolCode) + "^" + // 0 : 학교코드 
+        sRecSchoolName + "^" + // 1 : 학교명 
+        sRecZip1 + "^" + // 2 : 우편번호1
+        sRecZip2 + "^" + // 3 : 우편번호2
+        sRecAdrs1 + "^" + // 4 : 주소 1
+        sRecAdrs2 + "^" + // 5 : 주소 2
+        sRecAdrs3 + "^" + // 6 : 주소 3
+        sRecAdrsAdd + "^" + // 7 : 나머지 주소 
+        wconv.trim(cd_gubn.getValue()) + "^" + // 8 : 회원구분  
+        //2014.2.6 새주소
+        DS_fCut01015.getCellData(DS_fCut01015.getRowPosition(), "sZipType") + "^" + // 9 : 우편번호유형
+        DS_fCut01015.getCellData(DS_fCut01015.getRowPosition(), "sAddrMgtNo") + "^" + // 10 : 주소관리번호
+        DS_fCut01015.getCellData(DS_fCut01015.getRowPosition(), "nAddrStdSeq") + "^" + // 11 : 주소표준순번 
+        DS_fCut01015.getCellData(DS_fCut01015.getRowPosition(), "sOrgZipType") + "^" + // 12 : 원본주소구분
+        DS_fCut01015.getCellData(DS_fCut01015.getRowPosition(), "sOrgZipCode") + "^" + // 13 : 원본우편번호 
+        DS_fCut01015.getCellData(DS_fCut01015.getRowPosition(), "sOrgAddr"); // 14 : 원본주소구분 
+console.log("★★★★★★★★★★★★★★★ret 직업정보 관리 창 닫을때 " + ret);
+    wprom.close(ret);
+};
+
+scwin.ED_sSchoolName_OnKeyDown = function(e) {
+    // Enter 를 입력한 경우
+    if (e.keyCode == 13) {
+        scwin.bt_search_OnClick();
+    }
+};
+
+scwin.div_grid_Gd_job_OnCellClick = function( nRow, nCell) {
+    var sSchoolDiv = DS_fCut01015.getCellData(nRow, "sSchoolDiv");
+    if (gbn == "POP" || (gbn == "1" && sTeachRel == "1001")) {
+        if (!isMatchJob(sJobGroup, sJobCode, sSchoolDiv)) {
+            return;
+        } else {
+            sSchoolCode = wconv.trim(DS_fCut01015.getCellData(nRow, "sSchoolCode"));
+            ED_sSchoolName.setValue(wconv.trim(DS_fCut01015.getCellData(nRow, "sSchoolName")));
+            Edt_1_Zip1.setValue(wconv.trim(DS_fCut01015.getCellData(nRow, "sZip1")));
+            Edt_1_Zip2.setValue(wconv.trim(DS_fCut01015.getCellData(nRow, "sZip2")));
+            Edt_1_sAdrs.setValue(wconv.trim(DS_fCut01015.getCellData(nRow, "sAdrs1")) + " " + wconv.trim(DS_fCut01015.getCellData(nRow, "sAdrs2")) + " " + wconv.trim(DS_fCut01015.getCellData(nRow, "sAdrs3")));
+            Edt_1_sAdrs1 = wconv.trim(DS_fCut01015.getCellData(nRow, "sAdrs1"));
+            Edt_1_sAdrs2 = wconv.trim(DS_fCut01015.getCellData(nRow, "sAdrs2"));
+            Edt_1_sAdrs3 = wconv.trim(DS_fCut01015.getCellData(nRow, "sAdrs3"));
+            Edt_1_AdrsAdd.setValue(wconv.trim(DS_fCut01015.getCellData(nRow, "sAdrsAdd")));
+        }
+    } else {
+        sSchoolCode = wconv.trim(DS_fCut01015.getCellData(nRow, "sSchoolCode"));
+        ED_sSchoolName.setValue(wconv.trim(DS_fCut01015.getCellData(nRow, "sSchoolName")));
+        Edt_1_Zip1.setValue(wconv.trim(DS_fCut01015.getCellData(nRow, "sZip1")));
+        Edt_1_Zip2.setValue(wconv.trim(DS_fCut01015.getCellData(nRow, "sZip2")));
+        Edt_1_sAdrs.setValue(wconv.trim(DS_fCut01015.getCellData(nRow, "sAdrs1")) + " " + wconv.trim(DS_fCut01015.getCellData(nRow, "sAdrs2")) + " " + wconv.trim(DS_fCut01015.getCellData(nRow, "sAdrs3")));
+        Edt_1_sAdrs1 = wconv.trim(DS_fCut01015.getCellData(nRow, "sAdrs1"));
+        Edt_1_sAdrs2 = wconv.trim(DS_fCut01015.getCellData(nRow, "sAdrs2"));
+        Edt_1_sAdrs3 = wconv.trim(DS_fCut01015.getCellData(nRow, "sAdrs3"));
+        Edt_1_AdrsAdd.setValue(wconv.trim(DS_fCut01015.getCellData(nRow, "sAdrsAdd")));
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_null2space
+// 내용        :  null이거나 공백일때 한자리수 공백으로 채워서 리턴
+//---------------------------------------------------------------------------
+scwin.lfn_null2space = function(str) {
+    if (wconv.length(wconv.trim(str)) == 0) {
+        return " ";
+    } else {
+        return str;
+    }
+};
+
+// 코드 선택 (공제회원 여부 확인)
+scwin.lfn_gubn_OnChanged = function(obj, strCode, strText, nOldIndex, nNewIndex) {
+    if (!isTeachJob4(sJobGroup, sJobCode) && sJobCode != "0308") {
+        if (sTeachType == "1" || sTeachType == "2") { 
+            wprom.alert("해당직업은  공제회원 여부를 선택할 수 없습니다");
+            cd_gubn.setValue("N");
+            cd_gubn.focus();
+            return;
+        }
+    }
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="fCut01015s"
+        	style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7; left:0px; top:0px;"
+        	userData1="직업정보 관리"
+        	userData2=" OnLoadCompleted:scwin.fCut01015s_OnLoadCompleted; ">
+        	<DataObjects>
+        		<DataObject />
+        		<DataObject />
+        	</DataObjects>
+        	<ServiceObjects>
+        		<ServiceObject />
+        		<ServiceObject />
+        	</ServiceObjects>
+        	<xf:group arcsize="6" class="sty_area_form" id="group1"
+        		style="position:absolute;  bottom:608px;height:109px;left:0px;top:30px;width:720px;"
+        		userData3="RoundRect">
+        		<xf:group class="form_w_line" id=""
+        			style="top:26px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id=""
+        			style="top:53px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id="" style="top:53px;left:0px;">
+        		</xf:group><xf:group class="form_w_line" id=""
+        			style="top:80px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id=""
+        			style="top:130px;left:121px;width:507px;">
+        		</xf:group>
+        		
+        	</xf:group>
+        	<xf:group arcsize="8" class="" id="sh_job"
+        		style="position:absolute;height:113px;left:0px;top:25px;width:696px;"
+        		userData3="RoundRect" ></xf:group>
+        	<w2:textbox class="sty_lb_Basic" id="Static13" label="직   업"
+        		style="position:absolute;width:60px;border-style:solid;left:0px;VAlign:Middle;top:30px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static16" label="기관명"
+        		style="position:absolute;width:60px;border-style:solid;left:0px;VAlign:Middle;top:57px;"
+        		tagname="" />
+        	<xf:trigger class="detail_bu03"
+        		ev:onclick="scwin.bt_search_OnClick" id="bt_search"
+        		style="position:absolute; ImageID:btn_Comm_Search;left:534px;top:60px;"
+        		tabIndex="3" type="anchor">
+        		<xf:label><![CDATA[조회]]></xf:label>
+        	</xf:trigger>
+        	<w2:textbox class="sty_lb_Basic" id="Static14" label="기관주소"
+        		style="position:absolute;width:60px;border-style:solid;left:0px;VAlign:Middle;top:84px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static10" label="회원구분"
+        		style="position:absolute;width:60px;border-style:solid;left:0px;VAlign:Middle;top:111px;"
+        		tagname="" />
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.btn_close_OnClick" id="btn_close"
+        		style="position:absolute; ImageID:btn_Comm_Close;  height:20px;left:671px;top:0px;"
+        		tabIndex="6" type="anchor">
+        		<xf:label><![CDATA[닫기]]></xf:label>
+        	</xf:trigger>
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.bt_recive_OnClick" id="bt_recive"
+        		style="position:absolute; ImageID:btn_Comm_Confirmation;  height:20px;left:620px;top:0px;"
+        		tabIndex="7" type="anchor">
+        		<xf:label><![CDATA[확인]]></xf:label>
+        	</xf:trigger>
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="Edt_JobCode"
+        		style="position:absolute; border-style:solid;  height:20px;left:201px;top:34px; width:162px;"
+        		tabIndex="10" />
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="Edt_JobGroup"
+        		style="position:absolute; border-style:solid;  height:20px;left:127px;top:34px; width:72px;"
+        		tabIndex="9" />
+        	<xf:trigger class="detail_search" disabled="true"
+        		ev:onclick="scwin.btn_search_OnClick" id="Button0"
+        		style="position:absolute;ImageID:btn_Input_Search;left:103px;top:35px;"
+        		tabIndex="8" type="anchor" />
+        	<xf:trigger class="detail_search" disabled="true"
+        		ev:onclick="scwin.bt_gigwan_OnClick" id="Btn_AddrSearch"
+        		style="position:absolute;ImageID:btn_Input_Search;left:104px;top:89px;"
+        		tabIndex="11" type="anchor" />
+        	<xf:input class="sty_ipt_form" dataType="number"
+        		disabled="true" id="Edt_1_Zip1" maxlength="3"
+        		style="position:absolute; border-style:solid;  text-align:CENTER;  height:20px;left:128px;top:88px; width:42px;"
+        		tabIndex="12" />
+        	<xf:input class="sty_ipt_form" dataType="number"
+        		disabled="true" id="Edt_1_Zip2" maxlength="3"
+        		style="position:absolute; border-style:solid;  text-align:CENTER;  height:20px;left:172px;top:88px; width:42px;"
+        		tabIndex="13" />
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="Edt_1_sAdrs"
+        		style="position:absolute; ImeMode:none;  border-style:solid;  height:20px;left:216px;top:88px; width:241px;"
+        		tabIndex="14" />
+        	<xf:input class="sty_ipt_form" id="Edt_1_AdrsAdd"
+        		maxByteLength="50"
+        		style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:459px;top:88px; width:251px;"
+        		tabIndex="15" />
+        	<xf:select1 appearance="minimal" class="sty_ipt_form"
+        		emptyItem="true" ev:onchange="scwin.lfn_gubn_OnChanged"
+        		id="cd_gubn" ref="data:DS_fCut01015.sType"
+        		style="position:absolute; border-style:solid;  height:20px;left:106px;top:114px; width:110px;"
+        		tabIndex="17" renderType="native">
+        		<xf:choices>
+        			<xf:itemset nodeset="data:DS_Com">
+        				<xf:label ref="code_nm" />
+        				<xf:value ref="code" />
+        			</xf:itemset>
+        		</xf:choices>
+        	</xf:select1>
+        	<xf:group class="" id="div_grid"
+        		style="position:absolute; height:235px;top:145px; width:704px;left:0px;"
+        		tabIndex="20" userData1="Div0">
+        		<xf:group arcsize="8" class="" id="div_grid_sSchoolDiv"
+        			style="position:absolute; display:none;  right:700;  border-style:solid;  border-color:user23;  bottom:235px; height:231px; left:4px; right:700px; top:4px; width:696px;"
+        			userData3="RoundRect" />
+        		<xf:switch id="switch_68" style=" ">
+        			<xf:case id="Default_69" style=" ">
+        				<w2:gridView autoFit="allColumn"
+        					autoFitMinWidth="100" class="sty_Grid"
+        					dataList="DS_fCut01015"
+        					ev:oncellclick="scwin.div_grid_Gd_job_OnCellClick"
+        					focusMode="row" id="div_grid_Gd_job" inputType="text"
+        					readOnly="true"
+        					style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  height:221px;left:0px;top:5px; width:720px;"
+        					tabIndex="2">
+        					<w2:header>
+        						<w2:row>
+        							<w2:column dataType="text"
+        								id="head_id_489" inputType="text" readOnly="true"
+        								style="height:30px;" userData1="0" userData3="0"
+        								value="구분" width="100" />
+        							<w2:column dataType="text"
+        								id="head_id_490" inputType="text" readOnly="true"
+        								style="height:30px;" userData1="1" userData3="0"
+        								value="기관명" width="170" />
+        							<w2:column colSpan="7"
+        								dataType="text" id="head_id_491" inputType="text"
+        								readOnly="true" style="height:30px;" userData1="2"
+        								userData3="0" value="주소" width="120" rowSpan="" />
+        						</w2:row>
+        					</w2:header>
+        					<w2:gBody>
+        						<w2:row>
+        							<w2:column dataType="text"
+        								id="sSchoolDivName" inputType="text" readOnly="true"
+        								style="height:20px;" textAlign="center" userData1="0"
+        								userData3="0" width="100" />
+        							<w2:column dataType="text"
+        								id="sSchoolName" inputType="text" readOnly="true"
+        								userData1="1" userData3="0" width="170"
+        								style="height:20px;" />
+        							<w2:column colSpan=""
+        								dataType="text" id="sZip1" inputType="text"
+        								readOnly="true" userData1="2" userData3="0" width="50"
+        								style="height:20px;" value="" rowSpan="" />
+        							<w2:column hidden="false" width="10"
+        								inputType="text" style="height:20px;" id="column9"
+        								blockSelect="false" displayMode="label" value="-">
+        							</w2:column>
+        							<w2:column hidden="false" width="50"
+        								inputType="text" style="height:20px;" id="sZip2"
+        								blockSelect="false" displayMode="label" value="">
+        							</w2:column>
+        							<w2:column hidden="false" width="70"
+        								inputType="text" style="height:20px;" id="sAdrs1"
+        								blockSelect="false" displayMode="label">
+        							</w2:column>
+        							<w2:column hidden="false" width="70"
+        								inputType="text" style="height:20px;" id="sAdrs2"
+        								blockSelect="false" displayMode="label">
+        							</w2:column>
+        							<w2:column hidden="false" width="70"
+        								inputType="text" style="height:20px;" id="sAdrs3"
+        								blockSelect="false" displayMode="label">
+        							</w2:column>
+        							<w2:column hidden="false" width="120"
+        								inputType="text" style="height:20px;" id="sAdrsAdd"
+        								blockSelect="false" displayMode="label" value="">
+        							</w2:column>
+        						</w2:row>
+        					</w2:gBody>
+        				</w2:gridView>
+        			</xf:case>
+        		</xf:switch>
+        	</xf:group>
+        	<xf:input class="sty_ipt_form"
+        		ev:onblur="scwin.ED_sSchoolName_OnKeyDown" id="ED_sSchoolName"
+        		maxByteLength="50"
+        		style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:106px;top:60px; width:257px;"
+        		tabIndex="18" />
+        	<w2:textbox id="Static0" label="직업정보 관리(비대면용)"
+        		style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; width:197px;"
+        		tagname="" class="sub_pop_title01" />
+        	<xf:select1 appearance="minimal" class="sty_ipt_form"
+        		emptyItem="true" id="cd_gubn1"
+        		style="position:absolute; ResetIndex:FIRST;  INDEX:0;  border-style:solid;  height:20px;left:366px;top:60px; width:166px;"
+        		tabIndex="22" renderType="native" allOption="" chooseOption=""
+        		chooseOptionLabel="--선택--">
+        		<xf:choices></xf:choices>
+        	</xf:select1>
+
+        </xf:group>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+		
+	/**
+	 * 메시지 박스 화면 초기화 작업을 수행한다.
+	 */	
+	scwin.onpageload = function() {
+		var param = com.getParameter();
+		
+		if ((typeof param === "undefined") || (param === "")) {
+			param = {
+				messageType : "alert",
+				message : "처리가 완료되었습니다.",
+				closeCallbackFncName : null
+			};
+		}
+
+		if (param.messageType.toLowerCase() === "alert") {
+			btn_yes.hide();
+			btn_no.hide();
+			btn_confirm.focus();
+		} else if (param.messageType.toLowerCase() === "confirm") {
+			btn_yes.focus();
+			btn_confirm.hide();
+		}
+		
+		scwin.closeCallbackFncName = param.callbackFn;
+		tbx_message.setValue(param.message);
+	};	
+	
+	scwin.onpageunload = function() {
+	
+	};
+	
+	/**
+	 * 확인 결과를 반환하면서 팝업 창을 닫는다.
+	 */
+	scwin.close = function(value) {
+		//알림메세지 Alert, Confirm 버튼 선택후 팝업 닫힘 .
+		if (scwin.closeCallbackFncName) {
+			com.closePopup(scwin.closeCallbackFncName, value);
+		} else {
+			com.closePopup();
+		}
+	};
+	
+	scwin.btn_yes_onclick = function(e) {
+		scwin.close(true);
+	};
+
+	scwin.btn_no_onclick = function(e) {
+		scwin.close(false);
+	};
+	
+	scwin.btn_confirm_onclick = function(e) {
+		scwin.close(true);
+	};
+
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="" id="group5" style="position: relative;height:105px;">
+			<xf:group class="" id="group6" style="position: relative;height:80px;">
+				<w2:scrollView class="" id="scrollView2" style="position: relative;height:80px;" bounce="" horizontalScroll="" showHorizontalScroll="" showVerticalScroll="" verticalScroll="">
+					<w2:textbox id="tbx_message" label="" style="position: relative;padding:10px;" />
+				</w2:scrollView>
+			</xf:group>
+			<xf:group class="" id="grp_button" style="text-align: center;" adaptive="">			
+				<w2:anchor class="btn_com mr5" id="btn_yes" outerDiv="" style="" ev:onclick="scwin.btn_yes_onclick">
+					<xf:label><![CDATA[예]]></xf:label>
+				</w2:anchor>
+				<w2:anchor class="btn_com mr5" id="btn_no" outerDiv="" style="" ev:onclick="scwin.btn_no_onclick">
+					<xf:label><![CDATA[아니오]]></xf:label>
+				</w2:anchor>
+				<w2:anchor class="btn_com" id="btn_confirm" outerDiv="" style="" ev:onclick="scwin.btn_confirm_onclick">
+					<xf:label><![CDATA[확인]]></xf:label>
+				</w2:anchor>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

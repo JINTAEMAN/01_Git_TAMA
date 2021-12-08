@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    <!-- 
+        ###################################################
+         파일명 : CBSC052P.xml
+         프로그램명 : 목적물소재지조회[B680_Pop]
+         설 명 :  목적물소재지조회[B680_Pop] 화면
+         작성자 : 이경일
+         작성일 : 2017.10.10
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.10.10        이경일          최초작성
+        ###################################################
+     -->
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="ds_code" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="DsWs_ObjctLctnInf" repeatNode="map" userData2="//*/ObjctLctnInfo">
+                	<w2:columnInfo>
+		                <w2:column dataType="text" id="result" name="result"/>
+						<w2:column dataType="text" id="afterEJBCall" name="afterEJBCall"/>
+						<w2:column dataType="text" id="nInsrdObjctSeqno" name="nInsrdObjctSeqno"/>
+						<w2:column dataType="text" id="sOwnrDscrNo" name="sOwnrDscrNo"/>
+						<w2:column dataType="text" id="sLctnHouse" name="sLctnHouse"/>
+						<w2:column dataType="text" id="sLctnDtalAddr" name="sLctnDtalAddr"/>
+						<w2:column dataType="text" id="sLctnPost2" name="sLctnPost2"/>
+						<w2:column dataType="text" id="sLctnPostAddr" name="sLctnPostAddr"/>
+						<w2:column dataType="text" id="sOwnrFlagCd" name="sOwnrFlagCd"/>
+						<w2:column dataType="text" id="sLctnPost1" name="sLctnPost1"/>
+						<w2:column dataType="text" id="sOwnrNm" name="sOwnrNm"/>
+						<w2:column dataType="text" id="beforeEJBCall" name="beforeEJBCall"/>
+						<w2:column dataType="text" id="sLctnStno" name="sLctnStno"/>
+						<w2:column dataType="text" id="nCrChngNo" name="nCrChngNo"/>
+						<w2:column dataType="text" id="nLctnSeqno" name="nLctnSeqno"/>
+						<w2:column dataType="text" id="sCrNo" name="sCrNo"/>
+						<w2:column dataType="text" id="sAccptPlac" name="sAccptPlac"/>
+						<w2:column dataType="text" id="sCrtorReln" name="sCrtorReln"/>
+					</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_Warning" repeatNode="map" userData2="//*/WARNING"/>
+                <w2:dataList baseNode="list" id="DsWs_AXR930" repeatNode="map" userData2="//hashtable/data[@hashkey='aDMAC03Doc']/ADMAC03"/>
+                <w2:dataList baseNode="list" id="DsWs_chekCrInqrAuth" repeatNode="map" userData2="//*/AXR931"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/>
+		<script src="/cm/js/convertJs/LongTerm_Script.js"/>
+        <script><![CDATA[
+/*■■■■■■■■■■■■■■■■■■■■■스크립트 변환 결과■■■■■■■■■■■■■■■■■■■■■
+※본 주석은 수작업 변환 참고용입니다. ★개발완료 후에는 필히 삭제해주세요.★
+변환시간:  Fri Sep 01 2017 14:10:28 GMT+0900 (대한민국 표준시)
+파일ID:  B634_Pop.xml
+
+아래의 작업을 먼저 해주세요.
+
+
+1. scwin.init() 함수에 아래의 글로벌 데이터리스트를 선언합니다.
+--> 해당 화면에는 추가할 글로벌 변수가 없습니다. 
+
+2. 공통.JS 파일을 include해주세요.
+</xf:model>
+ ***include 위치(하단에 주석처리 되어 있습니다.)***
+<script><![CDATA[
+
+예시)
+</xf:model>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script><![CDATA[
+
+3. 표준에 어긋난 코딩인 경우 ✖ 으로 return 되어 있습니다. 검색으로 ✖이 나온다면 ASIS 소스를 확인해주세요.
+ex) ASIS if(a = 1 and b = 2) {} ------> TOBE if (✖ = 2) {}
+
+4. dialog함수로 팝업을 호출 할 경우에는 실제 파일이 있는 경로로 변경해주세요
+ex) 현재 PROJECT_PATH_TEMP입니다. 
+
+-호출구조-
+
+호출구조는 모든 화면이 아닌 변환대상화면을 기준으로 분석하였습니다.
+선언하지 않은 변수를 사용중이라면 caller 에서 넘겼을 가능성이 높습니다.
+파일 ID는 소스의 form ID로 가정했습니다. 아래의 결과는 따로 확인해주세요.
+B634_Pop.xml에서 호출 (callee ID):  B660_Pop
+B634_Pop.xml을 호출   (caller ID):  D060_Pop,O210_Div2
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+/****************************************************************************
+ * 프로그램번호   : B680_Pop
+ * 프로그램명     : 목적물소재지조회
+ * 파일명         : B680_Pop.xml
+ * 프로그램 내용  : 목적물소재지조회
+ * 관련 프로그램  : 
+ * 작성자         : 
+ * 작성일         : 2013-06-28
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+//========================================================//
+// 파라메터 정보 및 리턴정보 영역(사용설명 포함)
+//========================================================//
+// 최초 Form_OnLoad시 재물보험청약(B030)에 Ds_Prprt을 Ds_Prprt_Appl에 복사후
+// Ds_Prprt_Appl로 Bind하고 적용버튼 클릭시 Ds_Prprt로 복사한다.
+// 재물보험청약 화면에서는 단지 호출만 하면된다.
+//========================================================//
+// 전역변수 선언 영역
+//========================================================//
+var sToday = "";
+// 현재일자(서버일자)
+var sNo = "";
+// 설계/계약번호
+var sGb = "";
+// 설계/계약구분 
+var nSeq = "";
+
+// 피보험목적물순번
+//========================================================//
+// 초기 OnLoad 영역
+//========================================================//
+//---------------------------------------------------------------------------
+// function 명 : FORM_OnLoadCompleted(obj)
+// 내용        : FORM OnLoad
+//---------------------------------------------------------------------------
+scwin.init = function() {
+    //Edit0.Text = util.getGdsValue("gUserID");
+    //trace("파라메터 값 :::::::::::::::");
+    //trace("::::::::::: 설계/계약번호    [" + sNo  + "]" );
+    //trace("::::::::::: 설계/계약구분    [" + sGb  + "]" );
+    //trace("::::::::::: 피보험목적물순번 [" + nSeq + "]" );
+    //trace("파라메터 값 :::::::::::::::");
+    //sGb = '2';
+    //sNo = 'M20130001435';
+    //nSeq = '1';
+
+var pro = Promise.resolve();
+
+window.top.util.winTopShowModalChk = "T";
+util.winTopShowModal();
+
+pro = pro.then(function(rv) {
+	return util.winTopShowModalPromise();
+});
+
+pro = pro.then(function(rv) {
+
+    //팜업화면 오픈 시점에 보낸자료 검색
+	var indata = $w.getParameter("param");
+	var inJson = JSON.parse(indata);
+	if (typeof inJson == "object") {
+		sNo        = util.nvl(inJson.sNo,"");
+		sGb        = util.nvl(inJson.sGb,"");
+		nSeq       = util.nvl(inJson.nSeq,"");
+	}
+	//console.log(inJson);
+	
+    if (sGb == "1") {
+        edt_GbCd.setValue("설계");
+    } else {
+        edt_GbCd.setValue("계약");
+    }
+
+    // 현재시간 setting
+    //global.http.Sync = true;
+    //getServerTime();
+    //sToday = substr(gDs_ServerTime.GetColumn(0, "sToday"),0,8);
+    //global.http.Sync = false;	
+    sToday = wconv.substr(gfn_GetSysTime(), 0, 8);
+    // DataSet 초기화
+    scwin.lfn_initDataset();
+    // 자동조회
+    scwin.lfn_Search();
+    
+});
+
+pro = pro.then(function(rv) {
+	util.winTopHideModal();
+});
+
+return pro;
+
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_getCommonCodes()
+// 내용        : 공통코드 조회
+// Param       : sobjObj         // ServiceObject 객체
+//             : dobjObj         // DataObject 객체
+//             : dataSetIds      // Dataset 아이디
+//             : sCdTypes        // 항목코드
+//             : componentIds    // Component Id ==> 없으면 안넣어도 됨
+//             : titleTypes      // Combo 항목추가: 전체(A) , 선택(S) , 없음(N)
+//---------------------------------------------------------------------------
+/*
+scwin.lfn_getCommonCodes = function() {
+    DsWs_ParkEqmtFlagCd.Clear();
+    // 공통코드 조회
+    gfn_getCommonCodes("DsWs_ParkEqmtFlagCd", "S59", "", "N");
+    //wconv.trace(DsWs_ParkEqmtFlagCd.savexml());
+};
+*/
+
+//---------------------------------------------------------------------------
+// function 명 : btn_search_OnClick(obj)
+// 내용        : Dataset ClearData
+//---------------------------------------------------------------------------
+scwin.lfn_initDataset = function() {
+    // 데이터셋초기화
+    wconv.clear(DsWs_ObjctLctnInf);
+};
+
+//========================================================//
+// 자체 이벤트 영역
+//========================================================//
+//---------------------------------------------------------------------------
+// function 명 : btn_Close_OnClick(obj)
+// 내용        : 닫기 OnClick
+//---------------------------------------------------------------------------
+scwin.btn_Close_OnClick = function(obj) {
+    wprom.close();
+};
+
+//========================================================//
+// 공통 이벤트 영역
+//========================================================//
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 목적물소재지 조회
+//---------------------------------------------------------------------------
+//비동기호출 
+scwin.lfn_Search_Async = function() {
+	util.eventAsyncCall(this, scwin.lfn_Search, arguments);
+};
+
+scwin.lfn_Search = function() {
+	var sAuthByflag = "";
+	var transObj = new callService("com.inswave.longterm.ssr.pln.task.DBB680Task", "getObjctLctnInfo", "", "");
+	transObj.setUrl("/contract/CBSC052PController.do");
+	transObj.setId("getObjctLctnInfo");
+	transObj.setParam("sNo", wconv.trim(sNo)); // 설계/계약 번호
+	transObj.setParam("sGb", wconv.trim(sGb)); // 설계/계약 구분
+	transObj.setParam("nSeq", wconv.trim(nSeq)); // 피보험물목적물순번
+	transObj.setXPath("//*/ObjctLctnInfo");
+	transObj.addXPath("//*/WARNING");
+	//transObj.callBack("scwin.subCallBackfunction");
+	transObj.sync();
+	transObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+	if (DsWs_Warning.getRowCount() != 0) {
+		wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+		return;
+	}
+	DsWs_ObjctLctnInf.setJSON(_tranSync.getDsJson("ObjctLctnInfo"));
+	util.setRowPosition(DsWs_ObjctLctnInf, 0);
+	edit_OwnrDscrNo.setValue(gfn_changeMask(DsWs_ObjctLctnInf.getCellData(0, "sOwnrDscrNo"), 1));
+    edt_OwnrNm.setValue(gfn_changeMask(DsWs_ObjctLctnInf.getCellData(0, "sOwnrNm"), 4));
+    if (nfn_checkAuthByID("ds_code", util.getGdsValue("gUserID"), "5000014") || //장기업무
+        nfn_checkAuthByID("ds_code", util.getGdsValue("gUserID"), "32014")) {
+        //CSR 상담원
+        //edt_LctnDtalAddr.BindDataset = DsWs_ObjctLctnInf;
+        //edt_LctnDtalAddr.Column = sLctnDtalAddr;
+        //alert(edt_LctnDtalAddr.getRef());
+    } else {
+        edt_LctnDtalAddr.setValue("***************************");
+    }
+};
+//========================================================//
+// 서비스호출 영역
+//========================================================//
+//========================================================//
+// 기타function 영역
+//========================================================//
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B634_Pop"
+        	style="position:absolute;
+
+ left:0px;
+ top:0px;
+"
+        	userData1="목적물소재지조회[B680_Pop]"
+        	userData2=" OnLoadCompleted:scwin.B680_OnLoadCompleted; ">
+        	<DataObjects>
+        		<DataObject />
+        		<DataObject />
+        		<DataObject />
+        		<DataObject />
+        		<DataObject />
+        	</DataObjects>
+        	<ServiceObjects>
+        		<ServiceObject />
+        		<ServiceObject />
+        		<ServiceObject />
+        		<ServiceObject />
+        		<ServiceObject />
+        	</ServiceObjects>
+        	<xf:group arcsize="6" class="sty_area_form" id="group1" style="position:absolute;  bottom:608px;height:138px;left:0px;top:30px;width:648px;" userData3="RoundRect">
+        		<xf:group class="form_w_line" id="" style="top:26px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id="" style="top:53px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id="" style="top:109px;left:0px;">
+        		</xf:group>
+        	</xf:group>
+        	<w2:textbox class="sty_lb_Basic" id="Static1" label="관계"
+        		style="position:absolute; VAlign:Middle;left:406px;top:57px; width:100px; min-width:100px;"
+        		tagname="" />
+        	<w2:textbox id="Static5" label="목적물소재지조회"
+        		style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; width:197px;"
+        		tagname="" class="sub_pop_title01" />
+        	<w2:textbox class="sty_lb_Basic" id="Static17" label="소유자"
+        		style="position:absolute;width:100px;left:0px;VAlign:Middle;top:57px;"
+        		tagname="" />
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.btn_Close_OnClick" id="btn_Close"
+        		style="position:absolute; ImageID:btn_Comm_Close;  height:20px;left:599px;top:0px; width:58px;"
+        		tabIndex="0" type="anchor">
+        		<xf:label><![CDATA[닫기]]></xf:label>
+        	</xf:trigger>
+        	<w2:textbox class="sty_lb_Basic" id="Static2" label="구분"
+        		style="position:absolute;width:100px;left:0px;VAlign:Middle;top:30px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static0" label="수용장소"
+        		style="position:absolute;width:100px;left:0px;VAlign:Middle;top:140px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static16" label="소재지"
+        		style="position:absolute;width:100px;left:0px;VAlign:Middle;top:84px;height:55px;"
+        		tagname="" />
+        	<xf:input class="sty_ipt_form" dataType="text"
+        		disabled="true" displayFormat="######-#######"
+        		id="mke_OwnrDscrNo" ref="data:DsWs_ObjctLctnInf.sOwnrDscrNo"
+        		style="position:absolute;left:122px;top:61px; width:98px;"
+        		tabIndex="13" />
+        	<xf:input class="sty_ipt_search" disabled="true"
+        		id="edt_LctnDtalAddr"
+        		ref="data:DsWs_ObjctLctnInf.sLctnDtalAddr"
+        		style="position:absolute;width:397px;ImeMode:none;left:122px;top:115px;"
+        		tabIndex="14" />
+        	<xf:input class="sty_ipt_search" disabled="true"
+        		id="edt_LctnStno" ref="data:DsWs_ObjctLctnInf.sLctnStno"
+        		style="position:absolute;width:55px;ImeMode:none;left:522px;top:115px;"
+        		tabIndex="15" />
+        	<xf:input class="sty_ipt_search" disabled="true"
+        		id="edt_LctnHouse" ref="data:DsWs_ObjctLctnInf.sLctnHouse"
+        		style="position:absolute;width:55px;ImeMode:none;left:580px;top:115px;"
+        		tabIndex="16" />
+        	<xf:input class="sty_ipt_search" disabled="true"
+        		id="edt_sAccptPlac" ref="data:DsWs_ObjctLctnInf.sAccptPlac"
+        		style="position:absolute;width:514px;ImeMode:none;left:122px;top:144px;"
+        		tabIndex="17" />
+        	<xf:input class="sty_ipt_search" disabled="true"
+        		id="edt_OwnrNm" ref="data:DsWs_ObjctLctnInf.sOwnrNm"
+        		style="position:absolute;width:165px;ImeMode:none;left:223px;top:61px;"
+        		tabIndex="18" />
+        	<xf:input class="sty_ipt_search" disabled="true"
+        		id="edt_CrtorReln" ref="data:DsWs_ObjctLctnInf.sCrtorReln"
+        		style="position:absolute;width:107px;ImeMode:none;left:528px;top:61px;"
+        		tabIndex="21" />
+        	<xf:input class="sty_ipt_search" disabled="true"
+        		id="edt_LctnPostAddr"
+        		ref="data:DsWs_ObjctLctnInf.sLctnPostAddr"
+        		style="position:absolute;width:424px;ImeMode:none;left:212px;top:89px;"
+        		tabIndex="22" />
+        	<xf:input class="sty_ipt_search" disabled="true"
+        		id="edt_LctnPost1" ref="data:DsWs_ObjctLctnInf.sLctnPost1"
+        		style="position:absolute;width:42px;ImeMode:none;left:122px;top:89px;"
+        		tabIndex="23" />
+        	<xf:input class="sty_ipt_search" disabled="true"
+        		id="edt_PostSeqno" ref="data:DsWs_ObjctLctnInf.sLctnPost2"
+        		style="position:absolute;width:42px;ImeMode:none;left:167px;top:89px;"
+        		tabIndex="24" />
+        	<xf:input class="sty_ipt_search" disabled="true"
+        		id="edt_GbCd"
+        		style="position:absolute;width:98px;ImeMode:none;left:122px;top:34px;"
+        		tabIndex="25" />
+        	<xf:input class="sty_ipt_search" disabled="true"
+        		id="edit_OwnrDscrNo"
+        		style="position:absolute;width:98px;ImeMode:none;left:122px;top:61px;"
+        		tabIndex="26" />
+        	
+        </xf:group>
+    </body>
+</html>

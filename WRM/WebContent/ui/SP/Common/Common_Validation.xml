@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataMap baseNode="map" id="dma_fileDesc">
+					<w2:keyInfo>
+						<w2:key id="desc" name="" dataType="text"></w2:key>
+						<w2:key id="test" name="" dataType="text"></w2:key>
+					</w2:keyInfo>
+					<w2:data use="true">
+						<desc><![CDATA[
+<pre class="textNor" style="">
+<div class="etcbox">본 화면은 테이블 형태의 항목 및 gridView의 컬럼의 유효성을 확인하는 방법을 제공한다.
+각 항목별 invalidMessageFunc는 공통 함수인 com.validateMsg를 사용하며, 이는 config.xml에 등록되어 있다.  
+	===== config.xml ====
+	&lt;input&gt;
+		... 중략 ....
+		<font color=red>&lt;invalidMessageFunc value="com.validateMsg"/&gt;</font>
+	&lt;/input&gt;
+	=====================
+</div>
+<div class="etc_tit">1. 테이블 형태 항목의 유효성 체크</div>
+  - 주로 dataMap과 Mapping 되는 형태로 단 건의 데이터에 대한 유효성을 체크한다.
+  - 예시
+  if(com.validateGroup(grp_memberBasicDetailTop) === false) {
+	  return;
+  }
+<div class="etc_tit">2. gridView 컬럼의 유효성 체크</div>
+  - 그리드 뷰의 각 컬럼별 유효성을 체크할 때 사용한다.
+  - 예시
+  var valInfo = [{
+					id : "col1",
+					mandatory : true,
+					minLength : 2
+				}, {
+					id : "col2",
+					mandatory : true
+				}];
+		
+				if (com.validateGridView(grd_chkGrid, valInfo)) {
+					var idx = dlt_sample.getModifiedIndex();
+					com.confirm(idx + "건의 데이타를 반영하시겠습니까", function(rtn) {
+						if (rtn) { 
+							com.executeSubmission(sbm_Save);
+						}
+					});
+				}
+</pre>
+						]]></desc>
+						<test><![CDATA[
+<pre class="textNor">						
+<div class="etc_tit">1. 과정</div>
+1. check 항목의 각 항목들을 입력 후 [확인]버튼을 클릭한다.
+2. check gridView아래의 gridView에서 각 컬럼별 값을 입력 후 [확인]버튼을 클릭한다.
+<div class="etc_tit">2. 결과</div>
+1. check 항목 중 정합성에 맞지 않는 항목이 있는 경우 경고창이 발생한다.
+2. gridView의 컬럼 중 정합성에 맞지 않는 항목이 있는 경우 경고창이 발생한다. 
+</pre>
+						]]></test>
+					</w2:data>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" id="dma_memberBasic">
+					<w2:keyInfo>
+						<w2:key id="EMP_CD" name="사원코드" dataType="text"></w2:key>
+						<w2:key id="EMP_NM" name="사원명" dataType="text"></w2:key>
+						<w2:key id="JOIN_DATE" name="입사일" dataType="text"></w2:key>
+						<w2:key id="RESIDENT_NO" name="주민번호" dataType="text"></w2:key>
+						<w2:key id="EMP_CN_NM" name="사원한자명" dataType="text"></w2:key>
+						<w2:key id="ASSIGNED_TASK" name="담당업무" dataType="text"></w2:key>
+						<w2:key id="EMP_EN_NM" name="사원영문명" dataType="text"></w2:key>
+						<w2:key id="POSITION_UPDATED_DATE" name="호칭변경일" dataType="text"></w2:key>
+						<w2:key id="LAST_APPOINT_DATE" name="최종발령일" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList id="dlt_sample" baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="col1" name="필수입력, 최소길이(2자이상)" dataType="text"></w2:column>
+						<w2:column id="col2" name="필수입력, 한글입력안됨" dataType="text"></w2:column>
+						<w2:column id="col3" name="필수 입력 확인1" dataType="text"></w2:column>
+						<w2:column id="col4" name="필수 입력 확인2" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+	scwin.onpageload = function() {
+		var rowIndex = dlt_sample.insertRow();
+	};
+	
+	scwin.onpageunload = function() {
+	
+	};
+	
+	/**
+	 * 데이터의 정합성을 확인한다.
+	 */
+	scwin.btn_confirm_onclick = function() {
+		var valInfo = [ { id : "EMP_CD", mandatory : true}, 
+						{ id : "EMP_NM", mandatory : true }, 
+						{ id : "JOIN_DATE", mandatory : true },
+						{ id : "RESIDENT_NO", mandatory : true, minLength : 13 } ];
+		if (com.validateGroup(grp_memberBasicDetailTop, valInfo) === false) {
+			return;
+		}
+	};
+	
+	/**
+	 * gridView의 데이터의 정합성을 확인한다.
+	 */
+	scwin.btn_grdConfirm_onclick = function() {
+		var valInfo = [ { id : "col1", mandatory : true, minLength : 2 }, 
+						{ id : "col2", mandatory : true }, 
+						{ id : "col3", mandatory : true },
+						{ id : "col4", mandatory : true } ];
+	
+		if (com.validateGridView(grd_chkGrid, valInfo)) {
+			var idx = dlt_sample.getModifiedIndex();
+			com.alert("데이터 입력을 성공적으로 완료했습니다.");
+		}
+	};
+]]></script>
+		
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="contentWrap" id="" style="">
+			<w2:wframe id="" style="" src="/cm/common/wf_titleFav.xml"></w2:wframe>
+			<w2:wframe id="" src="/cm/common/wf_titleDesc.xml"></w2:wframe>
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="margin-bottom:10px;" class="defaultbox">
+					<w2:textbox id="" style="" class="df_tt fl" label="check 항목 "></w2:textbox>
+				</xf:group>
+				<xf:group id="" style="" class="tbl_search">
+					<xf:group id="" style="" adaptive="layout" class="w2tb tbl_sc" adaptiveThreshold="768" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:90%;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="" class="w2tb_th" tagname="th"></xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:group id="" class="fr"></xf:group>
+								<w2:anchor id="btn_confirm" clickEventElement="outerDiv" ev:onclick="scwin.btn_confirm_onclick" class="btn_sh" outerDiv="true">
+									<xf:label><![CDATA[확인]]></xf:label>
+								</w2:anchor>
+							</xf:group>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group id="" style="" class="section">
+				<xf:group id="grp_memberBasicDetailTop" style="width:100%;" class="w2tb tb" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:120px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+						<xf:group style="width:120px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+						<xf:group style="width:120px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">사원코드</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:input id="ibx_empCd" ref="data:dma_memberBasic.EMP_CD" enterBlur="" style="height:24px;" mandatory="" class="req"></xf:input>
+						</xf:group>
+						<xf:group style="" class="w2tb_th" tagname="th">사원명</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:input id="ibx_empNm" ref="data:dma_memberBasic.EMP_NM" style="height:24px;" placeholder="한글만 입력가능" mandatory="" allowChar="가-힣" class="req"></xf:input>
+						</xf:group>
+						<xf:group style="" class="w2tb_th" tagname="th">입사일</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<w2:inputCalendar renderType="component" footerDiv="false" mandatory="" weekStartsOn="0" dateValidCheck="true" class="mr5 req" id="cal_joinDate" renderDiv="true" ref="data:dma_memberBasic.JOIN_DATE" calendarValueType="yearMonthDate" style="height:24px;" rightAlign="false" focusOnDateSelect="false" validator="" validateRef="">
+							</w2:inputCalendar>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">주민번호</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:input minlength="" id="ibx_residentNo" applyFormat="" ref="data:dma_memberBasic.RESIDENT_NO" maxlength="13" style="height:24px;" mandatory="" displayFormat="######-#######" allowChar="0-9" displayFormatter="" class="req">
+							</xf:input>
+						</xf:group>
+						<xf:group style="" class="w2tb_th" tagname="th">사원한자명</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:input id="ibx_empCnNm" ref="data:dma_memberBasic.EMP_CN_NM" style="height:24px;" mandatory=""></xf:input>
+						</xf:group>
+						<xf:group style="" class="w2tb_th" tagname="th">담당업무</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:input id="ibx_assignedTask" ref="data:dma_memberBasic.ASSIGNED_TASK" style="height:24px;" mandatory="" class="fl"></xf:input>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">사원영문명</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:input id="ibx_empEnNm" ref="data:dma_memberBasic.EMP_EN_NM" style="height:24px;" mandatory="" ignoreChar="" allowChar="a-z A-Z"></xf:input>
+						</xf:group>
+						<xf:group style="" class="w2tb_th" tagname="th">호칭변경일</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<w2:inputCalendar renderType="component" footerDiv="false" mandatory="" weekStartsOn="0" dateValidCheck="true" class="mr5" id="cal_postionUpdatedDate" renderDiv="true" ref="data:dma_memberBasic.POSITION_UPDATED_DATE" calendarValueType="yearMonthDate" style="height:24px;" rightAlign="false" focusOnDateSelect="false">
+							</w2:inputCalendar>
+						</xf:group>
+						<xf:group style="" class="w2tb_th" tagname="th">최종발령일</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<w2:inputCalendar renderType="component" footerDiv="false" mandatory="" weekStartsOn="0" dateValidCheck="true" class="mr5" displaymessage="" id="cal_lastAppointDate" renderDiv="true" ref="data:dma_memberBasic.LAST_APPOINT_DATE" calendarValueType="yearMonthDate" style="height:24px;" rightAlign="false" focusOnDateSelect="false">
+							</w2:inputCalendar>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="margin-bottom:10px;" class="defaultbox">
+					<w2:textbox id="" style="" class="df_tt fl" label="check gridView 항목 "></w2:textbox>
+				</xf:group>
+				<xf:group id="" style="" class="tbl_search">
+					<xf:group id="" style="" adaptive="layout" class="w2tb tbl_sc" adaptiveThreshold="768" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:90%;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="" class="w2tb_th" tagname="th"></xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:group id="" class="fr"></xf:group>
+								<w2:anchor id="btn_grdConfirm" clickEventElement="outerDiv" ev:onclick="scwin.btn_grdConfirm_onclick" class="btn_sh" outerDiv="true">
+									<xf:label><![CDATA[확인]]></xf:label>
+								</w2:anchor>
+							</xf:group>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group id="" style="" class="section">
+				<w2:gridView autoFit="allColumn" class="cm_grid" dataList="dlt_sample" ev:onafteredit="" fixedColumnWithHidden="true" id="grd_chkGrid" ignoreCellClick="false" scrollByColumn="false"
+					sortEvent="ondblclick" sortable="true" style="height:200px;" useShiftKey="true">
+					<w2:header id="header1" style="">
+						<w2:row id="row2" style="">
+							<w2:column blockSelect="false" displayMode="label" id="column11" inputType="text" style="height:25px;" value="필수입력, 최소길이(2자이상)" width="170"></w2:column>
+							<w2:column blockSelect="false" displayMode="label" id="column7" inputType="text" style="height:25px;" value="필수입력, 한글입력안됨" width="170"></w2:column>
+							<w2:column blockSelect="false" displayMode="label" id="column3" inputType="text" style="height:25px;" value="필수 입력 확인1" width="100"></w2:column>
+							<w2:column blockSelect="false" id="column12" inputType="text" style="height:25px;" value="필수 입력 확인2" width="100"></w2:column>
+						</w2:row>
+					</w2:header>
+					<w2:gBody id="gBody4" style="">
+						<w2:row id="row5" style="">
+							<w2:column blockSelect="false" displayMode="label" id="col1" inputType="text" style="height:25px;" width="100" class="req"></w2:column>
+							<w2:column blockSelect="false" displayMode="label" id="col2" inputType="text" style="height:25px;" textAlign="left" width="100" allowChar="a-z A-Z" class="req"></w2:column>
+							<w2:column blockSelect="false" defaultValue="" displayMode="" falseValue="N" id="col3" inputType="text" style="height:25px;" trueValue="Y" value="" valueType="other"
+								width="100" textAlign="left" class="req">
+							</w2:column>
+							<w2:column blockSelect="false" id="col4" inputType="text" style="" width="100" class="req"></w2:column>
+						</w2:row>
+					</w2:gBody>
+				</w2:gridView>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

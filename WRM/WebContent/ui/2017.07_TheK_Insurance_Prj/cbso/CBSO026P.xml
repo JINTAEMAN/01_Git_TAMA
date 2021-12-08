@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="DsWs_TelHistory"
+                	repeatNode="map" userData2="//*/vector/data/CUSAA03">
+                	<w2:columnInfo>
+                		<w2:column id="sCreateID" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCreateDate" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sFax2" name="name3"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sOfficeTel" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sFax3" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sLast" name="name6"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nSeqNo" name="name7"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sFax1" name="name8"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sHandlerID" name="name9"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sOfficeTel2" name="name10"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sEtcType" name="name11"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCellPhone" name="name12"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sOfficeTel3" name="name13"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sOfficeTel1" name="name14"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sUserID" name="name15"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCreateTime" name="name16"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sHomeTel2" name="name17"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sHomeTel1" name="name18"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sEmail2" name="name19"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sHomeTel3" name="name20"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sEmail1" name="name21"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInputDate" name="name22"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCustNo" name="name23"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sEtcTel3" name="name24"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sEtcTel2" name="name25"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCellPhone3" name="name26"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sFax" name="name27"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCellPhone1" name="name28"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCellPhone2" name="name29"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sEtcTel" name="name30"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nChangeNo" name="name31"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sEtcTel1" name="name32"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sHomepageUrl" name="name33"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sHomeTel" name="name34"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sEmpName" name="name35"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInnerPhone" name="name36"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInputTime" name="name37"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        
+        <script src="/cm/js/convertJs/Global_Script.js"/>
+        <script src="/cm/js/convertJs/comm_Webservice.js"/>
+        
+        <script><![CDATA[
+        
+ //  #include "Script::Global_Script.js"
+
+ //  #include "Script::comm_Webservice.js"
+
+/*
+parentInfo 변수값 정의
+
+arg1^arg2^arg3^arg4^arg5^arg6^arg7^arg8^arg9^arg10^arg11^arg12^arg13^
+arg14^arg15^arg16^arg17^arg18^arg19^arg20^arg21^arg22^arg23
+
+arg1  = custNo
+arg2  = seqNo
+arg3  = DataSet
+arg4  = row
+arg5  = column 집전화1
+arg6  = column 집전화2
+arg7  = column 집전화3
+arg8  = column 직장전화1
+arg9  = column 직장전화2
+arg10 = column 직장전화3
+arg11 = column 휴대전화1
+arg12 = column 휴대전화2
+arg13 = column 휴대전화3
+arg14 = column 기타1
+arg15 = column 기타2
+arg16 = column 기타3
+arg17 = column 기타구분
+arg18 = column Fax1
+arg19 = column Fax2
+arg20 = column Fax3
+arg21 = column Eamil1
+arg22 = column Eamil2
+arg23 = 포커스 이동할 컴포넌트
+*/
+var parentInfo;
+var args;
+var sHandlerID;	//취급자사번
+
+	scwin.init = function() {
+		//cbs - inparam 처리
+		var indata = $w.getParameter("param");
+		var inJSON = JSON.parse(indata);
+
+		console.log("==CBSO026P popup indata \n"+indata);		
+		
+		sHandlerID = inJSON.sHandlerID;
+		
+		// 파라미터로 넘어온 값을 split
+		args = inJSON.parentInfo.split("^");
+
+		var pro = Promise.resolve();
+		pro = pro.then(function(rv) {
+		  return util.winTopShowModalPromise();
+		});
+		pro = pro.then(function(rv) {
+			if (args.length > 1 && wconv.length(wconv.trim(args[0])) > 0 && wconv.length(wconv.trim(args[1])) > 0) {
+				scwin.search(wconv.trim(args[0]), wconv.trim(args[1]));
+			} else {
+				wprom.alert("검색 조건이 없습니다. 확인후 다시 시도해 주세요.");
+			}
+		});
+    
+	    pro = pro.then(function(rv) {
+	 		util.winTopHideModal();
+		});
+		
+		return pro;
+	};
+
+/**
+ * @author      곽성실     
+ * @function	search
+ * @desc		고객 연락처 History 검색
+ * @param		custNo : 주민등록번호/사업자 번호
+ * 				seqNo  : 순번
+ **/
+	scwin.search = function(custNo, seqNo) {
+/* OLD S	
+// Dataset 초기화
+	DsWs_TelHistory.Clear();
+	
+	SOBJ_control.WSDL = gWsdlGen;	// 서비스 Obj WSDC 설정
+	
+	var MethodObj = gfn_CreateMethodObj(SOBJ_control, "com.inswave.edugen.customer.task.FCut01011Task", "getTelHistory", 0, 0);
+	
+	// 주민등록번호/사업자번호, 순번 세팅
+	gfn_SetParam(MethodObj, "sCustNo", custNo);
+	gfn_SetParam(MethodObj, "nSeqNo", seqNo);
+	
+	gfn_CallService(SOBJ_control, DOBJ_control, MethodObj);
+	
+//	if (DsWs_TelHistory.RowCount() > 0) DsWs_TelHistory.Sort("nChangeNo", false);
+
+//	trace(DOBJ_control.Contents);	
+//	trace(DsWs_TelHistory.savexml());
+OLD E */	
+
+		//cbs - FCut01011Task.getTelHistory -> CustTask.getHandlerTelHistory
+//		var MethodObj = new callService("com.inswave.edugen.customer.task.FCut01011Task", "getTelHistory", 0, 0);
+//		MethodObj.setId("getTelHistory");
+		var MethodObj = new callService("com.inswave.customer.task.CustTask", "getHandlerTelHistory", 0, 0);
+		MethodObj.setId("getHandlerTelHistory");
+		MethodObj.setParam("sCustNo", custNo);
+		MethodObj.setParam("nSeqNo", seqNo);
+		MethodObj.setParam("sHandlerID", sHandlerID);
+		MethodObj.setUrl("/common/CBSO026PController.do");
+		MethodObj.setXPath("//*/vector/data/CUSAA03");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();
+		
+		util.interfaceKey(_tranSync.result.serviceDs);
+		DsWs_TelHistory.setJSON(_tranSync.result.serviceDs.data[0].CUSAA03);
+	};
+
+	//Gri_AddrHistory customFormatter
+	scwin.setDisplayGritelHistory = function(data, formattedData, rowIndex, colIndex) {
+		if (Gri_telHistory.getColumnID(colIndex)  == "homeTel") {
+			if (Gri_telHistory.getCellData(rowIndex, "sHomeTel").length > 0)
+				return Gri_telHistory.getCellData(rowIndex, "sHomeTel1") + "-" +
+						Gri_telHistory.getCellData(rowIndex, "sHomeTel2") + "-" +
+						Gri_telHistory.getCellData(rowIndex, "sHomeTel3");
+		 } else if (Gri_telHistory.getColumnID(colIndex)  == "officeTel") {
+		 	if (Gri_telHistory.getCellData(rowIndex, "sOfficeTel").length > 0) 
+		 		return Gri_telHistory.getCellData(rowIndex, "sOfficeTel1") + "-" +
+						Gri_telHistory.getCellData(rowIndex, "sOfficeTel2") + "-" +
+						Gri_telHistory.getCellData(rowIndex, "sOfficeTel3");
+		 } else if (Gri_telHistory.getColumnID(colIndex)  == "cellPhone") {
+		 	if (Gri_telHistory.getCellData(rowIndex, "sCellPhone").length > 0)
+				return Gri_telHistory.getCellData(rowIndex, "sCellPhone1") + "-" +
+						Gri_telHistory.getCellData(rowIndex, "sCellPhone2") + "-" +
+						Gri_telHistory.getCellData(rowIndex, "sCellPhone3");
+		 } else if (Gri_telHistory.getColumnID(colIndex)  == "etcTel") {
+			if (Gri_telHistory.getCellData(rowIndex, "sEtcTel").length > 0)
+				return Gri_telHistory.getCellData(rowIndex, "sEtcTel1") + "-" +
+						Gri_telHistory.getCellData(rowIndex, "sEtcTel2") + "-" +
+						Gri_telHistory.getCellData(rowIndex, "sEtcTel3");
+		 } else if (Gri_telHistory.getColumnID(colIndex)  == "fax") {
+		 	if (Gri_telHistory.getCellData(rowIndex, "sFax").length > 0)
+				return Gri_telHistory.getCellData(rowIndex, "sFax1") + "-" +
+						Gri_telHistory.getCellData(rowIndex, "sFax2") + "-" +
+						Gri_telHistory.getCellData(rowIndex, "sFax3");
+		 } else if (Gri_telHistory.getColumnID(colIndex)  == "id_inputTime") {
+		 	return wconv.left(Gri_telHistory.getCellData(rowIndex, "sInputTime"),2)+ ":"+
+		 			wconv.mid(Gri_telHistory.getCellData(rowIndex, "sInputTime"),2,2);
+		 }
+		 
+		 return "";
+	};
+	
+	scwin.Btn_Close_onclick = function(e) {
+		wprom.close();
+	};
+	
+	scwin.Gri_AddrHistory_oncelldblclick = function(row,col) {
+		var pDataSetName = wconv.trim(args[3]);
+		var pDataSetRow  = wconv.trim(args[4]);
+		var rtnJSON = {};
+		
+		if (wconv.length(pDataSetName) > 0 && wconv.length(pDataSetRow) > 0) {
+			// 보모창의 해당 값을 세팅
+			//cbs - 부모창 접근 불가 DS return
+			if (wconv.length(wconv.trim(args[5])) > 0) rtnJSON[wconv.trim(args[5])] = Gri_telHistory.getCellData(row, "sZip1");
+			if (wconv.length(wconv.trim(args[6])) > 0) rtnJSON[wconv.trim(args[6])] = Gri_telHistory.getCellData(row, "sZip2");
+			
+			if (wconv.length(wconv.trim(args[7])) > 0) rtnJSON[wconv.trim(args[7])] = Gri_telHistory.getCellData(row, "sAdrs1");			
+			if (wconv.length(wconv.trim(args[8])) > 0) rtnJSON[wconv.trim(args[8])] = Gri_telHistory.getCellData(row, "sAdrs2");
+			if (wconv.length(wconv.trim(args[9])) > 0) rtnJSON[wconv.trim(args[9])] = Gri_telHistory.getCellData(row, "sAdrs3");
+			
+			if (wconv.length(wconv.trim(args[10])) > 0) rtnJSON[wconv.trim(args[10])] = Gri_telHistory.getCellData(row, "sAdrsAdd");
+			if (wconv.length(wconv.trim(args[11])) > 0) rtnJSON[wconv.trim(args[11])] = Gri_telHistory.getCellData(row, "sAdrsAdd2");
+			if (wconv.length(wconv.trim(args[12])) > 0) {
+				rtnJSON[wconv.trim(args[12])] = Gri_telHistory.getCellData(row, "sAdrs1")+ " " + Gri_telHistory.getCellData(row, "sAdrs2") +" " +
+												Gri_telHistory.getCellData(row, "sAdrs3");
+			}
+			
+			if (wconv.length(wconv.trim(args[13])) > 0) rtnJSON[wconv.trim(args[13])] = Gri_telHistory.getCellData(row, "nChangeNo");
+			
+			//2014.02.06 새주소
+			if (wconv.length(wconv.trim(args[14])) > 0) rtnJSON[wconv.trim(args[14])] = Gri_telHistory.getCellData(row, "sZipType");
+			if (wconv.length(wconv.trim(args[15])) > 0) rtnJSON[wconv.trim(args[15])] = Gri_telHistory.getCellData(row, "sAddrMgtNo");
+			if (wconv.length(wconv.trim(args[16])) > 0) rtnJSON[wconv.trim(args[16])] = Gri_telHistory.getCellData(row, "nAddrStdSeq");
+			if (wconv.length(wconv.trim(args[17])) > 0) rtnJSON[wconv.trim(args[17])] = Gri_telHistory.getCellData(row, "sOrgZipType");
+			if (wconv.length(wconv.trim(args[18])) > 0) rtnJSON[wconv.trim(args[18])] = Gri_telHistory.getCellData(row, "sOrgZipCode");
+			if (wconv.length(wconv.trim(args[19])) > 0) rtnJSON[wconv.trim(args[19])] = Gri_telHistory.getCellData(row, "sOrgAddr");
+		}
+console.log("====CBSO025P return args \n"+args);		
+console.log("====CBSO025P return close \n"+JSON.stringify(rtnJSON));		
+		wprom.close(rtnJSON);			
+	};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="fCut01011s"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;  /*height:281px;*/ left:0px; top:0px;"
+            userData1="연락처 히스토리" userData2=" OnLoadCompleted:scwin.fCut01011s_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+            </ServiceObjects>
+            <xf:switch id="switch_67" style=" ">
+                <xf:case id="Default_68" style=" ">
+                    <w2:gridView class="sty_Grid"
+                    	dataList="DsWs_TelHistory" ev:oncelldblclick=""
+                    	focusMode="row" id="Gri_telHistory"
+                    	inputType="text" readOnly="true"
+                    	style="position:absolute;UseDBuff:true;InputPanel:FALSE;EndLineColor:default;border:Flat;height:236px;left:0px;top:33px;width:700px;"
+                    	tabIndex="2">
+                    	<w2:header>
+                    		<w2:row>
+                    			<w2:column dataType="text"
+                    				id="head_id_477" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="0" userData3="0" value="회차"
+                    				width="60" />
+                    			<w2:column dataType="text"
+                    				id="head_id_478" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				textAlign="center" userData1="1" userData3="0"
+                    				value="자택" width="100" />
+                    			<w2:column dataType="text"
+                    				id="head_id_479" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				textAlign="center" userData1="2" userData3="0"
+                    				value="직장" width="100" />
+                    			<w2:column dataType="text"
+                    				id="head_id_480" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				textAlign="center" userData1="3" userData3="0"
+                    				value="휴대전화" width="100" />
+                    			<w2:column dataType="text"
+                    				id="head_id_481" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				textAlign="center" userData1="4" userData3="0"
+                    				value="기타" width="100" />
+                    			<w2:column dataType="text"
+                    				id="head_id_482" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				textAlign="center" userData1="5" userData3="0"
+                    				value="FAX" width="100" />
+                    			<w2:column dataType="text"
+                    				id="head_id_483" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="6" userData3="0" value="메일1"
+                    				width="150" />
+                    			<w2:column dataType="text"
+                    				id="head_id_484" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="7" userData3="0" value="메일2"
+                    				width="150" />
+                    			<w2:column dataType="text"
+                    				id="head_id_485" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				textAlign="center" userData1="8" userData3="0"
+                    				value="등록일" width="80" />
+                    			<w2:column dataType="text"
+                    				id="head_id_486" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="9" userData3="0" value="등록시간"
+                    				width="60" />
+                    			<w2:column dataType="text"
+                    				id="head_id_487" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="10" userData3="0" value="등록자"
+                    				width="80" />
+                    		</w2:row>
+                    	</w2:header>
+                    	<w2:gBody>
+                    		<w2:row>
+                    			<w2:column dataType="text"
+                    				id="nChangeNo" inputType="text" readOnly="true"
+                    				style="height:20px;" textAlign="center"
+                    				userData1="0" userData3="0" width="60" />
+                    			<w2:column dataType="text" id="homeTel"
+                    				inputType="text" readOnly="true"
+                    				textAlign="center" userData1="1" userData3="0"
+                    				width="90"
+                    				customFormatter="scwin.setDisplayGritelHistory" />
+                    			<w2:column dataType="text"
+                    				id="officeTel" inputType="text" readOnly="true"
+                    				textAlign="center" userData1="2" userData3="0"
+                    				width="90"
+                    				customFormatter="scwin.setDisplayGritelHistory" />
+                    			<w2:column dataType="text"
+                    				id="cellPhone" inputType="text" readOnly="true"
+                    				textAlign="center" userData1="3" userData3="0"
+                    				width="90"
+                    				customFormatter="scwin.setDisplayGritelHistory" />
+                    			<w2:column dataType="text" id="etcTel"
+                    				inputType="text" readOnly="true"
+                    				textAlign="center" userData1="4" userData3="0"
+                    				width="90"
+                    				customFormatter="scwin.setDisplayGritelHistory" />
+                    			<w2:column dataType="text" id="fax"
+                    				inputType="text" readOnly="true"
+                    				textAlign="center" userData1="5" userData3="0"
+                    				width="90"
+                    				customFormatter="scwin.setDisplayGritelHistory" />
+                    			<w2:column dataType="text" id="sEmail1"
+                    				inputType="text" readOnly="true" userData1="6"
+                    				userData3="0" width="150" textAlign="left" />
+                    			<w2:column dataType="text" id="sEmail2"
+                    				inputType="text" readOnly="true" userData1="7"
+                    				userData3="0" width="150" textAlign="left" />
+                    			<w2:column dataType="date"
+                    				displayFormat="yyyy-MM-dd" id="sInputDate"
+                    				inputType="text" readOnly="true"
+                    				textAlign="center" userData1="8" userData3="0"
+                    				width="80" />
+                    			<w2:column dataType="text"
+                    				id="id_inputTime" inputType="text"
+                    				readOnly="true" textAlign="center" userData1="9"
+                    				userData3="0" width="60"
+                    				customFormatter="scwin.setDisplayGritelHistory" />
+                    			<w2:column dataType="text" id="sEmpName"
+                    				inputType="text" readOnly="true" userData1="10"
+                    				userData3="0" width="80" textAlign="center" />
+                    		</w2:row>
+                    	</w2:gBody>
+                    </w2:gridView>
+                </xf:case>
+            </xf:switch>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.Btn_Close_onclick" id="Btn_Close"
+                style="position:absolute;ImageID:btn_Comm_Close;height:20px;left:650px;top:0px;" tabIndex="3" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+            <w2:textbox id="Static5" label="연락처 History"
+                style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; width:197px;" tagname="" class="sub_pop_title01"/>
+        </xf:group>
+    </body>
+</html>

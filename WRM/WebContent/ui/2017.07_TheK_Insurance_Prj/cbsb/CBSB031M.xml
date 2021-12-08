@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/new.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataMap baseNode="map" id="dst_LginAuthInqrVo">
+					<w2:keyInfo>
+						<w2:key id="empNo" name="사번" dataType="text">
+						</w2:key>
+						<w2:key id="name" name="이름" dataType="text">
+						</w2:key>
+						<w2:key id="pstnDeptCd" name="소속부서코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="bizAdmrYn" name="업무관리자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="geafAdmrYn" name="대면총무여부,지점장여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gaEducMngrAdmrYn" name="GA교육매니저여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="agncyAdmrYn" name="대리점사용인관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="superAuthYn" name="super권한여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="drctMangYn" name="직영여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="crossYn" name="교차여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="atchYn" name="전속여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gAYn" name="GA여부" dataType="text">
+						</w2:key>
+						<w2:key id="drctMangAdmrYn" name="직영관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="crossAdmrYn" name="교차관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="atchAdmrYn" name="전속관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gAAdmrYn" name="GA관리자여부"
+							dataType="text">
+						</w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map"
+					id="dst_ClprExamResltInqrInfoVo">
+					<w2:keyInfo>
+						<w2:key id="stndYmd" name="기준년월일"
+							dataType="text">
+						</w2:key>
+						<w2:key id="dlFlagCd" name="거래구분코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="fileTrrvSeqno" name="파일송수신순번"
+							dataType="text">
+						</w2:key>
+						<w2:key id="spclSeqno" name="전문일련번호"
+							dataType="text">
+						</w2:key>
+						<w2:key id="custNo" name="고객번호"
+							dataType="text">
+						</w2:key>
+						<w2:key id="examNo" name="수험번호"
+							dataType="text">
+						</w2:key>
+						<w2:key id="name" name="이름" dataType="text">
+						</w2:key>
+						<w2:key id="demagInsurRqstYn" name="손해보험 신청여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="thrdInsurRqstYn" name="제3보험 신청여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="offcCd" name="점포코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="offcName" name="점포명"
+							dataType="text">
+						</w2:key>
+						<w2:key id="edbgCd" name="학력코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="carerCd" name="경력코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="demagInsurPoct" name="손해보험 점수"
+							dataType="text">
+						</w2:key>
+						<w2:key id="demagInsurJugmCd" name="손해보험 판정코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="thrdInsurPoct" name="제3보험 점수"
+							dataType="text">
+						</w2:key>
+						<w2:key id="thrdInsurJugmCd" name="제3보험 판정코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="passCd" name="합격번호"
+							dataType="text">
+						</w2:key>
+						<w2:key id="post" name="우편번호" dataType="text">
+						</w2:key>
+						<w2:key id="dongBelo" name="동이하 주소"
+							dataType="text">
+						</w2:key>
+						<w2:key id="psnInfoWrcsRvYn" name="개인정보동의서 수령여"
+							dataType="text">
+						</w2:key>
+						<w2:key id="delYn" name="삭제여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptDler" name="입력처리자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptDlerIP" name="입력처리자IP"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptDate" name="입력일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptHms" name="입력시간"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcDler" name="수정처리자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcDlerIP" name="수정처리자IP"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcDate" name="수정일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcHms" name="수정시간"
+							dataType="text">
+						</w2:key>
+						<w2:key id="dateFr" name="조회시작일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="dateTo" name="조회종료일자"
+							dataType="text">
+						</w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList id="dst_ClprExamResltInqrInfoListVo"
+					baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="stndYmd" name="기준년월일"
+							dataType="text">
+						</w2:column>
+						<w2:column id="dlFlagCd" name="거래구분코드"
+							dataType="text">
+						</w2:column>
+						<w2:column id="fileTrrvSeqno" name="파일송수신순번"
+							dataType="text">
+						</w2:column>
+						<w2:column id="spclSeqno" name="전문일련번호"
+							dataType="text">
+						</w2:column>
+						<w2:column id="custNo" name="고객번호"
+							dataType="text">
+						</w2:column>
+						<w2:column id="examNo" name="수험번호"
+							dataType="text">
+						</w2:column>
+						<w2:column id="name" name="이름"
+							dataType="text">
+						</w2:column>
+						<w2:column id="demagInsurRqstYn"
+							name="손해보험 신청여부" dataType="text">
+						</w2:column>
+						<w2:column id="thrdInsurRqstYn" name="제3보험 신청여부"
+							dataType="text">
+						</w2:column>
+						<w2:column id="offcCd" name="점포코드"
+							dataType="text">
+						</w2:column>
+						<w2:column id="offcName" name="점포명"
+							dataType="text">
+						</w2:column>
+						<w2:column id="edbgCd" name="학력코드"
+							dataType="text">
+						</w2:column>
+						<w2:column id="carerCd" name="경력코드"
+							dataType="text">
+						</w2:column>
+						<w2:column id="demagInsurPoct" name="손해보험 점수"
+							dataType="text">
+						</w2:column>
+						<w2:column id="demagInsurJugmCd"
+							name="손해보험 판정코드" dataType="text">
+						</w2:column>
+						<w2:column id="thrdInsurPoct" name="제3보험 점수"
+							dataType="text">
+						</w2:column>
+						<w2:column id="thrdInsurJugmCd" name="제3보험 판정코드"
+							dataType="text">
+						</w2:column>
+						<w2:column id="passCd" name="합격번호"
+							dataType="text">
+						</w2:column>
+						<w2:column id="post" name="우편번호"
+							dataType="text">
+						</w2:column>
+						<w2:column id="dongBelo" name="동이하 주소"
+							dataType="text">
+						</w2:column>
+						<w2:column id="psnInfoWrcsRvYn"
+							name="개인정보동의서 수령여" dataType="text">
+						</w2:column>
+						<w2:column id="delYn" name="삭제여부"
+							dataType="text">
+						</w2:column>
+						<w2:column id="inptDler" name="입력처리자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="inptDlerIP" name="입력처리자IP"
+							dataType="text">
+						</w2:column>
+						<w2:column id="inptDate" name="입력일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="inptHms" name="입력시간"
+							dataType="text">
+						</w2:column>
+						<w2:column id="mdfcDler" name="수정처리자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="mdfcDlerIP" name="수정처리자IP"
+							dataType="text">
+						</w2:column>
+						<w2:column id="mdfcDate" name="수정일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="mdfcHms" name="수정시간"
+							dataType="text">
+						</w2:column>
+						<w2:column id="dateFr" name="조회시작일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="dateTo" name="조회종료일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="dlFlagNm" name="dlFlagNm"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList id="DsWs_CustNo" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="sRealCustNo" name="name1"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sCustKeyNo" name="name2"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>			
+		</xf:model>
+		 <script src="/cm/js/common.js"/>
+		 <script src="/cm/js/val_lib.js"/>
+		 <script src="/cm/js/util.js"/>
+		 <script src="/cm/js/transSub.js"/>
+		 <script src="/cm/js/callService.js"/>
+		 <script src="/cm/js/gds.js"/>
+		 <script src="/cm/js/wconv.js"/>
+		 <script src="/cm/js/convertJs/Global_Script.js"/>
+		 <script src="/cm/js/convertJs/comm_Webservice.js"/>
+		 <script src="/cm/js/convertJs/NewGen_Script.js"/>
+		 <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+		 <script src="/cm/js/convertJs/Marine_Script.js"/>
+		<script type="javascript"><![CDATA[
+			
+	var gsSysDate;			// global 현재일자
+	var gUserID; 			// global 사용자 ID
+	var gUserEmpName; 	    // global 부서명
+	var ib_custNo_Event;
+	var ib_offcCd_Event;
+			
+	//**********************************************************
+	// 초기화
+	//**********************************************************
+	scwin.init = function() {
+		gsSysDate 		= WebSquare.date.getCurrentServerDate("yyyyMMdd"); 	// global 현재일자
+		gUserID 		= util.getGdsValue("gUserID");    					// global 사용자 ID
+		gUserEmpName 	= util.getGdsValue("gUserEmpName");    				// global 부서명
+						
+	    //----- 버튼 처리(입력, 수정, 삭제, 결재, 취소, 인쇄, 엑셀, 닫기)
+		gfn_btnEnable(false, false, false, false, false, false, false, true);
+	        
+	    ic_dateFr.setValue(gsSysDate);	//현재날짜 셋팅
+	    ic_dateTo.setValue(gsSysDate);	//현재날짜 셋팅	    	    	   
+	    
+	    var maskRegExp = [ /^[A-Z\s]{1}[0-9\s]{4}[0-9\s]{7}$/,
+	    						/^[0-9\s]{6}$/,
+	    							/^[0-9\s]{6}[0-9\s]{1}[A-Z0-9\s]{6}$/
+	    								,/^[0-9A-Z\s]{7}$/
+	    									,/^[ㄱ-ㅎㅏ-ㅣ가-힣A-Za-z0-9\s]{20}$/ ];
+		var maxLength  = [12,6,13,7,20];
+		var chkIndex   = 0;	
+		ib_custNo.setPlaceholder( "");
+		ib_custNo_Event = new wMaskEditObj(ib_custNo, maskRegExp, maxLength, chkIndex);	
+		ib_custNo.setPlaceholder("______-_______");
+		ib_custNo.setDisplayFormat("######-#######");
+		ib_custNo_Event.setIndex(2);		
+		
+		ib_offcCd.setPlaceholder( "");
+		ib_offcCd_Event = new wMaskEditObj(ib_offcCd, maskRegExp, maxLength, chkIndex);
+		ib_offcCd.setPlaceholder("_______");
+		ib_offcCd.setDisplayFormat("#######");
+		ib_offcCd_Event.setIndex(3);
+	    
+	        
+	    var promise = Promise.resolve();
+	    promise = promise.then(function(rtnVal) {
+	     	// /common/CBSO0015.do 로그인자 권한조회	 
+			scwin.getLginAuthInfo();	  			
+	    });
+	    
+	    return promise;	
+	    	
+	};
+	
+	//**********************************************************
+	// 
+	//**********************************************************
+	scwin.subCallBackfunction = function(e){
+		// e.subID : 서브미션 ID
+		// e.flag  : s성공;
+		// e.msg   : 트렌젝션 처리후 메세지
+		// e."받을데이타셋"
+		switch(e.subID){
+			// 로그인ID권한조회
+			case "retrieveLginIDAuthInqr":
+				if(e.flag == "s") {
+					dst_LginAuthInqrVo.setJSON(e.result);	
+					
+					//슈퍼권한
+					if(dst_LginAuthInqrVo.get("bizAdmrYn") == "Y"){
+						ib_offcCd.setDisabled( false );								
+					}else{
+						ib_offcCd.setDisabled( true );
+						ib_offcCd.setValue( dst_LginAuthInqrVo.get("pstnDeptCd"));
+					}
+					
+					var promise = Promise.resolve();
+					promise = promise.then(function(rtnVal) {
+						// /sales/support/CBSB0018.do 모집인시험결과조회
+   						scwin.getClprExamResltList();	
+					});
+					
+				}else {
+					wprom.alert(e.msg);
+				}															
+			break;
+			
+			// 모집인시험결과조회
+			case "retrieveClprExamResltInqr":
+				if(e.flag == "s") {
+					dst_ClprExamResltInqrInfoListVo.setJSON(e.result.clprExamResltInqrInfoVo);
+					
+					if(dst_ClprExamResltInqrInfoListVo.getRowCount()==0){
+			        	wprom.alert("조회결과가 없습니다.");        	
+			        	return;	
+					}
+				}else {
+					wprom.alert(e.msg);
+				}															
+			break;
+		}
+	};
+	
+	//**********************************************************
+	// 로그인자 권한조회 /common/CBSO0015.do 로그인자 권한조회
+	//**********************************************************
+	scwin.getLginAuthInfo = function() {
+		var promise = Promise.resolve();
+		// 사번으로 로그인자 권한조회	
+		//gUserID = "2080018";
+		dst_LginAuthInqrVo.set("empNo" , gUserID);
+		
+		var trans = new transSub();                  	// transaction 보낼 객체 생성
+		trans.setId("retrieveLginIDAuthInqr");        	// transaction 보낼 SubmissionID
+		trans.setUrl("/common/CBSO0015.do");   			// Controller 쪽으로 보낼 주소
+		trans.setDs("dst_LginAuthInqrVo");					
+		trans.targetDs("dst_LginAuthInqrVo");		
+		trans.callBack("scwin.subCallBackfunction");  	// 받을 Dataset을 처리시 콜백함수
+		trans.send();
+		
+	};
+	
+//---------------------------------------------------------------------------
+// function 명 : lfn_getRealNo (기간계B370)
+// 내용        : 실주민번호 조회
+//---------------------------------------------------------------------------
+	scwin.lfn_getRealNo = function(sCustKeyNo) {
+		DsWs_CustNo.removeAll();
+		
+		var MethodObj = new callService("com.inswave.longterm.com.com.task.AXR300Task", "selectRealCustNo", 0, 0);
+		MethodObj.setId("selectRealCustNo");
+		MethodObj.setParam("sCustKeyNo", sCustKeyNo);
+		MethodObj.setUrl("/common/CBSO028MController.do");
+		MethodObj.setXPath("//*/LTI0000");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();    
+
+		DsWs_CustNo.setJSON(_tranSync.getDsJson("LTI0000"));
+		
+		if(DsWs_CustNo.getRowCount() > 0 && wconv.length(DsWs_CustNo.getCellData(0,"sRealCustNo")) >  0) {
+			return DsWs_CustNo.getCellData(0,"sRealCustNo");
+		}else{
+			return sCustKeyNo;
+		}
+	};
+	
+//---------------------------------------------------------------------------
+// function 명 : lfn_getCustNo
+// 내용        : 고객번호 조회
+//---------------------------------------------------------------------------
+	scwin.lfn_getCustNo = function(sRealCustNo) {
+		DsWs_CustNo.removeAll();		
+		
+		var MethodObj = new callService("com.inswave.longterm.com.com.task.AXR300Task", "selectCustKeyNo", 0, 0);
+		MethodObj.setId("selectCustKeyNo");
+		MethodObj.setParam("sRealCustNo", sRealCustNo);
+		MethodObj.setUrl("/common/CBSO028MController.do");
+		MethodObj.setXPath("//*/LTI0000");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();    
+
+		DsWs_CustNo.setJSON(_tranSync.getDsJson("LTI0000"));
+		
+		if(DsWs_CustNo.getRowCount() > 0 && wconv.length(DsWs_CustNo.getCellData(0,"sCustKeyNo")) >  0) {
+			return DsWs_CustNo.getCellData(0,"sCustKeyNo");
+		}else{
+			return "";
+		}
+	};
+	
+	//**********************************************************
+	// 조회버튼 클릭시
+	//**********************************************************
+	scwin.btn_Search_onclick = function() {
+	
+		if(util.isNull(ic_dateFr.getValue())){			
+        	wprom.alertF("조회 시작일자를 입력해 주세요.",{}, ic_dateFr);        	
+        	return;		
+		}		
+		if(util.isNull(ic_dateTo.getValue())){			
+        	wprom.alertF("조회 종료일자를 입력해 주세요.",{}, ic_dateTo);        	
+        	return;		
+		}				
+		if(parseInt(ic_dateFr.getValue()-ic_dateTo.getValue())>0){
+			wprom.alertF("조회시작일이 조회종료일보다 큽니다.",{},ic_dateFr);						
+			return;
+		}		
+		if(WebSquare.date.dateDiff(ic_dateFr.getValue(),ic_dateTo.getValue())>31){
+			wprom.alertF("최대 31일까지 조회 가능합니다.",{},ic_dateTo);
+			return;
+		}
+		//모집인시험결과 list조회
+		scwin.getClprExamResltList();
+	};
+	
+	//**********************************************************
+	// 모집인시험결과list조회 /sales/support/CBSB0018.do
+	//**********************************************************
+	scwin.getClprExamResltList = function() {
+	
+		//고객 주민번호 -> 치환키
+		var custKey = "";
+		if(!util.isNull(ib_custNo.getValue())){
+			custKey = scwin.lfn_getCustNo(ib_custNo.getValue());
+			dst_ClprExamResltInqrInfoVo.set("custNo"	, custKey);	//고객번호
+		}else{
+			dst_ClprExamResltInqrInfoVo.set("custNo"	, ib_custNo.getValue());	//고객번호
+		}
+		
+		//조회key setting		
+		dst_ClprExamResltInqrInfoVo.set("dateFr"	, ic_dateFr.getValue());	//조회시작일자
+		dst_ClprExamResltInqrInfoVo.set("dateTo"	, ic_dateTo.getValue());	//조회종료일자		
+		dst_ClprExamResltInqrInfoVo.set("name"		, ib_name.getValue());		//이름
+		dst_ClprExamResltInqrInfoVo.set("offcCd"	, ib_offcCd.getValue());	//점포코드				
+
+		var trans = new transSub();                  	// transaction 보낼 객체 생성
+		trans.setId("retrieveClprExamResltInqr");       // transaction 보낼 SubmissionID
+		trans.setUrl("/sales/support/CBSB0018.do");   	// Controller 쪽으로 보낼 주소
+		trans.setDs("dst_ClprExamResltInqrInfoVo");					
+		trans.targetDs("dst_ClprExamResltInqrInfoListVo");		
+		trans.callBack("scwin.subCallBackfunction");  	// 받을 Dataset을 처리시 콜백함수
+		trans.send();
+	
+	};
+	]]></script>
+	</head>
+	<body>
+		<xf:group class="contentWrap" id="" style="">
+			<w2:wframe id="" style="" initScript="scwin.wfTitleFavInit();" src="/cm/common/wf_titleFav.xml"></w2:wframe>
+			
+			<!-- group:s -->
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="" class="tbl_search">
+					<xf:group id="" style="" adaptive="" class="w2tb tbl_sc" adaptiveThreshold="" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:60px;"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:230px;"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:100px;"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:150px;"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:50px;"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:100px;"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:80px;"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:100px;"
+								tagname="col">
+							</xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group tagname="tr" style="">
+							<xf:group style="" class="w2tb_th"
+								tagname="th">
+								조회기간
+							</xf:group>
+							<xf:group style="" class="w2tb_td"
+								tagname="td">
+								<xf:group class="" style="">
+									<w2:inputCalendar
+										calendarValueType="yearMonthDate" focusOnDateSelect="false"
+										footerDiv="false" id='ic_dateFr' renderDiv="true"
+										renderType="component" rightAlign="false" style="width:100px"
+										weekStartsOn="0">
+									</w2:inputCalendar>
+									<w2:textbox class="txt_bw" id=""
+										label="~" tagname="span">
+									</w2:textbox>
+									<w2:inputCalendar
+										calendarValueType="yearMonthDate" focusOnDateSelect="false"
+										footerDiv="false" id="ic_dateTo" renderDiv="true"
+										renderType="component" rightAlign="false" style="width:100px"
+										weekStartsOn="0">
+									</w2:inputCalendar>
+								</xf:group>
+							</xf:group>
+							<xf:group style="" class="w2tb_th"
+								tagname="th">
+								주민등록번호
+							</xf:group>
+							<xf:group style="" class="w2tb_td"
+								tagname="td">
+								<xf:input id="ib_custNo" style="" maxlength="13" displayFormat="" dataType=""></xf:input>
+							</xf:group>
+							<xf:group style="" class="w2tb_th"
+								tagname="th">
+								이름
+							</xf:group>
+							<xf:group style="" class="w2tb_td"
+								tagname="td">
+								<xf:input id="ib_name" style=""></xf:input>
+							</xf:group>
+							<xf:group class="w2tb_th" style=""
+								tagname="th">점포코드</xf:group>
+							<xf:group class="w2tb_td" style=""
+								tagname="td">
+								<xf:input id="ib_offcCd" style=""></xf:input>
+							</xf:group>
+						</xf:group>
+					</xf:group>
+					
+					<w2:anchor id="btn_Search" style="" ev:onclick="scwin.btn_Search_onclick" class="btn_sh" outerDiv="true" disabled="false">
+						<xf:label><![CDATA[조회]]></xf:label>
+					</w2:anchor>
+				</xf:group>
+			</xf:group>
+			<!-- group:e -->
+			
+			<!-- group:s -->
+			<xf:group id="" style="" class="section">
+				
+				<w2:gridView ignoreCellClick="false"
+					ev:onrowindexchange="" autoFit="" rowStatusWidth="20"
+					visibleRowNum="" class="cm_grid" wheelRows="" ev:onviewchange=""
+					fixedColumnWithHidden="" dataList="dst_ClprExamResltInqrInfoListVo"
+					id="grd_Menu" style="height:579px;left:-1px;top:-6px;margin-left:1px;" scrollByColumn="false"
+					useShiftKey="true" rowStatusVisible="" ev:onafteredit=""
+					rowStatusHeaderValue="상태" ev:oncellclick="" rowNumVisible="true"
+					rowNumWidth="30" fixedColumn="4" readOnly="true" rowNumHeaderValue="No">
+					<w2:header id="header1" style="">
+						<w2:row id="row1" style="">
+							<w2:column id="column2" blockSelect="false"
+								style="height:22px;" width="80" inputType="text" value="일자"
+								displayMode="label" colSpan="" rowSpan="2">
+							</w2:column>
+							<w2:column id="column3" blockSelect="false"
+								style="height:22px;" width="80" inputType="text" value="거래구분"
+								displayMode="label" colSpan="" rowSpan="2">
+							</w2:column>
+							<w2:column id="column3" blockSelect="false"
+								style="height:22px;" width="110" inputType="text" value="주민등록번호"
+								displayMode="label" colSpan="" rowSpan="2">
+							</w2:column>
+							<w2:column id="column4" blockSelect="false"
+								style="height:22px;" width="80" inputType="text" value="성명"
+								displayMode="label" colSpan="" rowSpan="2">
+							</w2:column>
+							<w2:column id="column5" blockSelect="false"
+								style="height:22px;" width="105" inputType="text"
+								value="점포(대리점)코드" displayMode="label" colSpan="" rowSpan="2">
+							</w2:column>
+							<w2:column id="column6" blockSelect="false"
+								style="height:22px;" width="105" inputType="text"
+								value="점포(대리점)명" displayMode="label" colSpan="" rowSpan="2">
+							</w2:column>
+							<w2:column id="column7" blockSelect="false"
+								style="height:22px;" width="100" inputType="text"
+								value="개인정보동의서&lt;br/&gt;수령여부" displayMode="label" colSpan=""
+								rowSpan="2">
+							</w2:column>
+							<w2:column id="column8" blockSelect="false"
+								style="height:22px;" width="100" inputType="text" value="수험번호"
+								displayMode="label" colSpan="" rowSpan="2">
+							</w2:column>
+							<w2:column id="column9" blockSelect="false"
+								style="height:22px;" width="100" inputType="text" value="응시구분"
+								displayMode="label" colSpan="2" rowSpan="">
+							</w2:column>
+							<w2:column blockSelect="false" id="column11"
+								style="height:22px;" inputType="text" width="100"
+								displayMode="label" value="점수" colSpan="2" rowSpan="">
+							</w2:column>
+							<w2:column blockSelect="false" id="column17"
+								style="height:22px;" inputType="text" width="100"
+								displayMode="label" colSpan="2" rowSpan="" value="판정코드">
+							</w2:column>
+							<w2:column blockSelect="false" id="column13"
+								style="height:22px;" inputType="text" width="70"
+								displayMode="label" colSpan="" rowSpan="2" value="합격번호">
+							</w2:column>
+						</w2:row>
+						<w2:row id="row2" style="">
+							<w2:column id="column9" blockSelect="false"
+								style="height:20px;" width="50" inputType="text" value="손보"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column10" blockSelect="false"
+								style="height:20px;" width="50" inputType="text" value="제3보"
+								displayMode="label">
+							</w2:column>
+							<w2:column blockSelect="false" id="column11"
+								style="height:20px;" inputType="text" width="50"
+								displayMode="label" value="손보">
+							</w2:column>
+							<w2:column blockSelect="false" id="column19"
+								style="height:20px;" inputType="text" width="50"
+								displayMode="label" value="제3보">
+							</w2:column>
+							<w2:column blockSelect="false" id="column17"
+								style="height:20px;" inputType="text" width="100"
+								displayMode="label" value="손보">
+							</w2:column>
+							<w2:column blockSelect="false" id="column15"
+								style="height:20px;" inputType="text" width="100"
+								displayMode="label" value="제3보">
+							</w2:column>
+						</w2:row>
+					</w2:header>
+					<w2:gBody id="gBody4" style="">
+						<w2:row id="row5" style="">
+							<w2:column id="stndYmd" blockSelect="false"
+								style="" width="100" inputType="" displayMode="label">
+							</w2:column>
+							<w2:column id="dlFlagNm" blockSelect="false"
+								style="" width="80" inputType="" displayMode="label">
+							</w2:column>
+							<w2:column id="custNo" blockSelect="false"
+								style="" width="110" inputType="" displayMode="label"
+								displayFormat="########-#######">
+							</w2:column>
+							<w2:column id="name" blockSelect="false"
+								style="" width="80" inputType="" displayMode="label">
+							</w2:column>
+							<w2:column id="offcCd" blockSelect="false"
+								style="" width="100" inputType="" displayMode="label">
+							</w2:column>
+							<w2:column id="offcName" blockSelect="false"
+								style="" width="105" inputType="" displayMode="label">
+							</w2:column>
+							<w2:column id="psnInfoWrcsRvYn"
+								blockSelect="false" style="" width="100" inputType=""
+								displayMode="label">
+							</w2:column>
+							<w2:column id="examNo" blockSelect="false"
+								style="" width="100" inputType="" displayMode="label">
+							</w2:column>
+							<w2:column id="demagInsurRqstYn"
+								blockSelect="false" style="" width="90" inputType=""
+								displayMode="label">
+							</w2:column>
+							<w2:column id="thrdInsurRqstYn"
+								blockSelect="false" style="" width="100" inputType=""
+								displayMode="label">
+							</w2:column>
+							<w2:column blockSelect="false"
+								id="demagInsurPoct" style="height:20px" inputType="text"
+								width="100" displayMode="label">
+							</w2:column>
+							<w2:column blockSelect="false"
+								id="thrdInsurPoct" style="height:20px" inputType="text"
+								width="100" displayMode="label">
+							</w2:column>
+							<w2:column blockSelect="false"
+								id="demagInsurJugmCd" style="height:20px" inputType="text"
+								width="100" displayMode="label">
+							</w2:column>
+							<w2:column blockSelect="false"
+								id="thrdInsurJugmCd" style="height:20px" inputType="text"
+								width="100" displayMode="label">
+							</w2:column>
+							<w2:column blockSelect="false" id="passCd"
+								style="height:20px" inputType="text" width="70"
+								displayMode="label">
+							</w2:column>
+						</w2:row>
+					</w2:gBody>
+				</w2:gridView>
+			</xf:group>
+			<!-- group:e -->
+			
+		</xf:group>
+	</body>
+</html>

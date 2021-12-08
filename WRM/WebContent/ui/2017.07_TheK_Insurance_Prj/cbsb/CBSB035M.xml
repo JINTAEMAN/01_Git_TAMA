@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/new.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataMap baseNode="map" id="dst_LginAuthInqrVo">
+					<w2:keyInfo>
+						<w2:key id="empNo" name="사번" dataType="text">
+						</w2:key>
+						<w2:key id="name" name="이름" dataType="text">
+						</w2:key>
+						<w2:key id="pstnDeptCd" name="소속부서코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="bizAdmrYn" name="업무관리자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="geafAdmrYn" name="대면총무여부,지점장여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gaEducMngrAdmrYn" name="GA교육매니저여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="agncyAdmrYn" name="대리점사용인관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="superAuthYn" name="super권한여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="drctMangYn" name="직영여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="crossYn" name="교차여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="atchYn" name="전속여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gAYn" name="GA여부" dataType="text">
+						</w2:key>
+						<w2:key id="drctMangAdmrYn" name="직영관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="crossAdmrYn" name="교차관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="atchAdmrYn" name="전속관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gAAdmrYn" name="GA관리자여부"
+							dataType="text">
+						</w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map"
+					id="dst_UserRgstErsrInfoVo">
+					<w2:keyInfo>
+						<w2:key id="stndYmd" name="기준년월일"
+							dataType="text">
+						</w2:key>
+						<w2:key id="fileTrrvSeqno" name="파일송수신순번"
+							dataType="text">
+						</w2:key>
+						<w2:key id="spclSeqno" name="전문일련번호"
+							dataType="text">
+						</w2:key>
+						<w2:key id="custNo" name="고객번호"
+							dataType="text">
+						</w2:key>
+						<w2:key id="flag" name="등록/말소/변경 구분"
+							dataType="text">
+						</w2:key>
+						<w2:key id="rgstDate" name="등록일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="bussFlag" name="영업구분"
+							dataType="text">
+						</w2:key>
+						<w2:key id="name" name="이름" dataType="text">
+						</w2:key>
+						<w2:key id="cmpnCd" name="회사코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="rgstNo" name="등록번호"
+							dataType="text">
+						</w2:key>
+						<w2:key id="agncyRgstNo" name="대리점등록번호"
+							dataType="text">
+						</w2:key>
+						<w2:key id="ersrCd" name="말소코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="ersrDate" name="말소일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="psnInfoWrcsRvFlag"
+							name="개인정보(모집경력)동의서 수령구분" dataType="text">
+						</w2:key>
+						<w2:key id="carerCd" name="경력코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="post" name="우편번호" dataType="text">
+						</w2:key>
+						<w2:key id="dongBelo" name="주소"
+							dataType="text">
+						</w2:key>
+						<w2:key id="delYn" name="삭제여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptDler" name="입력처리자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptDlerIP" name="입력처리자IP"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptDate" name="입력일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptHms" name="입력시간"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcDler" name="수정처리자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcDlerIP" name="수정처리자IP"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcDate" name="수정일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcHms" name="수정시간"
+							dataType="text">
+						</w2:key>
+						<w2:key id="dateFr" name="조회시작일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="dateTo" name="조회종료일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="empStatCd" name="name29"
+							dataType="text">
+						</w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList id="dst_UserRgstErsrInfoListVo"
+					baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="stndYmd" name="기준년월일"
+							dataType="text">
+						</w2:column>
+						<w2:column id="fileTrrvSeqno" name="파일송수신순번"
+							dataType="text">
+						</w2:column>
+						<w2:column id="spclSeqno" name="전문일련번호"
+							dataType="text">
+						</w2:column>
+						<w2:column id="custNo" name="고객번호"
+							dataType="text">
+						</w2:column>
+						<w2:column id="flag" name="등록/말소/변경 구분"
+							dataType="text">
+						</w2:column>
+						<w2:column id="rgstDate" name="등록일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="bussFlag" name="영업구분"
+							dataType="text">
+						</w2:column>
+						<w2:column id="name" name="이름"
+							dataType="text">
+						</w2:column>
+						<w2:column id="cmpnCd" name="회사코드"
+							dataType="text">
+						</w2:column>
+						<w2:column id="rgstNo" name="등록번호"
+							dataType="text">
+						</w2:column>
+						<w2:column id="agncyRgstNo" name="대리점등록번호"
+							dataType="text">
+						</w2:column>
+						<w2:column id="ersrCd" name="말소코드"
+							dataType="text">
+						</w2:column>
+						<w2:column id="ersrDate" name="말소일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="psnInfoWrcsRvFlag"
+							name="개인정보(모집경력)동의서 수령구분" dataType="text">
+						</w2:column>
+						<w2:column id="carerCd" name="경력코드"
+							dataType="text">
+						</w2:column>
+						<w2:column id="post" name="우편번호"
+							dataType="text">
+						</w2:column>
+						<w2:column id="dongBelo" name="주소"
+							dataType="text">
+						</w2:column>
+						<w2:column id="delYn" name="삭제여부"
+							dataType="text">
+						</w2:column>
+						<w2:column id="inptDler" name="입력처리자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="inptDlerIP" name="입력처리자IP"
+							dataType="text">
+						</w2:column>
+						<w2:column id="inptDate" name="입력일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="inptHms" name="입력시간"
+							dataType="text">
+						</w2:column>
+						<w2:column id="mdfcDler" name="수정처리자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="mdfcDlerIP" name="수정처리자IP"
+							dataType="text">
+						</w2:column>
+						<w2:column id="mdfcDate" name="수정일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="mdfcHms" name="수정시간"
+							dataType="text">
+						</w2:column>
+						<w2:column id="dateFr" name="조회시작일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="dateTo" name="조회종료일자"
+							dataType="text">
+						</w2:column>
+						<w2:column id="flagNm" name="flagNm"
+							dataType="text">
+						</w2:column>
+						<w2:column id="bussFlagNm" name="bussFlagNm"
+							dataType="text">
+						</w2:column>
+						<w2:column id="cmpnNm" name="cmpnNm"
+							dataType="text">
+						</w2:column>
+						<w2:column id="ersrNm" name="ersrNm"
+							dataType="text">
+						</w2:column>
+						<w2:column id="psnInfoWrcsRvFlagNm"
+							name="psnInfoWrcsRvFlagNm" dataType="text">
+						</w2:column>
+						<w2:column id="carerNm" name="carerNm"
+							dataType="text">
+						</w2:column>
+						<w2:column id="empno" name="empno"
+							dataType="text">
+						</w2:column>
+						<w2:column id="empStatCd" name="name36"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>
+			
+		</xf:model>
+		 <script src="/cm/js/common.js"/>
+		 <script src="/cm/js/val_lib.js"/>
+		 <script src="/cm/js/util.js"/>
+		 <script src="/cm/js/transSub.js"/>
+		 <script src="/cm/js/callService.js"/>
+		 <script src="/cm/js/gds.js"/>
+		 <script src="/cm/js/wconv.js"/>
+		 <script src="/cm/js/convertJs/Global_Script.js"/>
+		 <script src="/cm/js/convertJs/comm_Webservice.js"/>
+		 <script src="/cm/js/convertJs/NewGen_Script.js"/>
+		 <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+		 <script src="/cm/js/convertJs/Marine_Script.js"/>
+		<script type="javascript"><![CDATA[
+			
+	var gsSysDate;			// global 현재일자
+	var gUserID; 			// global 사용자 ID
+	var gUserEmpName; 	    // global 부서명
+			
+	//**********************************************************
+	// 초기화
+	//**********************************************************
+	scwin.init = function() {
+		gsSysDate 		= WebSquare.date.getCurrentServerDate("yyyyMMdd"); 	// global 현재일자
+		gUserID 		= util.getGdsValue("gUserID");    					// global 사용자 ID
+		gUserEmpName 	= util.getGdsValue("gUserEmpName");    				// global 부서명
+						
+	    //----- 버튼 처리(입력, 수정, 삭제, 결재, 취소, 인쇄, 엑셀, 닫기)
+		gfn_btnEnable(false, false, false, false, false, false, true, true);
+	        
+	    ic_dateFr.setValue(gsSysDate);	//현재날짜 셋팅
+	    ic_dateTo.setValue(gsSysDate);	//현재날짜 셋팅	    
+	        
+	    var promise = Promise.resolve();
+	    promise = promise.then(function(rtnVal) {
+	     	// /common/CBSO0015.do 로그인자 권한조회	 
+			scwin.getLginAuthInfo();	  			
+	    });
+	    
+	    return promise;	
+	    	
+	};
+	
+	//**********************************************************
+	// 
+	//**********************************************************
+	scwin.subCallBackfunction = function(e){
+		// e.subID : 서브미션 ID
+		// e.flag  : s성공;
+		// e.msg   : 트렌젝션 처리후 메세지
+		// e."받을데이타셋"
+		switch(e.subID){
+			// 로그인ID권한조회
+			case "retrieveLginIDAuthInqr":
+				if(e.flag == "s") {
+					dst_LginAuthInqrVo.setJSON(e.result);						
+					
+					var promise = Promise.resolve();
+					promise = promise.then(function(rtnVal) {
+						// /sales/support/CBSB0023.do 사용인등록말소조회
+   						scwin.getUserRgstErsrList();	
+					});
+					
+				}else {
+					wprom.alert(e.msg);
+				}															
+			break;
+			
+			// 사용인등록말소결과조회
+			case "retrieveUserRgstErsrInfo":
+				if(e.flag == "s") {
+					dst_UserRgstErsrInfoListVo.setJSON(e.result.userRgstErsrInfoVo);					
+					
+					if(dst_UserRgstErsrInfoListVo.getRowCount()==0){
+			        	wprom.alert("조회결과가 없습니다.");        	
+			        	return;	
+					}
+					
+				}else {
+					wprom.alert(e.msg);
+				}															
+			break;
+		}
+	};
+	
+	//**********************************************************
+	// 로그인자 권한조회 /common/CBSO0015.do 로그인자 권한조회
+	//**********************************************************
+	scwin.getLginAuthInfo = function() {
+		var promise = Promise.resolve();
+		// 사번으로 로그인자 권한조회	
+		gUserID = "2080018";
+		dst_LginAuthInqrVo.set("empNo" , gUserID);
+		
+		var trans = new transSub();                  	// transaction 보낼 객체 생성
+		trans.setId("retrieveLginIDAuthInqr");        	// transaction 보낼 SubmissionID
+		trans.setUrl("/common/CBSO0015.do");   			// Controller 쪽으로 보낼 주소
+		trans.setDs("dst_LginAuthInqrVo");					
+		trans.targetDs("dst_LginAuthInqrVo");		
+		trans.callBack("scwin.subCallBackfunction");  	// 받을 Dataset을 처리시 콜백함수
+		trans.send();
+		
+	};
+	
+	//**********************************************************
+	// 조회버튼 클릭시
+	//**********************************************************
+	scwin.btn_Search_onclick = function() {
+	
+		if(util.isNull(ic_dateFr.getValue())){			
+        	wprom.alertF("조회 시작일자를 입력해 주세요.",{}, ic_dateFr);        	
+        	return;		
+		}		
+		if(util.isNull(ic_dateTo.getValue())){			
+        	wprom.alertF("조회 종료일자를 입력해 주세요.",{}, ic_dateTo);        	
+        	return;		
+		}				
+		if(parseInt(ic_dateFr.getValue()-ic_dateTo.getValue())>0){
+			wprom.alertF("조회시작일이 조회종료일보다 큽니다.",{},ic_dateFr);						
+			return;
+		}		
+		if(WebSquare.date.dateDiff(ic_dateFr.getValue(),ic_dateTo.getValue())>31){
+			wprom.alertF("최대 31일까지 조회 가능합니다.",{},ic_dateTo);
+			return;
+		}	
+	
+		
+		//사용인등록말소 list조회
+		scwin.getUserRgstErsrList();
+	};
+	
+	//**********************************************************
+	// 사용인등록말소list조회 /sales/support/CBSB0023.do
+	//**********************************************************
+	scwin.getUserRgstErsrList = function() {
+		//조회key setting		
+		dst_UserRgstErsrInfoVo.set("dateFr"	, ic_dateFr.getValue());	//조회시작일자
+		dst_UserRgstErsrInfoVo.set("dateTo"	, ic_dateTo.getValue());	//조회종료일자			
+		dst_UserRgstErsrInfoVo.set("flag"	, sel_flag.getValue());	//협회상태
+		dst_UserRgstErsrInfoVo.set("empStatCd"	, sel_empStat.getValue());	//당사상태
+	
+		var trans = new transSub();                  	// transaction 보낼 객체 생성
+		trans.setId("retrieveUserRgstErsrInfo");        // transaction 보낼 SubmissionID
+		trans.setUrl("/sales/support/CBSB0023.do");   	// Controller 쪽으로 보낼 주소
+		trans.setDs("dst_UserRgstErsrInfoVo");					
+		trans.targetDs("dst_UserRgstErsrInfoListVo");		
+		trans.callBack("scwin.subCallBackfunction");  	// 받을 Dataset을 처리시 콜백함수
+		trans.send();
+	
+	};
+	
+	//**********************************************************
+	// 그리드 엑셀 다운로드
+	//**********************************************************
+	scwin.cm_btnExDown = function(){		
+		var option={};
+		option.fileName= "사용인등록말소결과"+ic_dateFr.getValue()+"_"+ic_dateTo.getValue()+".xlsx";
+	    common.downLoadExcel("grd_List",option,{});
+    
+	};]]></script>
+	</head>
+	<body>
+		<xf:group class="contentWrap" id="" style="">
+			<w2:wframe id="" style="" initScript="scwin.wfTitleFavInit();" src="/cm/common/wf_titleFav.xml"></w2:wframe>
+			
+			<!-- group:s -->
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="" class="tbl_search">
+					<xf:group id="" style="" adaptive=""
+						class="w2tb tbl_sc" adaptiveThreshold="" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:80px;"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:250.00px;"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:80px;"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:80px;"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:80.00px;"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:80.00px;" tagname="col"></xf:group><xf:group style="width:80.00px;" tagname="col">
+						</xf:group><xf:group style="" tagname="col"></xf:group>
+						</xf:group>
+						
+						
+
+
+
+
+						<xf:group tagname="tr" style="">
+							<xf:group style="" class="w2tb_th"
+								tagname="th">
+								조회기간
+							</xf:group>
+							<xf:group style="" class="w2tb_td"
+								tagname="td">
+								<xf:group class="" style="">
+									<w2:inputCalendar
+										calendarValueType="yearMonthDate" focusOnDateSelect="false"
+										footerDiv="false" id="ic_dateFr" renderDiv="true"
+										renderType="component" rightAlign="false" style="width:100px"
+										weekStartsOn="0">
+									</w2:inputCalendar>
+									<w2:textbox class="txt_bw" id=""
+										label="~" tagname="span">
+									</w2:textbox>
+									<w2:inputCalendar
+										calendarValueType="yearMonthDate" focusOnDateSelect="false"
+										footerDiv="false" id="ic_dateTo" renderDiv="true"
+										renderType="component" rightAlign="false" style="width:100px"
+										weekStartsOn="0">
+									</w2:inputCalendar>
+								</xf:group>
+							</xf:group>
+							<xf:group class="w2tb_th" style=""
+								tagname="th">
+								협회상태
+							</xf:group>
+							<xf:group class="w2tb_td" style=""
+								tagname="td">
+								<xf:select1 allOption=""
+									appearance="minimal" chooseOption="true"
+									chooseOptionLabel="- 전체 -" direction="auto" disabled="false"
+									disabledClass="" displayMode="label" ev:onviewchange=""
+									id="sel_flag" optionOrder="" ref=""
+									renderType="native" style="width:150pxleft:0px;top:0px;"
+									submenuSize="">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[등록]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[말소]]></xf:label>
+											<xf:value><![CDATA[2]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[변경]]></xf:label>
+											<xf:value><![CDATA[3]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group class="w2tb_th" style=""
+								tagname="th">
+								당사상태
+							</xf:group>
+							<xf:group class="w2tb_td" style=""
+								tagname="td">
+								<xf:select1 allOption=""
+									appearance="minimal" chooseOption="true"
+									chooseOptionLabel="- 전체 -" direction="auto" disabled="false"
+									disabledClass="" displayMode="label" ev:onviewchange=""
+									id="sel_empStat" optionOrder="" ref="" renderType="native"
+									style="width:80pxleft:0px;top:0px;" submenuSize="">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[위촉]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[해촉]]></xf:label>
+											<xf:value><![CDATA[2]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+
+
+
+
+					</xf:group>
+					<w2:anchor id="btn_Search" style="" ev:onclick="scwin.btn_Search_onclick" class="btn_sh" outerDiv="true" disabled="">
+						<xf:label><![CDATA[조회]]></xf:label>
+					</w2:anchor>
+				</xf:group>
+			</xf:group>
+			<!-- group:e -->
+			
+			<!-- group:s -->
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="" class="defaultbox">
+					<xf:group id="" style="" class="fr"></xf:group>
+				</xf:group>
+				<w2:gridView ignoreCellClick="false"
+					ev:onrowindexchange="" autoFit="" rowStatusWidth="20"
+					visibleRowNum="" class="cm_grid" wheelRows="" ev:onviewchange=""
+					fixedColumnWithHidden="" dataList="dst_UserRgstErsrInfoListVo"
+					id="grd_List" style="height:580px;" scrollByColumn="false"
+					useShiftKey="true" rowStatusVisible="" ev:onafteredit=""
+					rowStatusHeaderValue="상태" ev:oncellclick="" rowNumVisible="true"
+					rowNumWidth="30" fixedColumn="5" readOnly="true"
+					rowNumHeaderValue="No">
+					<w2:header id="header1" style="">
+						<w2:row id="row2" style="">
+							<w2:column id="column2" blockSelect="false"
+								style="height:20px;" width="80" inputType="text" value="협회상태"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column3" blockSelect="false"
+								style="height:20px;" width="80" inputType="text" value="등록일자"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column4" blockSelect="false"
+								style="height:20px;" width="70" inputType="text" value="영업구분"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column20" blockSelect="false"
+								style="height:20px;" width="85" inputType="text" value="사번"
+								displayMode="label">
+							</w2:column>
+							<w2:column blockSelect="false" id="column21"
+								style="height:20px;" inputType="text" width="70"
+								displayMode="label" value="당사상태">
+							</w2:column>
+							<w2:column id="column5" blockSelect="false"
+								style="height:20px;" width="100" inputType="text" value="주민등록번호"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column6" blockSelect="false"
+								style="height:20px;" width="80" inputType="text" value="성명"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column7" blockSelect="false"
+								style="height:20px;" width="100" inputType="text" value="회사"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column8" blockSelect="false"
+								style="height:20px;" width="100" inputType="text" value="등록번호"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column9" blockSelect="false"
+								style="height:20px;" width="90" inputType="text" value="대리점등록번호"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column10" blockSelect="false"
+								style="height:20px;" width="100" inputType="text" value="말소코드"
+								displayMode="label">
+							</w2:column>
+							<w2:column blockSelect="false" id="column11"
+								style="height:20px;" inputType="text" width="80"
+								displayMode="label" value="말소일자">
+							</w2:column>
+							<w2:column blockSelect="false" id="column19"
+								style="height:20px;" inputType="text" width="120"
+								displayMode="label" value="개인정보(모집경력)&lt;br/&gt;동의서 수령여부">
+							</w2:column>
+							<w2:column blockSelect="false" id="column17"
+								style="height:20px;" inputType="text" width="70"
+								displayMode="label" value="경력">
+							</w2:column>
+							<w2:column blockSelect="false" id="column15"
+								style="height:20px;" inputType="text" width="70"
+								displayMode="label" value="우편번호">
+							</w2:column>
+							<w2:column blockSelect="false" id="column13"
+								style="height:20px;" inputType="text" width="250"
+								displayMode="label" value="주소">
+							</w2:column>
+						</w2:row>
+					</w2:header>
+					<w2:gBody id="gBody4" style="">
+						<w2:row id="row5" style="">
+							<w2:column id="flagNm" blockSelect="false"
+								style="" width="80" inputType="" displayMode="label">
+							</w2:column>
+							<w2:column id="rgstDate" blockSelect="false"
+								style="" width="110" inputType="" displayMode="label"
+								allOption="" chooseOption="" dataType="date">
+								<w2:choices>
+									<w2:item>
+										<w2:label><![CDATA[등록]]></w2:label>
+										<w2:value><![CDATA[1]]></w2:value>
+									</w2:item>
+									<w2:item>
+										<w2:label><![CDATA[말소]]></w2:label>
+										<w2:value><![CDATA[2]]></w2:value>
+									</w2:item>
+									<w2:item>
+										<w2:label><![CDATA[변경]]></w2:label>
+										<w2:value><![CDATA[3]]></w2:value>
+									</w2:item>
+								</w2:choices>
+							</w2:column>
+							<w2:column id="bussFlagNm"
+								blockSelect="false" style="" width="115" inputType=""
+								displayMode="label">
+							</w2:column>
+							<w2:column id="empno" blockSelect="false"
+								style="" width="85" inputType="" displayMode="label">
+							</w2:column>
+							<w2:column blockSelect="false" id="empStatCd"
+								style="height:20px" inputType="select" width="70"
+								displayMode="label" allOption="" chooseOption="">
+								<w2:choices>
+									<w2:item>
+										<w2:label><![CDATA[위촉]]></w2:label>
+										<w2:value><![CDATA[1]]></w2:value>
+									</w2:item>
+									<w2:item>
+										<w2:label><![CDATA[해촉]]></w2:label>
+										<w2:value><![CDATA[2]]></w2:value>
+									</w2:item>
+								</w2:choices>
+							</w2:column>
+							<w2:column id="custNo" blockSelect="false"
+								style="" width="100" inputType="" displayMode="label">
+							</w2:column>
+							<w2:column id="name" blockSelect="false"
+								style="" width="105" inputType="" displayMode="label">
+							</w2:column>
+							<w2:column id="cmpnNm" blockSelect="false"
+								style="" width="100" inputType="" displayMode="label">
+							</w2:column>
+							<w2:column id="rgstNo" blockSelect="false"
+								style="" width="100" inputType="" displayMode="label">
+							</w2:column>
+							<w2:column id="agncyRgstNo"
+								blockSelect="false" style="" width="90" inputType=""
+								displayMode="label">
+							</w2:column>
+							<w2:column id="ersrNm" blockSelect="false"
+								style="" width="100" inputType="" displayMode="label">
+							</w2:column>
+							<w2:column blockSelect="false" id="ersrDate"
+								style="height:20px" inputType="text" width="100"
+								displayMode="label">
+							</w2:column>
+							<w2:column blockSelect="false"
+								id="psnInfoWrcsRvFlagNm" style="height:20px" inputType="text"
+								width="120" displayMode="label">
+							</w2:column>
+							<w2:column blockSelect="false" id="carerNm"
+								style="height:20px" inputType="text" width="70"
+								displayMode="label">
+							</w2:column>
+							<w2:column blockSelect="false" id="post"
+								style="height:20px" inputType="text" width="70"
+								displayMode="label">
+							</w2:column>
+							<w2:column blockSelect="false" id="dongBelo"
+								style="height:20px" inputType="text" width="250"
+								displayMode="label">
+							</w2:column>
+						</w2:row>
+					</w2:gBody>
+				</w2:gridView>
+			</xf:group>
+			<!-- group:e -->
+			
+		</xf:group>
+	</body>
+</html>

@@ -1,0 +1,1845 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    <style>
+   		.sty_Grid td.gridBodyDefault.th{text-align:center !important;}
+   		.grd_List_columnstyle_14_{color:purple !important; cursor:pointer !important;}
+    </style>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="Ds_LinkList" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="ds_combo" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="id_nm" name="id_nm"/>
+                        <w2:column dataType="text" id="id_cd" name="id_cd"/>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <id_cd><![CDATA[99]]></id_cd>
+                            <id_nm><![CDATA[- 전체 -]]></id_nm>
+                        </w2:row>
+                        <w2:row>
+                            <id_cd><![CDATA[1]]></id_cd>
+                            <id_nm><![CDATA[피보험자코드]]></id_nm>
+                        </w2:row>
+                        <w2:row>
+                            <id_cd><![CDATA[2]]></id_cd>
+                            <id_nm><![CDATA[피보험자명]]></id_nm>
+                        </w2:row>
+                        <w2:row>
+                            <id_cd><![CDATA[3]]></id_cd>
+                            <id_nm><![CDATA[계약자코드]]></id_nm>
+                        </w2:row>
+                        <w2:row>
+                            <id_cd><![CDATA[5]]></id_cd>
+                            <id_nm><![CDATA[계약자명]]></id_nm>
+                        </w2:row>
+                        <w2:row>
+                            <id_cd><![CDATA[6]]></id_cd>
+                            <id_nm><![CDATA[청약번호]]></id_nm>
+                        </w2:row>
+                        <w2:row>
+                            <id_cd><![CDATA[7]]></id_cd>
+                            <id_nm><![CDATA[취급자코드]]></id_nm>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="ds_code" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="Ds_LTIDA13"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column id="col1" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="col2" name="name2"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                	<w2:data use="true">
+                		<w2:row></w2:row>
+                	</w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_DgnsProgStndCd" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="DsWs_AXR930" repeatNode="map" userData2="//hashtable/data[@hashkey='aDMAC03Doc']/ADMAC03"/>
+                <w2:dataList baseNode="list" id="DsWs_Warning" repeatNode="map" userData2="//*/WARNING"/>
+                <w2:dataList baseNode="list" id="DsWs_SqrtList"
+                	repeatNode="map"
+                	userData2="//hashtable/data[@hashkey='lTIDA13ListDoc']/vector/data/LTIDA13">
+                	<w2:columnInfo>
+                		<w2:column id="sChk" name="sChk"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInrpsCd" name="sInrpsCd"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInrpsName" name="sInrpsName"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sSsrtFlgcd" name="sSsrtFlgcd"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sPlanNo" name="sPlanNo"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCrNo" name="sCrNo"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sGdCdName" name="sGdCdName"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sDgnsFlagCd" name="sDgnsFlagCd"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sDgnsKindCd" name="sDgnsKindCd"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sDgnsProgStndCd" name="sDgnsProgStndCd"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sRqstDate" name="sRqstDate"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sDcsnDate" name="sDcsnDate"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sDlngCpltDate" name="sDlngCpltDate"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sJugmDate" name="sJugmDate"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sConuResltCd" name="sConuResltCd"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sDoerName" name="sDoerName"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sFrstDoer" name="sFrstDoer"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sDoerUserName" name="sDoerUserName"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sFrstDoerUser" name="sFrstDoerUser"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sFrstDoerCentrName" name="sFrstDoerCentrName"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sJudg" name="sJudg"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sHospCd" name="sHospCd"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_SqrtListCnt" repeatNode="map" userData2="//hashtable/data[@hashkey='lTIDA00ListDocCnt']/LTIDA00CNT"/>
+                <w2:dataList baseNode="list" id="DsWs_DgnsFlagCd" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="DsWs_DgnsKindCd" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="DsWs_HospCd" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="DsWs_SsrtFlgcd" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="DsWs_Recv" repeatNode="map" userData2="//*/recvDoc"/>
+                <w2:dataList baseNode="list" id="DsWs_ConuResltCd" repeatNode="map"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+	  <script src="/cm/js/convertJs/Global_Script.js"/>
+  <script src="/cm/js/convertJs/comm_Webservice.js"/>
+  <script src="/cm/js/convertJs/NewGen_Script.js"/>
+  <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+  <script src="/cm/js/convertJs/Marine_Script.js"/>
+        <script><![CDATA[
+/*■■■■■■■■■■■■■■■■■■■■■스크립트 변환 결과■■■■■■■■■■■■■■■■■■■■■
+※본 주석은 수작업 변환 참고용입니다. ★개발완료 후에는 필히 삭제해주세요.★
+변환시간:  Fri Sep 01 2017 14:10:24 GMT+0900 (대한민국 표준시)
+파일ID:  B240.xml
+
+아래의 작업을 먼저 해주세요.
+
+
+1. scwin.init() 함수에 아래의 글로벌 데이터리스트를 선언합니다.
+--> 해당 화면에는 추가할 글로벌 변수가 없습니다. 
+
+2. 공통.JS 파일을 include해주세요.
+</xf:model>
+ ***include 위치(하단에 주석처리 되어 있습니다.)***
+<script><![CDATA[
+
+예시)
+</xf:model>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script><![CDATA[
+
+3. 표준에 어긋난 코딩인 경우 ✖ 으로 return 되어 있습니다. 검색으로 ✖이 나온다면 ASIS 소스를 확인해주세요.
+ex) ASIS if(a = 1 and b = 2) {} ------> TOBE if (✖ = 2) {}
+
+4. dialog함수로 팝업을 호출 할 경우에는 실제 파일이 있는 경로로 변경해주세요
+ex) 현재 PROJECT_PATH_TEMP입니다. 
+
+-호출구조-
+
+호출구조는 모든 화면이 아닌 변환대상화면을 기준으로 분석하였습니다.
+선언하지 않은 변수를 사용중이라면 caller 에서 넘겼을 가능성이 높습니다.
+파일 ID는 소스의 form ID로 가정했습니다. 아래의 결과는 따로 확인해주세요.
+B240.xml에서 호출 (callee ID):  0120,R960_Pop,A610_Pop,B230_Pop,B240_Pop
+B240.xml을 호출   (caller ID):  
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+/****************************************************************************
+ * 프로그램번호   : B240
+ * 프로그램명     : 심사대상건조회
+ * 파일명         : B240.xml
+ * 프로그램 내용  : 심사대상건조회
+ * 관련 프로그램  : 
+ * 작성자         : 이은연
+ * 작성일         : 2010-12-20
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+// <script src="/cm/js/common.js"/>
+// <script src="/cm/js/val_lib.js"/>
+// <script src="/cm/js/util.js"/>
+// <script src="/cm/js/transSub.js"/>
+// <script src="/cm/js/callService.js"/>
+// <script src="/cm/js/gds.js"/>
+// <script src="/cm/js/convertJs/conv.js"/>
+// <script src="/cm/js/convertJs/Global_Script.js"/>
+// <script src="/cm/js/convertJs/comm_Webservice.js"/>
+// <script src="/cm/js/convertJs/NewGen_Script.js"/>
+// <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+// <script src="/cm/js/convertJs/Marine_Script.js"/>
+// <script src="/cm/js/convertJs/CCC_Script.js"/>
+var pageSize = "10000";
+var pageNo = "";
+var pageCount = "10";
+var sSTr;
+var sToday = "";
+
+//전역변수
+var n22040Auth;
+var medt_Str_Event;
+//---------------------------------------------------------------------------
+// function 명 : B240_OnLoadCompleted
+// 내용        : 화면오픈시처리
+//---------------------------------------------------------------------------
+scwin.init = function() {
+var pro = Promise.resolve();
+
+window.top.util.winTopShowModalChk = "T";
+util.winTopShowModal();
+
+ 
+
+pro = pro.then(function(rv) {
+    return util.winTopShowModalPromise();
+});
+
+ 
+
+pro = pro.then(function(rv) {
+
+     //init 부분 함수 입력하는곳
+
+//    gfn_GetLinkList("B240");
+    // 버튼 처리    (조회, 입력,  수정,  삭제, 결재,   취소,  인쇄,  엑셀,  닫기)
+//    gfn_ButtonEnable(true, false, false, false, false, false, false, true, true);
+//    gfn_getCommonCodes(SOBJ_Search, DOBJ_Search, "DsWs_SsrtFlgcd DsWs_DgnsKindCd DsWs_DgnsFlagCd DsWs_HospCd DsWs_DgnsProgStndCd DsWs_ConuResltCd", "SsrtFlgcd DgnsKindCd DgnsFlagCd HospCd DgnsProgStndCd ConuResltCd", "", "");
+	gfn_getCommonCodes("DsWs_DgnsProgStndCd", "DgnsProgStndCd", "cmb_DgnsProgStndCd", "N A N");
+	gfn_getCommonCodes("DsWs_DgnsKindCd DsWs_HospCd DsWs_ConuResltCd", "DgnsKindCd HospCd ConuResltCd", "sDgnsKindCd sHospCd sConuResltCd", "Y N N");	
+	gfn_btnEnable( false, false, false, false, false, false, true, true);
+    // 현재시간 setting
+    //global.http.Sync = true;
+    //getServerTime();
+    //sToday = substr(gDs_ServerTime.GetColumn(0, "sToday"),0,8);
+    //global.http.Sync = false;	
+    sToday = wconv.substr(gfn_GetSysTime(), 0, 8);
+    scwin.lfn_init();
+    
+    var maskRegExp = [ /^[A-Z\s]{1}[0-9\s]{4}[0-9\s]{7}$/,
+    						/^[0-9\s]{6}$/,
+    							/^[0-9\s]{6}[0-9\s]{1}[A-Z0-9\s]{6}$/
+    								,/^[0-9A-Z\s]{7}$/
+    									];
+	var maxLength  = [12,6,13,7];
+	var chkIndex   = 0;
+	medt_Str_Event = new wMaskEditObj(medt_Str, maskRegExp, maxLength, chkIndex);
+
+	
+ 	
+    //init 함수를 종료하고자 할때 사용한다.
+//    return Promise.reject("오류관련처리");
+});
+
+
+pro = pro.then(function(rv) {
+    util.winTopHideModal();
+});
+
+ 
+
+pro = pro.catch(function(rj) {
+    util.winTopHideModal();
+    //alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+});
+
+ 
+
+return pro;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_init
+// 내용        : 조회버튼 클릭시 처리
+//---------------------------------------------------------------------------
+scwin.lfn_init = function() {
+
+
+    //장기업무부
+    /*if (nfn_checkAuthByID(SOBJ_LOAD, DOBJ_LOAD, "ds_code", gUserID , "22040")){
+    	cmb_Gubun.Value = "99";
+    			
+    }else{
+    	cmb_Gubun.Value ="7";
+    	cmb_Gubun_OnCharChanged("","","");
+    	cmb_Gubun.Enable = false;
+    	medt_str.Enable = false;
+    	medt_Str.Value = gUserID;
+    	
+    }*/
+    // 장기보험 인수권한
+//    n22040Auth = nfn_checkAuthByID(SOBJ_LOAD, DOBJ_LOAD, "ds_code", gds.gUserID, "22040");
+	n22040Auth = nfn_checkAuthByID( "ds_code", util.getGdsValue("gUserID"), "22040");
+	var MethodObj = new callService("DsWs_SsrtFlgcd DsWs_DgnsKindCd DsWs_DgnsFlagCd DsWs_HospCd DsWs_DgnsProgStndCd DsWs_ConuResltCd", "SsrtFlgcd DgnsKindCd DgnsFlagCd HospCd DgnsProgStndCd ConuResltCd", pageSize, pageNo);
+	MethodObj.setId("SsrtFlgcd DgnsKindCd DgnsFlagCd HospCd DgnsProgStndCd ConuResltCd");
+	MethodObj.setUrl("/contract/CBSC106MController.do");//배포후변경할것(controller위치와 이름)
+	MethodObj.sync();
+	MethodObj.send();
+//    wconv.trace("n22040Auth : " + n22040Auth);
+//    wconv.trace("gDoer : " + gds.gDoer);
+    cal_From.setValue(wconv.addMonth(sToday, -1));
+    cal_To.setValue(sToday);
+    var insRow = util.insertRow(DsWs_DgnsProgStndCd, 0);
+    /*수작업 변환 개발자 가이드(테스트 중)
+    dataList에 row를 추가하고 setCellData를 하는 경우 첫 번째 인자를 insRow로 변경해주세요.*/
+    DsWs_DgnsProgStndCd.setCellData(0, "sCd", "");
+    DsWs_DgnsProgStndCd.setCellData(0, "sHnglCdName", "- 전체 -");
+    cmb_DgnsProgStndCd.setSelectedIndex(0);
+};
+
+//---------------------------------------------------------------------------
+// function 명 : cmb_Gubun_OnClick()
+// 내용        : 콤보값 변경시 처리
+//---------------------------------------------------------------------------
+scwin.cmb_Gubun_OnCharChanged = function(obj, strPreText, strPostText) {
+
+    medt_Str.show();
+    medt_Str.setValue("");
+    medt_Str.setPlaceholder( "");
+    edt_Str.setPlaceholder( "");
+
+    switch (cmb_Gubun.getValue()) {
+        case "1":	//피보험자코드
+            edt_Str.hide();
+            medt_Str.show();
+            medt_Str.setDisplayFormat("######-#######");
+            medt_Str.setPlaceholder("______-_______");
+            medt_Str_Event.setIndex(2);
+            break;
+        case "3":	//계약자코드
+            edt_Str.hide();
+            medt_Str.show();
+            medt_Str.setDisplayFormat("######-#######");
+            medt_Str.setPlaceholder("______-_______");
+            medt_Str_Event.setIndex(2);
+            break;
+        case "4":
+            edt_Str.hide();
+            medt_Str.show();
+            medt_Str.setDisplayFormat("###-##-#####");
+            medt_Str.setPlaceholder("___-__-_____");
+            medt_Str_Event.setIndex(0);
+            break;
+        case "6":	//청약번호
+            edt_Str.hide();
+            medt_Str.show();
+            medt_Str.setDisplayFormat("#-####-#######");
+            medt_Str.setPlaceholder("_-____-_______");
+            medt_Str_Event.setIndex(0);
+            break;
+        case "7":	//취급자코드
+            edt_Str.hide();
+            medt_Str.show();
+            medt_Str.setDisplayFormat("#######");
+            medt_Str.setPlaceholder("_______");
+            medt_Str_Event.setIndex(3);
+            break;
+        default:	//계약자명, 피보험자명
+            edt_Str.setValue("");
+            edt_Str.show();
+            medt_Str.hide();
+            break;
+    }
+    medt_Str.focus();
+    edt_Str.focus();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search)
+// 내용        : 조회버튼 클릭시 처리
+//---------------------------------------------------------------------------
+scwin.lfn_Search_Async = function(e) { //완료
+    util.eventAsyncCall(this, scwin.lfn_Search, arguments);
+};
+
+scwin.lfn_Search = function(e) {
+
+    //특정그룹 설계금지
+//gfn_isCA(gds.gUserID, gds.gUserDuty)
+    if (gfn_isCA(util.getGdsValue("gUserID"), util.getGdsValue("gUserDuty"))) {
+        wprom.alert("현재 상담그룹은 진단대상조회가 불가합니다.");
+        return;
+    }
+
+
+    /* 일시적으로 막음 - 오픈시 주석제거
+    if (gfn_betweenDays(cal_From.Value, cal_To.Value) > 7){
+    	alert("조회기준일을 7일이내로 지정하셔야 합니다");
+    	return false;
+    	break;
+    }
+    */
+
+    scwin.lfn_SearchData(1);
+    /*if(DsWs_SqrtListCnt.GetRowCount()>0)
+    {
+    	gfn_MakePagingData(Div1.Ds_Page, DsWs_SqrtListCnt.GetColumn(0, "nCount"), pageSize, pageCount);
+    	Div1.Cmb_Page.Value = "1";
+    }*/
+};
+
+//---------------------------------------------------------------------------
+// function 명 : slfn_Search)
+// 내용        : 조회버튼 클릭시 처리
+//---------------------------------------------------------------------------
+scwin.lfn_SearchData = function(pageNo) {
+
+    var sSTr="";
+    wconv.clear(DsWs_SqrtList);
+    wconv.clear(DsWs_SqrtListCnt);
+    //데이터셋 초기화
+//    wconv.clear(DsWs_SqrtList);
+//    SOBJ_SqrtList.WSDL = gds.gWsdlBasis; //기본 웹서비스
+//    DsWs_Warning.DataObject = "DOBJ_SqrtList";
+    //심사대상건조회
+//    var MethodObj = gfn_CreateMethodObj(SOBJ_SqrtList, "com.inswave.longterm.ssr.sst.task.DBB300Task", "selectDgnsList", pageSize, pageNo);
+//    gfn_SetParam(MethodObj, "gubun", cmb_Gubun.getValue());
+	var MethodObj = new callService("com.inswave.longterm.ssr.sst.task.DBB300Task", "selectDgnsList", pageSize, pageNo);
+	MethodObj.setId("selectDgnsList");
+	MethodObj.setParam( "gubun", cmb_Gubun.getValue()); 
+	
+    if (medt_Str.Visible == true) {
+        sSTr = medt_Str.getValue();
+    } else {
+        sSTr = edt_Str.getValue();
+    }
+    if (cmb_Gubun.getValue() != "99") {
+        if (mfn_IsEmpty(sSTr)) {
+            wprom.alert("조회조건을 입력하세요");
+//            break;
+			return false;
+        }
+    }	
+//    gfn_SetParam(MethodObj, "sStr", sSTr); //조회기준
+	MethodObj.setParam( "sStr", sSTr);
+//    gfn_SetParam(MethodObj, "sDgnsObjtYn", "Y"); //진단대상여부
+	MethodObj.setParam( "sDgnsObjtYn", "Y");
+//    gfn_SetParam(MethodObj, "sRqstStartDate", cal_From.getValue()); //조회기간
+	MethodObj.setParam( "sRqstStartDate", cal_From.getValue());
+//    gfn_SetParam(MethodObj, "sRqstEndDate", cal_To.getValue());
+	MethodObj.setParam( "sRqstEndDate", cal_To.getValue());
+//    gfn_SetParam(MethodObj, "sDgnsProgStndCd", cmb_DgnsProgStndCd.getValue()); //진단상태
+	MethodObj.setParam( "sDgnsProgStndCd", cmb_DgnsProgStndCd.getValue());
+//    gfn_SetParam(MethodObj, "sGdCd", medt_sGdCd.getValue()); //상품코드
+	MethodObj.setParam( "sGdCd", medt_sGdCd.getValue());
+	
+    if (edt_deptName.getValue() != "") {
+//        gfn_SetParam(MethodObj, "level", edt_level.getValue()); //부서레벨
+//        gfn_SetParam(MethodObj, "deptCd", edt_deptCd.getValue()); //심의요청부서
+		MethodObj.setParam( "level", edt_level.getValue());
+		MethodObj.setParam( "deptCd",  edt_deptCd.getValue());
+    }
+    if (edt_empName.getValue() != "") {
+//        gfn_SetParam(MethodObj, "sAppmn", edt_empCode.getValue()); //승인자코드
+		MethodObj.setParam( "sAppmn", edt_empCode.getValue());
+
+    }
+    console.log("setParam Value======================================\n"+
+    "gubun : "+cmb_Gubun.getValue()+"\n"+
+    "sSTr : "+sSTr+"\n"+
+    "sRqstStartDate : "+cal_From.getValue()+"\n"+
+    "sRqstEndDate : "+cal_To.getValue()+"\n"+
+    "sDgnsProgStndCd : "+cmb_DgnsProgStndCd.getValue()+"\n"+
+    "sGdCd : "+ medt_sGdCd.getValue()+"\n"+
+    "level : "+edt_level.getValue()+"\n"+
+    "deptCd : "+edt_deptCd.getValue()+"\n"+
+    "sAppmn : "+edt_empCode.getValue()+"\n"
+    );
+//    var result = gfn_CallService(SOBJ_SqrtList, DOBJ_SqrtList, MethodObj);
+	MethodObj.setUrl("/contract/CBSC106MController.do");//배포후변경할것(controller위치와 이름)
+	MethodObj.setXPath("//hashtable/data[@hashkey='lTIDA13ListDoc']/vector/data/LTIDA13");//(dsWS의 XPath)
+	MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA00ListDocCnt']/LTIDA00CNT");//(dsWS의 XPath)
+	MethodObj.addXPath("//*/WARNING"); 
+	MethodObj.sync();
+	MethodObj.send();
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDA13"), "DsWs_SqrtList");
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDA00CNT"), "DsWs_SqrtListCnt");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+            util.setCompBindRefresh("DsWs_SqrtList");//바인딩을 해줌
+			util.setRowPosition(DsWs_SqrtList, 0);
+
+    if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    } else {
+        if (DsWs_SqrtList.getRowCount() == 0) {
+            wprom.alert("진단대상건이 없습니다.");
+        } else {
+            //Div1.Cmb_Page.Value = "1";
+//            util.insertColumn(DsWs_SqrtList, [
+//                [
+//                    "sChk",
+//                    "sChk",
+//                    "text"
+//                ]
+//            ]);
+            
+
+//            wconv.copy(Ds_LTIDA13, DsWs_SqrtList);
+//            Ds_LTIDA13.removeAll();
+
+        }
+    }
+	
+	grd_List.setColumnColor( "14" , "purple" );
+	
+    //고객정보 조회 이력쌓기
+    gfn_LogCreditInfoVt(DsWs_SqrtList, "", "S", "sCrtorCd");
+    gfn_LogCreditInfoVt(DsWs_SqrtList, "", "S", "sInrpsCd");
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_SearchDept_OnClick
+// 내용        :  조직찾기 POPUP
+//---------------------------------------------------------------------------
+scwin.lfn_SearchDept_OnClick = function(obj) {
+    var promise = Promise.resolve();
+    promise = promise.then(function(rtnVal) {
+//        return wprom.promise.popupOpen("PROJECT_PATH_TEMP/com_pop/0120.xml", "", 594, 321);
+			var indata  = { };				
+			var popInfo = {
+				"width"     : 594,
+				"height"    : 321,  
+				"indata"    : indata,
+				"title"     : "조직찾기",
+				"callback"  : ""
+			};			
+			return wprom.popupOpen("/ui/cbsc/0120.xml", popInfo);
+    });
+    promise = promise.then(function(result) {
+        /*wprom.popupOpen(가이드참조)*/
+        //trace(result);	
+        if (wconv.length(result) != 0) {
+            var arrRst = wconv.split(result, "^", true);
+            if (wconv.toNumber(arrRst[2]) <= 2) {
+                wprom.alert("조직은 팀/센터이후부터 선택하세요");
+            } else {
+                edt_deptCd.setValue(arrRst[0]);
+                edt_deptName.setValue(arrRst[1]);
+                edt_level.setValue(arrRst[2]);
+            }
+        }
+    });
+    return promise;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_Pop_Search1_OnClick
+// 내용        :  취급자찾기 POPUP
+//---------------------------------------------------------------------------
+scwin.lfn_SearchDoer_OnClick = function(obj) {
+    var promise = Promise.resolve();
+    promise = promise.then(function(rtnVal) {
+//        return wprom.promise.popupOpen("PROJECT_PATH_TEMP/popup/CBSO015P.xml", "", 640, 336);
+		pro = pro.then(function(rv) {
+			var indata  = { };				
+			var popInfo = {
+				"width"     : 640,
+				"height"    : 336,  
+				"indata"    : indata,
+				"title"     : "취급자찾기",
+				"callback"  : ""
+			};			
+			return wprom.popupOpen("/ui/cbso/CBSO015P.xml", popInfo);
+		});
+    });
+    promise = promise.then(function(rst) {
+        /*wprom.popupOpen(가이드참조)*/
+        if (wconv.length(rst) != 0) {
+            var arrRst = wconv.split(rst, "^");
+            edt_empCode.setValue(arrRst[0]);
+            edt_empName.setValue(arrRst[1]);
+        }
+    });
+    return promise;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : grd_List_OnCellClick
+// 내용        : 그리드 클릭시처리
+//---------------------------------------------------------------------------
+scwin.grd_List_OnCellClick = function(nRow, nCol) {
+
+    Ds_LTIDA13.removeAll();
+	util.copyM(Ds_LTIDA13,DsWs_SqrtList.getAllJSON());
+	util.setCompBindRefresh(Ds_LTIDA13);
+	wconv.clear(Ds_LTIDA13);
+//	Ds_LTIDA13.setJSON( DsWs_SqrtList.getAllJSON() , true );
+	
+    //권한체크
+//n22040Auth를 테스트하기위해 false로 함
+//    if (n22040Auth == "1" || DsWs_SqrtList.getCellData(nRow, "sFrstDoer") == gds.gDoer) 
+	if (n22040Auth == true || DsWs_SqrtList.getCellData(nRow, "sFrstDoer") == util.getGdsValue("gDoer")) {
+//        util.appendRow(Ds_LTIDA13);
+	var jsonData = DsWs_SqrtList.getRowJSON(nRow);
+	util.copyM(Ds_LTIDA13, DsWs_SqrtList.getAllJSON());
+	wconv.clear(Ds_LTIDA13);
+//	util.appendRow(Ds_LTIDA13);	
+    Ds_LTIDA13.setRowJSON(0, DsWs_SqrtList.getRowJSON(nRow),false);
+//        wconv.mi_copyRow(Ds_LTIDA13.getID(), 0, DsWs_SqrtList.getID(), nRow);
+        btn_RqstCncl.setDisabled(false);
+        btn_Notc.setDisabled(false);
+        btn_Reslt.setDisabled(false);
+//        btn_Image.setDisabled(false);
+//그리드 심사결과 클릭시 팝업 이벤트 처리
+
+		if(nCol=="14"){
+			var pro = Promise.resolve(); //흐름제어
+			
+			pro = pro.then(function(rv) {
+				var indata  = { };
+				indata.sPlanNo = Ds_LTIDA13.getCellData(0,"sPlanNo");	
+				var strHandlerID ="";
+				if(!util.isNull(util.getGdsValue("gUserID"))) {   //  로그인사번 존재하면
+		  			strHandlerID = util.getGdsValue("gUserID");
+		   		}
+				if(!util.isNull(DsWs_SqrtList.getCellData(nRow, "sDoerUser"))) {   //  취급자ID(사용인코드) 존재하면
+		  			strHandlerID = DsWs_SqrtList.getCellData(nRow, "sDoerUser");
+		   		}
+		  		if(!util.isNull(DsWs_SqrtList.getCellData(nRow, "sAplc"))) {   //  요청자사번(사용인ID)이 존재하면
+		  			strHandlerID = DsWs_SqrtList.getCellData(nRow, "sAplc");
+		   		}		
+				indata.sHandlerID = strHandlerID;		// 우선순위(사용인ID, 취급자ID, 로그인사번): 추가(2017.11.24)
+  				//console.log("[/CBSC111M.xml] [grd_List_OnCellClick()] ==> [심의상태 이면] [TEST_91] [팝업 전] [arg.sHandlerID]"+ arg.sHandlerID );			
+				var popInfo = {
+					"width"     : 1310,
+					"height"    : 780,  
+					"indata"    : indata,
+					"title"     : "인수심사결제",
+					"callback"  : ""
+				};			
+				return wprom.windowOpen("/ui/cbsc/CBSC084P.xml", popInfo);
+			});
+		}
+    } else {
+        btn_RqstCncl.setDisabled(true);
+        btn_Notc.setDisabled(true);
+        btn_Reslt.setDisabled(true);
+        btn_Image.setDisabled(true);
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_Goods_OnClick
+// 내용        : 그리드 크릭시처리
+//---------------------------------------------------------------------------
+scwin.btn_Goods_OnClick = function(obj) {
+    var promise = Promise.resolve();
+    //prd_att::A610_Pop.xml
+    //parentInfo=상품코드^기준일자(from)^기준일자(to)
+//    var sArg = "parentInfo=";
+//    sArg += mmedt_sGdCd.Value;
+//    sArg += "^" + cal_From.getValue() + "01";
+//    sArg += "^" + cal_To.getValue();
+	var sArg = {};
+	sArg.parentInfo = "";
+	sArg.sGdCd = mmedt_sGdCd.getValue();
+	sArg.cal_From = cal_From.getValue() + "01";
+	sArg.cal_To = cal_To.getValue();
+    promise = promise.then(function(rtnVal) {
+//        return wprom.promise.popupOpen("PROJECT_PATH_TEMP/prd_att/CBSC065P.xml", sArg, 820, 612);
+		pro = pro.then(function(rv) {
+			var indata  = { };				
+			var popInfo = {
+				"width"     : 820,
+				"height"    : 612,  
+				"indata"    : sArg,
+				"title"     : "??",
+				"callback"  : ""
+			};			
+			return wprom.popupOpen("/ui/cbsc/CBSC065P.xml", popInfo);
+		});
+    });
+    promise = promise.then(function(result) {
+        /*wprom.popupOpen(가이드참조)*/
+        if (wconv.length(result) > 0) {
+            resultArr = wconv.split(result, "^", true);
+            medt_sGdCd.setValue(resultArr[0]); //edt_sGdCdName.Text = resultArr[1];
+        } else {}
+    });
+    return promise;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : medt_Str_OnCharChanged
+// 내용        : 계약자코드조회시 
+//---------------------------------------------------------------------------
+scwin.medt_Str_OnCharChanged = function(obj, strPreText, strPostText) {
+    if (cmb_Gubun.getValue() == 3) {
+        if (wconv.length(medt_Str.getValue()) == 10) {
+            if (isBizRegNo(medt_Str.getValue())) {
+                medt_Str.setDisplayFormat("###-##-#####");
+            } else {
+                medt_Str.setDisplayFormat("######-#######");
+            }
+        }
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : medt_Str_OnKeyDown()
+// 내용        : keyDown시 처리
+//---------------------------------------------------------------------------
+scwin.medt_Str_OnKeyDown = function(obj, nChar, bShift, bCtrl, bAlt, LLParam, HLParam) {
+
+    //13자리이면 조회처리
+    if (nChar == 13) {
+        scwin.lfn_Search();
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : medt_Str_OnKillFocus
+// 내용        : 계약자코드OnKillFocus시 처리
+//---------------------------------------------------------------------------
+scwin.medt_Str_OnKillFocus = function(obj) {
+    scwin.medt_Str_OnCharChanged();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : medt_Str_OnKillFocus
+// 내용        : 계약자코드OnKillFocus시 처리
+//---------------------------------------------------------------------------
+scwin.medt_Str_OnFocus = function(obj) {
+    if (cmb_Gubun.getValue() == 3) {
+        medt_Str.setDisplayFormat("######-#######");
+    }
+};
+
+//**************************************************************************************************
+// 페이징 처리 - 첫 페이지
+//**************************************************************************************************
+scwin.Btn_PreV_OnClick = function(e) {
+
+	var ftVal = wconv.toNumber(Ds_Page.getCellData(0, "FILTERCD")) - 1;
+    if (wconv.toNumber(maxFilterVal) < wconv.toNumber(ftVal)) {
+        wprom.alert("조회의 처음입니다.");
+        return;
+    } else if (wconv.toNumber(ftVal) < 1) {
+        wprom.alert("조회의 처음입니다.");
+        return;
+    }
+    wconv.filter(Ds_Page, "FILTERCD=='" + ftVal + "'", true);
+    Cmb_Page.setValue(Ds_Page.getCellData(0, "CODE"));
+    scwin.lfn_SearchData(Cmb_Page.getValue());
+};
+
+//**************************************************************************************************
+// 페이징 처리 - 이전 페이지
+//**************************************************************************************************
+scwin.Btn_Pre_OnClick = function(obj) {
+	var Idx = Cmb_Page.getValue();
+    if (wconv.toNumber(Idx) - 1 < 1) {
+        wprom.alert("조회의 처음입니다.");
+        return;
+    }
+    scwin.lfn_SearchData(wconv.toString(wconv.toNumber(Idx) - 1)); //수정부분
+    if (Ds_Page.getCellData(0, "CODE") == Idx) {
+        wconv.filter(Ds_Page, "FILTERCD=='" + wconv.toString(wconv.toNumber(Ds_Page.getCellData(0, "FILTERCD")) - 1) + "'", true);
+        Cmb_Page.setValue(Ds_Page.getCellData((Ds_Page.getRowCount() - 1), "CODE"));
+    } else {
+        Cmb_Page.setValue(wconv.toNumber(Idx) - 1);
+	}
+};
+
+//**************************************************************************************************
+// 페이징 처리 - 다음 페이지
+//**************************************************************************************************
+scwin.Btn_Next_OnClick = function(obj) {
+	var Idx = Cmb_Page.getValue();
+	if (wconv.toNumber(maxPage) < wconv.toNumber(Idx) + 1) {
+		wprom.alert("더이상 자료가 존재하지 않습니다");
+		return;
+	}
+	scwin.lfn_SearchData(wconv.toString(wconv.toNumber(Idx) + 1)); //수정부분
+	if (Ds_Page.getCellData((Ds_Page.getRowCount() - 1), "CODE") == Idx) {
+		wconv.filter(Ds_Page, "FILTERCD=='" + wconv.toString(wconv.toNumber(Ds_Page.getCellData((Ds_Page.getRowCount() - 1), "FILTERCD")) + 1) + "'", true);
+	}
+	Cmb_Page.setValue(wconv.toNumber(Idx) + 1);
+};
+
+
+
+//**************************************************************************************************
+// 페이징 처리 - 다음 페이지 리스트
+//**************************************************************************************************
+scwin.Btn_NextV_OnClick = function(obj) {
+	var ftVal = wconv.toNumber(Ds_Page.getCellData((Ds_Page.getRowCount() - 1), "FILTERCD")) + 1;
+    if (wconv.toNumber(maxFilterVal) < wconv.toNumber(ftVal)) {
+        wprom.alert("더이상 자료가 존재하지 않습니다");
+        return;
+    }
+    wconv.filter(Ds_Page, "FILTERCD=='" + ftVal + "'", true);
+    Cmb_Page.setValue(Ds_Page.getCellData(0, "CODE"));
+    scwin.lfn_SearchData(Cmb_Page.getValue());
+};
+
+//**************************************************************************************************
+// 페이지 처리
+//**************************************************************************************************
+scwin.Cmb_Page_OnChanged = function(obj, strCode, strText, nOldIndex, nNewIndex) {
+    scwin.lfn_SearchData(strCode);
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_Image_OnClick
+// 내용        : 이미지조회 버튼
+//---------------------------------------------------------------------------
+scwin.btn_Image_OnClick = function(obj) {
+    if (Ds_LTIDA13.getRowCount() == 0) {
+        wprom.alert("대상건을 선택하세요.");
+        return false;
+    }
+    var sPlanNo;
+    sPlanNo = Ds_LTIDA13.getCellData(0, "sPlanNo");
+    var url;
+    //운영환경일 때 Y  아니면 N 
+//    if (gds.gProdYN == "Y") 
+	if (util.getGdsValue("gProdYN") == "Y") {
+        url = "http://10.1.1.58:9000/imgsys/jsp/index.jsp?";
+    } else {
+        url = "http://10.1.1.131:8090/imgsys/jsp/index.jsp?";
+    }
+//    var arg = "UsrId=" + gds.gUserID + "&";
+	var arg = "UsrId=" + util.getGdsValue("gUserID") + "&";
+    arg += "hidJob_gubun=4" + "&";
+    arg += "ContractNo=" + sPlanNo; //설계번호
+    //계약 : http://10.1.1.131:8090/imgsys/jsp/index.jsp?UsrId=5140023&hidJob_gubun=4&ContractNo=M20120102092
+    //      UsrId : 사용자ID
+    //      hidJob_gubun : 업무구분
+    //      ContractNo : 청약번호
+    ExecBrowser(url + arg);
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_Notc_OnClick
+// 내용        : 고지의무 버튼
+//---------------------------------------------------------------------------
+scwin.btn_Notc_OnClick = function(obj) {
+
+    var promise = Promise.resolve();
+    if (Ds_LTIDA13.getRowCount() == 0 || Ds_LTIDA13.getColData( "sPlanNo" )=="") {
+        wprom.alert("대상건을 선택하세요.");
+        return false;
+    }
+    var arg = {};
+//    var arg = "sRqstYn=" + wconv.quote("Y"); //고지사항입력여부
+    arg.sRqstYn = "Y";
+//    arg += " sNotcGdFlag=" + wconv.quote(Ds_LTIDA13.getCellData(0, "sNotcGdFlag")); //고지상품구분(운전구분을 고지상품구분으로 대체)
+	arg.sNotcGdFlag = Ds_LTIDA13.getCellData(0, "sNotcGdFlag");
+//    arg += " sInrpsCd=" + wconv.quote(Ds_LTIDA13.getCellData(0, "sInrpsCd")); //피보험자코드
+	arg.sInrpsCd = Ds_LTIDA13.getCellData(0, "sInrpsCd");
+//    arg += " sInrpsName=" + wconv.quote(Ds_LTIDA13.getCellData(0, "sInrpsName")); //성명
+	arg.sInrpsName = Ds_LTIDA13.getCellData(0, "sInrpsName");
+//    arg += " sCrtorRelnName=" + wconv.quote(Ds_LTIDA13.getCellData(0, "sCrtorRelnName")); //관계명
+	arg.sCrtorRelnName = Ds_LTIDA13.getCellData(0, "sCrtorRelnName");
+//    arg += " sPlanNo=" + wconv.quote(Ds_LTIDA13.getCellData(0, "sPlanNo")); //설계번호
+	arg.sPlanNo = Ds_LTIDA13.getCellData(0, "sPlanNo");
+//    arg += " sPsnGroupFlgcd=" + wconv.quote(Ds_LTIDA13.getCellData(0, "sPsnGroupFlgcd")); //개인단체구분
+	arg.sPsnGroupFlgcd = Ds_LTIDA13.getCellData(0, "sPsnGroupFlgcd");
+//    arg += " nPsnGroupSeqno=" + wconv.quote(Ds_LTIDA13.getCellData(0, "nInrpsSeqno")); //seq
+	arg.nPsnGroupSeqno = Ds_LTIDA13.getCellData(0, "nInrpsSeqno");
+//    arg += " sSsrtDate=" + wconv.quote(Ds_LTIDA13.getCellData(0, "sSsrtDate")); //청약일자
+	arg.sSsrtDate = Ds_LTIDA13.getCellData(0, "sSsrtDate");
+//    arg += " sDrveFlagCd=" + wconv.quote(Ds_LTIDA13.getCellData(0, "sDrveFlagCd")); //운전구분
+	arg.sDrveFlagCd = Ds_LTIDA13.getCellData(0, "sDrveFlagCd");
+//    arg += " sOnlySrarch='1'";
+	arg.sOnlySrarch = "1";		//편집기능 디세이블 	 // 수정(추가): 2017.11.22, by 진태만 
+	arg.sCrNo = Ds_LTIDA13.getCellData(0, "sCrNo");
+	
+//	if(Ds_LTIDA13.getCellData(0, "sOnlySrarch")!="" ||Ds_LTIDA13.getCellData(0, "sOnlySrarch")!=null){
+//		arg.sOnlySrarch = Ds_LTIDA13.getCellData(0, "sOnlySrarch");
+//	}
+
+	var pObj = {  // 수정(추가): 2017.11.22, by 진태만 
+					"Ds_Pibo" : Ds_LTIDA13 					// 피보험자 정보 Ds 
+					,"Ds_LTIDA00" : Ds_LTIDA13 		// 보험 기본사항 정보 Ds  
+				} 	// 자식으로 보낼 부모 Ds OBJECT 리스트
+
+    promise = promise.then(function(rtnVal) {
+        //편집기능 디세이블 
+//        return wprom.promise.popupOpen("PROJECT_PATH_TEMP/ssr_sst/CBSC129P.xml", arg, 800, 550, "TaskBar=true Resize=true"); /*wprom.popupOpen(가이드참조)*/
+		
+			var indata  = { };				
+			var popInfo = {
+				"width"     : 885,
+				"height"    : 881,  
+				"indata"    : arg,
+			 	"parentObject"    : pObj,	 	// 자식으로 보낼 부모 Ds OBJECT 리스트   // 수정(추가): 2017.11.22, by 진태만 
+				"title"     : "피보험자 고지사항",
+				"callback"  : ""
+			};			
+			
+			return wprom.popupOpen("/ui/cbsc/CBSC129P.xml", popInfo);
+    });
+    return promise;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_Reslt_OnClick
+// 내용        : 결과조회 버튼
+//---------------------------------------------------------------------------
+scwin.btn_Reslt_OnClick = function(obj) {
+
+    var promise = Promise.resolve();
+    if (Ds_LTIDA13.getRowCount() == 0 || Ds_LTIDA13.getColData( "sPlanNo" )=="" ) {
+        wprom.alert("대상건을 선택하세요.");
+        return false;
+    }
+//    var arg = "sPlanNo=" + wconv.quote(Ds_LTIDA13.getCellData(0, "sPlanNo"));
+//    arg += " sInrpsCd=" + wconv.quote(Ds_LTIDA13.getCellData(0, "sInrpsCd"));
+//    arg += " sInrpsName=" + wconv.quote(Ds_LTIDA13.getCellData(0, "sInrpsName"));
+	var arg = {};
+	arg.sPlanNo = Ds_LTIDA13.getCellData(0, "sPlanNo");
+	arg.sInrpsCd = Ds_LTIDA13.getCellData(0, "sInrpsCd");
+	arg.sInrpsName = Ds_LTIDA13.getCellData(0, "sInrpsName");
+
+    promise = promise.then(function(rtnVal) {
+
+			var indata  = { };				
+			var popInfo = {
+				"width"     : 900,
+				"height"    : 580,  
+				"indata"    : arg,
+				"title"     : "진단결과",
+				"callback"  : ""
+			};			
+
+//        return wprom.promise.popupOpen("PROJECT_PATH_TEMP/ssr_sst/CBSC105P.xml", arg, 800, 550, "TaskBar=true Resize=true"); /*wprom.popupOpen(가이드참조)*/
+		return wprom.popupOpen("/ui/cbsc/CBSC105P.xml", popInfo);
+    });
+    return promise;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_Reslt_OnClick
+// 내용        : 진단진행사항조회(전문)
+//---------------------------------------------------------------------------
+
+scwin.btn_ProgStnd_OnClick = function(obj) {
+    var sDgnsProgStndCd = "";
+    var sChk = "";
+//    SOBJ_reqMain.WSDL = gds.gWsdlBasis; //기본 웹서비스
+//    var MethodObj = gfn_CreateMethodObj(SOBJ_reqMain, "com.inswave.longterm.ssr.sst.task.DBB300Task", "transferDgns01S0300100Spcl", "", "");
+	var MethodObj = new callService("com.inswave.longterm.ssr.sst.task.DBB300Task", "transferDgns01S0300100Spcl", pageSize, pageNo);
+	MethodObj.setId("transferDgns01S0300100Spcl");
+    for (var i = 0; i < DsWs_SqrtList.getRowCount(); i++) {
+        sDgnsProgStndCd = DsWs_SqrtList.getCellData(i, "sDgnsProgStndCd");
+        sChk = DsWs_SqrtList.getCellData(i, "sChk");
+//        wconv.trace("sDgnsProgStndCd : " + sDgnsProgStndCd);
+        if (sChk == "1" && sDgnsProgStndCd != "99" && sDgnsProgStndCd != "60" && sDgnsProgStndCd != "00") {
+//            wconv.trace("transferDgns01S0300100Spcl");
+//            gfn_SetParam(MethodObj, "nDataLength", "00000083");
+			MethodObj.setParam( "nDataLength", "00000083");
+//            gfn_SetParam(MethodObj, "sPacketType", "0300");
+			MethodObj.setParam( "sPacketType", "0300");
+//            gfn_SetParam(MethodObj, "sJobType", "100");
+			MethodObj.setParam( "sJobType", "100");
+//            gfn_SetParam(MethodObj, "sSendDateTime", gfn_GetSysTime());
+			MethodObj.setParam( "sSendDateTime", gfn_GetSysTime());
+//            gfn_SetParam(MethodObj, "sMsgUnqNo", "000001");
+			MethodObj.setParam( "sMsgUnqNo", "000001");
+//            gfn_SetParam(MethodObj, "sSendInstCode", "N17");
+			MethodObj.setParam( "sSendInstCode", "N17");
+//            gfn_SetParam(MethodObj, "sRecvInstCode", "SP1");
+			MethodObj.setParam( "sRecvInstCode","SP1");
+//            gfn_SetParam(MethodObj, "sRspnCd", "");
+			MethodObj.setParam( "sRspnCd", "");
+//            gfn_SetParam(MethodObj, "sID", DsWs_SqrtList.getCellData(i, "sInrpscd"));
+			MethodObj.setParam( "sID", DsWs_SqrtList.getCellData(i, "sInrpscd"));
+//            gfn_SetParam(MethodObj, "sPlanNo", DsWs_SqrtList.getCellData(i, "sPlanNo"));
+			MethodObj.setParam( "sPlanNo", DsWs_SqrtList.getCellData(i, "sPlanNo"));
+//            gfn_SetParam(MethodObj, "sInrpsName", DsWs_SqrtList.getCellData(i, "sInrpsName"));
+			MethodObj.setParam( "sInrpsName", DsWs_SqrtList.getCellData(i, "sInrpsName"));
+//            gfn_SetParam(MethodObj, "sInrpsCd", wconv.substr(DsWs_SqrtList.getCellData(i, "sInrpscd"), 0, 7) + "******");
+			MethodObj.setParam( "sInrpsCd", wconv.substr(DsWs_SqrtList.getCellData(i, "sInrpscd"), 0, 7) + "******");
+//            gfn_SetParam(MethodObj, "sRqstDate", DsWs_SqrtList.getCellData(i, "sRqstDate"));
+			MethodObj.setParam( "sRqstDate", DsWs_SqrtList.getCellData(i, "sRqstDate"));
+//            gfn_SetParam(MethodObj, "sUserId", gds.gUserID);
+			MethodObj.setParam( "sUserId", util.getGdsValue("gUserID"));
+//            var result = gfn_CallService(SOBJ_reqMain, DOBJ_reqMain, MethodObj);
+
+            if (DsWs_Warning.getRowCount() != 0) {
+                wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+                return;
+            } else {
+                if (DsWs_Recv.getCellData(0, "sRspnCd") == "0000") {
+                    DsWs_SqrtList.setCellData(i, "sDgnsProgStndCd", DsWs_Recv.getCellData(0, "sDgnsProgStndCd"));
+                }
+            }
+        }
+    }
+};
+
+scwin.btn_RqstCncl_OnClick = function(obj) {
+    var sDgnsProgStndCd = Ds_LTIDA13.getCellData(0, "sDgnsProgStndCd");
+    if (Ds_LTIDA13.getRowCount() == 0) {
+        wprom.alert("대상건을 선택하세요.");
+        return false;
+    }
+    if (sDgnsProgStndCd != "99") {
+        wprom.alert("진단취소 불가상태입니다.");
+        return false;
+    }
+//    SOBJ_reqMain.WSDL = gds.gWsdlBasis; //기본 웹서비스
+//    var MethodObj = gfn_CreateMethodObj(SOBJ_reqMain, "com.inswave.longterm.ssr.sst.task.DBB300Task", "transferDgns01S0400100Spcl", "", "");
+	var MethodObj = new callService("com.inswave.longterm.ssr.sst.task.DBB300Task", "transferDgns01S0400100Spcl", pageSize, pageNo);
+	MethodObj.setId("transferDgns01S0400100Spcl");
+	
+    //gfn_SetParam(MethodObj, "gubun", "8");	
+//    gfn_SetParam(MethodObj, "nDataLength", "00000083");
+	MethodObj.setParam( "nDataLength","00000083" );
+//    gfn_SetParam(MethodObj, "sPacketType", "0400");
+	MethodObj.setParam( "sPacketType","0400" );
+//    gfn_SetParam(MethodObj, "sJobType", "100");
+	MethodObj.setParam( "sJobType", "100");
+//    gfn_SetParam(MethodObj, "sSendDateTime", gfn_GetSysTime());
+	MethodObj.setParam( "sSendDateTime",gfn_GetSysTime() );
+//    gfn_SetParam(MethodObj, "sMsgUnqNo", "000001");
+	MethodObj.setParam( "sMsgUnqNo","000001" );
+//    gfn_SetParam(MethodObj, "sSendInstCode", "N17");
+	MethodObj.setParam( "sSendInstCode", "N17" );
+//    gfn_SetParam(MethodObj, "sRecvInstCode", "SP1");
+	MethodObj.setParam( "sRecvInstCode", "SP1");
+//    gfn_SetParam(MethodObj, "sRspnCd", "");
+	MethodObj.setParam( "sRspnCd", "" );
+//    gfn_SetParam(MethodObj, "sID", Ds_LTIDA13.getCellData(0, "sInrpscd"));
+	MethodObj.setParam( "sID",Ds_LTIDA13.getCellData(0, "sInrpscd") );
+//    gfn_SetParam(MethodObj, "sPlanNo", Ds_LTIDA13.getCellData(0, "sPlanNo"));
+	MethodObj.setParam( "ssPlanNoGb",Ds_LTIDA13.getCellData(0, "sPlanNo") );
+//    gfn_SetParam(MethodObj, "sInrpsName", Ds_LTIDA13.getCellData(0, "sInrpsName"));
+	MethodObj.setParam( "sInrpsName",Ds_LTIDA13.getCellData(0, "sInrpsName") );
+//    gfn_SetParam(MethodObj, "sInrpsCd", wconv.substr(Ds_LTIDA13.getCellData(0, "sInrpscd"), 0, 7) + "******");
+	MethodObj.setParam( "sInrpsCd", wconv.substr(Ds_LTIDA13.getCellData(0, "sInrpscd"), 0, 7) + "******");
+//    gfn_SetParam(MethodObj, "sRqstDate", Ds_LTIDA13.getCellData(0, "sRqstDate"));
+	MethodObj.setParam( "sRqstDate", Ds_LTIDA13.getCellData(0, "sRqstDate"));
+//    gfn_SetParam(MethodObj, "sUserId", gds.gUserID);
+	MethodObj.setParam( "sUserId", util.getGdsValue("gUserID"));
+//    var result = gfn_CallService(SOBJ_reqMain, DOBJ_reqMain, MethodObj);
+    if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    } else {
+        if (DsWs_Recv.getCellData(0, "sRspnCd") == "0000") {
+            DsWs_SqrtList.setCellData(DsWs_SqrtList.getRowCount(), "sDgnsProgStndCd", DsWs_Recv.getCellData(0, "sDgnsProgStndCd"));
+            
+            wprom.alert("진단취소 처리되었습니다.");
+        }
+    }
+};
+
+scwin.grd_List_OnHeadClick = function(obj, nCell, nX, nY, nPivotIndex) {
+    var chk = "0";
+    if (nCell == "0") {
+        if (grd_List.getCellProp("head", nCell, "text") != "0") {
+            grd_List.SetCellProp("head", nCell, "text", "0");
+            chk = "0";
+        } else {
+            grd_List.SetCellProp("head", nCell, "text", "1");
+            chk = "1";
+        }
+        if (DsWs_SqrtList.getRowCount() > 0) {
+            for (var i = 0; i < DsWs_SqrtList.getRowCount(); i++) {
+                DsWs_SqrtList.setCellData(i, "sChk", chk);
+            }
+        }
+    }
+};
+
+scwin.B240_OnKeyDown = function(obj, objSenderObj, nChar, bShift, bControl, bAlt, nLLParam, nHLParam) {
+    if (bShift == true && bControl == true && nChar == 85) {
+        //Shift+Ctrl+u
+//        wconv.trace("char : " + nChar);
+//        wconv.trace(bShift);
+//        wconv.trace(bControl);
+//        wconv.trace(bAlt);
+    }
+};
+//---------------------------------------------------------------------------
+// 엑셀로 보기
+//---------------------------------------------------------------------------
+scwin.cm_btnExDown  = function() {
+    if (DsWs_SqrtList.getTotalRow() == 0) {
+        wprom.alert("출력할 목록이 존재하지 않습니다.");
+        return false;
+    }
+    var option={"fileName": "진단심사결과.xlsx"};
+	var infoArr = {};
+    //gfn_ExportExcel(grd_ListExl, this.Title);
+    common.downLoadExcel("grid_Excel", option, infoArr);
+};
+
+scwin.lfn_Exel = function() {
+    if (DsWs_SqrtList.getTotalRow() < 1) {
+        wprom.alert("출력할 목록이 존재하지 않습니다.");
+        return;
+    }
+    gfn_ExportExcel(grd_ListExl, "진단대상조회");
+};
+
+
+//---------------------------------------------------------------------------
+// function 명 : medt_Str_OnKeyDown()
+// 내용        : keyDown시 처리
+//---------------------------------------------------------------------------
+scwin.lfn_Search_Async_OnKeyDown = function(nChar) { //완료    
+
+    if (nChar.keyCode == 13) {
+    	util.eventAsyncCall(this, scwin.medt_Str_OnKeyDown, arguments);
+    }
+};
+//nChar, bShift, bCtrl, bAlt, LLParam, HLParam
+scwin.medt_Str_OnKeyDown = function( nChar) {
+        scwin.lfn_Search();
+};
+
+
+	
+scwin.grd_List_onbodymouseover = function(info) {
+	var info_Index = Object.keys(info);
+	col_Index = info[info_Index[1]];
+	if(col_Index=="14"){
+//		col_Index.style.cursor="pointer";
+	}
+};
+
+scwin.subNo = function(Value) {
+    var result = "";
+	var v1 = Value.substring(0,6);   
+	var v2 = Value.substring(6,14);
+	result = v1 + "-" + v2;   
+    
+    return result;
+};
+scwin.subNo2 = function(Value) {
+    var result = "";
+	var v1 = Value.substring(0,1);   
+	var v2 = Value.substring(1,5);
+	var v3 = Value.substring(5,12);
+	result = v1 + "-" + v2 + "-" + v3;   
+    
+    return result;
+};
+
+	]]></script>
+    </head>
+    <body>
+    	<xf:group class="cont_wrap" ev:onblur="scwin.B240_OnKeyDown"
+    		id="B240"
+    		style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;/*  height:612px;*/ left:0px; top:2px;/* width:820px;*/z-index: 2;"
+    		userData1="진단대상조회[B240]"
+    		userData2=" OnLoadCompleted:scwin.B240_OnLoadCompleted; ">
+    		<DataObjects>
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    		</DataObjects>
+    		<ServiceObjects>
+    			<ServiceObject />
+    			<ServiceObject />
+    			<ServiceObject />
+    			<ServiceObject />
+    			<ServiceObject />
+    		</ServiceObjects>
+    		<xf:group arcsize="6" class="search_area" id="Shape0"
+    			style="position:absolute; bottom:58px; height:30px; top:30px;left: 0px;right: 0px;"
+    			userData3="RoundRect" />
+
+    		<w2:textbox class="sty_lb_Search" id="Static0" label="조회기간"
+    			style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:-6px;top:37px; width:68px;"
+    			tagname="" />
+    		<w2:inputCalendar class="sty_ipt_search" id="cal_From"
+    			style="position:absolute; SundayTextColor:red;  SaturdayTextColor:blue;  Column:sInsCtrTpd;  border-style:solid;  height:20px;left:79px;top:35px; width:105px;"
+    			tabIndex="6" validCheck="true" />
+    		<w2:textbox class="ipt_Body" id="Static13" label="~"
+    			style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:179px;top:35px; width:20px;"
+    			tagname="" />
+    		<w2:inputCalendar class="sty_ipt_search" id="cal_To"
+    			style="position:absolute; SundayTextColor:red;  SaturdayTextColor:blue;  Column:sInsCtrPed;  border-style:solid;  height:20px;left:204px;top:35px; width:105px;"
+    			tabIndex="7" validCheck="true" />
+    		<w2:textbox class="sty_lb_Search" id="Static1"
+    			label="심의요청부서"
+    			style="position:absolute; display:none;  VAlign:Middle;  text-align:right; height:20px; left:1059px; top:33px; width:92px;"
+    			tagname="" />
+    		<w2:textbox class="sty_lb_Search" id="Static2" label="진단상태"
+    			style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:571px;top:36px; width:68px;"
+    			tagname="" />
+    		<w2:textbox class="sty_lb_Search" id="Static3" label="조회기준"
+    			style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:298px;top:36px; width:68px;"
+    			tagname="" />
+    		<w2:textbox class="sty_lb_Search" id="Static4" label="상품코드"
+    			style="position:absolute; display:none;  VAlign:Middle;  text-align:right; height:20px; left:858px; top:55px; width:68px;"
+    			tagname="" />
+    		<w2:textbox class="sty_lb_Search" id="Static6" label="승인권자"
+    			style="position:absolute; display:none;  VAlign:Middle;  text-align:right; height:20px; left:1059px; top:55px; width:92px;"
+    			tagname="" />
+    		<xf:switch id="switch_150" style=" ">
+    			<xf:case id="Default_151" style=" "></xf:case>
+    		</xf:switch>
+    		<xf:input class="sty_ipt_search" id="edt_deptName"
+    			maxlength="7" ref="data:DsWs_AXR930."
+    			style="position:absolute; display:none;  ImeMode:none;  border-style:solid;  text-align:CENTER;  height:20px; left:1153px; top:33px; width:104px;"
+    			tabIndex="18" />
+    		<xf:trigger class="btn_Search_Search"
+    			ev:onclick="scwin.lfn_SearchDept_OnClick" id="btn_grup"
+    			style="position:absolute; display:none;  Transparent:TRUE;  ImageID:btn_Search_Search;  height:20px; left:1259px; top:33px; width:20px;"
+    			tabIndex="19" />
+    		<xf:input class="sty_ipt_search" id="edt_deptCd"
+    			maxlength="7" ref="data:DsWs_AXR930."
+    			style="position:absolute; display:none;  ImeMode:none;  border-style:solid;  height:20px; left:1284px; top:33px; width:8px;"
+    			tabIndex="20" />
+    		<xf:input class="sty_ipt_search" id="edt_level"
+    			maxlength="7" ref="data:DsWs_AXR930."
+    			style="position:absolute; display:none;  ImeMode:none;  border-style:solid;  height:20px; left:1295px; top:33px; width:8px;"
+    			tabIndex="21" />
+    		<xf:input class="sty_ipt_search"
+    			ev:onblur="scwin.lfn_Search_Async_OnKeyDown " id="edt_Str"
+    			style="position:absolute; border-style:solid;  height:20px;left:484px;top:35px; width:105px;"
+    			tabIndex="24" />
+    		<xf:input class="sty_ipt_search" dataType="text"
+    			ev:onblur="scwin.medt_Str_OnKillFocus"
+    			ev:onfocus="scwin.medt_Str_OnFocus" id="medt_Str" placeholder=""
+    			style="position:absolute; border-style:solid;  height:20px;left:484px;top:35px; width:105px;"
+    			tabIndex="23" ev:onkeydown="scwin.lfn_Search_Async_OnKeyDown" />
+    		<xf:select1 appearance="minimal" class="sty_ipt_search"
+    			emptyItem="true" ev:onchange="scwin.cmb_Gubun_OnCharChanged"
+    			id="cmb_Gubun"
+    			style="position:absolute; ImeMode:none;  INDEX:0;  border-style:solid;  height:20px;left:382px;top:35px; width:97px;"
+    			tabIndex="22" renderType="native">
+    			<xf:choices>
+    				<xf:itemset nodeset="data:ds_combo">
+    					<xf:label ref="id_nm" />
+    					<xf:value ref="id_cd" />
+    				</xf:itemset>
+    			</xf:choices>
+    		</xf:select1>
+    		<xf:input class="sty_ipt_search" id="edt_empName"
+    			maxlength="7"
+    			style="position:absolute; display:none;  ImeMode:none;  border-style:solid;  text-align:CENTER;  height:20px; left:1153px; top:55px; width:104px;"
+    			tabIndex="25" />
+    		<xf:select1 appearance="minimal" class="sty_ipt_search"
+    			emptyItem="true" id="cmb_DgnsProgStndCd"
+    			style="position:absolute; border-style:solid;  height:20px;left:656px;top:35px; width:105px;"
+    			tabIndex="26" renderType="native" allOption="" chooseOption="">
+    			<xf:choices>
+    				<xf:itemset nodeset="data:DsWs_DgnsProgStndCd">
+    					<xf:label ref="sHnglCdName" />
+    					<xf:value ref="sCd" />
+    				</xf:itemset>
+    			</xf:choices>
+    		</xf:select1>
+    		<xf:input class="sty_ipt_search" id="edt_empCode"
+    			maxlength="7" ref="data:DsWs_AXR930.sAgentCode"
+    			style="position:absolute; display:none;  ImeMode:none;  border-style:solid;  height:20px; left:1284px; top:55px; width:8px;"
+    			tabIndex="27" />
+    		<xf:trigger class="btn_Search_Search"
+    			ev:onclick="scwin.lfn_SearchDoer_OnClick" id="btn_Doer"
+    			style="position:absolute; display:none;  Transparent:TRUE;  ImageID:btn_Search_Search;  height:20px; left:1259px; top:55px; width:20px;"
+    			tabIndex="28" />
+    		<xf:trigger class="btn_Search_Search"
+    			ev:onclick="scwin.btn_Goods_OnClick" id="btn_Goods"
+    			style="position:absolute; display:none;  Transparent:TRUE;  ImageID:btn_Search_Search;  height:20px; left:1035px; top:55px; width:20px;"
+    			tabIndex="29" />
+    		<xf:input class="sty_ipt_search" dataType="text"
+    			displayFormat="####" id="medt_sGdCd" maxlength="4"
+    			style="position:absolute; display:none;  border-style:solid;  height:20px; left:928px; top:55px; width:105px;"
+    			tabIndex="30" />
+    		<w2:gridView class="sty_Grid" dataList="DsWs_SqrtList"
+    			ev:oncellclick="scwin.grd_List_OnCellClick"
+    			ev:onheaderclick="scwin.grd_List_OnHeadClick" focusMode="row"
+    			id="grid_Excel" inputType="text" readOnly="true"
+    			sortEvent="onclick" sortable="true"
+    			style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  height:293px; left:20px; right:0px; top:101px;display: none;"
+    			tabIndex="13">
+    			<w2:header>
+    				<w2:row>
+    					<w2:column dataType="text" id="head_id_1274"
+    						inputType="checkbox" readOnly="true"
+    						style="height:30px; dataType:checkbox; " userData1="0"
+    						userData3="0" value="선택" width="25">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1275"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="1" userData3="0" value="피보험자코드" width="91">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1276"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="2" userData3="0" value="피보험자" width="66">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1277"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="3" userData3="0" value="청약구분" width="62">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1278"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="4" userData3="0" value="청약번호" width="95">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1279"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="5" userData3="0" value="계약번호" width="90">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1280"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="6" userData3="0" value="상품명" width="207">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1281"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="7" userData3="0" value="진단구분" width="56">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1282"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="8" userData3="0" value="진단종류" width="54">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1283"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="9" userData3="0" value="진단상태" width="68">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1284"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="10" userData3="0" value="신청일자" width="73">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1285"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="11" userData3="0" value="진단일자" width="70">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1286"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="12" userData3="0" value="통보일자" width="74">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1287"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="13" userData3="0" value="심사일자" width="70">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1288"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="14" userData3="0" value="심사결과" width="70">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1289"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="15" userData3="0" value="취급자명" width="65">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1290"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="16" userData3="0" value="취급자코드" width="66">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1291"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="17" userData3="0" value="사용인명" width="61">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1292"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="18" userData3="0" value="사용인코드" width="68">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1293"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="19" userData3="0" value="취급점" width="80">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1294"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="20" userData3="0" value="심사자" width="62">
+    					</w2:column>
+    					<w2:column dataType="text" id="head_id_1295"
+    						inputType="text" readOnly="true" style="height:30px;"
+    						userData1="21" userData3="0" value="진단업체" width="69">
+    					</w2:column>
+    				</w2:row>
+    			</w2:header>
+    			<w2:gBody>
+    				<w2:row>
+    					<w2:column dataType="text" id="sChk"
+    						inputType="checkbox" readOnly="false"
+    						style="height:27px; dataType:checkbox; " userData1="0"
+    						userData3="0" width="25">
+    					</w2:column>
+    					<w2:column dataType="text"
+    						displayFormat="######-#######" id="sInrpsCd" inputType="text"
+    						readOnly="true" style="" textAlign="center" userData1="1"
+    						userData3="0" width="91">
+    					</w2:column>
+    					<w2:column dataType="text" id="sInrpsName"
+    						inputType="text" readOnly="true" style="" textAlign="center"
+    						userData1="2" userData3="0" width="66">
+    					</w2:column>
+    					<w2:column dataType="text" id="sSsrtFlgcd"
+    						inputType="select" readOnly="true" style="" textAlign="center"
+    						userData1="3" userData3="0" width="62">
+    						<w2:choices></w2:choices>
+    					</w2:column>
+    					<w2:column dataType="text"
+    						displayFormat="#-####-#######" id="sPlanNo" inputType="text"
+    						readOnly="true" style="" textAlign="center" userData1="4"
+    						userData3="0" width="95">
+    					</w2:column>
+    					<w2:column dataType="text"
+    						displayFormat="#-####-#######" id="sCrNo" inputType="text"
+    						readOnly="true" style="" textAlign="center" userData1="5"
+    						userData3="0" width="90">
+    					</w2:column>
+    					<w2:column dataType="text" id="sGdCdName"
+    						inputType="text" readOnly="true" style="" textAlign="center"
+    						userData1="6" userData3="0" width="207">
+    					</w2:column>
+    					<w2:column dataType="text" id="sDgnsFlagCd"
+    						inputType="select" readOnly="true" style="" textAlign="center"
+    						userData1="7" userData3="0" width="56">
+    						<w2:choices></w2:choices>
+    					</w2:column>
+    					<w2:column dataType="text" id="sDgnsKindCd"
+    						inputType="select" readOnly="true" style="" textAlign="center"
+    						userData1="8" userData3="0" width="54">
+    						<w2:choices></w2:choices>
+    					</w2:column>
+    					<w2:column dataType="text" id="sDgnsProgStndCd"
+    						inputType="select" readOnly="true" style="" textAlign="center"
+    						userData1="9" userData3="0" width="68">
+    						<w2:choices></w2:choices>
+    					</w2:column>
+    					<w2:column dataType="date" id="sRqstDate"
+    						inputType="text" readOnly="true" style="" textAlign="center"
+    						userData1="10" userData3="0" width="73">
+    					</w2:column>
+    					<w2:column dataType="date" id="sDcsnDate"
+    						inputType="text" readOnly="true" style="" textAlign="center"
+    						userData1="11" userData3="0" width="70">
+    					</w2:column>
+    					<w2:column dataType="date" id="sDlngCpltDate"
+    						inputType="text" readOnly="true" style="" textAlign="center"
+    						userData1="12" userData3="0" width="74">
+    					</w2:column>
+    					<w2:column dataType="date" id="sJugmDate"
+    						inputType="text" readOnly="true" style="" textAlign="center"
+    						userData1="13" userData3="0" width="70">
+    					</w2:column>
+    					<w2:column dataType="text" id="sConuResltCd"
+    						inputType="select" readOnly="true" style="" textAlign="center"
+    						userData1="14" userData3="0" width="70">
+    						<w2:choices></w2:choices>
+    					</w2:column>
+    					<w2:column dataType="text" id="sDoerName"
+    						inputType="text" readOnly="true" style="" textAlign="center"
+    						userData1="15" userData3="0" width="65">
+    					</w2:column>
+    					<w2:column dataType="text" id="sFrstDoer"
+    						inputType="text" readOnly="true" style="" textAlign="center"
+    						userData1="16" userData3="0" width="66">
+    					</w2:column>
+    					<w2:column dataType="text" id="sDoerUserName"
+    						inputType="text" readOnly="true" style="" textAlign="center"
+    						userData1="17" userData3="0" width="61">
+    					</w2:column>
+    					<w2:column dataType="text" id="sFrstDoerUser"
+    						inputType="text" readOnly="true" style="" textAlign="center"
+    						userData1="18" userData3="0" width="68">
+    					</w2:column>
+    					<w2:column dataType="text"
+    						id="sFrstDoerCentrName" inputType="text" readOnly="true"
+    						style="" textAlign="center" userData1="19" userData3="0"
+    						width="80">
+    					</w2:column>
+    					<w2:column dataType="text" id="sJudg"
+    						inputType="text" readOnly="true" style="" textAlign="center"
+    						userData1="20" userData3="0" width="62">
+    					</w2:column>
+    					<w2:column dataType="text" id="sHospCd"
+    						inputType="select" readOnly="true" style="" textAlign="center"
+    						userData1="21" userData3="0" width="69">
+    						<w2:choices></w2:choices>
+    					</w2:column>
+    				</w2:row>
+    			</w2:gBody>
+    		</w2:gridView>
+    		<xf:trigger class="detail_bu02"
+    			ev:onclick="scwin.btn_Image_OnClick" id="btn_Image"
+    			style="position:absolute;ImageID:btn_Input_05;height:20px;Transparent:TRUE;width:60px;right:0px;top:388px;"
+    			tabIndex="35" toolTip="이미지조회" type="anchor" disabled="true">
+    			<xf:label><![CDATA[이미지조회]]></xf:label>
+    		</xf:trigger>
+    		<xf:trigger class="detail_bu02"
+    			ev:onclick="scwin.btn_Notc_OnClick" id="btn_Notc"
+    			style="position:absolute;ImageID:btn_Input_04;height:20px;Transparent:TRUE;width:60px;right:161px;top:388px;"
+    			tabIndex="36" toolTip="고지의무" type="anchor">
+    			<xf:label><![CDATA[고지의무]]></xf:label>
+    		</xf:trigger>
+    		<xf:trigger class="detail_bu02"
+    			ev:onclick="scwin.btn_Reslt_OnClick" id="btn_Reslt"
+    			style="position:absolute;ImageID:btn_Input_04;height:20px;Transparent:TRUE;width:60px;right:87px;top:388px;"
+    			tabIndex="37" toolTip="결과조회" type="anchor">
+    			<xf:label><![CDATA[결과조회]]></xf:label>
+    		</xf:trigger>
+    		<xf:trigger class="detail_bu02"
+    			ev:onclick="scwin.btn_ProgStnd_OnClick" id="btn_ProgStnd"
+    			style="position:absolute; Transparent:TRUE;  ImageID:btn_Input_05;  height:20px;right:0;top:64px; width:75px;"
+    			tabIndex="38" toolTip="진행상태조회" type="anchor">
+    			<xf:label><![CDATA[진행상태조회]]></xf:label>
+    		</xf:trigger>
+    		<xf:trigger class="detail_bu02"
+    			ev:onclick="scwin.btn_RqstCncl_OnClick" id="btn_RqstCncl"
+    			style="position:absolute;ImageID:btn_Input_04;height:20px;Transparent:TRUE;width:60px;right:236px;top:388px;"
+    			tabIndex="39" toolTip="요청취소" type="anchor">
+    			<xf:label><![CDATA[요청취소]]></xf:label>
+    		</xf:trigger>
+    		<w2:gridView id="grd_List" dataList="DsWs_SqrtList" focusMode="row" autoFit="" readOnly="true" ev:onheaderclick="scwin.grd_List_OnHeadClick" style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  height:292px;top:93px;left:5px;" tabIndex="13" sortable="true" sortEvent="onclick" inputType="text" class="sty_Grid" ev:oncellclick="scwin.grd_List_OnCellClick" ev:onbodymouseover="scwin.grd_List_onbodymouseover">
+    		<w2:header>
+    			<w2:row>
+    				<w2:column id="head_id_1274" userData1="0" dataType="text" userData3="0" readOnly="true" style="height:20px; dataType:checkbox; ;" width="25" inputType="checkbox" value="선택">
+    				</w2:column>
+    				<w2:column id="head_id_1275" userData1="1" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="100" inputType="text" value="피보험자코드">
+    				</w2:column>
+    				<w2:column id="head_id_1276" userData1="2" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="66" inputType="text" value="피보험자">
+    				</w2:column>
+    				<w2:column id="head_id_1277" userData1="3" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="62" inputType="text" value="청약구분">
+    				</w2:column>
+    				<w2:column id="head_id_1278" userData1="4" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="100" inputType="text" value="청약번호">
+    				</w2:column>
+    				<w2:column id="head_id_1279" userData1="5" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="100" inputType="text" value="계약번호">
+    				</w2:column>
+    				<w2:column id="head_id_1280" userData1="6" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="207" inputType="text" value="상품명">
+    				</w2:column>
+    				<w2:column id="head_id_1281" userData1="7" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="62" inputType="text" value="진단구분">
+    				</w2:column>
+    				<w2:column id="head_id_1282" userData1="8" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="62" inputType="text" value="진단종류">
+    				</w2:column>
+    				<w2:column id="head_id_1283" userData1="9" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="85" inputType="text" value="진단상태">
+    				</w2:column>
+    				<w2:column id="head_id_1284" userData1="10" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="73" inputType="text" value="신청일자">
+    				</w2:column>
+    				<w2:column id="head_id_1285" userData1="11" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="70" inputType="text" value="진단일자">
+    				</w2:column>
+    				<w2:column id="head_id_1286" userData1="12" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="74" inputType="text" value="통보일자">
+    				</w2:column>
+    				<w2:column id="head_id_1287" userData1="13" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="70" inputType="text" value="심사일자">
+    				</w2:column>
+    				<w2:column id="head_id_1288" userData1="14" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="70" inputType="text" value="심사결과">
+    				</w2:column>
+    				<w2:column id="head_id_1289" userData1="15" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="65" inputType="text" value="취급자명">
+    				</w2:column>
+    				<w2:column id="head_id_1290" userData1="16" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="66" inputType="text" value="취급자코드">
+    				</w2:column>
+    				<w2:column id="head_id_1291" userData1="17" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="61" inputType="text" value="사용인명">
+    				</w2:column>
+    				<w2:column id="head_id_1292" userData1="18" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="68" inputType="text" value="사용인코드">
+    				</w2:column>
+    				<w2:column id="head_id_1293" userData1="19" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="80" inputType="text" value="취급점">
+    				</w2:column>
+    				<w2:column id="head_id_1294" userData1="20" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="62" inputType="text" value="심사자">
+    				</w2:column>
+    				<w2:column id="head_id_1295" userData1="21" dataType="text" userData3="0" readOnly="true" style="height:20px;" width="88" inputType="text" value="진단업체">
+    				</w2:column>
+    			</w2:row>
+    		</w2:header>
+    		<w2:gBody>
+    			<w2:row>
+    				<w2:column id="sChk" userData1="0" dataType="text" userData3="0" readOnly="false" style="dataType:checkbox;height:24px;" width="25" inputType="checkbox">
+    				</w2:column>
+    				<w2:column id="sInrpsCd" userData1="1" dataType="text" userData3="0" readOnly="true" style="height:24px;" width="100" inputType="text" textAlign="center" displayFormat="######-#######">
+    				</w2:column>
+    				<w2:column id="sInrpsName" userData1="2" dataType="text" userData3="0" readOnly="true" style="height:24px;" width="66" inputType="text" textAlign="center">
+    				</w2:column>
+    				<w2:column id="sSsrtFlgcd" userData1="3" dataType="text" userData3="0" readOnly="true" style="height:24px;" chooseOption="" width="62" inputType="select" allOption="" textAlign="center">
+    					<w2:choices>
+    						<w2:itemset nodeset="data:DsWs_SsrtFlgcd">
+    							<w2:label ref="sHnglCdName"></w2:label>
+    							<w2:value ref="sCd"></w2:value>
+    						</w2:itemset>
+    					</w2:choices>
+    				</w2:column>
+    				<w2:column id="sPlanNo" userData1="4" dataType="text" userData3="0" readOnly="true" style="height:24px;" width="100" inputType="text" textAlign="center" displayFormat="#-####-#######">
+    				</w2:column>
+    				<w2:column id="sCrNo" userData1="5" dataType="text" userData3="0" readOnly="true" style="height:24px;" width="100" inputType="text" textAlign="center" displayFormat="#-####-#######">
+    				</w2:column>
+    				<w2:column id="sGdCdName" userData1="6" dataType="text" userData3="0" readOnly="true" style="height:24px;" width="207" inputType="text" textAlign="center">
+    				</w2:column>
+    				<w2:column id="sDgnsFlagCd" userData1="7" dataType="text" userData3="0" readOnly="true" style="height:24px;" chooseOption="" width="62" inputType="select" allOption="" textAlign="center">
+    					<w2:choices>
+    						<w2:itemset nodeset="data:DsWs_DgnsFlagCd">
+    							<w2:label ref="sHnglCdName"></w2:label>
+    							<w2:value ref="sCd"></w2:value>
+    						</w2:itemset>
+    					</w2:choices>
+    				</w2:column>
+    				<w2:column id="sDgnsKindCd" userData1="8" dataType="text" userData3="0" readOnly="true" style="height:24px;" chooseOption="" width="62" inputType="select" allOption="" textAlign="center">
+    					<w2:choices>
+    						<w2:itemset nodeset="data:DsWs_DgnsKindCd">
+    							<w2:label ref="sHnglCdName"></w2:label>
+    							<w2:value ref="sCd"></w2:value>
+    						</w2:itemset>
+    					</w2:choices>
+    				</w2:column>
+    				<w2:column id="sDgnsProgStndCd" userData1="9" dataType="text" userData3="0" readOnly="true" style="height:24px;" chooseOption="" width="85" inputType="select" allOption="" textAlign="center">
+    					<w2:choices>
+    						<w2:itemset nodeset="data:DsWs_DgnsProgStndCd">
+    							<w2:label ref="sHnglCdName"></w2:label>
+    							<w2:value ref="sCd"></w2:value>
+    						</w2:itemset>
+    					</w2:choices>
+    				</w2:column>
+    				<w2:column id="sRqstDate" userData1="10" dataType="date" userData3="0" readOnly="true" style="height:24px;" width="73" inputType="text" textAlign="center">
+    				</w2:column>
+    				<w2:column id="sDcsnDate" userData1="11" dataType="date" userData3="0" readOnly="true" style="height:24px;" width="70" inputType="text" textAlign="center">
+    				</w2:column>
+    				<w2:column id="sDlngCpltDate" userData1="12" dataType="date" userData3="0" readOnly="true" style="height:24px;" width="74" inputType="text" textAlign="center">
+    				</w2:column>
+    				<w2:column id="sJugmDate" userData1="13" dataType="date" userData3="0" readOnly="true" style="height:24px;" width="70" inputType="text" textAlign="center">
+    				</w2:column>
+    				<w2:column id="sConuResltCd" userData1="14" dataType="text" userData3="0" readOnly="true" style="height:24px;cursor: pointer;" chooseOption="" width="70" inputType="select" class="bold underline" allOption="" textAlign="center">
+    					<w2:choices>
+    						<w2:itemset nodeset="data:DsWs_ConuResltCd" >
+    							<w2:label ref="sHnglCdName"></w2:label>
+    							<w2:value ref="sCd"></w2:value>
+    						</w2:itemset>
+    					</w2:choices>
+    				</w2:column>
+    				<w2:column id="sDoerName" userData1="15" dataType="text" userData3="0" readOnly="true" style="height:24px;" width="65" inputType="text" textAlign="center">
+    				</w2:column>
+    				<w2:column id="sFrstDoer" userData1="16" dataType="text" userData3="0" readOnly="true" style="height:24px;" width="66" inputType="text" textAlign="center">
+    				</w2:column>
+    				<w2:column id="sDoerUserName" userData1="17" dataType="text" userData3="0" readOnly="true" style="height:24px;" width="61" inputType="text" textAlign="center">
+    				</w2:column>
+    				<w2:column id="sFrstDoerUser" userData1="18" dataType="text" userData3="0" readOnly="true" style="height:24px;" width="68" inputType="text" textAlign="center">
+    				</w2:column>
+    				<w2:column id="sFrstDoerCentrName" userData1="19" dataType="text" userData3="0" readOnly="true" style="height:24px;" width="80" inputType="text" textAlign="center">
+    				</w2:column>
+    				<w2:column id="sJudg" userData1="20" dataType="text" userData3="0" readOnly="true" style="height:24px;" width="62" inputType="text" textAlign="center">
+    				</w2:column>
+    				<w2:column id="sHospCd" userData1="21" dataType="text" userData3="0" readOnly="true" style="height:24px;" chooseOption="" width="88" inputType="select" allOption="" textAlign="center">
+    					<w2:choices>
+    						<w2:itemset nodeset="data:DsWs_HospCd">
+    							<w2:label ref="sHnglCdName"></w2:label>
+    							<w2:value ref="sCd"></w2:value>
+    						</w2:itemset>
+    					</w2:choices>
+    				</w2:column>
+    			</w2:row>
+    		</w2:gBody>
+    	</w2:gridView><w2:gridView autoFit="allColumn" dataList="Ds_LTIDA13"
+    			fixedColumnWithHidden="true" hideHeader="true" id="grid"
+    			ignoreCellClick="false" ignoreToggleOnDisabled="false"
+    			scrollByColumn="false" scrollByColumnAdaptive="false"
+    			showSortableUseFilter="false"
+    			style="position:absolute;height:196px;top:417px;z-index: 0;left:0px;"
+    			summaryAuto="false" summaryOnlyAuto="false" useFilterList="false"
+    			useShiftKey="true" class="sty_Grid">
+    			<w2:header id="header1" style="">
+    				<w2:row id="row1" style="">
+    					<w2:column blockSelect="false"
+    						displayMode="label" id="column1" inputType="text"
+    						style="height:20px" width="120">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						displayMode="label" id="column11" inputType="text"
+    						style="height:20px" width="200">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						displayMode="label" id="column9" inputType="text"
+    						style="height:20px" width="120">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						displayMode="label" id="column7" inputType="text"
+    						style="height:20px" width="200">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						displayMode="label" id="column5" inputType="text"
+    						style="height:20px" width="120">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						displayMode="label" id="column3" inputType="text"
+    						style="height:20px" width="200">
+    					</w2:column>
+    				</w2:row>
+    			</w2:header>
+    			<w2:gBody id="gBody1" style="">
+    				<w2:row id="row2" style="">
+    					<w2:column blockSelect="false" class="th"
+    						displayMode="label" id="temp_id_1296" inputType="text"
+    						style="height:20px" userData1="0" userData3="0" value="검진자명"
+    						width="120">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						displayMode="label" id="sInrpsName" inputType="text"
+    						style="height:20px" userData1="1" userData3="0" width="200">
+    					</w2:column>
+    					<w2:column blockSelect="false" class="th"
+    						displayMode="label" id="temp_id_1297" inputType="text"
+    						style="height:20px" userData1="2" userData3="0" value="설계번호"
+    						width="120">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						displayFormat="#-####-#######" displayMode="label"
+    						id="sPlanNo" inputType="text" style="height:20px;displa"
+    						userData1="3" userData3="0" width="200" displayFormatter="scwin.subNo2">
+    					</w2:column>
+    					<w2:column blockSelect="false" class="th"
+    						displayMode="label" id="temp_id_1298" inputType="text"
+    						style="height:20px" userData1="4" userData3="0" value="주민번호"
+    						width="120">
+    					</w2:column>
+    					<w2:column blockSelect="false" displayFormat="######-#######"
+    						displayMode="label" id="sInrpsCd" inputType="text"
+    						style="height:20px" userData1="5" userData3="0" width="200"
+    						displayFormatter="scwin.subNo" escapeFormatter="" expression="">
+    					</w2:column>
+    				</w2:row>
+    				<w2:row id="row3" style="">
+    					<w2:column blockSelect="false" class="th"
+    						displayMode="label" id="temp_id_1299" inputType="text"
+    						style="height:20px;" userData1="0" userData3="1" value="검진일"
+    						width="120" textAlign="center">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						displayMode="label" id="sVistDate" inputType="text"
+    						style="height:20px" userData1="1" userData3="1" width="200">
+    					</w2:column>
+    					<w2:column blockSelect="false" class="th"
+    						displayMode="label" id="temp_id_1300" inputType="text"
+    						style="height:20px" userData1="2" userData3="1" value="진단종류"
+    						width="120">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						displayMode="label" id="sDgnsKindCd" inputType="select"
+    						style="height:20px" userData1="3" userData3="1" width="200">
+    						<w2:choices>
+    							<w2:itemset
+    								nodeset="data:DsWs_DgnsKindCd">
+    								<w2:label ref="sHnglCdName"></w2:label>
+    								<w2:value ref="sCd"></w2:value>
+    							</w2:itemset>
+    						</w2:choices>
+    					</w2:column>
+    					<w2:column blockSelect="false" class="th"
+    						displayMode="label" id="temp_id_1301" inputType="text"
+    						style="height:20px" userData1="4" userData3="1" value="진단업체"
+    						width="120">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						displayMode="label" id="sHospCd" inputType="select"
+    						style="height:20px" userData1="5" userData3="1" width="200">
+    						<w2:choices>
+    							<w2:itemset
+    								nodeset="data:DsWs_HospCd">
+    								<w2:label ref="sHnglCdName"></w2:label>
+    								<w2:value ref="sCd"></w2:value>
+    							</w2:itemset>
+    						</w2:choices>
+    					</w2:column>
+    				</w2:row>
+    				<w2:row id="row4" style="">
+    					<w2:column blockSelect="false" class="th"
+    						displayMode="label" id="temp_id_1302" inputType="text"
+    						style="height:20px" userData1="0" userData3="2" width="120">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						displayMode="label" id="temp_id_1303" inputType="select"
+    						style="height:20px" userData1="1" userData3="2" width="200">
+    						<w2:choices></w2:choices>
+    					</w2:column>
+    					<w2:column blockSelect="false" class="th"
+    						displayMode="label" id="temp_id_1304" inputType="text"
+    						style="height:20px" userData1="2" userData3="2" width="120">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						displayMode="label" id="temp_id_1305" inputType="select"
+    						style="height:20px" userData1="3" userData3="2" width="200">
+    						<w2:choices></w2:choices>
+    					</w2:column>
+    					<w2:column blockSelect="false" class="th"
+    						displayMode="label" id="temp_id_1306" inputType="text"
+    						style="height:20px" userData1="4" userData3="2" value="검사비용"
+    						width="120">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						displayFormat="#,###" displayMode="label" id="nTotMedicAmt"
+    						inputType="text" style="height:20px" userData1="5"
+    						userData3="2" width="200">
+    					</w2:column>
+    				</w2:row>
+    				<w2:row id="row6" style="">
+    					<w2:column blockSelect="false" class="th h60"
+    						displayMode="label" id="column36" inputType="text"
+    						style="height:20px" value="검사소견" width="70">
+    					</w2:column>
+    					<w2:column blockSelect="false" colSpan="5"
+    						displayMode="label" id="sTrmtCont" inputType="text"
+    						style="height:20px;" width="350" textAlign="left">
+    					</w2:column>
+    				</w2:row>
+    				<w2:row id="row7" style="">
+    					<w2:column blockSelect="false" class="th h60"
+    						displayMode="label" id="column42" inputType="text"
+    						style="height:20px" value="요청의견" width="70">
+    					</w2:column>
+    					<w2:column blockSelect="false" colSpan="5"
+    						displayMode="label" id="sJudgRqstMatt" inputType="text"
+    						style="height:20px;" width="350" textAlign="left">
+    					</w2:column>
+    				</w2:row>
+    			</w2:gBody>
+    		</w2:gridView>
+    		<xf:switch id="switch_152" style=" ">
+    			<xf:case id="Default_153" style=" "></xf:case>
+    		</xf:switch>
+    		<w2:anchor class="btn_search" disabled=""
+    			ev:onclick="scwin.lfn_Search_Async" id="btn_search" outerDiv="false"
+    			style="top:34px;" tabIndex="7">
+    			<xf:label><![CDATA[조회]]></xf:label>
+    		</w2:anchor>
+
+    	</xf:group>
+    	<w2:wframe class="common_bu_area" id=""
+    		src="/cm/common/wf_titleFav.xml" style="z-index: 1;"
+    		initScript="scwin.wfTitleFavInit();">
+    	</w2:wframe>
+
+
+    	
+    </body>
+</html>

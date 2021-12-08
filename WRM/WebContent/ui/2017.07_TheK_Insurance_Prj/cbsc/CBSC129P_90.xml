@@ -1,0 +1,1629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+  <head>
+		<!-- 
+	       ###################################################
+	        파일명 : CBSC129P.xml
+	        프로그램명 : 피보험자고지사항[B230_Pop]
+	        설 명 :  피보험자고지사항[B230_Pop]
+	        작성자 : 진태만
+	        작성일 : 2017.10.09
+	
+	        수정일자            수정자                  수정내용
+	       ==================================================
+	      피보험자고지사항[B230_Pop]    		진태만      				최초작성
+	       ###################################################
+	    -->
+		<w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>sReplType
+            </xf:instance>
+            <w2:dataCollection>
+            	 <!-- 고지사항 정보 Ds(Ds_LTIDA07) -->
+			       	<w2:dataList id="Ds_LTIDA07" baseNode="list" aveRemovedData="true" repeatNode="map">
+	            		<w2:columnInfo>
+							<w2:column id="sRqstCd" name="질의코드" dataType="text"/>
+							<w2:column id="sRqstFlagCd" name="질의구분코드(:1질의, 2:항목)" dataType="text"/>
+							<w2:column id="sInptType" name="입력유형( 0:해당무, 1:개별항목, 2:고정길이, 3:문자열)" dataType="text"/>
+							<w2:column id="sReplType" name="답변유형(1:여부, 2:문자열, 4:코드, 3:숫자: 3일경우만 답변 숫자값에 넘김) " dataType="text"/>
+							<w2:column id="nReplNumValue" name="답변숫자값" dataType="text"/>
+							<w2:column id="sReplChrValue" name="답변문자값" dataType="text"/>
+							<w2:column id="sPlanNo" name="설계번호" dataType="text"/>
+	            			<w2:column id="nCrChngNo" name="계약변경번호" dataType="text"/>
+	            			 <w2:column id="nPsnPrprtGroupSeqno" name="인물단체일련번호" dataType="text"/>
+	            			<w2:column id="sMdfcDate" name="name1" dataType="text"/>
+	            			<w2:column id="sInptDate" name="name2" dataType="text"/>
+	            			<w2:column id="sInptHms" name="name3" dataType="text"/>
+	            			<w2:column id="sMdfcHms" name="name4" dataType="text"/>	            		 
+	            			<w2:column id="sRqstCont" name="name6" dataType="text"/>
+	            			<w2:column id="sPsnPrprtGroupFlgcd" name="name7" dataType="text"/>
+							<w2:column id="sInptDler" name="name21" dataType="text"/>
+	            			<w2:column id="sInptDlerIP" name="name8" dataType="text"/>	    
+							<w2:column id="sMdfcDler" name="name12" dataType="text"/>							
+	            			<w2:column id="sMdfcDlerIP" name="name10" dataType="text"/>	           		  
+	            			<w2:column id="sApplStrtDate" name="name13" dataType="text"/>	            	 
+	            			<w2:column id="sApplEndDate" name="name17" dataType="text"/>   
+	            		</w2:columnInfo>
+	            	</w2:dataList> 
+	            	
+	      				<!-- 고지사항 저장 정보 Ds(Ds_LTIDA07_Save) -->
+						<w2:dataList baseNode="list" id="Ds_LTIDA07_Save" repeatNode="map">
+	            			<w2:columnInfo>
+								<w2:column dataType="text" id="nCrChngNo" name="계약변경번호" />
+								<w2:column dataType="text" id="nPsnPrprtGroupSeqno" name="인물단체일련번호" /> 
+								<w2:column dataType="text" id="nReplNumValue" name="답변숫자값" />
+								<w2:column dataType="text" id="sInptType" name="입력유형(0:해당무, 1:개별항목, 2:고정길이, 3:문자열)" />								
+								<w2:column dataType="text" id="sPlanNo" name="설계번호" />
+								<w2:column dataType="text" id="sPsnGroupFlgcd" name="sPsnGroupFlgcd" />
+								<w2:column dataType="text" id="sReplChrValue" name="답변문자값" />
+								<w2:column dataType="text" id="sReplType" name="답변유형(1:여부, 2:문자열, 4:코드, 3:숫자: 3일경우만 답변 숫자값에 넘김)" /> 
+								<w2:column dataType="text" id="sRqstCd" name="질의코드" />
+								<w2:column dataType="text" id="sRqstFlagCd" name="질의구분코드(1:질의, 2:항목)" />   
+								<w2:column dataType="text" id="sTwhvcSbcvrYn" name="이륜차 부담보 여부" />
+	            		</w2:columnInfo>
+	            	</w2:dataList>
+            	
+            	<w2:dataList baseNode="list" id="ds_0"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="code"
+            				name="code" />
+            			<w2:column dataType="text" id="name"
+            				name="name" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<code><![CDATA[1]]></code>
+            				<name><![CDATA[예]]></name>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[2]]></code>
+            				<name><![CDATA[아니오]]></name>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	
+            	<w2:dataList baseNode="list" id="Ds_Yn_1"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="CODE"
+            				name="CODE" />
+            			<w2:column dataType="text" id="TEXT1"
+            				name="TEXT1" />
+            			<w2:column dataType="text" id="TEXT2"
+            				name="TEXT2" />
+            			<w2:column dataType="text" id="TEXT3"
+            				name="TEXT3" />
+            			<w2:column dataType="text" id="TEXT4"
+            				name="TEXT4" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<CODE><![CDATA[1]]></CODE>
+            				<TEXT1><![CDATA[예]]></TEXT1>
+            				<TEXT2><![CDATA[예]]></TEXT2>
+            				<TEXT3><![CDATA[예]]></TEXT3>
+            				<TEXT4><![CDATA[예]]></TEXT4>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[0]]></CODE>
+            				<TEXT1><![CDATA[아니오]]></TEXT1>
+            				<TEXT2><![CDATA[안한다]]></TEXT2>
+            				<TEXT3><![CDATA[아니오]]></TEXT3>
+            				<TEXT4><![CDATA[아니오 (아니오 선택시 계약체결 불가)]]></TEXT4>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_Yn_2"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="CODE"
+            				name="CODE" />
+            			<w2:column dataType="text" id="TEXT1"
+            				name="TEXT1" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<CODE><![CDATA[1]]></CODE>
+            				<TEXT1><![CDATA[영업용]]></TEXT1>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2]]></CODE>
+            				<TEXT1><![CDATA[자가용]]></TEXT1>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_Yn_3"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="CODE"
+            				name="CODE" />
+            			<w2:column dataType="text" id="TEXT1"
+            				name="TEXT1" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<CODE><![CDATA[1]]></CODE>
+            				<TEXT1><![CDATA[소유]]></TEXT1>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2]]></CODE>
+            				<TEXT1><![CDATA[탑승]]></TEXT1>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList> 
+<!--            	<w2:dataList baseNode="list" id="DsWs_Warning" repeatNode="map" userData2="//*/WARNING" />-->
+            		
+    			<!--  DsWs_Warning 정보 Ds(DsWs_Warning) -->
+				<w2:dataList baseNode="list" id="DsWs_Warning" repeatNode="map">
+            			<w2:columnInfo> 
+							<w2:column dataType="text" id="timestamp" name="timestamp"/>
+							<w2:column dataType="text" id="detail" name="detail"/>
+							<w2:column dataType="text" id="level" name="level"/>
+							<w2:column dataType="text" id="msg" name="msg"/> 
+            		</w2:columnInfo>
+	      		</w2:dataList>
+
+            	<w2:dataList baseNode="list" id="DsWs_LTIDA07"
+            		repeatNode="map" userData2="//*/vector/data/LTIDA07" /> 
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        
+     	<!--// js Script include //--> 
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/> 
+		<script src="/cm/js/convertJs/NewGen_Script.js"/> 
+		<script src="/cm/js/convertJs/Marine_Script.js"/> 
+		<script src="/cm/js/convertJs/LongTerm_Script.js"/> 
+  
+        <script><![CDATA[
+ /****************************************************************************
+ * 프로그램번호   : B230_Pop
+ * 프로그램명     : 피보험자고지사항
+ * 파일명         : B230_Pop.xml
+ * 프로그램 내용  : 피보험자고지사항 등록/조회
+ * 관련 프로그램  : 
+ * 작성자         : 김경일
+ * 작성일         : 2010-10-30
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+ 
+var sStdDate = "20110805";	// B230_Div3_Pop 기준일 
+var sStdDate4 = "20120706";	// B230_Div4_Pop 기준일  
+var sRqstYnPop = "";	//고지사항 등록여부 
+var sNotcGdFlagPop = "";	// 고지상품구분(01:운전자, 02:상해, 04:질병)
+var sInrpsCdPop = "";	//피보험자코드 
+var sInrpsNamePop = "";	//피보험자명 
+var sCrtorRelnCdPop = "";	//계약자관계코드 
+var sCrtorRelnNamePop = "";	//계약자관계명 
+var sDrveFlagCdPop = "";	//피보험자 운전급수 
+var sPlanNoPop = "";	//설계번호 
+var sJobNamePop = "";	//직업 
+var sPsnGroupFlgcdPop = "";	//개인단체구분코드 
+var nPsnPrprtGroupSeqno = "";	//인물단체일련번호 
+var sSsrtDatePop = "";	//청약일자 
+var nCrChngNoPop = "0";	//변경번호 
+var sOnlySrarch = "";	//조회만 가능하게 처리 
+var sYearMonth = "";	//현재년월 
+var sCrNoPop = "";	//계약번호(변경계약처리시 사용) 
+var sDrveType = "";	//운전자일경우 "_B", 상해일경우 "_A" 
+var sDivName = "";
+var sDrveId = "";		//화면 ID
+var CrChngNo = "";
+var sCrNo = "";
+var nCrChngNo = "";
+var sAgncYn = "N";
+var sSvtYn = "";			// 저축상품여부 
+var sGdCd = "";			// 상품코드  ==> 추가: 2018.01.03, by 진태만
+var parent_Ds_LTIDA00 = "";;		// 부모창 보험 기본사항 정보 Ds Set 
+var parent_Ds_Pibo = "";				// 부모창 피보험자 정보 Ds Set 
+
+//---------------------------------------------------------------------------
+// function 명 : B230_OnLoadCompleted
+// 내용        : 화면로딩시 메인으로부터 파라메터값 담음
+//---------------------------------------------------------------------------
+scwin.init = function() {
+
+	//console.log("[/CBSC129P.xml] [init()] ==> [폼 로딩] [TEST_01]" );
+	
+	var pro = Promise.resolve();
+	window.top.util.winTopShowModalChk = "T";
+	util.winTopShowModal();
+
+	pro = pro.then(function(rv) {
+		return util.winTopShowModalPromise();
+	});
+
+	pro = pro.then(function(rv) {
+	//	 init 부분 함수 입력하는곳  // =================================================>
+ 	
+		var indata = $w.getParameter("param");
+		var inJSON = JSON.parse(indata); 	// 부모창에서 받아온 값( 예) inJSON.sMyPlan)
+		
+		if (!util.isNull(inJSON.sPlanNo)) 	sPlanNoPop = inJSON.sPlanNo;	 // 설계번호
+		if (!util.isNull(inJSON.sCrNo)) 	sCrNoPop = inJSON.sCrNo;	//  계약번호
+		if (!util.isNull(inJSON.sPsnGroupFlgcd)) 	sPsnGroupFlgcdPop = inJSON.sPsnGroupFlgcd;	 // 개인단체구분코드
+		if (!util.isNull(inJSON.sRqstYn)) 	sRqstYnPop = inJSON.sRqstYn;	 // 고지사항 등록여부 
+		if (!util.isNull(inJSON.sNotcGdFlag)) 	sNotcGdFlagPop = inJSON.sNotcGdFlag;	 // 고지상품구분(01:운전자, 02:상해, 04:질병)
+		if (!util.isNull(inJSON.sInrpsCd)) 	sInrpsCdPop = inJSON.sInrpsCd;		// 계약자/피보험자코드(주민번호)
+		if (!util.isNull(inJSON.sInrpsName)) 	sInrpsNamePop = inJSON.sInrpsName;	// 계약자/피보험자 성명  
+		if (!util.isNull(inJSON.nPsnGroupSeqno)) 	nPsnPrprtGroupSeqno = inJSON.nPsnGroupSeqno;	// 인물단체일련번호
+		if (!util.isNull(inJSON.sSsrtDate)) 	sSsrtDatePop = inJSON.sSsrtDate;	// 청약일자
+		if (!util.isNull(inJSON.sDrveFlagCd)) 	sDrveFlagCdPop = inJSON.sDrveFlagCd;	// 청약일자
+		if (!util.isNull(inJSON.nCrChngNo)) 	nCrChngNoPop = inJSON.nCrChngNo;	//  계약변경번호
+		if (!util.isNull(inJSON.sCrtorRelnName)) 	sCrtorRelnNamePop = inJSON.sCrtorRelnName;	// 계약자관계명
+		if (!util.isNull(inJSON.sOnlySrarch)) 	sOnlySrarch = inJSON.sOnlySrarch;	//조회 전용여부 
+		if (!util.isNull(inJSON.sGdCd)) 	sGdCd = inJSON.sGdCd;		// 상품코드 ==> 추가[상품코드]: 2018.01.03, by 진태만
+	 	//console.log("[CBSC129P.xml] [init()] ==> [폼 로딩] ==> [설계번호]"+ sPlanNoPop +"[상품코드]"+ sGdCd );
+		
+		var pObj = wprom.getParamObject(); 
+		parent_Ds_LTIDA00 = pObj.Ds_LTIDA00;	// 부모창 피보험자 정보 Ds Set 
+		parent_Ds_Pibo = pObj.Ds_Pibo;	// 부모창 피보험자 정보 Ds Set  
+		//console.log("[CBSC129P.xml] [init()] ==> [폼 로딩] ==> [parent_Ds_Pibo_갯수_01]"+ parent_Ds_Pibo.getRowCount() +"[parent_Ds_Pibo]"+ WebSquare.xml.serialize(parent_Ds_Pibo.getAllXML()) );    	
+		//console.log("[CBSC129P.xml] [init()] ==> [폼 로딩] ==> [parent_Ds_Pibo_갯수_01]"+ parent_Ds_Pibo.getRowCount() );    	
+		
+		sYearMonth = WebSquare.date.getCurrentServerDate("yyyyMM"); 		// global 현재일자
+	  	
+	    //대리점인지 여부(30:대리점,33:사용인,35:TM사용인)
+	    if (util.getGdsValue("gUserDuty") == "30" || util.getGdsValue("gUserDuty") == "33" || util.getGdsValue("gUserDuty") == "35") {}
+	
+	    //대리점인지 여부(30:대리점,33:사용인,35:TM사용인)
+	    if (sAgncYn == "Y") {
+	       // gfn_obj_convertMask(medt_sInrpsCd, sInrpsCdPop, "######-#******");
+	    } else {
+	        medt_sInrpsCd.setValue(sInrpsCdPop); //주피 피보험자 코드
+	    }
+	    edt_sInrpsName.setValue(sInrpsNamePop); //피보험자명
+	    edt_sInrpsFlagName.setValue(sCrtorRelnNamePop); //계약자관계명
+	     
+	    if (gds.gProdYN != "Y") {	  //운전자보험일경우
+	        sStdDate = "20110804";			// B230_Div3_Pop 기준일 
+	    }
+		//---------------------------------------------------------------------------------------------------------------------------------------------->
+	     
+	//	sNotcGdFlagPop = "01";	// 1. 운전자고지사항[B230_Div1_Pop] (/CBSC129P.xml, ssr_sst::B230_Div1_Pop.xml)  // TEST @@@ ===> 고지상품구분(01:운전자, 02:상해, 04:질병)
+	//	sSsrtDatePop = "20161201";		// 청약일자 
+	//	sStdDate = "20171026";		// B230_Div3_Pop 기준일 
+	//	sStdDate4 = "20120706";	// B230_Div4_Pop 기준일
+	 
+	// sNotcGdFlagPop = "";	// 2. 상해고지사항[B230_Div2_Pop] (/CBSC167S.xml, ssr_sst::B230_Div2_Pop.xml)  // TEST @@@ ===>
+	 	 
+	//	 sNotcGdFlagPop = "01";	// 3. 운전자고지사항[B230_Div3_Pop] (/CBSC168S.xml, ssr_sst::B230_Div3_Pop.xml)   // TEST @@@ ===>
+	//	sSsrtDatePop = "20161201";		// 청약일자 
+	//	sStdDate = "20161001";		// B230_Div3_Pop 기준일 
+	//	sStdDate4 = "20171026";	// B230_Div4_Pop 기준일
+	 
+	//	sNotcGdFlagPop = "01";	// 4. 운전자고지사항[B230_Div4_Pop] (/CBSC169S.xml, ssr_sst::B230_Div4_Pop.xml)   // TEST @@@ ===>
+	//	sSsrtDatePop = "20161201";		// 청약일자 
+	//	sStdDate = "20151201";		// B230_Div3_Pop 기준일 
+	//	sStdDate4 = "20151201";	// B230_Div4_Pop 
+	  
+		// sNotcGdFlagPop = "04";	// 5. 질병고지사항[B230_Div5_Pop] (/CBSC170S.xml, ssr_sst::B230_Div5_Pop.xml)   // TEST @@@ ===>
+	 
+	 	// sNotcGdFlagPop = "05";	// 6. 질병2(하얀미소) 고지사항[B230_Div6_Pop] (/CBSC171S.xml, ssr_sst::B230_Div6_Pop.xml)    // TEST @@@ ===>
+	  
+	 	// sNotcGdFlagPop = "06";	// 7. 질병2(가족사랑)[B230_Div7_Pop] (/CBSC172S.xml, ssr_sst::B230_Div7_Pop.xml)  // TEST @@@ ===> 
+	 
+		// sNotcGdFlagPop = "07";	// 8. 질병고지사항(11대질병)[B230_Div8_Pop] (/CBSC173S.xml, ssr_sst::B230_Div8_Pop.xml)   // TEST @@@ ===> 
+	 //---------------------------------------------------------------------------------------------------------------------------------------------->
+	  
+	  	if(sSsrtDatePop < sStdDate && (sNotcGdFlagPop == "01" || sNotcGdFlagPop == "02" )) {		// 고지상품구분(01:운전자, 02:상해, 04:질병)
+			div1.setSrc("/ui/cbsc/CBSC166S.xml");		// 1. 운전자고지사항[B230_Div1_Pop] (/CBSC166S.xml, ssr_sst::B230_Div1_Pop.xml) 
+			sDrveType = "_B";
+			sDivName = "Div1";
+			sDrveId = "CBSC166S";	//화면 ID
+			
+		}else if(sSsrtDatePop < sStdDate4 && (sNotcGdFlagPop == "01" || sNotcGdFlagPop == "02" )){	
+			div1.setSrc("/ui/cbsc/CBSC168S.xml");		//3. 운전자고지사항[B230_Div3_Pop] (/CBSC168S.xml, ssr_sst::B230_Div3_Pop.xml) 
+			sDrveType = "_B";
+			sDivName = "Div3";
+			sDrveId = "CBSC168S";	//화면 ID
+					
+		}else if(sNotcGdFlagPop == "01" ||sNotcGdFlagPop == "02" ){	
+			div1.setSrc("/ui/cbsc/CBSC169S.xml");		// 4. 운전자고지사항[B230_Div4_Pop] (/CBSC169S.xml, ssr_sst::B230_Div4_Pop.xml) 
+			sDrveType = "_B";
+			sDrveId = "CBSC169S";	//화면 ID
+	 
+		}else if(sNotcGdFlagPop == "04"){		
+			div1.setSrc("/ui/cbsc/CBSC170S.xml");		// 5. 질병고지사항[B230_Div5_Pop] (/CBSC170S.xml, ssr_sst::B230_Div5_Pop.xml) 
+			sDrveType = "_A";
+			sDivName = "Div5";
+			sDrveId = "CBSC170S";	//화면 ID
+			
+		}else if(sNotcGdFlagPop == "05" ){  //하얀미소건강보험 : 현재 1~18번 문항 사용  --> 변경 1~9-1번 문항 사용		
+			div1.setSrc("/ui/cbsc/CBSC171S.xml");		// 6. 질병2(하얀미소) 고지사항[B230_Div6_Pop] (/CBSC171S.xml, ssr_sst::B230_Div6_Pop.xml) 
+			sDrveType = "_A";
+			sDivName = "Div5"; 
+			sDrveId = "CBSC171S";	//화면 ID
+	 	 
+		}else if(sNotcGdFlagPop == "06"){  	 
+			div1.setSrc("/ui/cbsc/CBSC172S.xml");		// 7. 질병2(가족사랑)[B230_Div7_Pop] (/CBSC172S.xml, ssr_sst::B230_Div7_Pop.xml) 
+			sDrveType = "_A";
+			sDivName = "Div5";		
+			sDrveId = "CBSC172S";	//화면 ID
+			//console.log("[/CBSC129P.xml] [init()] ==> [폼 로딩] [7. 질병2(가족사랑)] [sNotcGdFlagPop]"+ sNotcGdFlagPop );	
+			
+		}else if(sNotcGdFlagPop == "07"){ //11대질병		 
+			div1.setSrc("/ui/cbsc/CBSC173S.xml");		// 8. 질병고지사항(11대질병)[B230_Div8_Pop] (/CBSC173S.xml, ssr_sst::B230_Div8_Pop.xml) 
+			sDrveType = "_A";
+			sDivName = "Div5";
+			sDrveId = "CBSC173S";	//화면 ID
+			
+		}else{	
+			div1.setSrc("/ui/cbsc/CBSC167S.xml");		// 2. 상해고지사항[B230_Div2_Pop] (/CBSC167S.xml, ssr_sst::B230_Div2_Pop.xml) 
+			sDrveType = "_A";
+			sDivName = "Div2"; 
+			sDrveId = "CBSC167S";	//화면 ID
+		}
+		console.log("[/CBSC129P.xml] [init()] ==> [폼 로딩] [TEST_end] [설계번호]"+ sPlanNoPop +"[고지상품구분]"+ sNotcGdFlagPop +"[div1.getSrc()]"+ div1.getSrc() +"[조회 전용여부]"+ sOnlySrarch +"[청약일자]"+ sSsrtDatePop +"[B230_Div4_Pop 기준일]"+ sStdDate4 +"[B230_Div3_Pop 기준일]"+ sStdDate );	
+	  
+		return ;		// init 함수를 종료하고자 할때 사용	 // =================================================> 
+	});
+
+	pro = pro.then(function(rv) {  	 
+		util.winTopHideModal();
+	});
+ 
+	return pro;	 
+ };	
+ 
+ //---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 조회 버튼 클릭 이벤트 처리
+//---------------------------------------------------------------------------
+scwin.lfn_Search = function() {
+	//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [TEST_01]" );  
+	
+	 util.eventAsyncCall(this, scwin.lfn_Search2, arguments);		// 비동기 방식 호출 		
+	
+ 	//scwin.lfn_Search2();  	// 동기 방식 호출 		 // TEST @@@ ===>
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search2
+// 내용        : 조회  처리
+//---------------------------------------------------------------------------
+scwin.lfn_Search2 = function() {
+	//console.log("[/CBSC129P.xml] [lfn_Search2()] ==> [조회 처리] [TEST_01]" );  
+ 
+	var MethodObj = new callService("com.inswave.longterm.ssr.sst.task.DBB230Task", "getQuestion");	// 피보험자 고지사항 조회 Obj
+	MethodObj.setId("getQuestion");	// ID 셋팅  
+	MethodObj.setParam("sPlanNo", sPlanNoPop);	// Param 셋팅(설계번호)   
+	MethodObj.setParam("sPsnGroupFlgcd", sPsnGroupFlgcdPop);	// Param 셋팅(개인단체구분코드)   
+	MethodObj.setParam("nPsnPrprtGroupSeqno", nPsnPrprtGroupSeqno);	// Param 셋팅(인물단체일련번호)   
+	MethodObj.setParam("sSsrtDate", sSsrtDatePop);	// Param 셋팅(청약일자)   	
+	MethodObj.setParam("nCrChngNo", nCrChngNoPop);	// Param 셋팅(계약변경번호)   
+	MethodObj.setParam("sCrNo", sCrNoPop);	// Param 셋팅(계약번호)   	
+	MethodObj.setUrl("/contract/CBSC129PController.do");  			// 서버단 호출 URL  
+	MethodObj.setXPath("//*/LTIDA07");					// XPath(LTIDA00) 
+	MethodObj.addXPath("//*/WARNING");		// XPath(DsWs_Warning)
+	MethodObj.setXPathDs(); 	// XPath 전체 경로 사용할 경우
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)]
+	MethodObj.setXPathDs();
+	MethodObj.send();		// 최종 전송
+	//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [01. 피보험자 고지사항 조회, 전송_완료] [TEST_91]");
+
+	//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+	
+	Ds_LTIDA07.setJSON(_tranSync.getDsJson("//*/LTIDA07"));			// 고지사항 정보 Ds 셋팅 
+	DsWs_Warning.setJSON(_tranSync.getDsJson("//*/WARNING"));  	// Warning DS 셋팅(조회 결과)    
+	//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [I/F 조회 완료] [조회 처리 완료] [Ds_LTIDA09, 갯수]"+ Ds_LTIDA07.getRowCount() );  
+	//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [Ds_LTIDA09,_갯수]"+ Ds_LTIDA07.getRowCount() +"[Ds_LTIDA07]"+ WebSquare.xml.serialize(Ds_LTIDA09.getAllXML()) );  
+	
+  	if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+ 
+ 	} else {    
+ 	
+		var objId = "";
+        var objType = "";
+        var sRqstCdTmp = "";
+        var arrList;
+        var obj;
+       	
+        scwin.lfn_ComponentSearch();		// Component 담기(sortArr2)
+       // console.log("[/CBSC129P.xml] [lfn_Search2()] ==> [조회 처리] [TEST_42]" );
+       
+        if (Ds_LTIDA07.getRowCount() > 0) {   // 조회 성공 이면
+    		//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 성공] [TEST_71]  ----------> @@@@ \n"  );
+  		 	
+            for (var i = 0; i < Ds_LTIDA07.getRowCount(); i++) {	     
+            	//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [TEST_M_01]  ===> [i_번째]"+ i +"[Ds_LTIDA09.sReplChrValue]"+ Ds_LTIDA07.getCellData(i, "sReplChrValue") );  // Ds_LTIDA07.getCellData(i, "sReplChrValue")
+             
+                if (Ds_LTIDA07.getCellData(i, "sReplChrValue").indexOf( "^") < 0) {		//^배열로 안된 경우
+             		//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [01. ^배열로 안된 경우] [i_번째]"+ i +"[Ds_LTIDA09,_갯수]"+ Ds_LTIDA07.getRowCount() );
+                		 
+                	// objId(Ds으로 만든 comp id)
+                    objId = Ds_LTIDA07.getCellData(i, "sRqstCd") + "_" + Ds_LTIDA07.getCellData(i, "sRqstFlagCd") + "_" + Ds_LTIDA07.getCellData(i, "sReplType") + "_" + Ds_LTIDA07.getCellData(i, "sInptType");
+              		//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [TEST_02] [i_번째]"+ i +"[objId]"+ objId ); 
+  
+                    obj = scwin.lfn_SearchObjID(objId);		 // Component의 객체 아이디(sortArr2)와 DB 조회 후 객체의 아이디(objId)에 같은 것이 존재 여부 확인
+               		//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [TEST_M_40] [i_번째]"+ i +"[objId(Ds으로 만든 comp id)]"+ objId +"[obj.id]"+ obj.id +"[obj.getType]"+ obj.getType );
+                    
+                    if (obj != "null") { 
+                        objId = obj.id; 
+                        objType = obj.getType;
+                  
+                        if (Ds_LTIDA07.getCellData(i, "sReplType") == "3") {		    // 답변유형이 숫자이면 ==> 답변유형(1:여부, 2:문자열, 4:코드, 3:숫자:  3일 경우만 답변 숫자값에 넘김)   
+                           if (Ds_LTIDA07.getCellData(i, "sRqstCd") == "A1501" || Ds_LTIDA07.getCellData(i, "sRqstCd") == "A1502") {		// 3.위험지역 출국(rad_A1500_1_1_0)  기간1, 2(cal_A1501_2_3_0, cal_A1502_2_3_0) 이면 
+                          		if (Ds_LTIDA07.getCellData(i, "nReplNumValue") != "0") {  	// 13.위험지역 출국(rad_A1500_1_1_0) radio 기간1, 2가 0 이 아니면
+                            		obj.Obj.setValue(Ds_LTIDA07.getCellData(i, "nReplNumValue"));  	// obj에 Ds 칼럼 담기(nReplNumValue: 답변숫자값) 	==> 예) cal_A1501_2_3_0.setValue("20171218");		// 기간1(3.위험지역 출국)는 inputCalendar 이므로 0이 아니여야 함 ==> 0이면 null 처리]
+                          		}
+                           } else {
+                           	 	obj.Obj.setValue(Ds_LTIDA07.getCellData(i, "nReplNumValue"));  	// obj에 Ds 칼럼 담기(nReplNumValue: 답변숫자값)	 ==> 예) medt_B0502_2_3_0.setValue("20");		// [건수(5. 타사보험  가입사항)]
+                           	 	//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [TEST_20_2]  [obj에 Ds 칼럼 담기(nReplNumValue: 답변숫자값) 칼럼 담기] [i_번째]"+ i +"[Obj ID]"+ obj.id +"[Obj 값]"+ obj.Obj.getValue() +"[obj.Obj.getValue()]"+ obj.Obj.getValue() );
+                            }
+                            
+                        } else {   // 답변유형이 숫자가 아니면 
+                             if(Ds_LTIDA07.getCellData(i, "sRqstCd") == "B0600" && obj.id == "medt_B0503_2_3_0") {		// 6.실손비례 보상안내이고 월보험료 이면(답변문자값 칼럼에 담기 제외) 	 // 수정: 2017.12.13, by 진태만
+			                    continue;
+			                } else {
+                 					obj.Obj.setValue(Ds_LTIDA07.getCellData(i, "sReplChrValue"));  		// obj에 Ds 칼럼 담기(nReplNumValue: 답변문자값)   ==> 예) edt_B0201_2_2_0[부위(등급)(2.기능적장애)].setValue("눈(1등급)");		// [부위(등급)(2.기능적장애)]
+			                	 //console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [TEST_30_1]  [obj에 Ds 칼럼 담기] [i_번째]"+ i +"[Obj ID]"+ obj.id +"[Obj 값]"+ obj.Obj.getValue() +"[obj.Obj.getValue()]"+ obj.Obj.getValue() );
+                            }
+                        }
+					 
+                        // 예/아니오 객체면 하위 객체를 찾아서 활성/비활성처리
+                        if (wconv.substr(Ds_LTIDA07.getCellData(i, "sRqstCd"), 4, 1) == "0") {		// 질의코드가 질의 이면
+                        	//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [TEST_42] [연관 객체 초기화 시키는 함수 호출_전] [i_번째]"+ i +"[Obj ID]"+ obj.id +"[Obj 값]"+ obj.Obj.getValue() +"[질의코드]"+ Ds_LTIDA07.getCellData(i, "sRqstCd") +"[substr.Ds_LTIDA07.sRqstCd]"+ wconv.substr(Ds_LTIDA07.getCellData(i, "sRqstCd"), 4, 1) );
+        			 
+        					div1.getWindow().lfn_RadioOnChanged.apply(div1.getWindow().WebSquare.util.getComponentById(obj.id)); 		// Sub 화면에 있는 예/아니오 선택시 아니오일 경우 연관 객체 초기화 시키는 함수 호출
+                  			//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [TEST_43] [연관 객체 초기화 시키는 함수 호출] [i_번째]"+ i ); 
+                        }
+                    }
+                    
+                } else {		// ^배열로 된 경우
+                	//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [02. ^배열로 된 경우] [i_번째]"+ i +"[Ds_LTIDA09,_갯수]"+ Ds_LTIDA07.getRowCount() +"[Ds_LTIDA09.sReplChrValue]"+ Ds_LTIDA07.getCellData(i, "sReplChrValue") );
+               
+                   	arrList = Ds_LTIDA07.getCellData(i, "sReplChrValue").split("^");    // Ds에서 받은 값을 split 처리  
+                 
+                    for (var j = 0; j < arrList.length; j++) {
+                        objId = Ds_LTIDA07.getCellData(i, "sRqstCd") + "_" + Ds_LTIDA07.getCellData(i, "sRqstFlagCd") + "_" + Ds_LTIDA07.getCellData(i, "sReplType") + "_" + Ds_LTIDA07.getCellData(i, "sInptType");
+                  		//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [TEST_52] [i_번째]"+ i +"[objId]"+  objId +"[arrList[j]]"+ arrList[j] );
+                      
+                      	if ((j + 1) < 10) {
+                            objId += "_0" + wconv.toString(j + 1); 
+                        } else {
+                            objId += "_" + wconv.toString(j + 1); 
+                        } 
+ 
+                  		obj = scwin.lfn_SearchObjID(objId);		   // Component의 객체 아이디(sortArr2)와 DB 조회 후 객체의 아이디(objId)에 같은 것이 존재 여부 확인
+                       	//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [TEST_M_80] [i_번째]"+ i +"[objId(Ds으로 만든 comp id)]"+ objId +"[obj]"+ obj +"[obj.id]"+ obj.id +"[obj.getType]"+ obj.getType);
+                         
+                        if (obj != "null") {
+                            objId = obj.id;  
+                        	objType = obj.getType; 
+                        	//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [TEST_M_81] [i_번째]"+ i +"[objId]"+ objId +"[objType]"+ objType +"[Ds에서 받은 값]"+ arrList[j] +"[질의코드]"+ Ds_LTIDA07.getCellData(i, "sRqstCd") );
+                      	     //console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [TEST_M_81] [i_번째]"+ i +"[Obj ID]"+ obj.id +"[Obj 값]"+ obj.Obj.getValue() +"[질의코드]"+ Ds_LTIDA07.getCellData(i, "sRqstCd") );
+        	
+                  			obj.Obj.setValue(arrList[j]);  // obj에 Ds 칼럼 담기  
+                        }
+                    }
+                }
+                //console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [TEST_91] [i_번째]"+ i +"[Obj ID]"+ obj.id +"[Obj 값]"+ obj.Obj.getValue() +"[질의코드]"+ Ds_LTIDA07.getCellData(i, "sRqstCd") );
+        					
+            }	// end of for()
+        }	// end of if  ==>  // 조회 성공 이면
+     
+//        var jobNameObj = scwin.lfn_SearchObjID("B0804");  //  1. 직업(응답) 
+//        if (jobNameObj.Obj.getValue().length == 0) {}  
+//        var jobNameObj = scwin.lfn_SearchObjID("A0104");	//  1. 직업(응답) 
+//        if (jobNameObj.Obj.getValue().length == 0) {}
+ 		//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [TEST_M_91] [objId]"+ objId +"[sDrveType]"+ sDrveType +"[sInrpsCdPop]"+ sInrpsCdPop +"[scwin.lfn_getSex(sInrpsCdPop)]"+ scwin.lfn_getSex(sInrpsCdPop) );
+                      	   
+        if (sDrveType == "_A" && scwin.lfn_getSex(sInrpsCdPop) == "1") {	//건강보험이고 남자일경우 항목11,12번 비활성화 
+            if (sNotcGdFlagPop != "05") {	// 05 경우가 아닌 경우 만   
+            	//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리] [건강보험이고 남자일경우 ==> 10.여성임신 질의 radio 비활성화 처리]" ); 
+        		div1.getWindow().rad_A1100_1_1_0.setDisabled(true); 	 // 10. 여성임신 질의 radio 비활성화
+            	div1.getWindow().edt_A1101_2_3_0.setDisabled(true); 	 // 10. 여성임신 임신주 input 비활성화
+//               	div1.getWindow().rad_A1100_1_1_0.enable = false;
+//               	div1.getWindow().edt_A1101_2_3_0.enable = false;
+            }
+        }
+ 
+        if (wconv.length(sOnlySrarch) > 0) {	  //조회만 가능하게 처리
+        	btn_save.setDisabled(true);	 	// 저장 버튼 비활성화
+        	//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리_완료] [TEST_62] [저장 버튼 비활성화] +"[조회 전용여부]"+ sOnlySrarch );
+        }
+        
+        if (wconv.length(sPlanNoPop) > 0) {  	// 설계번호가 존재하면(비활성 처리)  
+            if (wconv.length(parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd")) > 0) {	  // 진행상태가 00 완료 90 수납대기, 52~58 조건부 승인일 경우 ==> 화면 비활성화
+               //	console.log("[/CBSC114P.xml] [lfn_Search()] ==> [조회 처리] [TEST_63]  [비활성 처리] [진행상태]"+ parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd") );
+                
+                //if(Length(parent.parent.Ds_LTIDA00.GetColumn(0,"sPlanProgRankCd")) > 0){
+                if (parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd") == "00" || parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd") == "90" 
+                	|| (wconv.toNumber(parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd")) >= 46 && wconv.toNumber(parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd")) <= 49) 
+                	|| (wconv.toNumber(parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd")) >= 52 && wconv.toNumber(parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd")) <= 58)) {
+					//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리_완료] [TEST_71] [계약상태별 화면 비활성 처리]" );
+					btn_save.setDisabled(true); 	 // 저장 버튼 비활성화
+                   	//scwin.lfn_ComponentEnable(B230_Pop, "btn_close", false);   // 계약상태별 화면 비활성 처리
+                  	console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리_완료] [lfn_ComponentEnable()] [계약상태별 화면 비활성 처리_OK] [설계번호]"+ sPlanNoPop +"[진행상태]"+ parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd") );
+                }
+            }
+        }
+    }  // end of if
+	//console.log("[/CBSC129P.xml] [lfn_Search()] ==> [조회 처리_완료] [TEST_end] [sOnlySrarch]"+ sOnlySrarch );  
+};
+ 
+//---------------------------------------------------------------------------
+// function 명 : lfn_ComponentsSort
+// 내용        : Components 정렬
+//---------------------------------------------------------------------------
+var sortArr; //Components 정렬시킨 배열
+
+scwin.lfn_ComponentsSort = function() {  
+	//console.log("[/CBSC129P.xml] [lfn_ComponentsSort()] ==> [Components 정렬] [TEST_01]" ); 
+	//console.log("[/CBSC129P.xml] [lfn_ComponentsSort()] ==> [Components 정렬] [div1.getWindow().B230_Div1.getAllChildren()]"+ div1.getWindow().B230_Div1.getChildrenCount() );  // WS에서 처리 안 됨(문의할 것)
+ 
+    var comp;
+    var compCnt = div1.getWindow().B230_Div1.getChildrenCount();		// Components 총 수 
+ 	sortArr = []; 		// new Array(compCnt);  
+    var sortArrTmp;
+    var objIdBefore = "";
+    var objIdAfter = "";
+    var objIdTmp = "";
+    var sortRstCnt = 0;  
+	//console.log("[/CBSC129P.xml] [lfn_ComponentsSort()] ==> [Components 정렬] [TEST_03] [compCnt]"+ compCnt );
+	 
+    for (var i = 0; i < compCnt; i++) {	 //정렬할 배열 담기    
+    	comp = div1.getWindow().B230_Div1.getAllChildren()[i];		// Components 담기 
+  		//console.log("[/CBSC129P.xml] [lfn_ComponentsSort()] ==> [Components 정렬] [TEST_03] [i_번째]"+ i +"[comp]"+ comp.id +"[comp.length]"+ comp.length +"[sDrveType]"+ sDrveType );
+     	
+        if (util.isNull(comp)) {		// comp가 널 이면 다음 i번째로 진행
+        	continue;
+        }
+        if (comp.id.indexOf("Static") > -1 || comp.id.indexOf("static") > -1) {	     // static 존재하면(제외 시킴) 
+ 			//console.log("[/CBSC129P.xml] [lfn_ComponentsSort()] ==> [static 존재하면(제외 시킴)] [TEST_41] [i_번째]"+ i +"[comp]"+ comp +"[comp.id]"+ comp.id  );
+ 	  		continue;
+        }   
+        if (comp.id.indexOf("group") > -1) {	     // group 존재하면(제외 시킴) ;
+ 	  		continue;
+		}          
+		if (comp.id.indexOf("Shape") > -1) {	     // Shape 존재하면(제외 시킴)  
+ 	  		continue;
+        }         
+        if (comp.id.indexOf("wq_uuid") > -1) {	     // wq_uuid 존재하면(제외 시킴)  
+ 	  		continue;
+        }         
+        
+  		if (comp.id.indexOf(sDrveType) > 0) {  
+         	var comp2 = {}; 
+         	comp2.id = comp.id;	// Component ID
+       	 	var tmpObj = div1.getWindow().WebSquare.util.getComponentById(comp2.id); 
+       	 	comp2.getType = tmpObj.getPluginName();		// Component 타입
+       	 	comp2.value = tmpObj.getValue();					// Component value	==>  sortArr[i].Obj.getValue()
+       	 	comp2.enable = !tmpObj.getDisabled();	 		// Component disabled  Obj.getValue()
+       	 	comp2.Obj   = tmpObj;
+       		//console.log("[/CBSC129P.xml] [lfn_ComponentsSort()] ==> [Components 정렬] [TEST_12_1] [i_번째]"+ i +"[comp2.getType]"+ comp2.getType +"[comp2.value]"+ comp2.value +"[comp2.enable]"+ comp2.enable  );
+    
+            sortArr.push(comp2);	// Components 담기(sDrveType에 해당하는 것만 담기) 
+       		//console.log("[/CBSC129P.xml] [lfn_ComponentsSort()] ==> [Components 정렬] [TEST_56] [담기 성공] [i_번째]"+ i +"[comp]"+ comp +"[comp.id]"+ comp.id +"[sortCnt++]"+ sortCnt );
+        }
+	}	 // end of for()
+ 
+	for (var i = 0; i < sortArr.length - 1; i++) {	 //정렬시킴 
+        if (!util.isNull(sortArr[i].id)) { 
+            for (j = 1; j < sortArr.length; j++) { 
+                    objIdBefore = wconv.replace(wconv.substr(sortArr[j - 1].id, (sortArr[j - 1].id.indexOf("_") + 2), sortArr[j - 1].id.length), "_", ""); 
+                    objIdAfter = wconv.replace(wconv.substr(sortArr[j].id, (sortArr[j].id.indexOf("_") + 2), sortArr[j].id.length), "_", "");
+                     
+                    //숫자로 변환시 자리수가 작아지는 것들이 있어 끝에 0으로 단위를 증가해서 비교함                    
+                    if (sortArr[j - 1].id.indexOf("_", 15) < 0) {
+                        objIdBefore += "0";  			
+                    }
+                    if (sortArr[j].id.indexOf("_", 15) < 0) {
+                        objIdAfter += "0"; 				
+                    }
+                    if (wconv.toNumber(objIdBefore) > wconv.toNumber(objIdAfter)) { 
+                        objIdTmp = sortArr[j - 1];
+                        sortArr[j - 1] = sortArr[j];
+                        sortArr[j] = objIdTmp;
+                   		//console.log("[/CBSC129P.xml] [lfn_ComponentsSort()] ==> [Components 정렬_41] [sortArr[j-1]]"+ sortArr[j-1] +"[sortArr[j]]"+ sortArr[j] );
+					}
+          		//}
+          } // end of for()
+        }
+        
+    	sortRstCnt = sortRstCnt +1;
+	}	 // end of for()
+    //console.log("[/CBSC129P.xml] [lfn_ComponentsSort()] ==> [Components 정렬_완료 갯수] [sortArr.length]"+ sortArr.length ); 
+	//console.log("[/CBSC129P.xml] [lfn_ComponentsSort()] ==> [계약상태별 화면 비활성 처리] [TEST_end] [compCnt]"+ compCnt +"[sortRstCnt]"+ sortRstCnt ); 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_ComponentSearch
+// 내용        : Component 담기
+//---------------------------------------------------------------------------
+var sortArr2 = [];  
+scwin.lfn_ComponentSearch = function() {
+	//console.log("[/CBSC129P.xml] [lfn_ComponentSearch()] ==> [객체 아이디 찾기] [TEST_01]" );
+     	
+	var comp;    
+	var compCnt =  div1.getWindow().B230_Div1.getChildrenCount();		// 각 Sub 파일(/CBSC166S.xml, /CBSC167S.xml 등)에 있는 Component의 총 수  
+     
+    for (var i = 0; i < compCnt; i++) { 
+    	comp = div1.getWindow().B230_Div1.getAllChildren()[i];		// Components 담기 
+   		//console.log("[/CBSC129P.xml] [lfn_ComponentSearch()] ==> [객체 아이디 찾기] [TEST_02] [compCnt]"+ compCnt +"[i_번째]"+ i +"[comp]"+ comp +"[comp.id]"+ comp.id  );
+     	
+		//if (comp.id == "rad_B0704_2_2_2_05") alert("rad_B0704_2_2_2_05");
+      	
+    	if (util.isNull(comp)) {		// comp가 널 이면 다음 i번째로 진행
+        	continue;
+        }
+ 	  	if (comp.id.indexOf("Static") > -1 || comp.id.indexOf("static") > -1) {	     // static 존재하면(제외 시킴) 
+ 		 	continue;
+        }   
+        if (comp.id.indexOf("group") > -1) {	     // group 존재하면(제외 시킴)
+ 	  		continue;
+		}          
+		if (comp.id.indexOf("Shape") > -1) {	     // Shape 존재하면(제외 시킴)  
+ 	  		continue;
+        }         
+        if (comp.id.indexOf("wq_uuid") > -1) {	     // wq_uuid 존재하면(제외 시킴)  
+ 	  		continue;
+        }         
+ 	  	
+       	var comp2 = {};
+       	comp2.id = comp.id;	// Component ID
+   	 	var tmpObj = div1.getWindow().WebSquare.util.getComponentById(comp2.id);
+   	 	comp2.getType = tmpObj.getPluginName();		// Component 타입
+   	 	comp2.value = tmpObj.getValue();					// Component value	 ==>  sortArr[i].Obj.getValue()
+   	 	comp2.enable = !tmpObj.getDisabled();	 		// Component disabled   
+   	 	comp2.Obj   = tmpObj;
+   	 
+    	sortArr2.push(comp2);		// Components 담기
+    }
+}
+ 
+//---------------------------------------------------------------------------
+// function 명 : lfn_SearchObjID
+// 내용        : 객체의 아이디를 찾는다. ==> DB 조회 후 객체의 아이디 찾기
+//---------------------------------------------------------------------------
+scwin.lfn_SearchObjID = function(objID) {
+	//console.log("[/CBSC129P.xml] [lfn_SearchObjID()] ==> [객체 아이디 찾기] [TEST_01] [objId(Ds으로 만든 comp id)]"+ objID +"[sortArr2.length]"+ sortArr2.length );
+	
+    var comp;  
+    var sortArrTmp;
+    var objIdBefore = "";
+    var objIdAfter = "";
+    var objIdTmp = "";
+    var sortRstCnt = 0;
+  	
+	for(var i = 0; i < sortArr2.length; i++) { 		// 각 Sub 파일(/CBSC166S.xml, /CBSC167S.xml 등)에 있는 Component의 총 수
+		//console.log("[/CBSC129P.xml] [lfn_SearchObjID()] ==> [객체 아이디 찾기] [TEST_02] [sortArr2[i].id]"+ sortArr2[i].id +"[objId(Ds으로 만든 comp id)]"+ objID +"[sortArr2.length]"+ sortArr2.length );
+	
+		if(sortArr2[i].id.indexOf(objID) > 0) {		// Component의 객체 아이디와 DB 조회 후 객체의 아이디에 같은 것이 존재하면 ==> 예) medt_B0503_2_3_0, medt_B0503_2_3_0
+			obj = sortArr2[i];
+			//console.log("[/CBSC129P.xml] [lfn_SearchObjID()] ==> [객체 아이디 찾기] [TEST_41] [sortArr2[i].id]"+ sortArr2[i].id +"[objID]"+ objID +"[sortArr2.length]"+ sortArr2.length );
+			break;
+		}
+	}
+	//console.log("[/CBSC129P.xml] [lfn_SearchObjID()] ==> [객체 아이디 찾기] [TEST_end] [obj.id]"+ obj.id +"[objId(Ds으로 만든 comp id)]"+ objID ); 
+	
+    return obj;
+};
+ 
+//---------------------------------------------------------------------------
+// function 명 : lfn_Save
+// 내용        : 고지사항 저장
+//---------------------------------------------------------------------------
+scwin.lfn_Save = function(obj) { 
+
+	//console.log("[/CBSC129P.xml] [lfn_Save()] ==> [저장 처리] [TEST_01]" );	  
+	//console.log("[/CBSC129P.xml] [lfn_Save()] ==> [저장 처리] [TEST_02] [div1.getWindow().rad_A0401_2_2_2_04.getValue()]"+ div1.getWindow().rad_A0401_2_2_2_04.getValue() );   //   1. 운전여부[질의]가 오토바이 (50CC미만포함) 이면
+  
+    if (scwin.lfn_ValidationCheck()) {		//밸리데이션체크 
+  		//console.log("[/CBSC129P.xml] [lfn_Save()] ==> [저장 처리] [TEST_02] [밸리데이션체크_error]" );
+        return false;
+    } 
+	//console.log("[/CBSC129P.xml] [lfn_Save()] ==> [저장 처리] [TEST_02]" );	  
+	
+    if (scwin.lfn_ValidationCheck05()) {	  // 질병치료 상세 밸리데이션 체크
+        return false;
+    } 
+    //console.log("[/CBSC129P.xml] [lfn_Save()] ==> [저장 처리] [TEST_03]" );	  
+ 
+    if (scwin.lfn_ValidationCheck06()) {	 //타사보험사항 밸리데이션 체크 
+        return false;
+    } 
+ 
+    scwin.lfn_DataSet();	//고지사항 Ds 세팅
+ 
+    //상해보험일경 우 6~10항목을 별도로 체크한다.
+    if (sDrveType == "_A" && sDivName == "Div5") { 
+        if (!div1.getWindow().lfn_ValidationCheck(obj))
+            return false; //예외사항 체크
+   		//console.log("[/CBSC129P.xml] [lfn_Save()] ==> [저장 처리] [TEST_14]" );
+   	 
+        if (div1.getWindow().lfn_FromToCheck(div1.getWindow().cal_A1003_2_2_2_02)) {		// 치료기간1(날짜 기간 입력시 시작/종료 체크)
+         	return false;
+        }
+        //console.log("[/CBSC129P.xml] [lfn_Save()] ==> [저장 처리] [TEST_15]" );
+    
+        if (div1.getWindow().lfn_FromToCheck(div1.getWindow().cal_A1004_2_2_2_02)) {
+            return false;
+        }
+       // console.log("[/CBSC129P.xml] [lfn_Save()] ==> [저장 처리] [TEST_16]" );
+        
+        if (div1.getWindow().lfn_FromToCheck(div1.getWindow().cal_A1005_2_2_2_02)) {
+            return false;
+        }
+        if (div1.getWindow().lfn_FromToCheck(div1.getWindow().cal_A1006_2_2_2_02)) {
+            return false;
+        }
+        if (div1.getWindow().lfn_FromToCheck(div1.getWindow().cal_A1007_2_2_2_02)) {
+            return false;
+        }
+        if (div1.getWindow().lfn_FromToCheck(div1.getWindow().cal_A1008_2_2_2_02)) {
+            return false;
+        }
+        if (div1.getWindow().lfn_FromToCheck(div1.getWindow().cal_A1009_2_2_2_02)) {
+            return false;
+        }
+        if (div1.getWindow().lfn_FromToCheck(div1.getWindow().cal_A1010_2_2_2_02)) {
+            return false;
+        }
+        if (div1.getWindow().lfn_FromToCheck(div1.getWindow().cal_A1011_2_2_2_02)) {
+            return false;
+        }
+        if (div1.getWindow().lfn_FromToCheck(div1.getWindow().cal_A1012_2_2_2_02)) {
+            return false;
+        }
+  	
+  		 if (sNotcGdFlagPop != "05") {	// 05 경우가 아닌  경우 ==> 화면 ID가 6. 질병2(하얀미소) 고지사항[B230_Div6_Pop]가 아니면
+			//console.log("[/CBSC129P.xml] [lfn_Save()] ==> [저장 처리] [13.위험지역 출국 달력 체크 함수 호출]" );	  
+	        if (div1.getWindow().lfn_FromToCheck(div1.getWindow().cal_A1501_2_3_0)) {		// 13.위험지역 출국 달력( cal_A1501_2_3_0, cal_A1502_2_3) 이면  cal_A1501_2_3_0, cal_A1502_2_3_0)
+	            return false;
+	        }
+        }
+    }
+    //console.log("[/CBSC129P.xml] [lfn_Save()] ==> [저장 처리] [TEST_21]" );	  
+
+    //상해보험일경우 6~10항목을 별도로 체크한다.
+    if (sDrveType == "_B" && sDivName == "Div4") {
+        if (div1.getWindow().lfn_FromToCheck(div1.getWindow().cal_B0704_2_2_2_07)) {
+            return false;
+        }
+        if (div1.getWindow().lfn_FromToCheck(div1.getWindow().cal_B0705_2_2_2_07)) {
+            return false;
+        }
+        if (div1.getWindow().lfn_FromToCheck(div1.getWindow().cal_B0706_2_2_2_07)) {
+            return false;
+        }
+    }
+     
+    // addDataTagByHashkey 처리(입력자)
+ 	util.jSonDsCreate([{"sInptDler":""}],  "Ds_sInptDler");
+ 	$w.data["Ds_sInptDler"].setCellData(0, "sInptDler", util.getGdsValue("gUserID"));	// 입력자
+ 	
+ 	 // addDataTagByHashkey 처리(사용자 IP)
+	util.jSonDsCreate([{"sInptDlerIP":""}],  "Ds_sInptDlerIP"); 
+	$w.data["Ds_sInptDlerIP"].setCellData(0, "sInptDlerIP", util.getGdsValue("gUserIP"));		// 사용자 IP 
+	//console.log("[/CBSC129P.xml] [lfn_Save()] ==> [TEST_41] [저장_전_99] [Ds_LTIDA07_Save,_총갯수]"+ Ds_LTIDA07_Save.getTotalRow() +"[Ds_LTIDA07_Save]"+ WebSquare.xml.serialize(Ds_LTIDA07_Save.getAllXML()) ); 
+	 
+	var MethodObj = new callService("com.inswave.longterm.ssr.sst.task.DBB230Task", "setQuestion"); 	// 01. 저장 처리 
+	MethodObj.setId("setQuestion");		// ID 셋팅 
+  	MethodObj.addSingleData("sInptDler", "sInptDler", "Ds_sInptDler", "type02");		// addSingleData 셋팅(입력자)
+  	MethodObj.addSingleData("sInptDlerIP", "sInptDlerIP", "Ds_sInptDlerIP", "type02");	// addSingleData 셋팅(사용자 IP)
+	MethodObj.addVectorData("vLTIDA07", "LTIDA07", "Ds_LTIDA07_Save:A");  	// addVectorData 셋팅(고지사항 저장 정보 Ds): A(전체), I(등록), U(수정), R  
+  	MethodObj.setUrl("/contract/CBSC129PController.do");  			// 서버단 호출 URL  
+	MethodObj.setXPath("//*/WARNING");		// XPath(DsWs_Warning)
+	MethodObj.setXPathDs(); 	// XPath 전체 경로 사용할 경우
+	MethodObj.setHashTable();   	// 전문의 앞이 hashtable로 보낼 때 
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)]
+	MethodObj.send();		// 최종 전송
+	console.log("[/CBSC129P.xml] [lfn_Save()] ==> [02. 저장 처리_완료] [TEST_71]");
+ 
+	//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+	
+	DsWs_Warning.setJSON(_tranSync.getDsJson("//*/WARNING"));  		// Warning DS 셋팅(조회 결과)  
+	//console.log("[/CBSC129P.xml] [lfn_Save()] ==> [저장 처리] [DsWs_Warning.getRowCount()]"+ DsWs_Warning.getRowCount() +"[DsWs_Warning]"+ WebSquare.xml.serialize(DsWs_Warning.getAllXML()) ); 
+  
+ 	 if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+        
+    } else { 
+    	//console.log("[/CBSC129P.xml] [lfn_Save()] ==> [IF 저장 성공] [Ds_LTIDA07_Save,_총갯수]"+ Ds_LTIDA07_Save.getTotalRow()); 
+		//console.log("[/CBSC129P.xml] [lfn_Save()] ==> [TEST_90] [I/F 저장 성공] [Ds_LTIDA07_Save,_총갯수]"+ Ds_LTIDA07_Save.getTotalRow() +"[Ds_LTIDA07_Save]"+ WebSquare.xml.serialize(Ds_LTIDA07_Save.getAllXML()) ); 
+	 
+		wprom.alert("정상처리되었습니다");
+        sortArr = null;
+ 
+       if (nCrChngNoPop > "0") {		// 배서에서 넘어온 경우 처리. 
+            parent_Ds_Pibo.setCellData(wconv.findRow(parent_Ds_Pibo, "nInrpsSeqno", nPsnPrprtGroupSeqno), "sTwhvcSbcvrYn", Ds_LTIDA07_Save.getCellData(0, "sTwhvcSbcvrYn")); 
+           // trace(Ds_LTIDA07_Save.GetColumn(0,"sTwhvcSbcvrYn"));    // 이륜차 부담보 여부
+        }
+		wprom.close("Y"); 		// 팝업 창 닫기 ==> // 수정: 2017.12.19, by 진태만 
+    }
+ 
+	//console.log("[/CBSC129P.xml] [lfn_Save()] ==> [저장 처리] [TEST_end]" );	
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_DataSet
+// 내용        : 고지사항 Ds 세팅
+//---------------------------------------------------------------------------
+scwin.lfn_DataSet = function() {
+
+	//console.log("[/CBSC129P.xml] [lfn_DataSet()] ==> [고지사항 Ds 세팅] [TEST_01]" );
+	
+    var comp;
+    var arrList;
+    var sRqstCdTmp = "";
+    var sReplChrValue = "";	 // 답변문자값 
+    var cnt = 0;
+    var sTwhvcSbcvrYn = ""; 	// 이륜자동차 부담보 여부 셋팅(이륜차 자가용인경우만)
+  
+    wconv.clear(Ds_LTIDA07_Save);		// Ds Clear
+ 
+    if (sDrveType == "_A") {  //이륜자동차 부담보 여부 셋팅 
+        if (div1.getWindow().rad_A0401_2_2_2_04.getValue() == "1") {		// 1. 운전여부[질의]가 오토바이 (50CC미만포함) 이면
+            sTwhvcSbcvrYn = "Y";
+        } else {
+            sTwhvcSbcvrYn = "";
+        }
+    } else if (sDrveType == "_B") { 
+        if (div1.getWindow().rad_B0101_2_2_2_03.getValue() == "1") {		// 1. 운전여부[질의]가 오토바이 (50CC미만포함) 이면
+            sTwhvcSbcvrYn = "Y";
+        } else {
+            sTwhvcSbcvrYn = "";
+        }
+    }   
+	//console.log("[/CBSC129P.xml] [lfn_DataSet()] ==> [고지사항 Ds 세팅] [sDrveType부]"+ sDrveType +"[이륜자동차 부담보 여부]"+ sTwhvcSbcvrYn +"[sortArr.length]"+ sortArr.length );
+	
+    for (var i = 0; i < sortArr.length; i++) {
+    	 if (sortArr[i].id.length > 0) {	  
+            arrList = sortArr[i].id.split("_");    // split 처리 
+            //arrList = split(sortArr[i].id,"_",true);
+		 			 
+            if (sRqstCdTmp != arrList[1]) { 
+                if (sReplChrValue.length > 0) { 	 // 답변문자값 
+                    sReplChrValue = wconv.substr(sReplChrValue, 0, sReplChrValue.length - 1);  
+                    Ds_LTIDA07_Save.setCellData(cnt, "sReplChrValue", sReplChrValue);	 // 답변문자값 
+                    //console.log("[/CBSC129P.xml] [lfn_DataSet()] ==> [고지사항 Ds 세팅] [TEST_40] [i_번째]"+ i +"[cnt_번째]"+ cnt +"[질의코드]"+ arrList[1] +"[sReplChrValue]"+ sReplChrValue);
+	
+                    cnt++;
+                }             
+                
+                cnt = Ds_LTIDA07_Save.insertRow(0);     // 줄 추가
+                      
+                sRqstCdTmp = arrList[1];
+                // console.log("[/CBSC129P.xml] [lfn_ValidationDetailCheck()] ==> [고지사항 Ds 세팅] [i_번째]"+ i +"[i_cnt]"+ cnt +"[질의코드]]"+ arrList[1] +"[질의구분코드]"+ arrList[2] +"[답변유형]"+ arrList[3] +"[입력유형]"+ arrList[4] );  
+    	 
+                sReplChrValue = "";
+                Ds_LTIDA07_Save.setCellData(cnt, "sPlanNo", sPlanNoPop); //설계번호
+                Ds_LTIDA07_Save.setCellData(cnt, "sPsnGroupFlgcd", sPsnGroupFlgcdPop); //인물단체구분코드
+                Ds_LTIDA07_Save.setCellData(cnt, "nPsnPrprtGroupSeqno", nPsnPrprtGroupSeqno); //인물단체일련번호
+                Ds_LTIDA07_Save.setCellData(cnt, "sRqstCd", arrList[1]); //질의코드
+                Ds_LTIDA07_Save.setCellData(cnt, "sRqstFlagCd", arrList[2]); //질의구분코드
+                Ds_LTIDA07_Save.setCellData(cnt, "sReplType", arrList[3]); //답변유형
+                Ds_LTIDA07_Save.setCellData(cnt, "sInptType", arrList[4]); //입력유형
+                Ds_LTIDA07_Save.setCellData(cnt, "nCrChngNo", nCrChngNoPop); //계약변경번호
+                Ds_LTIDA07_Save.setCellData(cnt, "sTwhvcSbcvrYn", sTwhvcSbcvrYn); //이륜차 부담보 여부(서버에서 LTIDA01에서 업데이트 처리) 
+   				//console.log("[/CBSC129P.xml] [lfn_DataSet()] ==> [고지사항 Ds 세팅] [TEST_41] [i_번째]"+ i +"[cnt_번째]"+ cnt +"[질의코드]"+ arrList[1] +"[sReplChrValue]"+ sReplChrValue);
+	 		}
+
+            //질의구분코드 1:질의, 2:항목
+            //답변유형     1:여부, 2:문자열, 4:코드, 3:숫자  3일경우만 답변 숫자값에 넘
+            //입력유형     0:해당무, 1:개별항목, 2:고정길이, 3:문자열
+            if (arrList.length == 5) { 
+                if (arrList[3] == "3") {	  //3 숫자
+                    if (sortArr[i].getType  == "input") {
+                        Ds_LTIDA07_Save.setCellData(cnt, "nReplNumValue", sortArr[i].Obj.getValue()); //답변숫자값
+                    } else {
+                        Ds_LTIDA07_Save.setCellData(cnt, "nReplNumValue", sortArr[i].Obj.getValue()); //답변숫자값
+                    }
+             		//console.log("[/CBSC129P.xml] [lfn_DataSet()] ==> [고지사항 Ds 세팅] [TEST_42] [i_번째]"+ i +"[cnt_번째]"+ cnt +"[질의코드]"+ arrList[1] +"[sortArr[i].Obj.getValue()]"+ sortArr[i].Obj.getValue());
+                } else {
+                    if (sortArr[i].getType  == "radio" || sortArr[i].getType  == "combo" || sortArr[i].getType  == "calendar" || sortArr[i].getType  == "inputCalendar" || sortArr[i].getType  == "checkbox") {
+                        Ds_LTIDA07_Save.setCellData(cnt, "sReplChrValue", sortArr[i].Obj.getValue()); //답변문자값
+                    } else {
+                        //Ds_LTIDA07_Save.setCellData(cnt, "sReplChrValue", sortArr[i].Obj.getValue()); //답변문자값		
+                        Ds_LTIDA07_Save.setCellData(cnt, "sReplChrValue", sortArr[i].Obj.getValue()); //답변문자값								
+                    }
+                   //console.log("[/CBSC129P.xml] [lfn_DataSet()] ==> [고지사항 Ds 세팅] [TEST_43] [i_번째]"+ i +"[cnt_번째]"+ cnt +"[질의코드]"+ arrList[1] +"[sortArr[i].Obj.getValue()]"+ sortArr[i].Obj.getValue());
+                }
+                cnt++;  
+            
+            } else {	//질의코드가 같은 경우 답변문자별에 하나로 세팅해서 넣는다.
+                if (sortArr[i].getType  == "radio" || sortArr[i].getType  == "combo" || sortArr[i].getType  == "MaskEdit" 
+                	|| sortArr[i].getType  == "calendar" || sortArr[i].getType  == "inputCalendar" || sortArr[i].getType  == "checkbox") {
+                    if (sortArr[i].getType  == "MaskEdit") {
+                        sReplChrValue += wconv.replace(sortArr[i].Obj.getValue(), "-", "") + "^"; //답변문자값
+                    } else {
+                        sReplChrValue += sortArr[i].Obj.getValue() + "^"; //답변문자값
+                    }
+                } else {
+                    sReplChrValue += sortArr[i].Obj.getValue() + "^"; //답변문자값													
+                }
+            }
+        }
+
+        //마지막배열이 db에 들어갈때 ^로 처리되는것일경우 담아간다.
+        if (i == (sortArr.length - 1) && sReplChrValue.length > 0) {
+      		sReplChrValue = wconv.substr(sReplChrValue, 0, sReplChrValue.length - 1);
+            Ds_LTIDA07_Save.setCellData(cnt, "sReplChrValue", sReplChrValue); //답변문자값
+        	//console.log("[/CBSC129P.xml] [lfn_DataSet()] ==> [고지사항 Ds 세팅] [TEST_44] [i_번째]"+ i +"[cnt_번째]"+ cnt +"[질의코드]"+ arrList[1] +"[sReplChrValue]"+ sReplChrValue);
+	 	}
+    }
+	//	console.log("[/CBSC129P.xml] [lfn_DataSet()] ==> [TEST_90] [고지사항 Ds 세팅_성공] [Ds_LTIDA07_Save,_총갯수]"+ Ds_LTIDA07_Save.getTotalRow() +"[Ds_LTIDA07_Save]"+ WebSquare.xml.serialize(Ds_LTIDA07_Save.getAllXML()) ); 
+	 
+	//console.log("[/CBSC129P.xml] [lfn_DataSet()] ==> [TEST_91] [고지사항 Ds 세팅_성공] ] [TEST_end]" );
+};
+
+/*-----------------------------------
+// function 명 : lfn_ValidationCheck
+// 내용        : 밸리데이션체크
+-----------------------------------*/
+scwin.lfn_ValidationCheck = function() { 
+
+	//console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [V 체크] [TEST_01] [sortArr.length]"+ sortArr.length );
+	 
+    var arrList;
+    var validFlag = false;
+    var chList = ",A0200,A0300,A0400,A0500,A0600,A0700,A0800,A0900,A1000,A1V100,A1200,A1300,A1304,A1400,A1500,A2000,A2100,A2200,B0100,B0200,B0300,B0700,B0400,B0500,B0600,A0104,B0804,B0900"; //필수값 항목을 정의해둔다.
+    var chSubList = "A0200,A0300,A0400,A0500,A0600,A0900,A1000,A1100,A1200,A1300,A1304,A1400,A1500,A2000,A2100,A2200,B0100,B0200,B0300,B0700,B0400,B0500,B0600,A0104,B0804,B0900"; // 하위 필수값 항목을 정의해둔다.
+    var b0900Flag = false;
+  
+    for ( var i = 0; i < sortArr.length; i++) {  
+ 		//console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [V 체크] [TEST_03] [i_번째]"+ i );	 
+    	//console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [V 체크] [TEST_M_11] [i_번째]"+ i +"[sDrveType]"+ sDrveType +"[sortArr[i].아이디]"+ sortArr[i].id +"[sortArr[i].값]"+ sortArr[i].Obj.getValue() +"[sortArr[i].타입]"+ sortArr[i].getType );	
+    	  
+  		if (sortArr[i].id.indexOf(sDrveType) > 0) {		// 같은 Drve Type이 존재하면
+            if (sortArr[i].getType  == "radio" || sortArr[i].getType  == "checkbox" || sortArr[i].getType  == "MaskEdit") {	 // 색초기화  
+                sortArr[i].Obj.setStyle("background-color","");		// 배경색 설정 
+            } 
+   
+       		validFlag = false; 
+           	arrList = sortArr[i].id.split("_");	 // split 처리(sortArr[i].id: rad_B0100_1_1_0)
+		    
+            //필수값이 아니면 넘어간다. 
+            if (chList.indexOf(arrList[1]) < 0) { 
+                continue;
+            }
+            //console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [V 체크] [TEST_M_21] ===> @@@@@@@@ [i_번째]"+ i +"[sDrveType]"+ sDrveType +"[질의코드(arrList[1])]"+ arrList[1] +"[sortArr[i].아이디]"+ sortArr[i].id +"[sortArr[i].값]"+ sortArr[i].Obj.getValue() +"[sortArr[i].타입]"+ sortArr[i].getType );	
+          	          	 
+    		 //예/아니오 객체면 하위 객체를 찾아서 입력값체크[질의 이면]
+            if (wconv.substr(arrList[1], 4, 1) == "0") {    // 01. 질의 radio 버튼 이면  ====> 
+                if (((arrList[1] == "A1100" || arrList[1] == "A1200")) && scwin.lfn_getSex(sInrpsCdPop) == "1") {	 //피보험자가 남자일경우 임신여부는 통과
+                    continue;
+                } 
+                
+      			if (sortArr[i].enable == false) {
+                    continue;
+                }
+             
+                if (sortArr[i].getType  == "radio") { 
+                	//if(!scwin.mfn_validate_combo(sortArr[i],  "고지사항값을[TEST_42]")) {
+                    if(util.isNull(sortArr[i].Obj.getValue())) {  
+                    	wprom.alert("고지사항값을 선택하십시오.");
+                       	util.focus(sortArr[i]);  // 포커스 설정 	
+                    	sortArr[i].Obj.setStyle("background-color","yellow");		// 배경색 설정 
+                        validFlag = true;
+                        break;
+                    }
+                }
+			 
+                //운전여부가 피보험자가 비운전자일경우 아니오로 체크해야됨 
+                //운전형/영업형일경우 아니오로 하면 체크해야됨
+                //1	자가용  2 영업용  3 비운전자
+                if (((arrList[1] == "A0400" || arrList[1] == "B0100")) && sDrveFlagCdPop == "3") {
+                    if (sortArr[i].Obj.getValue() == "Y") {
+                        wprom.alert("비운전자는 운전여부를 아니오로 선택해야 됩니다."); 
+                        util.focus(sortArr[i]);  // 포커스 설정 	
+                    	sortArr[i].Obj.setStyle("background-color","yellow");		// 배경색 설정 
+                        validFlag = true;
+                        break;
+                    }
+                }
+               
+                if (((arrList[1] == "A0400" || arrList[1] == "B0100")) && ((sDrveFlagCdPop == "1" || sDrveFlagCdPop == "2"))) {
+                    if (sortArr[i].Obj.getValue() == "N") {
+                        wprom.alert("운전자는 운전여부를 예로 선택해야 됩니다.");
+                       	util.focus(sortArr[i]);  // 포커스 설정 	
+                    	sortArr[i].Obj.setStyle("background-color","yellow");		// 배경색 설정
+                        validFlag = true;
+                        break;
+                    }
+                }
+		 
+                //예외적으로 실손보상안내 예/아니요는 형식 안맞아서(하위속성없음) 제외한다.
+                if (arrList[1] == "B0600") {
+                    continue;
+                } 
+				//console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [V 체크] [TEST_46] [예로 선택] [i_번째]"+ i +"[sortArr[i].아이디]"+ sortArr[i].id +"[sortArr[i].값]"+ sortArr[i].Obj.getValue() +"[validFlag]"+ validFlag +"[질의코드(arrList[1])]"+ arrList[1] );
+                    
+                //예,아니오에서 질의 radio 버튼이 예로 선택된 경우 하위객체 체크[무조건 데이타 넣어야 함]
+                if (!validFlag && sortArr[i].Obj.getValue() == "Y") { 
+                    //A0200,A0300항목의 경우 운전자고지사항[B230_Div1_Pop] (/CBSC166S.xml)에선 하위항목이 없으므로 하위체크없이 넘어감
+                    //if((arrList[1] == "A0200" || arrList[1] == "A0300") && div1.Url == "ssr_sst::B230_Div1_Pop.xml"){ 
+                    if((arrList[1] == "A0200" || arrList[1] == "A0300") && div1.getSrc() == "/ui/cbsc/CBSC166S.xml") {
+                  		continue;
+               		}
+              		
+                    if (chSubList.indexOf(arrList[1]) > 0) {  
+                    	//console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [V 체크] [TEST_48] [예로 선택] [i_번째]"+ i +"[sortArr[i].아이디]"+ sortArr[i].id +"[sortArr[i].값]"+ sortArr[i].Obj.getValue() +"[질의코드(arrList[1])]"+ arrList[1] );
+                    
+                 		validFlag = scwin.lfn_ValidationDetailCheck(sortArr[i]);		// 하위객체 밸리데이션체크 함수 호출  
+              			//console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [V 체크] [TEST_48] [예로 선택] [i_번째]"+ i +"[validFlag]"+ validFlag );  
+                        
+                        if (validFlag) {   // validFlag이 true 이면(하위객체 V 체크에서 alert 처리됨)
+                        	//console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [V 체크] [validFlag이 true 이면(하위객체 V 체크에서 alert 처리됨)]" );
+                            break; 
+                        }
+                    }
+                }
+            
+            } else { 	// 02. 질의 radio 버튼이 아니면[답변]
+         		//console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [V 체크] [TEST_M_51] [질의 radio 버튼이 아니면] [i_번째]"+ i +"[sortArr[i].아이디]"+ sortArr[i].id +"[sortArr[i].값]"+ sortArr[i].Obj.getValue() +"[sortArr[i].타입]"+ sortArr[i].getType +"[질의코드(arrList[1])]"+ arrList[1] );
+             
+               if (sortArr[i].enable == false) {
+                    continue;
+                }
+				        	
+                if (sortArr[i].getType  == "radio" || sortArr[i].getType  == "combo" 
+                	|| sortArr[i].getType  == "calendar" || sortArr[i].getType  == "inputCalendar" || sortArr[i].getType  == "checkbox") {                        
+                   if(util.isNull(sortArr[i].Obj.getValue())) {
+                    	wprom.alert("고지사항값을 선택하십시오.");
+                    	util.focus(sortArr[i]);  // 포커스 설정 	
+                    	sortArr[i].Obj.setStyle("background-color","yellow");		// 배경색 설정 
+                        validFlag = true;
+                        break;
+                    }
+                } else if (sortArr[i].getType  == "input") {  
+         			if(util.isNull(sortArr[i].Obj.getValue())) { 
+                    	wprom.alert("고지사항값을 선택하십시오."); 	
+                    	util.focus(sortArr[i]);  // 포커스 설정
+                    	sortArr[i].Obj.setStyle("background-color","yellow");		// 배경색 설정 
+                        validFlag = true;
+                        break;
+                    } 
+                } else if (sortArr[i].getType  == "MaskEdit") {
+                	if(util.isNull(sortArr[i].Obj.getValue())) {
+                    	wprom.alert("고지사항값을 선택하십시오."); 
+						util.focus(sortArr[i]);  // 포커스 설정
+                        validFlag = true;
+                        break;
+                    }
+                }                	
+            } 	// end of if  ==> 예/아니오 객체 이면 
+        }  // end of if  ==> // 같은 Drve Type이 존재하면  
+    }  // end of for()
+    //console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [V 체크] [TEST_end]" );	
+    
+    return validFlag;
+};
+
+/*-----------------------------------
+// function 명 : lfn_ValidationDetailCheck
+// 내용        : 하위객체 밸리데이션체크
+-----------------------------------*/
+scwin.lfn_ValidationDetailCheck = function(obj) { 
+
+  	//console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [하위객체 V 체크] [TEST_M_01] [obj.id]"+ obj.id );	
+     
+    var arrList;
+    var arrListTmp;
+    var validFlag = false;
+    var valFlag = false;
+    var textFalg = false;
+    var maskFalg = false;
+    var chFlag = false; //필수값인지 체크
+	var chList = "A0101,A0201,A0202,A0203,A0301,A0302,A0303,A0501,A0502,A060101,A060102,A060110,A060111,A090101,A090102,A090110,A090111,A1101,A1301,A1302,A1401,A1501,A1502,A1503,A1504,B0201,B0202,B0203,B0301,B0302,B0303,B0502,B0503,B0704"; //하위 필수값 항목을 정의해둔다.	
+    var nochList = "B0705,B0706,A1003,A1004,A1005,A1006,A1007,A1008,A1009,A1010,A1011,A1012"; //필수에서 제외 항목
+    		    
+    var codeTmp = ""; //필수여부 체크시 임시 체크값을 담는데 사용함 
+    arrList = obj.id.split("_");	// split 처리
+     
+    for (var i = 0; i < sortArr.length; i++) {  
+    	  //console.log("[/CBSC129P.xml] [lfn_ValidationDetailCheck()] ==> [하위객체 V 체크] [TEST_03] [i_번째]"+ i +"[질의코드(arrList[1])]"+ arrList[1] +"[sDrveType]"+ sDrveType +"[sortArr[i].아이디]"+ sortArr[i].id +"[sortArr[i].값]"+ sortArr[i].Obj.getValue() +"[sortArr[i].타입]"+ sortArr[i].getType );	
+    	 
+         if (sortArr[i].id.indexOf(sDrveType) > 0) {  
+          //console.log("[/CBSC129P.xml] [lfn_ValidationDetailCheck()] ==> [하위객체 V 체크] [TEST_M_05] [i_번째]"+ i +"[질의코드(arrList[1])]"+ arrList[1] +"[sortArr[i].아이디]"+ sortArr[i].id +"[sortArr[i].값]"+ sortArr[i].Obj.getValue() +"[sortArr[i].타입]"+ sortArr[i].getType +"[sortArr[i].indexOf]"+ sortArr[i].id.indexOf(wconv.substr(arrList[1], 0, 4)) );  //  
+   	                 
+            if (sortArr[i].id.indexOf(wconv.substr(arrList[1], 0, 4)) > 0) {	   //같은 질의코드를 찾음 A0400중 4자리까지만 찾음 
+            	sortArr[i].Obj.setStyle("background-color","");		// 배경색 설정  
+                arrListTmp = sortArr[i].id.split("_");    // split 처리
+             	//console.log("[/CBSC129P.xml] [lfn_ValidationDetailCheck()] ==> [하위객체 V 체크] [TEST_07] [i_번째]"+ i +"[질의코드(arrList[1])]"+ arrList[1] +"[sDrveType]"+ sDrveType +"[sortArr[i].아이디]"+ sortArr[i].id +"[sortArr[i].값]"+ sortArr[i].Obj.getValue() +"[sortArr[i].substr]"+ wconv.substr(arrListTmp[1], 4, 1) );	
+    	                  
+                if (wconv.substr(arrListTmp[1], 4, 1) != "0") {	 //예/아니오 객체는 빼고 나머지 체크  
+              
+                    if (arrListTmp[1] != "A1304" && arrListTmp[1] != "B0703") {	 //예외적으로 실손보상안내 예/아니요는 형식 안맞아서 제외한다. 
+                        //필수값이면 값체크 아니면 여러객체중 하나라도 체크된게 있는지 확인  //질문사항6~10번까진 하위속성값을 분리해서 체크
+                 		if (arrListTmp[1] == "A0601" || arrListTmp[1] == "A0701" || arrListTmp[1] == "A0801" || arrListTmp[1] == "A0901") {
+                            codeTmp = arrListTmp[1] + arrListTmp[5];
+                        } else {
+                            codeTmp = arrListTmp[1];
+                        }
+                     
+                        if (nochList.indexOf(codeTmp) > 0) { 	 // 필수에서 제외 항목  체크
+                            continue;
+                        } 
+                  		//console.log("[/CBSC129P.xml] [lfn_ValidationDetailCheck()] ==> [하위객체 V 체크] [TEST_09] [i_번째]"+ i +"[필수값 체크_codeTmp]"+ codeTmp +"[chList]"+ chList );	
+ 						
+          				if (chList.indexOf(codeTmp) > 0) {		// 필수값이면(필수값  체크)
+                            chFlag = true; 
+                        	//console.log("[/CBSC129P.xml] [lfn_ValidationDetailCheck()] ==> [01. 필수값이면(필수값 체크)] [TEST_M_10] [i_번째]"+ i +"[sortArr[i].아이디]"+ sortArr[i].id +"[sortArr[i].값]"+ sortArr[i].Obj.getValue() +"[sortArr[i].타입]"+ sortArr[i].getType );
+                         
+                            if (sortArr[i].getType == "radio" || sortArr[i].getType  == "combo" || sortArr[i].getType  == "calendar" || sortArr[i].getType  == "inputCalendar"
+									|| sortArr[i].getType  == "checkbox" || sortArr[i].getType  == "selectbox") {     // selectbox 추가
+                            	 if(util.isNull(sortArr[i].Obj.getValue())) {  
+                                    util.focus(sortArr[i]);  // 포커스 설정 
+                                    if (sortArr[i].getType  == "radio" || sortArr[i].getType  == "checkbox") { 
+                                 		sortArr[i].Obj.setStyle("background-color", "yellow");		// 배경색 설정 
+                                       //console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [하위객체 V 체크] [배경색 설정_yellow_01]" );	
+                                    }
+                                    validFlag = true; 
+                                    break;
+                                }
+                            } else if (sortArr[i].getType  == "input") { 
+                             	if(util.isNull(sortArr[i].Obj.getValue())) {
+                    				wprom.alert("고지사항값을 선택하십시오.");
+                                //if (!mfn_validate_edit(sortArr[i], "고지사항값을[하위_TEST_22]")) { 
+                                    util.focus(sortArr[i]);  // 포커스 설정 
+                                    validFlag = true; 
+                                    sortArr[i].Obj.setStyle("background-color", "yellow");		// 배경색 설정 
+                                    //console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [하위객체 V 체크] [배경색 설정_yellow_02]" );	
+                                    break; 
+                                }
+                            } else if (sortArr[i].getType  == "MaskEdit") { 
+                            	if(util.isNull(sortArr[i].Obj.getValue())) {
+                    				wprom.alert("고지사항값을 선택하십시오.");  
+                                    util.focus(sortArr[i]);  // 포커스 설정 
+                                    validFlag = true; 
+                                    sortArr[i].Obj.setStyle("background-color", "yellow");		// 배경색 설정 
+                                    //console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [하위객체 V 체크] [배경색 설정_yellow_03]" );	
+                                    break;
+                                }
+                            }
+                            
+                        } else { 	// 필수값이 아니면(필수값  체크)
+                        	//console.log("[/CBSC129P.xml] [lfn_ValidationDetailCheck()] ==> [02. 필수값이 아니면(필수값  체크)] [TEST_20] [i_번째]"+ i +"[sortArr[i].아이디]"+ sortArr[i].id +"[sortArr[i].값]"+ sortArr[i].Obj.getValue() +"[sortArr[i].타입]"+ sortArr[i].getType );
+                   
+                            chFlag = false;  
+                            
+                          	if (nochList.indexOf(codeTmp) > 0) {	// 필수에서 제외 항목  체크
+                                continue;
+                            }
+                        
+                            if (sortArr[i].getType  == "radio" || sortArr[i].getType  == "checkbox") { 
+                               //console.log("[/CBSC129P.xml] [lfn_ValidationDetailCheck()] ==> [하위객체 V 체크] [필수값이 아니면] [TEST_20_1]  [i_번째]"+ i +"[sortArr[i].아이디]"+ sortArr[i].id +"[sortArr[i].값]"+ sortArr[i].Obj.getValue() +"[sortArr[i].타입]"+ sortArr[i].getType );
+                         
+                               if(!util.isNull(sortArr[i].Obj.getValue())) {  
+                              	 //console.log("[/CBSC129P.xml] [lfn_ValidationDetailCheck()] ==> [하위객체 V 체크] [필수값이 아니면] [TEST_20_2]  [i_번째]"+ i +"[sortArr[i].아이디]"+ sortArr[i].id +"[sortArr[i].값]"+ sortArr[i].Obj.getValue() +"[sortArr[i].타입]"+ sortArr[i].getType );
+                         
+                                   	valFlag = true;  
+                             		util.focus(sortArr[i]);  // 포커스 설정 
+                                    
+                                    if (codeTmp == "B0702") {	// 5.10대질병 이면
+                                        var sChkB0701 = false;
+                                        for (ii = 0; ii < sortArr.length; ii++) { 
+                                         	if (sortArr[ii].id.indexOf("B0701") > 0 && sortArr[ii].Obj.getValue() > 0) { 
+                                                sChkB0701 = true;
+                                                break;
+                                            }
+                                        }
+                                        if (sChkB0701 == false) {
+                                            for (ii = 0; ii < sortArr.length; ii++) { 
+                                                 if (sortArr[ii].id.indexOf("B0702") > 0) { 
+                                                    sortArr[i].Obj.setStyle("background-color", "yellow");		// 배경색 설정 
+                                                    //console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [하위객체 V 체크] [배경색 설정_yellow_04]" );	
+                                                }
+                                            }
+                                            valFlag = false;
+                                            break;
+                                        }
+                                    } else if (codeTmp == "B0403") {		// 6.취미활동 이면 
+                             			var sB0401Value = div1.getWindow().edt_B0401_2_2_0.getValue();   // (빈도: 년간/월간  회) (자격증명칭:     )
+                                        if(util.isNull(sB0401Value)) { 
+                                        	sortArr[i].Obj.setStyle("background-color", "yellow");		// 배경색 설정 
+                                           	//console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [하위객체 V 체크] [배경색 설정_yellow_05]" );	
+                                        }
+                                    }
+                                } else {
+                                   // div_step_eval(sortArr[i].id).BkColor = "yellow";  
+                                    sortArr[i].Obj.setStyle("background-color", "yellow");		// 배경색 설정 
+                                }
+                            } else if (sortArr[i].getType  == "combo" || sortArr[i].getType  == "calendar"  || sortArr[i].getType  == "inputCalendar") { 
+                               if(!util.isNull(sortArr[i].Obj.getValue())) {  
+                                    valFlag = true; 
+                                    //console.log("[/CBSC129P.xml] [lfn_ValidationDetailCheck()] ==> [하위객체 V 체크] [필수값이 아니면] [TEST_22] [i_번째]"+ i +"[sortArr[i].아이디]"+ sortArr[i].id +"[sortArr[i].값]"+ sortArr[i].Obj.getValue() +"[sortArr[i].타입]"+ sortArr[i].getType );
+                        	  		util.focus(sortArr[i]);  // 포커스 설정 
+                                }
+                            } else if (sortArr[i].getType  == "input" || sortArr[i].getType  == "checkbox") {
+                          		//console.log("[/CBSC129P.xml] [lfn_ValidationDetailCheck()] ==> [하위객체 V 체크] [필수값이 아니면] [TEST_23] [i_번째]"+ i +"[sortArr[i].아이디]"+ sortArr[i].id +"[sortArr[i].값]"+ sortArr[i].Obj.getValue() +"[sortArr[i].타입]"+ sortArr[i].getType );
+                       
+                               if(!util.isNull(sortArr[i].Obj.getValue())) {  
+                                    textFalg = true; 
+                                    util.focus(sortArr[i]);  // 포커스 설정 
+                                } else { 
+                                    sortArr[i].Obj.setStyle("background-color", "yellow");		// 배경색 설정 
+                                    //console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [하위객체 V 체크] [배경색 설정_yellow_06]" );	
+                                }
+                            } else if (sortArr[i].getType  == "MaskEdit") {
+                                if (sortArr[i].Obj.getValue().length > 0) {
+                                    maskFalg = true; 
+                                    util.focus(sortArr[i]);  // 포커스 설정 
+                                    
+                                    if (codeTmp == "B0401") {
+                                        valFlag = false;
+                                        for (ii = 0; ii < sortArr.length; ii++) { 
+                                         	if (sortArr[ii].id.indexOf("B0403") > 0) { 
+                                                sortArr[i].Obj.setStyle("background-color", "yellow");		// 배경색 설정 
+                                               	//console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [하위객체 V 체크] [배경색 설정_yellow_07]" );	
+                                                maskFalg = false;
+                                            }
+                                        }
+                                    }
+                                } else { 
+                                    sortArr[i].Obj.setStyle("background-color", "yellow");		// 배경색 설정 
+                                    //console.log("[/CBSC129P.xml] [lfn_ValidationCheck()] ==> [하위객체 V 체크] [배경색 설정_yellow_08]" );	
+                                }
+                            }
+                        }
+                    }
+                } else {}
+            }
+        }
+ 		//console.log("[/CBSC129P.xml] [lfn_ValidationDetailCheck()] ==> [하위객체 V 체크] [i_번째]"+ i +"[하위객체 V 체크] [필수값인지 체크]"+ chFlag +"[radio 체크]"+ valFlag +"[텍스트 체크]"+ textFalg +"[MaskEdit 체크]"+ maskFalg +"[sortArr[i].아이디]"+ sortArr[i].id +"[sortArr[i].값]"+ sortArr[i].Obj.getValue() +"[sortArr[i].타입]"+ sortArr[i].getType );
+   	} // end of for()
+	//console.log("[/CBSC129P.xml] [lfn_ValidationDetailCheck()] ==> [하위객체 V 체크] [필수값인지 체크_90]"+ chFlag +"[radio 체크]"+ valFlag +"[텍스트 체크]"+ textFalg +"[MaskEdit 체크]"+ maskFalg );
+   
+    //하나라도 체크된 경우/안된 경우
+    if (!chFlag && ((valFlag || textFalg || maskFalg))) {  
+        for (var i = 0; i < sortArr.length; i++) {	 //체크된경우 색깔를 빼준다. 
+            if (sortArr[i].id.indexOf(sDrveType) > 0) {                  
+                if (sortArr[i].id.indexOf(wconv.substr(arrList[1], 0, 4)) > 0) {	  //같은 질의코드를 찾음 A0400중 4자리까지만 찾음
+                    arrListTmp = sortArr[i].id.split("^");    // split 처리 
+                    
+                    if (wconv.substr(arrListTmp[1], 4, 1) != "0") {	 //예/아니오 객체는 빼고 나머지 체크 
+                        if (sortArr[i].getType  == "radio" || sortArr[i].getType  == "checkbox" || sortArr[i].getType  == "input" || sortArr[i].getType  == "MaskEdit") {
+                        	sortArr[i].Obj.setStyle("background-color", "");		// 배경색 설정 
+                        }
+                    }
+                }
+            }
+        } 
+    } else if (!chFlag && !valFlag && !textFalg && !maskFalg) {      //하나라도 체크가 안된 경우
+ 		//console.log("[/CBSC129P.xml] [lfn_ValidationDetailCheck()] ==> [하위객체 V 체크] [하나라도 체크가 안된 경우]  [필수값인지 체크_90]"+ chFlag +"[radio 체크]"+ valFlag +"[텍스트 체크]"+ textFalg +"[MaskEdit 체크]"+ maskFalg );
+   		wprom.alert("고지사항값을 입력하십시오.");
+        validFlag = true;
+    }
+	//console.log("[/CBSC129P.xml] [lfn_ValidationDetailCheck()] ==> [하위객체 V 체크] [TEST_end]"+ validFlag );	
+    
+    return validFlag;
+};
+
+/*-----------------------------------
+// function 명 : lfn_ValidationCheck05
+// 내용        : 질병치료 상세 밸리데이션 체크
+-----------------------------------*/
+scwin.lfn_ValidationCheck05 = function(obj) {
+	//console.log("[/CBSC129P.xml] [lfn_ValidationCheck05()] ==> [질병치료 상세 V 체크] [TEST_01] [sortArr.length]"+ sortArr.length );	
+	
+    var arrList;
+    var validFlag = false;
+    var validCharFlag = false;
+    var chList = ",A1003,A1004,A1005,A1006,A1007,A1008,A1009,A1010,A1011,A1012,B0704,B0705,B0706"; // 체크 입력 항목을 정의해둔다.
+    var radList = ",A2200,A1000,A2100,A0800,A0700,A2000,B0900,B0700"; // 상위질문에 yes가 있는 경우 체크
+    var radValidFlag = false;
+    var chCount = 0;
+    var arrListTemp = "";
+    
+    for (var k = 0; k < sortArr.length; k++) { 
+    	//console.log("[/CBSC129P.xml] [lfn_ValidationCheck05()] ==> [질병치료 상세 V 체크] [TEST_M_11] [k_번째]"+ k +"[sDrveType]"+ sDrveType +"[sortArr[k].아이디]"+ sortArr[k].id +"[sortArr[k].값]"+ sortArr[k].Obj.getValue() +"[sortArr[k].타입]"+ sortArr[k].getType );
+    	
+   		arrList = sortArr[k].id.split("_");	 	// split 처리(sortArr[i].id: rad_B0100_1_1_0)
+   		   
+        if (sortArr[k].id.indexOf(sDrveType) > 0) {		// 같은 Drve Type이 존재하면           
+              if (radList.indexOf(arrList[1]) > 0 && sortArr[k].Obj.getValue() == "Y") {	   //질병치료 상세케이스만 체크
+                radValidFlag = true; 
+                break;
+            }
+        }
+    }
+ 
+    if (radValidFlag) {
+        for (var i = 0; i < sortArr.length; i++) { 
+            if (sortArr[i].id.indexOf(sDrveType) > 0) {
+                validFlag = false; 
+                arrList = sortArr[i].id.split("_");	 // split 처리
+ 			
+ 				//console.log("[/CBSC129P.xml] [lfn_ValidationCheck05()] ==> [질병치료 상세 V 체크] [TEST_31] [k_번째]"+ k +"[arrList[1]]"+ arrList[1] +"[sortArr[k].아이디]"+ sortArr[k].id +"[sortArr[k].값]"+ sortArr[k].Obj.getValue() +"[sortArr[k].타입]"+ sortArr[k].getType );
+    	 
+               if (chList.indexOf(arrList[1]) < 0) {	//질병치료 상세케이스만 체크
+                    continue;
+                }
+				//console.log("[/CBSC129P.xml] [lfn_ValidationCheck05()] ==> [질병치료 상세 V 체크] [TEST_32] [k_번째]"+ k +"[arrList[1]]"+ arrList[1] +"[sortArr[k].아이디]"+ sortArr[k].id +"[sortArr[k].값]"+ sortArr[k].Obj.getValue() +"[sortArr[k].타입]"+ sortArr[k].getType );
+    	
+                //색초기화
+                if (sortArr[i].getType  == "radio" || sortArr[i].getType  == "input" || sortArr[i].getType  == "MaskEdit" || sortArr[i].getType  == "checkbox") {
+                   sortArr[i].Obj.setStyle("background-color", "");		// 배경색 설정 
+                }
+                if (arrList[5] == "01" && chCount == 0) 	//최초 무조건 1개는 들어 있어야 함.
+                {
+                    arrListTemp = arrList[1];
+                } 
+                if (arrList[5] == "01" && !util.isNull(sortArr[i].Obj.getValue())) {                
+                    arrListTemp = arrList[1];
+                }
+                chCount++; // 최초 무조건 1개를 체크하고 다음은 건너뜀
+           
+           		//console.log("[/CBSC129P.xml] [lfn_ValidationCheck05()] ==> [질병치료 상세 V 체크] [TEST_33] [k_번째]"+ k +"[arrList[1]"+ arrList[1] +"[arrListTemp]"+ arrListTemp +"[sortArr[k].아이디]"+ sortArr[k].id +"[sortArr[k].값]"+ sortArr[k].Obj.getValue() +"[sortArr[k].타입]"+ sortArr[k].getType );
+    	
+                if (arrList[1] == arrListTemp) {    
+                   // console.log("[/CBSC129P.xml] [lfn_ValidationCheck05()] ==> [질병치료 상세 V 체크] [TEST_35] [k_번째]"+ k +"[sortArr[i].Obj.getValue()]"+ sortArr[i].Obj.getValue() +"[sortArr[k].아이디]"+ sortArr[k].id +"[sortArr[k].값]"+ sortArr[k].Obj.getValue() +"[sortArr[k].타입]"+ sortArr[k].getType );
+  
+                    if (util.isNull(sortArr[i].Obj.getValue())) {		// value가 존재하지 않으면 ==> 노란 배경색 셋팅 
+                        sortArr[i].Obj.setStyle("background-color", "yellow");		// 배경색 설정 
+                        validFlag = true;
+                        break;
+                    }
+                }
+            }
+        }
+        
+        if (validFlag) {
+            wprom.alert("고지사항값을 입력하시오");
+            return true;
+        }
+        
+        return false;
+    }
+};
+
+/*-----------------------------------
+// function 명 : lfn_ValidationCheck06
+// 내용        : 타사보험 상세 밸리데이션 체크
+-----------------------------------*/
+scwin.lfn_ValidationCheck06 = function(obj) {
+	//console.log("[/CBSC129P.xml] [lfn_ValidationCheck06()] ==> [타사보험 상세 V 체크] [TEST_01] [sortArr.length]"+ sortArr.length );	
+	
+    var arrList2 = Array(3);
+    var arrList1;
+    var validFlag = false;
+    var chList = ",A1305,A1306,A1307"; //체크 입력 항목을 정의해둔다.
+    var radList = ",A1300"; //상위질문에 yes가 있는 경우 체크
+    var radValidFlag = false;
+    var chCount = 0;
+    var arrListTemp = "";
+    //console.log("[/CBSC129P.xml] [lfn_ValidationCheck06()] ==> [타사보험 상세 V 체크] [TEST_02] [sortArr.length]"+ sortArr.length );	
+    
+    for (var k = 0; k < sortArr.length; k++) {   
+         arrList2 = sortArr[k].id.split("_");	 // split 처리 
+		//console.log("[/CBSC129P.xml] [lfn_ValidationCheck06()] ==> [타사보험 상세 V 체크] [TEST_05] [k_번째]"+ k +"[sortArr[k].id]"+ sortArr[k].id +"[sDrveType]"+ sDrveType );	
+   
+        if (sortArr[k].id.indexOf(sDrveType) > 0) {		// 같은 Drve Type이 존재하면     
+        	//console.log("[/CBSC129P.xml] [lfn_ValidationCheck05()] ==> [타사보험 상세 V 체크] [TEST_07] [k_번째]"+ k +"[arrList2[1]]"+ arrList2[1] +"[sortArr[k].아이디]"+ sortArr[k].id +"[sortArr[k].값]"+ sortArr[k].Obj.getValue() +"[sortArr[k].타입]"+ sortArr[k].getType );
+    	  
+            if (radList.indexOf(arrList2[1]) > 0 && sortArr[k].Obj.getValue() == "Y") {	   // 타사보험 상세케이스만 체크 
+                radValidFlag = true; 
+                break;
+            }
+        }
+    }
+    if (radValidFlag) {
+        for (var i = 0; i < sortArr.length; i++) {  
+              if (sortArr[i].id.indexOf(sDrveType) > 0) {
+              //console.log("[/CBSC129P.xml] [lfn_ValidationCheck05()] ==> [타사보험 상세 V 체크] [TEST_31] [k_번째]"+ k +"[sortArr[k].아이디]"+ sortArr[k].id +"[sortArr[k].값]"+ sortArr[k].Obj.getValue() +"[sortArr[k].타입]"+ sortArr[k].getType );
+    	
+                validFlag = false; 
+                arrList1 = sortArr[k].id.split("_");	 // split 처리
+  
+                 if (chList.indexOf(arrList1[1]) < 0) {		 //타사보험 상세케이스만 체크
+                    continue;
+                }
+				//console.log("[/CBSC129P.xml] [lfn_ValidationCheck05()] ==> [타사보험 상세 V 체크] [TEST_32] [k_번째]"+ k +"[arrList1[1]]"+ arrList1[1] +"[sortArr[k].아이디]"+ sortArr[k].id +"[sortArr[k].값]"+ sortArr[k].Obj.getValue() +"[sortArr[k].타입]"+ sortArr[k].getType );
+    	
+                //색초기화
+                if (sortArr[i].getType  == "radio" || sortArr[i].getType  == "input" || sortArr[i].getType  == "MaskEdit" || sortArr[i].getType  == "checkbox") {
+                   sortArr[i].Obj.setStyle("background-color", "");		// 배경색 설정 
+                }
+                if (arrList1[5] == "01" && chCount == 0) // 최초 무조건 1개는 들어 있어야 함.
+                {
+                    arrListTemp = arrList1[1];
+                }
+                 
+                if (arrList[5] == "01" && !util.isNull(sortArr[i].Obj.getValue())) {    
+                    arrListTemp = arrList1[1];
+                }
+                chCount++; // 최초 무조건 1개를 체크하고 다음은 건너뜀
+           		//console.log("[/CBSC129P.xml] [lfn_ValidationCheck05()] ==> [타사보험 상세 V 체크] [TEST_33] [k_번째]"+ k +"[arrList1[1]"+ arrList1[1] +"[arrListTemp]"+ arrListTemp +"[sortArr[k].아이디]"+ sortArr[k].id +"[sortArr[k].값]"+ sortArr[k].Obj.getValue() +"[sortArr[k].타입]"+ sortArr[k].getType );
+    	
+                if (arrList1[1] == arrListTemp) { 
+                    //console.log("[/CBSC129P.xml] [lfn_ValidationCheck05()] ==> [타사보험 상세 V 체크] [TEST_35] [k_번째]"+ k +"[sortArr[i].Obj.getValue()]"+ sortArr[i].Obj.getValue() +"[sortArr[k].아이디]"+ sortArr[k].id +"[sortArr[k].값]"+ sortArr[k].Obj.getValue() +"[sortArr[k].타입]"+ sortArr[k].getType );
+    	 
+                    if (util.isNull(sortArr[i].Obj.getValue())) { 
+                        sortArr[i].Obj.setStyle("background-color", "yellow");		// 배경색 설정 
+                        validFlag = true;
+                        break;
+                    }
+                }
+            }
+        }
+        if (validFlag) {
+            wprom.alert("고지사항값을 입력하시오");
+            return true;
+        }
+        
+        return false;
+    }
+    
+    //console.log("[/CBSC129P.xml] [lfn_ValidationCheck06()] ==> [타사보험 상세 V 체크] [TEST_end]" );	
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_getSex
+// 내용        : 성별을 체크한다.
+//---------------------------------------------------------------------------
+scwin.lfn_getSex = function(val) {
+	//console.log("[/CBSC129P.xml] [lfn_getSex()] ==> [성별 체크] [TEST_01] [val]"+ val ); 
+	
+	if("1|3|5|7".indexOf(wconv.substr(val, 6, 1)) >= 0) {
+   // if (IndexOf("1|3|5|7", wconv.substr(val, 6, 1)) >= 0) {
+        return "1"; 
+    } else if("2|4|6|8".indexOf(wconv.substr(val, 6, 1)) >= 0) {
+        return "2";
+    } else {
+        return "";
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Close_OnClick
+// 내용        : 팝업 창 닫기
+//---------------------------------------------------------------------------
+scwin.lfn_Close_OnClick = function(e) { 
+    sortArr = null;
+    wprom.close("");
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_ComponentEnable
+// 내용        : 계약상태별 화면 비활성 처리
+//---------------------------------------------------------------------------
+scwin.lfn_ComponentEnable = function(step, exList, enable) {
+ 	
+	var comp; 
+   	var sortArr2 = []; 		// new Array(compCnt);   
+	var compCnt =  div1.getWindow().B230_Div1.getChildrenCount();		// Components 총 수  
+    var sortArrTmp;
+    var objIdBefore = "";
+    var objIdAfter = "";
+    var objIdTmp = "";
+  	var sortRstCnt = 0;
+	//console.log("[/CBSC129P.xml] [lfn_ComponentEnable()] ==> [계약상태별 화면 비활성 처리] [TEST_01] [compCnt]"+ compCnt +"[step]"+ step +"[exList]"+ exList +"[enable]"+ enable );
+    
+	for (var i = 0; i < compCnt; i++) {	
+		comp = div1.getWindow().B230_Div1.getAllChildren()[i];		// Components 담기 
+		
+		if (util.isNull(comp)) {		// comp가 널 이면 다음 i번째로 진행
+        	continue;
+        }
+        if (comp.id.indexOf("Static") > -1 || comp.id.indexOf("static") > -1) {	     // static 존재하면(제외 시킴) 
+ 			//console.log("[/CBSC129P.xml] [lfn_ComponentEnable()] ==> [static 존재하면(제외 시킴)] [TEST_41] [i_번째]"+ i +"[comp]"+ comp +"[comp.id]"+ comp.id  );
+ 	  		continue;
+        }   
+        if (comp.id.indexOf("group") > -1) {	     // group 존재하면(제외 시킴) ;
+ 	  		continue;
+		}          
+		if (comp.id.indexOf("Shape") > -1) {	     // Shape 존재하면(제외 시킴)  
+ 	  		continue;
+        }         
+        if (comp.id.indexOf("wq_uuid") > -1) {	     // wq_uuid 존재하면(제외 시킴)  
+ 	  		continue;
+        }         
+		
+		var comp2 = {}; 
+       	comp2.id = comp.id;	// Component ID 
+   	 	var tmpObj = div1.getWindow().WebSquare.util.getComponentById(comp2.id);  
+   	 	comp2.getType = tmpObj.getPluginName();		// Component 타입
+   	 	comp2.value = tmpObj.getValue();					// Component value	 ==>  sortArr[i].Obj.getValue()
+   	 	comp2.enable = !tmpObj.getDisabled();	 		// Component disabled   
+   	 	comp2.Obj   = tmpObj;  
+		//console.log("[/CBSC129P.xml] [lfn_ComponentEnable()] ==> [계약상태별 화면 비활성 처리] [TEST_02] [comp2.id]"+ comp2.id +"[comp2.getType]"+ comp2.getType ); 
+  	 
+     	if(comp2.getType == "group"|| comp2.getType =="textbox"){
+	    }else{
+            if (exList.indexOf(comp.id) < 0) {      // comp.id가 exList(btn_close)이 아니면 
+                comp2.Obj.setDisabled(!enable);  // 비활성화 처리(enable = false 이면 비활성화)
+                comp2.Obj.setReadOnly(true);		// 비 활성화 처리
+                //console.log("[/CBSC129P.xml] [lfn_ComponentEnable()] ==> [비활성 처리★★] [comp2.id]"+ comp2.id +"[comp2.getType]"+ comp2.getType +"[enable]"+  enable ); 
+            }                	
+	    }
+	}	 // end of for()
+    
+	//console.log("[/CBSC129P.xml] [lfn_ComponentEnable()] ==> [계약상태별 화면 비활성 처리] [TEST_end] [compCnt]"+ compCnt +"[sortRstCnt]"+ sortRstCnt ); 
+};
+ 
+//---------------------------------------------------------------------------
+// function 명 : B230_OnUnLoadCompleted
+// 내용        : 화면닫을시 처리
+//---------------------------------------------------------------------------
+scwin.B230_OnUnLoadCompleted = function(obj) {
+    sortArr = null;
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B230_Pop"
+        	style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;  border-color:black;  /*height:816px;*/ left:0px; top:0px;/* width:800px;"
+        	userData1="피보험자고지사항[B230_Pop]"
+        	userData2=" OnUnloadCompleted:scwin.B230_OnUnLoadCompleted;  OnLoadCompleted:scwin.B230_OnLoadCompleted; ">
+        	<DataObjects>
+        		<DataObject />
+        		<DataObject />
+        	</DataObjects>
+        	<ServiceObjects>
+        		<ServiceObject />
+        	</ServiceObjects>
+        	<xf:group arcsize="8" class="sty_area_form" id="Shape2"
+        		style="position:absolute; right:796px;    border-color:user23;  bottom:809px; height:26px;left:0px;top:55px; width:792px;"
+        		userData3="RoundRect" />
+        	<w2:textbox class="sty_lb_Basic" id="Static2" label="피보험자코드"
+        		style="position:absolute; VAlign:Middle;    height:24px;left:0px;top:55px; width:80px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static3" label="피보험자명"
+        		style="position:absolute; VAlign:Middle;    height:24px;left:261px;top:55px; width:80px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static4" label="계약자와관계"
+        		style="position:absolute; VAlign:Middle;    height:24px;left:522px;top:55px; width:96px;"
+        		tagname="" />
+        	<w2:textbox id="Static95" label="건강상태"
+        		style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:30px; width:129px;"
+        		tagname="" class="sub_pop_title02" />
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="edt_sInrpsName"
+        		style="position:absolute;   height:20px;left:368px;top:58px; width:143px;"
+        		tabIndex="13" />
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="edt_sInrpsFlagName"
+        		style="position:absolute;   height:20px;left:640px;top:58px; width:136px;"
+        		tabIndex="13" />
+        	<xf:input class="sty_ipt_form" dataType="text"
+        		disabled="true" displayFormat="######-#######"
+        		id="medt_sInrpsCd"
+        		style="position:absolute;   height:20px;left:107px;top:58px; width:143px;"
+        		tabIndex="13" />
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.lfn_Close_OnClick" id="btn_close"
+        		style="position:absolute;height:20px;ImageID:btn_Comm_Close;Transparent:TRUE;width:25px;left:743px;top:0px;"
+        		tabIndex="13" type="anchor">
+        		<xf:label><![CDATA[닫기]]></xf:label>
+        	</xf:trigger>
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.lfn_Save" id="btn_save"
+        		style="position:absolute;height:20px;ImageID:btn_Input_02;width:25px;left:692px;top:0px;"
+        		tabIndex="13" type="anchor">
+        		<xf:label><![CDATA[저장]]></xf:label>
+        	</xf:trigger>
+        	<w2:textbox id="Static5" label="피보험자 고지사항"
+        		style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; "
+        		tagname="" class="sub_pop_title01">
+        	</w2:textbox>
+
+        	<xf:trigger class="btn_Input_02"
+        		ev:onclick="scwin.btn_searchDiv1" id="Button1"
+        		style="position:absolute; display:none;  ImageID:btn_Input_02;  height:20px; left:344px; top:5px; width:54px;"
+        		tabIndex="16">
+        		<xf:label><![CDATA[운전자]]></xf:label>
+        	</xf:trigger>
+        	<xf:trigger class="btn_Input_02"
+        		ev:onclick="scwin.btn_searchDiv2" id="Button2"
+        		style="position:absolute; display:none;  ImageID:btn_Input_02;  height:20px; left:400px; top:5px; width:54px;"
+        		tabIndex="17">
+        		<xf:label><![CDATA[상해]]></xf:label>
+        	</xf:trigger>
+        	
+        </xf:group><w2:iframe id="div1" scope="true" src="" style="position:absolute; height:720px;left:0px;top:89px; width:840px;">
+        	</w2:iframe>
+    </body>
+</html>

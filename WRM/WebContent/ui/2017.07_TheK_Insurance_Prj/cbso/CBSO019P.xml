@@ -1,0 +1,3226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate></w2:buildDate>
+        <xf:model>
+            <xf:instance>
+                <data></data>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="Ds_Addr" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="dsWs_totCnt" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_DO"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column id="sMainCode" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nOrder" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sLongName" name="name3"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sShortName" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sApplyTodt" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sUserID" name="name6"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInputTime" name="name7"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCodeType" name="name8"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInputDate" name="name9"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sApplyFmdt" name="name10"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_SIGUN"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column id="sCountyName" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCityName" name="name2"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_DONG"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column id="sToNo" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sZipCode" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sFromNo" name="name3"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCountyName" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sUse" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sTownName" name="name6"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nSeqNo" name="name7"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sZipName" name="name8"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sBuildingName" name="name9"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sOldCode" name="name10"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sIsland" name="name11"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCityName" name="name12"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="" name="name13"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="util.js?postfix=15065780811243425.7192676641357:1079" name="name14"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_ZIP"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column id="sToNo" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCountyName" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sRiName" name="name3"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sTownName" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nSeqNo" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sBuildingNameSet" name="name6"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sBuildingName" name="name7"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sIsland" name="name8"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sBuildingNameSetNew" name="name9"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sZipCode" name="name10"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sFromNo" name="name11"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sDtlAddr" name="name12"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sUse" name="name13"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sZipName" name="name14"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sOldCode" name="name15"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCityName" name="name16"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_ZIP_ROAD" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_DO_New"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column id="sMainCode" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nOrder" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sLongName" name="name3"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sShortName" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sApplyTodt" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sUserID" name="name6"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInputTime" name="name7"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCodeType" name="name8"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInputDate" name="name9"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sApplyFmdt" name="name10"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_SIGUN_New"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column id="sCountyName" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sVillageInLaw" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sigunguCode" name="name3"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sidoCode" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCityName" name="name5"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_ZIP_ROAD_New"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column id="sCountyName" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sTownName" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sRoadCode" name="name3"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sRoadName" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sEupmyungdongSeqno" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCityName" name="name6"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_ZIP_ROAD_DETAIL_New" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_ZIP_ROAD_STANDARD" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_ZIP_ROAD_RESULT" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_VILLAGEINLAW" repeatNode="map"></w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection></w2:workflowCollection>
+        </xf:model>
+ <script src="/cm/js/common.js"/>
+ <script src="/cm/js/val_lib.js"/>
+ <script src="/cm/js/util.js"/>
+ <script src="/cm/js/transSub.js"/>
+ <script src="/cm/js/callService.js"/>
+ <script src="/cm/js/gds.js"/>
+ <script src="/cm/js/wconv.js"/>
+ <script src="/cm/js/convertJs/Global_Script.js"/>
+ <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+ <script src="/cm/js/convertJs/comm_Webservice.js"/>
+ <script src="/cm/js/convertJs/NewGen_Script.js"/>
+        <script><![CDATA[
+/****************************************************************************
+ * 프로그램번호   : A220_Pop
+ * 프로그램명     : 우편번호찾기 
+ * 파일명         : A220_Pop.xml
+ * 프로그램 내용  : 우편번호찾기 
+ * 관련 프로그램  : 
+ * 작성자         : 김용석 
+ * 작성일         : 2010-10-27
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+
+var sUseNzip ="";
+var pageSize = "20";
+var pageCount = "10";
+/*
+parentInfo 변수값 정의
+arg0 = DataSet
+arg1 = row
+arg2 = column 우편번호1
+arg3 = column 우편번호2
+arg4 = column 우편번호addr1
+arg5 = column 우편번호addr2
+arg6 = column 시도
+arg7 = column 시군구
+arg8 = column 읍면동
+arg9 = 포커스 이동할 컴포넌트
+arg10 = 우편번호
+arg11 = 주소
+arg12 = 우편번호타입
+arg13 = 주소관리번호
+arg14 = 주소표준순번
+arg15 = 기존 주소타입
+arg16 = 기존 주소코드
+arg17 = 기존 주소
+arg18 = 보상우편번호여부
+arg19 = 보상사고접수사번         sStaff
+arg20 = 보상사고전화번호1        sTel1
+arg21 = 보상사고전화번호2        sTel2
+arg22 = 보상사고전화번호3        sTel3
+*/
+var parentInfo;
+var args;
+var gnRow;//도로명 검색 후 상세주소를 클릭했을경우의 nRow
+var gZipcode;//구 우편번호 
+var ginputZipLabel;//우편번호 강제(5자리)
+var gZip;//만들어진 우편번호
+var gsAdrs;//만들어진 상위 입력주소
+var gMakeInputAddrLabel;//만들어진 하위 입력주소
+var sTableNm;//테이블명
+var sSquence;//테이블별 고유 일련번호(테이블 인서트 후 리턴 받는 값)
+var sAdrsType;//1:자택, 2:직장 3:기타 4:실거주지
+var gDateTime;//장애구분코드
+var gsOddTypeCode = "2";//정상(1),비정상(2):기본을 비정상으로 하고 정상일 경우 1로 세팅해 준다.
+var gsOddTempCode = "";//임시 오류 코드
+var gTblSquence;//테이블별 sequence(==>global sequence로 변경됨)
+var gAnlysStndLotNoAddr1;//리턴 결과에 사용
+var gAnlysStndLotNoAddr2;//리턴 결과에 사용
+var gAnlysStndRdNmHighAddrA;//리턴결과에서 사용하기 위해 글로벌 변수에 담는다
+var gAnlysStndRdNmUndrAddrA;//리턴결과에서 사용하기 위해 글로벌 변수에 담는다
+//메시지 띄워줄 테이블 여부
+var gMessageTableNm;// 보상변수
+//------------------------------------------
+var gClaimAcctAddrYN;// 보상우편번호여부
+var gAccidentNo;// 보상사고번호
+var gStaff;// 보상사고담당자
+var gTel1;// 보상사고연락처1
+var gTel2;// 보상사고연락처2
+var gTel3;// 보상사고연락처3
+var gLatitude;// 지도검색 위도
+var gLongitude;// 지도검색 경도
+var sScrID;// 부모화면ID
+var fv_args;
+var parentWin;
+
+//------------------------------------------
+scwin.init = function() {
+	var indata = $w.getParameter("param");//
+	try {
+		fv_args = JSON.parse(indata);//parentInfo,sTableName,sAdrsType
+		parentWin = wprom.getParamObject(); //Ds_Addr
+	} catch(e) {}
+	// open();
+	//parentWin = wprom.getOpener();
+	// Dialog()
+	//parentWin = wprom.getParent();
+	
+	//Tab0.setSelectedTabIndex( 1 );
+	//Tab0.setSelectedTabIndex( 0 );	
+    // 파라미터로 넘어온 값을 split
+    args = new Array();
+    if(!util.isNull(fv_args.parentInfo)){
+    	args = fv_args.parentInfo.split( "^");
+    }	
+    //args = split("ds_fCla01010^0^sAcdZco1^sAcdZco2^sAcdAdr1^sAdrsAdd^sAcdAdr^sAcdAdr^sAcdAdr^edAddr2^156837^서울 동작구 상도2동","^",true);
+    if (wconv.length(fv_args.sTableNm) <= 0) {
+        //	sTableNm	="CUSAA01";
+        wprom.alert("테이블명이 널입니다. 테이블명은 필수 파라미터입니다");
+    }
+    if (wconv.length(fv_args.sAdrsType) <= 0) {
+        wprom.alert("주소타입이 널입니다. 주소타입은 필수 파라미터입니다");
+    }
+
+    // 보상사고주소처리여부
+    //----------------------------------------
+    //gClaimAcctAddrYN="Y"; // TEST
+    gClaimAcctAddrYN = wconv.trim(args[18]); // 보상우편번호여부
+    gStaff = wconv.trim(args[19]); // 보상사고담당자
+    gTel1 = wconv.trim(args[20]); // 보상사고연락처1
+    gTel2 = wconv.trim(args[21]); // 보상사고연락처2
+    gTel3 = wconv.trim(args[22]); // 보상사고연락처3
+    gLatitude = wconv.trim(args[23]); // 지도검색 위도
+    gLongitude = wconv.trim(args[24]); // 지도검색 경도
+    //----------------------------------------
+
+    if (gClaimAcctAddrYN == "Y") {
+        //Tab0.tab3.Text                        = "고속도로";   // 고속도로 Text 보이기
+        //ab0_tab3.ImageID = "img_hp_del"; // 고속도로 Tab  안보이기 이미지
+        //Tab0_tab3.setValue( ""); // 고속도로 Text 안보이기
+        Tab0.hideTab( 2 );// 고속도로 Text 안보이기
+        Tab0_tab2_Rdo_Type1.setValue(  "D"); // 신규-도로명 탭 : 읍명동
+        //Tab0.Height = "692"; // 전체 탭 크기 변경
+        //Tab0.Width = "733";
+        //Tab0_tab2_Grd_ROADList.Height = "601"; // 신규-도로명 탭 : 도로명/읍면동명 크기
+        //Tab0_tab2_Grd_ROADList.Width = "233";
+        //Tab0_tab2_Grd_ROAD_DETAIL_List.Height = "601"; // 신규-도로명 탭 : 도로명주소 크기
+        //Tab0_tab2_Grd_ROAD_DETAIL_List.Width = "492";
+        btn_delete.hide(); // 주소삭제 안보이기
+        btn_new.hide(); // 새작업   안보이기 
+    } else {
+        //Tab0_tab3.ImageID = "img_hp_del"; // 고속도로 Tab  안보이기 이미지
+        Tab0.hideTab( 2 );// 고속도로 Text 안보이기
+        Tab0_tab2_Rdo_Type1.setValue( "R" ); //신규-도로명 탭 : 도로명
+        //Tab0.Height = "492"; // 전체 탭 크기 변경
+        //Tab0.Width = "733";
+        //Tab0_tab2_Grd_ROADList.Height = "401"; // 신규-도로명 탭 : 도로명/읍면동명 크기
+        //Tab0_tab2_Grd_ROADList.Width = "233";
+        //Tab0_tab2_Grd_ROAD_DETAIL_List.Height = "401"; // 신규-도로명 탭 : 도로명주소 크기
+        //Tab0_tab2_Grd_ROAD_DETAIL_List.Width = "492";
+    };
+
+
+
+    //----------------------------------------
+    //----------------------------------------------------------------------
+    //alert("fCom01030s_OnLoadCompleted_args["+args+"]["+args[10]+"]");
+    //alert("보상사고주소여부["+args[18]+"]["+gClaimAcctAddrYN+"]");  // 보상사고주소여부
+    //trace("args::::::::::::"+args);
+    //----------------------------------------------------------------------
+   
+    if (wconv.length(args[10]) > 1 && wconv.length(args[11]) > 1) {
+        wconv.clear(Ds_DO); // Dataset 초기화
+		/*
+        SOBJ_control.WSDL = gds.gWsdlCCC; // 서비스 Obj WSDC 설정
+        var MethodObj = gfn_CreateMethodObj(SOBJ_control, "com.inswave.code.task.ZipCodeTask", "getSearchAdrsNoNew", "", "");
+        gfn_SetParam(MethodObj, "sSearchType", "우편번호");
+        gfn_SetParam(MethodObj, "sSearchName", args[10]);
+        gfn_CallService(SOBJ_control, DOBJ_control, MethodObj);
+        */
+		var MethodObj = new callService("com.inswave.code.task.ZipCodeTask", "getSearchAdrsNoNew", "", "");
+		MethodObj.setId("getSearchAdrsNoNew");
+		MethodObj.setParam("sSearchType", "우편번호");
+		MethodObj.setParam("sSearchName", args[10]);		
+		MethodObj.setUrl("/common/CBSO019PController.do");
+		MethodObj.setXPath("//*/vector/data/CODAA09");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();
+		//util.interfaceKey(_tranSync.result.serviceDs);
+		//DsWs_Team.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+		util.jSonDsCreate(_tranSync.getDsJson("CODAA09"), "Ds_Addr");
+		util.setRowPosition(Ds_Addr, 0);
+        
+        if (wconv.length(Ds_Addr) > 0) {
+            Ds_DO.removeAll();
+            //util.insertColumn(Ds_DO, [["sShortName", "sShortName",  "text" ] ]);
+            var j = 0;
+            for (i = 0; i < Ds_Addr.getRowCount(); i++) {
+                j = wconv.getLastRow(Ds_DO);
+                util.appendRow(Ds_DO);
+                Ds_DO.setCellData(j + 1, "sShortName", wconv.trim(Ds_Addr.getCellData(i, "sCityName")));
+            }
+            wconv.copy(Ds_SIGUN, Ds_Addr);
+            wconv.copy(Ds_DONG, Ds_Addr);
+            wconv.copy(Ds_ZIP, Ds_Addr);
+        }
+        Tab0_tab1_mSearchZip.setValue( args[10]);
+        Tab0_tab1_edSearchAddr.setValue( Ds_ZIP.getCellData(Tab0_tab1_Grd_ZIPList.getFocusedRowIndex(), "sZipName"));
+        scwin.searchDO();
+        scwin.searchDo_Road();
+    } else {
+        scwin.searchDO();
+        scwin.searchDo_Road();
+        if (Ds_DO.getRowCount() < 1) {
+            wprom.alert("데이터가 없습니다.");
+            return;
+        }
+    }
+
+    // 검색 edit에 포커스
+    Tab0_tab1_Edt_SearchStr.focus();
+
+    //  서버시간 가져오기.
+    //transaction("getServerTime", "NewClaim::getServerTime.jsp", "", "gDs_ServerTime=output", "", "tr_callback");
+    gfn_getServerTime();
+    
+    //표준화 결과를 로딩시 보이지 않도록 한다.
+    scwin.btn_result_view_hidden();
+
+    // goo 도로명 탭이 먼저 보이게 조치 
+    Tab0.setSelectedTabIndex( 1 );
+  	
+};
+
+scwin.searchDO = function() {
+    wconv.clear(Ds_DO); // Dataset 초기화
+    /*
+    SOBJ_DO.WSDL = gds.gWsdlCCC; // 서비스 Obj WSDC 설정
+    var MethodObj = gfn_CreateMethodObj(SOBJ_DO, "com.inswave.code.task.ZipCodeTask", "getCODAA01List", "0", "0");
+    gfn_SetParam(MethodObj, "sCodeType", "10");
+    // 검색조건 확인 마침
+    gfn_CallService(SOBJ_DO, DOBJ_DO, MethodObj); //trace("DOBJ_Search::::::::::::::::::::::::::"+replace(gfn_XmlEncoder(DOBJ_DO.Contents), "><", ">\n<"));
+	*/
+	var MethodObj = new callService("com.inswave.code.task.ZipCodeTask","getCODAA01List", "0", "0");
+	MethodObj.setId("getCODAA01List");
+	MethodObj.setParam("sCodeType", "10");
+	MethodObj.setUrl("/common/CBSO019PController.do"); //
+	MethodObj.setXPath("//*/CODAA01");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	util.jSonDsCreate(_tranSync.getDsJson("CODAA01"), "Ds_DO");
+	util.setCompBindRefresh("Ds_DO");
+	util.setRowPosition(Ds_DO, 0);
+	
+    //trace(Ds_DO.SaveXML());
+};
+
+scwin.searchSiGunGu_Road = function(info) {
+    var sltSidoVal = Tab0_tab2_sSidoCode.getValue();
+    scwin.searchDo_Road("sigungu", sltSidoVal);
+};
+
+scwin.searchDo_Road = function(sGubun, sidoCode) {
+
+    //SOBJ_DO.WSDL = gds.gWsdlCCC; // 서비스 Obj WSDC 설정
+    var sidoGubun = "sido";
+    if (sGubun == "sigungu") {
+        sidoGubun = sGubun;
+    }
+    /*
+    var MethodObj = gfn_CreateMethodObj(SOBJ_DO, "com.inswave.code.task.ZipCodeTask", "getSiDo", "0", "0");
+    gfn_SetParam(MethodObj, "siDoGubun", sidoGubun);
+    gfn_SetParam(MethodObj, "siDoCode", sidoCode);
+    */
+	var MethodObj = new callService("com.inswave.code.task.ZipCodeTask", "getSiDo", "0", "0");
+	MethodObj.setId("getSiDo");
+	MethodObj.setParam("siDoGubun", sidoGubun);
+	MethodObj.setParam("siDoCode", sidoCode);
+	MethodObj.setUrl("/common/CBSO019PController.do");
+
+    if (sidoGubun == "sido") {
+        wconv.clear(Ds_DO_New); // Dataset 초기화
+        //gfn_CallService(SOBJ_DO, DOBJ_DO_New, MethodObj);
+		MethodObj.setXPath("//*/COMAB02");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();
+		//util.interfaceKey(_tranSync.result.serviceDs); //주석피룡
+		util.jSonDsCreate(_tranSync.getDsJson("COMAB02"), "Ds_DO_New");
+		//util.setCompBindRefresh("Ds_DO_New");
+		//util.setRowPosition(Ds_DO_New, 0);
+
+        //전체를 setCellData
+        //var insRow = util.insertRow(Ds_DO_New, 0);
+        /*수작업 변환 개발자 가이드(테스트 중)
+        dataList에 row를 추가하고 setCellData를 하는 경우 첫 번째 인자를 insRow로 변경해주세요.*/
+        Ds_DO_New.insertRow( 0 );
+        Ds_DO_New.setCellData(0, "sidoCode", "0000000"); //code column
+        Ds_DO_New.setCellData(0, "sCityName", "전   체"); //data column
+		Tab0_tab2_sSidoCode.setNodeSet( "data:Ds_DO_New" , "sCityName" , "sidoCode" );
+        Tab0_tab2_sSidoCode.setSelectedIndex( 0 );
+        Tab0_tab2_sSidoCode.setValue( "0000000" );
+    } else if (sidoGubun == "sigungu") {
+        wconv.clear(Ds_SIGUN_New); // Dataset 초기화
+        //gfn_CallService(SOBJ_DO, DOBJ_SIGUN_New, MethodObj);
+		MethodObj.setXPath("//*/COMAB02");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();
+		//util.interfaceKey(_tranSync.result.serviceDs);
+		util.jSonDsCreate(_tranSync.getDsJson("COMAB02"), "Ds_SIGUN_New");
+		//util.setCompBindRefresh("Ds_SIGUN_New");
+		util.setRowPosition(Ds_SIGUN_New, 0);
+
+        //전체를 setCellData
+        //var insRow = util.insertRow(Ds_SIGUN_New, 0);
+        /*수작업 변환 개발자 가이드(테스트 중)
+        dataList에 row를 추가하고 setCellData를 하는 경우 첫 번째 인자를 insRow로 변경해주세요.*/
+        Ds_SIGUN_New.insertRow( 0 );
+        Ds_SIGUN_New.setCellData(0, "sigunguCode", "0000000"); //code column
+        Ds_SIGUN_New.setCellData(0, "sCountyName", "전   체"); //data column
+		Tab0_tab2_sSigunguCode.setNodeSet( "data:Ds_SIGUN_New" , "sCountyName" , "sigunguCode" );
+        Tab0_tab2_sSigunguCode.setSelectedIndex( 0 );
+        
+    };
+
+    //trace("DOBJ_New_Search::::::::::::::::::::::::::"+replace(gfn_XmlEncoder(DOBJ_DO_New.Contents), "><", ">\n<"));
+    //trace("Ds_DO_New.SaveXML()====>"+Ds_DO_New.SaveXML());
+    //wconv.trace("Ds_SIGUN_New.SaveXML()====>" + wconv.saveXml(Ds_SIGUN_New));
+};
+//탭1 조회버튼
+
+//비동기호출 
+scwin.Btn_Search_OnClick_async = function() {
+	util.eventAsyncCall(this, scwin.Btn_Search_OnClick, arguments);
+};
+scwin.Btn_Search_OnClick = function(e) {
+    scwin.search();
+};
+
+scwin.searchInit = function() {};
+
+//**************************************************************************************************
+// 주소 검색
+//**************************************************************************************************
+
+scwin.search = function() {
+    //-------------------------------------------------------------------
+    
+    //SOBJ_control.WSDL = gds.gWsdlCCC; // 서비스 Obj WSDC 설정
+    //var MethodObj = gfn_CreateMethodObj(SOBJ_control, "com.inswave.code.task.ZipCodeTask", "getSearchAdrsNoNew", "0", "0");
+	var MethodObj = new callService("com.inswave.code.task.ZipCodeTask", "getSearchAdrsNoNew", "0", "0");
+	MethodObj.setId("getSearchAdrsNoNew");
+    
+    if (Tab0_tab1_Edt_SearchStr.getValue() != "") {
+        if (Tab0_tab1_Rdo_Type.getValue() == "sTownName") {
+            MethodObj.setParam( "sSearchType", "읍면동");
+        } else {
+            MethodObj.setParam( "sSearchType", "시구군");
+        }
+        MethodObj.setParam( "sSearchName", Tab0_tab1_Edt_SearchStr.getValue());
+    } else if (Tab0_tab1_mSearchZip.getValue() != "") {
+        MethodObj.setParam( "sSearchType", "우편번호");
+        MethodObj.setParam( "sSearchName", Tab0_tab1_mSearchZip.getValue());
+    } else {
+        wprom.alert("검색조건을 입력해 주세요!!");
+        return false;
+    }
+    // 검색조건 확인 마침
+    //gfn_CallService(SOBJ_control, DOBJ_control, MethodObj);
+	MethodObj.setUrl("/common/CBSO019PController.do");
+	MethodObj.setXPath("//*/vector/data/CODAA09");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	util.jSonDsCreate(_tranSync.getDsJson("CODAA09"), "Ds_Addr");
+	util.setCompBindRefresh("Ds_Addr");
+	util.setRowPosition(Ds_Addr, 0);
+    
+    //-------------------------------------------------------------------
+    if (Ds_Addr.getRowCount() > 0) {
+        Ds_DO.removeAll();
+        //util.insertColumn(Ds_DO, [[ "sShortName", "sShortName",   "text"      ]   ]);
+        var j = 0;
+        for (i = 0; i < Ds_Addr.getRowCount(); i++) {
+            j = wconv.getLastRow(Ds_DO);
+            //util.appendRow(Ds_DO);
+            var k = j+1;
+            Ds_DO.insertRow( k );
+            Ds_DO.setCellData(k, "sShortName", wconv.trim(Ds_Addr.getCellData(i, "sCityName")));
+        }
+        wconv.copy(Ds_SIGUN, Ds_Addr);
+        wconv.copy(Ds_DONG, Ds_Addr);
+        wconv.copy(Ds_ZIP, Ds_Addr);
+    }
+
+
+
+
+    //trace(Ds_Addr.Contents);		
+    //trace(Ds_Addr.savexml());
+    if (Ds_ZIP.getRowCount() < 1) {
+        wprom.alert("데이터가 없습니다.");
+        return;
+    }
+};
+//사용안됨 : goo
+scwin.Grd_List_OnCellDblClick = function(obj, nRow, nCell, nX, nY, nPivotIndex) { 
+    if (wconv.length(args[0]) > 0   &&  wconv.length(args[1]) > 0) {
+        // 보모창의 해당 값을 세팅
+        if (wconv.length(args[2]) > 0)
+            eval(args[0]).setCellData(args[1], args[2], wconv.left(Ds_ZIP.getCellData(Tab0_tab1_Grd_ZIPList.CurrentRow, "sZipCode"), 3));
+        if (wconv.length(args[3]) > 0)
+            eval(args[0]).setCellData(args[1], args[3], wconv.right(Ds_ZIP.getCellData(Tab0_tab1_Grd_ZIPList.CurrentRow, "sZipCode"), 3));
+        if (wconv.length(args[4]) > 0)
+            eval(args[0]).setCellData(args[1], args[4], Ds_ZIP.getCellData(Tab0_tab1_Grd_ZIPList.CurrentRow, "sZipName"));
+        if (wconv.length(args[5]) > 0) {
+            if (wconv.length(Ds_ZIP.getCellData(Tab0_tab1_Grd_ZIPList.CurrentRow, "sBuildingName")) > 0)
+                addStr = Ds_ZIP.getCellData(Tab0_tab1_Grd_ZIPList.CurrentRow, "sBuildingNameSet") + " ";
+            if (wconv.length(Ds_ZIP.getCellData(Tab0_tab1_Grd_ZIPList.CurrentRow, "sNo")) > 0)
+                addStr = eval(args[0]).GetColumn(args[1], args[5]) + Ds_ZIP.getCellData(Tab0_tab1_Grd_ZIPList.CurrentRow, "sNo") + " ";
+            eval(args[0]).setCellData(args[1], args[5], addStr);
+        }
+        if (wconv.length(args[6]) > 0)
+            eval(args[0]).setCellData(args[1], args[6], Ds_ZIP.getCellData(Tab0_tab1_Grd_ZIPList.CurrentRow, "sCityName"));
+        if (wconv.length(args[7]) > 0)
+            eval(args[0]).setCellData(args[1], args[7], Ds_ZIP.getCellData(Tab0_tab1_Grd_ZIPList.CurrentRow, "sCountyName"));
+        if (wconv.length(args[8]) > 0)
+            eval(args[0]).setCellData(args[1], args[8], Ds_ZIP.getCellData(Tab0_tab1_Grd_ZIPList.CurrentRow, "sTownName"));
+
+        // 포커스 이동
+        if (wconv.length(args[9]) > 0)
+            eval(args[9]).focus();
+    }
+    var addStr = "";
+    // 윈도를 닫는다.
+    var ret = wconv.left(Ds_Addr.getCellData(nRow, "sZipCode"), 3) + " ^" + wconv.right(Ds_Addr.getCellData(nRow, "sZipCode"), 3) + " ^" + Ds_Addr.getCellData(nRow, "sZipName") + " ^" + Ds_Addr.getCellData(nRow, "sBuildingName") + " ^" + Ds_Addr.getCellData(nRow, "sNo") + " ^" + Ds_Addr.getCellData(nRow, "sCityName") + " ^" + Ds_Addr.getCellData(nRow, "sCountyName") + " ^" + Ds_Addr.getCellData(nRow, "sTownName") + " ^0";
+    wconv.close(ret);
+};
+//닫기 버튼 
+scwin.Btn_Close_OnClick = function(obj) {
+    var ret = "";
+    wprom.close(ret);
+};
+
+scwin.fCom01030s_OnKeyDown = function(e) {
+    // 엔터인 경우 검색
+    if (e.keyCode == 13) {
+        if (Tab0.getSelectedTabIndex() == 0) {
+            scwin.search();
+        } else if (Tab0.getSelectedTabIndex() == 1) {
+            scwin.Tab0_tab2_Btn_SearchRoad_OnClick();
+        }
+    }
+};
+
+scwin.Grd_DOList_OnCellClick = function( nRow, nCell) {
+    Ds_SIGUN.removeAll();
+    Ds_DONG.removeAll();
+    Ds_ZIP.removeAll();
+    /*
+    SOBJ_SIGUN.WSDL = gds.gWsdlCCC; // 서비스 Obj WSDC 설정
+    var MethodObj = gfn_CreateMethodObj(SOBJ_SIGUN, "com.inswave.code.task.ZipCodeTask", "getAdrsbyName", "0", "0");
+    gfn_SetParam(MethodObj, "sAdrs1", Ds_DO.getCellData(nRow, "sShortName"));
+
+    // 검색조건 확인 마침
+    gfn_CallService(SOBJ_SIGUN, DOBJ_SIGUN, MethodObj);
+	*/
+	var MethodObj = new callService("com.inswave.code.task.ZipCodeTask", "getAdrsbyName", "0", "0");
+	MethodObj.setId("getAdrsbyName");
+	MethodObj.setParam("sAdrs1", Ds_DO.getCellData(nRow, "sShortName"));
+	MethodObj.setUrl("/common/CBSO019PController.do");
+	MethodObj.setXPath("//*/vector/data/CODA009");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//확인 util.interfaceKey(_tranSync.result.serviceDs); 
+	Ds_SIGUN.setJSON(_tranSync.getDsJson("CODA009"));
+
+    //trace("Grd_DOList_OnCellClick::::::::::::::"+replace(gfn_XmlEncoder(DOBJ_SIGUN.Contents), "><", ">\n<"));
+    //trace(Ds_SIGUN.SaveXML());
+
+    //클릭시 하단 표준결과를 히든한다
+    scwin.btn_result_view_hidden();
+    
+    if (Ds_SIGUN.getRowCount() < 1) {
+        wprom.alert("데이터가 없습니다.");
+    }
+};
+scwin.Grd_SIGUNList_OnCellClick = function( nRow, nCell) {
+    Ds_DONG.removeAll();
+    Ds_ZIP.removeAll();
+    /*
+    SOBJ_DONG.WSDL = gds.gWsdlCCC; // 서비스 Obj WSDC 설정
+    var MethodObj = gfn_CreateMethodObj(SOBJ_DONG, "com.inswave.code.task.ZipCodeTask", "getTownNameList", "0", "0");
+    gfn_SetParam(MethodObj, "sCityName", Ds_SIGUN.getCellData(nRow, "sCityName"));
+    gfn_SetParam(MethodObj, "sCountyName", Ds_SIGUN.getCellData(nRow, "sCountyName"));
+
+    // 검색조건 확인 마침
+    gfn_CallService(SOBJ_DONG, DOBJ_DONG, MethodObj);
+	*/
+	var MethodObj = new callService("com.inswave.code.task.ZipCodeTask", "getTownNameList", "0", "0");
+	MethodObj.setId("getTownNameList");
+	MethodObj.setParam("sCityName", Ds_SIGUN.getCellData(nRow, "sCityName"));
+	MethodObj.setParam("sCountyName", Ds_SIGUN.getCellData(nRow, "sCountyName"));
+
+	MethodObj.setUrl("/common/CBSO019PController.do");
+	MethodObj.setXPath("//*/vector/data/CODAA09");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//확인util.interfaceKey(_tranSync.result.serviceDs);
+	//util.jSonDsCreate(_tranSync.getDsJson("CODAA09"), "Ds_DONG");
+	Ds_DONG.setJSON(_tranSync.getDsJson("CODAA09"));
+	//util.setCompBindRefresh("Ds_DONG");
+	//util.setRowPosition(Ds_DONG, 0);	
+
+    //trace("Grd_DOList_OnCellClick::::::::::::::"+replace(gfn_XmlEncoder(DOBJ_DONG.Contents), "><", ">\n<"));
+    //trace(Ds_DONG.SaveXML());
+    if (Ds_DONG.getRowCount() < 1) {
+        wprom.alert("데이터가 없습니다.");
+    }
+};
+
+scwin.Grd_DONGList_OnCellClick = function( nRow, nCell) {
+    Ds_ZIP.removeAll();
+    wconv.clear(Ds_ZIP);
+    /*
+    SOBJ_ZIP.WSDL = gds.gWsdlCode; // 서비스 Obj WSDC 설정
+    var MethodObj = gfn_CreateMethodObj(SOBJ_ZIP, "com.inswave.code.task.ZipCodeTask", "getAddressList", "0", "0");
+    gfn_SetParam(MethodObj, "sCityName", Ds_DONG.getCellData(nRow, "sCityName"));
+    gfn_SetParam(MethodObj, "sCountyName", Ds_DONG.getCellData(nRow, "sCountyName"));
+    gfn_SetParam(MethodObj, "sTownName", Ds_DONG.getCellData(nRow, "sTownName"));
+
+    // 검색조건 확인 마침
+    gfn_CallService(SOBJ_ZIP, DOBJ_ZIP, MethodObj);
+	*/
+	var MethodObj = new callService("com.inswave.code.task.ZipCodeTask", "getAddressList", "0", "0");
+	MethodObj.setId("getTownNameList");
+	MethodObj.setParam("sCityName", Ds_DONG.getCellData(nRow, "sCityName"));
+	MethodObj.setParam("sCountyName", Ds_DONG.getCellData(nRow, "sCountyName"));
+	MethodObj.setParam("sTownName", Ds_DONG.getCellData(nRow, "sTownName"));
+
+	MethodObj.setUrl("/common/CBSO019PController.do");
+	MethodObj.setXPath("//*/vector/data/CODAA09");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	Ds_ZIP.setJSON (_tranSync.getDsJson("CODAA09")); // dataset 데이터 
+	//util.jSonDsCreate(_tranSync.getDsJson("CODAA09"), "Ds_ZIP");
+	//util.setCompBindRefresh("Ds_ZIP");
+	//util.setRowPosition(Ds_ZIP, 0);	
+    //trace("Grd_DOList_OnCellClick::::::::::::::"+replace(gfn_XmlEncoder(DOBJ_ZIP.Contents), "><", ">\n<"));
+    //trace("ds_zip"+Ds_ZIP.SaveXML());
+    if (Ds_ZIP.getRowCount() < 1) {
+        wprom.alert("데이터가 없습니다.");
+        return;
+    }
+};
+
+scwin.Grd_ROADList_OnCellClick = function( nRow, nCell) {
+    Ds_ZIP.removeAll();
+    
+    //SOBJ_ZIP.WSDL = gds.gWsdlCCC; // 서비스 Obj WSDC 설정
+    var roadCode = Ds_ZIP_ROAD_New.getCellData(nRow, "sRoadCode");
+    if (nRow == "") {
+        //좌측을 선택하지 않은 상태라면 roadCode를 초기화하여야 한다
+        roadCode = "";
+    }
+    var chkRdo = Tab0_tab2_Rdo_Type1.getValue();
+    var mainNo = Tab0_tab2_nBuildingMainNo.getValue();
+    var subNo = Tab0_tab2_nBuildingSubNo.getValue();
+    var sBuildingNameSet = Tab0_tab2_sBuildingNameSet.getValue();
+    var sEupmyungdongSeqno = Ds_ZIP_ROAD_New.getCellData(nRow, "sEupmyungdongSeqno");
+
+    //alert('roadCode='+ roadCode);
+    //alert('chkRdo='+ chkRdo);
+    //alert('mainNo='+ mainNo);
+    //alert('subNo='+ subNo);
+    //alert('nRow='+ nRow);
+    //alert('sBuildingNameSet='+ sBuildingNameSet);
+    var sSearchText = Tab0_tab2_Edt_RoadName.getValue();
+    var sidoCode = Tab0_tab2_sSidoCode.getValue();
+    var sigunguCode = Tab0_tab2_sSigunguCode.getValue();
+    var sgCode = "";
+    if (sidoCode == "0000000") {
+        wprom.alert("시도를 선택 후 검색하시기 바랍니다");
+        return;
+    }
+    if (sidoCode != "0000000" && sidoCode != "") {
+        sgCode = sidoCode;
+    }
+    if (sigunguCode != "0000000" && sigunguCode != "") {
+        sgCode = sidoCode + sigunguCode;
+    }
+    /*
+    var MethodObj = gfn_CreateMethodObj(SOBJ_ZIP, "com.inswave.code.task.ZipCodeTask", "getSearchAdrsRoadDetail", "0", "0");
+    gfn_SetParam(MethodObj, "sRoadCode", roadCode);
+    gfn_SetParam(MethodObj, "chkRdo", chkRdo);
+    gfn_SetParam(MethodObj, "mainNo", mainNo);
+    gfn_SetParam(MethodObj, "subNo", subNo);
+    gfn_SetParam(MethodObj, "sBuildingNameSet", sBuildingNameSet); //건물명
+    gfn_SetParam(MethodObj, "seqNo", sEupmyungdongSeqno); //일련번호
+    gfn_SetParam(MethodObj, "sgCode", sgCode); //좌측(도로명/읍면동명) 호출없이 바로 지번으로 검색할때 필요한 인자
+    gfn_SetParam(MethodObj, "sSearchText", sSearchText); //검색어
+    gfn_SetParam(MethodObj, "sClaimAcctAddrYN", gClaimAcctAddrYN); // 보상사고주소여부
+    // 검색조건 확인 마침
+    gfn_CallService(SOBJ_ZIP, DOBJ_ZIP_ROAD_DETAIL_New, MethodObj);
+	*/
+	var MethodObj = new callService("com.inswave.code.task.ZipCodeTask", "getSearchAdrsRoadDetail", "0", "0");
+	MethodObj.setId("getSearchAdrsRoadDetail");
+    MethodObj.setParam( "sRoadCode", roadCode);
+    MethodObj.setParam( "chkRdo", chkRdo);
+    MethodObj.setParam( "mainNo", mainNo);
+    MethodObj.setParam( "subNo", subNo);
+    MethodObj.setParam( "sBuildingNameSet", sBuildingNameSet); //건물명
+    MethodObj.setParam( "seqNo", sEupmyungdongSeqno); //일련번호
+    MethodObj.setParam( "sgCode", sgCode); //좌측(도로명/읍면동명) 호출없이 바로 지번으로 검색할때 필요한 인자
+    MethodObj.setParam( "sSearchText", sSearchText); //검색어
+    MethodObj.setParam( "sClaimAcctAddrYN", gClaimAcctAddrYN); // 보상사고주소여부
+	MethodObj.setUrl("/common/CBSO019PController.do");
+	MethodObj.setXPath("//*/vector/data/COMAB01");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	util.jSonDsCreate(_tranSync.getDsJson("COMAB01"), "Ds_ZIP_ROAD_DETAIL_New");
+	util.setCompBindRefresh("Ds_ZIP_ROAD_DETAIL_New");
+	util.setRowPosition(Ds_ZIP_ROAD_DETAIL_New, 0);		
+    //trace("Grd_ROADList_OnCellClick::::::::::::::"+replace(gfn_XmlEncoder(DOBJ_ZIP_ROAD_DETAIL_New.Contents), "><", ">\n<"));
+    //trace("ds_zip"+Ds_ZIP.SaveXML());
+    //클릭시 하단 결과를 히든한다
+    scwin.btn_result_view_hidden();
+    mConfirmZip.setValue("");
+    mConfirmZipNew.setValue("");
+    edConfirmAddr.setValue("");
+    edBuildingName.setValue("");
+    edDong.setValue("");
+    
+    if (Ds_ZIP_ROAD_DETAIL_New.getRowCount() < 1) {
+        wprom.alert("데이터가 없습니다.");
+        return;
+    }
+    if (Ds_ZIP_ROAD_DETAIL_New.getRowCount() > 500) {
+        wprom.alert("검색결과 500개를 초과하였습니다\n건물번호/지번/명으로 추가 검색하십시오");
+        return;
+    }
+};
+
+//
+scwin.Grd_ZIPList_OnCellClick = function( nRow, nCell) {
+    gnRow = nRow; //하단 표준주소를 찾기 위한 조건은 넘길때 사용하기 위한 글로벌 nRow
+    edDong.setValue(""); //클릭할때 마다 초기화
+    //2006-01-20 by 이윤주
+    //var sAdrs       = getString(adrsDoc, "sZipName") + " " +getString(adrsDoc, "sBuildingNameSet") +" "+getString(adrsDoc, "sFromNo");
+    var sZipCode = Ds_ZIP.getCellData(nRow, "sZipCode");
+    var sAdrs = Ds_ZIP.getCellData(nRow, "sZipName");
+    var sBuilding = Ds_ZIP.getCellData(nRow, "sBuildingNameSetNew");
+    var sRiName = Ds_ZIP.getCellData(nRow, "sRiName");
+    if (sRiName != "")
+        sAdrs += " " + sRiName;
+    mConfirmZip.setValue(wconv.substr(sZipCode, 0, 3) + "-" + wconv.substr(sZipCode, 3, 6));
+    edConfirmAddr.setValue(sAdrs);
+    if (sBuilding != "") {
+        edBuildingName.setValue(sBuilding + " ");
+    } else {
+        edBuildingName.setValue(sBuilding);
+    }
+
+
+    //선택후 포커스를 건물명으로 이동 시킨다.
+    edBuildingName.focus();
+
+    //클릭시 하단 표준결과를 히든한다
+    scwin.btn_result_view_hidden();
+};
+
+scwin.Grd_ROAD_DETAIL_List_OnCellClick = function( nRow, nCell) {
+    gnRow = nRow; //하단 표준주소를 찾기 위한 조건은 넘길때 사용하기 위한 글로벌 nRow
+    //구우편번호(6자리)
+    var sZipCode = Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sZipCode");
+
+    //신우편번호(5자리)
+    var sNZipCode = Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sNZipCode");
+    var sAdrs = Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sCityName") + " ";
+    if (Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sCountyName") != "") {
+        sAdrs = sAdrs + Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sCountyName") + " ";
+    }
+
+    //라디오버튼의 도로명검색이 아닐때만 붙는다. => 지번주소와 도로명의 읍/면/동일때는 붙여준다.
+    //끝자리가 읍 또는 면인지 체크 :읍면으로 끝나면 읍/면 +도로명지만 그렇지 않을 경우는 읍면을 빼고 도로명만 붙인다.
+    var chkTown = Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sTownName");
+    var chkLen = chkTown.length;
+    var lastTown = chkTown.substr(chkLen - 1);
+
+    //if(Tab0.tab2.Rdo_Type1.value!="R"){			//라디오버튼 도로명이 ! 일때
+    if (Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sTownName") != "") {
+        if (lastTown == "읍" || lastTown == "면") {
+            //끝자리가 읍면일때만  sTownName을 붙여준다
+            sAdrs = sAdrs + Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sTownName") + " ";
+        }
+    }
+
+
+    //}
+    //alert("sDoroAddr1="+Ds_ZIP_ROAD_DETAIL_New.GetColumn(nRow,"sDoroAddr1"));
+    if (Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sRoadName") != "") {
+        if (Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sBasement") != "1") {
+            sAdrs = sAdrs + Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sRoadName") + " ";
+        } else {
+            sAdrs = sAdrs + Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sRoadName") + " 지하 ";
+        }
+    }
+    if (Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "nBuildingMainNo") != "") {
+        sAdrs = sAdrs + Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "nBuildingMainNo");
+    }
+    if (Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "nBuildingSubNo") > 0) {
+        sAdrs = sAdrs + "-" + Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "nBuildingSubNo");
+    }
+    sBuilding = Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sBuildingNameSet");
+    if (sBuilding != "")
+        sBuilding += " "; //다음부터 입력하도록 space
+    sTownName = Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sTownName");
+    mConfirmZip.setValue(sZipCode); //우편주소
+    mConfirmZipNew.setValue(sNZipCode); //신우편
+    edConfirmAddr.setValue(sAdrs); //선택주소
+    edBuildingName.setValue(sBuilding); //건물명
+    //선택후 포커스를 동/층/호로 이동 시킨다.
+    edDong.setValue("");
+    edDong.focus();
+
+    //클릭시 하단 표준결과를 히든한다
+    scwin.btn_result_view_hidden();
+
+    //----------------------------------------------------
+    // 보상 사고배당 처리 사용시 결과를 리턴한다.
+    if (gClaimAcctAddrYN == "Y") {
+        //--------------------------------------------------
+        // 값 초기화
+        var sZipDiv = ""; // 주소구분(ZIP:우편번호, EXP:고속도로)
+        var sZip1 = ""; // 우편번호1
+        var sZip2 = ""; // 우편번호2
+        var sAddr1 = ""; // 주소1
+        var sAddr2 = ""; // 주소2
+        var sVillageInLaw = ""; // 법정동코드
+        var sExpressCode = ""; // 고속도로 코드(sExpressCode)
+        var sStartPointCode = ""; // 시작기점 코드(sStartPointCode)
+        var nPassDistance = ""; // 기점부터 거리(nPassDistance)
+        var sExpressName = ""; // 고속도로 코드명(sExpressName)
+        var sStartPointName = ""; // 시작기전 코드명(sStartPointName)
+        var sRestName = ""; // 나머지명(sRestName)
+        var sCityName = ""; // 광역시도
+        var sCountyName = ""; // 시군구
+        var sTownName = ""; // 읍명동
+        var sRiName = ""; // 리명
+        var sLatitude = ""; // 위도
+        var sLongitude = ""; // 경도
+        //--------------------------------------------------
+        //--------------------------------------------------
+        // 값 설정
+        sZipDiv = "ZIP"; // 주소구분(ZIP:우편번호, EXP:고속도로)
+        // 우편번호
+        if (wconv.length(sNZipCode) == 5) {
+            sZip1 = wconv.left(sNZipCode, 3);
+            sZip2 = wconv.right(sNZipCode, 2);
+        } else {
+            if (wconv.length(sZipCode) == 6) {
+                sZip1 = wconv.left(sZipCode, 3);
+                sZip2 = wconv.right(sZipCode, 3);
+            } else {
+                sZip1 = "";
+                sZip2 = "";
+            }
+        }
+        sAddr1 = scwin.getDetailRoadAddress1(nRow); // 주소1
+        sAddr2 = sBuilding + scwin.getDetailRoadAddress2(nRow); // 주소2
+        sVillageInLaw = Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sVillageInLaw"); // 법정동코드
+        sExpressCode = ""; // 고속도로 코드(sExpressCode)
+        sStartPointCode = ""; // 시작기점 코드(sStartPointCode)
+        nPassDistance = ""; // 기점부터 거리(nPassDistance)
+        sExpressName = ""; // 고속도로 코드명(sExpressName)
+        sStartPointName = ""; // 시작기전 코드명(sStartPointName)
+        sRestName = ""; // 나머지명(sRestName)
+        sCityName = Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sCityName"); // 광역시도
+        sCountyName = Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sCountyName"); // 시군구
+        sTownName = Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sTownName"); // 읍명동
+        sRiName = Ds_ZIP_ROAD_DETAIL_New.getCellData(nRow, "sRiName"); // 리명
+        sLatitude = gLatitude; // 위도
+        sLongitude = gLongitude; // 경도
+        //-----------------------------------------------------
+        var sArg = "";
+        sArg = sZip1 + " ";
+        sArg += "^" + sZip2 + " ";
+        sArg += "^" + sAddr1 + " ";
+        sArg += "^" + sAddr2 + " ";
+        sArg += "^" + sZipDiv + " ";
+        sArg += "^" + sVillageInLaw + " ";
+        sArg += "^" + sExpressCode + " ";
+        sArg += "^" + sStartPointCode + " ";
+        sArg += "^" + nPassDistance + " ";
+        sArg += "^" + sExpressName + " ";
+        sArg += "^" + sStartPointName + " ";
+        sArg += "^" + sRestName + " ";
+        sArg += "^" + sCityName + " ";
+        sArg += "^" + sCountyName + " ";
+        sArg += "^" + sTownName + " ";
+        sArg += "^" + sRiName + " ";
+        sArg += "^" + sLatitude + " "; //  지도검색 위도
+        sArg += "^" + sLongitude + " "; //  지도검색 경도
+        //alert(sArg);
+        wprom.close(sArg);
+    }
+};
+
+//새작업 버튼
+scwin.btn_new_OnClick = function(e) {
+    mConfirmZip.setValue("");
+    edConfirmAddr.setValue("");
+    if (Tab0.getSelectedTabIndex() == 0) {
+        Tab0_tab1_Edt_SearchStr.setValue( "" );
+        Tab0_tab1_mSearchZip.setValue( "" );
+        Tab0_tab1_edSearchAddr.setValue( "" );
+        Ds_SIGUN.removeAll();
+        Ds_DONG.removeAll();
+        Ds_ZIP.removeAll();
+        scwin.searchDO();
+        scwin.btn_result_view_hidden();
+    } else if (Tab0.getSelectedTabIndex() == 1) {
+        Ds_ZIP_ROAD.removeAll();
+        Tab0_tab2_Edt_RoadName.setValue("");
+        //Tab0_tab2_Edt_BuildingMainNo.setValue("");
+        //Tab0_tab2_Edt_BuildingSubNo.setValue("");
+        Tab0_tab2_nBuildingMainNo.setValue( "");
+        Tab0_tab2_nBuildingSubNo.setValue( "");
+        Tab0_tab2_sBuildingNameSet.setValue("");
+        //Tab0_tab2_mConfirmZipNew.setValue( "");
+        //Tab0_tab2_edBuildingName.setValue( "");
+        //Tab0_tab2_edDong.setValue( "" );
+        scwin.btn_result_view_hidden();
+        Ds_ZIP_ROAD_New.removeAll();
+        Ds_ZIP_ROAD_DETAIL_New.removeAll();
+        if (Ds_DO.getRowCount() < 1) {
+            wprom.alert("데이터가 없습니다.");
+            return;
+        }
+    }
+};
+//사용안됨.
+scwin.btn_cancel_OnClick = function(e) {
+    mConfirmZip.setValue("");
+    edConfirmAddr.setValue("");
+};
+//사용안됨 ; goo
+scwin.Grd_ZIPList_OnCellDblClick = function( nRow, nCell) {
+    //우편번호가 없을 경우 이벤트를 발생시키지 않는다..
+    if (Ds_ZIP.getCellData(nRow, "sZipCode") == "") {
+        wprom.alert("우편번호가 선택되지 않았습니다.");
+        return;
+    }
+    var addStr = "";
+    if (wconv.length(args[0]) > 0 &&    wconv.length(args[1]) > 0) {
+        // 보모창의 해당 값을 세팅
+        if (wconv.length(args[2]) > 0)
+            eval(args[0]).setCellData(args[1], args[2], wconv.left(Ds_ZIP.getCellData(nRow, "sZipCode"), 3));
+        if (wconv.length(args[3]) > 0)
+            eval(args[0]).setCellData(args[1], args[3], wconv.right(Ds_ZIP.getCellData(nRow, "sZipCode"), 3));
+        if (wconv.length(args[4]) > 0)
+            eval(args[0]).setCellData(args[1], args[4], Ds_ZIP.getCellData(nRow, "sZipName"));
+        if (wconv.length(args[5]) > 0) {
+            if (wconv.length(Ds_ZIP.getCellData(nRow, "sBuildingName")) > 0)
+                addStr = Ds_ZIP.getCellData(nRow, "sBuildingNameSet") + " ";
+            if (wconv.length(Ds_ZIP.getCellData(nRow, "sNo")) > 0)
+                addStr = eval(args[0]).GetColumn(args[1], args[5]) + Ds_ZIP.getCellData(nRow, "sNo") + " ";
+            eval(args[0]).setCellData(args[1], args[5], addStr);
+        }
+        if (wconv.length(args[6]) > 0)
+            eval(args[0]).setCellData(args[1], args[6], Ds_ZIP.getCellData(nRow, "sCityName"));
+        if (wconv.length(args[7]) > 0)
+            eval(args[0]).setCellData(args[1], args[7], Ds_ZIP.getCellData(nRow, "sCountyName"));
+        if (wconv.length(args[8]) > 0)
+            eval(args[0]).setCellData(args[1], args[8], Ds_ZIP.getCellData(nRow, "sTownName"));
+        if (wconv.length(args[12]) > 0)
+            eval(args[0]).setCellData(args[1], args[12], "0"); //우편번호 신/구 구분
+        // 포커스 이동
+        if (wconv.length(args[9]) > 0)
+            eval(args[9]).focus();
+    }
+
+
+    // 윈도를 닫는다.
+    var ret = wconv.left(Ds_ZIP.getCellData(nRow, "sZipCode"), 3) + "^" + wconv.right(Ds_ZIP.getCellData(nRow, "sZipCode"), 3) + "^" + Ds_ZIP.getCellData(nRow, "sZipName") + " ^" + Ds_ZIP.getCellData(nRow, "sBuildingNameSet") + " ^" + Ds_ZIP.getCellData(nRow, "sNo") + " ^" + Ds_ZIP.getCellData(nRow, "sCityName") + " ^" + Ds_ZIP.getCellData(nRow, "sCountyName") + " ^" + Ds_ZIP.getCellData(nRow, "sTownName") + "^0";
+    wconv.trace("ret::::::::::cell::::::::::::::::::::::::::::::::" + ret);
+    wconv.close(ret);
+};
+
+//**************************************************************************************************
+// 도로명 주소 검색
+//**************************************************************************************************
+scwin.Tab0_tab2_Btn_SearchRoad_OnClick = function(e) {
+    Ds_ZIP_ROAD_New.removeAll();
+    wconv.clear(Ds_ZIP_ROAD_New);
+    Ds_ZIP_ROAD_DETAIL_New.removeAll(); //검색시 상세조회 부분을 클리어 한다.
+    
+    //SOBJ_control.WSDL = gds.gWsdlCCC; //서비스 Obj WSDC 설정
+    var sidoCode = Tab0_tab2_sSidoCode.getValue();
+    var sigunguCode = Tab0_tab2_sSigunguCode.getValue();
+    var sgCode = "";
+    var chkRdo = "";
+    var sRoadName = Tab0_tab2_Edt_RoadName.getValue();
+    if (sidoCode == "0000000") {
+        wprom.alert("시도를 선택 후 검색하시기 바랍니다");
+        return;
+    }
+    if (sidoCode != "0000000" && sidoCode != "") {
+        sgCode = sidoCode;
+    }
+    if (sigunguCode != "0000000" && sigunguCode != "") {
+        sgCode = sidoCode + sigunguCode;
+    }
+    if (Tab0_tab2_Rdo_Type1.getValue() == "R") {
+        chkRdo = Tab0_tab2_Rdo_Type1.getValue();
+    } else if (Tab0_tab2_Rdo_Type1.getValue() == "D") {
+        chkRdo = Tab0_tab2_Rdo_Type1.getValue();
+    }
+    if (wconv.length(sRoadName) < 2) {
+        wprom.alert("검색어는 2자이상 입력해주세요");
+        return false;
+    }
+
+
+    /*
+    검색전 다음을 초기화 하며 표준 주소 검색 결과 있는경우를 대비해 결과도 보이지 않도록 한다.
+    */
+    //returnContent1.style.display="none";				//도로명 --읍면동에서 표준 결과를 검색 후 라디오버튼의 검색옵션이 바뀔 경우를 위해서.
+    mConfirmZip.setValue(""); //우편번호 초기화
+    mConfirmZipNew.setValue(""); //신우편번호 초기화
+    edConfirmAddr.setValue(""); //입력된 주소 초기화
+    edBuildingName.setValue(""); //입력된 건물이름 초기화
+    edDong.setValue(""); //입력된 동,층,호 초기화
+    //초기화 끝
+    /*
+    var MethodObj = gfn_CreateMethodObj(SOBJ_control, "com.inswave.code.task.ZipCodeTask", "getSearchAdrsRoad", "0", "0");
+    gfn_SetParam(MethodObj, "sgCode", sgCode);
+    gfn_SetParam(MethodObj, "rdGubun", chkRdo); // 도로명검색인지 읍면동 검색인지 구분
+    gfn_SetParam(MethodObj, "sSearchText", sRoadName); // 도로명 검색어
+    gfn_SetParam(MethodObj, "sClaimAcctAddrYN", gClaimAcctAddrYN); // 보상사고주소여부
+    // 검색조건 확인 마침
+    gfn_CallService(SOBJ_control, DOBJ_ZIP_ROAD_New, MethodObj);
+	*/
+	var MethodObj = new callService("com.inswave.code.task.ZipCodeTask", "getSearchAdrsRoad", "0", "0");
+	MethodObj.setId("getSearchAdrsRoad");
+    MethodObj.setParam( "sgCode", sgCode);
+    MethodObj.setParam( "rdGubun", chkRdo); // 도로명검색인지 읍면동 검색인지 구분
+    MethodObj.setParam( "sSearchText", sRoadName); // 도로명 검색어
+    MethodObj.setParam( "sClaimAcctAddrYN", gClaimAcctAddrYN); // 보상사고주소여부
+	MethodObj.setUrl("/common/CBSO019PController.do");
+	MethodObj.setXPath("//*/vector/data/COMAB03");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	util.jSonDsCreate(_tranSync.getDsJson("COMAB03"), "Ds_ZIP_ROAD_New");
+	util.setCompBindRefresh("Ds_ZIP_ROAD_New");
+	//util.setRowPosition(Ds_ZIP_ROAD_New, 0);
+	
+    //trace(Ds_ZIP_ROAD.Contents);		
+    //trace(DOBJ_ZIP_ROAD_New.savexml());
+    if (Ds_ZIP_ROAD_New.getRowCount() < 1) {
+        wprom.alert("데이터가 없습니다.");
+        return;
+    } else {}
+
+    //alert("DOBJ_ZIP_ROAD_New.SaveXML()=="+Ds_ZIP_ROAD_New.SaveXML());
+    //건물번호/지번이 있을때만 하단의 이벤트를 탄다 + 건물명 추가
+    if (Tab0_tab2_nBuildingMainNo.getValue() != "" || Tab0_tab2_nBuildingSubNo.getValue() != "" || Tab0_tab2_sBuildingNameSet.getValue() != "") {
+        scwin.Grd_ROADList_OnCellClick("", "", "", "", "", "");
+    }
+};
+
+scwin.Tab0_tab2_Grd_ZIPList_OnCellClick = function( nRow, nCell) {
+    var sAdrs = Ds_ZIP_ROAD.getCellData(nRow, "sAdrs1") + " ";
+    if (Ds_ZIP_ROAD.getCellData(nRow, "sAdrs2") != "") {
+        sAdrs = sAdrs + Ds_ZIP_ROAD.getCellData(nRow, "sAdrs2") + " ";
+    }
+    if (Ds_ZIP_ROAD.getCellData(nRow, "sAdrs3") != "") {
+        sAdrs = sAdrs + Ds_ZIP_ROAD.getCellData(nRow, "sAdrs3") + " ";
+    }
+    sAdrs = sAdrs + Ds_ZIP_ROAD.getCellData(nRow, "sRoadName") + " ";
+    sAdrs = sAdrs + Ds_ZIP_ROAD.getCellData(nRow, "nBuildingMainNo");
+    if (Ds_ZIP_ROAD.getCellData(nRow, "nBuildingSubNo") > 0) {
+        sAdrs = sAdrs + "-" + Ds_ZIP_ROAD.getCellData(nRow, "nBuildingSubNo");
+    }
+    if (Ds_ZIP_ROAD.getCellData(nRow, "sBuildingName") != "") {
+        sAdrs = sAdrs + ", " + Ds_ZIP_ROAD.getCellData(nRow, "sBuildingName");
+    }
+    mConfirmZip.setValue(Ds_ZIP_ROAD.getCellData(nRow, "sZipCode"));
+    edConfirmAddr.setValue(sAdrs);
+    edBuildingName.focus(); //번지/건물명으로 포커스 자동 이동
+};
+
+var nOldIndex = 0;
+scwin.Tab0_OnChanged = function(tabID, nNewIndex, userTabID) {
+    mConfirmZip.setValue("");
+    edConfirmAddr.setValue("");
+//alert("nNewIndex : "+nNewIndex);
+    //도로명주소일때만 신주소 박스를 보여준다
+    if (nNewIndex == 1) {
+        Static4.show();
+        mConfirmZipNew.show();
+        nOldIndex = 1;
+        scwin.btn_result_view_hidden(); //표준화 결과를 숨긴다
+    } else {
+        Static4.hide();
+        mConfirmZipNew.hide();
+        nOldIndex = nNewIndex;
+        scwin.btn_result_view_hidden(); //표준화 결과를 숨긴다
+    }
+    if (gClaimAcctAddrYN == "Y") {
+        // 사고배당시 기존주소 선택불가
+        if (Tab0.getSelectedTabIndex() == 0) {
+            Tab0.setSelectedTabIndex( nOldIndex ) ;
+        }
+    } else {
+        // 일반 주소사용시 고속도로 선택불가
+        if (Tab0.getSelectedTabIndex() == 2) {
+            Tab0.setSelectedTabIndex( nOldIndex );
+        }
+    }
+};
+
+scwin.btn_getStandard_OnClick = function(e) {
+    //SOBJ_control.WSDL = gds.gWsdlCCC; //서비스 Obj WSDC 설정
+    var sZipCode;
+    var sCityName;
+    var sCountyName;
+    var sTownName;
+    var sRoadName;
+    var nBuildingMainNo;
+    var nBuildingSubNo;
+    var sAdrs;
+    var sBuilding;
+    var makeInputAddrLabel;
+    var userDoc; //로그인 사용자 정보
+    var loginId; //사번
+    var plusMakeInputAddrLabel;
+
+    //2014.10.16 개행문자 제거
+    //edBuildingName.setValue( replace( replace(edBuildingName.getValue(), chr(13), " "), chr(10), " "));
+    //edConfirmAddr.setValue(replace(replace(edConfirmAddr.getValue(), chr(13), " "), chr(10), " "));
+    //edDong.setValue(replace(replace(edDong.getValue(), chr(13), " "), chr(10), " "));
+    edBuildingName.setValue( edBuildingName.getValue().replace("\n", " "));
+    edConfirmAddr.setValue( edConfirmAddr.getValue().replace("\n", " "));
+    edDong.setValue( edDong.getValue().replace("\n", " "));
+
+    //var sendTime = substr(gDs_ServerTime.getColumn( 0 , "sToday" ) , 0 , 14 );	//회원사 전문전송 시간(14자리)
+    //var sno = substr(gDs_ServerTime.getColumn( 0 , "sToday" ) , 7 );			//회원사 전문관리 번호:serial no
+    //if(Length(sTableNm)<=0){
+    //	sTableNm	="CUSAA01";
+    //}
+    //if(Length(sAdrsType)<=0){
+    //	sAdrsType	="1";
+    //}
+
+    if (Tab0.getSelectedTabIndex() == 0) {
+        //상세주소가 검색이 되지 않았거나 검색되었더라고 하나가 선택되지 않았을 경우는 표준검색을 할 수 없다.
+        if (edConfirmAddr.getValue() == "") {
+            wprom.alert("대량배달처/번지범위 하나를 반드시 선택하셔야 합니다.");
+            return;
+        } else {
+            //1. : 화면에 입력된 주소 가져오기 시작
+            //구우편번호(6자리)
+            sZipCode = Ds_ZIP.getCellData(gnRow, "sZipCode");
+
+            //주소
+            var sCityName = Ds_ZIP.getCellData(gnRow, "sCityName");
+            var sCountyName = Ds_ZIP.getCellData(gnRow, "sCountyName");
+            var sTownName = Ds_ZIP.getCellData(gnRow, "sTownName");
+            var sRoadName = Ds_ZIP.getCellData(gnRow, "sRoadName");
+            var nBuildingMainNo = Ds_ZIP.getCellData(gnRow, "nBuildingMainNo");
+            var nBuildingSubNo = Ds_ZIP.getCellData(gnRow, "nBuildingSubNo");
+            var sRiName = Ds_ZIP.getCellData(gnRow, "sRiName");
+            var sAdrs = sCityName + " ";
+            if (sCountyName != "" && sCountyName != " ") {
+                //공백인경우 체크는 세종시의 경우임(세종특별자치시 한솔동)
+                sAdrs += sCountyName + " ";
+            }
+            if (sTownName != "" && sTownName.indexOf( "사서함") < 0) {
+                //읍면동 검색일때 표준주소검색에 들어가야 한다.
+                sAdrs += sTownName;
+            }
+            if (sRiName != "" && sRiName.indexOf( "사서함") < 0) {
+                //리 에는 사서함이라는 단어가 없을때만 넘긴다.
+                sAdrs += " " + sRiName; //리
+            }
+            gsAdrs = sAdrs; //상위주소를 글로별 변수에 담는다
+            //var sBuilding = getString(adrsDoc, "sBuildingNameSet");
+            var sBuilding = wconv.trim(edBuildingName.getValue()); //건물명은 수정 가능하기때문에 vector에서 가져오지 않고 직접 가져온다
+            //1.1 :화면에 표시되는 입력주소 만들기 :예) 서울 은평구 백련산로14길  1, 701 (응암동, 경원파발리안아파트)
+            var makeInputAddrLabel = "";
+            //makeInputAddrLabel = sAdrs;												//선택주소
+            if (sBuilding != "" || sBuilding != " ")
+                makeInputAddrLabel += " " + sBuilding; //건물명
+            if (edDong.getValue() != "")
+                makeInputAddrLabel += " " + edDong.getValue(); //동,층,호(수정가능하기 때문에 벡터가 아닌 직접 가져온다)
+            gMakeInputAddrLabel = makeInputAddrLabel; //하위주소를 글로벌 변수에 담기
+        }
+    } else if (Tab0.getSelectedTabIndex() == 1) {
+        //상세주소가 검색이 되지 않았거나 검색되었더라고 하나가 선택되지 않았을 경우는 표준검색을 할 수 없다.
+        if (edConfirmAddr.getValue() == "") {
+            wprom.alert("도로명주소 하나를 반드시 선택하셔야 합니다.");
+            return;
+        } else {
+            //1. : 화면에 입력된 주소 가져오기 시작
+            //구우편번호(6자리)
+            sZipCode = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "sZipCode");
+
+            //주소
+            sCityName = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "sCityName");
+            sCountyName = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "sCountyName");
+            sTownName = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "sTownName");
+            sRoadName = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "sRoadName");
+            sRiName = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "sRiName");
+            nBuildingMainNo = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "nBuildingMainNo");
+            nBuildingSubNo = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "nBuildingSubNo");
+            sBasement = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "sBasement");
+            sAdrs = sCityName + " ";
+            if (sCountyName != "") {
+                sAdrs += sCountyName + " ";
+            }
+
+            //라디오버튼의 도로명검색이 아닐때만 붙는다. => 지번주소와 도로명의 읍/면/동일때는 붙여준다.
+            //끝자리가 읍 또는 면인지 체크 :읍면으로 끝나면 읍/면 +도로명지만 그렇지 않을 경우는 읍면을 빼고 도로명만 붙인다.
+            var chkTown = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "sTownName");
+            var chkLen = wconv.length(chkTown);
+            var lastTown = wconv.substr(chkTown, chkLen - 1);
+
+            //if(Tab0.tab2.Rdo_Type1.value!="R"){				//라디오버튼 도로명이 ! 일때
+            if (sTownName != "") {
+                //읍면동 검색일때 표준주소검색에 들어가야 한다.
+                if (lastTown == "읍" || lastTown == "면") {
+                    //끝자리가 읍면일때만  sTownName을 붙여준다
+                    sAdrs += sTownName + " ";
+                }
+            }
+
+
+            //}
+            if (sRoadName != "") {
+                if (sBasement != "1") {
+                    sAdrs += sRoadName + " ";
+                } else {
+                    sAdrs += sRoadName + " 지하 ";
+                }
+            }
+            gsAdrs = sAdrs; //상위주소를 글로별 변수에 담는다
+            //var sBuilding = getString(adrsDoc, "sBuildingNameSet");
+            sBuilding = wconv.trim(edBuildingName.getValue()); //건물명은 수정 가능하기때문에 vector에서 가져오지 않고 직접 가져온다
+            //1.1 :화면에 표시되는 입력주소 만들기 :예) 서울 은평구 백련산로14길  1, 701 (응암동, 경원파발리안아파트)
+            makeInputAddrLabel = "";
+            //makeInputAddrLabel = sAdrs;						//선택주소
+            if (nBuildingMainNo != "") {
+                makeInputAddrLabel += nBuildingMainNo;
+            }
+            if (nBuildingSubNo > 0) {
+                makeInputAddrLabel += "-" + nBuildingSubNo;
+            }
+            if (edDong.getValue() != "")
+                makeInputAddrLabel += ", " + edDong.getValue(); //동,층,호(수정가능하기 때문에 벡터가 아닌 직접 가져온다)
+            if (sTownName.charAt(wconv.length(sTownName) - 1) == "읍" || //sTownName이 읍면으로 끝날때는 리 이름을 보여준다
+                sTownName.charAt(wconv.length(sTownName) - 1) == "면") {
+                makeInputAddrLabel += " (" + sRiName; //지번의 리명
+            } else {
+                makeInputAddrLabel += " (" + sTownName; //지번의 동명
+            }
+            if (wconv.length(sBuilding) > 0)
+                makeInputAddrLabel += ", " + sBuilding; //건물명
+            makeInputAddrLabel += ")";
+            gMakeInputAddrLabel = wconv.trim(makeInputAddrLabel); //하위주소를 글로별 변수에 담는다
+        }
+    }
+    loginId = util.getGdsValue("gUserID");
+    if (wconv.length(loginId) <= 0) {
+        loginId = "5310518"; //사번
+    }
+    gZipcode = sZipCode; //구 우편번호를 글로벌 변수에 넣는다
+    plusMakeInputAddrLabel = gsAdrs + gMakeInputAddrLabel; //상단 주소와 하단 주소를 표준화서버에 전송한다.
+    //선택주소가 쓰기 가능이면 번지/건물명, 동,층,호를 비활성화 시킨 후 선택주소를 표준화에 넘긴다.
+    if (edConfirmAddr.getReadOnly() == false) {
+        plusMakeInputAddrLabel = inputAddrAll.getValue();
+    }
+    /*
+    var MethodObj = gfn_CreateMethodObj(SOBJ_control, "com.inswave.code.task.ZipCodeTask", "getSearchStandard");
+
+    //alert('sZipCode='+sZipCode);
+    //alert('plusMakeInputAddrLabel='+plusMakeInputAddrLabel);
+    //alert('sendTime='+sendTime);
+    //alert('sno='+sno);
+    //alert('sTableNm=>'+sTableNm);
+    //alert('loginId='+loginId);
+    gfn_SetParam(MethodObj, "varPost", sZipCode); //구우편번호
+    gfn_SetParam(MethodObj, "varAllAddress", plusMakeInputAddrLabel); //주소 + 건물명 + 동층				
+    //gfn_SetParam(MethodObj, "sendTime", sendTime);					//전송시간 14자리			:ZipCodeTask에서 자체 함수로  생성
+    //gfn_SetParam(MethodObj, "serialNo", sno);							//회원사 전문관리 번호:7	:테이블 채번으로 수정
+    gfn_SetParam(MethodObj, "tableNm", sTableNm); //테이블명	CLMCA01	
+    gfn_SetParam(MethodObj, "loginId", loginId); //입력사용자 사번
+    // 검색조건 확인 마침
+    gfn_CallService(SOBJ_control, DOBJ_ZIP_ROAD_STANDARD, MethodObj);
+	*/
+	var MethodObj = new callService("com.inswave.code.task.ZipCodeTask", "getSearchStandard");
+	MethodObj.setId("getSearchStandard");
+    MethodObj.setParam( "varPost", sZipCode); //구우편번호
+    MethodObj.setParam( "varAllAddress", plusMakeInputAddrLabel); //주소 + 건물명 + 동층				
+    MethodObj.setParam( "tableNm", sTableNm); //테이블명	CLMCA01	
+    MethodObj.setParam( "loginId", loginId); //입력사용자 사번
+	MethodObj.setUrl("/common/CBSO019PController.do");
+	MethodObj.setXPath("//*/vector/data/COMAB001");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_Team.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("COMAB001"), "Ds_ZIP_ROAD_STANDARD");
+	//util.setCompBindRefresh("Ds_ZIP_ROAD_STANDARD");
+	util.setRowPosition(Ds_ZIP_ROAD_STANDARD, 0);
+    //trace("sZipCode="+sZipCode);
+    //trace("plusMakeInputAddrLabel="+plusMakeInputAddrLabel);
+    //trace("sTableNm="+sTableNm);
+    //trace("loginId="+loginId);
+    //trace("DOBJ_New_Search::::::::::::::::::::::::::"+replace(gfn_XmlEncoder(DOBJ_ZIP_ROAD_STANDARD.Contents), "><", ">\n<"));
+    //alert("Ds_ZIP_ROAD_STANDARD.SaveXML()==="+Ds_ZIP_ROAD_STANDARD.SaveXML());
+    scwin.btn_getStandard_result(); //결과 값 세팅
+};
+
+scwin.btn_getStandard_result = function() {
+    //0.0 리턴받은 결과의 Ds값
+    var loRow = 0;
+
+    //trace("Ds_ZIP_ROAD_STANDARD::::::::::::::::::::::::::"+replace(gfn_XmlEncoder(DOBJ_ZIP_ROAD_STANDARD.Contents), "><", ">\n<"));
+    var sResCd = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "sResCd"); //응답코드(4자리) :표준화서버가 응답을 하지 않는 경우(예,서버가 죽은경우)
+    var messageTable = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "messageTable"); //메시지를 띄워줄 테이블
+    gMessageTableNm = messageTable; //글로벌 변수에 담는다
+    //표준주소 찾기를 누르면 무조건 먼저 보여준다.
+    scwin.btn_result_view_show(); // 표준검색시 보이도록 한다
+    Radio_standardType.setValue(0); //입력주소 체크
+    Radio_standardType.setDisabled(true); //비활성화
+    //입력주소를 무조건 세팅한다
+    ginputZipLabel = gZipcode;
+    inputZipLabel = "(" + wconv.substr(gZipcode, 0, 3) + "-" + wconv.substr(gZipcode, 3, 6) + ") "; //입력 우편번호를 화면에 보여주기 위해 글로벌 입력우편번호에서 꺼내 생성.
+    makeInputAddrLabel = gMakeInputAddrLabel;
+
+
+    	
+    //*********선택주소가 쓰기 가능이면 번지/건물명, 동,층,호를 비활성화 시킨 후 선택주소를 표준화에 넘긴다.
+    if (edConfirmAddr.getReadOnly() == false) {
+        inputAddrAll.setValue(inputZipLabel + edConfirmAddr.getValue()); //표준화 서버에 갔다 온 후 입력주소 상위/하위를 글로벌 변수에서 꺼내 세팅한다.
+    } else {
+        //강제 수정이 아닐때
+        inputAddrAll.setValue(inputZipLabel + gsAdrs + gMakeInputAddrLabel); //표준화 서버에 갔다 온 후 입력주소 상위/하위를 글로벌 변수에서 꺼내 세팅한다.
+    }
+    var extStr = "표준화 주소 없음(장애)";
+
+    //응답코드가 정상일때
+    if (sResCd != "" && sResCd == "0000") {
+        //장애관리 코드를 정상(1)로 세팅한다.
+        gsOddTypeCode = 1;
+
+        //초기화 반드시 해야함.:초기화를 안해주면 표준화주소 변환 실패 후 표준화 주소 성공이라도  하단을 타버림	 
+        //====>if(gsOddTypeCode=="2" || gsOddTempCode=="2"){
+        gsOddTempCode = "";
+
+
+        //정상으로 표준주소 반환되었을 경우의 기본은 도로명 주소 체크
+        Radio_standardType.setValue(3); //도로명주소 checked
+        //정상으로 표준주소 반환되었을 경우 기존 disable를 다시 enable
+        Radio_standardType.setDisabled(false);
+
+        //1.1 : 입력주소
+        var adrsDoc = "";
+        var AnlysStndRsltCd = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "AnlysStndRsltCd"); //분석표준주소 결과 코드(15자리):표준화서버가 응답을 한경우
+        //1,2,7,8,9,14 <==표준화서버
+        varCut1 = AnlysStndRsltCd.charAt(0); //alert('varCut1='+varCut1);
+        varCut2 = AnlysStndRsltCd.charAt(1); //alert('varCut2='+varCut2);
+        varCut7 = AnlysStndRsltCd.charAt(6); //alert('varCut7='+varCut7);
+        varCut8 = AnlysStndRsltCd.charAt(7); //alert('varCut8='+varCut8);
+        varCut9 = AnlysStndRsltCd.charAt(8); //alert('varCut9='+varCut9);
+        varCut14 = AnlysStndRsltCd.charAt(13); //alert('varCut14='+varCut14);
+        //초기화
+        jibunAddrAll.setValue("");
+        roadAddrAll.setValue("");
+        if (Ds_ZIP_ROAD_STANDARD.getRowCount() < 1) {
+            Radio_standardType.setValue(0); //입력주소 체크
+            Radio_standardType.setDisabled(true); //비활성화
+            jibunAddrAll.setValue("표준화 주소 없음(장애)");
+            roadAddrAll.setValue("표준화 주소 없음(장애)");
+            wprom.alert("조회된 자료가 없습니다");
+            return; //하단을 만족하지 않는 경우는 "표준화 주소 없음으로 표시"한다	
+        } else if (varCut1 == 1 && ((varCut2 == 1 || varCut2 == 2)) && ((varCut8 == 1 || varCut9 == 1)) && 
+          ((varCut14 == 1 || (varCut14 >= 2 && varCut7 >= 5)))) {
+            //loRow
+            AnlysStndZipCode = getZipTypeCode(Ds_ZIP_ROAD_STANDARD, "Zip", "BaseAreaNo");
+            if (!edConfirmAddr.getReadOnly() == false) {
+                //표준화 서버에 갔다 온 후 입력주소 상위/하위를 글로벌 변수에서 꺼내 세팅한다.
+                inputAddrAll.setValue(getDecoZipCode(AnlysStndZipCode[0]) + gsAdrs + gMakeInputAddrLabel);
+                ginputZipLabel = AnlysStndZipCode[0];
+            }
+
+            //2.1 :지번도로
+            var AnlysStndLotNoAddr = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "AnlysStndLotNoAddr"); //통짜 표준 지번주소
+            var OprtStndLotNoHighAddr = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "OprtStndLotNoHighAddr"); //운영주소 지번1
+            var OprtStndLotNoDtlAddr = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "OprtStndLotNoDtlAddr"); //운영주소 지번2
+            //지번주소 자르기
+            var OprtStndLotNoHighAddrLen = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "OprtStndLotNoHighAddr").length;
+            var AnlysStndLotNoAddr1 = "";
+            AnlysStndLotNoAddr1 = wconv.substr(Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "AnlysStndLotNoAddr"), 0, OprtStndLotNoHighAddrLen);
+            var AnlysStndLotNoAddr2 = "";
+            AnlysStndLotNoAddr2 = wconv.substr(Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "AnlysStndLotNoAddr"), OprtStndLotNoHighAddrLen + 1);
+
+            //alert('OprtStndLotNoHighAddr==='+OprtStndLotNoHighAddr);
+            //alert('OprtStndLotNoHighAddrLen==='+OprtStndLotNoHighAddrLen);
+            //alert('AnlysStndLotNoAddr1==='+AnlysStndLotNoAddr1);
+            //alert('AnlysStndLotNoAddr2==='+AnlysStndLotNoAddr2);
+            gAnlysStndLotNoAddr1 = AnlysStndLotNoAddr1; //리턴결과에서 사용하기 위해 글로벌 변수에 담는다
+            gAnlysStndLotNoAddr2 = AnlysStndLotNoAddr2; //리턴결과에서 사용하기 위해 글로벌 변수에 담는다
+            jibunAddrAll.setValue(getDecoZipCode(AnlysStndZipCode[0]) + AnlysStndLotNoAddr1 + " " + AnlysStndLotNoAddr2);
+
+            //3.1 :도로주소
+            var AnlysStndRdNmHighAddrA = "";
+            AnlysStndRdNmHighAddrA = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "AnlysStndRdNmHighAddrA");
+            var AnlysStndRdNmUndrAddrA = "";
+            AnlysStndRdNmUndrAddrA = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "AnlysStndRdNmUndrAddrA");
+            gAnlysStndRdNmHighAddrA = AnlysStndRdNmHighAddrA; //리턴결과에서 사용하기 위해 글로벌 변수에 담는다
+            gAnlysStndRdNmUndrAddrA = AnlysStndRdNmUndrAddrA; //리턴결과에서 사용하기 위해 글로벌 변수에 담는다
+            var stdRoadAddr = getDecoZipCode(AnlysStndZipCode[0]) + AnlysStndRdNmHighAddrA + " " + AnlysStndRdNmUndrAddrA;
+            roadAddrAll.setValue(stdRoadAddr);
+        } else {
+            gsOddTypeCode = "1"; //오류가 아니라서 1로 세팅함							
+            gsOddTempCode = "2"; //오류는 아니지만  리턴VO가 없어서 하단에 입력값을 넣기 위해 임시 세팅하는 변수임 
+            jibunAddrAll.setValue("표준화 주소 없음"); //분석표준주소 결과 코드(15자리):표준화서버가 응답을 한경우이지만 처리결과 없을때
+            roadAddrAll.setValue("표준화 주소 없음");
+            Radio_standardType.setValue(0); //입력주소 체크
+            Radio_standardType.setDisabled(true); //비활성화
+            //변수값을 초기화
+            gAnlysStndLotNoAddr1 = "";
+            gAnlysStndLotNoAddr2 = "";
+            gAnlysStndRdNmHighAddrA = "";
+            gAnlysStndRdNmUndrAddrA = "";
+            wprom.alert("표준화 주소를 생성하는데 적합한 조합이 아닙니다");
+            return;
+        }
+    } else if (Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "selfErrCode") == "Fail" && sResCd == "") {
+
+        //장애발생시 아래와 값이 레벨을 세팅해 줌.
+        jibunAddrAll.setValue(extStr);
+        roadAddrAll.setValue(extStr);
+        wprom.alert("표준주소 찾기 대기중입니다.(Exception발생:응답코드 없음)");
+        return;
+    } else if (sResCd == "") {
+
+        //장애발생시 아래와 값이 레벨을 세팅해 줌.
+        jibunAddrAll.setValue(extStr);
+        roadAddrAll.setValue(extStr);
+        wprom.alert("응답코드가 존재하지 않습니다(No Exception!!!)");
+        return;
+    } else if (sResCd != "" && sResCd == "S002") {
+
+        //장애발생시 아래와 값이 레벨을 세팅해 줌.
+        jibunAddrAll.setValue(extStr);
+        roadAddrAll.setValue(extStr);
+        wprom.alert("비정상응답코드(S002)가 반환되었습니다");
+        return;
+    } else {
+        //S001, S101,S102,S103,S104,S105,S106,S107 를 포함함.
+
+        //장애발생시 아래와 값이 레벨을 세팅해 줌.
+        jibunAddrAll.setValue(extStr);
+        roadAddrAll.setValue(extStr);
+        wprom.alert("비정상응답코드(Sxxx)가 반환되었습니다");
+        return;
+    }
+};
+
+scwin.btn_confirm_OnClick = function(obj) {
+    //alert("btn_confirm Radio_standardType["+Radio_standardType+"]");
+    loRow = 0;
+    var sZipCode;
+    var sAdrs;
+    var sCityName;
+    var sCountyName;
+    var sTownName;
+    var sRoadName;
+    var sBuildingName;
+    var stdRoadAddr;
+    var chkRtnRdo = "3"; //입력,지번,도로주소인지 여부: 주소변환 결과 테이블에 값을 넘겨주기 위해서
+    var orgPlusAddress = gsAdrs + " " + gMakeInputAddrLabel; //original 상위+하위 주소(=sBuildingName)
+    //최종 선택된 값을 Opner창에 세팅하기.
+    
+    if (Radio_standardType.getValue() == 0) {
+        sZipCode = gZipcode;
+        if (edConfirmAddr.getReadOnly() == false) {
+            //강제 수정이면
+            sZipCode = mConfirmZip;
+            sAdrs = edConfirmAddr.getValue(); //강제 수정이면 직접 가져온다.
+            sBuildingName = "";
+        } else {
+            sAdrs = gsAdrs;
+            sBuildingName = gMakeInputAddrLabel;
+        }
+        chkRtnRdo = "";//Tab0_tab2_Radio_standardType.getValue();
+    } else if (Radio_standardType.getValue() == 2) {
+        //글로별 변수에 있는 표준화된 지번주소의 상 / 하위를 가져온다.
+        var AnlysStndLotNoAddr1 = gAnlysStndLotNoAddr1;
+        var AnlysStndLotNoAddr2 = gAnlysStndLotNoAddr2;
+        sZipCode = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "Zip"); //우편번호
+        sAdrs = AnlysStndLotNoAddr1;
+        sBuildingName = AnlysStndLotNoAddr2;
+        chkRtnRdo = "";//Tab0_tab2_Radio_standardType.getValue();
+    } else if (Radio_standardType.getValue() == 3) {
+        //var standardDoc = gVectorStandard.elementAt(0);				//리턴받은 결과의 벡터 값.
+        var AnlysStndRdNmHighAddrA = gAnlysStndRdNmHighAddrA;
+        var AnlysStndRdNmUndrAddrA = gAnlysStndRdNmUndrAddrA;
+        stdRoadAddr = AnlysStndRdNmHighAddrA + AnlysStndRdNmUndrAddrA;
+        sZipCode = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "Zip");
+        sAdrs = AnlysStndRdNmHighAddrA;
+        sBuildingName = AnlysStndRdNmUndrAddrA;
+        chkRtnRdo = "";//Tab0_tab2_Radio_standardType.getValue();
+    }
+
+
+
+    //광역시도/시군구/읍명동리 자르기 시작
+    var upAddress = wconv.trim(sAdrs);
+    if (upAddress.indexOf(" ") > 0) {
+        //공백이 하나라도 있어야 수행
+        //표준 도로명 주소일 경우 ===>또는 신규-도로명탭의 입력주소일경우
+        if (Radio_standardType.getValue() == 3 || (Tab0.getSelectedTabIndex() == "1" && Radio_standardType.getValue() == 0)) {
+            pos = upAddress.indexOf(" "); //첫번째 인덱스
+            var posLast = scwin.gfn_lastIndexOf(upAddress, " "); //마지막 인덱스
+            //뒤에서 두번째 공백의 pos를 구하기
+            var upAddressForRi = wconv.trim(wconv.substr(upAddress, 0, posLast)); //뒤에서 마지막 공백까지 자른문자
+            var posLast2 = scwin.gfn_lastIndexOf(upAddressForRi, " "); //뒤에서 두번째 인덱스
+            var charLength = wconv.length(upAddressForRi);//.length; //문자열 길이
+            var charLast = upAddressForRi.charAt(charLength - 1); //마지막 문자
+            var upAddressForRi1 = wconv.trim(wconv.substr(upAddressForRi, 0, posLast2)); //뒤에서 두번째 공백까지 자른 문자
+            //공백의 갯수 : 세종시의 경우 공백 갯수를 체크하여 공백이 하나인 경우, 
+            //앞은 sCityName, 끝은 sRoadName, sCountyName에는 " " 을 넣는다(임광태K)
+            var spaceLength = wconv.length(upAddress.split( " "));
+            if (spaceLength == 2) {
+                //공백이 하나인 경우(split의 경우 숫자가 2이다)
+                sCityName = wconv.substr(upAddress, 0, pos);
+                sCountyName = " "; //" "을 세팅한다
+                sRoadName = wconv.substr(upAddress, pos + 1); //두번째 pos부터 마지막 까지
+            } else {
+                if (charLast == "읍" || charLast == "면") {
+                    sCityName = wconv.substr(upAddress, 0, pos);
+                    sCountyName = wconv.substr(upAddressForRi1, pos + 1); //뒤에서 두번째 공백 까지 자른 문자중에 pos+1 이후 문자
+                    sRoadName = wconv.substr(upAddress, posLast2 + 1); //뒤에서 두번째 공백 이후 문자
+                } else {
+                    sCityName = wconv.substr(upAddress, 0, pos);
+                    sCountyName = wconv.substr(upAddressForRi, pos + 1); //읍면으로 끝나지 않으면 뒤에서 마지막 공백까지 자른문자의 pos+1부터 문자열
+                    sRoadName = wconv.substr(upAddress, posLast + 1);
+                }
+            }
+        } else {
+            //지번 주소일 경우 + 입력주소탭의 입력주소일 경우
+            pos = upAddress.indexOf( " "); //첫번째 인덱스
+            var posLast = scwin.gfn_lastIndexOf(upAddress, " "); //마지막 인덱스
+            var charLength = wconv.length(upAddress);//.length; //문자열 길이
+            var charLast = upAddress.charAt(charLength - 1); //마지막 문자
+            //뒤에서 두번째 공백의 pos를 구하기
+            var upAddressForRi = gfn_Rtrim(gfn_Ltrim(wconv.substr(upAddress, 0, posLast))); //리일 경우 뒤에서 마지막 공백까지 자른문자
+            var posLast2 = scwin.gfn_lastIndexOf(upAddressForRi, " "); //뒤에서 두번째 인덱스
+            var upAddressForRi1 = gfn_Rtrim(gfn_Ltrim(wconv.substr(upAddressForRi, 0, posLast2))); //뒤에서 두번째 공백까지 자른 문자
+            //공백의 갯수 : 세종시의 경우 공백 갯수를 체크하여 공백이 하나인 경우, 
+            //앞은 sCityName, 끝은 sRoadName, sCountyName에는 " " 을 넣는다(임광태K)
+            var spaceLength = upAddress.split( " ").length;
+            if (spaceLength == 2) {
+                //공백이 하나인 경우(split의 경우 숫자가 2이다)
+                sCityName = wconv.substr(upAddress, 0, pos);
+                sCountyName = " "; //" "을 세팅한다
+                sRoadName = wconv.substr(upAddress, pos + 1); //두번째 pos부터 마지막 까지
+            } else {
+                if (charLast == "리") {
+                    sCityName = wconv.substr(upAddress, 0, pos);
+                    sCountyName = wconv.substr(upAddressForRi1, pos + 1); //뒤에서 두번째 공백 까지 자른 문자중에 pos+1 이후 문자
+                    sRoadName = wconv.substr(upAddress, posLast2 + 1); //뒤에서 두번째 공백 이후 문자
+                } else {
+                    sCityName = wconv.substr(upAddress, 0, pos);
+                    sCountyName = wconv.substr(upAddressForRi, pos + 1); //리가 아니면 첫번째 pos부터 뒤에서 마지막 pos까지(html과 다른점 : 두번째 문자로 자른다)
+                    sRoadName = wconv.substr(upAddress, posLast + 1);
+                }
+            }
+        }
+    }
+
+
+
+
+
+    //alert('sZipCode='+sZipCode);
+    //alert('sCityName='+sCityName);
+    //alert('sCountyName='+sCountyName);
+    //alert('sRoadName='+sRoadName);
+    //주소변환 결과를 테이블에 저장한다(시작)========================================================================
+    //오프너창으세 받는 파라미터
+    var loginId = util.getGdsValue("gUserID"); //사번
+    if (wconv.length(loginId) <= 0) {
+        loginId = "5310518"; //사번
+    }
+    sSltValue = "1"; //입력값, 지번주소, 도로명주소
+    //kcb로 부터 받은 표준화 결과 값.
+    //sDBNm																	//DB명은 쿼리에서 가져와 자동 세팅한다.
+    sOrgZipCode = gZipcode; //원본우편번호
+    sOrgAddr = gsAdrs + " " + gMakeInputAddrLabel; //원본주소(상위주소+하위주소)
+    sStndJibunAddr1 = gAnlysStndLotNoAddr1; //표준지번주소1
+    sStndJibunAddr2 = gAnlysStndLotNoAddr2; //표준지번주소2
+    sBuildingManageNo = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "KcbBldMgtNo"); //주소관리번호 : 전문의 KCB건물관리번호(25자리)
+    sVillageInLaw = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "CtCntyGuCd"); //시군구코드			
+    sVillageInLaw += Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "LglDongDtlCd"); //법정동코드(시군구코드+법정동 상세코드)
+    sSanYnCd = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "BunjiTpCd"); //산여부코드0:대지,1:산)
+    nJibunMainNo = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "MainAddr"); //지번본번
+    nJibunSubNo = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "SubAddr"); //지번부번
+    sStndRoadAddr1 = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "AnlysStndRdNmHighAddrA"); //표준도로명주소1
+    sStndRoadAddr2 = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "AnlysStndRdNmUndrAddrA"); //표준도로명주소2
+    sRoadCode = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "CtCntyGuCd"); //시군구코드
+    sRoadCode += Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "RdNmNoA"); //도로명코드(시군구코드+도로명번호A)
+    sEupmyungdongSeqno = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "RdNmIdNo").charAt(12); //읍면동일련번호 : 전문의 도로명식별번호(25자리)  13,14번째 값.
+    sEupmyungdongSeqno += Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "RdNmIdNo").charAt(13);
+    sBasement = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "RdNmIdNo").charAt(14); //지하여부코드(0:지상,1:지하) : 전문의 도로명식별번호(25자리) 15번째 값.
+    nBuildingMainNo = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "RdBldFstNoA"); //건물본번
+    nBuildingSubNo = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "RdBldScndNoA"); //건물부번
+    sBuildingNm = wconv.substr(Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "Filler2"), 0, 50); //건물명 
+    sBuildingDong = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "BldDong"); //건물동
+    sBuildingFlr = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "BldFlr"); //건물층
+    sBuildingHo = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "BldHo"); //건물호
+    sZipCode = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "Zip"); //우편번호
+    sZipCodeSeqno = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "ZipSeqno"); //우편번호일련번호
+    sNZipCode = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "BaseAreaNo"); //기초구역번호
+    sUTMKx = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "xAxis"); //UTMK X좌표
+    sUTMKy = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "yAxis"); //UTMK Y좌표
+    sAddrRstCode = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "AnlysStndRsltCd"); //결과코드
+    sOddTypeCode = gsOddTypeCode; //장애구분코드(0:대상아님, 1:정상, 2 장애, 3:전환요청, 4:전환미적용, 5:전환적용) : 기본이 정상 1
+    sReqTypeCode = "0"; //재요청구분코드(0:대상아님,1:재요청) : 기본이 0
+    nOlnMgtNo = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "KcbSerialNo"); //온라인관리번호 : 널로 처리함.
+    sOlnSendDate = wconv.substr(Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "sSendDate"), 0, 8); //온라인전송일자 : 회원사 전문전송 시간에서 년월월만
+    sOlnSendHms = Ds_ZIP_ROAD_STANDARD.getCellData(loRow, "sSendDate"); //온라인전송시간 : 회원사 전문전송 시간:14
+    sApplyDler = ""; //적용처리자
+    sApplyDate = ""; //적용일자
+    sApplyHms = ""; //적용시간
+    sInptDler = loginId; //입력처리자
+    sInptDate = wconv.substr(gds.gDs_ServerTime.getCellData(0, "sToday"), 0, 8); //입력일자:html버전 확인할것
+    sInptHms = wconv.substr(gds.gDs_ServerTime.getCellData(0, "sToday"), 8); //입력시간:html버전 확인할것
+    sMdfcDler = ""; //수정처리자
+    sMdfcDate = ""; //수정일자
+    sMdfcHms = ""; //수정시간
+    //sZipType정의
+    //'''or '0' or null:구주소, 1:신주소 (입력주소를 선택한 경우 0 또는 1을 선택함)
+    /* 2013.12.27 주소표준화 적용 */
+    //'0' => 지번주소 탭에 입력주소를 선택한 경우 
+    //'1' => 도로명주소탭에 입력주소를 선택한 경우
+    //'2' => 표준지번주소
+    //'3' => 표준도로명주소
+    var sZipType = chkRtnRdo;
+    var sAddrMgtNo; //KCB건물관리번호:25
+    var sOrgZipType; //지번탭:0, 도로명탭:1
+    var sOrgZipCode = ""; //원본 우편번호
+    var sOrgAddr = ""; //원본주소(상위주소+하위주소)
+    sAddrMgtNo = sBuildingManageNo + ""; //KCB건물관리번호:25
+    sOrgZipType = Tab0.getSelectedTabIndex() + ""; //지번탭:0, 도로명탭:1
+    sOrgZipCode = gZipcode + ""; //원본 우편번호
+    sOrgAddr = orgPlusAddress; //원본주소(상위주소+하위주소)
+    //////장애또는 장애는 아니지만 표준화를 못한 경우는마스터 테이블에 값을 직접 가져와 세팅함.
+    if (gsOddTypeCode == "2" || gsOddTempCode == "2") {
+        sAddrMgtNo = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "sAddrMgtNo");
+        sVillageInLaw = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "sVillageInLaw");
+        sSanYnCd = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "sSanYnCd");
+        nJibunMainNo = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "nJibunMainNo");
+        nJibunSubNo = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "nJibunSubNo");
+        sRoadCode = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "sRoadCode");
+        sEupmyungdongSeqno = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "sEupmyungdongSeqno");
+        sBasement = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "sBasement");
+        nBuildingMainNo = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "nBuildingMainNo");
+        nBuildingSubNo = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "nBuildingSubNo");
+        sZipCode = "";
+        sZipCodeSeqno = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "sZipCodeSeqno");
+        sNZipCode = Ds_ZIP_ROAD_DETAIL_New.getCellData(gnRow, "sNZipCode");
+        sStndRoadAddr1 = ""; //표준도로명주소1
+        sStndRoadAddr2 = ""; //표준도로명주소2
+    }
+
+
+
+    /////////////////테이블 값 가져와 직접 세팅 끝/////////////////////////////////
+    if (edConfirmAddr.getReadOnly() == false) {
+        //강제 수정이면
+        sZipCode = gZipcode;
+        sOrgAddr = edConfirmAddr.getValue(); //강제 수정이면 직접 가져온다.
+        sAddrMgtNo = ""; //강제수정이면 관리번호 ""
+    }
+    if (sOrgZipType == "0" && chkRtnRdo == "0") {
+        //Tab0이고 입력주소 선택시는 0
+        sZipType = "0";
+    } else if (sOrgZipType == "1" && chkRtnRdo == "0") {
+        //Tab1이고 입력주소 선택시는 1
+        sZipType = "1";
+    }
+
+
+    //alert("sOrgZipType===>>>"+sOrgZipType);
+    //alert("chkRtnRdo===>"+chkRtnRdo);
+    //alert("sZipType===>>>>>>"+sZipType);
+/*    
+    var MethodObj = gfn_CreateMethodObj(SOBJ_control, "com.inswave.code.task.ZipCodeTask", "insertStandardResult");
+    gfn_SetParam(MethodObj, "sTableNm", sTableNm); //테이블명
+    //setInt(xmlDoc, "sSquence", sSquence);								//시퀀스	: 쿼리에서 함수 호출로 해결
+    gfn_SetParam(MethodObj, "sAdrsType", sAdrsType); //주소타입
+    //gfn_SetParam(MethodObj, "sDBNm", sDBNm);							//DB Name: 쿼리 해결
+    gfn_SetParam(MethodObj, "sOrgZipCode", sOrgZipCode);
+    gfn_SetParam(MethodObj, "sOrgAddr", sOrgAddr);
+    gfn_SetParam(MethodObj, "sStndJibunAddr1", sStndJibunAddr1);
+    gfn_SetParam(MethodObj, "sStndJibunAddr2", sStndJibunAddr2);
+    gfn_SetParam(MethodObj, "sBuildingManageNo", sAddrMgtNo);
+    gfn_SetParam(MethodObj, "sVillageInLaw", sVillageInLaw);
+    gfn_SetParam(MethodObj, "sSanYnCd", sSanYnCd);
+    gfn_SetParam(MethodObj, "nJibunMainNo", nJibunMainNo);
+    gfn_SetParam(MethodObj, "nJibunSubNo", nJibunSubNo);
+    gfn_SetParam(MethodObj, "sStndRoadAddr1", sStndRoadAddr1);
+    gfn_SetParam(MethodObj, "sStndRoadAddr2", sStndRoadAddr2);
+    gfn_SetParam(MethodObj, "sRoadCode", sRoadCode);
+    gfn_SetParam(MethodObj, "sEupmyungdongSeqno", sEupmyungdongSeqno);
+    gfn_SetParam(MethodObj, "sBasement", sBasement);
+    gfn_SetParam(MethodObj, "nBuildingMainNo", nBuildingMainNo);
+    gfn_SetParam(MethodObj, "nBuildingSubNo", nBuildingSubNo);
+    gfn_SetParam(MethodObj, "sBuildingNm", sBuildingNm);
+    gfn_SetParam(MethodObj, "sBuildingDong", sBuildingDong);
+    gfn_SetParam(MethodObj, "sBuildingFlr", sBuildingFlr);
+    gfn_SetParam(MethodObj, "sBuildingHo", sBuildingHo);
+    gfn_SetParam(MethodObj, "sZipCode", sZipCode);
+    gfn_SetParam(MethodObj, "sZipCodeSeqno", sZipCodeSeqno);
+    gfn_SetParam(MethodObj, "sNZipCode", sNZipCode);
+    gfn_SetParam(MethodObj, "sUTMKx", sUTMKx);
+    gfn_SetParam(MethodObj, "sUTMKy", sUTMKy);
+    gfn_SetParam(MethodObj, "sAddrRstCode", sAddrRstCode);
+    gfn_SetParam(MethodObj, "sOddTypeCode", sOddTypeCode);
+    gfn_SetParam(MethodObj, "sReqTypeCode", sReqTypeCode);
+    gfn_SetParam(MethodObj, "nOlnMgtNo", nOlnMgtNo);
+    gfn_SetParam(MethodObj, "sOlnSendDate", sOlnSendDate);
+    gfn_SetParam(MethodObj, "sOlnSendHms", sOlnSendHms);
+    gfn_SetParam(MethodObj, "sApplyDler", sApplyDler);
+    gfn_SetParam(MethodObj, "sApplyDate", sApplyDate);
+    gfn_SetParam(MethodObj, "sApplyHms", sApplyHms);
+    gfn_SetParam(MethodObj, "sInptDler", sInptDler);
+    gfn_SetParam(MethodObj, "sInptDate", sInptDate);
+    gfn_SetParam(MethodObj, "sInptHms", sInptHms);
+    gfn_SetParam(MethodObj, "sMdfcDler", sMdfcDler);
+    gfn_SetParam(MethodObj, "sMdfcDate", sMdfcDate);
+    gfn_SetParam(MethodObj, "sMdfcHms", sMdfcHms);
+    gfn_SetParam(MethodObj, "sZipType", sZipType); //주소 타입(입력주소:0 / 1, 표준지번주소:2, 표준도로주소:3)
+    gfn_SetParam(MethodObj, "sOrgZipType", Tab0.TabIndex); //Tab선택 타입(지번탭:0, 도로명주소탭:1)
+    // 검색조건 확인 마침
+    gfn_CallService(SOBJ_control, DOBJ_ZIP_ROAD_RESULT, MethodObj);
+*/
+	var MethodObj = new callService("com.inswave.code.task.ZipCodeTask", "insertStandardResult");
+	MethodObj.setId("insertStandardResult");
+	
+    MethodObj.setParam( "sTableNm", sTableNm); //테이블명
+    //setInt(xmlDoc, "sSquence", sSquence);								//시퀀스	: 쿼리에서 함수 호출로 해결
+    MethodObj.setParam( "sAdrsType", sAdrsType); //주소타입
+    //MethodObj.setParam( "sDBNm", sDBNm);							//DB Name: 쿼리 해결
+    MethodObj.setParam( "sOrgZipCode", sOrgZipCode);
+    MethodObj.setParam( "sOrgAddr", sOrgAddr);
+    MethodObj.setParam( "sStndJibunAddr1", sStndJibunAddr1);
+    MethodObj.setParam( "sStndJibunAddr2", sStndJibunAddr2);
+    MethodObj.setParam( "sBuildingManageNo", sAddrMgtNo);
+    MethodObj.setParam( "sVillageInLaw", sVillageInLaw);
+    MethodObj.setParam( "sSanYnCd", sSanYnCd);
+    MethodObj.setParam( "nJibunMainNo", nJibunMainNo);
+    MethodObj.setParam( "nJibunSubNo", nJibunSubNo);
+    MethodObj.setParam( "sStndRoadAddr1", sStndRoadAddr1);
+    MethodObj.setParam( "sStndRoadAddr2", sStndRoadAddr2);
+    MethodObj.setParam( "sRoadCode", sRoadCode);
+    MethodObj.setParam( "sEupmyungdongSeqno", sEupmyungdongSeqno);
+    MethodObj.setParam( "sBasement", sBasement);
+    MethodObj.setParam( "nBuildingMainNo", nBuildingMainNo);
+    MethodObj.setParam( "nBuildingSubNo", nBuildingSubNo);
+    MethodObj.setParam( "sBuildingNm", sBuildingNm);
+    MethodObj.setParam( "sBuildingDong", sBuildingDong);
+    MethodObj.setParam( "sBuildingFlr", sBuildingFlr);
+    MethodObj.setParam( "sBuildingHo", sBuildingHo);
+    MethodObj.setParam( "sZipCode", sZipCode);
+    MethodObj.setParam( "sZipCodeSeqno", sZipCodeSeqno);
+    MethodObj.setParam( "sNZipCode", sNZipCode);
+    MethodObj.setParam( "sUTMKx", sUTMKx);
+    MethodObj.setParam( "sUTMKy", sUTMKy);
+    MethodObj.setParam( "sAddrRstCode", sAddrRstCode);
+    MethodObj.setParam( "sOddTypeCode", sOddTypeCode);
+    MethodObj.setParam( "sReqTypeCode", sReqTypeCode);
+    MethodObj.setParam( "nOlnMgtNo", nOlnMgtNo);
+    MethodObj.setParam( "sOlnSendDate", sOlnSendDate);
+    MethodObj.setParam( "sOlnSendHms", sOlnSendHms);
+    MethodObj.setParam( "sApplyDler", sApplyDler);
+    MethodObj.setParam( "sApplyDate", sApplyDate);
+    MethodObj.setParam( "sApplyHms", sApplyHms);
+    MethodObj.setParam( "sInptDler", sInptDler);
+    MethodObj.setParam( "sInptDate", sInptDate);
+    MethodObj.setParam( "sInptHms", sInptHms);
+    MethodObj.setParam( "sMdfcDler", sMdfcDler);
+    MethodObj.setParam( "sMdfcDate", sMdfcDate);
+    MethodObj.setParam( "sMdfcHms", sMdfcHms);
+    MethodObj.setParam( "sZipType", sZipType); //주소 타입(입력주소:0 / 1, 표준지번주소:2, 표준도로주소:3)
+    MethodObj.setParam( "sOrgZipType", Tab0.getSelectedTabIndex()); //Tab선택 타입(지번탭:0, 도로명주소탭:1)
+	
+	MethodObj.setUrl("/common/CBSO019PController.do");
+	MethodObj.setXPath("//*/vector/data/COMAB001");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_Team.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("COMAB001"), "Ds_ZIP_ROAD_RESULT");
+	//util.setCompBindRefresh("DsWs_Team");
+	//util.setRowPosition(DsWs_Team, 0);
+    
+    nAddrStdSeq = Ds_ZIP_ROAD_RESULT.getCellData(0, "i"); //테이블별 시퀀스		
+    gTblSquence = nAddrStdSeq;
+
+    //신우편번호 자리수 설정
+    if (Radio_standardType.getValue() == 3)
+        sZipCode = getZipTypeCode(Ds_ZIP_ROAD_STANDARD, "Zip", "BaseAreaNo")[0];
+    else
+        sZipCode = ginputZipLabel;
+    if (gsOddTypeCode == "2" || gsOddTempCode == "2") {
+        //오프너에 넘겨줄 sZipCode:위 표준화 결과 테이블에 공백을 넣줘야 해서 다시한번 처리함.
+        //sZipCode 	= Ds_ZIP_ROAD_DETAIL_New.GetColumn(gnRow, "sZipCode");
+        //sZipCode 	= getZipTypeCode(Ds_ZIP_ROAD_STANDARD, "sZipCode", "sNZipCode")[0];
+        sZipCode = ginputZipLabel;
+    }
+    if (wconv.length(sZipCode) == 0) {
+        //지번탭에서 표준화결과 없을때는 sZipCode에 원본주소를 입력
+        sZipCode = gZipcode;
+    }
+
+
+
+    //최종 선택된 값을 Opner창에 세팅하기.인자정의
+    /*
+    1.sZipCode :		표준화 결과 받은 우편번호
+    2.sAdrs :			선택된 상위 
+    3.sCityName :		광역시도
+    4.sCountyName : 	시군구
+    5.sRoadName :		읍면동 / 도로명
+    6.num :				오프너에서 받은 넘버
+    7.sBuildingName :	하위주소
+    8.sZipType :		구주소입력(0)/신주소앱력주소(1)/표준지번(2)/표준도로명(3)
+    9.sAddrMgtNo :		KCB건물관리번호(25자리)
+    10.gTblSquence :	테이블별 Sequence
+    11.sOrgZipType :	원본 우편타입(0:입력지번, 1:입력도로명)
+    12.sOrgZipCode :	원본 우편번호
+    13.sOrgAddr	      :	원본 주소(상위+하위주소)
+    14.sVillageInLaw  :	법정동코드
+    */
+    /*
+		strAlert = "sZipCode=	 "+ sZipCode      +"\n";
+		strAlert+="sAdrs=		 "+ sAdrs         +"\n";
+		strAlert+="sCityName=	 "+ sCityName     +"\n";
+		strAlert+="sCountyName=	 "+ sCountyName   +"\n";
+		strAlert+="sRoadName=	 "+ sRoadName     +"\n";
+		strAlert+="sBuildingName="+ sBuildingName +"\n";
+		strAlert+="sZipType=	 "+ sZipType      +"\n";
+		strAlert+="sAddrMgtNo=	 "+ sAddrMgtNo    +"\n";
+		strAlert+="gTblSquence=	 "+ gTblSquence   +"\n";
+		strAlert+="sOrgZipType=	 "+ sOrgZipType   +"\n";
+		strAlert+="sOrgZipCode=	 "+ sOrgZipCode   +"\n";
+		strAlert+="sOrgAddr=	 "+ sOrgAddr      +"\n";
+		strAlert+="sVillageInLaw="+ sVillageInLaw ;
+		
+		alert("call opener="+strAlert);
+        */
+    if (sOrgZipType == 0) {
+        //Grd_ZIPList_OnCellDblClick("",gRow);
+        scwin.setOpener("0", sZipCode, sAdrs, sCityName, sCountyName, sRoadName, sBuildingName, sZipType, sAddrMgtNo, gTblSquence, Tab0.getSelectedTabIndex(), sOrgZipCode, sOrgAddr, sVillageInLaw);
+    } else if (sOrgZipType == 1) {
+        scwin.setOpener("1", sZipCode, sAdrs, sCityName, sCountyName, sRoadName, sBuildingName, sZipType, sAddrMgtNo, gTblSquence, Tab0.getSelectedTabIndex(), sOrgZipCode, sOrgAddr, sVillageInLaw);
+    }
+};
+
+scwin.setOpener = function(gbn, sZipCode, sAdrs, sCityName, sCountyName, sRoadName, sBuildingName, sZipType, sAddrMgtNo, gTblSquence, sOrgZipType, sOrgZipCode, sOrgAddr, sVillageInLaw) {
+    
+    var strAlert = "sZipCode=\t" + sZipCode + "\n";
+    strAlert += "sAdrs=\t\t" + sAdrs + "\n";
+    strAlert += "sCityName=\t" + sCityName + "\n";
+    strAlert += "sCountyName=\t" + sCountyName + "\n";
+    strAlert += "sRoadName=\t" + sRoadName + "\n";
+    strAlert += "sBuildingName=" + sBuildingName + "\n";
+    strAlert += "sZipType=\t" + sZipType + "\n";
+    strAlert += "sAddrMgtNo=\t" + sAddrMgtNo + "\n";
+    strAlert += "gTblSquence=\t" + gTblSquence + "\n";
+    strAlert += "sOrgZipType=\t" + sOrgZipType + "\n";
+    strAlert += "sOrgZipCode=\t" + sOrgZipCode + "\n";
+    strAlert += "sOrgAddr=\t" + sOrgAddr + "\n";
+    strAlert += "sVillageInLaw=" + sVillageInLaw;
+    
+
+    //sCountyName이 공백이고 sRoadName의 끝 글자기 "시로 끝나면" sCountyName=sRoadName, sRoadName=""처리 (<===속초우체국사서함 경우)
+    if (wconv.trim(sCountyName) == "" && (wconv.trim(sRoadName.charAt(wconv.length(sRoadName) - 1)) == "시")) {
+        sCountyName = sRoadName;
+        sRoadName = "";
+    }
+    var idxLen = 3;
+    if (wconv.length(sZipCode) == 5)
+        idxLen = 2;
+    var addStr1 = "";
+    var addStr2 = "";
+    var addStr3 = "";
+
+    //상위주소 만들기
+    addStr1 = sCityName + " " + sCountyName;
+    if (wconv.length(sRoadName) > 0) {
+        addStr1 = addStr1 + " " + sRoadName + " ";
+    }
+
+
+    //하위주소 만들기
+    addStr2 = sBuildingName;
+
+    //addrStr3는 사용처 정의를 해야 함.(현재 까지는 필요없음)
+    addStr3 = sRoadName;
+
+    //alert("addStr1="+addStr1);
+    //alert("addStr2="+addStr2);
+    //alert("addStr3="=addStr3);
+    
+    if (wconv.length(args[0]) > 0 && wconv.length(args[1]) > 0) {
+        // 보모창의 해당 값을 세팅
+        //parentWin.eval(args[0]).insertRow(args[1]);
+        if (wconv.length(args[2]) > 0)
+        	//parentWin.eval(args[0]).setCellData(args[1], args[2], wconv.left(sZipCode, 3));
+        	parentWin.Ds_Addr.setCellData(args[1], args[2], wconv.left(sZipCode, 3));
+        if (wconv.length(args[3]) > 0)
+            //parentWin.eval(args[0]).setCellData(args[1], args[3], wconv.right(sZipCode, idxLen));
+            parentWin.Ds_Addr.setCellData(args[1], args[3], wconv.right(sZipCode, idxLen));
+        if (wconv.length(args[4]) > 0) {
+            //parentWin.eval(args[0]).setCellData(args[1], args[4], addStr1);
+            parentWin.Ds_Addr.setCellData(args[1], args[4], addStr1);
+        }
+        if (wconv.length(args[5]) > 0) {
+            //parentWin.eval(args[0]).setCellData(args[1], args[5], addStr2);
+            parentWin.Ds_Addr.setCellData(args[1], args[5], addStr2);
+        }
+        if (wconv.length(args[6]) > 0){
+            //parentWin.eval(args[0]).setCellData(args[1], args[6], sCityName);
+            parentWin.Ds_Addr.setCellData(args[1], args[6], sCityName);
+        }    
+        if (wconv.length(args[7]) > 0){
+            //parentWin.eval(args[0]).setCellData(args[1], args[7], sCountyName);
+            parentWin.Ds_Addr.setCellData(args[1], args[7], sCountyName);
+        }    
+        if (wconv.length(args[8]) > 0){
+            //parentWin.eval(args[0]).setCellData(args[1], args[8], addStr3);
+            parentWin.Ds_Addr.setCellData(args[1], args[8], addStr3);
+        }    
+        //if (Length(args[12]) > 0) Eval(args[0]).setCellData(args[1], args[12], "1");		//우편번호 신/구 구분(기존)
+        if (wconv.length(args[12]) > 0){
+            //parentWin.eval(args[0]).setCellData(args[1], args[12], sZipType); //우편번호 신/구 구분
+            parentWin.Ds_Addr.setCellData(args[1], args[12], sZipType); //우편번호 신/구 구분
+        }    
+        if (wconv.length(args[13]) > 0){
+            //parentWin.eval(args[0]).setCellData(args[1], args[13], sAddrMgtNo); //우편관리번호
+            parentWin.Ds_Addr.setCellData(args[1], args[13], sAddrMgtNo); //우편관리번호
+        }    
+        if (wconv.length(args[14]) > 0){
+            //parentWin.eval(args[0]).setCellData(args[1], args[14], gTblSquence); //글로벌시퀀스
+            parentWin.Ds_Addr.setCellData(args[1], args[14], gTblSquence); //글로벌시퀀스
+        }    
+        if (wconv.length(args[15]) > 0){
+            //parentWin.eval(args[0]).setCellData(args[1], args[15], sOrgZipType); //원본 우편타입(0:입력지번, 1:입력도로명)
+            parentWin.Ds_Addr.setCellData(args[1], args[15], sOrgZipType); //원본 우편타입(0:입력지번, 1:입력도로명)
+        }    
+        if (wconv.length(args[16]) > 0){
+            //parentWin.eval(args[0]).setCellData(args[1], args[16], sOrgZipCode); //원본 우편번호
+            parentWin.Ds_Addr.setCellData(args[1], args[16], sOrgZipCode); //원본 우편번호
+        }    
+        if (wconv.length(args[17]) > 0){
+            //parentWin.eval(args[0]).setCellData(args[1], args[17], sOrgAddr); //원본 주소(상위+하위주소)
+            parentWin.Ds_Addr.setCellData(args[1], args[17], sOrgAddr); //원본 주소(상위+하위주소)
+        }    
+        // 포커스 이동
+       	try{
+	        if (wconv.length(args[9]) > 0){
+	            	eval(args[9]).focus();
+	            	//parentWin.scwin.
+	        }    
+        }catch(e){};	
+    }
+    
+    var sAdrs3 = "";
+    if (wconv.length(sRoadName) > 0) {
+        sAdrs3 = sRoadName + " ";
+    }
+    var ret = wconv.left(sZipCode, 3) + " ^" + //우편번호 앞
+        wconv.right(sZipCode, idxLen) + " ^" + //우편번호 뒤
+        addStr1 + " ^" + //우편번호 주소1
+        wconv.trim(addStr2) + " ^" + //우편번호 주소2
+        " ^" + //sNo  사용하지 않아서 빈값으로 내려줌.
+        sCityName + " ^" + //시도
+        sCountyName + " ^" + //시군구
+        sAdrs3; //읍면동(읍면동 + 도로명)
+    ret = ret + " ^" + sZipType;
+    ret = ret + " ^" + sAddrMgtNo;
+    ret = ret + " ^" + gTblSquence;
+    ret = ret + " ^" + sOrgZipType;
+    ret = ret + " ^" + sOrgZipCode;
+    ret = ret + " ^" + sOrgAddr;
+    ret = ret + " ^" + sVillageInLaw;
+    //wconv.trace("ret::::::::::cell::::::::::::::::::::::::::::::::" + ret);
+    wprom.close(ret);
+};
+
+//도로명/읍면동명을 가져온다(Master)
+scwin.getMasterRoadAddress = function(curRow) {
+    var sCityName = "";
+    var sCountyName = "";
+    var sTownName = "";
+    var sRoadName = "";
+    var sRiName = "";
+    sCityName = Ds_ZIP_ROAD_New.getCellData(curRow, "sCityName");
+    sCountyName = Ds_ZIP_ROAD_New.getCellData(curRow, "sCountyName");
+    sTownName = Ds_ZIP_ROAD_New.getCellData(curRow, "sTownName");
+    sRoadName = Ds_ZIP_ROAD_New.getCellData(curRow, "sRoadName");
+    sRiName = Ds_ZIP_ROAD_New.getCellData(curRow, "sRiName");
+
+
+    //trace("Ds_ZIP_ROAD_New.Contents==="+Ds_ZIP_ROAD_New.SaveXML());
+    var rtnString = "";
+    rtnString = sCityName;
+    if (wconv.length(sCountyName) > 0)
+        rtnString += " " + sCountyName;
+    if (wconv.length(sTownName) > 0)
+        rtnString += " " + sTownName;
+    if (wconv.length(sRoadName) > 0)
+        rtnString += " " + sRoadName;
+    if (wconv.length(sRiName) > 0)
+        rtnString += " " + sRiName;
+    return rtnString;
+};
+//expression
+//지번상세주소를 가져온다.
+scwin.getDetailAddress = function(curRow) {
+    var rtnString = "";
+    var sBuildingName = Ds_ZIP.getCellData(curRow, "sBuildingName");
+    var sFromNo = Ds_ZIP.getCellData(curRow, "sFromNo");
+    var sTownName = Ds_ZIP.getCellData(curRow, "sTownName");
+    if (sBuildingName != "" || sFromNo != "") {
+        //둘중 하나라도 있으면 둘을 공백으로 붙인다
+        rtnString = sBuildingName;
+        if (sBuildingName != "") {
+            rtnString += " " + sFromNo;
+        } else if (sBuildingName == "") {
+            rtnString += sFromNo;
+        }
+    } else if (sBuildingName == "" || sFromNo == "") {
+        //둘중 하나라도 공백이면 sTownName을 가져온다
+        rtnString = sTownName;
+    }
+    return rtnString;
+};
+
+//도로명 상세주소의 도로명 주소 필드를 가져온다
+scwin.getDetailRoadAddress1 = function(curRow) {
+    var chkRdo = Tab0_tab2_Rdo_Type1.getValue();
+    var rtnString = "";
+    var sCityName = Ds_ZIP_ROAD_DETAIL_New.getCellData(curRow, "sCityName");
+    var sCountyName = Ds_ZIP_ROAD_DETAIL_New.getCellData(curRow, "sCountyName");
+    var sTownName = Ds_ZIP_ROAD_DETAIL_New.getCellData(curRow, "sTownName");
+    var sRiName = Ds_ZIP_ROAD_DETAIL_New.getCellData(curRow, "sRiName");
+    var sRoadName = Ds_ZIP_ROAD_DETAIL_New.getCellData(curRow, "sRoadName");
+    var nBuildingMainNo = Ds_ZIP_ROAD_DETAIL_New.getCellData(curRow, "nBuildingMainNo");
+    var nBuildingSubNo = Ds_ZIP_ROAD_DETAIL_New.getCellData(curRow, "nBuildingSubNo");
+    var sBasement = Ds_ZIP_ROAD_DETAIL_New.getCellData(curRow, "sBasement");
+    if (sBasement == "1") {
+        sRoadName = sRoadName + " 지하 ";
+    } else {
+        sRoadName = sRoadName + " ";
+    }
+    if (gClaimAcctAddrYN == "Y" && nBuildingMainNo == 0) {
+        // 보상 사고배당이고 맨 처음 표시(읍면동만 표시)
+        //------------------------------------------------------------------------
+        if (sTownName.charAt((wconv.length(sTownName)) - 1) == "읍") {
+            rtnString = sCityName + " " + sCountyName + " " + sTownName + " " + sRiName;
+        } else if (sTownName.charAt((sTownName.length) - 1) == "면") {
+            //마지막 문자
+            rtnString = sCityName + " " + sCountyName + " " + sTownName + " " + sRiName;
+        } else {
+            rtnString = sCityName + " " + sCountyName + " " + sTownName;
+        }
+    } else {
+        //------------------------------------------------------------------------
+        if (nBuildingSubNo == 0) {
+            if (sTownName.charAt((sTownName.length) - 1) == "읍") {
+                //마지막 문자 읍/면일때만 sTownName을 보여준다
+                rtnString = sCityName + " " + sCountyName + " " + sTownName + " " + sRoadName + nBuildingMainNo;
+            } else if (sTownName.charAt((sTownName.length) - 1) == "면") {
+                //마지막 문자
+                rtnString = sCityName + " " + sCountyName + " " + sTownName + " " + sRoadName + nBuildingMainNo;
+            } else {
+                rtnString = sCityName + " " + sCountyName + " " + sRoadName + nBuildingMainNo;
+            }
+        } else {
+            if (sTownName.charAt((sTownName.length) - 1) == "읍") {
+                //마지막 문자 읍/면일때만 sTownName을 보여준다
+                rtnString = sCityName + " " + sCountyName + " " + sTownName + " " + sRoadName + nBuildingMainNo + "-" + nBuildingSubNo;
+            } else if (sTownName.charAt((sTownName.length) - 1) == "면") {
+                //마지막 문자
+                rtnString = sCityName + " " + sCountyName + " " + sTownName + " " + sRoadName + nBuildingMainNo + "-" + nBuildingSubNo;
+            } else {
+                rtnString = sCityName + " " + sCountyName + " " + sRoadName + nBuildingMainNo + "-" + nBuildingSubNo;
+            }
+        }
+    }
+
+
+
+
+
+    //alert("#### getDetailRoadAddress1 ["+curRow+"] ["+gClaimAcctAddrYN+"]["+nBuildingMainNo+"]["+rtnString+"]");
+    return rtnString;
+};
+
+//도로명 상세주소의 번지필드를 가져온다.
+scwin.getDetailRoadAddress2 = function(curRow) {
+    var chkRdo = Tab0_tab2_Rdo_Type1.getValue();
+    var rtnString = "";
+    var sTownName = Ds_ZIP_ROAD_DETAIL_New.getCellData(curRow, "sTownName");
+    var sRiName = Ds_ZIP_ROAD_DETAIL_New.getCellData(curRow, "sRiName");
+    var nJibunMainNo = Ds_ZIP_ROAD_DETAIL_New.getCellData(curRow, "nJibunMainNo");
+    var nJibunSubNo = Ds_ZIP_ROAD_DETAIL_New.getCellData(curRow, "nJibunSubNo");
+    var sSanYnCd = Ds_ZIP_ROAD_DETAIL_New.getCellData(curRow, "sSanYnCd");
+    var sRiName = sRiName + " ";
+    if (sSanYnCd == "1") {
+        sRiName = sRiName + "산 ";
+    }
+    if (gClaimAcctAddrYN == "Y" && nJibunMainNo == 0) {
+        // 보상 사고배당이고 맨 처음 표시(미표시)
+        rtnString = "";
+    } else {
+        if (nJibunSubNo == 0) {
+            rtnString = "(" + sTownName + " " + sRiName + nJibunMainNo + ")";
+        } else {
+            rtnString = "(" + sTownName + " " + sRiName + nJibunMainNo + "-" + nJibunSubNo + ")";
+        }
+    }
+    return rtnString;
+};
+
+
+scwin.btn_result_view_hidden = function() {
+    //번지/건물명,동층호를 입력했을경우 주소표준결과를 히든해줘야 한다.
+    //if (ShapeResult.Visible == 1) {
+        //결과가 보일때만 히든으로 처리, 보이지 않을때는 그냥 그대로
+        fy = false;
+        ShapeResult.hide();
+        Static6.hide();
+        Static8.hide();
+        Static7.hide();
+        Radio_standardType.hide();
+        inputAddrAll.hide();
+        jibunAddrAll.hide();
+        roadAddrAll.hide();
+        btn_confirm.hide();
+        Button2.hide();
+    //}
+};
+
+scwin.btn_result_view_show = function() {
+    //표준화를 눌렸을 경우는 보여준다
+    fy = true;
+    ShapeResult.show();
+    Static6.show();
+    Static8.show();
+    Static7.show();
+    Radio_standardType.show();
+    inputAddrAll.show();
+    jibunAddrAll.show();
+    roadAddrAll.show();
+    btn_confirm.show();
+    Button2.show();
+};
+
+scwin.btn_Test_OnClick = function(obj, fy) {
+    fy = true;
+    ShapeResult.ShapeResult.Visible();
+    Static6.Static6.Visible();
+    Static8.Static8.Visible();
+    Static7.Static7.Visible();
+    Radio_standardType.Radio_standardType.Visible();
+    inputAddrAll.inputAddrAll.Visible();
+    jibunAddrAll.jibunAddrAll.Visible();
+    roadAddrAll.roadAddrAll.Visible();
+    btn_confirm.btn_confirm.Visible();
+    Button2.Button2.Visible();
+
+    //alert(Tab0.TabIndex);
+    var gbn = "1"; //지번주소일경우
+    gbn = "2"; //도로명주소일 경우
+    //지번일경우
+    //var upAddress=gfn_Rtrim(gfn_Ltrim("서울 종로구 연지동"));
+    //var upAddress=gfn_Rtrim(gfn_Ltrim("경기 고양시 일산동구 풍동"));
+    //var upAddress=gfn_Rtrim(gfn_Ltrim("전남 장흥군 대덕읍 도청리"));
+    //var upAddress=gfn_Rtrim(gfn_Ltrim("전남 전주시 북구 고울면 기장리"));
+    //var upAddress=gfn_Rtrim(gfn_Ltrim("세종 한솔동"));
+    //도로명일경우
+    /* 1) 앞뒤 공백을 모두 제거
+       2) 1번째 구분자(공백)이전은 Adrs1값
+       3) 마지막 1번째 구분자(공백) 바로 이전 값이 "읍","면" 인 경우 마지막 2번째 구분자(공백) 이후 값을  Adrs3값
+          그 이외에는 마지막 1번째 구분자(공백) 이후 값을 Adrs2값
+       4) 그리고 남은 데이터는 Adrs2값(단, 미존재하는 경우 " "공백을 Adrs2값) */
+    var upAddress = wconv.trim("서울 종로구 창경궁로");
+    //var upAddress="전남 장흥군 대덕읍 도동2길";
+    //var upAddress="세종 한솔대로";
+    var sCityName;
+    var sCountyName;
+    var sRoadName;
+    if (wconv.trim(upAddress).indexOf( " ") > 0) {
+        //공백이 하나라도 있어야 수행
+        if (gbn == "2") {
+            pos = upAddress.indexOf( " "); //첫번째 인덱스
+            var posLast = scwin.gfn_lastIndexOf(upAddress, " "); //마지막 인덱스
+            //뒤에서 두번째 공백의 pos를 구하기
+            var upAddressForRi = gfn_Rtrim(gfn_Ltrim(wconv.substr(upAddress, 0, posLast))); //뒤에서 마지막 공백까지 자른문자
+            var posLast2 = scwin.gfn_lastIndexOf(upAddressForRi, " "); //뒤에서 두번째 인덱스
+            var charLength = upAddressForRi.length; //문자열 길이
+            var charLast = upAddressForRi.charAt(charLength - 1); //마지막 문자
+            var upAddressForRi1 = gfn_Rtrim(gfn_Ltrim(wconv.substr(upAddressForRi, 0, posLast2))); //뒤에서 두번째 공백까지 자른 문자
+            //공백의 갯수 : 세종시의 경우 공백 갯수를 체크하여 공백이 하나인 경우, 
+            //앞은 sCityName, 끝은 sRoadName, sCountyName에는 " " 을 넣는다(임광태K)
+            var spaceLength = upAddress.split( " ").length;
+            //wprom.alert("spaceLength===>>>" + spaceLength);
+            if (spaceLength == 2) {
+                //공백이 하나인 경우(split의 경우 숫자가 2이다)
+                sCityName = wconv.substr(upAddress, 0, pos);
+                sCountyName = " "; //" "을 세팅한다
+                sRoadName = wconv.substr(upAddress, pos + 1); //두번째 pos부터 마지막 까지
+            } else {
+                if (charLast == "읍" || charLast == "면") {
+                    sCityName = wconv.substr(upAddress, 0, pos);
+                    sCountyName = wconv.substr(upAddressForRi1, pos + 1); //뒤에서 두번째 공백 까지 자른 문자중에 pos+1 이후 문자
+                    sRoadName = wconv.substr(upAddress, posLast2 + 1); //뒤에서 두번째 공백 이후 문자
+                } else {
+                    sCityName = wconv.substr(upAddress, 0, pos);
+                    sCountyName = wconv.substr(upAddressForRi, pos + 1); //읍면으로 끝나지 않으면 뒤에서 마지막 공백까지 자른문자의 pos+1부터 문자열
+                    sRoadName = wconv.substr(upAddress, posLast + 1);
+                }
+            }
+        } else {
+            pos = upAddress.indexOf( " "); //첫번째 인덱스
+            var posLast = scwin.gfn_lastIndexOf(upAddress, " "); //마지막 인덱스
+            var charLength = upAddress.length; //문자열 길이
+            var charLast = upAddress.charAt(charLength - 1); //마지막 문자
+            //뒤에서 두번째 공백의 pos를 구하기
+            var upAddressForRi = gfn_Rtrim(gfn_Ltrim(wconv.substr(upAddress, 0, posLast))); //리일 경우 뒤에서 마지막 공백까지 자른문자
+            var posLast2 = scwin.gfn_lastIndexOf(upAddressForRi, " "); //뒤에서 두번째 인덱스
+            var upAddressForRi1 = gfn_Rtrim(gfn_Ltrim(wconv.substr(upAddressForRi, 0, posLast2))); //뒤에서 두번째 공백까지 자른 문자
+            //공백의 갯수 : 세종시의 경우 공백 갯수를 체크하여 공백이 하나인 경우, 
+            //앞은 sCityName, 끝은 sRoadName, sCountyName에는 " " 을 넣는다(임광태K)
+            var spaceLength = upAddress.split( " ").length;
+            if (spaceLength == 2) {
+                //공백이 하나인 경우(split의 경우 숫자가 2이다)
+                sCityName = wconv.substr(upAddress, 0, pos);
+                sCountyName = " "; //" "을 세팅한다
+                sRoadName = wconv.substr(upAddress, pos + 1); //두번째 pos부터 마지막 까지
+            } else {
+                if (charLast == "리") {
+                    sCityName = wconv.substr(upAddress, 0, pos);
+                    sCountyName = wconv.substr(upAddressForRi1, pos + 1); //뒤에서 두번째 공백 까지 자른 문자중에 pos+1 이후 문자
+                    sRoadName = wconv.substr(upAddress, posLast2 + 1); //뒤에서 두번째 공백 이후 문자
+                } else {
+                    sCityName = wconv.substr(upAddress, 0, pos);
+                    sCountyName = wconv.substr(upAddressForRi, pos + 1); //리가 아니면 첫번째 pos부터 뒤에서 마지막 pos까지(html과 다른점 : 두번째 문자로 자른다)
+                    sRoadName = wconv.substr(upAddress, posLast + 1);
+                }
+            }
+        }
+    }
+    //alert("sCityName==" + sCityName);
+    //alert("sCountyName===" + sCountyName + " length=" + sCountyName.length);
+    //alert("sRoadName(Town)===" + sRoadName); //var local_file_name = "abc.jpg.123";
+    //trace(gfn_lastIndexOf(local_file_name, '.')); 
+    //alert(gfn_lastIndexOf(local_file_name, '.'));
+};
+
+scwin.gfn_lastIndexOf = function(str, fstr) {
+    var offset = 0;
+    var iPos;
+    var fPos;
+    while (true) {
+        iPos = str.indexOf(fstr, offset);
+        if (iPos < 0)
+            break;
+        else
+            fPos = iPos;
+        offset = iPos + 1;
+    }
+    return fPos;
+};
+
+scwin.Button0_OnClick = function(obj) {
+   	var  popInfo = {
+     			title : "우편번호 상세정보 보기",
+				width : 665,
+				height : 290,   	
+	   			indata : {"sTableSeq":"99"}
+   		}; 
+    wprom.popupOpen("/ui/cbso/CBSO040P.xml", popInfo);
+};
+
+scwin.goNotRead = function() {
+    edConfirmAddr.setReadOnly(false); /**/
+    edBuildingName.setValue("");
+    edBuildingName.setReadOnly(true); /**/
+    edDong.setValue("");
+    edDong.setReadOnly(true); /**/
+    edConfirmAddrt.focus();
+};
+
+scwin.changeRadioAlert = function() {
+    //alert("gMessageTableNm==="+gMessageTableNm);
+    if (gMessageTableNm == "1") {
+        if (Radio_standardType.getValue() == 0 || Radio_standardType.getValue() == 2) {
+            //입력 또는 지번주소를 선택하면 다음 메시지를 보여준다
+            wprom.alert("2014년 1월 1일부터 도로명주소가 전면시행되었습니다.\n도로명주소 사용을 적극 권장합니다");
+            return;
+        }
+    }
+};
+
+scwin.test = function() {
+    var sOrgZipType = ""; //지번탭:0, 도로명탭:1
+    sOrgZipType = Tab0.getSelectedTabIndex();
+    //wprom.alert("Tab0.TabIndex=" + Tab0.TabIndex);
+    //wprom.alert("sOrgZipType=" + sOrgZipType);
+};
+
+scwin.Grd_ROAD_DETAIL_List_OnMouseOver = function(obj, nPosX, nPosY, nRow, nCell, nPivotIndex) {
+    //trace(nRow);
+    if (nRow == -1) {
+        TextArea0.Visible = false;
+        return;
+    }
+    TextArea0.Visible = 1;
+    var ic = nCell;
+    var ir = nRow;
+    var iLeft = 0;
+    var iTop = 0;
+    for (var i = 0; i < ic; i++) {
+        iLeft += Grd_ROAD_DETAIL_List.GetColProp(i, "width");
+    }
+    iTop = (Grd_ROAD_DETAIL_List.HeadHeight + Grd_ROAD_DETAIL_List.rowheight * ir) + Grd_ROAD_DETAIL_List.rowheight;
+    iLeft = "300";
+    iTop = "300";
+    TextArea0.top = "300"; //Grd_ROAD_DETAIL_List.top + iTop;
+    TextArea0.left = "300"; //Grd_ROAD_DETAIL_List.left + iLeft;	
+    TextArea0.setValue( "test" ); //Ds_ZIP_ROAD_DETAIL_New.getColumn(nRow,Grd_ROAD_DETAIL_List.GetCellProp("body",nCell,"colid") );
+    //var rtn = ext_GetTextExtent("TextArea0", TextArea0.Text);
+    //wprom.alert("nRow===" + nRow); //TextArea0.Width = rtn[0]+5;
+    //TextArea0.Height = rtn[1]+5;	
+};
+
+//주소삭제
+// 2015.03.02 유연재 추가
+scwin.btn_delete_OnClick = function(obj) {
+//    parentWin.eval(args[0]).setCellData(args[1], args[2], "");
+//    parentWin.eval(args[0]).setCellData(args[1], args[3], "");
+//    parentWin.eval(args[0]).setCellData(args[1], args[4], "");
+//    parentWin.eval(args[0]).setCellData(args[1], args[5], "");
+//    parentWin.eval(args[0]).setCellData(args[1], args[6], "");
+//    parentWin.eval(args[0]).setCellData(args[1], args[7], "");
+//    parentWin.eval(args[0]).setCellData(args[1], args[8], "");
+//    parentWin.eval(args[0]).setCellData(args[1], args[12], "");
+//    parentWin.eval(args[0]).setCellData(args[1], args[13], "");
+//    parentWin.eval(args[0]).setCellData(args[1], args[14], "");
+//    parentWin.eval(args[0]).setCellData(args[1], args[15], "");
+//    parentWin.eval(args[0]).setCellData(args[1], args[16], "");
+//    parentWin.eval(args[0]).setCellData(args[1], args[17], "");
+    parentWin.Ds_Addr.setCellData(args[1], args[2], "");
+    parentWin.Ds_Addr.setCellData(args[1], args[3], "");
+    parentWin.Ds_Addr.setCellData(args[1], args[4], "");
+    parentWin.Ds_Addr.setCellData(args[1], args[5], "");
+    parentWin.Ds_Addr.setCellData(args[1], args[6], "");
+    parentWin.Ds_Addr.setCellData(args[1], args[7], "");
+    parentWin.Ds_Addr.setCellData(args[1], args[8], "");
+    parentWin.Ds_Addr.setCellData(args[1], args[12], "");
+    parentWin.Ds_Addr.setCellData(args[1], args[13], "");
+    parentWin.Ds_Addr.setCellData(args[1], args[14], "");
+    parentWin.Ds_Addr.setCellData(args[1], args[15], "");
+    parentWin.Ds_Addr.setCellData(args[1], args[16], "");
+    parentWin.Ds_Addr.setCellData(args[1], args[17], "");
+    parentWin.eval(args[9]).focus();
+    var ret = wconv.trim("") + " ^" + wconv.trim("") + " ^" + wconv.trim("") + " ^" + wconv.trim("") + " ^" + wconv.trim("") + " ^" + wconv.trim("") + " ^" + wconv.trim("") + " ^" + wconv.trim("") + " ^" + wconv.trim("") + " ^" + wconv.trim("") + " ^" + wconv.trim("") + " ^" + wconv.trim("") + " ^" + wconv.trim("") + " ^" + wconv.trim("");
+    wconv.close(ret);
+};
+
+// 지도검색 : 팝업이 존재하지 않음 .goo. 
+scwin.Btn_searchMap_OnClick = function(obj) {
+	return; // goo 
+	
+    var promise = Promise.resolve();
+    //------------------------------------------------------------------------
+    // 호출 변수
+    var sCityName = Tab0_tab2_sSidoCode.getValue();
+    var sCountyName = Tab0_tab2_sSigunguCode.getValue();
+    var sTownName = Tab0_tab2_Edt_RoadName.getValue();
+    var locationView = "0"; // 위치측위기능 사용여부(1:사용,0:미사용)
+    var saveView = "1"; // 저장기능 용여부(1:사용,0:미사용)
+    // 위치측위 가능( 보상이고, 화면 사고접수, 현장출동요청 팝업  )
+    //alert("["+sScrID+"]["+gClaimAcctAddrYN+"]");
+    if (gClaimAcctAddrYN == "Y" && ((sScrID == "receipt:3000" || sScrID == "popup:3011")) // 3000:사고접수
+        // 3011:사고접수-현장출동요청팝업 ) {  	locationView="1";
+    )
+        var sArgs = "parentInfo=" + wconv.quote(gTel1 + " " + "^" + gTel2 + " " + "^" + gTel3 + " " + "^" + sCityName + " " + "^" + sCountyName + " " + "^" + sTownName + " " + "^" + "" + " " + "^" + "" + " " + "^" + gLatitude + " " + "^" + gLongitude + " " + "^" + "" + " " + "^" + locationView + " " + "^" + saveView);
+    promise = promise.then(function(rtnVal) {
+        //------------------  
+        //alert("#### Btn_searchMapReRegi_OnClick  sArgs ["+sArgs+"]");       
+        return wprom.promise.popupOpen("PROJECT_PATH_TEMP/popup/3084.xml", sArgs, 744, 728, true, 50, 50);
+    });
+    promise = promise.then(function(rt) {
+        /*wprom.popupOpen(가이드참조)*/
+        //alert("#### Btn_searchMapReRegi_OnClick11 ["+length(trim(rt))+"]["+rt+"]");
+        if (wconv.length(wconv.trim(rt)) != 0) {
+            var mapArr =rt.split( "^");
+
+            // 값 초기화
+            var vSearchStatCode = wconv.trim(mapArr[0]);
+            var vAcctAddrCity = wconv.trim(mapArr[1]);
+            var vAcctAddrCounty = wconv.trim(mapArr[2]);
+            var vAcctAddrTown = wconv.trim(mapArr[3]);
+            var vAcctAddrDetail = wconv.trim(mapArr[4]);
+            var vAcctAddr2 = wconv.trim(mapArr[5]);
+            var vLatitude = wconv.trim(mapArr[6]);
+            var vLongitude = wconv.trim(mapArr[7]);
+            var vAcctAddrZip1 = wconv.trim(mapArr[8]);
+            var vAcctAddrZip2 = wconv.trim(mapArr[9]);
+            var vVillageInLaw = wconv.trim(mapArr[10]);
+            var vSearchAgreeYn = wconv.trim(mapArr[11]);
+            var vSearchYn = wconv.trim(mapArr[12]);
+
+            //alert(length(trim(vSearchStatCode)));
+            if (vSearchStatCode == "00") {
+                // 지도 위도/경도
+                gLatitude = vLatitude; // 위도
+                gLongitude = vLongitude; // 경도
+                // 신규-도로명 검색 이동
+                Tab0.setSelectedTabIndex( 1 );
+
+                // 시도/시군구 코드 확인(법정동코드)
+                var vSido = "";
+                var vSiGunGu = "";
+                //alert(length(trim(vVillageInLaw)));
+                // 법정동코드가 있으면
+                //----------------------------------------
+                if (wconv.length(wconv.trim(vVillageInLaw)) == 10) {
+                    vSido = wconv.substr(vVillageInLaw, 0, 2);
+                    vSiGunGu = wconv.substr(vVillageInLaw, 2, 3);
+
+                    // 시도코드 변경  
+                    Tab0_tab2_sSidoCode.setValue( vSido );
+
+                    // 시도코드 변경 함수 처리
+                    scwin.searchDo_Road("sigungu", vSido);
+
+                    // 시군구코드입력
+                    Tab0_tab2_sSigunguCode.setValue( vSiGunGu );
+
+                    // 법정동코드로 주소조회
+                    Tab0_tab2_Rdo_Type1.setValue( "D" ); //  D:읍면동
+                    scwin.search_VillageInLaw(wconv.substr(vVillageInLaw, 0, 8) + "00");
+                    vAcctAddrTown = Ds_VILLAGEINLAW.getCellData(0, "sTownName"); // 읍면동 조회값으로 처리
+                }
+
+                //----------------------------------------
+                //alert("### Check["+length(vAcctAddrTown)+"]["+indexOf(vAcctAddrTown,"읍")+"]["+vAcctAddrTown+"]");
+                // 읍면동구분선택    
+                /*if( length(vAcctAddrTown) == (indexOf(vAcctAddrTown,"읍")+1) ||
+                length(vAcctAddrTown) == (indexOf(vAcctAddrTown,"면")+1) ||
+                length(vAcctAddrTown) == (indexOf(vAcctAddrTown,"동")+1) 
+              ) {
+              
+                Tab0.tab2.Rdo_Type1.Value = "D"; //  D:읍면동
+            } else {
+                Tab0.tab2.Rdo_Type1.Value = "R"; // R:도로명
+            }*/
+                if (wconv.length(vAcctAddrTown) >= 2) {
+                    // 읍면동 및 도로명 조회
+                    //------------------------------------
+                    // 검색어 읍면동값 입력
+                    Tab0_tab2_Edt_RoadName.setValue( vAcctAddrTown );
+
+                    // 조회 버튼 클릭
+                    scwin.Tab0_tab2_Btn_SearchRoad_OnClick();
+                    //------------------------------------
+                    // 읍면동 및 도로명 상세 조회
+                    //------------------------------------
+                    if (Ds_ZIP_ROAD_New.getRowCount() > 0) {
+                        scwin.Grd_ROADList_OnCellClick("", 0, "", "", "", "");
+                    }
+                }
+            }
+        }
+    });
+    return promise;
+};
+
+// 법정동검색 : 사용안됨 goo 
+scwin.search_VillageInLaw = function(sVillageInLaw) {
+    //alert("### search_VillageInLaw");
+    wconv.clear(Ds_VILLAGEINLAW); // Dataset 초기화
+    SOBJ_VILLAGEINLAW.WSDL = gds.gWsdlCCC; // 서비스 Obj WSDC 설정
+    var MethodObj = gfn_CreateMethodObj(SOBJ_VILLAGEINLAW, "com.inswave.code.task.ZipCodeTask", "getAdrsInfoByVillageInLaw", "0", "0");
+    gfn_SetParam(MethodObj, "sVillageInLaw", sVillageInLaw);
+
+    // 검색조건 확인 마침
+    gfn_CallService(SOBJ_VILLAGEINLAW, DOBJ_VILLAGEINLAW, MethodObj);
+};
+
+]]></script>
+    </head>
+    <body>
+    	<xf:group class="cont_wrap layer"
+    		ev:onblur="scwin.fCom01030s_OnKeyDown" id="0115"
+    		style="position:absolute;EndLineColor:default;left:395px;InputPanel:FALSE;border:Flat;AutoFitEndLine:Hide;UseDBuff:true;right:727px;top:72px;"
+    		userData1="우편번호 찾기"
+    		userData2=" OnLoadCompleted:scwin.fCom01030s_OnLoadCompleted; ">
+    		<DataObjects>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    		</DataObjects>
+    		<ServiceObjects>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    		</ServiceObjects>
+    		<xf:group arcsize="6" class="sty_area_form" id="ShapeResult"
+    			style="position:absolute; right:736px;  bottom:697px; height:80px;left:4px;top:632px; width:732px;"
+    			userData3="RoundRect">
+    			<xf:group class="form_w_line" id="" style="top:25px;"></xf:group>
+    			<xf:group class="form_w_line" id="" style="top:51px;"></xf:group>
+    		</xf:group>
+    		<xf:group arcsize="6" class="sty_area_form" id="Shape2"
+    			style="position:absolute; right:736px;  bottom:608px; height:80px;left:4px;top:543px; width:732px;"
+    			userData3="RoundRect">
+    			<xf:group class="form_w_line" id="" style="top:25px;"></xf:group>
+    			<xf:group class="form_w_line" id="" style="top:51px;"></xf:group>
+
+    		</xf:group>
+    		<xf:trigger class="detail_bu01"
+    			ev:onclick="scwin.btn_getStandard_OnClick"
+    			id="btn_getStandard_Test"
+    			style="position:absolute;ImageID:btn_Input_04;left:642px;top:599px;"
+    			type="anchor" disabled="">
+    			<xf:label><![CDATA[표준주소]]></xf:label>
+    		</xf:trigger>
+    		<xf:trigger class="btn_Input_04"
+    			ev:onclick="scwin.goNotRead" id="Button0"
+    			style="position:absolute; display:none;  ImageID:btn_Input_04;  height:20px; left:648px; top:557px; width:81px;">
+    			<xf:label><![CDATA[강제수정]]></xf:label>
+    		</xf:trigger>
+    		<xf:input class="sty_ipt_form"
+    			ev:onfocus="scwin.btn_result_view_hidden" id="edDong"
+    			style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:496px;top:599px; width:144px;">
+    		</xf:input>
+    		<xf:input class="sty_ipt_form"
+    			ev:onfocus="scwin.btn_result_view_hidden" id="edBuildingName"
+    			style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:110px;top:599px; width:294px;">
+    		</xf:input>
+    		<xf:input class="sty_ipt_form" dataType="text"
+    			displayFormat="#####" id="mConfirmZipNew" readOnly="true"
+    			style="position:absolute; border-style:solid;  height:20px;left:496px;top:546px; width:55px;">
+    		</xf:input>
+    		<w2:textbox class="sty_lb_Basic" id="Static6" label="입력주소"
+    			style="position:absolute; VAlign:Middle;  border-style:solid;left:4px;top:632px; width:82px;"
+    			tagname="">
+    		</w2:textbox>
+    		<xf:trigger class="detail_bu01"
+    			ev:onclick="scwin.btn_confirm_OnClick" id="Button2"
+    			style="position:absolute;height:19px;width:28px;left:670px;top:688px;"
+    			type="anchor">
+    			<xf:label><![CDATA[닫기]]></xf:label>
+    		</xf:trigger>
+    		<xf:trigger class="detail_bu01"
+    			ev:onclick="scwin.btn_confirm_OnClick" id="btn_confirm"
+    			style="position:absolute;height:19px;width:28px;left:608px;top:688px;"
+    			type="anchor">
+    			<xf:label><![CDATA[확인]]></xf:label>
+    		</xf:trigger>
+    		<w2:textbox id="jibunAddrAll"
+    			style="position:absolute;  height:20px;left:126px;top:661px; width:528px;"
+    			tagname="">
+    		</w2:textbox>
+    		<xf:input class="sty_ipt_form"
+    			ev:onfocus="scwin.btn_result_view_hidden" id="edConfirmAddr"
+    			readOnly="TRUE"
+    			style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:110px;top:573px; width:546px;">
+    		</xf:input>
+    		<xf:trigger class="popup_top_btn"
+    			ev:onclick="scwin.Btn_Close_OnClick" id="Button3"
+    			style="position:absolute;left:687px;top:1px;" type="anchor">
+    			<xf:label><![CDATA[닫기]]></xf:label>
+    		</xf:trigger>
+    		<xf:input class="sty_ipt_form" dataType="text"
+    			displayFormat="###-###" id="mConfirmZip" readOnly="true"
+    			style="position:absolute; border-style:solid;  height:20px;left:110px;top:546px; width:55px;">
+    		</xf:input>
+    		<w2:textbox class="sty_lb_Basic" id="Static1" label="우편번호"
+    			style="position:absolute; VAlign:Middle;  border-style:solid;left:4px;top:543px; width:82px;"
+    			tagname="">
+    		</w2:textbox>
+    		<w2:tabControl class="sty_tab"
+    			ev:onchange="scwin.Tab0_OnChanged" id="Tab0"
+    			style="position:absolute;height:511px;left:3px;top:25px;width:741px;"
+    			selectedIndex="" alwaysDraw="true">
+    			<w2:content alwaysDraw="true" id="Tab0_tab1"
+    				style="position:absolute; border-color:black;height:482px; left:0px; top:32px; width:740px;">
+    				<xf:group arcsize="6" class="search_area"
+    					id="Tab0_tab1_Shape0"
+    					style="position:absolute; right:727px; bottom:55px; height:60px;left:2px;top:6px; width:730px;"
+    					userData3="RoundRect">
+    				</xf:group>
+    				<w2:textbox class="sty_lb_Search"
+    					id="Tab0_tab1_Static13" label="조회구분"
+    					style="position:absolute; VAlign:Middle; height:20px;left:19px;top:15px; width:68px;"
+    					tagname="">
+    				</w2:textbox>
+    				<w2:textbox class="sty_lb_Search"
+    					id="Tab0_tab1_Static0" label="우편번호"
+    					style="position:absolute; VAlign:Middle; height:20px;left:19px;top:40px; width:68px;"
+    					tagname="">
+    				</w2:textbox>
+    				<xf:input class="sty_ipt_search" dataType="number"
+    					displayFormat="###-###" id="Tab0_tab1_mSearchZip"
+    					style="position:absolute; border-style:solid;  height:20px;left:86px;top:39px; width:55px;" ev:onkeydown="scwin.fCom01030s_OnKeyDown" placeholder="___-___">
+    				</xf:input>
+    				<xf:select1 appearance="full" class="sty_lb_Search"
+    					id="Tab0_tab1_Rdo_Type" rows="1"
+    					style="position:absolute;height:20px;left:85px;top:15px;width:170px;"
+    					userData1="sTownName" cols="" selectedIndex="0">
+    					<xf:choices>
+    						<xf:item>
+    							<xf:label><![CDATA[읍/면/동]]></xf:label>
+    							<xf:value><![CDATA[sTownName]]></xf:value>
+    						</xf:item>
+    						<xf:item>
+    							<xf:label><![CDATA[시/군/구]]></xf:label>
+    							<xf:value><![CDATA[sCountyName]]></xf:value>
+    						</xf:item>
+    					</xf:choices>
+    					<Layout></Layout>
+    					<Layout></Layout>
+    				</xf:select1>
+    				<xf:input class="sty_ipt_search"
+    					id="Tab0_tab1_edSearchAddr"
+    					style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:143px;top:39px; width:380px;" ev:onkeydown="scwin.fCom01030s_OnKeyDown">
+    				</xf:input>
+    				<xf:input class="sty_ipt_search"
+    					id="Tab0_tab1_Edt_SearchStr"
+    					style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:267px;top:13px; width:160px;" ev:onkeydown="scwin.fCom01030s_OnKeyDown">
+    				</xf:input>
+    				<xf:switch id="switch_42"
+    					style=" ;margin-top:1px;">
+    					<xf:case id="Default_43" style=" ">
+    						<w2:gridView autoFit="allColumn"
+    							autoFitMinWidth="100" class="sty_Grid" dataList="Ds_ZIP"
+    							ev:oncellclick="scwin.Grd_ZIPList_OnCellClick"
+    							focusMode="row" id="Tab0_tab1_Grd_ZIPList" inputType="text"
+    							readOnly="true"
+    							style="position:absolute;height:400px;width:335px;EndLineColor:default;left:395px;AutoFitEndLine:Hide;border:Flat;InputPanel:FALSE;right:727px;UseDBuff:true;top:72px;"
+    							selectedCellColor="" evenRowBackgroundColor="">
+    							<w2:header>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="head_id_359" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="0"
+    										userData3="0" value="대량배달처/번지범위" width="206">
+    									</w2:column>
+    									<w2:column dataType="text"
+    										id="head_id_360" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="1"
+    										userData3="0" value="우편번호" width="81">
+    									</w2:column>
+    								</w2:row>
+    							</w2:header>
+    							<w2:gBody>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										expression="scwin.getDetailAddress(rowIndex())"
+    										id="temp_id_361" inputType="expression" readOnly="true"
+    										style="height:20px;" textAlign="left" userData1="0"
+    										userData3="0" width="206">
+    									</w2:column>
+    									<w2:column dataType="text"
+    										displayFormat="###-###" id="sZipCode" inputType="text"
+    										readOnly="true" style="height:20px;" textAlign="center"
+    										userData1="1" userData3="0" width="81">
+    									</w2:column>
+    								</w2:row>
+    							</w2:gBody>
+    						</w2:gridView>
+    					</xf:case>
+    				</xf:switch>
+    				<xf:switch id="switch_43"
+    					style=" ;margin-top:1px;">
+    					<xf:case id="Default_44" style=" ">
+    						<w2:gridView autoFit="allColumn"
+    							autoFitMinWidth="100" class="sty_Grid" dataList="Ds_DONG"
+    							ev:oncellclick="scwin.Grd_DONGList_OnCellClick"
+    							focusMode="row" id="Tab0_tab1_Grd_DONGList" inputType="text"
+    							readOnly="true"
+    							style="position:absolute;height:400px;width:187px;EndLineColor:default;left:210px;AutoFitEndLine:Hide;border:Flat;InputPanel:FALSE;right:396px;UseDBuff:true;top:72px;"
+    							evenRowBackgroundColor="" rowMouseOverColor=""
+    							selectedCellColor="">
+    							<w2:header>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="head_id_362" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="0"
+    										userData3="0" value="읍/면/동" width="150">
+    									</w2:column>
+    								</w2:row>
+    							</w2:header>
+    							<w2:gBody>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="sTownName" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="left" userData1="0"
+    										userData3="0" width="150" value="">
+    									</w2:column>
+    								</w2:row>
+    							</w2:gBody>
+    						</w2:gridView>
+    					</xf:case>
+    				</xf:switch>
+    				<xf:switch id="switch_44"
+    					style=" ;margin-top:1px;">
+    					<xf:case id="Default_45" style=" ">
+    						<w2:gridView autoFit="allColumn"
+    							autoFitMinWidth="100" class="sty_Grid" dataList="Ds_SIGUN"
+    							ev:oncellclick="scwin.Grd_SIGUNList_OnCellClick"
+    							focusMode="row" id="Tab0_tab1_Grd_SIGUNList" inputType="text"
+    							readOnly="true"
+    							style="position:absolute;height:400px;width:131px;EndLineColor:default;left:81px;AutoFitEndLine:Hide;border:Flat;InputPanel:FALSE;right:211px;UseDBuff:true;top:72px;"
+    							evenRowBackgroundColor="" rowMouseOverColor=""
+    							selectedCellColor="">
+    							<w2:header>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="head_id_363" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="0"
+    										userData3="0" value="시/군/구" width="125">
+    									</w2:column>
+    								</w2:row>
+    							</w2:header>
+    							<w2:gBody>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="sCountyName" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="left" userData1="0"
+    										userData3="0" width="125">
+    									</w2:column>
+    								</w2:row>
+    							</w2:gBody>
+    						</w2:gridView>
+    					</xf:case>
+    				</xf:switch>
+    				<xf:switch id="switch_45"
+    					style=" ;margin-top:1px;">
+    					<xf:case id="Default_46" style=" ">
+    						<w2:gridView autoFit="allColumn"
+    							autoFitMinWidth="100" class="sty_Grid" dataList="Ds_DO"
+    							ev:oncellclick="scwin.Grd_DOList_OnCellClick" focusMode="row"
+    							id="Tab0_tab1_Grd_DOList" inputType="text" readOnly="true"
+    							style="position:absolute;height:400px;width:80px;EndLineColor:default;left:3px;AutoFitEndLine:Hide;border:Flat;InputPanel:FALSE;right:82px;UseDBuff:true;top:72px;"
+    							evenRowBackgroundColor="" rowMouseOverColor=""
+    							selectedCellColor="">
+    							<w2:header>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="head_id_364" inputType="text" readOnly="true"
+    										style="height:20px;" userData1="0" userData3="0"
+    										value="광역시/도" width="78">
+    									</w2:column>
+    								</w2:row>
+    							</w2:header>
+    							<w2:gBody>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="sShortName" inputType="text" readOnly="true"
+    										style="height:15px;" textAlign="left" userData1="0"
+    										userData3="0" width="78" value="">
+    									</w2:column>
+    								</w2:row>
+    							</w2:gBody>
+    						</w2:gridView>
+    					</xf:case>
+    				</xf:switch>
+    				<xf:trigger class="btn_Comm_Search  a_disabled"
+    					ev:onclick="scwin.Btn_Search_OnClick_async" id="Tab0_tab1_Btn_Search"
+    					style="position:absolute;left:653px;top:37px; width:45px;"
+    					type="anchor" disabled="false">
+    					<xf:label><![CDATA[조회]]></xf:label>
+    				</xf:trigger>
+    			</w2:content>
+    			<w2:content alwaysDraw="true" id="Tab0_tab2"
+    				style="position:absolute; border-color:black;height:482px; left:0px; top:32px; width:740px;">
+    				<xf:group arcsize="6" class="search_area"
+    					id="Tab0_tab2_Shape0"
+    					style="position:absolute; right:727px; bottom:60px; height:60px;left:2px;top:6px; width:730px;"
+    					userData3="RoundRect">
+    				</xf:group>
+    				<w2:textbox class="sty_lb_Search"
+    					id="Tab0_tab2_Static13" label="*검색어"
+    					style="position:absolute; VAlign:Middle; height:20px;left:170px;top:40px; width:46px;"
+    					tagname="">
+    				</w2:textbox>
+    				<xf:input class="sty_ipt_search"
+    					id="Tab0_tab2_Edt_RoadName"
+    					style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:226px;top:39px; width:93px;" ev:onkeydown="scwin.fCom01030s_OnKeyDown">
+    				</xf:input>
+    				<xf:input class="sty_ipt_search" id="Tab0_tab2_nBuildingMainNo" style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:440px;top:39px; width:30px;" ev:onkeydown="scwin.fCom01030s_OnKeyDown">
+    				</xf:input><xf:input class="sty_ipt_search" id="Tab0_tab2_nBuildingSubNo" style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:483px;top:39px; width:30px;" ev:onkeydown="scwin.fCom01030s_OnKeyDown">
+    				</xf:input><xf:trigger class="btn_Comm_Search"
+    					ev:onclick="scwin.Tab0_tab2_Btn_SearchRoad_OnClick"
+    					id="Tab0_tab2_Btn_SearchRoad"
+    					style="position:absolute;left:654px;top:38px; width:45px;"
+    					type="anchor" disabled="">
+    					<xf:label><![CDATA[조회]]></xf:label>
+    				</xf:trigger>
+    				<w2:textbox class="sty_lb_Search"
+    					id="Tab0_tab2_Static1" label="건물 번호/지번/명"
+    					style="position:absolute; VAlign:Middle;height:20px;left:323px;top:40px;width:108px;"
+    					tagname="">
+    				</w2:textbox>
+    				
+    				
+    				<w2:textbox class="sty_btn_search"
+    					id="Tab0_tab2_Static2" label="-"
+    					style="position:absolute; VAlign:Middle;  text-align:center; height:20px;left:470px;top:39px; width:13px;"
+    					tagname="">
+    				</w2:textbox>
+    				<w2:textbox class="sty_btn_search"
+    					id="Tab0_tab2_Static4"
+    					label="※ 시도,도로명을 입력후 조회버튼을 눌러주세요. 예) 창경궁로, 중앙로"
+    					style="position:absolute; VAlign:Middle;  height:20px;left:334px;top:14px; width:390px;"
+    					tagname="">
+    				</w2:textbox>
+    				<xf:select1 appearance="full" class="sty_lb_Search"
+    					id="Tab0_tab2_Rdo_Type1" rows="1"
+    					style="position:absolute; height:20px;left:15px;top:40px; width:147px;"
+    					userData1="" cols="" selectedIndex="0">
+    					<xf:choices>
+    						<xf:item>
+    							<xf:label><![CDATA[도로명]]></xf:label>
+    							<xf:value><![CDATA[R]]></xf:value>
+    						</xf:item>
+    						<xf:item>
+    							<xf:label><![CDATA[읍/면/동]]></xf:label>
+    							<xf:value><![CDATA[D]]></xf:value>
+    						</xf:item>
+    					</xf:choices>
+    					<Layout></Layout>
+    					<Layout></Layout>
+    				</xf:select1>
+    				<xf:select1 appearance="minimal" emptyItem="true"
+    					ev:onchange="" id="Tab0_tab2_sSidoCode" ref=""
+    					style="position:absolute; border-color:user0;  border-style:solid;  height:20px;left:102px;top:12px; width:72px;"
+    					renderType="native" ev:onviewchange="scwin.searchSiGunGu_Road"
+    					allOption="" chooseOption="">
+    					<xf:choices>
+    						<xf:itemset nodeset="data:Ds_DO_New">
+    							<xf:label ref="sCityName"></xf:label>
+    							<xf:value ref="sidoCode"></xf:value>
+    						</xf:itemset>
+    					</xf:choices>
+    				</xf:select1>
+    				<xf:select1 appearance="minimal" emptyItem="true"
+    					id="Tab0_tab2_sSigunguCode" ref=""
+    					style="position:absolute; INDEX:0;  border-color:user0;  border-style:solid;  height:20px;left:175px;top:12px; width:144px;"
+    					renderType="native" allOption="" chooseOption="">
+    					<xf:choices>
+    						<xf:itemset nodeset="data:Ds_SIGUN_New">
+    							<xf:label ref="sCountyName"></xf:label>
+    							<xf:value ref="sigunguCode"></xf:value>
+    						</xf:itemset>
+    					</xf:choices>
+    				</xf:select1>
+    				<w2:gridView autoFit="allColumn"
+    					autoFitMinWidth="100" class="sty_Grid"
+    					dataList="Ds_ZIP_ROAD_New"
+    					ev:oncellclick="scwin.Grd_ROADList_OnCellClick" focusMode="row"
+    					id="Tab0_tab2_Grd_ROADList" inputType="text" readOnly="true"
+    					style="position: absolute;width:233px;height:400px;left:0px;top:71px;">
+    					<w2:header>
+    						<w2:row>
+    							<w2:column dataType="text"
+    								id="head_id_365" inputType="text" readOnly="true"
+    								style="height:20px;" userData1="0" userData3="0"
+    								value="도로명/읍면동명" width="228">
+    							</w2:column>
+    						</w2:row>
+    					</w2:header>
+    					<w2:gBody>
+    						<w2:row>
+    							<w2:column dataType="text"
+    								id="temp_id_366" inputType="expression" readOnly="true"
+    								style="height:20px;" userData1="0" userData3="0"
+    								width="228" expression="scwin.getMasterRoadAddress(rowIndex())">
+    							</w2:column>
+    						</w2:row>
+    					</w2:gBody>
+    				</w2:gridView>
+    				<w2:gridView
+    					ev:oncellclick="scwin.Grd_ROAD_DETAIL_List_OnCellClick"
+    					readOnly="true" focusMode="row" selectedCellColor=""
+    					dataList="Ds_ZIP_ROAD_DETAIL_New" evenRowBackgroundColor=""
+    					inputType="text"
+    					style="position:absolute;height:400px;width:495px;left:234px;AutoFitEndLine:Hide;right:726px;top:71px;"
+    					autoFit="allColumn" id="Tab0_tab2_Grd_ROAD_DETAIL_List"
+    					class="sty_Grid" rowMouseOverColor="" autoFitMinWidth="100">
+    					<w2:header>
+    						<w2:row>
+    							<w2:column textAlign="center"
+    								dataType="text" width="247" userData3="0" inputType="text"
+    								readOnly="true" style="height:20px;" id="head_id_367"
+    								userData1="0" value="도로명주소">
+    							</w2:column>
+    							<w2:column dataType="text" width="139"
+    								userData3="0" inputType="text" readOnly="true"
+    								style="height:20px;" id="head_id_368" userData1="1"
+    								value="건물명">
+    							</w2:column>
+    							<w2:column dataType="text" width="101"
+    								userData3="0" inputType="text" readOnly="true"
+    								style="height:20px;" id="head_id_369" userData1="2"
+    								value="번지">
+    							</w2:column>
+    						</w2:row>
+    					</w2:header>
+    					<w2:gBody>
+    						<w2:row>
+    							<w2:column
+    								expression="scwin.getDetailRoadAddress1(rowIndex())"
+    								textAlign="left" dataType="text" width="247" userData3="0"
+    								inputType="expression" readOnly="true" style="height:20px;"
+    								id="sRoadName" userData1="0">
+    							</w2:column>
+    							<w2:column dataType="text" width="139"
+    								userData3="0" inputType="text" readOnly="true"
+    								style="height:20px;" id="sBuildingNameSet" userData1="1">
+    							</w2:column>
+    							<w2:column
+    								expression="scwin.getDetailRoadAddress2(rowIndex())"
+    								dataType="text" width="101" userData3="0"
+    								inputType="expression" readOnly="true" style="height:20px;"
+    								id="nBuildingMainNo" userData1="2">
+    							</w2:column>
+    						</w2:row>
+    					</w2:gBody>
+    				</w2:gridView>
+    				<w2:textbox class="sty_lb_Search"
+    					id="Tab0_tab2_Static0" label="*시도/시군구"
+    					style="position:absolute; VAlign:Middle; height:20px;left:10px;top:13px; width:80px;"
+    					tagname="">
+    				</w2:textbox>
+    				<xf:input class="sty_ipt_search"
+    					id="Tab0_tab2_sBuildingNameSet"
+    					style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:519px;top:39px; width:118px;" ev:onkeydown="scwin.fCom01030s_OnKeyDown">
+    				</xf:input>
+
+    			</w2:content>
+    			<w2:content alwaysDraw="false" id="Tab0_tab3"
+    				style="position:absolute; border-color:black;height:482px; left:0px; top:32px; width:729px;">
+    			</w2:content>
+    			<w2:tabs disabled="false" id="Tab0_tab1" label="기존"
+    				style="" class="">
+    			</w2:tabs>
+    			<w2:tabs disabled="false" id="Tab0_tab2" label="신규-도로명"
+    				style="" class="">
+    			</w2:tabs>
+    			<w2:tabs disabled="false" id="Tab0_tab3" label="고속도로"
+    				style="" class="">
+    			</w2:tabs>
+    		</w2:tabControl>
+    		<xf:trigger class="popup_top_btn"
+    			ev:onclick="scwin.btn_new_OnClick" id="btn_new"
+    			style="position:absolute;left:624px;top:1px;width:50px;"
+    			type="anchor">
+    			<xf:label><![CDATA[새작업]]></xf:label>
+    		</xf:trigger>
+    		<w2:textbox class="sty_lb_Basic" id="Static0" label="선택주소"
+    			style="position:absolute; VAlign:Middle;  border-style:solid;left:4px;top:570px; width:82px;"
+    			tagname="">
+    		</w2:textbox>
+    		<w2:textbox class="sty_lb_Basic" id="Static2" label="번지/건물명"
+    			style="position:absolute; VAlign:Middle;  border-style:solid;left:4px;top:595px; width:82px;"
+    			tagname="">
+    		</w2:textbox>
+    		<w2:textbox class="sty_lb_Basic" id="Static3" label="동,층,호"
+    			style="position:absolute;left:411px;top:595px;min-width:65px;"
+    			tagname="">
+    		</w2:textbox>
+    		<w2:textbox class="sty_lb_Basic" id="Static4" label="신우편번호"
+    			style="position:absolute;left:411px;top:543px;min-width:65px;"
+    			tagname="">
+    		</w2:textbox>
+    		<w2:textbox id="inputAddrAll"
+    			style="position:absolute;  height:20px;left:126px;top:635px; width:528px;border: 1px;"
+    			tagname="">
+    		</w2:textbox>
+    		<w2:textbox id="roadAddrAll"
+    			style="position:absolute;  height:20px;left:126px;top:687px; width:480px;"
+    			tagname="">
+    		</w2:textbox>
+    		<w2:textbox class="sty_lb_Basic" id="Static8" label="지번주소"
+    			style="position:absolute; VAlign:Middle;  border-style:solid;left:4px;top:658px; width:82px;"
+    			tagname="">
+    		</w2:textbox>
+    		<w2:textbox class="sty_lb_Basic" id="Static7" label="도로주소"
+    			style="position:absolute; VAlign:Middle;  border-style:solid;left:4px;top:684px; width:82px;"
+    			tagname="">
+    		</w2:textbox>
+    		<xf:trigger class="popup_top_btn"
+    			ev:onclick="scwin.btn_delete_OnClick" id="btn_delete"
+    			style="position:absolute;left:549px;top:1px;width:60px;"
+    			type="anchor">
+    			<xf:label><![CDATA[주소삭제]]></xf:label>
+    		</xf:trigger>
+    		<xf:trigger class="popup_top_btn"
+    			ev:onclick="scwin.Btn_searchMap_OnClick"
+    			id="Btn_searchMap"
+    			style="position:absolute;left:474px;top:1px;width:60px;"
+    			type="anchor" disabled="">
+    			<xf:label><![CDATA[지도검색]]></xf:label>
+    		</xf:trigger>
+    		<w2:textbox class="sub_pop_title01" id="Static5"
+    			label="우편번호(주소) 찾기"
+    			style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; width:249px;"
+    			tagname="">
+    		</w2:textbox>
+    		<xf:select1 appearance="full"
+    			ev:onchange="scwin.changeRadioAlert"
+    			style="position:absolute;height:78px;left:108px;top:632px;width:27px;"
+    			id="Radio_standardType" userData1="3" rows=""
+    			class="sty_ipt_search" cols="">
+    			<xf:choices>
+    				<xf:item>
+    					<xf:label><![CDATA[]]></xf:label>
+    					<xf:value><![CDATA[0]]></xf:value>
+    				</xf:item>
+    				<xf:item>
+    					<xf:label><![CDATA[]]></xf:label>
+    					<xf:value><![CDATA[2]]></xf:value>
+    				</xf:item>
+    				<xf:item>
+    					<xf:label><![CDATA[]]></xf:label>
+    					<xf:value><![CDATA[3]]></xf:value>
+    				</xf:item>
+    			</xf:choices>
+    			<Layout></Layout>
+    			<Layout></Layout>
+    			<Layout></Layout>
+    		</xf:select1>
+    	</xf:group>
+    </body>
+</html>

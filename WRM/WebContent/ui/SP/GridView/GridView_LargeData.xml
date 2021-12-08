@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataMap baseNode="map" id="dma_fileDesc">
+					<w2:keyInfo>
+						<w2:key id="desc" name="" dataType="text"></w2:key>
+						<w2:key id="test" name="" dataType="text"></w2:key>
+					</w2:keyInfo>
+					<w2:data use="true">
+						<desc><![CDATA[
+<pre class="textNor" style="">
+<div class="etcbox">데이터의 포맷에 따른 통신 시간과 그리드뷰의 데이터 랜더링에 관한 성능을 비교할 수 있는 기능을 제공한다.
+성능은 [Array Type] > [Default Type] 순이다.
+</div>
+<div class="etc_tit">1. Default Type</div>
+  - 기본 설정으로 ModelAndView객체에서 addObject Method로 담긴 List와 Map객체를 Adapter모듈에서 JSON String으로 변환시킨다.
+  ex)
+	Map&lt;String, List&lt;String, Map&lt;String, String&gt;&gt;&gt;
+	{"dlt_zipCodeStreet":[{"SEQ_NO":"1","SIGUNGUCODE":"0001"},{"SEQ_NO":"2","SIGUNGUCODE":"0002"}]}	
+<div class="etc_tit">2. Array Type</div>
+  - Mybatis의 ResultHandler를 사용하여  KEY와 DATA로 분리한 후, 각각을 Array에 담고 Map을 반환받는다. 
+  - 이후 [Default Type]과 동일한 변환 과정을 거친다.
+  - [Default Type]에 비해 데이터 크기가 50%이상 감소된다. (1000건 : Default Type= 4.2MB/ Array Type= 1.9MB) 
+  ex)
+	Map&lt;String, Map&lt;String, ArrayList&gt;&gt;
+	{"dlt_zipCodeStreet":{"columnInfo":["SEQ_NO","SIGUNGUCODE"],"data":["1","0001","2","0002"]}}
+<div class="etc_tit">3. 검색조건별 평균 처리시간</div>
+  - 10,000 건 
+	<font color=red><B>[Default Type] 통신</B></font> : 2,383ms :: 화면 : 126ms	   <font color=red><B>[Array Type] 통신</B></font> : 1,212ms :: 화면 : 207ms
+  - 50,000 건
+	<font color=red><B>[Default Type] 통신</B></font> : 7,638ms :: 화면 : 770ms	   <font color=red><B>[Array Type] 통신</B></font> : 3,939ms :: 화면 : 85ms
+  - 100,000 건
+	<font color=red><B>[Default Type] 통신</B></font> : 15,900ms :: 화면 : 1,080ms	<font color=red><B>[Array Type] 통신</B></font> : 10,858ms :: 화면 : 1,132ms
+  - 200,000 건
+	<font color=red><B>[Default Type] 통신</B></font> : 33,411ms :: 화면 : 2,659ms	<font color=red><B>[Array Type] 통신</B></font> : 25,261ms :: 화면 : 292ms
+  - 300,000 건
+	<font color=red><B>[Default Type] 통신</B></font> : 45,612ms :: 화면 : 5,095ms	<font color=red><B>[Array Type] 통신</B></font> : 30,382ms :: 화면 : 1,038ms
+  - 전체(353,545건)
+	<font color=red><B>[Default Type] 통신</B></font> : 128,474ms :: 화면 : 7,948ms   <font color=red><B>[Array Type] 통신</B></font> : 39,050ms :: 화면 : 1,445ms
+</pre>
+						]]></desc>
+						<test><![CDATA[
+<pre class="textNor">
+<div class="etc_tit">과정</div>
+  1. 왼쪽에 위치한 [조회 건수]를 선택한다.
+  2. [Default Type]버튼 또는 [Array Type]버튼을 클릭하여 소요 시간을 확인한다.
+<div class="etc_tit">결과</div>
+  조회건수 , 서버 통신 시간(millisecond) , 데이터를 그리드에 출력하는 시간(millisecond)
+  ex) 조회 건수 : 100,000 :: 통신 : 5,096ms :: 화면 : 197ms
+</pre>
+						]]></test>
+					</w2:data>
+				</w2:dataMap>
+				<w2:dataList id="dlt_zipCodeStreet" baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="SEQ_NO" name="SEQ_NO" dataType="text"></w2:column>
+						<w2:column id="SIGUNGUCODE" name="SIGUNGUCODE" dataType="text"></w2:column>
+						<w2:column id="STREETNUM" name="STREETNUM" dataType="text"></w2:column>
+						<w2:column id="STREET" name="STREET" dataType="text"></w2:column>
+						<w2:column id="STREETENG" name="STREETENG" dataType="text"></w2:column>
+						<w2:column id="DONGSEQ" name="DONGSEQ" dataType="text"></w2:column>
+						<w2:column id="SIDO" name="SIDO" dataType="text"></w2:column>
+						<w2:column id="SIGUNGU" name="SIGUNGU" dataType="text"></w2:column>
+						<w2:column id="DONGTYPE" name="DONGTYPE" dataType="text"></w2:column>
+						<w2:column id="DONGCODE" name="DONGCODE" dataType="text"></w2:column>
+						<w2:column id="DONG" name="DONG" dataType="text"></w2:column>
+						<w2:column id="PARENTSTREETNUM" name="PARENTSTREETNUM" dataType="text"></w2:column>
+						<w2:column id="PARENTSTREET" name="PARENTSTREET" dataType="text"></w2:column>
+						<w2:column id="ISUSE" name="ISUSE" dataType="text"></w2:column>
+						<w2:column id="CHANGEREASON" name="CHANGEREASON" dataType="text"></w2:column>
+						<w2:column id="CHANGEHISTORY" name="CHANGEHISTORY" dataType="text"></w2:column>
+						<w2:column id="SIDOENG" name="SIDOENG" dataType="text"></w2:column>
+						<w2:column id="SIGUNGUENG" name="SIGUNGUENG" dataType="text"></w2:column>
+						<w2:column id="DONGENG" name="DONGENG" dataType="text"></w2:column>
+						<w2:column id="OPENDATE" name="OPENDATE" dataType="text"></w2:column>
+						<w2:column id="CLOSEDATE" name="CLOSEDATE" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" id="dma_search">
+					<w2:keyInfo>
+						<w2:key id="SEQ_NO" name="name1" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+			<!-- target="data:array,dlt_zipCodeStreet" 성능 측정을 위해 target 수동 셋팅 -->
+			<xf:submission id="sbm_default" ref="data:json,dma_search" target="" action="/sample/selectLargeDataDefault" method="post" mediatype="application/json" encoding="UTF-8" instance="" replace=""
+				errorHandler="" customHandler="" mode="asynchronous" processMsg="조회중입니다." ev:submit="" ev:submitdone="scwin.sbm_default_submitdone" ev:submiterror="">
+			</xf:submission>
+			<xf:submission id="sbm_array" ref="data:json,dma_search" target="" action="/sample/selectLargeDataArray" method="post" mediatype="application/json" encoding="UTF-8" instance="" replace=""
+				errorHandler="" customHandler="" mode="asynchronous" processMsg="조회중입니다." ev:submit="" ev:submitdone="scwin.sbm_array_submitdone" ev:submiterror="">
+			</xf:submission>
+		</xf:model>
+		<script type="text/javascript"><![CDATA[
+		scwin.onpageload = function() {
+			
+		};
+		
+		scwin.onpageunload = function() {
+			
+		};
+		
+		scwin.btn_searchDefault_onclick = function(e) {
+			dlt_zipCodeStreet.removeAll();
+			com.executeSubmission(sbm_default);
+		};
+		
+		scwin.btn_searchLargeHander1_onclick = function(e) {
+			dlt_zipCodeStreet.removeAll();
+			com.executeSubmission(sbm_array);
+		};
+		
+		scwin.btn_removeAll_onclick = function(e) {
+			dlt_zipCodeStreet.removeAll();
+		};
+		
+		scwin.sbm_default_submitdone = function(e) {
+			var sTime = new Date();
+			dlt_zipCodeStreet.setJSON( e.responseJSON.dlt_zipCodeStreet );
+			var eTime = new Date();
+			
+			var txtObj = {
+				row : dlt_zipCodeStreet.getRowCount(),
+				serverTime : this.endTime-this.startTime,
+				clientTime : eTime-sTime
+			};
+			
+			txa_resultDefault.setValue( txa_resultDefault.getValue() + scwin.makeResultText(txtObj) );
+		};
+		
+		scwin.sbm_array_submitdone = function(e) {
+			var sTime = new Date();
+			dlt_zipCodeStreet.setArray( e.responseJSON.dlt_zipCodeStreet );
+			var eTime = new Date();
+			
+			var txtObj = {
+				row : dlt_zipCodeStreet.getRowCount(),
+				serverTime : this.endTime-this.startTime,
+				clientTime : eTime-sTime
+			};
+			
+			txa_resultArray.setValue(txa_resultArray.getValue() + scwin.makeResultText(txtObj));
+		};
+		
+		scwin.makeResultText = function(optObj){
+			var rsStr = "";
+			rsStr += "조회 건수 : ";
+			rsStr += WebSquare.util.setNumber(optObj.row);
+			rsStr += "건 :: 통신 : ";
+			rsStr += WebSquare.util.setNumber(optObj.serverTime);
+			rsStr += "ms";
+			rsStr += " :: 화면 : ";
+			rsStr += WebSquare.util.setNumber(optObj.clientTime);
+			rsStr += "ms\n";
+			return rsStr;
+		}
+		
+	]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="contentWrap">
+			<w2:wframe id="" style="" src="/cm/common/wf_titleFav.xml"></w2:wframe>
+			<w2:wframe id="" src="/cm/common/wf_titleDesc.xml"></w2:wframe>
+			<xf:group id="" style="" class="section"><xf:group id="" style="" class="tbl_search dmb" tagname="">
+				<xf:group id="" style="width:100%;" adaptive="layout" class="w2tb tbl_sc" adaptiveThreshold="768" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:80px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+						<xf:group style="width:0px;" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">
+							<w2:textbox id="" style="" class="tbLabel" label="조회 건수 : "></w2:textbox>
+						</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" class="mr5" displayMode="label" selectedData="true" optionOrder="false" id="sbx_row" ref="data:dma_search.SEQ_NO" style="width:120px;height:20px;" allOption="" submenuSize="auto" disabled="false">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[10,000]]></xf:label>
+										<xf:value><![CDATA[10000]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[50,000]]></xf:label>
+										<xf:value><![CDATA[50000]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[100,000]]></xf:label>
+										<xf:value><![CDATA[100000]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[200,000]]></xf:label>
+										<xf:value><![CDATA[200000]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[300,000]]></xf:label>
+										<xf:value><![CDATA[300000]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[전체]]></xf:label>
+										<xf:value><![CDATA[500000]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select1>
+							<w2:anchor id="btn_removeAll" style="" ev:onclick="scwin.btn_removeAll_onclick" class="btn_gcm" outerDiv="true">
+								<xf:label><![CDATA[데이터 삭제]]></xf:label>
+							</w2:anchor>
+						</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td"></xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group></xf:group>
+			<xf:group id="" style="" class="section"><xf:group id="grp_searchBtn" style="" class="ofh">
+				<xf:group id="" style="width: 49%;float:left;margin-right:2%;" class="">
+					<xf:group id="" style="" class="tar">
+						<w2:anchor id="btn_searchDefault" style="" ev:onclick="scwin.btn_searchDefault_onclick" class="btn_sh" outerDiv="true">
+							<xf:label><![CDATA[Default Type]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<w2:textbox id="" style="" class="mb5" label="Submission ID : sbm_default&lt;br/&gt;URL : /sample/selectLargeDataDefault"></w2:textbox>
+					<xf:textarea id="txa_resultDefault" style="width: 100%;height: 80px;"></xf:textarea>
+				</xf:group>
+				<xf:group id="" style="width: 49%;float:left;" class="">
+					<xf:group id="" style="" class="tar">
+						<w2:anchor id="btn_searchLargeHander1" style="" ev:onclick="scwin.btn_searchLargeHander1_onclick" class="btn_sh" outerDiv="true">
+							<xf:label><![CDATA[Array Type]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<w2:textbox id="" style="" class="mb5" label="Submission ID : sbm_array&lt;br/&gt;URL : /sample/selectLargeDataArray"></w2:textbox>
+					<xf:textarea id="txa_resultArray" style="width: 100%;height: 80px;"></xf:textarea>
+				</xf:group>
+			</xf:group></xf:group>
+		<xf:group id="" style="" class="section"><w2:gridView ignoreCellClick="false" summaryAuto="false" ignoreToggleOnDisabled="false" rowNumHeaderValue="" class="cm_grid" rowNumWidth="" fixedColumnWithHidden="true" rowNumVisible="" scrollByColumnAdaptive="false" dataList="dlt_zipCodeStreet" id="" style="height:300px;" useShiftKey="true" scrollByColumn="false">
+				<w2:header id="header1" style="">
+					<w2:row id="row1" style="">
+						<w2:column blockSelect="false" id="column39" style="height:20px" inputType="text" width="120" value="SEQ_NO" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column37" style="height:20px" inputType="text" width="120" value="SIGUNGUCODE" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column35" style="height:20px" inputType="text" width="120" value="STREETNUM" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column33" style="height:20px" inputType="text" width="120" value="STREET" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column31" style="height:20px" inputType="text" width="120" value="STREETENG" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column29" style="height:20px" inputType="text" width="120" value="DONGSEQ" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column27" style="height:20px" inputType="text" width="120" value="SIDO" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column25" style="height:20px" inputType="text" width="120" value="SIGUNGU" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column23" style="height:20px" inputType="text" width="120" value="DONGTYPE" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column21" style="height:20px" inputType="text" width="120" value="DONGCODE" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column19" style="height:20px" inputType="text" width="120" value="DONG" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column17" style="height:20px" inputType="text" width="120" value="PARENTSTREETNUM" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column15" style="height:20px" inputType="text" width="120" value="PARENTSTREET" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column13" style="height:20px" inputType="text" width="120" value="ISUSE" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column11" style="height:20px" inputType="text" width="120" value="CHANGEREASON" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column9" style="height:20px" inputType="text" width="120" value="CHANGEHISTORY" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column7" style="height:20px" inputType="text" width="120" value="SIDOENG" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column5" style="height:20px" inputType="text" width="120" value="SIGUNGUENG" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column3" style="height:20px" inputType="text" width="120" value="DONGENG" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="column1" style="height:20px" width="120" inputType="text" value="OPENDATE" displayMode="label"></w2:column>
+					</w2:row>
+				</w2:header>
+				<w2:gBody id="gBody1" style="">
+					<w2:row id="row2" style="">
+						<w2:column blockSelect="false" id="SEQ_NO" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="SIGUNGUCODE" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="STREETNUM" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="STREET" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="STREETENG" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="DONGSEQ" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="SIDO" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="SIGUNGU" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="DONGTYPE" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="DONGCODE" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="DONG" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="PARENTSTREETNUM" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="PARENTSTREET" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="ISUSE" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="CHANGEREASON" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="CHANGEHISTORY" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="SIDOENG" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="SIGUNGUENG" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="DONGENG" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+						<w2:column blockSelect="false" id="OPENDATE" style="height:20px" width="70" inputType="text" displayMode="label"></w2:column>
+					</w2:row>
+				</w2:gBody>
+			</w2:gridView></xf:group></xf:group>
+	</body>
+</html>

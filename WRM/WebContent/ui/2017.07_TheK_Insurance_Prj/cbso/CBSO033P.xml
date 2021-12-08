@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+    <!-- 
+        ###################################################
+         파일명 : CBSO033P.xml
+         프로그램명 : 사원목록
+         설 명 :  사원목록 조회
+         작성자 : 진태만
+         작성일 : 2017.09.07
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.09.07        진태만          최초작성
+        ###################################################
+     -->
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate></w2:buildDate>
+        <xf:model>
+            <xf:instance>
+                <data></data>
+            </xf:instance>
+            <w2:dataCollection>
+ 
+				<!-- 전체 갯수 Ds -->
+				<w2:dataList baseNode="list" id="Ds_TotCnt"
+                	keyNode="//*/vector" repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column id="result" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="totalRows" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="currPage" name="name3"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="afterEJBCall" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="beforeEJBCall" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="pageSize" name="name6"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList> 
+            	<w2:dataList baseNode="list" id="DsWs_Search"
+            		repeatNode="map">
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_SearchWarnnig"
+            		repeatNode="map">
+            	</w2:dataList>
+            	<!-- 사원 DS(수정) -->
+            	<w2:dataList id="Ds_Search" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sResignDate" name="sResignDate"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEmpNo" name="sEmpNo"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEmpName" name="sEmpName"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDepartName" name="sDepartName"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDepartCode" name="sDepartCode"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRegistrationNo" name="sRegistrationNo"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList> 
+            	<!-- Warning DS(추가) -->
+          		<w2:dataList baseNode="list" id="Ds_Warning" keyNode="//*/WARNING" repeatNode="map"></w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection></w2:workflowCollection>
+        </xf:model>
+         
+  		<!--// js Script include //-->
+        <script src="/cm/js/common.js"/>
+		<script src="/cm/js/val_lib.js"/>
+		<script src="/cm/js/util.js"/>
+		<script src="/cm/js/transSub.js"/>
+		<script src="/cm/js/callService.js"/>
+		<script src="/cm/js/gds.js"/>
+		<script src="/cm/js/wconv.js"/>
+ 		<script src="/cm/js/wprom.js"/>
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/>
+	 	<script src="/cm/js/convertJs/Accounting_Script.js"/>
+  
+        <script><![CDATA[
+
+/* 
+ *===================================File description================================================
+ * Create Date : 20010.08.24
+ * Creator     : 이정수
+ * Desc        : 사원목록 팝업
+ *====================================================================================================
+ */
+ 
+var pageSize = "15";
+var pageCount = "5";
+var gsSysDate;
+var args;
+var psButton = "버튼";
+var pCode = "";		// 코드
+var bOpenSearchFlag = true;	// 오픈시 자동조회 여부
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_OnLoadCompleted
+// 내용        : 폼로드할때 처리할 내용 
+//---------------------------------------------------------------------------
+scwin.init = function() {
+	console.log("[/CBSO033P.xml] [init()] ==> [초기화]" );
+	
+	var indata = $w.getParameter("param"); 
+	// console.log("[/CBSO033P.xml] [init()] ==> [indata]"+ indata );
+	
+	try {
+		args = JSON.parse(indata);		// 부모창에서 받아온 값( 예) args.tab)
+	} catch(e) {}
+  
+	bOpenSearchFlag = true;
+ 
+	//sEmpNoPop.focus();		// 사원코드 포커스
+	util.focus(sEmpNoPop); 	 // 사원코드 포커스 설정 
+	 
+    // 초기화
+	scwin.form_init();
+	
+	// 조회
+    if(psButton != "버튼") {
+		scwin.getSearchList();
+	}
+	
+	if(!bOpenSearchFlag) {
+		return;
+	}
+	 
+	bOpenSearchFlag = false;  
+	 
+	//console.log("[/[/CBSO033P.xml] [init()] ==> [사원코드]"+ sEmpNamePop.getValue() ); 
+	//	sEmpNamePop.setValue("정진");   // 사원명	// TEST @@@ ===>
+};
+ 
+scwin.form_init = function() { 
+    scwin.initialize(); 
+ 
+    sResignGubun.setValue("Y");		// 퇴직여부(Y: 재직)  
+};
+
+/* ***************************************** */
+//화면 초기화
+/* ***************************************** */
+scwin.initialize = function(e) {
+	// console.log("[/[/CBSO033P.xml] [initialize()] ==> [화면 초기화]" );
+	 
+    sEmpNamePop.setValue("");
+    sEmpNoPop.setValue("");
+    sDepartNamePop.setValue("");
+    sResignGubun.setValue("");		// 퇴직여부(Y: 재직) 
+};
+
+/* ***************************************** */
+// 조회 버튼 클릭시
+/* ***************************************** */
+scwin.btn_search_Onclick  = function(e) {
+	//console.log("[/CBSC090M.xml] [btn_search_Onclick()] ==> [조회 버튼 클릭 이벤트] [TEST_01]");  
+	
+	util.eventAsyncCall(this, scwin.getSearchList, arguments);		// 비동기 방식 호출 	
+};
+  
+/* ***************************************** */
+// 비동기 방식 호출 	 	
+/* ***************************************** */
+scwin.getSearchList = function(e) {
+ 	//console.log("[/CBSO033P.xml] [getSearchList()] ==> [조회 버튼 클릭 이벤트] [TEST_01]" );
+ 
+	scwin.Search("1");		// 조회 
+ 
+    var sTotCnt = util.appendComma(Ds_TotCnt.getCellData(0, "totalRows")); 	// 전체 건수(3자리 콤마) 
+ 
+    // 전체 건수 얻어오기(Paging 처리)
+	gfn_MakePagingData(Ds_Page, Ds_TotCnt.getCellData(0, "totalRows"), "10", "10"); 
+ 
+    Cmb_Page.setValue("1"); //----- End
+  
+	totalRows_02.setValue(sTotCnt);	// 전체 갯수 DS 
+};
+
+/* ***************************************** */
+// 조회
+/* ***************************************** */
+scwin.Search = function(pageNo) {
+	//console.log("[/[/CBSO033P.xml] [doSearch()] ==> [조회]" );
+ 
+ 	var MethodObj = new callService("com.inswave.accounting.task.AccountingCommonTask", "selectEmpInfoList",  pageSize, pageNo);	// 사원목록 조회 Obj
+ 	MethodObj.setId("getTeamList");	// ID 셋팅  
+	MethodObj.setParam("sEmpNo", sEmpNoPop.getValue());		// 사원코드
+	MethodObj.setParam("sEmpName",		sEmpNamePop.getValue());		// 사원명
+	MethodObj.setParam("sDepartName",	sDepartNamePop.getValue());	// 부서명
+	MethodObj.setParam("sResignGubun",	sResignGubun.getValue());		// 퇴직여부
+	MethodObj.setUrl("/common/CBSO033PController.do");  // 서버단 호출 URL  
+ 	MethodObj.MsgShow();							// PROGRASSBAR 표시 
+	MethodObj.setMsg("조회 중");    		 		// 동기, 비동기시 PROGRASSBAR에 표시할 메시지 셋팅 
+	MethodObj.setXPath("//*/ADMAB01");		// XPath
+	MethodObj.addXPath("//*/vector");			// XPath
+	MethodObj.addXPath("//*/WARNING");		// XPath
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)]totalRows
+	MethodObj.send();		// 최종 전송 
+	//console.log("[/[/CBSO033P.xml] [doSearch()] ==> [조회 결과_51]" );
+ 
+	//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+	 
+	Ds_Search.setJSON(_tranSync.getDsJson("ADMAB01"));		// 조회 DS 셋팅(조회 결과) 
+	Ds_TotCnt.setJSON(_tranSync.getDsJson("vector")); 				// 조회 전체 건수 DS 셋팅(조회 결과) 
+ 	Ds_Warning.setJSON(_tranSync.getDsJson("WARNING"));  		// Warning DS 셋팅(조회 결과)  
+	//console.log("[/[/CBSO033P.xml] [getCollTargetList()] ==> [DS_갯수_nCount]"+ Ds_TotCnt.getCellData(0, "totalRows") );
+ 	//console.log("[/[/CBSO033P.xml] [getCollTargetList()] ==> [DS_갯수]"+ Ds_Search.getRowCount() +"[Ds_Search]"+ WebSquare.xml.serialize(Ds_Search.getAllXML()) ); 
+ 
+	if (Ds_Warning.getRowCount() != 0) {
+        wprom.alert(Ds_Warning.getCellData(0, "msg"));
+        return false;
+    }
+    if (Ds_Search.getRowCount() < 1) {
+    	if (bOpenSearchFlag) {
+            wprom.alert("존재하지 않는 사원입니다.");
+            wprom.close("");
+           // wconv.close("noneClose");
+        }
+        wprom.alert("해당 데이터가 존재하지 않습니다.");
+        return;
+    } 
+    sResignGubun.setValue("Y");		// 퇴직여부(Y: 재직) 
+};
+
+//**************************************************************************************************
+// lfn_getColumnValue: 퇴직 여부 칼럼 expression  처리 함수
+//**************************************************************************************************
+scwin.lfn_getColumnValue = function(data, formattedData, rowIndex, colIndex) { 
+ 
+	var sRslt = ""; 
+	
+	if (Grd_List.getColumnID(colIndex) == "sResignDate") {  // Grid 칼럼이 "퇴직 여부" 이면
+		var sResignDate = Ds_Search.getCellData(rowIndex, "sResignDate");   // 퇴직 여부  
+		
+		if (util.isNull(sResignDate)) {  // Grid 칼럼이 "퇴직 여부"가 null 이면 
+		 	sRslt = "재직"; 
+		} else {
+			 sRslt = sResignDate;
+		}
+	}
+	 
+	return sRslt;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : Grd_List_OnCellClick
+// 내용        :  조회된 그리드에서 선택된 조직 메인으로 리턴
+//---------------------------------------------------------------------------
+scwin.Grd_List_OnCellClick = function(nRow, nCol) {
+	// console.log("[/[/CBSO033P.xml] [Grd_List_OnCellClick()] ==> [TEST]" );  
+ 
+    var ind = nRow;
+    if (ind < 0) return;
+ 
+    scwin.uf_getDataChoice(nRow);
+}; 
+	
+//---------------------------------------------------------------------------
+// function 명 : Grd_List_OnCellDblClick
+// 내용        :  조회된 그리드에서 선택된 조직 메인으로 리턴
+//---------------------------------------------------------------------------
+scwin.Grd_List_OnCellDblClick = function(row, col) {
+   var nRow = row;
+    if (nRow < 0) return;
+ 
+	scwin.uf_getDataChoice(nRow);
+};
+	 
+//---------------------------------------------------------------------------
+// function 명 : uf_getDataChoice
+// 내용        :  조회된 그리드에서 선택된 조직 메인으로 리턴(창닫기)
+//---------------------------------------------------------------------------
+scwin.uf_getDataChoice = function(nRow) {
+
+	var sArg = "";
+ 
+	sArg = Ds_Search.getCellData(nRow, "sEmpNo");					// 사원코드
+	sArg += "^"+ Ds_Search.getCellData(nRow, "sEmpName");		// 사원명
+	sArg += "^"+ args.tab;
+	sArg += "^"+ Ds_Search.getCellData(nRow, "sDepartCode");	// 부서코드
+	sArg += "^"+ Ds_Search.getCellData(nRow, "sDepartName");	// 부서명 
+	sArg += "^"+ Ds_Search.getCellData(nRow, "sResignDate");		// 퇴직일 
+	console.log("[/CBSO033P.xml] [uf_getDataChoice()] ==> [sArg]"+ sArg );
+	
+	wprom.close(sArg);     // 파라미터(사원ID, 사원명, Tab명) 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : Btn_Close_OnClick
+// 내용        : 닫기버튼 Event처리
+//---------------------------------------------------------------------------
+scwin.Btn_Close_OnClick = function(obj) {
+    wprom.close("");
+};
+
+//**************************************************************************************************
+// 페이징 처리 - 페이지 콤보 박스(Paging 처리 시작)
+//**************************************************************************************************
+scwin.Cmb_Page_OnChanged = function(info) { 
+    scwin.Search(info.newValue);
+};
+
+//**************************************************************************************************
+// 페이징 처리 - 이전 페이지 리스트
+//**************************************************************************************************
+scwin.Btn_PreV_OnClick = function(obj) { 
+	var ftVal = wconv.toNumber(Ds_Page.getCellData(0, "FILTERCD")) - 1;
+    if (wconv.toNumber(maxFilterVal) < wconv.toNumber(ftVal)) {
+        wprom.alert("조회의 처음입니다.");
+        return;
+    } else if (wconv.toNumber(ftVal) < 1) {
+        wprom.alert("조회의 처음입니다.");
+        return;
+    }
+    wconv.filter(Ds_Page, "FILTERCD=='" + ftVal + "'", true);
+    Cmb_Page.setValue(Ds_Page.getCellData(0, "CODE"));
+    scwin.Search(Cmb_Page.getValue());
+};
+
+//**************************************************************************************************
+// 페이징 처리 - 이전 페이지
+//**************************************************************************************************
+scwin.Btn_Pre_OnClick = function(obj) { 
+	var Idx = Cmb_Page.getValue();
+    if (wconv.toNumber(Idx) - 1 < 1) {
+        wprom.alert("조회의 처음입니다.");
+        return;
+    }
+    scwin.Search(wconv.toString(wconv.toNumber(Idx) - 1));
+    if (Ds_Page.getCellData(0, "CODE") == Idx) {
+        wconv.filter(Ds_Page, "FILTERCD=='" + wconv.toString(wconv.toNumber(Ds_Page.getCellData(0, "FILTERCD")) - 1) + "'", true);
+        Cmb_Page.setValue(Ds_Page.getCellData((Ds_Page.getRowCount() - 1), "CODE"));
+    } else {
+        Cmb_Page.setValue(wconv.toNumber(Idx) - 1);
+	}
+};
+
+//**************************************************************************************************
+// 페이징 처리 - 다음 페이지
+//**************************************************************************************************
+scwin.Btn_Next_OnClick = function(obj) {
+ 
+	var Idx = Cmb_Page.getValue();
+	 	
+	if (wconv.toNumber(maxPage) < wconv.toNumber(Idx) + 1) {
+		wprom.alert("더이상 자료가 존재하지 않습니다");
+		return;
+	}
+	 
+	scwin.Search(wconv.toString(wconv.toNumber(Idx) + 1));
+ 
+	if (Ds_Page.getCellData((Ds_Page.getRowCount() - 1), "CODE") == Idx) {
+		wconv.filter(Ds_Page, "FILTERCD=='" + wconv.toString(wconv.toNumber(Ds_Page.getCellData((Ds_Page.getRowCount() - 1), "FILTERCD")) + 1) + "'", true);
+	}
+	Cmb_Page.setValue(wconv.toNumber(Idx) + 1); 
+};
+
+//**************************************************************************************************
+// 페이징 처리 - 다음 페이지 리스트(Paging 처리 끝)
+//**************************************************************************************************
+scwin.Btn_NextV_OnClick = function(obj) { 
+	var ftVal = wconv.toNumber(Ds_Page.getCellData((Ds_Page.getRowCount() - 1), "FILTERCD")) + 1;
+    if (wconv.toNumber(maxFilterVal) < wconv.toNumber(ftVal)) {
+        wprom.alert("더이상 자료가 존재하지 않습니다");
+        return;
+    }
+    wconv.filter(Ds_Page, "FILTERCD=='" + ftVal + "'", true);
+    Cmb_Page.setValue(Ds_Page.getCellData(0, "CODE"));
+    scwin.Search(Cmb_Page.getValue());
+};
+
+//---------------------------------------------------------------------------
+// function 명 : sEmpName_OnKeyDown
+// 내용        :  사원명 Key Down(엔터) 이벤트
+//---------------------------------------------------------------------------
+scwin.sEmpNamePop_onkeydown = function(e) {  
+	if(e.keyCode != 13) {
+		return;
+	}
+ 
+	sEmpNoPop.focus(); 	// 사원코드 focus 
+}
+
+//---------------------------------------------------------------------------
+// function 명 : 사원코드
+// 내용        :  사원코드 Key Down(엔터) 이벤트
+//---------------------------------------------------------------------------
+scwin.sEmpNo_OnKeyDown = function(e) {  
+	if(e.keyCode != 13) {
+		return;
+	}
+ 
+	sDepartNamePop.focus(); 	// 부서명 focus 
+}
+  
+ //---------------------------------------------------------------------------
+// function 명 : 부서명
+// 내용        :  사원코드 Key Down(엔터) 이벤트
+//---------------------------------------------------------------------------
+scwin.sDepartName_OnKeyDown = function(e) {  
+	if(e.keyCode != 13) {
+		return;
+	}
+ 
+	sResignGubun.focus(); 	// 퇴직여부 focus 
+}
+ ]]></script>
+    </head>
+    <body>
+    	<xf:group class="cont_wrap layer" id="7007"
+    		style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;height:458px; left:0px; top:0px; border:0px solid transparent;" userData1="사원목록[7010]"
+    		userData2=" OnLoadCompleted:scwin.OnLoadCompleted; ">
+    		<DataObjects>
+    			<DataObject></DataObject>
+    		</DataObjects>
+    		<ServiceObjects>
+    			<ServiceObject></ServiceObject>
+    		</ServiceObjects>
+    		<xf:group arcsize="8" class="" id="Shape5" style="position:absolute; right:491px;  bottom:491px;height:322px; left:4px; top:130px;width:487px;" userData3="RoundRect"></xf:group>
+    		<xf:switch id="switch_13" style=" ">
+    			<xf:case id="Default_14" style=" ">
+    				<w2:gridView autoFit="allColumn" autoFitMinWidth="100" class="sty_Grid" dataList="Ds_Search" ev:oncellclick="scwin.Grd_List_OnCellClick"
+    					ev:oncelldblclick="scwin.Grd_List_OnCellDblClick" focusMode="row" id="Grd_List" inputType="text" readOnly="true"
+    					style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  height:326px; left:0px; right:486px;top:125px; width:490px;" evenRowBackgroundColor=""
+    					rowMouseOverColor="" selectedCellColor="">
+    					<w2:header>
+    						<w2:row>
+    							<w2:column dataType="text" id="head_id_89" inputType="text" readOnly="true" style="height:20px;" textAlign="center" userData1="0" userData3="0" value="사원코드"
+    								width="70">
+    							</w2:column>
+    							<w2:column dataType="text"
+    								id="head_id_90" inputType="text" readOnly="true"
+    								style="height:20px;" userData1="1" userData3="0" value="사원명"
+    								width="100">
+    							</w2:column>
+    							<w2:column dataType="text"
+    								id="head_id_91" inputType="text" readOnly="true"
+    								style="height:20px;" textAlign="center" userData1="2"
+    								userData3="0" value="부서코드" width="70">
+    							</w2:column>
+    							<w2:column dataType="text"
+    								id="head_id_92" inputType="text" readOnly="true"
+    								style="height:20px;" textAlign="center" userData1="3"
+    								userData3="0" value="부서명" width="150">
+    							</w2:column>
+    							<w2:column dataType="text"
+    								id="head_id_93" inputType="text" readOnly="true"
+    								style="height:20px;" textAlign="center" userData1="4"
+    								userData3="0" value="퇴직여부" width="70">
+    							</w2:column>
+    						</w2:row>
+    					</w2:header>
+    					<w2:gBody>
+    						<w2:row>
+    							<w2:column dataType="text" id="sEmpNo"
+    								inputType="link" readOnly="true"
+    								style="height:20px; cursor:hand; ;" textAlign="center"
+    								userData1="0" userData3="0" width="70" value="">
+    							</w2:column>
+    							<w2:column dataType="text" id="sEmpName"
+    								inputType="text" readOnly="true" style="height:20px;"
+    								textAlign="left" userData1="1" userData3="0" width="100">
+    							</w2:column>
+    							<w2:column dataType="text"
+    								id="sDepartCode" inputType="text" readOnly="true"
+    								style="height:20px;" textAlign="left" userData1="2"
+    								userData3="0" width="70">
+    							</w2:column>
+    							<w2:column dataType="text"
+    								id="sDepartName" inputType="text" readOnly="true"
+    								style="height:20px;" textAlign="left" userData1="3"
+    								userData3="0" width="150">
+    							</w2:column> <!-- 부서명 -->
+    							<w2:column dataType="text" expression=""
+    								id="sResignDate" inputType="text" readOnly="true"
+    								style="height:20px;" textAlign="center" userData1="4"
+    								userData2=" expr:iif(sResignDate=='','text','date') ;"
+    								userData3="0" width="70"
+    								customFormatter="scwin.lfn_getColumnValue">
+    							</w2:column> <!-- 퇴직여부 -->
+    						</w2:row>
+    					</w2:gBody>
+    				</w2:gridView>
+    			</xf:case>
+    		</xf:switch>
+    		<xf:group arcsize="6" class="search_area" id="Shape0" style="position:absolute; right:491px; bottom:87px; height:55px;left:0px;top:28px; width:490px;" userData3="RoundRect"></xf:group>
+    		<w2:textbox class="sty_lb_Search" id="Stat_sEmpName" label="사원명" style="position:absolute; VAlign:Middle;height:20px;left:5px;top:35px;width:60px;" tagname=""></w2:textbox>
+    		<w2:textbox id="Static10" label="총건수" style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:-3px;top:97px; width:40px;" tagname=""></w2:textbox>
+    		<w2:textbox id="Static17" label="건" style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:73px;top:97px; width:26px;" tagname=""></w2:textbox>
+    		<w2:textbox class="sty_lb_Search" id="Stat_sDepartName" label="부서명" style="position:absolute; VAlign:Middle; height:21px;left:5px;top:59px; width:60px;" tagname=""></w2:textbox>
+    		<w2:textbox class="sty_lb_Search" id="Stat_sEmpNo" label="사원코드" style="position:absolute;height:20px;width:70px;left:207px;VAlign:Middle;top:37px;" tagname=""></w2:textbox>
+    		<xf:input class="sty_ipt_form" disabled="true" id="totalRows_02" style="position:absolute; border-style:solid;  text-align:CENTER;  height:20px;left:42px;top:97px; width:41px;"></xf:input>
+    		<xf:select1 appearance="full" class="sty_ipt_search" cols="4" ev:onblur="scwin.sResignGubun_OnKeyDown" id="sResignGubun" rows="1" selectedIndex="1"
+    			style="position:absolute;height:21px;left:288px;top:58px;width:180px;" userData1="all">
+    			<xf:choices>
+    				<xf:item>
+    					<xf:label><![CDATA[재직]]></xf:label>
+    					<xf:value><![CDATA[Y]]></xf:value>
+    				</xf:item>
+    				<xf:item>
+    					<xf:label><![CDATA[퇴직]]></xf:label>
+    					<xf:value><![CDATA[N]]></xf:value>
+    				</xf:item>
+    			</xf:choices>
+    			<Layout></Layout>
+    			<Layout></Layout>
+    		</xf:select1>
+    		<w2:textbox class="sty_lb_Search" id="Stat_sResignGubun" label="퇴직여부" style="position:absolute;height:21px;width:70px;left:207px;VAlign:Middle;top:58px;" tagname=""></w2:textbox>
+    		<xf:trigger class="btn_Comm_Search " ev:onclick="scwin.btn_search_Onclick" id="Btn_Search" style="position:absolute;left:419px;top:57px;width:45px;" type="anchor">
+    			<xf:label><![CDATA[조회]]></xf:label>
+    		</xf:trigger>
+    		<xf:trigger class="popup_top_btn" ev:onclick="scwin.initialize" id="Btn_Init" style="position:absolute;left:356px;top:1px; width:50px;" type="anchor">
+    			<xf:label><![CDATA[새작업]]></xf:label>
+    		</xf:trigger>
+    		<xf:trigger class="popup_top_btn" ev:onclick="scwin.Btn_Close_OnClick" id="Btn_Close" style="position:absolute;left:428px;top:1px;" type="anchor">
+    			<xf:label><![CDATA[닫기]]></xf:label>
+    		</xf:trigger>
+    		<WebBrowser id="WebBrowser0" style="position:absolute; display:none;  height:24px; left:240px; top:4px; width:37px;"></WebBrowser>
+    		<xf:input class="sty_ipt_search" dataType="number" editType="select" ev:onblur="" id="sEmpNoPop" maxByteLength="7"
+    			style="position:absolute;left:288px;top:36px; width:78px;" ev:onkeydown="scwin.sEmpNo_OnKeyDown">
+    		</xf:input>
+    		<w2:wframe id="div" scope="false" src="/cm/common/Main_btn_GridControl.xml" style="position:absolute; height:20px;left:232px;top:90px; width:155px;"></w2:wframe>
+    		<xf:input class="sty_ipt_search" editType="select" ev:onblur="" id="sEmpNamePop" maxByteLength="20" style="position:absolute;left:75px;top:34px; width:118px;" ev:onkeydown="scwin.sEmpNamePop_onkeydown">
+    		</xf:input>
+    		<xf:input class="sty_ipt_search" editType="select" ev:onblur="" id="sDepartNamePop" maxByteLength="60"
+    			style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:75px;top:58px; width:118px;" ev:onkeydown="scwin.sDepartName_OnKeyDown">
+    		</xf:input>
+    		<w2:textbox class="sub_pop_title01" id="Static5" label="사원목록" style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; width:249px;" tagname=""></w2:textbox>
+    	</xf:group>
+    </body>
+</html>

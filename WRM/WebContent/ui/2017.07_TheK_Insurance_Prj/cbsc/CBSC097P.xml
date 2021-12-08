@@ -1,0 +1,1122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+            	<w2:dataList baseNode="list" id="Ds_BntpCd"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="Ds_BntpGrid1"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sBntpLargClsfCd"
+            				name="sBntpLargClsfCd" />
+            			<w2:column dataType="text"
+            				id="sBntpLargClsfCdName" name="sBntpLargClsfCdName" />
+            			<w2:column dataType="text" id="sBntpDurnClsfCd"
+            				name="sBntpDurnClsfCd" />
+            			<w2:column dataType="text"
+            				id="sBntpDurnClsfCdName" name="sBntpDurnClsfCdName" />
+            			<w2:column dataType="text" id="sBntpCd"
+            				name="sBntpCd" />
+            			<w2:column dataType="text" id="sBntpCdName"
+            				name="sBntpCdName" />
+            			<w2:column dataType="text" id="nRato"
+            				name="nRato" />
+            			<w2:column dataType="text" id="sBntpExpln1"
+            				name="sBntpExpln1" />
+            			<w2:column dataType="text" id="sBntpExpln2"
+            				name="sBntpExpln2" />
+            			<w2:column dataType="text" id="sUdrtkStndCont1"
+            				name="sUdrtkStndCont1" />
+            			<w2:column dataType="text" id="sUdrtkStndCont2"
+            				name="sUdrtkStndCont2" />
+            			<w2:column dataType="text" id="sBntpEqmtUnit"
+            				name="sBntpEqmtUnit" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<nRato />
+            				<sBntpCd />
+            				<sBntpCdName />
+            				<sBntpDurnClsfCd />
+            				<sBntpDurnClsfCdName />
+            				<sBntpEqmtUnit />
+            				<sBntpExpln1 />
+            				<sBntpExpln2 />
+            				<sBntpLargClsfCd ><![CDATA[insRow]]></sBntpLargClsfCd>
+            				<sBntpLargClsfCdName />
+            				<sUdrtkStndCont1 />
+            				<sUdrtkStndCont2 />
+            			</w2:row>
+            			<w2:row>
+            				<nRato />
+            				<sBntpCd />
+            				<sBntpCdName />
+            				<sBntpDurnClsfCd />
+            				<sBntpDurnClsfCdName />
+            				<sBntpEqmtUnit />
+            				<sBntpExpln1 />
+            				<sBntpExpln2 />
+            				<sBntpLargClsfCd />
+            				<sBntpLargClsfCdName />
+            				<sUdrtkStndCont1 />
+            				<sUdrtkStndCont2 />
+            			</w2:row>
+            			<w2:row>
+            				<nRato />
+            				<sBntpCd />
+            				<sBntpCdName />
+            				<sBntpDurnClsfCd />
+            				<sBntpDurnClsfCdName />
+            				<sBntpEqmtUnit />
+            				<sBntpExpln1 />
+            				<sBntpExpln2 />
+            				<sBntpLargClsfCd />
+            				<sBntpLargClsfCdName />
+            				<sUdrtkStndCont1 />
+            				<sUdrtkStndCont2 />
+            			</w2:row>
+            			<w2:row>
+            				<nRato />
+            				<sBntpCd />
+            				<sBntpCdName />
+            				<sBntpDurnClsfCd />
+            				<sBntpDurnClsfCdName />
+            				<sBntpEqmtUnit />
+            				<sBntpExpln1 />
+            				<sBntpExpln2 />
+            				<sBntpLargClsfCd />
+            				<sBntpLargClsfCdName />
+            				<sUdrtkStndCont1 />
+            				<sUdrtkStndCont2 />
+            			</w2:row>
+            			<w2:row>
+            				<nRato />
+            				<sBntpCd />
+            				<sBntpCdName />
+            				<sBntpDurnClsfCd />
+            				<sBntpDurnClsfCdName />
+            				<sBntpEqmtUnit />
+            				<sBntpExpln1 />
+            				<sBntpExpln2 />
+            				<sBntpLargClsfCd />
+            				<sBntpLargClsfCdName />
+            				<sUdrtkStndCont1 />
+            				<sUdrtkStndCont2 />
+            			</w2:row>
+            			<w2:row></w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_BntpGrid2"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sBntpLargClsfCd"
+            				name="sBntpLargClsfCd" />
+            			<w2:column dataType="text"
+            				id="sBntpLargClsfCdName" name="sBntpLargClsfCdName" />
+            			<w2:column dataType="text" id="sBntpDurnClsfCd"
+            				name="sBntpDurnClsfCd" />
+            			<w2:column dataType="text"
+            				id="sBntpDurnClsfCdName" name="sBntpDurnClsfCdName" />
+            			<w2:column dataType="text" id="sBntpCd"
+            				name="sBntpCd" />
+            			<w2:column dataType="text" id="sBntpCdName"
+            				name="sBntpCdName" />
+            			<w2:column dataType="text" id="nRato"
+            				name="nRato" />
+            			<w2:column dataType="text" id="sBntpExpln1"
+            				name="sBntpExpln1" />
+            			<w2:column dataType="text" id="sBntpExpln2"
+            				name="sBntpExpln2" />
+            			<w2:column dataType="text" id="sUdrtkStndCont1"
+            				name="sUdrtkStndCont1" />
+            			<w2:column dataType="text" id="sUdrtkStndCont2"
+            				name="sUdrtkStndCont2" />
+            			<w2:column dataType="text" id="sBntpEqmtUnit"
+            				name="sBntpEqmtUnit" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<nRato />
+            				<sBntpCd />
+            				<sBntpCdName />
+            				<sBntpDurnClsfCd />
+            				<sBntpDurnClsfCdName />
+            				<sBntpEqmtUnit />
+            				<sBntpExpln1 />
+            				<sBntpExpln2 />
+            				<sBntpLargClsfCd ><![CDATA[insRow]]></sBntpLargClsfCd>
+            				<sBntpLargClsfCdName />
+            				<sUdrtkStndCont1 />
+            				<sUdrtkStndCont2 />
+            			</w2:row>
+            			<w2:row>
+            				<nRato />
+            				<sBntpCd />
+            				<sBntpCdName />
+            				<sBntpDurnClsfCd />
+            				<sBntpDurnClsfCdName />
+            				<sBntpEqmtUnit />
+            				<sBntpExpln1 />
+            				<sBntpExpln2 />
+            				<sBntpLargClsfCd />
+            				<sBntpLargClsfCdName />
+            				<sUdrtkStndCont1 />
+            				<sUdrtkStndCont2 />
+            			</w2:row>
+            			<w2:row>
+            				<nRato />
+            				<sBntpCd />
+            				<sBntpCdName />
+            				<sBntpDurnClsfCd />
+            				<sBntpDurnClsfCdName />
+            				<sBntpEqmtUnit />
+            				<sBntpExpln1 />
+            				<sBntpExpln2 />
+            				<sBntpLargClsfCd />
+            				<sBntpLargClsfCdName />
+            				<sUdrtkStndCont1 />
+            				<sUdrtkStndCont2 />
+            			</w2:row>
+            			<w2:row>
+            				<nRato />
+            				<sBntpCd />
+            				<sBntpCdName />
+            				<sBntpDurnClsfCd />
+            				<sBntpDurnClsfCdName />
+            				<sBntpEqmtUnit />
+            				<sBntpExpln1 />
+            				<sBntpExpln2 />
+            				<sBntpLargClsfCd />
+            				<sBntpLargClsfCdName />
+            				<sUdrtkStndCont1 />
+            				<sUdrtkStndCont2 />
+            			</w2:row>
+            			<w2:row></w2:row>
+            			<w2:row></w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_BntpResult"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sBntpLargClsfCd"
+            				name="sBntpLargClsfCd" />
+            			<w2:column dataType="text"
+            				id="sBntpLargClsfCdName" name="sBntpLargClsfCdName" />
+            			<w2:column dataType="text" id="sBntpDurnClsfCd"
+            				name="sBntpDurnClsfCd" />
+            			<w2:column dataType="text"
+            				id="sBntpDurnClsfCdName" name="sBntpDurnClsfCdName" />
+            			<w2:column dataType="text" id="sBntpCd"
+            				name="sBntpCd" />
+            			<w2:column dataType="text" id="sBntpCdName"
+            				name="sBntpCdName" />
+            			<w2:column dataType="text" id="nRato"
+            				name="nRato" />
+            			<w2:column dataType="text" id="sBntpExpln1"
+            				name="sBntpExpln1" />
+            			<w2:column dataType="text" id="sBntpExpln2"
+            				name="sBntpExpln2" />
+            			<w2:column dataType="text" id="sUdrtkStndCont1"
+            				name="sUdrtkStndCont1" />
+            			<w2:column dataType="text" id="sUdrtkStndCont2"
+            				name="sUdrtkStndCont2" />
+            			<w2:column dataType="text" id="sBntpEqmtUnit"
+            				name="sBntpEqmtUnit" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_BntpResult"
+            		repeatNode="map" userData2="//*/vector/data/LTIBB01Bntp" />
+            	<w2:dataList baseNode="list" id="DsWs_Warning"
+            		repeatNode="map" userData2="//*/WARNING" />
+            	<w2:dataList baseNode="list" id="DsWs_BntpCd"
+            		repeatNode="map" userData2="//*/vector/data/LTIBB01Bntp" />
+            	<w2:dataList id="WARNING" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+    <script src="/cm/js/convertJs/Global_Script.js" />
+	<script src="/cm/js/convertJs/comm_Webservice.js" />
+        <script><![CDATA[
+
+//========================================================//
+// 파라메터 정보 및 리턴정보 영역(사용설명 포함)
+//========================================================//
+// * param
+//   sStndDate : 기준일자 => 값 없을경우 팝업에서 현재일자 자동세팅
+//   sInsBntpCd : 가입업종코드
+//
+//
+// * return
+//    retArr[0]    : 업종대분류코드
+//    retArr[1]    : 업종대분류명
+//    retArr[2]    : 업종중분류코드
+//    retArr[3]    : 업종중분류명
+//    retArr[4]    : 업종코드
+//    retArr[5]    : 업종명
+//    retArr[6]    : 요율
+//    retArr[7]    : 업종해설1
+//    retArr[8]    : 업종해설2
+//    retArr[9]    : 인수기준내용1
+//    retArr[10]   : 인수기준내용2
+//    retArr[11]   : 업종시설단위
+//
+//
+//========================================================//
+//========================================================//
+// 전역변수 선언 영역
+//========================================================//
+var applyEnable = "N";
+//설계상태(인수완료)-적용버튼(비활성화)
+var sStndDate = "";
+// 기준일자
+var sInsBntpCd = "";
+// 가입업종코드
+var sToday = "";
+// 현재일자(서버일자)
+var sBntpArr = [
+    //  건물내 입주한 모든 업종
+    "AB",
+    "BU",
+    "BS",
+    "BT",
+    "CF",
+    "CD",
+    "AD",
+    "CP",
+    "BL",
+    "BO",
+    "03",
+    "02",
+    "AC",
+    "AQ",
+    "BC",
+    "01",
+    "CC",
+    "CB",
+    "KX",
+    "DH"
+];
+var fv_args;
+var pageSize ="";
+var pageNo ="";
+
+//========================================================//
+//========================================================//
+// 초기 OnLoad 영역
+//========================================================//
+//---------------------------------------------------------------------------
+// function 명 : FORM_OnLoadCompleted(obj)
+// 내용        : FORM OnLoad
+//---------------------------------------------------------------------------
+scwin.init = function() {
+wprom.setPopupInit(747,480, "적용요율찾기");
+	var pro = Promise.resolve();
+		window.top.util.winTopShowModalChk = "T";
+		util.winTopShowModal();
+	pro = pro.then(function(rv) {
+    	return util.winTopShowModalPromise();
+	}); 
+	pro = pro.then(function(rv) {
+     //init 부분 함수 입력하는곳     
+    var indata = $w.getParameter("param");//
+	try {
+		fv_args = JSON.parse(indata);
+
+		sStndDate = fv_args.sStndDate;
+    	sInsBntpCd = fv_args.sInsBntpCd;
+	    applyEnable = fv_args.applyEnable;
+		
+	} catch(e) {
+	};
+	
+	
+    if (applyEnable == "Y"){
+        btn_apply.setDisabled(false);}    
+	
+    //trace("파라메터 값 :::::::::::::::"+ sStndDate + ":" + sInsBntpCd + applyEnable);
+    // 파라메터
+    
+    // 메인화면에서 전달받은 가입업종(Param) Disable
+    for (var i = 0; i < sBntpArr.length; i++) {
+        if (wconv.trim(sInsBntpCd) == sBntpArr[i]) {
+            eval("chk_" + sInsBntpCd).setValue(true);
+            eval("chk_" + sInsBntpCd).setDisabled(true);
+            break;
+        }
+    }
+
+    // 현재시간 setting
+    //global.http.Sync = true;
+    //getServerTime();
+    //sToday = substr(gDs_ServerTime.GetColumn(0, "sToday"),0,8);
+    //global.http.Sync = false;   
+    sToday = wconv.substr(gfn_GetSysTime(), 0, 8);
+    // 기준일자 설정
+    if (wconv.trim(sStndDate) == null || wconv.trim(sStndDate) == "") {
+        sStndDate = sToday;
+    }
+
+    // DataSet 초기화
+    scwin.lfn_initDataset(); // 업종 조회(01:개발원코드(화재손해업종))
+    //    lfn_getBntpCdTask();
+    
+    return ;		// init 함수를 종료하고자 할때 사용
+		// return Promise.reject("오류관련처리"); 
+	});
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});	
+	pro = pro.catch(function(rj) {
+		util.winTopHideModal();
+		//alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+	});	 
+	return pro; 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_initDataset
+// 내용        : 초기값 설정
+//---------------------------------------------------------------------------
+scwin.lfn_initDataset = function() {
+    DsWs_BntpCd.removeAll();
+    Ds_BntpCd.removeAll();
+};
+
+//========================================================//
+//========================================================//
+// 자체 이벤트 영역
+//========================================================//
+//---------------------------------------------------------------------------
+// function 명 : btn_Close_OnClick(obj)
+// 내용        : 닫기 OnClick
+//---------------------------------------------------------------------------
+scwin.btn_Close_OnClick = function(e) {
+    wprom.close();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_apply_OnClick(obj)
+// 내용        : 적용 OnClick
+//---------------------------------------------------------------------------
+scwin.btn_apply_OnClick = function(e) {
+	var sBntpCdArray;    
+	sBntpCdArray = sInsBntpCd;// 메인화면에서 전달받은 가입업종(Param)
+	
+
+    // 건물내 입주한 모든 업종선택 체크
+    for (var i = 0; i < sBntpArr.length; i++) {
+        if (eval("chk_" + sBntpArr[i]).getText()) {       
+            sBntpCdArray += "," + sBntpArr[i];
+        }
+    }
+    
+
+    // (1번에서 찾는 업종이 없는 경우)기타업종 선택(Grid1) 체크
+    for (var i = 0; i <= Ds_BntpGrid1.getRowPosition(); i++) {    	
+        if (wconv.trim(Ds_BntpGrid1.getCellData(i, "sBntpCd")) != null) {
+            sBntpCdArray += "," + Ds_BntpGrid1.getCellData(i, "sBntpCd");
+        }
+    }
+
+    // (1번에서 찾는 업종이 없는 경우)기타업종 선택(Grid2) 체크
+    for (var i = 0; i <= Ds_BntpGrid2.getRowPosition(); i++) {
+        if (wconv.trim(Ds_BntpGrid2.getCellData(i, "sBntpCd")) != null) {
+            sBntpCdArray += "," + Ds_BntpGrid2.getCellData(i, "sBntpCd");
+        }
+    }
+    // 업종 선택 체크
+    if (wconv.trim(sBntpCdArray) == null || wconv.trim(sBntpCdArray) == "" || wconv.trim(sBntpCdArray) == ",") {
+        wprom.alert("선택된 업종이 없습니다!");
+        return;
+    }
+    // Max업종 조회(01:개발원코드(화재손해업종))
+    scwin.lfn_getMaxBntpCdTask(sBntpCdArray);
+    /*
+        // 메인화면에서 전달받은 가입업종(Param)
+        for(var i=0; i<sBntpArr.length; i++)
+        {
+            if( trim(sInsBntpCd) == sBntpArr[i] )
+            {
+                var nIdx = Ds_BntpCd.FindRow("sBntpCd", sBntpArr[i]);
+                if(nIdx > -1)
+                {
+                    var nRow = Ds_BntpResult.AddRow();
+                    Ds_BntpResult.CopyRow(nRow, Ds_BntpCd, nIdx);
+                }
+                break;
+            }
+        }
+
+
+        // 건물내 입주한 모든 업종선택 체크
+        for(var i=0; i<sBntpArr.length; i++)
+        {
+            if( eval("chk_"+sBntpArr[i]).value )
+            {
+                var nIdx = Ds_BntpCd.FindRow("sBntpCd", sBntpArr[i]);
+                if(nIdx > -1)
+                {
+                    var nRow = Ds_BntpResult.AddRow();
+                    Ds_BntpResult.CopyRow(nRow, Ds_BntpCd, nIdx);
+                }
+            }
+        }
+
+
+        // (1번에서 찾는 업종이 없는 경우)기타업종 선택(Grid1) 체크
+        for(var i=0; i<Ds_BntpGrid1.rowcount; i++)
+        {
+            if(Ds_BntpGrid1.GetColumn(i, "sBntpCd") != null)
+            {
+                var nIdx = Ds_BntpCd.FindRow("sBntpCd", Ds_BntpGrid1.GetColumn(i, "sBntpCd"));
+                if(nIdx > -1)
+                {
+                    var nRow = Ds_BntpResult.AddRow();
+                    Ds_BntpResult.CopyRow(nRow, Ds_BntpCd, nIdx);
+                }
+            }
+        }
+        
+        // (1번에서 찾는 업종이 없는 경우)기타업종 선택(Grid2) 체크
+        for(var i=0; i<Ds_BntpGrid2.rowcount; i++)
+        {
+            if(Ds_BntpGrid2.GetColumn(i, "sBntpCd") != null)
+            {
+                var nIdx = Ds_BntpCd.FindRow("sBntpCd", Ds_BntpGrid2.GetColumn(i, "sBntpCd"));
+                if(nIdx > -1)
+                {
+                    var nRow = Ds_BntpResult.AddRow();
+                    Ds_BntpResult.CopyRow(nRow, Ds_BntpCd, nIdx);
+                }
+            }
+        }
+
+        
+        // 업종 선택 체크
+        if(Ds_BntpResult.rowcount < 1)
+        {
+            alert("선택된 업종이 없습니다!");
+            return;
+        }
+
+        // 요율 역순 정렬
+        Ds_BntpResult.Sort("nRato", false);
+
+    */
+    var retArr = new Array();
+    var i = 0;
+    retArr[i++] = Ds_BntpResult.getCellData(0, "sBntpLargClsfCd"); // 업종대분류코드
+    retArr[i++] = Ds_BntpResult.getCellData(0, "sBntpLargClsfCdName"); // 업종대분류명
+    retArr[i++] = Ds_BntpResult.getCellData(0, "sBntpDurnClsfCd"); // 업종중분류코드
+    retArr[i++] = Ds_BntpResult.getCellData(0, "sBntpDurnClsfCdName"); // 업종중분류명
+    retArr[i++] = Ds_BntpResult.getCellData(0, "sBntpCd"); // 업종코드
+    retArr[i++] = Ds_BntpResult.getCellData(0, "sBntpCdName"); // 업종명
+    retArr[i++] = Ds_BntpResult.getCellData(0, "nRato"); // 요율
+    retArr[i++] = Ds_BntpResult.getCellData(0, "sBntpExpln1"); // 업종해설1
+    retArr[i++] = Ds_BntpResult.getCellData(0, "sBntpExpln2"); // 업종해설2
+    retArr[i++] = Ds_BntpResult.getCellData(0, "sUdrtkStndCont1"); // 인수기준내용1
+    retArr[i++] = Ds_BntpResult.getCellData(0, "sUdrtkStndCont2"); // 인수기준내용2
+    retArr[i++] = Ds_BntpResult.getCellData(0, "sBntpEqmtUnit"); // 업종시설단위
+    
+    wprom.close(retArr);
+};
+/**
+//---------------------------------------------------------------------------
+// function 명 : grd_BntpCd1_OnMouseOver(obj)
+// 내용        : 업종1 그리드 OnMouseOver(ToolTipText)
+//---------------------------------------------------------------------------
+scwin.grd_BntpCd1_OnMouseOver = function(obj, nPosX, nPosY, nRow, nCell, nPivotIndex) {
+    if (nCell == 2 && grd_BntpCd1.getCellData(nRow, nCell) != null) {
+        grd_BntpCd1.ToolTipText = grd_BntpCd1.getCellData(nRow, nCell);
+    }
+};
+//---------------------------------------------------------------------------
+// function 명 : grd_BntpCd2_OnMouseOver(obj)
+// 내용        : 업종2 그리드 OnMouseOver(ToolTipText)
+//---------------------------------------------------------------------------
+scwin.grd_BntpCd2_OnMouseOver = function(obj, nPosX, nPosY, nRow, nCell, nPivotIndex) {
+    if (nCell == 2 && grd_BntpCd2.getCellData(nRow, nCell) != null) {
+        grd_BntpCd2.ToolTipText = grd_BntpCd2.getCellData(nRow, nCell);
+    }
+};
+**/
+scwin.ftn_tooltip1= function( rowIndex, colIndex, label){
+	return Ds_BntpGrid1.getCellData( rowIndex , "sBntpCdName" );
+};
+scwin.ftn_tooltip2= function( rowIndex, colIndex, label){
+	return Ds_BntpGrid2.getCellData( rowIndex , "sBntpCdName" );
+};
+
+//---------------------------------------------------------------------------
+// function 명 : grd_BntpCd1_OnCellClick(obj)
+// 내용        : 업종1 그리드 OnCellClick
+//---------------------------------------------------------------------------
+scwin.grd_BntpCd1_OnCellClick = function(row, col) {
+    var promise = Promise.resolve();
+     switch (col) {
+        case 0:
+            promise = promise.then(function(rtnVal) {
+            	var id = "grd_BntpCd1";
+                // 업종 조회(01:개발원코드(화재손해업종))
+         	     return scwin.lfn_dialogB610_Pop(col, row, id);
+            });
+            break;
+        case 3: 			  
+            util.removeRow(Ds_BntpGrid1, row);
+            var insRow = util.insertRow(Ds_BntpGrid1, row);
+            /*수작업 변환 개발자 가이드(테스트 중)
+                dataList에 row를 추가하고 setCellData를 하는 경우 첫 번째 인자를 insRow로 변경해주세요.*/
+            break;
+        default:
+            break;
+    }
+    return promise;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : grd_BntpCd2_OnCellClick(obj)
+// 내용        : 업종2 그리드 OnCellClick
+//---------------------------------------------------------------------------
+scwin.grd_BntpCd2_OnCellClick = function(row, col) {
+    var promise = Promise.resolve();
+    switch (col) {
+        case 0:
+            promise = promise.then(function(rtnVal) {
+            var id = "grd_BntpCd2";
+                // 업종 조회(01:개발원코드(화재손해업종))
+                return scwin.lfn_dialogB610_Pop(col, row, id);
+            });
+            break;
+        case 3:
+            util.removeRow(Ds_BntpGrid2, row);
+            var insRow = util.insertRow(Ds_BntpGrid2, row);
+            /*수작업 변환 개발자 가이드(테스트 중)
+                dataList에 row를 추가하고 setCellData를 하는 경우 첫 번째 인자를 insRow로 변경해주세요.*/
+            break;
+        default:
+            break;
+    }
+    return promise;
+};
+
+//========================================================//
+//========================================================//
+// 공통 이벤트 영역
+//========================================================//
+//========================================================//
+//========================================================//
+// 서비스호출 영역
+//========================================================//
+//---------------------------------------------------------------------------
+// function 명 : lfn_getBntpCdTask
+// 내용        : 업종 조회(01:개발원코드(화재손해업종))
+// param       : sStndDate = 기준일자
+//             : sBntpLargClsfCd = 업종대분류코드
+//             : sBntpLargClsfCd = 업종대분류코드
+//---------------------------------------------------------------------------
+scwin.lfn_getBntpCdTask = function() {
+    // DataSet 초기화
+    wconv.clear(Ds_BntpCd);
+    wconv.clear(DsWs_BntpCd);
+    // Service Object 설정
+    //SOBJ_Search.WSDL = gds.gWsdlBasis;
+    var sBntpLargClsfCd = "%"; // 업종대분류코드
+    var sBntpDurnClsfCd = "%"; // 업종중분류코드
+    var sBntpCdName = "%";
+
+    // 서비스 호출 메소드 정의(서비스 오브젝트, 타스크, 액션, 페이지당 사이즈, 가져올 현재 페이지)
+//    var MethodObj = gfn_CreateMethodObj(SOBJ_Search, "com.inswave.longterm.ssr.pln.task.DBB620Task", "getBntpCd", "", "");
+//    gfn_SetParam(MethodObj, "sStndDate", wconv.trim(sStndDate)); // 기준일자
+//    gfn_SetParam(MethodObj, "sBntpLargClsfCd", wconv.trim(sBntpLargClsfCd)); // 업종대분류코드
+//    gfn_SetParam(MethodObj, "sBntpDurnClsfCd", wconv.trim(sBntpDurnClsfCd)); // 업종중분류코드
+//    gfn_SetParam(MethodObj, "sBntpCdName", wconv.trim(sBntpCdName)); // 검색업종명
+    //alert(trim(sBntpLargClsfCd) + ":::" + trim(sBntpDurnClsfCd) + ":::" + trim(sBntpCdName));
+    
+    var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB620Task", "getBntpCd", pageSize, pageNo);
+    MethodObj.setId("getBntpCd");
+	MethodObj.setParam( "sStndDate", wconv.trim(sStndDate)); // 기준일자
+	MethodObj.setParam( "sBntpLargClsfCd", wconv.trim(sBntpLargClsfCd)); // 업종대분류코드
+	MethodObj.setParam( "sBntpDurnClsfCd", wconv.trim(sBntpDurnClsfCd)); // 업종중분류코드	
+	MethodObj.setUrl("/contract/CBSC097PController.do");//배포후변경할것(controller위치와 이름)
+	MethodObj.setXPath("///*/vector/data/LTIBB01Bntp");//(dsWS의 XPath)
+	MethodObj.addXPath("//*/WARNING"); //DataCollection에 WARING을 만들어줌(msg, level, detail, timestamp)
+	MethodObj.sync();
+	MethodObj.send();
+	
+	util.jSonDsCreate(_tranSync.getDsJson("LTIBB01Bntp"), "DsWs_BntpCd");
+	util.jSonDsCreate(_tranSync.getDsJson("LTIBB01Bntp"), "Ds_BntpCd");
+	//Json에 자동적으로 생성되게 해줌
+	util.setCompBindRefresh("DsWs_BntpCd");//바인딩을 해줌
+	util.setCompBindRefresh("Ds_BntpCd");//바인딩을 해줌
+	util.setRowPosition(DsWs_BntpCd, 0);
+    util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+ 	//에러처리
+    if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    }
+    wconv.copy(Ds_BntpCd, DsWs_BntpCd); //trace(Ds_BntpCd.SaveXML());
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_getMaxBntpCdTask
+// 내용        : Max업종 조회(01:개발원코드(화재손해업종))
+// param       : sStndDate = 기준일자
+//             : sBntpCdArray = 업종코드Array
+//---------------------------------------------------------------------------
+scwin.lfn_getMaxBntpCdTask = function(sBntpCdArray) {
+    // DataSet 초기화
+    wconv.clear(DsWs_BntpResult);
+    // Service Object 설정
+    //SOBJ_Search.WSDL = gds.gWsdlBasis;
+    // 서비스 호출 메소드 정의(서비스 오브젝트, 타스크, 액션, 페이지당 사이즈, 가져올 현재 페이지)
+//    var MethodObj = gfn_CreateMethodObj(SOBJ_Search, "com.inswave.longterm.ssr.pln.task.DBB620Task", "getMaxBntpCd", "", "");
+//    gfn_SetParam(MethodObj, "sStndDate", wconv.trim(sStndDate)); // 기준일자
+//    gfn_SetParam(MethodObj, "sBntpCdArray", sBntpCdArray); // 업종코드Array(콤마[,]로 구분함)
+    //alert(trim(sStndDate) + ":::" + trim(sBntpCdArray));
+
+    var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB620Task", "getMaxBntpCd", pageSize, pageNo);
+	MethodObj.setId("getMaxBntpCd");
+	MethodObj.setParam( "sStndDate", wconv.trim(sStndDate)); // 기준일자
+	MethodObj.setParam( "sBntpCdArray", sBntpCdArray); // 업종코드Array(콤마[,]로 구분함)
+	MethodObj.setUrl("/contract/CBSC097PController.do");//배포후변경할것(controller위치와 이름)
+	MethodObj.setXPath("//*/vector/data/LTIBB01Bntp");//(dsWS의 XPath)
+	MethodObj.addXPath("//WARNING"); //DataCollection에 WARING을 만들어줌(msg, level, detail, timestamp)
+	MethodObj.sync();
+	MethodObj.send();
+	
+	util.jSonDsCreate(_tranSync.getDsJson("LTIBB01Bntp"), "DsWs_BntpResult");
+	util.jSonDsCreate(_tranSync.getDsJson("LTIBB01Bntp"), "Ds_BntpResult");
+	util.setCompBindRefresh("DsWs_BntpResult");//바인딩을 해줌	
+	util.setCompBindRefresh("Ds_BntpResult");//바인딩을 해줌	
+	util.setRowPosition(DsWs_BntpResult, 0);	
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+ 	//에러처리
+ 	    if (DsWs_Warning.getRowCount() != 0) {
+            wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+            return;
+        }
+    wconv.copy(Ds_BntpResult, DsWs_BntpResult); //trace(Ds_BntpResult.SaveXML());
+};
+
+//========================================================//
+//========================================================//
+// 기타function 영역
+//========================================================//
+//---------------------------------------------------------------------------
+// function 명 : lfn_getBntpCdTask
+// 내용        : 업종 조회(01:개발원코드(화재손해업종))
+// param       : sStndDate = 기준일자
+//             : sInsBntpCd = 가입업종코드
+//---------------------------------------------------------------------------
+scwin.lfn_dialogB610_Pop = function(col, row, id) {
+    var promise = Promise.resolve();
+    //var param = "sStndDate=" + fv_args.sStndDate;
+    promise = promise.then(function(rtnVal) {
+    		var indata = {"sStndDate":fv_args.sStndDate};
+    		var popInfo = {
+				"width"     : 718,
+				"height"    : 469,
+				"indata"    : indata,
+				"title"     : "업종찾기"
+			};
+        return wprom.popupOpen("/ui/cbsc/CBSC072P.xml", popInfo);
+    });
+    promise = promise.then(function(result) {
+        /*wprom.popupOpen(가이드참조)*/        
+        if (result != "" && result != 0) {
+            if (id == "grd_BntpCd1") {
+                Ds_BntpGrid1.setCellData(Ds_BntpGrid1.getRowPosition(), "sBntpLargClsfCd", result[0]); // 업종대분류코드
+                Ds_BntpGrid1.setCellData(Ds_BntpGrid1.getRowPosition(), "sBntpLargClsfCdName", result[1]); // 업종대분류명
+                Ds_BntpGrid1.setCellData(Ds_BntpGrid1.getRowPosition(), "sBntpLargClsfCd", result[2]); // 업종중분류코드
+                Ds_BntpGrid1.setCellData(Ds_BntpGrid1.getRowPosition(), "sBntpDurnClsfCdName", result[3]); // 업종중분류명
+                Ds_BntpGrid1.setCellData(Ds_BntpGrid1.getRowPosition(), "sBntpCd", result[4]); // 업종코드
+                Ds_BntpGrid1.setCellData(Ds_BntpGrid1.getRowPosition(), "sBntpCdName", result[5]); // 업종명
+                Ds_BntpGrid1.setCellData(Ds_BntpGrid1.getRowPosition(), "nRato", result[6]); // 요율
+                Ds_BntpGrid1.setCellData(Ds_BntpGrid1.getRowPosition(), "sBntpExpln1", result[7]); // 업종해설1
+                Ds_BntpGrid1.setCellData(Ds_BntpGrid1.getRowPosition(), "sBntpExpln2", result[8]); // 업종해설2
+                Ds_BntpGrid1.setCellData(Ds_BntpGrid1.getRowPosition(), "sUdrtkStndCont1", result[9]); // 인수기준내용1
+                Ds_BntpGrid1.setCellData(Ds_BntpGrid1.getRowPosition(), "sUdrtkStndCont2", result[10]); // 인수기준내용2
+                Ds_BntpGrid1.setCellData(Ds_BntpGrid1.getRowPosition(), "sBntpEqmtUnit", result[11]); // 업종시설단위
+            } else if (id == "grd_BntpCd2") {
+                Ds_BntpGrid2.setCellData(Ds_BntpGrid2.getRowPosition(), "sBntpLargClsfCd", result[0]); // 업종대분류코드
+                Ds_BntpGrid2.setCellData(Ds_BntpGrid2.getRowPosition(), "sBntpLargClsfCdName", result[1]); // 업종대분류명
+                Ds_BntpGrid2.setCellData(Ds_BntpGrid2.getRowPosition(), "sBntpLargClsfCd", result[2]); // 업종중분류코드
+                Ds_BntpGrid2.setCellData(Ds_BntpGrid2.getRowPosition(), "sBntpDurnClsfCdName", result[3]); // 업종중분류명
+                Ds_BntpGrid2.setCellData(Ds_BntpGrid2.getRowPosition(), "sBntpCd", result[4]); // 업종코드
+                Ds_BntpGrid2.setCellData(Ds_BntpGrid2.getRowPosition(), "sBntpCdName", result[5]); // 업종명
+                Ds_BntpGrid2.setCellData(Ds_BntpGrid2.getRowPosition(), "nRato", result[6]); // 요율
+                Ds_BntpGrid2.setCellData(Ds_BntpGrid2.getRowPosition(), "sBntpExpln1", result[7]); // 업종해설1
+                Ds_BntpGrid2.setCellData(Ds_BntpGrid2.getRowPosition(), "sBntpExpln2", result[8]); // 업종해설2
+                Ds_BntpGrid2.setCellData(Ds_BntpGrid2.getRowPosition(), "sUdrtkStndCont1", result[9]); // 인수기준내용1
+                Ds_BntpGrid2.setCellData(Ds_BntpGrid2.getRowPosition(), "sUdrtkStndCont2", result[10]); // 인수기준내용2
+                Ds_BntpGrid2.setCellData(Ds_BntpGrid2.getRowPosition(), "sBntpEqmtUnit", result[11]); // 업종시설단위
+            }
+        }
+        return;
+    });
+    return promise;
+}; //========================================================//
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B620_Pop"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;/*  height:470px;*/ left:0px; top:0px;/* width:720px;"
+            userData1="적용요율찾기" userData2=" OnLoadCompleted:scwin.B620_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+            </ServiceObjects>
+            <w2:textbox class="sty_area_form" id="Static3"
+                style="position:absolute; WordWrap:TRUE;  VAlign:Middle;    background-color:user22;  height:116px;left:0px;top:153px; width:715px;" tagname=""/>
+            <xf:select appearance="full" id="chk_CB"
+            	style="position:absolute; Value:FALSE;  height:20px;left:532px;top:201px; width:164px;"
+            	tabIndex="12" falseValue="false" cols="" rows="" separator="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[유흥주점, 콜라텍]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.btn_Close_OnClick" id="btn_Close"
+                style="position:absolute;ImageID:btn_Comm_Close;height:20px;width:25px;left:666px;top:0px;" tabIndex="24" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+            <w2:textbox id="Static5" label="적용요율찾기" style="position:absolute; VAlign:Middle;  height:24px; left:0px; top:0px; " tagname="" class="sub_pop_title01">
+</w2:textbox>
+            
+            <xf:trigger class="popup_top_btn" disabled="true" ev:onclick="scwin.btn_apply_OnClick" id="btn_apply"
+                style="position:absolute;ImageID:btn_Input_02;height:20px;width:25px;left:615px;top:0px;" tabIndex="23" type="anchor">
+                <xf:label><![CDATA[적용]]></xf:label>
+            </xf:trigger>
+            <w2:textbox class="sub_pop_title02" id="Static1" label=" 입력방법"
+                style="position:absolute; WordWrap:TRUE;  VAlign:Middle; height:20px;left:0px;top:30px;" tagname=""/>
+            <w2:textbox class="sty_area_form" id="Static0"
+                label="①「1.건물내 입주한 모든 업종선택」에서 해당 건물내에 있는 업종을 모두 선택하세요. &amp;nbsp; &amp;nbsp;만일 「1.건물내 입주한 모든 업종선택」에 없는 업종이 건물내에 있을 경우 「2.기타업종선택」에서 &amp;nbsp; &amp;nbsp;검색버튼을 눌러 해당 업종을 선택하시기 바랍니다. &lt;br/&gt;② 건물내에 있는 업종을 모두 선택하고 아래 「반영」버튼을 누르면 요율적용업종이 선택되어 재물보험청약화면으로 이동합니다."
+                style="position:absolute; WordWrap:TRUE;  VAlign:Middle;    background-color:user22;  height:77px;left:0px;top:49px; width:715px;padding:10px;line-height:14px;" tagname=""/>
+            <xf:select appearance="full" id="chk_AB"
+            	style="position:absolute; Value:FALSE;  height:20px;left:12px;top:159px; width:164px;"
+            	tabIndex="1" falseValue="false" cols="" rows=""
+            	separator="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[일반음식점]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_BU"
+            	style="position:absolute; Value:FALSE;  height:20px;left:12px;top:180px; width:164px;"
+            	tabIndex="5" falseValue="false" cols="" rows="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[소형판매시설(슈퍼 등)]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_BS"
+            	style="position:absolute; Value:FALSE;  height:20px;left:12px;top:201px; width:164px;"
+            	tabIndex="9" falseValue="false" cols="" rows="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[대형판매시설]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_BT"
+            	style="position:absolute; Value:FALSE;  height:20px;left:12px;top:222px; width:164px;"
+            	tabIndex="13" falseValue="false" cols="" rows="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[일반판매시설]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_CF"
+            	style="position:absolute; Value:FALSE;  height:20px;left:12px;top:243px; width:164px;"
+            	tabIndex="17" falseValue="false" cols="" rows="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[컴퓨터게임장, PC방 등]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_CD"
+            	style="position:absolute; Value:FALSE;  height:20px;left:185px;top:159px; width:164px;"
+            	tabIndex="2" falseValue="false" cols="" rows="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[비디오감상실, 전화방]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_AD"
+            	style="position:absolute; Value:FALSE;  height:20px;left:185px;top:180px; width:164px;"
+            	tabIndex="6" falseValue="false" cols="" rows="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[세탁소]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_CP"
+            	style="position:absolute; Value:FALSE;  height:20px;left:185px;top:201px; width:164px;"
+            	tabIndex="10" falseValue="false" cols="" rows="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[보통품 창고시설]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_BL"
+            	style="position:absolute; Value:FALSE;  height:20px;left:185px;top:222px; width:164px;"
+            	tabIndex="14" falseValue="false" cols="" rows="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[일반업무시설]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_BO"
+            	style="position:absolute; Value:FALSE;  height:20px;left:185px;top:243px; width:164px;"
+            	tabIndex="18" falseValue="false" cols="" rows="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[여관,여인숙,유스호스텔 등]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_03"
+            	style="position:absolute; Value:FALSE;  height:20px;left:358px;top:159px; width:164px;"
+            	tabIndex="3" falseValue="false" cols="" rows="" separator="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[아파트]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_02"
+            	style="position:absolute; Value:FALSE;  height:20px;left:358px;top:180px; width:164px;"
+            	tabIndex="7" cols="" rows="" falseValue="false">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[연립(다세대)주택]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_AC"
+            	style="position:absolute; Value:FALSE;  height:20px;left:358px;top:201px; width:164px;"
+            	tabIndex="11" falseValue="false" cols="" rows="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[이용원, 미용원]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_AQ"
+            	style="position:absolute; Value:FALSE;  height:20px;left:358px;top:222px; width:164px;"
+            	tabIndex="15" falseValue="false" cols="" rows="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[교회, 성당]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_BC"
+            	style="position:absolute; Value:FALSE;  height:20px;left:358px;top:243px; width:164px;"
+            	tabIndex="19" falseValue="false" cols="" rows="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[학원(정비학원제외)]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_01"
+            	style="position:absolute; Value:FALSE;  height:20px;left:532px;top:159px; width:164px;"
+            	tabIndex="4" falseValue="false" cols="" rows="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[단독주택]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_CC"
+            	style="position:absolute; Value:FALSE;  height:20px;left:532px;top:180px; width:164px;"
+            	tabIndex="8" falseValue="false" cols="" rows="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[단란주점]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_KX"
+            	style="position:absolute; Value:FALSE;  height:20px;left:532px;top:222px; width:164px;"
+            	tabIndex="16" falseValue="false" cols="" rows="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[직물재단 및 재봉]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:select appearance="full" id="chk_DH"
+            	style="position:absolute; Value:FALSE;  height:20px;left:532px;top:243px; width:164px;"
+            	tabIndex="20" falseValue="false" cols="" rows="">
+            	<xf:choices>
+            		<xf:item>
+            			<xf:label><![CDATA[검사장,경정비업소,카센터]]></xf:label>
+            			<xf:value><![CDATA[true]]></xf:value>
+            		</xf:item>
+            	</xf:choices>
+            </xf:select>
+            <xf:switch id="switch_134" style=" ">
+                <xf:case id="Default_135" style=" ">
+                    <w2:gridView autoFit="allColumn" autoFitMinWidth="100" class="sty_Grid" dataList="Ds_BntpGrid1"
+                          focusMode="row"
+                        id="grd_BntpCd1" inputType="text" readOnly="true"
+                        style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  AutoFitEndLine:Hide;  AutoEnter:TRUE;  height:121px; left:0px; right:354px;top:304px; width:353px;" tabIndex="21" tooltipFormatter="scwin.ftn_tooltip1()" tooltipDisplay="true" tooltipShowAlways="true" ev:oncellclick="scwin.grd_BntpCd1_OnCellClick">
+                        <w2:header>
+                            <w2:row>
+                                <w2:column dataType="text" id="head_id_1126" inputType="text" readOnly="true" style="height:30px;"
+                                    userData1="0" userData3="0" value="선택" width="33"/>
+                                <w2:column dataType="text" id="head_id_1127" inputType="text" readOnly="true" style="height:30px;"
+                                    userData1="1" userData3="0" value="업종코드" width="64"/>
+                                <w2:column dataType="text" id="head_id_1128" inputType="text" readOnly="true" style="height:30px;"
+                                    userData1="2" userData3="0" value="업종명" width="200"/>
+                                <w2:column dataType="text" id="head_id_1129" inputType="text" readOnly="true" style="height:30px;"
+                                    userData1="3" userData3="0" value="삭제" width="33"/>
+                            </w2:row>
+                        </w2:header>
+                        <w2:gBody>
+                            <w2:row>
+                                <w2:column dataType="text" id="sel"
+                                	inputType="image" readOnly="true"
+                                	style="height:27px; cursor:hand; "
+                                	userData1="0" userData3="0" width="33"
+                                	imageSrc="/cm/images/contents/ico_btn_input_sch.png" />
+                                <w2:column dataType="text" id="sBntpCd" inputType="text" readOnly="true" style="" textAlign="center"
+                                    userData1="1" userData3="0" width="64"/>
+                                <w2:column dataType="text" id="sBntpCdName" inputType="text" readOnly="true" style="" textAlign="left"
+                                    userData1="2" userData3="0" width="200"/>
+                                <w2:column dataType="text"
+                                	id="temp_id_1130" inputType="image"
+                                	readOnly="true" style="" userData1="3"
+                                	userData3="0" width="33"
+                                	imageSrc="/cm/images/contents/btn_hori_del.png" />
+                            </w2:row>
+                        </w2:gBody>
+                    </w2:gridView>
+                </xf:case>
+            </xf:switch>
+            <w2:textbox class="sub_pop_title02" id="Static4" label=" 건물내 입주한 모든 업종선택"
+                style="position:absolute; WordWrap:TRUE;  VAlign:Middle; height:20px;left:0px;top:134px;" tagname=""/>
+            <w2:textbox class="sub_pop_title02" id="Static6" label=" (1번에서 찾는 업종이 없는 경우)기타업종 선택"
+                style="position:absolute; WordWrap:TRUE;  VAlign:Middle; height:20px;left:0px;top:278px;" tagname=""/>
+            <xf:switch id="switch_135" style=" ">
+                <xf:case id="Default_136" style=" ">
+                    <w2:gridView autoFit="allColumn"
+                    	autoFitMinWidth="100" class="sty_Grid"
+                    	dataList="Ds_BntpGrid2"
+                    	ev:oncellclick="scwin.grd_BntpCd2_OnCellClick"
+                    	focusMode="row" id="grd_BntpCd2" inputType="text"
+                    	readOnly="true"
+                    	style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  AutoFitEndLine:Hide;  AutoEnter:TRUE;  height:121px; left:362px; right:708px;top:303px; width:353px;"
+                    	tabIndex="22"
+                    	tooltipFormatter="scwin.ftn_tooltip2()"
+                    	tooltipDisplay="true" tooltipShowAlways="true">
+                    	<w2:header>
+                    		<w2:row>
+                    			<w2:column dataType="text"
+                    				id="head_id_1131" inputType="text"
+                    				readOnly="true" style="height:30px;"
+                    				userData1="0" userData3="0" value="선택"
+                    				width="33" />
+                    			<w2:column dataType="text"
+                    				id="head_id_1132" inputType="text"
+                    				readOnly="true" style="height:30px;"
+                    				userData1="1" userData3="0" value="업종코드"
+                    				width="64" />
+                    			<w2:column dataType="text"
+                    				id="head_id_1133" inputType="text"
+                    				readOnly="true" style="height:30px;"
+                    				textAlign="center" userData1="2" userData3="0"
+                    				value="업종명" width="200" />
+                    			<w2:column dataType="text"
+                    				id="head_id_1134" inputType="text"
+                    				readOnly="true" style="height:30px;"
+                    				userData1="3" userData3="0" value="삭제"
+                    				width="33" />
+                    		</w2:row>
+                    	</w2:header>
+                    	<w2:gBody>
+                    		<w2:row>
+                    			<w2:column dataType="text" id="sel"
+                    				inputType="image" readOnly="true"
+                    				style="height:27px; cursor:hand; " userData1="0"
+                    				userData3="0" width="33"
+                    				imageSrc="/cm/images/contents/ico_btn_input_sch.png">
+                    			</w2:column>
+                    			<w2:column dataType="text" id="sBntpCd"
+                    				inputType="text" readOnly="true"
+                    				textAlign="center" userData1="1" userData3="0"
+                    				width="64" />
+                    			<w2:column dataType="text"
+                    				id="sBntpCdName" inputType="text"
+                    				readOnly="true" textAlign="left" userData1="2"
+                    				userData3="0" width="200" />
+                    			<w2:column dataType="text"
+                    				id="temp_id_1135" inputType="image"
+                    				readOnly="true" userData1="3" userData3="0"
+                    				width="33"
+                    				imageSrc="/cm/images/contents/btn_hori_del.png" />
+                    		</w2:row>
+                    	</w2:gBody>
+                    </w2:gridView>
+                </xf:case>
+            </xf:switch>
+        </xf:group>
+    </body>
+</html>

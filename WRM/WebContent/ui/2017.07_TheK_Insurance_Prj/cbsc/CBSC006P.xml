@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate></w2:buildDate>
+        <xf:model>
+            <xf:instance>
+                <data></data>
+            </xf:instance>
+            <w2:dataCollection>
+            	<w2:dataList baseNode="list" id="Ds_LTIDA63"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sPlanNo"
+            				name="sPlanNo">
+            			</w2:column>
+            			<w2:column dataType="text" id="nCrChngNo"
+            				name="nCrChngNo">
+            			</w2:column>
+            			<w2:column dataType="text" id="sFatcaFlgCd"
+            				name="sFatcaFlgCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sSurName"
+            				name="sSurName">
+            			</w2:column>
+            			<w2:column dataType="text" id="sGivenName"
+            				name="sGivenName">
+            			</w2:column>
+            			<w2:column dataType="text" id="sItinSsnNo"
+            				name="sItinSsnNo">
+            			</w2:column>
+            			<w2:column dataType="text" id="sAddr"
+            				name="sAddr">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_LTIDA63"
+            		keyNode="//hashtable/data[@hashkey='lTIDA63DocRtn']/LTIDA63"
+            		repeatNode="map">
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_Warning"
+            		keyNode="//*/WARNING" repeatNode="map">
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_LTIDA03"
+            		keyNode="//hashtable/data[@hashkey='lTIDA03DocRtn']/LTIDA03"
+            		repeatNode="map">
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_LTIDA00"
+            		keyNode="//hashtable/data[@hashkey='lTIDA00DocRtn']/LTIDA00"
+            		repeatNode="map">
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_LTIEA00"
+            		keyNode="//hashtable/data[@hashkey='lTIDA00DocRtn']/LTIEA00"
+            		repeatNode="map">
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_LTIEA63"
+            		keyNode="//hashtable/data[@hashkey='lTIDA63DocRtn']/LTIEA63"
+            		repeatNode="map">
+            	</w2:dataList>
+            	<w2:dataList id="" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection></w2:workflowCollection>
+        </xf:model>
+	  <script src="/cm/js/convertJs/Global_Script.js"/>
+  <script src="/cm/js/convertJs/comm_Webservice.js"/>
+  <script src="/cm/js/convertJs/NewGen_Script.js"/>
+  <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+          <script><![CDATA[
+/*■■■■■■■■■■■■■■■■■■■■■스크립트 변환 결과■■■■■■■■■■■■■■■■■■■■■
+※본 주석은 수작업 변환 참고용입니다. ★개발완료 후에는 필히 삭제해주세요.★
+변환시간:  Tue Oct 17 2017 12:53:00 GMT+0900 (대한민국 표준시)
+파일ID:  B170_Pop.xml
+
+아래의 작업을 먼저 해주세요.
+
+
+1. scwin.init() 함수에 아래의 글로벌 데이터리스트를 선언합니다.
+--> 해당 화면에는 추가할 글로벌 변수가 없습니다. 
+
+2. 공통.JS 파일을 include해주세요.
+</xf:model>
+ ***include 위치(하단에 주석처리 되어 있습니다.)***
+<script><![CDATA[
+
+예시)
+</xf:model>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script><![CDATA[
+
+3. 표준에 어긋난 코딩인 경우 ✖ 으로 return 되어 있습니다. 검색으로 ✖이 나온다면 ASIS 소스를 확인해주세요.
+ex) ASIS if(a = 1 and b = 2) {} ------> TOBE if (✖ = 2) {}
+
+4. dialog함수로 팝업을 호출 할 경우에는 실제 파일이 있는 경로로 변경해주세요
+ex) 현재 PROJECT_PATH_TEMP입니다. 
+
+-호출구조-
+
+호출구조는 모든 화면이 아닌 변환대상화면을 기준으로 분석하였습니다.
+선언하지 않은 변수를 사용중이라면 caller 에서 넘겼을 가능성이 높습니다.
+파일 ID는 소스의 form ID로 가정했습니다. 아래의 결과는 따로 확인해주세요.
+B170_Pop.xml에서 호출 (callee ID):  B450_Pop
+B170_Pop.xml을 호출   (caller ID):  
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+/****************************************************************************
+ * 프로그램번호   : B170
+ * 프로그램명     : FATCA 본인확인
+ * 파일명         : B170.xml
+ * 프로그램 내용  : FATCA 본인확인
+ * 관련 프로그램  : 
+ * 작성자         : SDJ
+ * 작성일         : 2015-03-12
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+// <script src="/cm/js/common.js"/>
+// <script src="/cm/js/val_lib.js"/>
+// <script src="/cm/js/util.js"/>
+// <script src="/cm/js/transSub.js"/>
+// <script src="/cm/js/callService.js"/>
+// <script src="/cm/js/gds.js"/>
+// <script src="/cm/js/convertJs/conv.js"/>
+// <script src="/cm/js/convertJs/Global_Script.js"/>
+// <script src="/cm/js/convertJs/comm_Webservice.js"     // js 참조/>
+var sFatcaFlgCd = "";
+
+var sPlanNo;
+
+var sGb;
+
+var sPlanProgRankCd = "";
+
+var pageSize = "";
+
+var pageNo = "";
+
+scwin.init = function() {
+
+var pro = Promise.resolve();
+
+window.top.util.winTopShowModalChk = "T";
+util.winTopShowModal();
+
+ 
+
+pro = pro.then(function(rv) {
+    return util.winTopShowModalPromise();
+});
+
+ 
+
+pro = pro.then(function(rv) {
+
+     //init 부분 함수 입력하는곳
+
+	wprom.windowOpenInit(B170_Pop);
+
+	var indata = $w.getParameter("param");
+	try {
+		fv_args = JSON.parse(indata);
+		console.log(fv_args);
+
+		if (wconv.length(fv_args.sGb) > 0) {
+	        sGb = fv_args.sGb;
+	    }
+	    
+	    if (wconv.length(fv_args.sGb2) > 0) {
+	        sGb2 = fv_args.sGb2;
+	    }
+	    
+	    if (wconv.length(fv_args.sPlanNo) > 0) {
+	        sPlanNo = fv_args.sPlanNo;
+	    }
+	     if (wconv.length(fv_args.sCrNo) > 0) {
+	        sCrNo=fv_args.sCrNo;
+	        
+	    }
+	} catch(e) {
+	};
+
+	//값 설정
+//	sGb = fv_args.sGb;
+	  chk_sFatcaFlgCd_01.setValue(true);
+    //화면초기화
+    if (sGb == "2") {
+        //계약조회 화면에서 넘어 올 경우
+        sPlanNo = sCrNo;
+        btn_save.setDisabled(true); //수정 하지 못하도록 비활성화
+      
+        eval("chk_sFatcaFlgCd_01").setDisabled(true);
+        eval("chk_sFatcaFlgCd_02").setDisabled(true);
+        eval("chk_sFatcaFlgCd_03").setDisabled(true);
+        eval("chk_sFatcaFlgCd_04").setDisabled(true);
+        scwin.lfn_setComponent(false);
+        
+    }
+    scwin.lfn_init();
+ 
+
+    //init 함수를 종료하고자 할때 사용한다.
+//    return Promise.reject("오류관련처리");
+});
+
+
+pro = pro.then(function(rv) {
+    util.winTopHideModal();
+});
+
+ 
+
+pro = pro.catch(function(rj) {
+    util.winTopHideModal();
+    //alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+});
+
+ 
+
+return pro;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_init()
+// 내용        : 화면초기화
+//---------------------------------------------------------------------------
+scwin.lfn_init = function() {
+
+    Ds_LTIDA63.undoAll();
+    util.appendRow(Ds_LTIDA63);
+    // 조회
+    scwin.lfn_Search();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : FATCA 본인정보 조회
+//---------------------------------------------------------------------------
+//비동기 방식 호출
+scwin.lfn_Search_Async = function(e) { //완료
+    util.eventAsyncCall(this, scwin.lfn_Search, arguments);
+};
+
+scwin.lfn_Search = function(e) {
+    //데이터셋 초기화
+    wconv.clear(DsWs_Warning);
+//    DsWs_Warning.DataObject = "DOBJ_LTIDA63";
+    var MethodObj;
+    if (sGb == "2") {
+        wconv.clear(DsWs_LTIEA63);
+        wconv.clear(DsWs_LTIEA00);
+    } else {
+        wconv.clear(DsWs_LTIDA63);
+        wconv.clear(DsWs_LTIDA00);
+    }
+    wconv.clear(DsWs_LTIDA03);
+//    SOBJ_LTIDA63.WSDL = gds.gWsdlBasis; //기본웹서비스
+//    MethodObj = gfn_CreateMethodObj(SOBJ_LTIDA63, "com.inswave.longterm.ssr.pln.task.DBB013Task", "getLtida63", "", "");
+//    gfn_SetParam(MethodObj, "sPlanNo", wconv.trim(sPlanNo)); // 설계/계약 번호
+//    gfn_SetParam(MethodObj, "sGb", wconv.trim(sGb));
+//    gfn_CallService(SOBJ_LTIDA63, DOBJ_LTIDA63, MethodObj);
+    
+    var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB013Task", "getLtida63",pageSize,pageNo);
+	
+	MethodObj.setId("getLtida63");
+	MethodObj.setParam( "sPlanNo", wconv.trim(sPlanNo));
+	MethodObj.setParam( "sGb",  wconv.trim(sGb));
+	MethodObj.setUrl("/contract/CBSC006PController.do");
+	MethodObj.setXPath("//hashtable/data[@hashkey='lTIDA63DocRtn']/LTIDA63");
+	MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA03DocRtn']/LTIDA03");//(dsWS의 XPath)
+	MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA00DocRtn']/LTIDA00");//(dsWS의 XPath)
+	MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA00DocRtn']/LTIEA00");//(dsWS의 XPath)
+	MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA63DocRtn']/LTIEA63");//(dsWS의 XPath)
+	MethodObj.addXPath("//*/WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDA63"), "DsWs_LTIDA63");
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDA03"), "DsWs_LTIDA03");
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDA00"), "DsWs_LTIDA00");
+	util.jSonDsCreate(_tranSync.getDsJson("LTIEA00"), "DsWs_LTIEA00");
+	util.jSonDsCreate(_tranSync.getDsJson("LTIEA63"), "DsWs_LTIEA63");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+	
+	util.setCompBindRefresh("DsWs_LTIDA63");//바인딩을 해줌
+	util.setCompBindRefresh("DsWs_LTIDA03");//바인딩을 해줌
+	util.setCompBindRefresh("DsWs_LTIDA00");//바인딩을 해줌
+	util.setCompBindRefresh("DsWs_LTIEA00");//바인딩을 해줌
+	util.setCompBindRefresh("DsWs_LTIDA03");//바인딩을 해줌
+	util.setRowPosition(DsWs_LTIDA03, 0);
+	
+    
+    if (wconv.length(DsWs_Warning.getCellData(0, "msg")) > 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    }
+    var PlanNo00;
+    var PlanNo63;
+    if (sGb == "2") {
+        PlanNo00 = DsWs_LTIEA00.getCellData(0, "sPlanNo");
+        PlanNo63 = DsWs_LTIEA63.getCellData(0, "sPlanNo");
+        //추가
+        sCrsYn = DsWs_LTIEA00.getCellData(0, "sCrsYn");
+    } else {
+        PlanNo00 = DsWs_LTIDA00.getCellData(0, "sPlanNo");
+        sPlanProgRankCd = DsWs_LTIDA00.getCellData(0, "sPlanProgRankCd");
+        PlanNo63 = DsWs_LTIDA63.getCellData(0, "sPlanNo");
+//        PlanNo00 = DsWs_LTIDA00.getCellData(0, "sPlanNo");
+//        sPlanProgRankCd = DsWs_LTIDA00.getCellData(0, "sPlanProgRankCd");
+//        PlanNo63 = DsWs_LTIDA63.getCellData(0, "sPlanNo");
+//        sCrsYn = DsWs_LTIDA00.getCellData(0, "sCrsYn");
+    }
+
+    if (wconv.length(PlanNo63) != 0) {
+        if (sGb == "2") {
+//            wconv.copy(Ds_LTIDA63, DsWs_LTIEA63);
+			util.copyM(Ds_LTIDA63, DsWs_LTIEA63.getAllJSON());
+			util.setCompBindRefresh("Ds_LTIDA63");//바인딩을 해줌
+			util.setRowPosition(Ds_LTIDA63, 0);
+//            wconv.trace(wconv.saveXml(DsWs_LTIEA63));
+        } else {
+//            wconv.copy(Ds_LTIDA63, DsWs_LTIDA63); //trace(DsWs_LTIDA63.SaveXML());
+			util.copyM(Ds_LTIDA63, DsWs_LTIDA63.getAllJSON());
+			util.setCompBindRefresh("Ds_LTIDA63");//바인딩을 해줌
+			util.setRowPosition(Ds_LTIDA63, 0);						
+        }
+        edt_sSurName.setValue(Ds_LTIDA63.getCellData(0, "sSurName"));
+        edt_sGivenName.setValue(Ds_LTIDA63.getCellData(0, "sGivenName"));
+        edt_sAddr.setValue(Ds_LTIDA63.getCellData(0, "sAddr"));
+        msk_sItinSsnNo.setValue(Ds_LTIDA63.getCellData(0, "sItinSsnNo"));
+        eval("chk_sFatcaFlgCd_" + Ds_LTIDA63_getCellData(0, "sFatcaFlgCd")).setValue(true);
+        sFatcaFlgCd = Ds_LTIDA63.getCellData(0, "sFatcaFlgCd");
+    }
+    if (wconv.length(PlanNo00) != 0 && wconv.length(PlanNo63) == 0) {
+        //FATCA대상자가 아니지만 정보확인은 한 경우 해당없음으로 세팅
+        sFatcaFlgCd = "01";
+        eval("chk_sFatcaFlgCd_" + sFatcaFlgCd).setValue(true);
+        scwin.lfn_setComponent(false);
+    }
+
+
+    /*if(sPlanProgRankCd != "" and sPlanProgRankCd > "51"){ //청약사항입력(50)보다 이후 상태일경우는 수정 불가
+    	lfn_setComponent(false);
+    	btn_save.Enable = false;
+    }*/
+//	    DsWs_LTIDA03 데이타가 없으면 "" 으로 채움
+		if(DsWs_LTIDA03.getRowCount() > 0 && wconv.substr(DsWs_LTIDA03.getCellData(0, "sCrtorCd"), 0, 2) != ""){
+	    edt_sBirth.setValue(wconv.substr(DsWs_LTIDA03.getCellData(0, "sCrtorCd"), 0, 2) + "." + wconv.substr(DsWs_LTIDA03.getCellData(0, "sCrtorCd"), 2, 2) + "." + wconv.substr(DsWs_LTIDA03.getCellData(0, "sCrtorCd"), 4, 2));
+	    edt_sTelNo.setValue(DsWs_LTIDA03.getCellData(0, "sCellPhone1") + "-" + DsWs_LTIDA03.getCellData(0, "sCellPhone2") + "-" + DsWs_LTIDA03.getCellData(0, "sCellPhone3"));
+	    edt_sAddress.setValue("(" + DsWs_LTIDA03.getCellData(0, "sZip1") + "-" + DsWs_LTIDA03.getCellData(0, "sZip2") + ")" + DsWs_LTIDA03.getCellData(0, "sAdrs1") + "  " + DsWs_LTIDA03.getCellData(0, "sAdrsAdd"));
+	    }else {
+	    edt_sBirth.setValue("");
+	    edt_sTelNo.setValue("");
+	    edt_sAddress.setValue("");
+	    }
+
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Save
+// 내용        : FATCA 본인확인 저장
+//---------------------------------------------------------------------------
+scwin.lfn_Save = function(e) {
+
+    wconv.clear(DsWs_Warning);
+//    DsWs_Warning.DataObject = "DOBJ_Save";
+
+		if (scwin.lfn_Validation_Check()) {
+	        util.insertColumn(Ds_LTIDA63, [
+	            [
+	                "gUserID",
+	                "gUserID",
+	                "text"
+	            ]
+     	   ]);	
+        util.setCompBindRefresh(Ds_LTIDA63.getID());
+	    if (scwin.lfn_Validation_Check(e)) {
+	        Ds_LTIDA63.setCellData(0, "sPlanNo", sPlanNo);
+	        Ds_LTIDA63.setCellData(0, "sFatcaFlgCd", sFatcaFlgCd);
+	        Ds_LTIDA63.setCellData(0, "sSurname", edt_sSurName.getValue());	
+	        Ds_LTIDA63.setCellData(0, "sGivenName", edt_sGivenName.getValue());
+	        Ds_LTIDA63.setCellData(0, "sAddr", edt_sAddr.getValue());
+	        Ds_LTIDA63.setCellData(0, "sItinSsnNo", msk_sItinSsnNo.getValue());
+	        Ds_LTIDA63.setCellData(0, "gUserID", util.getGdsValue("gUserID"));
+//	        SOBJ_save.WSDL = gds.gWsdlBasis;
+//	        var MethodObj = SOBJ_save.CreateMethodObj("perform");
+//	        setHeader("hashtable", "com.inswave.longterm.ssr.pln.task.DBB013Task", "saveLtida63");
+//	        addSingleData("LTIDA63", "LTIDA63", Ds_LTIDA63);
+//	        setTail("hashtable");
+//	        SOBJ_save.CreateObj("in0");
+//	        MethodObj.in0 = insertStr;
+//	        gfn_CallService(SOBJ_save, DOBJ_save, MethodObj);
+	
+			var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB013Task", "saveLtida63");
+		 	MethodObj.setId("saveLtida63"); 
+		 	MethodObj.addSingleData("LTIDA63", "LTIDA63", "Ds_LTIDA63");
+			MethodObj.setUrl("/contract/CBSC0006PController.do");   // 서버단 호출 URL (수납 확정)    
+		 	MethodObj.addXPath("//*/WARNING"); // XPath
+		 	MethodObj.setHashTable();    //  전문의 앞이 hashtable로 보낼 때
+		 	MethodObj.sync();     // 동기 처리[기본(async:비동기)]
+		 	MethodObj.send();      // 최종 전송   // TEST @@@ ===>
+		 	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+	        //에러처리
+	        //getRowCount->getRowPosition 으로 수정
+	        if (DsWs_Warning.getRowCount() != 0) {
+	            wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+	            return;
+	        }
+	        wprom.alert("FATCA 본인정보 사항이 확인 되었습니다.");
+	        wprom.close(); //lfn_Search(obj);
+	    }
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Validation_Check
+// 내용        : 입력항목 정합성 체크
+//---------------------------------------------------------------------------
+scwin.lfn_Validation_Check = function(e) {
+    var chkFlag = true;
+    if (sFatcaFlgCd == "") {
+        wprom.alert("고객 확인 사항의 가.항목에 체크하시기 바랍니다.");
+        chkFlag = false;
+        return;
+    }
+//    if (✖ = ✖ = "VI") {
+	if(edt_sNation.getValue() == "US" || edt_sNation.getValue() == "UM" || edt_sNation.getValue() == "VI"){
+        if (sFatcaFlgCd == "01") {
+            wprom.alert(" 미국 국적자의 경우 고객 확인사항 \u2460항목에 체크할 수 없습니다 ");
+            eval("chk_sFatcaFlgCd_01").setValue(false);
+            chkFlag = false;
+            return;
+        }
+    }
+    if (sFatcaFlgCd != "01") {
+        if (edt_sSurName.getValue() == "") {
+            wprom.alert("영문성명의 성(Surname)을 입력하시기 바랍니다.");
+            edt_sSurName.focus();
+            chkFlag = false;
+            return;
+        }
+        if (edt_sGivenName.getValue() == "") {
+            wprom.alert("영문성명의 이름(Given Name)을 입력하시기 바랍니다.");
+            edt_sGivenName.focus();
+            chkFlag = false;
+            return;
+        }
+        if (msk_sItinSsnNo.getValue() == "") {
+            wprom.alert("미국 납세자번호 또는 사회보장번호를 입력하시기 바랍니다.");
+            msk_sItinSsnNo.focus();
+            chkFlag = false;
+            return;
+        }
+        if (wconv.length(msk_sItinSsnNo.getValue()) < 9) {
+            wprom.alert("미국 납세자번호 또는 사회보장번호는 9자리입니다.");
+            msk_sItinSsnNo.focus();
+            chkFlag = false;
+            return;
+        }
+        if (edt_sAddr.getValue() == "") {
+            wprom.alert("영문주소를 입력하시기 바랍니다.");
+            edt_sAddr.focus();
+            chkFlag = false;
+            return;
+        }
+    }
+    return chkFlag;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : chk_sFatcaFlgCd_OnClick
+// 내용        : 고객확인사항1
+//---------------------------------------------------------------------------
+scwin.chk_sFatcaFlgCd_OnClick = function(info) {
+    var sNum;
+    
+    for (var i = 1; i <= 4; i++) {
+        sNum = i + "";
+        if (sNum.length < 2)
+            sNum = "0" + sNum;
+        if (this.id == ("chk_sFatcaFlgCd_" + sNum)) {
+            this.setValue(true);
+            sFatcaFlgCd = sNum;
+            continue;
+        }
+        eval("chk_sFatcaFlgCd_" + sNum).setValue(false);
+    }
+    if (this.id == "chk_sFatcaFlgCd_01") {
+//        if (✖ = ✖ = "VI") {
+		if(edt_sNation.getValue() == "US" ||
+		 	edt_sNation.getValue() == "UM" ||
+		  	edt_sNation.getValue() == "VI"){
+            wprom.alert(" 미국 국적자의 경우 고객 확인사항 \u2460항목에 체크할 수 없습니다 ");
+            eval("chk_sFatcaFlgCd_01").setValue(false);
+        }
+        scwin.lfn_setComponent(false);
+    } else {
+        scwin.lfn_setComponent(true);
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_setComponent
+// 내용        : 수정여부 세팅
+//---------------------------------------------------------------------------
+scwin.lfn_setComponent = function(val) {
+    if (val == false) {
+        edt_sSurName.setDisabled(true);
+        edt_sGivenName.setDisabled(true);
+        edt_sAddr.setDisabled(true);
+        msk_sItinSsnNo.setDisabled(true);
+        if (sFatcaFlgCd == "01") {
+            edt_sSurName.setValue("");
+            edt_sGivenName.setValue("");
+            edt_sAddr.setValue("");
+            msk_sItinSsnNo.setValue("");
+        }
+    } else {
+        edt_sSurName.setDisabled(false);
+        edt_sGivenName.setDisabled(false);
+        edt_sAddr.setDisabled(false);
+        msk_sItinSsnNo.setDisabled(false);
+        edt_sSurName.focus();
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_OnClose
+// 내용        : 화면종료
+//---------------------------------------------------------------------------
+scwin.lfn_OnClose = function() {
+    wprom.close();
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B170_Pop"
+        	style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;  border-color:user18;left:83px;top:40px;"
+        	userData1="FATACA 본인정보 확인"
+        	userData2=" OnLoadCompleted:scwin.B170_OnLoadCompleted; ">
+        	<DataObjects>
+        		<DataObject></DataObject>
+        		<DataObject></DataObject>
+        		<DataObject></DataObject>
+        	</DataObjects>
+        	<ServiceObjects>
+        		<ServiceObject></ServiceObject>
+        		<ServiceObject></ServiceObject>
+        		<ServiceObject></ServiceObject>
+        	</ServiceObjects>
+        	<xf:group arcsize="6" class="sty_area_form" id="group2"
+        		style="position:absolute;  bottom:608px;height:84px;left:0px;top:401px;width:760px;"
+        		userData3="RoundRect">
+        		<xf:group class="form_w_line" id=""
+        			style="top:26px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id=""
+        			style="top:53px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_h_line" id=""
+        			style="position:absolute;top:0px;left:452px;width:1px;height:53px;">
+        		</xf:group>
+
+        	</xf:group>
+        	<xf:group arcsize="6" class="sty_area_form" id="group1"
+        		style="position:absolute;  bottom:608px;height:55px;left:0px;top:138px;width:760px;"
+        		userData3="RoundRect">
+        		<xf:group class="form_w_line" id=""
+        			style="top:26px;left:0px;">
+        		</xf:group>
+        	</xf:group>
+        	<xf:group arcsize="6" class="search_area" id="Shape0"
+        		style="position:absolute; right:738px;  border-style:solid; bottom:111px;height:76px; left:0px;top:31px;width:760px;"
+        		userData3="RoundRect">
+        	</xf:group>
+        	<xf:group arcsize="6" class="sty_area_form" id="group3" style="position:absolute;  bottom:608px;height:372px;left:17px;top:546px;width:744px;" userData3="RoundRect">
+        		<xf:group class="form_w_line" id="" style="top:312px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id="" style="top:53px;left:0px;">
+        		</xf:group>
+        	</xf:group><xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.lfn_OnClose" id="btn_Close"
+        		style="position:absolute;  height:20px;left:712px;top:0px;"
+        		tabIndex="1" type="anchor">
+        		<xf:label><![CDATA[닫기]]></xf:label>
+        	</xf:trigger>
+        	<w2:textbox id="Static5" label="FATCA 본인확인(개인)"
+        		style="position:absolute; VAlign:Middle;  height:20px;left:0px;top:0px; width:153px;"
+        		tagname="" class="sub_pop_title01">
+        	</w2:textbox>
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.lfn_Save" id="btn_save"
+        		style="position:absolute;left:661px;top:0px;" tabIndex="5"
+        		type="anchor">
+        		<xf:label><![CDATA[확인]]></xf:label>
+        	</xf:trigger>
+        	<w2:textbox class="sty_lb_Search" id="Static1"
+        		label="본 확인사항은 미국의 해외금융계좌신고제도(FATCA)와 관련하여 대한민국과 미국 사이에 체결한 정부간협정에 따라 재정된 ‘정기 금융정보 교환을 위한 조세조약 이행규정’에 의하여 작성이 요구되는 필수항목입니다. 만일 본 항목에 요청된 모든 정보가 제공되지 않을 경우 관련 법에 의해 고객님의 인적사항 및 계약(계좌) 관련 정보가 국세청에 보고될 수 있다는 점에 유의하시기 바랍니다. "
+        		style="position:absolute; VAlign:Middle;height:44px;left:17px;top:55px;width:714px;line-height: 15px;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="other_text01_tit sty_lb_Search"
+        		id="Static0" label="[유의사항]"
+        		style="position:absolute; VAlign:Middle;  height:20px;left:18px;top:36px; width:140px;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="sty_lb_Basic" id="Static2" label="성명"
+        		style="position:absolute;min-width:55px;width:55px;left:0px;VAlign:Middle;top:138px;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="sty_lb_Basic" id="Static3" label="국적"
+        		style="position:absolute;min-width:55px;width:55px;left:202px;VAlign:Middle;top:138px;"
+        		tagname="">
+        	</w2:textbox>
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		ev:onchange="scwin.edt_sNation_OnChanged" id="edt_sNation"
+        		ref="data:DsWs_LTIDA03.sNation"
+        		style="position:absolute; border-style:solid;  height:20px;left:278px;top:142px; width:60px;"
+        		tabIndex="11">
+        	</xf:input>
+        	<w2:textbox class="sty_lb_Basic" id="Static4" label="전화번호"
+        		style="position:absolute;min-width:55px;width:55px;left:346px;VAlign:Middle;top:138px;"
+        		tagname="">
+        	</w2:textbox>
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="edt_sTelNo"
+        		style="position:absolute; border-style:solid;  height:20px;left:422px;top:142px; width:120px;"
+        		tabIndex="12">
+        	</xf:input>
+        	<w2:textbox class="sty_lb_Basic" id="Static6" label="주소"
+        		style="position:absolute;min-width:55px;width:55px;left:0px;VAlign:Middle;top:165px;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="sty_lb_Basic" id="Static8" label="생년월일"
+        		style="position:absolute;min-width:55px;width:55px;left:554px;VAlign:Middle;top:138px;"
+        		tagname="">
+        	</w2:textbox>
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="edt_sBirth" ref="data:DsWs_LTIDA03."
+        		style="position:absolute; border-style:solid;  height:20px;left:631px;top:142px; width:116px;"
+        		tabIndex="15">
+        	</xf:input>
+        	<w2:textbox id="Static95" label="고객 인적사항"
+        		style="position:absolute; VAlign:Middle;  height:20px;left:0px;top:113px; width:129px;"
+        		tagname="" class="sub_pop_title02">
+        	</w2:textbox>
+        	<w2:textbox id="Static7" label="고객 확인사항"
+        		style="position:absolute; VAlign:Middle;  height:20px;left:-1px;top:209px; width:129px;"
+        		tagname="" class="sub_pop_title02">
+        	</w2:textbox>
+        	<w2:textbox id="Static9"
+        		label="가. 다음 해당란에 체크(√)를 표기해 주시기 바랍니다."
+        		style="position:absolute; VAlign:Middle;  height:20px;left:15px;top:233px; width:333px;"
+        		tagname="">
+        	</w2:textbox>
+        	<xf:group arcsize="8" class="" id="Shape4"
+        		style="position:absolute;height:22px;width:703px;bottom:264px;left:26px;top:257px;"
+        		userData3="Rectangle">
+        	</xf:group>
+        	<xf:select appearance="full"
+        		ev:onclick="scwin.chk_sFatcaFlgCd_OnClick"
+        		id="chk_sFatcaFlgCd_01"
+        		style="position:absolute; Value:FALSE;  height:20px;left:20px;top:258px; width:690px;"
+        		tabIndex="21" ev:onviewchange="" cols="" rows=""
+        		falseValue="">
+        		<xf:choices>
+        			<xf:item>
+        				<xf:label><![CDATA[① 아래 「해당사항 없음」]]></xf:label>
+        				<xf:value><![CDATA[true]]></xf:value>
+        			</xf:item>
+        		</xf:choices>
+        	</xf:select>
+        	<xf:group arcsize="8" class="" id="Shape1"
+        		style="position:absolute;height:22px;width:703px;bottom:285px;left:26px;top:278px;"
+        		userData3="Rectangle">
+        	</xf:group>
+        	<xf:select appearance="full"
+        		ev:onclick="scwin.chk_sFatcaFlgCd_OnClick"
+        		id="chk_sFatcaFlgCd_02"
+        		style="position:absolute; Value:FALSE;  height:20px;left:20px;top:279px; width:690px;"
+        		tabIndex="23" cols="" rows="" falseValue="">
+        		<xf:choices>
+        			<xf:item>
+        				<xf:label><![CDATA[② 미국 시민권자(이중국적자 포함)]]></xf:label>
+        				<xf:value><![CDATA[true]]></xf:value>
+        			</xf:item>
+        		</xf:choices>
+        	</xf:select>
+        	<xf:group arcsize="8" class="" id="Shape2"
+        		style="position:absolute;height:22px;width:703px;bottom:306px;left:26px;top:299px;"
+        		userData3="Rectangle">
+        	</xf:group>
+        	<xf:select appearance="full"
+        		ev:onclick="scwin.chk_sFatcaFlgCd_OnClick"
+        		id="chk_sFatcaFlgCd_03"
+        		style="position:absolute; Value:FALSE;  height:20px;left:20px;top:300px; width:690px;"
+        		tabIndex="25" cols="" rows="" falseValue="">
+        		<xf:choices>
+        			<xf:item>
+        				<xf:label><![CDATA[③ 미국 영주권자]]></xf:label>
+        				<xf:value><![CDATA[true]]></xf:value>
+        			</xf:item>
+        		</xf:choices>
+        	</xf:select>
+        	<xf:group arcsize="8" class="" id="Shape3"
+        		style="position:absolute;height:22px;width:703px;bottom:327px;left:26px;top:320px;"
+        		userData3="Rectangle">
+        	</xf:group>
+        	<xf:select appearance="full"
+        		ev:onclick="scwin.chk_sFatcaFlgCd_OnClick"
+        		id="chk_sFatcaFlgCd_04"
+        		style="position:absolute; Value:FALSE;  height:20px;left:20px;top:321px; width:690px;"
+        		tabIndex="27" cols="" rows="" falseValue="">
+        		<xf:choices>
+        			<xf:item>
+        				<xf:label><![CDATA[④ 기타 조세목적상 미국 거주자]]></xf:label>
+        				<xf:value><![CDATA[true]]></xf:value>
+        			</xf:item>
+        		</xf:choices>
+        	</xf:select>
+        	<w2:textbox id="Static10"
+        		label="나. 위에서 ② 내지 ④에 표기한 경우 영문 성명과 미국 납세자번호(Taxpayer Identification Number / ITIN”)를 기재해 주시기       바랍니다.        "
+        		style="position:absolute; VAlign:Middle;height:30px;left:14px;top:362px;width:743px;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="sty_lb_Basic" id="Static11" label="영문성명"
+        		style="position:absolute; VAlign:Middle; height:53px;left:0px;top:401px; width:60px; min-width:60px;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="sty_lb_Basic" id="Static13"
+        		label="미국 납세자번호(ITIIN)/사회보장번호(SSN)"
+        		style="position:absolute;width:290px;left:453px;VAlign:Middle;top:401px;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="sty_lb_Basic" id="Static14" label="영문주소"
+        		style="position:absolute;left:0px;VAlign:Middle;top:455px; width:60px; min-width:60px; height:28px;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="sty_lb_Basic" id="Static12"
+        		label="성(Surname)"
+        		style="position:absolute;width:100px;left:76px;VAlign:Middle;top:401px;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="sty_lb_Basic" id="Static15"
+        		label="명(Given Name)"
+        		style="position:absolute;width:100px;left:76px;VAlign:Middle;top:428px;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="sty_lb_Basic" id="Static16" label="작성요령"
+        		style="position:absolute; WordWrap:TRUE;  VAlign:Middle; text-align:center;left:0px;top:520px;width:744px;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="" id="Static17"
+        		label="1. 고객&lt;br/&gt;인적사항"
+        		style="position:absolute;height:43px;WordWrap:TRUE;width:60px;left:0px;top:547px;text-align:center;padding-top:10px;background:#f9f9f9;border:1px solid #e8e8e8;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox id="Static18"
+        		label="----------------------------------------------------------------------------------------------------------------------------------------------------------"
+        		style="position:absolute; VAlign:Middle;height:20px;left:0px;top:493px;width:762px;overflow: hidden;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="sty_lb_Detail" id="Static19"
+        		label="2. 고객 &amp;nbsp;&lt;br/&gt;확인사항"
+        		style="position:absolute;height:186px;WordWrap:TRUE;width:60px;left:0px;top:600px;text-align:center;padding-top:130px;background:#f9f9f9;border:1px solid #e8e8e8;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="sty_lb_Detail" id="Static20"
+        		label="       계좌개설신청서(또는 청약서)에 기입한 성명, 국적, 전화번호, 주소를 기입해 주시기 바랍니다."
+        		style="position:absolute;height:23px;WordWrap:TRUE;width:652px;left:79px;VAlign:Middle;top:562px;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="sty_lb_Detail" id="Static21" label="가"
+        		style="position:absolute;height:158px;text-align:center;WordWrap:TRUE;width:30px;top:600px;padding-top:100px;left:61px;VAlign:Middle;border:1px solid #e8e8e8;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="" id="Static22" label="나"
+        		style="position:absolute; WordWrap:TRUE;  VAlign:Middle;height:37px;left:61px;top:859px;width:30px;border:1px solid #e8e8e8;text-align:center;padding-top:20px;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="sty_lb_Detail" id="Static23"
+        		label="(1) 가. 항목에서 ②내지 ④의 항목 중 어느 하나라도 해당될 경우에는 해당 란에 √를 표기한 다음 나. 항목을 작성하셔야 합니다. ※ ‘기타 조세목적상 미국 거주자’란,다음에 해당하는 경우를 의미합니다 (금융이행규정 제4조 제4항 제2호): - 본인확인서 제출일이 속하는 연도의 직전 연도(이하 “특정연도”)에 31일 이상 미국에 체류하고, 특정연도 마지막 날을 기준으로 3년간 가중 평균하여 183일 이상 미국에 체류한 경우 (가중평균가중치는 특정연도도 1, 전연도 1/3, 전전연도 1/6) - 미국 거주를 시작한 연도에 미국 거주자로 선택한 경우"
+        		style="position:absolute;line-height:15px;height:115px;WordWrap:TRUE;width:623px;left:106px;VAlign:Middle;top:620px;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="sty_lb_Detail" id="Static24"
+        		label="(2) 미국 시민권자(이중국적자 포함), 영주권자 또는 기타 조세목적상 미국 거주자 중 어느 하나에도 해당하지 아니하는 고객께서는 『해당사항 없음』란에 √를 표기하시면 됩니다."
+        		style="position:absolute;line-height:15px;height:40px;WordWrap:TRUE;width:623px;left:106px;VAlign:Middle;top:714px;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="sty_lb_Detail" id="Static25"
+        		label="(3) 당사에 등록된 고객님의 정보 중 미국 납세의무자로 추정되는 정보가 발견되어 본 확인서의 작성을 요청 받으신 경우로서, 미국 시민권자(이중국적자 포함), 영주권자 또는 기타 조세목적상 미국 거주자중 어느 하나에도 해당하지 아니하는 고객께서는 『해당사항 없음』란에 √를 표기하시고 아래 첨부 서류 를 추가로 제출해주시기 바랍니다.  - 미국이 아닌 국가에서 발행한 여권; 또는  - 당해 국가의 정부기관에서 발행한 신분증 (주민등록증 등)"
+        		style="position:absolute;line-height:15px;height:110px;WordWrap:TRUE;width:623px;left:106px;VAlign:Middle;top:753px;"
+        		tagname="">
+        	</w2:textbox>
+        	<w2:textbox class="sty_lb_Detail" id="Static26"
+        		label="(1) 가. 항목에서 ②내지 ④의 항목에 √를 표기하신 고객님께서는 영문 성명과 미국납세자번호로 인식되는 9자리의 사회보장번호(Social Security Number) 또는 ITIN (Individual Tax Identification Number)를 기입해 주시기 바랍니다."
+        		style="position:absolute;line-height:15px;height:55px;WordWrap:TRUE;width:623px;left:106px;VAlign:Middle;top:868px;"
+        		tagname="">
+        	</w2:textbox>
+        	<xf:input class="sty_ipt_form" id="edt_sAddr"
+        		style="position:absolute; ImeMode:none;  border-style:solid;  height:21px;left:83px;top:459px; width:662px;"
+        		tabIndex="46">
+        	</xf:input>
+        	<xf:input class="sty_ipt_form" id="edt_sSurName"
+        		style="position:absolute; ImeMode:none;  border-style:solid;  height:21px;left:197px;top:404px; width:250px;"
+        		tabIndex="47">
+        	</xf:input>
+        	<xf:input class="sty_ipt_form" id="edt_sGivenName"
+        		style="position:absolute; ImeMode:none;  border-style:solid;  height:20px;left:197px;top:432px; width:250px;"
+        		tabIndex="48">
+        	</xf:input>
+        	<xf:input class="sty_ipt_form" dataType="text"
+        		displayFormat="###-##-####"
+        		ev:onchange="scwin.msk_sGroupCrAdmNo_OnChanged"
+        		id="msk_sItinSsnNo" maxlength="9"
+        		style="position:absolute; border-style:solid;  height:20px;left:460px;top:432px; width:284px;"
+        		tabIndex="49">
+        	</xf:input>
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="edt_sCrtorName" readOnly="TRUE"
+        		ref="data:DsWs_LTIDA03.sCrtorName"
+        		style="position:absolute; ImeMode:none;  border-style:solid;  height:20px;left:76px;top:142px; width:115px;"
+        		tabIndex="50">
+        	</xf:input>
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="edt_sAddress" readOnly="TRUE"
+        		style="position:absolute; ImeMode:none;  border-style:solid;height:20px;left:77px;top:168px;width:670px;"
+        		tabIndex="51">
+        	</xf:input>
+
+
+        	
+        </xf:group>
+    </body>
+</html>

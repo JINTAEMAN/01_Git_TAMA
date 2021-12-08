@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    <!-- 
+        ###################################################
+         파일명 : CBSC030P.xml
+         프로그램명 : 계약상태 이력조회[D030_Pop]
+         설 명 :  계약상태 이력조회[D030_Pop]
+         작성자 : 이경일
+         작성일 : 2017.09.18
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.09.18        이경일          최초작성
+        ###################################################
+     -->
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="Ds_CntrStatList"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column dataType="text" id="sCrNo"
+                			name="sCrNo" />
+                		<w2:column dataType="text" id="nChngSeqno"
+                			name="nChngSeqno" />
+                		<w2:column dataType="text" id="nCrChngNo"
+                			name="nCrChngNo" />
+                		<w2:column dataType="text" id="sChngStndDate"
+                			name="sChngStndDate" />
+                		<w2:column dataType="text" id="sChngDlngDate"
+                			name="sChngDlngDate" />
+                		<w2:column dataType="text" id="sCrStatCd"
+                			name="sCrStatCd" />
+                		<w2:column dataType="text" id="nCrStatCarrSeqno"
+                			name="sCrStatFlgcd " />
+                		<w2:column dataType="text" id="sCrStatFlgcd"
+                			name="sInptDler" />
+                		<w2:column dataType="text" id="sCrStatNm"
+                			name="sInptDlerIp" />
+                		<w2:column dataType="text" id="sInptDate"
+                			name="sInptDate" />
+                		<w2:column dataType="text" id="sInptDlerIP"
+                			name="sInptHms" />
+                		<w2:column dataType="text" id="sMdfcDlerIP"
+                			name="sMdfcDler" />
+                		<w2:column dataType="text" id="sMdfcDler"
+                			name="sMdfcDlerIp" />
+                		<w2:column dataType="text" id="sMdfcDate"
+                			name="sMdfcDate" />
+                		<w2:column dataType="text" id="sMdfcHms"
+                			name="sMdfcHms" />
+                		<w2:column id="sCrStatFlgNm" name="name16"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInptDler" name="name17"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_CntrStatList"
+                	repeatNode="map" userData2="//*/vector/data/LTIEA05">
+                	<w2:columnInfo>
+                		<w2:column id="sMdfcDate" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCrStatCd" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInptDate" name="name3"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInptHms" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChngDlngDate" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sMdfcHms" name="name6"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nCrStatCarrSeqno" name="name7"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCrStatFlgcd" name="name8"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCrStatNm" name="name9"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sChngStndDate" name="name10"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInptDlerIP" name="name11"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sMdfcDlerIP" name="name12"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sMdfcDler" name="name13"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nCrChngNo" name="name14"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCrNo" name="name15"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCrStatFlgNm" name="name16"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sInptDler" name="name17"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_ComCd" repeatNode="map" userData2="//*/hashtable/data/vector/data/LTIAX01"/>
+                <w2:dataList baseNode="list" id="DsWs_DataWarning"
+                	repeatNode="map" userData2="//*/WARNING">
+                	<w2:columnInfo>
+                	</w2:columnInfo>
+                </w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/>
+        <script><![CDATA[
+/****************************************************************************
+ * 프로그램번호   : D030
+ * 프로그램명     : 계약상태이력조회
+ * 파일명         : D030_POP.xml
+ * 프로그램 내용  : 계약상태이력조회
+ * 관련 프로그램  : 
+ * 작성자         : 백현재
+ * 작성일         : 2010-09-17
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+// <script src="/cm/js/common.js"/>
+// <script src="/cm/js/val_lib.js"/>
+// <script src="/cm/js/util.js"/>
+// <script src="/cm/js/transSub.js"/>
+// <script src="/cm/js/callService.js"/>
+// <script src="/cm/js/gds.js"/>
+// <script src="/cm/js/convertJs/conv.js"/>
+// <script src="/cm/js/convertJs/Global_Script.js"/>
+// <script src="/cm/js/convertJs/comm_Webservice.js"/>
+//---------------------------------------------------------------------------
+// function 명 : lfn_OnLoadCompleted
+// 내용        : 폼로드할때 처리할 내용
+//---------------------------------------------------------------------------
+scwin.init = function() {
+
+var pro = Promise.resolve();
+
+window.top.util.winTopShowModalChk = "T";
+util.winTopShowModal();
+
+pro = pro.then(function(rv) {
+	return util.winTopShowModalPromise();
+});
+
+pro = pro.then(function(rv) {
+
+	wprom.windowOpenInit(D030_Pop);
+    //버튼 활성,비활성화
+    //gfn_ButtonEnable(true, false, false, false, false, false, false, false, true);
+    scwin.lfn_Search();
+    
+});
+
+pro = pro.then(function(rv) {
+	util.winTopHideModal();
+});
+
+return pro;
+
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 계약상태이력 조회
+//---------------------------------------------------------------------------
+//비동기호출 
+scwin.lfn_Search_Async = function() {
+	util.eventAsyncCall(this, scwin.lfn_Search, arguments);
+};
+//
+scwin.lfn_Search = function() {
+
+	//팜업화면 오픈 시점에 보낸자료 검색
+	var inJson; 
+	var indata = $w.getParameter("param");
+	inJson = JSON.parse(indata);
+	//alert(inJson.sCrNo);
+
+	var transObj = new callService("com.inswave.longterm.psv.ens.task.EAD030Task", "selectCntrStatList", "", "");
+	transObj.setUrl("/contract/CBSC030PController.do");
+	transObj.setId("selectCntrStatList");
+	transObj.setParam("sCrNo", inJson.sCrNo);
+	transObj.setXPath("//*/vector/data/LTIEA05");
+	transObj.addXPath("//*/WARNING");
+	//transObj.callBack("scwin.subCallBackfunction");
+	transObj.sync();
+	transObj.send();
+	util.interfaceKey(_tranSync.result.serviceDs);
+
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_DataWarning");
+	//util.setCompBindRefresh("DsWs_DataWarning");
+	util.setRowPosition(DsWs_DataWarning, 0);
+	if (DsWs_DataWarning.getRowCount() != 0) {
+        wprom.alert(DsWs_DataWarning.getCellData(0, "msg"));
+        return;
+    }
+
+    wconv.clear(DsWs_CntrStatList);
+	DsWs_CntrStatList.setJSON(_tranSync.getDsJson("LTIEA05"));
+
+    wconv.clear(Ds_CntrStatList);
+	Ds_CntrStatList.setJSON(DsWs_CntrStatList.getAllJSON());
+	util.setRowPosition(Ds_CntrStatList, 0);
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_close
+// 내용        : 팝업클로즈
+//---------------------------------------------------------------------------
+scwin.lfn_close = function(obj) {
+    wprom.close("");
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap" id="D030_Pop"
+            style="position:absolute; left:0px; top:0px;min-width: 200px;width: 100%;border-right: none;"
+            userData1="계약상태 이력조회[D030_Pop]" userData2=" OnLoadCompleted:scwin.lfn_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+                <ServiceObject/>
+            </ServiceObjects>
+            <xf:switch id="switch_89" style=" ">
+                <xf:case id="Default_90" style=" ">
+                    <w2:gridView autoFit="allColumn" autoFitMinWidth="100" class="sty_Grid" dataList="Ds_CntrStatList" focusMode="row"
+                        id="Grid0" inputType="text" readOnly="true"
+                        style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  AutoFitEndLine:Hide;  height:241px; left:0px; right:652px; top:30px; width:643px;" tabIndex="1">
+                        <w2:header>
+                            <w2:row>
+                                <w2:column dataType="text" id="head_id_677" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="0" userData3="0" value="기준일자" width="80"/>
+                                <w2:column dataType="text" id="head_id_678" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="1" userData3="0" value="계약상태" width="80"/>
+                                <w2:column dataType="text" id="head_id_679" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="2" userData3="0" value="계약상태구분" width="100"/>
+                                <w2:column dataType="text" id="head_id_680" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="3" userData3="0" value="처리일자" width="120"/>
+                                <w2:column dataType="text" id="head_id_681" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="4" userData3="0" value="처리사원" width="120"/>
+                            </w2:row>
+                        </w2:header>
+                        <w2:gBody>
+                            <w2:row>
+                                <w2:column dataType="text" displayFormat="####.##.##" id="sChngStndDate" inputType="text" readOnly="true"
+                                    style="height:20px;" textAlign="center" userData1="0" userData3="0" width="80"/>
+                                <w2:column dataType="text" id="sCrStatNm" inputType="text" readOnly="true" style="height:20px;" textAlign="center"
+                                    userData1="1" userData3="0" width="80"/>
+                                <w2:column dataType="text" id="sCrStatFlgNm" inputType="text" readOnly="true" style="height:20px;" textAlign="center"
+                                    userData1="2" userData3="0" width="100"/>
+                                <w2:column dataType="text" displayFormat="####.##.##" id="sChngDlngDate" inputType="text" readOnly="true"
+                                    style="height:20px;" textAlign="center" userData1="3" userData3="0" width="120"/>
+                                <w2:column dataType="text" id="sMdfcDler" inputType="text" readOnly="true" style="height:20px;" textAlign="center"
+                                    userData1="4" userData3="0" width="120" value=""/>
+                            </w2:row>
+                        </w2:gBody>
+                    </w2:gridView>
+                </xf:case>
+            </xf:switch>
+            <w2:textbox id="Static0" label="계약상태 이력조회"
+                style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; width:197px;" tagname="" class="sub_pop_title01"/>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_close" id="btn_close"
+                style="position:absolute; Transparent:TRUE;  ImageID:btn_Comm_Close;  height:20px;left:594px;top:0px; width:70px;" tabIndex="2" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+        </xf:group>
+    </body>
+</html>

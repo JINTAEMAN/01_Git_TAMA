@@ -1,0 +1,2702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/new.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<!-- 
+	       ###################################################
+	        파일명 : BM001M03.xml
+	        프로그램명 : 메뉴 관리
+	        설 명 :  메뉴를 관리하는 화면
+	        작성자 : Inswave Systems
+	        작성일 : 2016.10.25
+	
+	        수정일자            수정자                  수정내용
+	       ==================================================
+	       2016.10.25       Inswave Systems       최초작성
+	       ###################################################
+	    -->
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+<xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+            	<w2:dataList baseNode="list" id="Ds_Args"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sPrcCat"
+            				name="sPrcCat" />
+            			<w2:column dataType="text" id="sApplCat"
+            				name="sApplCat" />
+            			<w2:column dataType="text" id="sCrNo"
+            				name="sCrNo" />
+            			<w2:column dataType="text" id="sPlanNo"
+            				name="sPlanNo" />
+            			<w2:column dataType="text" id="sAcctFlag"
+            				name="sAcctFlag" />
+            			<w2:column dataType="number" id="nCrChngNo"
+            				name="nCrChngNo" />
+            			<w2:column dataType="text" id="sCrtorCd"
+            				name="sCrtorCd" />
+            			<w2:column dataType="text" id="sCrtorName"
+            				name="sCrtorName" />
+            			<w2:column dataType="text" id="sInrpsCd"
+            				name="sInrpsCd" />
+            			<w2:column dataType="text" id="sInrpsName"
+            				name="sInrpsName" />
+            			<w2:column dataType="text" id="sUserID"
+            				name="sUserID" />
+            			<w2:column dataType="text" id="sUserIP"
+            				name="sUserIP" />
+            			<w2:column dataType="text" id="sInptDate"
+            				name="sInptDate" />
+            			<w2:column dataType="text" id="sInptHms"
+            				name="sInptHms" />
+            			<w2:column dataType="text" id="sEndPftbpCd"
+            				name="sEndPftbpCd" />
+            			<w2:column dataType="text" id="sEndPftbpName"
+            				name="sEndPftbpName" />
+            			<w2:column dataType="text" id="nInspCnt"
+            				name="nInspCnt" />
+            			<w2:column dataType="text" id="sPlanNoOri"
+            				name="sPlanNoOri" />
+            			<w2:column dataType="text" id="sDpsrName"
+            				name="sDpsrName" />
+            			<w2:column dataType="text" id="sDpsrCd"
+            				name="sDpsrCd" />
+            			<w2:column dataType="text" id="sRealCrtorCd"
+            				name="sRealCrtorCd" />
+            			<w2:column dataType="text" id="sRealInrpsCd"
+            				name="sRealInrpsCd" />
+            			<w2:column dataType="text" id="sRealDpsrCd"
+            				name="sRealDpsrCd" />
+            			<w2:column id="sInsurStrtdate" name="name24"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<nCrChngNo />
+            				<nInspCnt />
+            				<sAcctFlag />
+            				<sApplCat />
+            				<sCrNo />
+            				<sCrtorCd />
+            				<sCrtorName />
+            				<sDpsrCd />
+            				<sDpsrName />
+            				<sEndPftbpCd />
+            				<sEndPftbpName />
+            				<sInptDate />
+            				<sInptHms />
+            				<sInrpsCd />
+            				<sInrpsName />
+            				<sPlanNo />
+            				<sPlanNoOri />
+            				<sPrcCat />
+            				<sRealCrtorCd />
+            				<sRealDpsrCd />
+            				<sRealInrpsCd />
+            				<sUserID />
+            				<sUserIP />
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list"
+            		ev:oncelldatachange="scwin.Ds_LTIFA03_OnColumnChanged"
+            		id="Ds_LTIFA03" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sCrNo"
+            				name="sCrNo" />
+            			<w2:column dataType="text" id="sPlanNo"
+            				name="sPlanNo" />
+            			<w2:column dataType="text" id="sAcctFlag"
+            				name="sAcctFlag" />
+            			<w2:column dataType="text" id="nCrChngNo"
+            				name="nCrChngNo" />
+            			<w2:column dataType="text" id="sAcctKind"
+            				name="sAcctKind" />
+            			<w2:column dataType="text" id="sPayrNo"
+            				name="sPayrNo" />
+            			<w2:column dataType="text" id="sTrnfAsmtDate"
+            				name="sTrnfAsmtDate" />
+            			<w2:column dataType="text" id="sBankCd"
+            				name="sBankCd" />
+            			<w2:column dataType="text" id="sAcctNo"
+            				name="sAcctNo" />
+            			<w2:column dataType="text"
+            				id="sCardValdYearMnth" name="sCardValdYearMnth" />
+            			<w2:column dataType="text" id="sDpsrName"
+            				name="sDpsrName" />
+            			<w2:column dataType="text" id="sDpsrCd"
+            				name="sDpsrCd" />
+            			<w2:column dataType="text" id="sCrtorRelnFlag"
+            				name="sCrtorRelnFlag" />
+            			<w2:column dataType="text" id="sOpnApplDate"
+            				name="sOpnApplDate" />
+            			<w2:column dataType="text" id="sRecpDate"
+            				name="sRecpDate" />
+            			<w2:column dataType="text" id="sAcctRgstStatCd"
+            				name="sAcctRgstStatCd" />
+            			<w2:column dataType="text" id="sInptDler"
+            				name="sInptDler" />
+            			<w2:column dataType="text" id="sInptDlerIP"
+            				name="sInptDlerIP" />
+            			<w2:column dataType="text" id="sInptDate"
+            				name="sInptDate" />
+            			<w2:column dataType="text" id="sInptHms"
+            				name="sInptHms" />
+            			<w2:column dataType="text" id="sMdfcDler"
+            				name="sMdfcDler" />
+            			<w2:column dataType="text" id="sMdfcDlerIP"
+            				name="sMdfcDlerIP" />
+            			<w2:column dataType="text" id="sMdfcDate"
+            				name="sMdfcDate" />
+            			<w2:column dataType="text" id="sMdfcHms"
+            				name="sMdfcHms" />
+            			<w2:column dataType="text" id="sRecvCrtorRelCd"
+            				name="sRecvCrtorRelCd" />
+            			<w2:column dataType="text" id="sRecvCrtorTelNo"
+            				name="sRecvCrtorTelNo" />
+            			<w2:column dataType="text" id="sAcctNo1"
+            				name="sAcctNo1" />
+            			<w2:column dataType="text" id="sDpsrCd1"
+            				name="sDpsrCd1" />
+            			<w2:column dataType="text" id="sAgmDt"
+            				name="sAgmDt" />
+            			<w2:column dataType="text" id="sWdrcAgreFlgcd"
+            				name="sWdrcAgreFlgcd" />
+            			<w2:column dataType="text" id="nCallNo"
+            				name="nCallNo" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_PrevRgstAcctList"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sCrNo"
+            				name="sCrNo" />
+            			<w2:column dataType="text" id="sPlanNo"
+            				name="sPlanNo" />
+            			<w2:column dataType="text" id="sAcctFlag"
+            				name="sAcctFlag" />
+            			<w2:column dataType="text" id="nCrChngNo"
+            				name="nCrChngNo" />
+            			<w2:column dataType="text" id="sAcctKind"
+            				name="sAcctKind" />
+            			<w2:column dataType="text" id="sPayrNo"
+            				name="sPayrNo" />
+            			<w2:column dataType="text" id="sTrnfAsmtDate"
+            				name="sTrnfAsmtDate" />
+            			<w2:column dataType="text" id="sBankCd"
+            				name="sBankCd" />
+            			<w2:column dataType="text" id="sAcctNo"
+            				name="sAcctNo" />
+            			<w2:column dataType="text"
+            				id="sCardValdYearMnth" name="sCardValdYearMnth" />
+            			<w2:column dataType="text" id="sDpsrName"
+            				name="sDpsrName" />
+            			<w2:column dataType="text" id="sDpsrCd"
+            				name="sDpsrCd" />
+            			<w2:column dataType="text" id="sCrtorRelnFlag"
+            				name="sCrtorRelnFlag" />
+            			<w2:column dataType="text" id="sOpnApplDate"
+            				name="sOpnApplDate" />
+            			<w2:column dataType="text" id="sRecpDate"
+            				name="sRecpDate" />
+            			<w2:column dataType="text" id="sAcctRgstStatCd"
+            				name="sAcctRgstStatCd" />
+            			<w2:column dataType="text" id="sInptDler"
+            				name="sInptDler" />
+            			<w2:column dataType="text" id="sInptDlerIP"
+            				name="sInptDlerIP" />
+            			<w2:column dataType="text" id="sInptDate"
+            				name="sInptDate" />
+            			<w2:column dataType="text" id="sInptHms"
+            				name="sInptHms" />
+            			<w2:column dataType="text" id="sMdfcDler"
+            				name="sMdfcDler" />
+            			<w2:column dataType="text" id="sMdfcDlerIP"
+            				name="sMdfcDlerIP" />
+            			<w2:column dataType="text" id="sMdfcDate"
+            				name="sMdfcDate" />
+            			<w2:column dataType="text" id="sMdfcHms"
+            				name="sMdfcHms" />
+            			<w2:column dataType="text" id="sAcctAlias"
+            				name="sAcctAlias" />
+            			<w2:column dataType="text" id="sAcctAliasSeq"
+            				name="sAcctAliasSeq" />
+            			<w2:column dataType="text" id="sRecvCrtorRelCd"
+            				name="sRecvCrtorRelCd" />
+            			<w2:column dataType="text" id="sRecvCrtorTelNo"
+            				name="sRecvCrtorTelNo" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_AccDepoName"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sBankCode"
+            				name="sBankCode" />
+            			<w2:column dataType="text" id="sAcctNo"
+            				name="sAcctNo" />
+            			<w2:column dataType="text" id="sDepoOwnerID"
+            				name="sDepoOwnerID" />
+            			<w2:column dataType="text" id="sDepoName"
+            				name="sDepoName" />
+            			<w2:column dataType="text" id="sBankRspCode"
+            				name="sBankRspCode" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<sAcctNo />
+            				<sBankCode />
+            				<sBankRspCode />
+            				<sDepoName />
+            				<sDepoOwnerID />
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_ACCZA31"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sSendDate"
+            				name="sSendDate" />
+            			<w2:column dataType="text" id="sBankCode"
+            				name="sBankCode" />
+            			<w2:column dataType="number" id="nMsgNo"
+            				name="nMsgNo" />
+            			<w2:column dataType="text" id="sMainDealType"
+            				name="sMainDealType" />
+            			<w2:column dataType="text" id="sSubDealType"
+            				name="sSubDealType" />
+            			<w2:column dataType="text" id="sInputTime"
+            				name="sInputTime" />
+            			<w2:column dataType="text" id="sUserID"
+            				name="sUserID" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_BANK005"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="number" id="packetLength"
+            				name="packetLength" />
+            			<w2:column dataType="text" id="sBankJoinNo"
+            				name="sBankJoinNo" />
+            			<w2:column dataType="text" id="sBankCode_old"
+            				name="sBankCode_old" />
+            			<w2:column dataType="text" id="sJunmunCode"
+            				name="sJunmunCode" />
+            			<w2:column dataType="number" id="sDealType"
+            				name="sDealType" />
+            			<w2:column dataType="number" id="sJunmunNo"
+            				name="sJunmunNo" />
+            			<w2:column dataType="text" id="sSendDate"
+            				name="sSendDate" />
+            			<w2:column dataType="text" id="sSendTime"
+            				name="sSendTime" />
+            			<w2:column dataType="text" id="sBankRspCode"
+            				name="sBankRspCode" />
+            			<w2:column dataType="text" id="sDealDate"
+            				name="sDealDate" />
+            			<w2:column dataType="text"
+            				id="sDealBankCode_old" name="sDealBankCode_old" />
+            			<w2:column dataType="text" id="sDealAcctNo"
+            				name="sDealAcctNo" />
+            			<w2:column dataType="text" id="sAcctNo"
+            				name="sAcctNo" />
+            			<w2:column dataType="text" id="sAcctName"
+            				name="sAcctName" />
+            			<w2:column dataType="text" id="sBankOwnerID"
+            				name="sBankOwnerID" />
+            			<w2:column dataType="text" id="sSender"
+            				name="sSender" />
+            			<w2:column dataType="text" id="sReceiver"
+            				name="sReceiver" />
+            			<w2:column dataType="text" id="sFundUnityYN"
+            				name="sFundUnityYN" />
+            			<w2:column dataType="text" id="sBankCode"
+            				name="sBankCode" />
+            			<w2:column dataType="text" id="sDealBankCode"
+            				name="sDealBankCode" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_CrtorDpsrReln"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="Ds_DptCrData"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list"
+            		id="Ds_PrevRgstAcctList_cmb" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sCrNo"
+            				name="sCrNo" />
+            			<w2:column dataType="text" id="sPlanNo"
+            				name="sPlanNo" />
+            			<w2:column dataType="text" id="sAcctFlag"
+            				name="sAcctFlag" />
+            			<w2:column dataType="text" id="nCrChngNo"
+            				name="nCrChngNo" />
+            			<w2:column dataType="text" id="sAcctKind"
+            				name="sAcctKind" />
+            			<w2:column dataType="text" id="sPayrNo"
+            				name="sPayrNo" />
+            			<w2:column dataType="text" id="sTrnfAsmtDate"
+            				name="sTrnfAsmtDate" />
+            			<w2:column dataType="text" id="sBankCd"
+            				name="sBankCd" />
+            			<w2:column dataType="text" id="sAcctNo"
+            				name="sAcctNo" />
+            			<w2:column dataType="text"
+            				id="sCardValdYearMnth" name="sCardValdYearMnth" />
+            			<w2:column dataType="text" id="sDpsrName"
+            				name="sDpsrName" />
+            			<w2:column dataType="text" id="sDpsrCd"
+            				name="sDpsrCd" />
+            			<w2:column dataType="text" id="sCrtorRelnFlag"
+            				name="sCrtorRelnFlag" />
+            			<w2:column dataType="text" id="sOpnApplDate"
+            				name="sOpnApplDate" />
+            			<w2:column dataType="text" id="sRecpDate"
+            				name="sRecpDate" />
+            			<w2:column dataType="text" id="sAcctRgstStatCd"
+            				name="sAcctRgstStatCd" />
+            			<w2:column dataType="text" id="sInptDler"
+            				name="sInptDler" />
+            			<w2:column dataType="text" id="sInptDlerIP"
+            				name="sInptDlerIP" />
+            			<w2:column dataType="text" id="sInptDate"
+            				name="sInptDate" />
+            			<w2:column dataType="text" id="sInptHms"
+            				name="sInptHms" />
+            			<w2:column dataType="text" id="sMdfcDler"
+            				name="sMdfcDler" />
+            			<w2:column dataType="text" id="sMdfcDlerIP"
+            				name="sMdfcDlerIP" />
+            			<w2:column dataType="text" id="sMdfcDate"
+            				name="sMdfcDate" />
+            			<w2:column dataType="text" id="sMdfcHms"
+            				name="sMdfcHms" />
+            			<w2:column dataType="text" id="sAcctAlias"
+            				name="sAcctAlias" />
+            			<w2:column dataType="text" id="sAcctAliasSeq"
+            				name="sAcctAliasSeq" />
+            			<w2:column dataType="text" id="sRecvCrtorRelCd"
+            				name="sRecvCrtorRelCd" />
+            			<w2:column dataType="text" id="sRecvCrtorTelNo"
+            				name="sRecvCrtorTelNo" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_RecvCrtorRel"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="Ds_WdrcAgreFlgcd"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="code"
+            				name="code" />
+            			<w2:column dataType="text" id="name"
+            				name="name" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<code><![CDATA[1]]></code>
+            				<name><![CDATA[서면]]></name>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[4]]></code>
+            				<name><![CDATA[녹취]]></name>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_BankCd"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="DsWs_CrtorDpsrReln"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="DsWs_AutoTrnfDate"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="DsWs_PrevRgstAcctList"
+            		repeatNode="map" userData2="//*/LTIFA03" />
+            	<w2:dataList baseNode="list" id="warning"
+            		repeatNode="map" userData2="//*/WARNING" />
+            	<w2:dataList baseNode="list" id="DsWs_PlanRgstAcct"
+            		repeatNode="map" userData2="//*/LTIFA33">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sCrNo"
+            				name="sCrNo" />
+            			<w2:column dataType="text" id="sPlanNo"
+            				name="sPlanNo" />
+            			<w2:column dataType="text" id="sAcctFlag"
+            				name="sAcctFlag" />
+            			<w2:column dataType="text" id="nCrChngNo"
+            				name="nCrChngNo" />
+            			<w2:column dataType="text" id="sAcctKind"
+            				name="sAcctKind" />
+            			<w2:column dataType="text" id="sPayrNo"
+            				name="sPayrNo" />
+            			<w2:column dataType="text" id="sTrnfAsmtDate"
+            				name="sTrnfAsmtDate" />
+            			<w2:column dataType="text" id="sBankCd"
+            				name="sBankCd" />
+            			<w2:column dataType="text" id="sAcctNo"
+            				name="sAcctNo" />
+            			<w2:column dataType="text"
+            				id="sCardValdYearMnth" name="sCardValdYearMnth" />
+            			<w2:column dataType="text" id="sDpsrName"
+            				name="sDpsrName" />
+            			<w2:column dataType="text" id="sDpsrCd"
+            				name="sDpsrCd" />
+            			<w2:column dataType="text" id="sCrtorRelnFlag"
+            				name="sCrtorRelnFlag" />
+            			<w2:column dataType="text" id="sOpnApplDate"
+            				name="sOpnApplDate" />
+            			<w2:column dataType="text" id="sRecpDate"
+            				name="sRecpDate" />
+            			<w2:column dataType="text" id="sAcctRgstStatCd"
+            				name="sAcctRgstStatCd" />
+            			<w2:column dataType="text" id="sInptDler"
+            				name="sInptDler" />
+            			<w2:column dataType="text" id="sInptDlerIP"
+            				name="sInptDlerIP" />
+            			<w2:column dataType="text" id="sInptDate"
+            				name="sInptDate" />
+            			<w2:column dataType="text" id="sInptHms"
+            				name="sInptHms" />
+            			<w2:column dataType="text" id="sMdfcDler"
+            				name="sMdfcDler" />
+            			<w2:column dataType="text" id="sMdfcDlerIP"
+            				name="sMdfcDlerIP" />
+            			<w2:column dataType="text" id="sMdfcDate"
+            				name="sMdfcDate" />
+            			<w2:column dataType="text" id="sMdfcHms"
+            				name="sMdfcHms" />
+            			<w2:column dataType="text" id="sAcctAlias"
+            				name="sAcctAlias" />
+            			<w2:column dataType="text" id="sAcctAliasSeq"
+            				name="sAcctAliasSeq" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_DepoName"
+            		repeatNode="map" userData2="//*/DACM005" />
+            	<w2:dataList baseNode="list" id="DsWs_sApplDate"
+            		repeatNode="map" userData2="//*/DATE" />
+            	<w2:dataList baseNode="list" id="DsWs_DptCrData"
+            		repeatNode="map" userData2="//*/LTIEA00">
+            		<w2:columnInfo>
+            			<w2:column id="sPaymTermCdName" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsurTermCdName" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nBussPrem" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAutoLoanRqstDate" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAcctNo" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCrStatCarrSeqno" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsurStrtdate" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCrNoSeq" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGnrzCd" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCrStatCdName" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCrStatFlgcd" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDoerName" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDoerUser" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardValdYearMnth" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCrNoType" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDoer" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTaxPrfrYn" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDoerRegistrationNo"
+            				name="name18" dataType="text">
+            			</w2:column>
+            			<w2:column id="beforeEJBCall" name="name19"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRecvCrtorTelNo" name="name20"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCrtorCd" name="name21"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCrChngNo" name="name22"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSaleChnl" name="name23"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGdCdName" name="name24"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRecvCrtorRelCd" name="name25"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCrNoOri" name="name26"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGdTypeFlgCd" name="name27"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCrStatCd" name="name28"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nDcPrem" name="name29"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sChngDlngDate" name="name30"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDpsrName" name="name31"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sLapsDate" name="name32"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nTaxPrfrInsAmt" name="name33"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPlanProgRankCdName"
+            				name="name34" dataType="text">
+            			</w2:column>
+            			<w2:column id="sPayrNo" name="name35"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBankCd" name="name36"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsurEndDate" name="name37"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCmMetd" name="name38"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sScanObjtYn" name="name39"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAcctRgstStatCd" name="name40"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSpclDlngCd" name="name41"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDoerUserName" name="name42"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nGrntPrem" name="name43"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPaymCyclCdName" name="name44"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sItemCd" name="name45"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPaymTermCd" name="name46"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCrStatFlgcdName" name="name47"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nAccuPrem" name="name48"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPlanNo" name="name49"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nInspCnt" name="name50"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sFinalPaymMthy" name="name51"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCrtorRelnFlag" name="name52"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="result" name="name53"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSvGdCd" name="name54"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplDclrRato" name="name55"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="afterEJBCall" name="name56"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nFinalPaymSeq" name="name57"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nTotPaymPrem" name="name58"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDuty" name="name59"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEndPftbpCd" name="name60"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBunsMetdDocuClsfCd"
+            				name="name61" dataType="text">
+            			</w2:column>
+            			<w2:column id="sOpnApplDate" name="name62"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmDt" name="name63"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsType" name="name64"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRecvProgStat" name="name65"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCrtorName" name="name66"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInrpsName" name="name67"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPaymCyclCd" name="name68"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAcctKind" name="name69"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sFinalRecpDate" name="name70"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nRealInsurTerm" name="name71"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCrAccdName" name="name72"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBankCdName" name="name73"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInrpsCd" name="name74"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPlanNoOri" name="name75"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCrNo" name="name76"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRecvProgStatName" name="name77"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPsnGroupFlgcd" name="name78"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPaymExptDate" name="name79"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPlanProgRankCd" name="name80"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nTxfrPrem" name="name81"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTxfrYn" name="name82"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nApplPrem" name="name83"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsTypeName" name="name84"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nRealPaymTerm" name="name85"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEndPftbpName" name="name86"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGdCd" name="name87"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSsrtDate" name="name88"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRecpDate" name="name89"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTrnInfo" name="name90"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsurTermCd" name="name91"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDpsrCd" name="name92"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTrnfAsmtDate" name="name93"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGroupCrAdmNo" name="name94"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCmMetdName" name="name95"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_RecvCrtorRel"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="DsWs_Search"
+            		repeatNode="map" userData2="//*/CUSAA64" />
+            	<w2:dataList baseNode="list" repeatNode="map"
+            		id="ds_code" saveRemovedData="true">
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+ <script src="/cm/js/convertJs/Global_Script.js"/>
+ <script src="/cm/js/convertJs/Cust_Script.js"/>
+ <script src="/cm/js/convertJs/comm_Webservice.js"/>
+ <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+ <script src="/cm/js/convertJs/GrdPassword_Script.js"/>
+		<script type="javascript"><![CDATA[
+/****************************************************************************
+ * 프로그램번호   : F150_Div1
+ * 프로그램명      : 자동이체계좌등록
+ * 파일명            : F150_Div1.xml
+ * 프로그램 내용  : 자동이체계좌등록
+ * 관련 프로그램  : 
+ * 작성자            : 홍춘기
+ * 작성일            : 2010-10-12
+ * 저작권            : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역         : 
+ ****************************************************************************/
+
+// 예금주 체크 주석처리함 >>> lfn_reqChkValue()
+// 예금주 체크 주석처리함 >>> lfn_reqChkValue()
+var crntYMD;//현재일
+var crntTime;//현재시간
+var isDpsrCnfm = 0;//예금주확인 : -1(불일치) 0(확인전) 1(일치)
+var sAgncYn = "N";
+var showHideFlag = "show";
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_F150_Div1_OnLoadCompleted
+// 내용        : 모화면 OnLoadCompleted 이벤트 발생시 호출
+//---------------------------------------------------------------------------
+scwin.init = function() {
+    //현재일
+    scwin.lfn_crntDate();
+console.log("=====CBSC089S init");
+    //허용값 조회(은행, 이체일, 계약자와관계) 
+    scwin.lfn_getCommonCodes();
+
+    //기등록계좌콤보 초기화
+    cmb_LTIFA03LIST.setDisabled(true);
+
+    //대리점인지 여부(30:대리점,33:사용인,35:TM사용인)
+    if (util.getGdsValue("gUserDuty") == "30" || 
+        util.getGdsValue("gUserDuty") == "33" || 
+        util.getGdsValue("gUserDuty") == "35") {
+        // 대리점일때 버튼 감추기.(3자통화 버튼 감추거나 disable 처리)
+        btn_IvrInput.setDisabled(true);
+        btn_IvrInput2.setDisabled(true);
+    }
+	Ds_Args.setRowPosition(0, false);
+    if (Ds_Args.getCellData(Ds_Args.getRowPosition(), "sPrcCat") == "1") {
+        // 처리구분 : 1(청약),2(기타),3(변경) 
+        cmb_WdrcAgreFlgcd.setDisabled(true);
+    } else {
+        cmb_WdrcAgreFlgcd.setDisabled(false);
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_initF150_Div1
+// 내용        : 모듈(화면) 초기화
+//---------------------------------------------------------------------------
+scwin.lfn_initF150_Div1 = function() {
+
+	scwin.lfn_getCommonCodes(); //csr
+	
+    wconv.clear(Ds_LTIFA03);
+    util.appendRow(Ds_LTIFA03);
+    Ds_LTIFA03.setRowPosition(0, false);
+    
+    cmb_BankCd.setDisabled(false);
+    cmb_sCrtorRelnFlag.setDisabled(false);
+    edt_sDpsrName.setDisabled(true);
+    edt_sAcctNo.setDisabled(false);
+    cmb_sAutoTrnfDate.setDisabled(false);
+    btn_DpsrCnfm.setDisabled(false);
+
+    //20120423 R20120423000002__보험료 제3자 납입 개발 의뢰 start
+//    Static1.hide();
+//    cmb_sRecvCrtorRelFlag.hide();
+//    Static2.hide();
+//    edt_sHomeTel.hide();
+//    btn_PerAgree.hide();
+
+    Static1.setStyle("visibility", "hidden");
+    Static1d.setStyle("visibility", "hidden");
+    cmb_sRecvCrtorRelFlag.setStyle("visibility", "hidden");
+    Static2.setStyle("visibility", "hidden");
+    Static2d.setStyle("visibility", "hidden");
+    edt_sHomeTel.setStyle("visibility", "hidden");
+    btn_PerAgree.setStyle("visibility", "hidden");
+
+    btn_IvrInput2.setDisabled(true);
+	showHideFlag = "hide";    
+    //20120423 R20120423000002__보험료 제3자 납입 개발 의뢰 end
+    // arg 체크
+    //lfn_argsChk();
+    if (Ds_Args.getCellData(Ds_Args.getRowPosition(), "sPrcCat") == "1") {
+        // 처리구분 : 1(청약),2(기타),3(변경) 
+        cmb_WdrcAgreFlgcd.setDisabled(true);
+    } else {
+        cmb_WdrcAgreFlgcd.setDisabled(false);
+    }
+    // csr start
+	var sInsurStrtdate = Ds_Args.getCellData(0, "sInsurStrtdate");
+	var sPrcCat = Ds_Args.getCellData(0,"sPrcCat");
+	
+	if(sPrcCat == "1"){
+		if(sInsurStrtdate >= "20170901"){
+			DsWs_AutoTrnfDate.deleteRow(6);
+		}
+	}
+	if(sPrcCat == "3"){
+		if(sInsurStrtdate >= "20170901"){
+			DsWs_AutoTrnfDate.deleteRow(6);
+		}
+	}
+	
+	if((nfn_checkAuthByID("ds_code", util.getGdsValue("gUserID") , "22040") == true) && sPrcCat == "3"){
+		msk_ApplDate.setDisabled(false);//.Enable = true;
+	}else{
+		msk_ApplDate.setDisabled(true);//.Enable = false;
+	}    
+    // csr end
+    if (parent.parent.sAgncYn == "Y") {
+        var obj_list = ["edt_sAcctNo","msk_sDpsrCd"]; //maskEdit 오브젝트 리스트
+        var ds_list = ["Ds_LTIFA03","Ds_LTIFA03"]; //데이터셋 리스트
+        var column_list = ["sAcctNo","sDpsrCd"]; //실제값이 보관될 데이터셋의 컬럼
+        var mask_list = ["#####***********","######-#******"];
+        //cbs 임시 - gfn_mkEditPassWord(obj_list, ds_list, column_list, mask_list);
+    }
+
+
+    //콤보 기본값 
+    cmb_BankCd.setSelectedIndex(0);
+    cmb_sAutoTrnfDate.setSelectedIndex(0);
+    cmb_sRecvCrtorRelFlag.setSelectedIndex(0);
+    cmb_sCrtorRelnFlag.setSelectedIndex(0);
+
+    //계약조회
+    scwin.getDptCrData();
+
+    // 기등록된 이체계좌 조회
+    scwin.lfn_PrevAcctSelect();
+    
+    // 계좌 정보 초기화
+    scwin.lfn_initLTIFA03();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_argsChk
+// 내용        : 모화면의로부터의 param체크
+//---------------------------------------------------------------------------
+scwin.lfn_argsChk = function() {
+    var sCrNo = Ds_Args.getCellData(0, "sCrNo"); // 계약번호 
+    var sPlanNo = Ds_Args.getCellData(0, "sPlanNo"); // 설계번호 
+    var sAcctFlag = Ds_Args.getCellData(0, "sAcctFlag"); // 계좌구분
+    var sPrcCat = Ds_Args.getCellData(0, "sPrcCat"); // 처리구분 : 1(청약),2(기타),3(변경)
+    var sApplCat = Ds_Args.getCellData(0, "sApplCat"); // 신청구분 : 1(신규),3(계좌변경),5(해지)
+    var nCrChngNo = Ds_Args.getCellData(0, "nCrChngNo"); // 계약변경변호
+    var sCrtorCd = Ds_Args.getCellData(0, "sCrtorCd"); // 계약자코드
+    var sCrtorName = Ds_Args.getCellData(0, "sCrtorName"); // 계약자명
+    var sInrpsCd = Ds_Args.getCellData(0, "sInrpsCd"); // 피보험자코드
+    var sInrpsName = Ds_Args.getCellData(0, "sInrpsName"); // 피보험자명
+    //trace(Ds_Args.savexml());
+    //구분값 체크
+    if (sPrcCat == null || sPrcCat == "") {
+        wprom.alert("처리구분 미입력");
+        return false;
+    } else if (sApplCat == null || sApplCat == "") {
+        wprom.alert("신청구분 미입력");
+        return false;
+    } else if (sAcctFlag == null || sAcctFlag == "") {
+        wprom.alert("계좌구분 미입력");
+        return false;
+    }
+
+
+    //계약자체크
+    if (sCrtorCd == null || sCrtorCd == "") {
+        wprom.alert("계약자코드 미입력");
+        return false;
+    } else if (sCrtorName == null || sCrtorName == "") {
+        wprom.alert("계약자명 미입력");
+        return false;
+    }
+
+
+    //처리구분에 따른 데이터 체크
+    //처리구분(sPrcCat) : 1(청약),2(기타),3(변경)
+    if (sPrcCat == "1") {
+        //설계번호 체크
+        if (sPlanNo == null || sPlanNo == "") {
+            wprom.alert("설계번호 미입력");
+            return false;
+        } else if (wconv.length(sPlanNo) != 12) {
+            wprom.alert("설계번호 입력 오류");
+            return false;
+        }
+    } else if (sPrcCat == "3") {
+        //계약번호 체크
+        if (sCrNo == null || sCrNo == "") {
+            wprom.alert("계약번호 미입력");
+            return false;
+        } else if (wconv.length(sCrNo) != 12) {
+            wprom.alert("계약번호 입력 오류");
+            return false;
+        }
+
+
+        // 변경번호 체크
+        if (nCrChngNo == null || nCrChngNo == "") {
+            wprom.alert("계약변경번호 미입력");
+            return false;
+        } else if (nCrChngNo <= 0 && sApplCat != "1") {
+            wprom.alert("계약변경번호 입력 오류");
+            return false;
+        }
+    } else if (sPrcCat == "2") {
+        //계약번호 체크
+        if (sCrNo == null || sCrNo == "") {
+            wprom.alert("계약번호 미입력");
+            return false;
+        } else if (wconv.length(sCrNo) != 12) {
+            wprom.alert("계약번호 입력 오류");
+            return false;
+        }
+
+
+
+        // 계약변경번호 체크
+        if (nCrChngNo == null || nCrChngNo == "") {
+            wprom.alert("계약변경번호 미입력");
+            return false;
+        } else if (nCrChngNo <= 0 && sApplCat != "1") {
+            wprom.alert("계약변경번호 입력 오류");
+            return false;
+        }
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_getCommonCodes
+// 내용        : 허용값 조회
+//---------------------------------------------------------------------------
+scwin.lfn_getCommonCodes = function() {
+    wconv.clear(warning);
+    gfn_getCommonCodes("DsWs_BankCd Ds_CrtorDpsrReln DsWs_AutoTrnfDate DsWs_RecvCrtorRel"
+                                   , "BankCd CrPrtrRole TrnDsdy RecvCrtorRelCd"
+                                   , "cmb_BankCd cmb_sCrtorRelnFlag cmb_sAutoTrnfDate cmb_sRecvCrtorRelFlag "
+                                   , "S N S S");
+
+    // 오류처리
+    //warning.DataObject = DOBJ_Rule1.ID;
+    if (warning.getRowCount() != 0) {
+        wprom.alert(warning.getCellData(0, "msg"));
+        return;
+    }
+    util.jSonDsCreate(Ds_CrtorDpsrReln, DsWs_CrtorDpsrReln.getID());
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_cmb_LTIFA03LIST_OnChanged
+// 내용        : 계좌정보 초기화
+//---------------------------------------------------------------------------
+scwin.lfn_initLTIFA03 = function() {
+    //현재일
+    //lfn_crntDate();
+    //초기화
+    wconv.clear(Ds_LTIFA03);
+    util.appendRow(Ds_LTIFA03);
+    Ds_LTIFA03.setRowPosition(0, false);
+    
+    Ds_LTIFA03.setCellData(Ds_LTIFA03.getRowPosition(), "sCrNo", Ds_Args.getCellData(Ds_Args.getRowPosition(), "sCrNo")); //계약번호
+    Ds_LTIFA03.setCellData(Ds_LTIFA03.getRowPosition(), "sPlanNo", Ds_Args.getCellData(Ds_Args.getRowPosition(), "sPlanNo")); //설계번호 (청약,변경설계)
+    Ds_LTIFA03.setCellData(Ds_LTIFA03.getRowPosition(), "nCrChngNo", Ds_Args.getCellData(Ds_Args.getRowPosition(), "nCrChngNo")); //변경번호
+    Ds_LTIFA03.setCellData(Ds_LTIFA03.getRowPosition(), "sAcctFlag", Ds_Args.getCellData(Ds_Args.getRowPosition(), "sAcctFlag")); //계좌구분
+    Ds_LTIFA03.setCellData(Ds_LTIFA03.getRowPosition(), "sRecpDate", crntYMD); //요청일
+    Ds_LTIFA03.setCellData(Ds_LTIFA03.getRowPosition(), "sAcctKind", "01"); //계좌종류 : 01: 계좌, 02: 신용카드
+    Ds_LTIFA03.setCellData(Ds_LTIFA03.getRowPosition(), "sAgmDt", crntYMD);
+    ////wconv.trace("gUseCustType : " + gds.gUseCustType);
+    ////wconv.trace("gFaceSalesYN  : " + util.getGdsValue("gFaceSalesYN"));
+    //대면/비대면체크  0 :  대면 , 1 : 비대면
+    if (util.getGdsValue("gFaceSalesYN") == "Y") {
+        Ds_LTIFA03.setCellData(Ds_LTIFA03.getRowPosition(), "sWdrcAgreFlgcd", "1");
+    } else {
+        Ds_LTIFA03.setCellData(Ds_LTIFA03.getRowPosition(), "sWdrcAgreFlgcd", "4");
+    }
+    if (Ds_Args.getCellData(Ds_Args.getRowPosition(), "sPrcCat") == "1") {
+        // 처리구분 : 1(청약),2(기타),3(변경) 
+        wconv.filter(Ds_CrtorDpsrReln, "sCd==10||sCd==20||sCd==40",true);
+        //wconv.trace("sScanObjtYn" + parent.parent.sScanObjtYn);
+
+        //2014.08.25 By SDJ (N1408-00240)
+        if (parent.parent.sScanObjtYn == "Y") {
+            //Ds_CrtorDpsrReln.Filter("sCd=10||sCd=20"); 
+            btn_PerAgree.hide();
+            ////wconv.trace("sScanObjtYn=========" + parent.parent.sScanObjtYn);
+        }
+
+        //END
+            
+        if (Ds_PrevRgstAcctList_cmb.getRowCount() > 1) {
+            cmb_LTIFA03LIST.setSelectedIndex(1);
+            scwin.cmb_LTIFA03LIST_OnChanged(cmb_LTIFA03LIST, cmb_LTIFA03LIST.getValue(), cmb_LTIFA03LIST.getValue(), 0, cmb_LTIFA03LIST.getSelectedIndex());
+        } else {
+            cmb_BankCd.setSelectedIndex(0);
+            cmb_sAutoTrnfDate.setSelectedIndex(0);
+            cmb_sRecvCrtorRelFlag.setSelectedIndex(0); // 입금계약자와의 관계
+            cmb_sCrtorRelnFlag.setValue("10"); // 계약자와관계 : 본인
+            Ds_LTIFA03.setCellData(0, "sDpsrName", Ds_Args.getCellData(0, "sCrtorName"));
+            Ds_LTIFA03.setCellData(0, "sDpsrCd", Ds_Args.getCellData(0, "sCrtorCd"));
+        }
+    } else {
+        if (Ds_Args.getCellData(Ds_Args.getRowPosition(), "sPrcCat") == "3") {
+            // 처리구분 : 1(청약),2(기타),3(변경) 
+            wconv.filter(Ds_CrtorDpsrReln, "sCd==10||sCd==20||sCd==40",true);
+        }
+        cmb_BankCd.setSelectedIndex(0);
+        cmb_sAutoTrnfDate.setSelectedIndex(0);
+        cmb_sRecvCrtorRelFlag.setSelectedIndex(0); //입금계약자와의 관계
+        cmb_sCrtorRelnFlag.setValue("10"); // 계약자와관계 : 본인
+        Ds_LTIFA03.setCellData(0, "sDpsrName", Ds_Args.getCellData(0, "sCrtorName"));
+        Ds_LTIFA03.setCellData(0, "sDpsrCd", Ds_Args.getCellData(0, "sCrtorCd"));
+    }
+    
+    return;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_preAcctSelect 
+// 내용        : 외부에서 기등록계좌 선택
+//---------------------------------------------------------------------------
+scwin.lfn_preAcctSelect = function(sAcctFlag) {
+    var promise = Promise.resolve();
+    var rowAcctFlag = wconv.findRow(Ds_PrevRgstAcctList_cmb, "sAcctFlag", sAcctFlag);
+    if (rowAcctFlag > -1) {
+        cmb_LTIFA03LIST.setSelectedIndex(rowAcctFlag);
+        promise = promise.then(function(rtnVal) {
+            return scwin.cmb_LTIFA03LIST_OnChanged(cmb_LTIFA03LIST, cmb_LTIFA03LIST.getValue(), cmb_LTIFA03LIST.getValue(), 0, cmb_LTIFA03LIST.getSelectedIndex());
+        });
+    }
+    return promise;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_PrevAcctSelect
+// 내용        : 기등록계좌 리스트 조회
+//---------------------------------------------------------------------------
+scwin.lfn_PrevAcctSelect = function() {
+    wconv.clear(warning);
+    wconv.clear(DsWs_PlanRgstAcct);
+    wconv.clear(Ds_PrevRgstAcctList);
+    wconv.clear(Ds_PrevRgstAcctList_cmb);
+    wconv.clear(DsWs_PrevRgstAcctList);
+    
+    //SOBJ_PrevRgstAcctList.WSDL = gds.gWsdlBasis;
+    //var MethodObj;
+    //warning.DataObject = DOBJ_PrevRgstAcctList.ID;
+    // 처리구분 : 1(청약),2(기타),3(변경)
+    var sPrcCat = Ds_Args.getCellData(0, "sPrcCat");
+    if (sPrcCat == "1") {
+    	/*
+        MethodObj = gfn_CreateMethodObj(SOBJ_PrevRgstAcctList, "com.inswave.longterm.dpt.rec.task.FAF160Task", "selectPlanAcct", "", "");
+        gfn_SetParam(MethodObj, "sPlanNo", Ds_Args.getCellData(0, "sPlanNo")); //설계번호
+        gfn_SetParam(MethodObj, "sAcctFlag", "1"); //계좌구분(이체계좌 전체)
+        gfn_CallService(SOBJ_PrevRgstAcctList, DOBJ_PrevRgstAcctList, MethodObj);
+        */
+		var MethodObj = new callService("com.inswave.longterm.dpt.rec.task.FAF160Task", "selectPlanAcct");
+		MethodObj.setId("selectPlanAcct");
+        MethodObj.setParam("sPlanNo", Ds_Args.getCellData(0, "sPlanNo")); //설계번호
+        MethodObj.setParam("sAcctFlag", "1"); //계좌구분(이체계좌 전체)		
+		MethodObj.setUrl("/contract/CBSC089SController.do");
+		MethodObj.setXPath("//*/LTIFA03");
+		MethodObj.setXPath("//*/LTIFA33");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();
+		
+		DsWs_PrevRgstAcctList.setJSON(_tranSync.getDsJson("LTIFA03"));
+		DsWs_PlanRgstAcct.setJSON(_tranSync.getDsJson("LTIFA33"));
+		
+		util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "warning");
+        
+        //wconv.copy(Ds_PrevRgstAcctList_cmb, "DsWs_PlanRgstAcct"); //기등록계좌 목록 데이타
+		Ds_PrevRgstAcctList_cmb.setJSON(DsWs_PlanRgstAcct.getAllJSON());
+    } else {
+    	/*
+        MethodObj = gfn_CreateMethodObj(SOBJ_PrevRgstAcctList, "com.inswave.longterm.dpt.rec.task.FAF160Task", "selectTrnfAcctList", "", "");
+
+        //계약번호 
+        var sCrNo = Ds_Args.getCellData(0, "sCrNo"); //계약번호
+        gfn_SetParam(MethodObj, "sWhereId", "1"); //조회구분 : 계약번호
+        gfn_SetParam(MethodObj, "sCrNo", sCrNo); //계약번호
+        gfn_SetParam(MethodObj, "sAcctFlag", "0"); //계좌구분(이체계좌 전체)
+        gfn_CallService(SOBJ_PrevRgstAcctList, DOBJ_PrevRgstAcctList, MethodObj);
+        */
+		var MethodObj = new callService("com.inswave.longterm.dpt.rec.task.FAF160Task", "selectTrnfAcctList");
+		MethodObj.setId("selectTrnfAcctList");
+        //계약번호 
+        var sCrNo = Ds_Args.getCellData(0, "sCrNo"); //계약번호
+        MethodObj.setParam("sWhereId", "1"); //조회구분 : 계약번호
+        MethodObj.setParam("sCrNo", sCrNo); //계약번호
+        MethodObj.setParam("sAcctFlag", "0"); //계좌구분(이체계좌 전체)
+		MethodObj.setUrl("/contract/CBSC089SController.do");
+		MethodObj.setXPath("//*/LTIFA03");
+		MethodObj.setXPath("//*/LTIFA33");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();
+		
+		DsWs_PrevRgstAcctList.setJSON(_tranSync.getDsJson("LTIFA03"));
+		DsWs_PlanRgstAcct.setJSON(_tranSync.getDsJson("LTIFA33"));
+		util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "warning");
+		        
+        //wconv.copy(Ds_PrevRgstAcctList, "DsWs_PrevRgstAcctList"); //기등록계좌 목록 데이타
+        //wconv.copy(Ds_PrevRgstAcctList_cmb, "DsWs_PrevRgstAcctList"); //기등록계좌 목록 데이타(콤보용)
+		Ds_PrevRgstAcctList.setJSON(DsWs_PrevRgstAcctList.getAllJSON());
+		Ds_PrevRgstAcctList_cmb.setJSON(DsWs_PrevRgstAcctList.getAllJSON());
+    }
+
+    // 기등록계좌가 없을 경우
+    if (warning.getRowCount() != 0) {
+        cmb_LTIFA03LIST.setDisabled(true);
+    } else {
+        var sCrtorCd = Ds_Args.getCellData(0, "sCrtorCd"); // 계약자코드
+        var sCrtorName = Ds_Args.getCellData(0, "sCrtorName"); // 계약자명
+        var sInrpsCd = Ds_Args.getCellData(0, "sInrpsCd"); // 피보험자코드
+        var sInrpsName = Ds_Args.getCellData(0, "sInrpsName"); // 피보험자명
+        var sEndPftbpCd = Ds_Args.getCellData(0, "sEndPftbpCd");
+        var sEndPftbpName = Ds_Args.getCellData(0, "sEndPftbpName");
+        var strFilter = "(sCrtorRelnFlag='10' && sDpsrCd='" + sCrtorCd + "')";
+        strFilter += "|| (sCrtorRelnFlag='20' && sDpsrCd='" + sInrpsCd + "')";
+        strFilter += "|| (sCrtorRelnFlag='30' && sDpsrCd='" + sEndPftbpCd + "')";
+        strFilter += "|| (sCrtorRelnFlag='40')";
+        if (Ds_PrevRgstAcctList_cmb.getRowCount() > 0) {
+            // 기본값 셋팅
+            var insRow = util.insertRow(Ds_PrevRgstAcctList_cmb, 0);
+            Ds_PrevRgstAcctList_cmb.setCellData(0, "sAcctAliasSeq", "");
+            Ds_PrevRgstAcctList_cmb.setCellData(0, "sAcctAlias", "  -- 선택 --  ");
+            cmb_LTIFA03LIST.setValue("");
+            cmb_LTIFA03LIST.setDisabled(false);
+        } else {
+            cmb_LTIFA03LIST.setValue("");
+            cmb_LTIFA03LIST.setDisabled(true);
+        }
+
+
+        //개인정보 로그처리 
+        gfn_LogCreditInfo("", "", "S", sCrtorCd);
+        gfn_LogCreditInfo("", "", "S", sInrpsCd);
+    }
+};
+
+scwin.lfn_ChangeMask = function() {
+    Ds_LTIFA03.setCellData(0, "sAcctNo", Ds_LTIFA03.getCellData(0, "sAcctNo1"));
+    Ds_LTIFA03.setCellData(0, "sDpsrCd", Ds_LTIFA03.getCellData(0, "sDpsrCd1"));
+};
+
+//---------------------------------------------------------------------------
+// function 명 : cmb_LTIFA03LIST_OnChanged
+// 내용        : 기등록계좌 선택시
+//---------------------------------------------------------------------------
+scwin.cmb_LTIFA03LIST_OnChanged = function(obj, strCode, strText, nOldIndex, nNewIndex) {
+console.log("====scwin.cmb_LTIFA03LIST_OnChanged");
+    var promise = Promise.resolve();
+    //현재일
+    //lfn_crntDate();
+    wconv.clear(Ds_LTIFA03);
+    Ds_LTIFA03.insertRow(0); //util.appendRow(Ds_LTIFA03);
+    Ds_LTIFA03.setRowPosition(0, false);
+console.log("===a");
+    //계약번호
+    Ds_LTIFA03.setCellData(0, "sCrNo", Ds_Args.getCellData(0, "sCrNo"));    
+    //설계번호
+    Ds_LTIFA03.setCellData(0, "sPlanNo", Ds_Args.getCellData(0, "sPlanNo"));    
+    //계좌구분
+    Ds_LTIFA03.setCellData(0, "sAcctFlag", Ds_Args.getCellData(0, "sAcctFlag"));
+console.log("===b");    
+    //계약변경번호
+    Ds_LTIFA03.setCellData(0, "nCrChngNo", Ds_Args.getCellData(0, "nCrChngNo"));
+    //신청일자 현재일
+    Ds_LTIFA03.setCellData(0, "sRecpDate", crntYMD);
+    //계좌종류 : 01: 계좌, 02: 신용카드
+    Ds_LTIFA03.setCellData(0, "sAcctKind", "01");
+console.log("===c");    
+    //납부자번호
+    Ds_LTIFA03.setCellData(0, "sPayrNo", "");
+    //은행
+    Ds_LTIFA03.setCellData(0, "sBankCd", Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sBankCd"));
+    //예금주관계
+    Ds_LTIFA03.setCellData(0, "sCrtorRelnFlag", Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sCrtorRelnFlag"));
+    //계좌번호
+    Ds_LTIFA03.setCellData(0, "sAcctNo1", Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sAcctNo1"));
+    Ds_LTIFA03.setCellData(0, "sAcctNo", Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sAcctNo"));
+console.log("===d");    
+    //예금주명
+    Ds_LTIFA03.setCellData(0, "sDpsrName", Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sDpsrName"));
+    //예금주코드
+    Ds_LTIFA03.setCellData(0, "sDpsrCd1", Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sDpsrCd1"));
+    Ds_LTIFA03.setCellData(0, "sDpsrCd", Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sDpsrCd"));
+    //이체일
+    Ds_LTIFA03.setCellData(0, "sTrnfAsmtDate", Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sTrnfAsmtDate"));
+    //이체적용일
+    Ds_LTIFA03.setCellData(0, "sOpnApplDate", scwin.lfn_getApplDate(cmb_sAutoTrnfDate.getValue()));
+console.log("===e");    
+    scwin.cmb_sCrtorRelnFlag_OnChanged(cmb_sCrtorRelnFlag);
+console.log("===f");    
+
+    promise = promise.then(function(rtnVal) {
+        Ds_LTIFA03.setCellData(0, "sDpsrName", Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sDpsrName"));
+        Ds_LTIFA03.setCellData(0, "sDpsrCd", Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sDpsrCd"));
+        Ds_LTIFA03.setCellData(0, "sRecvCrtorTelNo", Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sRecvCrtorTelNo"));
+console.log("===>   sAgmDt : "+  nNewIndex + " / " +Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sAgmDt"));   
+        if (Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sAgmDt") == null || Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sAgmDt") == "") {
+            Ds_LTIFA03.setCellData(0, "sAgmDt", crntYMD);
+        } else {
+            Ds_LTIFA03.setCellData(0, "sAgmDt", Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sAgmDt"));
+        }
+        if (Ds_Args.getCellData(Ds_Args.getRowPosition(), "sPrcCat") == "1") {
+            // 처리구분 : 1(청약),2(기타),3(변경) 
+            if (Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sWdrcAgreFlgcd") == null || Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sWdrcAgreFlgcd") == "") {
+                //대면/비대면체크  0 :  대면 , 1 : 비대면
+                if (util.getGdsValue("gFaceSalesYN") == "Y") {
+                    Ds_LTIFA03.setCellData(0, "sWdrcAgreFlgcd", "1");
+                } else {
+                    Ds_LTIFA03.setCellData(0, "sWdrcAgreFlgcd", "4");
+                }
+            } else {
+                Ds_LTIFA03.setCellData(0, "sWdrcAgreFlgcd", Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sWdrcAgreFlgcd"));
+            }
+        } else {
+            //대면/비대면체크  0 :  대면 , 1 : 비대면
+            if (util.getGdsValue("gFaceSalesYN") == "Y") {
+                Ds_LTIFA03.setCellData(0, "sWdrcAgreFlgcd", Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sWdrcAgreFlgcd"));
+                btn_WdrcAgre.setDisabled(false);
+            } else {
+                Ds_LTIFA03.setCellData(0, "sWdrcAgreFlgcd", Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sWdrcAgreFlgcd"));
+            }
+        }
+        edt_sCnfmResult.setValue("");
+
+        // 콤보값 자동셋팅
+        if (nNewIndex == 0) {
+            cmb_BankCd.setSelectedIndex(0); //은행코드
+            cmb_sCrtorRelnFlag.setSelectedIndex(0); //예금주관계
+            cmb_sRecvCrtorRelFlag.setSelectedIndex(0); //입금계약자와의 관계
+            cmb_sAutoTrnfDate.setSelectedIndex(0); //이체일
+            Ds_LTIFA03.setCellData(0, "sDpsrCd", Ds_Args.getCellData(0, "sCrtorCd")); //예금주코드
+            Ds_LTIFA03.setCellData(0, "sDpsrName", Ds_Args.getCellData(0, "sCrtorName")); //예금주명	
+            if (Ds_Args.getCellData(Ds_Args.getRowPosition(), "sPrcCat") == "2") {
+                // 처리구분 : 1(청약),2(기타),3(변경) 
+                scwin.lfn_eableAll();
+            }
+        } else {
+            cmb_BankCd.setValue(Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sBankCd")); //은행코드
+            cmb_sCrtorRelnFlag.setValue(Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sCrtorRelnFlag")); //예금주관계
+            cmb_sAutoTrnfDate.setValue(Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sTrnfAsmtDate")); //이체일
+            cmb_sRecvCrtorRelFlag.setValue(Ds_PrevRgstAcctList_cmb.getCellData(nNewIndex, "sRecvCrtorRelCd")); //입금계약자와의 관계
+            if (Ds_Args.getCellData(Ds_Args.getRowPosition(), "sPrcCat") == "2") {
+                // 처리구분 : 1(청약),2(기타),3(변경) 
+                scwin.lfn_disableAll();
+                btn_DpsrCnfm.setDisabled(false);
+                cmb_sAutoTrnfDate.setDisabled(false);
+                cmb_sRecvCrtorRelFlag.setDisabled(false);
+                cmb_LTIFA03LIST.setDisabled(false);
+            }
+        }
+    });
+    return promise;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : cmb_BankCd_OnChanged
+// 내용        : 이체은행 선택시
+//---------------------------------------------------------------------------
+scwin.cmb_BankCd_OnChanged = function(info) {
+    //Ds_LTIFA03.SetColumn(Ds_LTIFA03.row, "sBankCd", obj.value);
+    isDpsrCnfm = 0; //예금주확인 : -1(불일치) 0(확인전) 1(일치)
+    edt_sCnfmResult.setValue("");
+    cal_sRecpDate.setValue(crntYMD);
+    var getSysDate = gds.gDs_ServerTime.getCellData(0, "sToday"); // 서버시간	
+    var sDate = wconv.mid(getSysDate, 0, 8);
+console.log("[cmb_BankCd_OnChanged ] sDate : "+   sDate+" : ["+Ds_Args.getCellData(0, "sPrcCat") +"]"); 
+    if (sDate >= "20160607") {
+        if ((Ds_Args.getCellData(0, "sPrcCat") == "1" && 
+             Ds_Args.getCellData(0, "sApplCat") == "1" && 
+             cmb_BankCd.getValue() == "005") || 
+             (Ds_Args.getCellData(0, "sPrcCat") == "2" && Ds_Args.getCellData(0, "sApplCat") == "1" && cmb_BankCd.getValue() == "005")) {
+            wprom.alert("구 외환은행과 구 하나은행이 KEB하나은행으로 통합됨에 따라 자동이체 신규 신청시 KEB하나은행으로 신청해야 처리가 가능합니다.");
+            cmb_BankCd.setValue("");
+            return false;
+        }
+        if (sDate >= "20170102") {
+            if ((Ds_Args.getCellData(0, "sPrcCat") == "1" && 
+                 Ds_Args.getCellData(0, "sApplCat") == "1" && 
+                 cmb_BankCd.getValue() == "230") || 
+                 (Ds_Args.getCellData(0, "sPrcCat") == "2" && Ds_Args.getCellData(0, "sApplCat") == "1" && cmb_BankCd.getValue() == "230")) {
+                wprom.alert("구 미래에셋증권과 구 미래에셋대우가 전산통합됨에 따라 자동이체 신규 신청시 미래에셋대우으로 신청해야 처리가 가능합니다.");
+                cmb_BankCd.setValue("");
+                return false;
+            }
+        }
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : cmb_sCrtorRelnFlag_OnChanged
+// 내용        : 예금주 계약자 관계 선택시
+//---------------------------------------------------------------------------
+scwin.cmb_sCrtorRelnFlag_OnChanged = function(info) {
+console.log("this.getValue()        "+cmb_sCrtorRelnFlag.getValue());
+    var promise = Promise.resolve();
+    var sDpsrCd;
+    var sDpsrName;
+    msk_sDpsrCd.setDisabled(true);
+    if (cmb_sCrtorRelnFlag.getValue() == "10") {
+        sDpsrCd = Ds_Args.getCellData(0, "sCrtorCd");
+        sDpsrName = Ds_Args.getCellData(0, "sCrtorName");
+	    
+        //20120423 R20120423000002__보험료 제3자 납입 개발 의뢰 start
+	    Static1.setStyle("visibility", "hidden");
+	    Static1d.setStyle("visibility", "hidden");
+	    cmb_sRecvCrtorRelFlag.setStyle("visibility", "hidden");
+	    Static2.setStyle("visibility", "hidden");
+	    Static2d.setStyle("visibility", "hidden");
+	    edt_sHomeTel.setStyle("visibility", "hidden");
+	    btn_PerAgree.setStyle("visibility", "hidden");
+        
+        btn_IvrInput2.setDisabled(true);
+        showHideFlag = "hide";
+        
+        sRecvCrtorRelCd = "";
+        sRecvCrtorTelNo = "";
+    } else if (cmb_sCrtorRelnFlag.getValue() == "20") {
+        var sPrcCat = Ds_Args.getCellData(0, "sPrcCat"); // 처리구분 : 1(청약),2(기타),3(변경)
+        var nInspCnt = Ds_Args.getCellData(0, "nInspCnt");
+        if (nInspCnt == 1) {
+            sDpsrCd = Ds_Args.getCellData(0, "sInrpsCd");
+            sDpsrName = Ds_Args.getCellData(0, "sInrpsName");
+        } else if (sPrcCat == "1") {
+            promise = promise.then(function(rtnVal) {
+            	var indata = {};
+	            indata.sInqrFlag = sPrcCat;
+	            indata.sInqrValue = Ds_Args.getCellData(0, "sPlanNo");
+	            var popInfo = {
+		       			title : "피보험자조회",
+						width : 448,
+						height : 330,
+	            		"indata":indata
+	            };
+                return wprom.popupOpen("/ui/cbsc/CBSC151P.xml", popInfo);
+            });
+            promise = promise.then(function(result) {
+                if (wconv.length(result) != 0) {
+                    var sInrpsInfo = result.split( "^" );
+                    sDpsrCd = sInrpsInfo[0]; // 피보험자코드
+                    sDpsrName = sInrpsInfo[1]; // 피보험자명
+                }
+            });
+        } else {
+            promise = promise.then(function(rtnVal) {
+	            var indata = {};
+	            indata.sInqrFlag =sPrcCat;
+	            indata.sInqrValue = Ds_Args.getCellData(0, "sCrNo");
+	            var popInfo = {
+		       			title : "피보험자조회",
+						width : 448,
+						height : 330,
+	            		"indata":indata
+	            };
+                return wprom.popupOpen("/ui/cbsc/CBSC151P.xml", popInfo);
+            });
+            promise = promise.then(function(result) {
+
+                if (wconv.length(result) != 0) {
+                    var sInrpsInfo = result.split( "^");
+                    sDpsrCd = sInrpsInfo[0]; // 피보험자코드
+                    sDpsrName = sInrpsInfo[1]; // 피보험자명
+                }
+            });
+        }
+        promise = promise.then(function(rtnVal) {
+            //20120423 R20120423000002__보험료 제3자 납입 개발 의뢰 start
+            Static1.setStyle("visibility", "hidden");
+		    Static1d.setStyle("visibility", "hidden");
+		    cmb_sRecvCrtorRelFlag.setStyle("visibility", "hidden");
+		    Static2.setStyle("visibility", "hidden");
+		    Static2d.setStyle("visibility", "hidden");
+		    edt_sHomeTel.setStyle("visibility", "hidden");
+		    btn_PerAgree.setStyle("visibility", "hidden");
+            
+            btn_IvrInput2.setDisabled(true);
+            showHideFlag = "hide";
+            sRecvCrtorRelCd = "";
+            sRecvCrtorTelNo = "";
+        });
+    } else if (cmb_sCrtorRelnFlag.getValue() == "30") {
+        sDpsrCd = Ds_Args.getCellData(0, "sEndPftbpCd");
+        sDpsrName = Ds_Args.getCellData(0, "sEndPftbpName");
+    } else if (cmb_sCrtorRelnFlag.getValue() == "40") {
+        //sDpsrCd = "";
+        //sDpsrName = "";
+        sDpsrCd = Ds_Args.getCellData(0, "sDpsrCd");
+        sDpsrName = Ds_Args.getCellData(0, "sDpsrName");
+        msk_sDpsrCd.setDisabled(false);
+        edt_sDpsrName.setDisabled(false);
+        //edt_sHomeTel.Enable = true;
+        //20120423 R20120423000002__보험료 제3자 납입 개발 의뢰 start
+       	Static1.setStyle("visibility", "visible");
+	    Static1d.setStyle("visibility", "visible");
+	    cmb_sRecvCrtorRelFlag.setStyle("visibility", "visible");
+	    Static2.setStyle("visibility", "visible");
+	    Static2d.setStyle("visibility", "visible");
+	    edt_sHomeTel.setStyle("visibility", "visible");
+	        
+        showHideFlag = "show";
+console.log("===> scwin.cmb_sCrtorRelnFlag_OnChanged parent.parent.sScanObjtYn : "+parent.parent.sScanObjtYn);
+        //2014.08.25 By SDJ (N1408-00240)
+        if (parent.parent.sScanObjtYn == "Y") {
+            btn_PerAgree.setStyle("visibility", "hidden");
+        }
+        btn_IvrInput2.setDisabled(false);
+    }
+    promise = promise.then(function(rtnVal) {
+        /*if(length(obj.value) == 10){
+    	msk_sDpsrCd.Mask = "###-##-#####";
+    }else if(length(obj.value) == 13){
+    	msk_sDpsrCd.Mask = "######-#######";
+    }*/
+        isDpsrCnfm = 0; //예금주확인 : -1(불일치) 0(확인전) 1(일치)
+        edt_sCnfmResult.setValue("");
+        cal_sRecpDate.setValue(crntYMD);
+        Ds_LTIFA03.setCellData(0, "sDpsrCd", sDpsrCd);
+        Ds_LTIFA03.setCellData(0, "sDpsrName", sDpsrName);
+    });
+    return promise;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_AcctRgst
+// 내용        : 이체계좌 저장
+//---------------------------------------------------------------------------
+scwin.lfn_AcctRgst = function() {
+    wconv.clear(warning);
+
+    //if(lfn_reqChkValue() == false){
+    //	return false;
+    //}
+    ////trace(Ds_LTIFA03.SaveXML());
+    //현재일 셋팅 & 입력 정보 
+    Ds_Args.setCellData(Ds_Args.getRowPosition(), "sUserID", util.getGdsValue("gUserID")); //로그인사원id
+    Ds_Args.setCellData(Ds_Args.getRowPosition(), "sUserIP", util.getGdsValue("gUserIP")); //로그인사원ip
+    Ds_Args.setCellData(Ds_Args.getRowPosition(), "sInptDate", crntYMD); //입력일
+    Ds_Args.setCellData(Ds_Args.getRowPosition(), "sInptHms", crntTime); //입력시간
+    /*
+    SOBJ_Input.WSDL = gds.gWsdlBasis;
+    warning.DataObject = DOBJ_Input.ID;
+    var MethodObj = SOBJ_Input.CreateMethodObj("perform");
+
+    //헤더 작성, 첫 패러미터인 루트노드값은 hashtable로 고정
+    setHeader("hashtable", "com.inswave.longterm.dpt.rec.task.FAF150Task", "rgstTrnfAcct");
+
+    //저장시 벡터로 넘긴다
+    addVectorData("Args", "Args", Ds_Args);
+    addVectorData("LTIFA03", "LTIFA03", Ds_LTIFA03);
+    setTail("hashtable");
+
+    // 서비스 오브젝트 생성 패러미터값 in0는 고정값
+    SOBJ_Input.CreateObj("in0");
+    MethodObj.in0 = insertStr;
+
+    // 서비스 호출
+    var result = gfn_CallService(SOBJ_Input, DOBJ_Input, MethodObj);
+	*/
+	var MethodObj = new callService("com.inswave.longterm.dpt.rec.task.FAF150Task", "rgstTrnfAcct");
+	MethodObj.setId("rgstTrnfAcct");
+	
+       MethodObj.addVectorData("Args", "Args", "Ds_Args");
+       MethodObj.addVectorData("LTIFA03", "LTIFA03", "Ds_LTIFA03");
+
+	MethodObj.setUrl("/contract/CBSC089SController.do");  	// 서버단 호출 URL (수납 확정)    
+	MethodObj.addXPath("//WARNING");	// XPath
+	MethodObj.setHashTable();   	//  전문의 앞이 hashtable로 보낼 때
+	MethodObj.sync();					// 동기 처리[기본(async:비동기)]
+	MethodObj.send(); 					// 최종 전송 		// TEST @@@ ===>
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "warning");
+				
+    ////trace(replace(gfn_XmlEncoder(DOBJ_Input.Value), "><", ">\n<"));
+    // 오류처리
+    if (warning.getRowCount() != 0) {
+        wprom.alert(warning.getCellData(0, "msg"));
+        return;
+    }
+    
+    gfn_LogCreditInfoVt(Ds_LTIFA03, "", "I", "sDpsrCd");
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_reqChkValue
+// 내용        : 저장할 입력값 체크
+//---------------------------------------------------------------------------
+scwin.lfn_reqChkValue = function() {
+    var sCrNo = Ds_Args.getCellData(0, "sCrNo"); // 계약번호 (필수)
+    var sPlanNo = Ds_Args.getCellData(0, "sPlanNo"); // 설계번호 (청약)
+    var sAcctFlag = Ds_Args.getCellData(0, "sAcctFlag"); // 계좌구분 (필수)
+    var nCrChngNo = Ds_Args.getCellData(0, "nCrChngNo"); // 변경번호 (필수, 청약: 1 )
+    var sCrtorCd = Ds_Args.getCellData(0, "sCrtorCd"); // 계약자 코드 (필수)
+    var sCrtorName = Ds_Args.getCellData(0, "sCrtorName"); // 계약자명 (필수)
+    var sDpsrCd = Ds_LTIFA03.getCellData(0, "sDpsrCd"); // 예금주 코드 (옵션)
+    var sDpsrName = Ds_LTIFA03.getCellData(0, "sDpsrName"); // 예금주명  (옵션 : 예금주코드가 입력되면 필수)
+    var sPrcCat = Ds_Args.getCellData(0, "sPrcCat"); // 처리구분 (필수): 1(청약),2(기타),3(변경) 
+    var sApplCat = Ds_Args.getCellData(0, "sApplCat"); // 신청구분 : 1(신규),3(계좌변경),5(해지) 
+    var sBankCd = Ds_LTIFA03.getCellData(0, "sBankCd"); //은행코드
+    var sAcctNo = Ds_LTIFA03.getCellData(0, "sAcctNo"); //계좌번호
+    var sTrnfAsmtDate = Ds_LTIFA03.getCellData(0, "sTrnfAsmtDate"); //이체지정일
+    var sRecvCrtorRelCd = Ds_LTIFA03.getCellData(0, "sRecvCrtorRelCd"); //입금계약자와의 관계
+    if (sPrcCat == "") {
+        wprom.alert("처리구분을 입력하세요.");
+        return false;
+    }
+    if (sApplCat == "") {
+        wprom.alert("신청구분을 입력하세요.");
+        return false;
+    }
+    if (sAcctFlag == "") {
+        wprom.alert("계좌구분을 입력하세요.");
+        return false;
+    }
+    if (nCrChngNo == "") {
+        wprom.alert("변경번호를 입력하세요.");
+        return false;
+    }
+    if (wconv.length(sBankCd) == 0) {
+        wprom.alert("은행을 선택하세요.");
+        cmb_BankCd.focus();
+        return false;
+    } else {
+        var idx = wconv.findRow(DsWs_BankCd, "sCd", sBankCd);
+        util.insertColumn(Ds_LTIFA03, [["sBankName", "sBankName", "text"]]);
+        util.setCompBindRefresh(Ds_LTIFA03.getID());
+        Ds_LTIFA03.setRowPosition(0, false);
+        Ds_LTIFA03.setCellData(0, "sBankName", DsWs_BankCd.getCellData(idx, "sHnglCdName"));
+    }
+    if (wconv.length(sAcctNo) == 0) {
+        wprom.alert("계좌번호를 입력하세요.");
+        edt_sAcctNo.focus();
+        return false;
+    }
+    if (wconv.length(sDpsrName) == 0) {
+        wprom.alert("예금주명을 입력하세요.");
+        edt_sDpsrName.focus();
+        return false;
+    }
+    if (wconv.length(sDpsrCd) == 0) {
+        wprom.alert("예금주주민등록번호가 입력되지 않았습니다.");
+        msk_sDpsrCd.focus();
+        return false;
+    }
+    if (wconv.length(sTrnfAsmtDate) == 0) {
+        wprom.alert("이체일을 선택하세요.");
+        cmb_sAutoTrnfDate.focus();
+        return false;
+    }
+    if (sPrcCat == "1") {
+        if (sPlanNo == "") {
+            wprom.alert("설계번호를 입력하세요.");
+            return false;
+        } else if (wconv.length(wconv.trim(sPlanNo)) != 12) {
+            wprom.alert("설계번호를 잘못 입력하였습니다. 확인해주십시요.");
+            return false;
+        }
+    } else {
+        if (sCrNo == "") {
+            wprom.alert("계약번호를 입력하세요.");
+            return false;
+        } else if (wconv.length(wconv.trim(sCrNo)) != 12) {
+            wprom.alert("계약번호를 잘못 입력하였습니다. 확인해주십시요.");
+            return false;
+        }
+    }
+    if (isDpsrCnfm == 0) {
+        wprom.alert("예금주확인을하세요.");
+        return false;
+    } else if (isDpsrCnfm == -1) {
+        if (gds.gProdYN == "Y") {
+            wprom.alert("예금주가 일치하지 않습니다.");
+            return false;
+        } else {
+            wprom.alert("예금주가 일치하지 않습니다.");
+        }
+    }
+    var row = wconv.findRow(Ds_PrevRgstAcctList_cmb, "sAcctFlag", sAcctFlag);
+    if (sPrcCat == "3" && Ds_LTIFA03.getCellData(0, "sAcctNo") == Ds_PrevRgstAcctList_cmb.getCellData(row, "sAcctNo") && 
+        Ds_LTIFA03.getCellData(0, "sBankCd") == Ds_PrevRgstAcctList_cmb.getCellData(row, "sBankCd")) {
+        //wconv.trace("계좌변경 없음. 출금동의x");
+    } else {
+        if (Ds_LTIFA03.getCellData(0, "sWdrcAgreFlgcd") == "4") {
+            Ds_LTIFA03.setCellData(0, "nCallNo", util.getGdsValue("gCallSerial"));
+            wconv.clear(DsWs_Search);
+            /*
+            SOBJ_Search.WSDL = gds.gWsdlCustomer; // 서비스 Obj WSDC 설정
+            var MethodObj = gfn_CreateMethodObj(SOBJ_Search, "com.inswave.customer.task.CustInfoAgreeTask", "selectWithdrawAgree", 0, 0); // 자동차보험 Task Call 
+            gfn_SetParam(MethodObj, "sApplyNo", Ds_LTIFA03.getCellData(0, "sPlanNo"));
+            gfn_SetParam(MethodObj, "sAcctFlag", Ds_LTIFA03.getCellData(0, "sAcctFlag"));
+            if (Ds_Args.getCellData(Ds_Args.getRowPosition(), "sPrcCat") == "1") {
+                // 처리구분 : 1(청약),2(기타),3(변경) 
+                gfn_SetParam(MethodObj, "nSeq", Ds_LTIFA03.getCellData(0, "nCrChngNo"));
+            } else {
+                gfn_SetParam(MethodObj, "nSeq", Ds_LTIFA03.getCellData(0, "nCrChngNo") + 1);
+            }
+            gfn_SetParam(MethodObj, "sAccountNo", Ds_LTIFA03.getCellData(0, "sAcctNo"));
+            var result = gfn_CallService(SOBJ_Search, DOBJ_Search, MethodObj);
+            */
+			var MethodObj = new callService("com.inswave.customer.task.CustInfoAgreeTask", "selectWithdrawAgree");
+			MethodObj.setId("selectWithdrawAgree");
+
+			MethodObj.setParam("sAgentCode", gUserID);
+
+            MethodObj.setParam("sApplyNo", Ds_LTIFA03.getCellData(0, "sPlanNo"));
+            MethodObj.setParam("sAcctFlag", Ds_LTIFA03.getCellData(0, "sAcctFlag"));
+            if (Ds_Args.getCellData(Ds_Args.getRowPosition(), "sPrcCat") == "1") {
+                // 처리구분 : 1(청약),2(기타),3(변경) 
+                MethodObj.setParam("nSeq", Ds_LTIFA03.getCellData(0, "nCrChngNo"));
+            } else {
+                MethodObj.setParam("nSeq", Ds_LTIFA03.getCellData(0, "nCrChngNo") + 1);
+            }
+            MethodObj.setParam("sAccountNo", Ds_LTIFA03.getCellData(0, "sAcctNo"));
+
+			MethodObj.setUrl("/contract/CBSC089SController.do");
+			MethodObj.setXPath("//*/CUSAA64");
+			MethodObj.addXPath("//WARNING");
+			MethodObj.sync();
+			MethodObj.send();
+			//util.interfaceKey(_tranSync.result.serviceDs);
+			//DsWs_Team.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+			util.jSonDsCreate(_tranSync.getDsJson("CUSAA64"), "DsWs_Search");
+			util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "WARNING");
+			util.setCompBindRefresh("DsWs_Search");
+			util.setRowPosition(DsWs_Search, 0);
+            
+            if (WARNING.getRowCount() != 0) {
+                wprom.alert("출금동의를 처리하세요.");
+                return false;
+            } else {
+                //wconv.trace("result : " + DsWs_Search.getCellData(0, "result"));
+                if (DsWs_Search.getCellData(0, "result") == "0") {
+                    wprom.alert("출금동의를 처리하세요.");
+                    return false;
+                }
+            }
+        }
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : cmb_sAutoTrnfDate_OnChanged
+// 내용        : 이체지정일 선택시
+//---------------------------------------------------------------------------
+scwin.cmb_sAutoTrnfDate_OnChanged = function(info) {
+console.log("===> this.getValue() : "+this.getValue());
+console.log("===> scwin.lfn_getApplDate(this.getValue()) : "+scwin.lfn_getApplDate(this.getValue()));
+    if (this.getValue() != "") {
+        var sPrcCat = Ds_Args.getCellData(0, "sPrcCat"); // 처리구분 : 1(청약),2(기타),3(변경)
+        var crntDD = parseInt(wconv.substr(crntYMD, 6, 2));
+        //if(sPrcCat == "1" && crntDD >= 25 && obj.value == "05"){
+        //if( (sPrcCat == "1" || sPrcCat == "3") && crntDD >= 25 && obj.value == "05"){
+        if (sPrcCat == "1" && crntDD >= 25 && this.getValue() == "05") {
+            wprom.alert("25일 이후 청약건은 05일로 이체일을 선택할 수 없습니다.");
+            this.setValue("");
+            this.focus();
+            return;
+        }
+        Ds_LTIFA03.setCellData(Ds_LTIFA03.getRowPosition(), "sOpnApplDate", scwin.lfn_getApplDate(this.getValue()));
+        Ds_LTIFA03.setCellData(Ds_LTIFA03.getRowPosition(), "sRecpDate", crntYMD);
+    } else {
+        Ds_LTIFA03.setCellData(Ds_LTIFA03.getRowPosition(), "sOpnApplDate", "");
+        Ds_LTIFA03.setCellData(Ds_LTIFA03.getRowPosition(), "sRecpDate", crntYMD);
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_getApplDate
+// 내용        : 이체적용일 구하기
+//---------------------------------------------------------------------------
+scwin.lfn_getApplDate = function(strDD) {
+    //wconv.trace(Ds_Args.getCellData(0, "sPrcCat"));
+    //wconv.trace(Ds_Args.getCellData(0, "sApplCat"));
+    if (isDigit(strDD) == false) {
+        return "";
+    }
+    wconv.clear(warning);
+    wconv.clear(DsWs_sApplDate);
+    /*
+    SOBJ_sApplDate.WSDL = gds.gWsdlBasis;
+    warning.DataObject = DOBJ_sApplDate.ID;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_sApplDate, "com.inswave.longterm.dpt.com.task.FAF000Task", "getApplDate", "", "");
+
+    // 처리구분 : 1(청약),2(기타),3(변경)
+    gfn_SetParam(MethodObj, "sCrNo", Ds_Args.getCellData(0, "sCrNo"));
+    gfn_SetParam(MethodObj, "sPrcCat", Ds_Args.getCellData(0, "sPrcCat"));
+    gfn_SetParam(MethodObj, "sApplCat", Ds_Args.getCellData(0, "sApplCat"));
+    gfn_SetParam(MethodObj, "sAutoTrnfDate", strDD);
+    gfn_SetParam(MethodObj, "nBizDays", 5); //자동이체 변경후 최초 출금예정일이 변경일 + 5일 이상(영업일 기준)
+    gfn_SetParam(MethodObj, "sStndDate", crntYMD);
+    gfn_SetParam(MethodObj, "sPaymCyclCd", DsWs_DptCrData.getCellData(0, "sPaymCyclCd"));
+    gfn_SetParam(MethodObj, "sInsurStrtDate", DsWs_DptCrData.getCellData(0, "sInsurStrtDate"));
+    gfn_SetParam(MethodObj, "sInsurEndDate", DsWs_DptCrData.getCellData(0, "sInsurEndDate"));
+    gfn_SetParam(MethodObj, "nFinalPaymSeq", DsWs_DptCrData.getCellData(0, "nFinalPaymSeq"));
+    var result = gfn_CallService(SOBJ_sApplDate, DOBJ_sApplDate, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.longterm.dpt.com.task.FAF000Task", "getApplDate");
+	MethodObj.setId("getApplDate");
+	
+	//MethodObj.setParam("sAgentCode", gUserID);
+    // 처리구분 : 1(청약),2(기타),3(변경)
+    MethodObj.setParam("sCrNo", Ds_Args.getCellData(0, "sCrNo"));
+    MethodObj.setParam("sPrcCat", Ds_Args.getCellData(0, "sPrcCat"));
+    MethodObj.setParam("sApplCat", Ds_Args.getCellData(0, "sApplCat"));
+    MethodObj.setParam("sAutoTrnfDate", strDD);
+    MethodObj.setParam("nBizDays", 5); //자동이체 변경후 최초 출금예정일이 변경일 + 5일 이상(영업일 기준)
+    MethodObj.setParam("sStndDate", crntYMD);
+    MethodObj.setParam("sPaymCyclCd", DsWs_DptCrData.getCellData(0, "sPaymCyclCd"));
+    MethodObj.setParam("sInsurStrtDate", DsWs_DptCrData.getCellData(0, "sInsurStrtdate"));
+    MethodObj.setParam("sInsurEndDate", DsWs_DptCrData.getCellData(0, "sInsurEndDate"));
+    MethodObj.setParam("nFinalPaymSeq", DsWs_DptCrData.getCellData(0, "nFinalPaymSeq"));
+	
+	MethodObj.setUrl("/contract/CBSC089SController.do");
+	MethodObj.setXPath("//*/DATE");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	
+	util.jSonDsCreate(_tranSync.getDsJson("DATE"), "DsWs_sApplDate");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "warning");
+    
+    var sApplDate = "";
+    if (warning.getRowCount() != 0) {} else {
+        sApplDate = DsWs_sApplDate.getCellData(0, "sApplDate");
+    }
+
+
+    //trace(DsWs_sApplDate.SaveXML());
+    //trace(replace(gfn_XmlEncoder(DOBJ_sApplDate.Value), "><", ">\n<"));
+    return sApplDate;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_crntDate
+// 내용        : 서버날짜 가져오기
+//---------------------------------------------------------------------------
+scwin.lfn_crntDate = function() {
+    // 현재일
+    gfn_getServerTime();
+    sysDate = gds.gDs_ServerTime.getCellData(0, "sToday"); // 서버시간
+    crntYMD = wconv.mid(sysDate, 0, 8);
+    crntTime = wconv.mid(sysDate, 8, 6);
+    return crntYMD;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_isMdfc
+// 내용        : 계좌구분에 해당하는 계좌의 정보 변경여부 확인
+//               계좌정보 변경시 true, 변경내용 없을시 false 반환
+//               (용도: 각업무단의 저장모듈 호출 판단 기준 제공)
+//               - sAcctFlag : 1(보험료계좌), 2(대출이자계좌), 3(환급금계좌)
+//---------------------------------------------------------------------------
+scwin.lfn_isMdfc = function(sAcctFlag) {
+    var row = wconv.findRow(Ds_PrevRgstAcctList_cmb, "sAcctFlag", sAcctFlag);
+    var sBankCdBefor = Ds_PrevRgstAcctList_cmb.getCellData(row, "sBankCd"); //은행코드
+    var sAcctNoBefor = Ds_PrevRgstAcctList_cmb.getCellData(row, "sAcctNo"); //계좌번호
+    var sCrtorRelnFlagBefor = Ds_PrevRgstAcctList_cmb.getCellData(row, "sCrtorRelnFlag"); //예금주관계
+    var sTrnfAsmtDateBefor = Ds_PrevRgstAcctList_cmb.getCellData(row, "sTrnfAsmtDate"); //이체일
+    var sDpsrCdBefor = Ds_PrevRgstAcctList_cmb.getCellData(row, "sDpsrCd"); //예금주코드
+    var sDpsrNameBefor = Ds_PrevRgstAcctList_cmb.getCellData(row, "sDpsrName"); //예금주명
+    var sRecvCrtorRelCdBefor = Ds_PrevRgstAcctList_cmb.getCellData(row, "sRecvCrtorRelCd");
+    var sRecvCrtorTelNoBefor = Ds_PrevRgstAcctList_cmb.getCellData(row, "RecvCrtorTelNo"); //예금주명
+    var sBankCdAfer = Ds_LTIFA03.getCellData(0, "sBankCd"); //은행코드
+    var sAcctNoAfer = Ds_LTIFA03.getCellData(0, "sAcctNo"); //계좌번호
+    var sCrtorRelnFlagAfer = Ds_LTIFA03.getCellData(0, "sCrtorRelnFlag"); //예금주관계
+    var sTrnfAsmtDateAfer = Ds_LTIFA03.getCellData(0, "sTrnfAsmtDate"); //이체일
+    var sDpsrCdAfer = Ds_LTIFA03.getCellData(0, "sDpsrCd"); //예금주코드
+    var sDpsrNameAfer = Ds_LTIFA03.getCellData(0, "sDpsrName"); //예금주명
+    var sRecvCrtorRelCdAfer = Ds_PrevRgstAcctList_cmb.getCellData(row, "sRecvCrtorRelCd");
+    var sRecvCrtorTelNoAfer = Ds_PrevRgstAcctList_cmb.getCellData(row, "RecvCrtorTelNo");
+    if (sBankCdBefor != sBankCdAfer) {
+        return true;
+    }
+    if (sAcctNoBefor != sAcctNoAfer) {
+        return true;
+    } else if (sCrtorRelnFlagBefor != sCrtorRelnFlagAfer) {
+        return true;
+    } else if (sTrnfAsmtDateBefor != sTrnfAsmtDateAfer) {
+        return true;
+    } else if (sDpsrCdBefor != sDpsrCdAfer) {
+        return true;
+    } else if (sDpsrNameBefor != sDpsrNameAfer) {
+        return true;
+    }
+    if (sCrtorRelnFlagBefor == "40") {
+        if (sRecvCrtorRelCdBefor != sRecvCrtorRelCdAfer) {
+            return true;
+        } else if (sRecvCrtorTelNoBefor != sRecvCrtorTelNoAfer) {
+            return true;
+        }
+    }
+    return false;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_getDepoName
+// 내용        : 예금주명을 조회한다.
+//---------------------------------------------------------------------------
+scwin.btn_DpsrCnfm_OnClick = function() {
+    var promise = Promise.resolve();
+
+    if (cmb_BankCd.getValue() == "") {
+        wprom.alert("해당은행을 선택하십시오");
+        cmb_BankCd.focus();
+        return false;
+    }
+    if (edt_sAcctNo.getValue() == "") {
+        wprom.alert("계좌번호를 입력하십시오");
+        edt_sAcctNo.focus();
+        return false;
+    }
+    if (edt_sDpsrName.getValue() == "") {
+        wprom.alert("예금주명을 입력하십시오");
+        edt_sDpsrName.focus();
+        return false;
+    }
+    if (Ds_LTIFA03.getCellData(0, "sDpsrCd") == "") {
+        wprom.alert("예금주 주민번호를 입력하십시오");
+        msk_sDpsrCd.focus();
+        return false;
+    } else if (wconv.length(wconv.trim(Ds_LTIFA03.getCellData(0, "sDpsrCd"))) != 13 && wconv.length(wconv.trim(Ds_LTIFA03.getCellData(0, "sDpsrCd"))) != 10) {
+        wprom.alert("예금주 주민번호를 잘못 입력하였습니다. 확인해주십시요.");
+        msk_sDpsrCd.focus();
+        return false;
+    }
+    
+    var sDoerRegistrationNo = "";
+    var ssDpsrCdChk = "";
+    var ssCrtorCd = "";
+    ssDpsrCdChk = Ds_LTIFA03.getCellData(0, "sDpsrCd"); //제3자의 주민번호
+    sDoerRegistrationNo = DsWs_DptCrData.getCellData(0, "sDoerRegistrationNo"); //취급자의 주민번호
+    ssCrtorCd = DsWs_DptCrData.getCellData(0, "sCrtorCd"); // 계약자의 주민번호
+    if (ssCrtorCd != sDoerRegistrationNo) {
+        if (ssDpsrCdChk == sDoerRegistrationNo) {
+            wprom.alert("예금주의 주민번호와 취급자의 주민번호가 같은 경우 처리 할수없습니다.");
+            return false;
+        }
+    }
+    wconv.clear(Ds_AccDepoName);
+    Ds_AccDepoName.insertRow(0);
+    Ds_AccDepoName.setCellData(0, "sBankCode", cmb_BankCd.getValue());
+    Ds_AccDepoName.setCellData(0, "sAcctNo", Ds_LTIFA03.getCellData(0, "sAcctNo"));
+    Ds_AccDepoName.setCellData(0, "sDepoOwnerID", Ds_LTIFA03.getCellData(0, "sDpsrCd"));
+    Ds_AccDepoName.setCellData(0, "sDepoName", "");
+    Ds_AccDepoName.setCellData(0, "sBankRspCode", "");
+    promise = promise.then(function(rtnVal) {
+    	var indata = {};
+    	var pObj = {"Ds_AccDepoName" : Ds_AccDepoName};
+    	var popInfo = {
+				width : 399,
+				height : 195,
+				title:"예금주성명조회",
+				indata : indata,
+				parentObject : pObj
+    	};
+    	
+        return wprom.popupOpen("/ui/cbso/CBSO018P.xml", popInfo); //확인
+    });
+    promise = promise.then(function(rtnVal) {
+        /*wprom.popupOpen(가이드참조)*/
+        /*************************************************************
+         *계좌확인 후 유효성 체크
+         *************************************************************/
+        if (Ds_AccDepoName.getRowCount() == 0) {
+            //wconv.trace("re");
+            return;
+        }
+        sBankCode = Ds_AccDepoName.getCellData(0, "sBankCode");
+        sAcctNo = Ds_AccDepoName.getCellData(0, "sAcctNo");
+        sDepoOwnerID = Ds_AccDepoName.getCellData(0, "sDepoOwnerID");
+        sDepoName = Ds_AccDepoName.getCellData(0, "sDepoName");
+        sBankRspCode = Ds_AccDepoName.getCellData(0, "sBankRspCode");
+        edt_sCnfmResult.setValue(Ds_AccDepoName.getCellData(0, "sDepoName"));
+
+        /**계좌변경없을경우 출금동의x*/
+        var sPrcCat = Ds_Args.getCellData(0, "sPrcCat");
+        var sAcctFlag = Ds_Args.getCellData(0, "sAcctFlag");
+        var row = wconv.findRow(Ds_PrevRgstAcctList_cmb, "sAcctFlag", sAcctFlag);
+        /*
+    if(sPrcCat != "1") {
+    	 if( Ds_LTIFA03.getCellData(0, "sAcctNo") == Ds_PrevRgstAcctList_cmb.getCellData(row, "sAcctNo")
+    	   && Ds_LTIFA03.getCellData(0, "sBankCd") == Ds_PrevRgstAcctList_cmb.getCellData(row, "sBankCd") ){
+    		trace("계좌변경 없음. 출금동의x");
+    		btn_WdrcAgre.Enable = false;
+    	} else {
+    		btn_WdrcAgre.Enable = true;
+    	}
+    }
+    */
+        //[N1511-00157] 장기보험 계속보험료취소 프로그램 변경
+        if (sBankRspCode == "0000" || Ds_Args.getCellData(0, "sCrNo") == "L21070000331" || Ds_Args.getCellData(0, "sCrNo") == "L21070000501") {
+            if (edt_sDpsrName.getValue() == sDepoName) {
+                isDpsrCnfm = 1;
+            } else {
+                wprom.alert("예금주가 일치하지 않습니다.");
+                isDpsrCnfm = 1;
+            }
+        } else {
+            edt_sCnfmResult.setValue("");
+            //예금주확인 : -1(불일치) 0(확인전) 1(일치)
+            isDpsrCnfm = -1;
+            return;
+        }
+    });
+    return promise;
+};
+
+scwin.edt_sAcctNo_OnChanged = function(info) {
+    isDpsrCnfm = 0; //예금주확인 : -1(불일치) 0(확인전) 1(일치)
+    edt_sCnfmResult.setValue("");
+    cal_sRecpDate.setValue(crntYMD);
+};
+
+scwin.edt_sDpsrName_OnChanged = function(info) {
+    isDpsrCnfm = 0; //예금주확인 : -1(불일치) 0(확인전) 1(일치)
+    edt_sCnfmResult.setValue("");
+};
+
+scwin.msk_sDpsrCd_OnChanged = function(info) {
+    isDpsrCnfm = 0; //예금주확인 : -1(불일치) 0(확인전) 1(일치)
+    edt_sCnfmResult.setValue("");
+};
+
+//---------------------------------------------------------------------------
+// function 명 : msk_sDpsrCd_OnCharChanged
+// 내용        : 부모화면에서 제공된 계약자 및 피보험자 리스트에서 찾기
+//               기타일경우 데이터 변경기 결과 확인란 초기화
+//---------------------------------------------------------------------------
+scwin.msk_sDpsrCd_OnCharChanged = function(info) {
+    var sCrtorCd = Ds_Args.getCellData(0, "sCrtorCd");
+    var sCrtorName = Ds_Args.getCellData(0, "sCrtorName");
+    var sInrpsCd = Ds_Args.getCellData(0, "sInrpsCd");
+    var sInrpsName = Ds_Args.getCellData(0, "sInrpsName");
+
+
+    /*if(length(obj.value) == 10){
+    	msk_sDpsrCd.Mask = "###-##-#####";
+    }else if(length(obj.value) == 13){
+    	msk_sDpsrCd.Mask = "######-#######";
+    }*/
+    if (this.getValue() == sCrtorCd) {
+        Ds_LTIFA03.setCellData(0, "sDpsrCd", sCrtorCd);
+        Ds_LTIFA03.setCellData(0, "sDpsrName", sCrtorName);
+    } else if (this.getValue() == sInrpsCd) {
+        Ds_LTIFA03.setCellData(0, "sDpsrCd", sInrpsCd);
+        Ds_LTIFA03.setCellData(0, "sDpsrName", sInrpsName);
+    } else {
+        if (strPreText != strPostText) {
+            edt_sCnfmResult.setValue("");
+            isDpsrCnfm = -1;
+        }
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : getDptCrData
+// 내용        : 계약기본조회 Event처리
+//---------------------------------------------------------------------------
+scwin.getDptCrData = function() {
+    var sPrcCat = Ds_Args.getCellData(0, "sPrcCat");
+
+    //	if(sPrcCat != "1"){
+    wconv.clear(warning);
+    wconv.clear(Ds_DptCrData);
+    wconv.clear(DsWs_DptCrData);
+/*
+    SOBJ_DptCrData.WSDL = gds.gWsdlBasis;
+    warning.DataObject = DOBJ_DptCrData.ID;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_DptCrData, "com.inswave.longterm.dpt.rec.task.FAF041Task", "getDptCrData", "", "");
+    if (sPrcCat != "1") {
+        gfn_SetParam(MethodObj, "sBizCat", "0");
+        gfn_SetParam(MethodObj, "sCrNo", Ds_Args.getCellData(0, "sCrNo"));
+    } else {
+        gfn_SetParam(MethodObj, "sBizCat", "1");
+        gfn_SetParam(MethodObj, "sPlanNo", Ds_Args.getCellData(0, "sPlanNo"));
+        gfn_SetParam(MethodObj, "sCrNo", Ds_Args.getCellData(0, "sPlanNo"));
+    }
+    gfn_CallService(SOBJ_DptCrData, DOBJ_DptCrData, MethodObj);
+*/
+	var MethodObj = new callService("com.inswave.longterm.dpt.rec.task.FAF041Task", "getDptCrData");
+	MethodObj.setId("getDptCrData");
+	
+    if (sPrcCat != "1") {
+        MethodObj.setParam("sBizCat", "0");
+        MethodObj.setParam("sCrNo", Ds_Args.getCellData(0, "sCrNo"));
+    } else {
+        MethodObj.setParam("sBizCat", "1");
+        MethodObj.setParam("sPlanNo", Ds_Args.getCellData(0, "sPlanNo"));
+        MethodObj.setParam("sCrNo", Ds_Args.getCellData(0, "sPlanNo"));
+    }
+	
+	MethodObj.setUrl("/contract/CBSC089SController.do");
+	MethodObj.setXPath("//*/LTIEA00");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	DsWs_DptCrData.setJSON(_tranSync.getDsJson("LTIEA00"));
+
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), warning.getID());
+    if (warning.getRowCount() != 0) {
+        return;
+    } else {
+        Ds_Args.setCellData(0, "sCrtorCd", DsWs_DptCrData.getCellData(0, "sCrtorCd"));
+        Ds_Args.setCellData(0, "sRealCrtorCd", DsWs_DptCrData.getCellData(0, "sRealCrtorCd"));
+        Ds_Args.setCellData(0, "sCrtorName", DsWs_DptCrData.getCellData(0, "sCrtorName"));
+        Ds_Args.setCellData(0, "sInrpsCd", DsWs_DptCrData.getCellData(0, "sInrpsCd"));
+        Ds_Args.setCellData(0, "sRealInrpsCd", DsWs_DptCrData.getCellData(0, "sRealInrpsCd"));
+        Ds_Args.setCellData(0, "sInrpsName", DsWs_DptCrData.getCellData(0, "sInrpsName"));
+        Ds_Args.setCellData(0, "sEndPftbpCd", DsWs_DptCrData.getCellData(0, "sEndPftbpCd"));
+        Ds_Args.setCellData(0, "sEndPftbpName", DsWs_DptCrData.getCellData(0, "sEndPftbpName"));
+        Ds_Args.setCellData(0, "nInspCnt", DsWs_DptCrData.getCellData(0, "nInspCnt")); //trace(DsWs_DptCrData.savexml());
+    }
+};
+
+//cbs 임시 - 확인필요
+scwin.setOutsAcct = function(dsLTIFA03obj, nSelRow) {
+    // lfn_disableAll();
+    // btn_DpsrCnfm.Enable = true;
+    // cmb_sAutoTrnfDate.Enable = true;
+    wconv.clear(Ds_LTIFA03);
+    util.appendRow(Ds_LTIFA03);
+    if (nSelRow < 0) {
+        cmb_BankCd.setSelectedIndex(0); //은행코드
+        cmb_sCrtorRelnFlag.setSelectedIndex(0); //예금주관계
+        cmb_sAutoTrnfDate.setSelectedIndex(0); //이체일
+        cmb_sRecvCrtorRelFlag.setSelectedIndex(0); //입금계약자와의 관계
+        Ds_LTIFA03.setCellData(0, "sDpsrCd", Ds_Args.getCellData(0, "sCrtorCd")); //예금주코드
+        Ds_LTIFA03.setCellData(0, "sDpsrName", Ds_Args.getCellData(0, "sCrtorName")); //예금주명
+        return;
+    }
+
+
+    //계약번호
+    Ds_LTIFA03.setCellData(0, "sCrNo", Ds_Args.getCellData(0, "sCrNo"));
+    //설계번호
+    Ds_LTIFA03.setCellData(0, "sPlanNo", Ds_Args.getCellData(0, "sPlanNo"));
+    //계좌구분
+    Ds_LTIFA03.setCellData(0, "sAcctFlag", Ds_Args.getCellData(0, "sAcctFlag"));
+    //계약변경번호
+    //Ds_LTIFA03.SetColumn(0, "nCrChngNo"   , Ds_args.getCellData(0, "nCrChngNo"));
+    //신청일자 현재일
+    Ds_LTIFA03.setCellData(0, "sRecpDate", dsLTIFA03obj.getCellData(nSelRow, "sRecpDate"));
+    //계좌종류 : 01: 계좌, 02: 신용카드
+    Ds_LTIFA03.setCellData(0, "sAcctKind", "01");
+    //납부자번호
+    //Ds_LTIFA03.setColumn(0, "sPayrNo"     , "");
+    //은행
+    Ds_LTIFA03.setCellData(0, "sBankCd", dsLTIFA03obj.getCellData(nSelRow, "sBankCd"));
+    //예금주관계
+    Ds_LTIFA03.setCellData(0, "sCrtorRelnFlag", dsLTIFA03obj.getCellData(nSelRow, "sCrtorRelnFlag"));
+    //계좌번호
+    Ds_LTIFA03.setCellData(0, "sAcctNo", dsLTIFA03obj.getCellData(nSelRow, "sAcctNo"));
+    //예금주명
+    Ds_LTIFA03.setCellData(0, "sDpsrName", dsLTIFA03obj.getCellData(nSelRow, "sDpsrName"));
+    //예금주코드
+    Ds_LTIFA03.setCellData(0, "sDpsrCd", dsLTIFA03obj.getCellData(nSelRow, "sDpsrCd"));
+    //이체일
+    Ds_LTIFA03.setCellData(0, "sTrnfAsmtDate", dsLTIFA03obj.getCellData(nSelRow, "sTrnfAsmtDate"));
+    //이체적용일
+    Ds_LTIFA03.setCellData(0, "sOpnApplDate", dsLTIFA03obj.getCellData(nSelRow, "sOpnApplDate"));
+    Ds_LTIFA03.setCellData(0, "sRecvCrtorRelCd", dsLTIFA03obj.getCellData(nSelRow, "sRecvCrtorRelCd")); //입금계약자와의 관계
+    Ds_LTIFA03.setCellData(0, "sRecvCrtorTelNo", dsLTIFA03obj.getCellData(nSelRow, "sRecvCrtorTelNo"));
+    edt_sCnfmResult.setValue("");
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_disableAll
+// 내용        : 모든 component 비활성화
+//---------------------------------------------------------------------------
+scwin.lfn_disableAll = function() {
+    btn_DpsrCnfm.setDisabled(true);
+    cal_sRecpDate.setDisabled(true);
+    cmb_BankCd.setDisabled(true);
+    cmb_LTIFA03LIST.setDisabled(true);
+    cmb_sAutoTrnfDate.setDisabled(true);
+    cmb_sCrtorRelnFlag.setDisabled(true);
+    cmb_sRecvCrtorRelFlag.setDisabled(true);
+    edt_sAcctNo.setDisabled(true);
+    edt_sCnfmResult.setDisabled(true);
+    edt_sDpsrName.setDisabled(true);
+    msk_ApplDate.setDisabled(true);
+    msk_sDpsrCd.setDisabled(true);
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_disableAll
+// 내용        : 모든 component 비활성화
+//---------------------------------------------------------------------------
+scwin.lfn_eableAll = function() {
+    btn_DpsrCnfm.setDisabled(false);
+    cal_sRecpDate.setDisabled(true);
+    cmb_BankCd.setDisabled(false);
+    cmb_LTIFA03LIST.setDisabled(false);
+    cmb_sAutoTrnfDate.setDisabled(false);
+    cmb_sCrtorRelnFlag.setDisabled(false);
+    edt_sAcctNo.setDisabled(false);
+    edt_sCnfmResult.setDisabled(true);
+    edt_sDpsrName.setDisabled(true);
+    msk_ApplDate.setDisabled(true);
+    msk_sDpsrCd.setDisabled(true);
+};
+
+scwin.lfn_simsa = function(obj) {};
+
+//---------------------------------------------------------------------------
+// function 명 : cmb_sRecvCrtorRelFlag_OnChanged
+// 내용        : 입금계약자와의 관계
+//---------------------------------------------------------------------------
+scwin.cmb_sRecvCrtorRelFlag_OnChanged = function(info) {
+    //Ds_LTIFA03.SetColumn(Ds_LTIFA03.row, "sBankCd", obj.value);
+    isDpsrCnfm = 0; //예금주확인 : -1(불일치) 0(확인전) 1(일치)
+    edt_sCnfmResult.setValue(""); //cal_sRecpDate.Value = crntYMD;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_PerAgree_OnClick
+// 내용        : 제3자일경우 개인정보 신용동의
+//---------------------------------------------------------------------------
+scwin.lfn_PerAgree_OnClick = function(e) {
+    var promise = Promise.resolve();
+    var arg;
+    var sDoerRegistrationNo = "";
+    var ssDpsrCdChk = "";
+    var ssCrtorCd = "";
+    ssDpsrCdChk = Ds_LTIFA03.getCellData(0, "sDpsrCd"); //제3자의 주민번호
+    sDoerRegistrationNo = DsWs_DptCrData.getCellData(0, "sDoerRegistrationNo"); //취급자의 주민번호
+    ssCrtorCd = DsWs_DptCrData.getCellData(0, "sCrtorCd"); // 계약자의 주민번호
+    if (ssCrtorCd != sDoerRegistrationNo) {
+        if (ssDpsrCdChk == sDoerRegistrationNo) {
+            wprom.alert("예금주의 주민번호와 취급자의 주민번호가 같은 경우 처리 할수없습니다.");
+            return false;
+        }
+    }
+   
+    if (edt_sDpsrName.getValue() == "") {
+        wprom.alert("예금주명을 입력하십시오");
+        edt_sDpsrName.focus();
+        return false;
+    }
+    if (Ds_LTIFA03.getCellData(0, "sDpsrCd") == "") {
+        wprom.alert("예금주 주민번호를 입력하십시오");
+        msk_sDpsrCd.focus();
+        return false;
+    } else if (wconv.length(wconv.trim(Ds_LTIFA03.getCellData(0, "sDpsrCd"))) != 13 && wconv.length(wconv.trim(Ds_LTIFA03.getCellData(0, "sDpsrCd"))) != 10) {
+        wprom.alert("예금주 주민번호를 잘못 입력하였습니다. 확인해주십시요.");
+        msk_sDpsrCd.focus();
+        return false;
+    }
+    if (wconv.length(cmb_sRecvCrtorRelFlag.getValue()) == 0) {
+        wprom.alert("계약자와의 관계를 선택하세요.");
+        cmb_sRecvCrtorRelFlag.focus();
+        return false;
+    }
+    if (wconv.length(edt_sHomeTel.getValue()) == 0) {
+        wprom.alert("예금주 전화번호를 입력하세요.");
+        edt_sHomeTel.focus();
+        return false;
+    }
+
+    // 유효한 전화번호 체크
+    if (wconv.length(edt_sHomeTel.getValue()) > 0) {
+        if (isValidPhone(edt_sHomeTel.getValue())) {} else {
+            //alert(errStr + " 무효한 번호입니다. \n재입력해 주세요");
+            return false; //alert("무효");
+        }
+    }
+    
+    promise = promise.then(function(rtnVal) {
+	    var indata = {};
+	    indata.sPlanNoOri = DsWs_DptCrData.getCellData(0, "sPlanNoOri");
+	    indata.sDpsrName = Ds_LTIFA03.getCellData(0, "sDpsrName");
+	    indata.sDpsrCd = Ds_LTIFA03.getCellData(0, "sDpsrCd");
+	    indata.sCrtorName = DsWs_DptCrData.getCellData(0, "sCrtorName");
+	    indata.nApplPrem = DsWs_DptCrData.getCellData(0, "nApplPrem");
+	    indata.sGdCdName = DsWs_DptCrData.getCellData(0, "sGdCdName");
+	    indata.sRecvCrtorRelCd = Ds_LTIFA03.getCellData(0, "sRecvCrtorRelCd");
+	    indata.sRecvCrtorTelNo = Ds_LTIFA03.getCellData(0, "sRecvCrtorTelNo");
+	    indata.sCmMetd="05";
+		var popInfo = {
+       			title : "개인(신용)정보처리 동의",
+				width : 685,
+				height : 315,		
+				indata : indata
+		}
+        return wprom.popupOpen("/ui/cbsc/CBSC011P.xml", popInfo);
+    });
+    promise = promise.then(function(result) {
+        if (result == 1) {}
+    });
+    return promise;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : Btn_IVR_OnClick
+// 내용        :  IVR 3자 통화를 위한 버튼 이벤트 발생
+// param 
+// 1: (J : 주민등록번호, C : 카드번호, A : 계좌번호)
+// 2: lfn_IVR_CallBack (콜백 함수명)
+// 3 : ""  (콜백 받는 변수명 1)
+// 4 : nRow (콜백 받는 변수명 2)
+//---------------------------------------------------------------------------
+scwin.Btn_IVR_OnClick = function(e) {
+    ivrOpenPop("A", "", "lfn_IVR_CallBack", "", ""); // IVR 3자 통화 팝업 호출  (J : 주민등록번호, C : 카드번호, A : 계좌번호)
+    // obj는 결과값을 셋팅할 fieldName				
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_IVR_CallBack
+// 내용        :  IVR 콜백함수
+//---------------------------------------------------------------------------
+scwin.lfn_IVR_CallBack = function(id, nRow, val) {
+    if (wconv.length(val) > 0) {
+        edt_sAcctNo.setValue(val);
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : Btn_IVR_OnClick
+// 내용        :  IVR 3자 통화를 위한 버튼 이벤트 발생
+// param 
+// 1: (J : 주민등록번호, C : 카드번호, A : 계좌번호)
+// 2: lfn_IVR_CallBack (콜백 함수명)
+// 3 : ""  (콜백 받는 변수명 1)
+// 4 : nRow (콜백 받는 변수명 2)
+//---------------------------------------------------------------------------
+scwin.Btn_IVR_OnClick2 = function(obj, nRow) {
+    ivrOpenPop("J", "", "lfn_IVR_CallBack2", "", ""); // IVR 3자 통화 팝업 호출  (J : 주민등록번호, C : 카드번호, A : 계좌번호)
+    // obj는 결과값을 셋팅할 fieldName				
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_IVR_CallBack
+// 내용        :  IVR 콜백함수
+//---------------------------------------------------------------------------
+scwin.lfn_IVR_CallBack2 = function(id, nRow, val) {
+    if (wconv.length(val) > 0) {
+        msk_sDpsrCd.setValue(val);
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_SearchCust_OnClick
+// 내용        : 스마트폰앱고객 버튼클릭시 처리
+//---------------------------------------------------------------------------
+scwin.btn_SearchCust_OnClick = function(e) {
+	//alert("추후개발예정(대상아님)");
+	//return;
+	
+    var promise = Promise.resolve();
+    promise = promise.then(function(rtnVal) {
+	    var indata = {"sUserID" : util.getGdsValue("gUserID") };
+		var popInfo = {
+						"width"     : 635,
+						"height"    : 390,  
+						"indata"    : indata,
+						"title"     : "대면채널조회"
+						};
+	    return wprom.popupOpen("/ui/cbso/CBSO009P.xml", popInfo);	
+        //return wprom.promise.popupOpen("PROJECT_PATH_TEMP/com_pop/LongDirectChPop.xml", arg, 800, 550);
+    });
+    promise = promise.then(function(result) {
+        /*wprom.popupOpen(가이드참조)*/
+        args = result.split( "^");
+        if (wconv.length(args) > 2) {
+            msk_sDpsrCd.setValue(wconv.trim(args[2]));
+        }
+    });
+    return promise;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_WdrcAgre_OnClick
+// 내용        : 출금동의버튼
+//---------------------------------------------------------------------------
+scwin.btn_WdrcAgre_OnClick = function(e) {
+    var promise = Promise.resolve();
+    if (cmb_WdrcAgreFlgcd.getValue() == "4") {
+        var sAcctFlag = ""; //1: 보험료계좌, 2:대출이자계좌
+        if (isDpsrCnfm == 0) {
+            wprom.alert("예금주확인을하세요.");
+            return false;
+        }
+        //wconv.trace("sPlanNo : " + Ds_LTIFA03.getCellData(0, "sPlanNo"));
+
+        promise = promise.then(function(rtnVal) {
+        	var indata = {};
+	        indata.sApplyNo = Ds_LTIFA03.getCellData(0, "sPlanNo");
+	        indata.sAcctFlag = Ds_LTIFA03.getCellData(0, "sAcctFlag");
+	        if (Ds_Args.getCellData(Ds_Args.getRowPosition(), "sPrcCat") == "1") {
+	            // 처리구분 : 1(청약),2(기타),3(변경) 
+	            indata.nSeq = Ds_LTIFA03.getCellData(0, "nCrChngNo");
+	        } else {
+	            indata.nSeq = Ds_LTIFA03.getCellData(0, "nCrChngNo") + 1;
+	        }
+	        indata.sCustNo = Ds_LTIFA03.getCellData(0, "sDpsrCd");
+	        indata.sPolicyNo = Ds_LTIFA03.getCellData(0, "sCrNo");
+	        indata.sAccountNo = Ds_LTIFA03.getCellData(0, "sAcctNo");
+	        indata.sAgmMethod = Ds_LTIFA03.getCellData(0, "sWdrcAgreFlgcd");
+	        indata.sAgmDt = Ds_LTIFA03.getCellData(0, "sAgmDt");
+	        indata.sBankNm = cmb_BankCd.getValue();
+	                        	
+        	var popInfo = {
+		       			title : "출금동의Pop",
+						width : 616,
+						height : 170,        	
+        				"indata":indata
+   			};        	
+            return wprom.popupOpen("/ui/cbsc/CBSC143P.xml", popInfo);
+        });
+        promise = promise.then(function(result) {
+            /*wprom.popupOpen(가이드참조)*/
+            //wconv.trace("close : " + result);
+            /*
+                청약번호	sApplyNo
+                계좌구분	sAcctFlag
+                순번	nSeq
+                고객번호	sCustNo
+                계약번호	sPolicyNo
+                계좌번호	sAccountNo
+                동의여부	sAgmYn
+                동의방법	sAgmMethod
+                동의일자	sAgmDt
+                동의시간	sAgmTime
+                동의처리자	sAgmUser
+                동의처리자IP	sAgmUserIp
+                녹취시작일자	sRecStartDate
+                녹취시작시간	sRecStartTime
+                녹취종료일자	sRecEndDate
+                녹취종료시간	sRecEndTime
+                콜번호	nCallSerial
+                동의검증정보	sAgmCheckInfo
+                */
+                
+        });
+    } else {
+    	alert("리포트 개발이 2차로 되어있습니다. 확인하세요.");
+    	return;
+        //var sArg = "";
+        //sArg += " sOdiId='B990_Rep'";
+        //return wprom.popupOpen("PROJECT_PATH_TEMP/dpt_out/CBSC142M.xml", sArg, 850, 680); 
+		var reportInfo  = {}
+		reportInfo.rptName        = "longterm/B990_Rep";
+		reportInfo.dataType       = "json";
+		reportInfo.sInterfaceType = "Y";
+		reportInfo.sJsonData      = {};
+		reportInfo.gUserID        = util.getGdsValue("gUserEmpName");
+ 		
+		wprom.reportOpen(reportInfo);            
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : Ds_LTIFA03_OnColumnChanged
+// 내용        : 
+//---------------------------------------------------------------------------
+scwin.Ds_LTIFA03_OnColumnChanged = function(info) {
+
+    if (info.colID == "sWdrcAgreFlgcd") {
+        if (info.newValue == "4") {
+            btn_WdrcAgre.setDisabled(false);
+            btn_WdrcAgre.setValue("출금동의");
+        } else if (info.newValue == "1" && Ds_Args.getCellData(Ds_Args.getRowPosition(), "sPrcCat") == "1") {
+            btn_WdrcAgre.setDisabled(true);
+            btn_WdrcAgre.setValue("출금동의서");
+        } else {
+            btn_WdrcAgre.setDisabled(false);
+            btn_WdrcAgre.setValue("출금동의서");
+        }
+    }
+};]]></script>
+	</head>
+	<body>
+
+		<!-- group:s -->
+		<!-- group:e -->
+
+		<!-- group:s -->
+
+		<xf:group id="" style="" class="section">
+			<xf:group class="defaultbox" id="" style="">
+				<w2:textbox class="df_tt fl" id="" label="자동이체 계좌정보"
+					style="">
+				</w2:textbox>
+				<w2:anchor class="" disabled=""
+					ev:onclick="scwin.Btn_IVR_OnClick" id="btn_IvrInput" outerDiv=""
+					style="display : none;">
+					<xf:label><![CDATA[저장]]></xf:label>
+				</w2:anchor>
+				<w2:anchor class="" disabled="true"
+					ev:onclick="scwin.btn_SearchCust_OnClick" id="btn_IvrInput2"
+					outerDiv="" style="display : none;">
+					<xf:label><![CDATA[저장]]></xf:label>
+				</w2:anchor>
+			</xf:group>
+			<xf:group id="" style="" class="w2tb tb" tagname="table">
+				<w2:attributes>
+					<w2:summary></w2:summary>
+				</w2:attributes>
+				<xf:group tagname="colgroup">
+					<xf:group style="width:65px;" tagname="col"></xf:group>
+					<xf:group style="width:40px;" tagname="col"></xf:group>
+					<xf:group style="width:80px;" tagname="col"></xf:group>
+					<xf:group style="width:110px;" tagname="col"></xf:group>
+					<xf:group style="width:80px;" tagname="col"></xf:group>
+					<xf:group style="width:105px;" tagname="col"></xf:group>
+					<xf:group style="width:90px;" tagname="col"></xf:group>
+					<xf:group style="width:100px;" tagname="col"></xf:group>
+					<xf:group style="width:80px;" tagname="col"></xf:group>
+					<xf:group style="" tagname="col"></xf:group>
+				</xf:group>
+			<xf:group tagname="tr" style=""><xf:group class="w2tb_th" tagname="th">은행<w2:attributes><w2:scope>row</w2:scope></w2:attributes></xf:group>
+				<xf:group class="w2tb_td" tagname="td"><w2:attributes><w2:colspan>3</w2:colspan><w2:rowspan>1</w2:rowspan></w2:attributes>
+					<w2:attributes>
+						<w2:colspan>2</w2:colspan>
+						<w2:rowspan>1</w2:rowspan>
+					</w2:attributes>
+					<w2:attributes></w2:attributes>
+					<w2:attributes>
+						<w2:scope>row</w2:scope>
+					</w2:attributes>
+					<xf:select1 disabledClass="" renderType="native"
+						appearance="minimal" direction="auto" chooseOption=""
+						displayMode="label" optionOrder="" ev:onviewchange="scwin.cmb_BankCd_OnChanged"
+						id="cmb_BankCd" ref="data:Ds_LTIFA03.sBankCd" style="" allOption="" submenuSize=""
+						disabled="">
+						<xf:choices>
+							<xf:itemset nodeset="data:DsWs_BankCd">
+								<xf:label ref="sHnglCdName"></xf:label>
+								<xf:value ref="sCd"></xf:value>
+							</xf:itemset>
+						</xf:choices>
+					</xf:select1>
+				</xf:group>
+				<xf:group class="w2tb_th" tagname="th">예금주구분<w2:attributes><w2:scope>row</w2:scope></w2:attributes></xf:group>
+				<xf:group class="w2tb_td" tagname="td">
+					<w2:attributes></w2:attributes>
+					<xf:select1 allOption="" appearance="minimal"
+						chooseOption="" direction="auto" disabled="" disabledClass=""
+						displayMode="label" ev:onviewchange="scwin.cmb_sCrtorRelnFlag_OnChanged" id="cmb_sCrtorRelnFlag" optionOrder="" ref="data:Ds_LTIFA03.sCrtorRelnFlag"
+						renderType="native" style="" submenuSize="">
+						<xf:choices></xf:choices>
+					</xf:select1>
+				</xf:group>
+				<xf:group class="w2tb_th" tagname="th">기등록계좌<w2:attributes><w2:scope>row</w2:scope></w2:attributes></xf:group>
+				<xf:group class="w2tb_td" tagname="td">
+					<w2:attributes>
+						<w2:colspan>3</w2:colspan>
+						<w2:rowspan>1</w2:rowspan>
+					</w2:attributes>
+					<w2:attributes>
+						<w2:scope>row</w2:scope>
+					</w2:attributes>
+					<w2:attributes></w2:attributes>
+					<xf:select1 allOption="" appearance="minimal"
+						chooseOption="" direction="auto" disabled="" disabledClass=""
+						displayMode="label"
+						ev:onviewchange="scwin.cmb_LTIFA03LIST_OnChanged"
+						id="cmb_LTIFA03LIST" optionOrder="" ref="" renderType="native"
+						style="" submenuSize="" ev:onchange="">
+						<xf:choices>
+							<xf:itemset
+								nodeset="data:Ds_PrevRgstAcctList_cmb">
+								<xf:label ref="sAcctAlias"></xf:label>
+								<xf:value ref="sAcctAliasSeq"></xf:value>
+							</xf:itemset>
+						</xf:choices>
+					</xf:select1>
+				</xf:group></xf:group><xf:group tagname="tr" style=""><xf:group class="w2tb_th" tagname="th">계좌번호<w2:attributes><w2:scope>row</w2:scope></w2:attributes></xf:group>
+	<xf:group class="w2tb_td" tagname="td"><w2:attributes><w2:colspan>3</w2:colspan><w2:rowspan>1</w2:rowspan></w2:attributes>
+		<w2:attributes>
+			<w2:colspan>2</w2:colspan>
+			<w2:rowspan>1</w2:rowspan>
+		</w2:attributes>
+		<w2:attributes></w2:attributes>
+		<xf:group style="" class="">
+			<xf:input id="edt_sAcctNo" ref="data:Ds_LTIFA03.sAcctNo"
+				style="" disabled=""
+				ev:onviewchange="scwin.edt_sAcctNo_OnChanged" maxlength="16">
+			</xf:input>
+		</xf:group>
+	</xf:group>
+	<xf:group class="w2tb_th" tagname="th">예금주명<w2:attributes><w2:scope>row</w2:scope></w2:attributes></xf:group>
+	<xf:group class="w2tb_td" tagname="td" style="width:100px;">
+		<w2:attributes></w2:attributes>
+		<xf:input disabled="true" id="edt_sDpsrName" ref="data:Ds_LTIFA03.sDpsrName" style="" ev:onviewchange="scwin.edt_sDpsrName_OnChanged"></xf:input>
+	</xf:group>
+	<xf:group class="w2tb_th" tagname="th">예금주&amp;nbsp;<w2:attributes></w2:attributes><w2:anchor class="btn_icon prot" disabled=""
+			ev:onclick="scwin.btn_SearchCust_OnClick" id="btnGroupList" outerDiv="" style="">
+			<xf:label><![CDATA[저장]]></xf:label>
+		</w2:anchor></xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<w2:attributes>
+			<w2:colspan>3</w2:colspan>
+			<w2:rowspan>1</w2:rowspan>
+		</w2:attributes>
+		<w2:attributes>
+			<w2:scope>row</w2:scope>
+		</w2:attributes>
+		<w2:attributes></w2:attributes>
+		<xf:group class=""
+			style="">
+			<xf:input disabled="true" id="msk_sDpsrCd"
+				ref="data:Ds_LTIFA03.sDpsrCd" style="width:110px;"
+				displayFormat="######-#######">
+			</xf:input>
+			<w2:anchor class="btn_nml1 bul" ev:onclick="scwin.btn_DpsrCnfm_OnClick" id="btn_DpsrCnfm" outerDiv="true" style="">
+			<xf:label><![CDATA[예금주확인]]></xf:label>
+		</w2:anchor><xf:input disabled="true" id="edt_sCnfmResult" ref="" style="width:60px"></xf:input>
+		</xf:group>
+		
+		
+	</xf:group></xf:group><xf:group tagname="tr" style=""><xf:group class="w2tb_th" tagname="th">이체일<w2:attributes><w2:scope>row</w2:scope></w2:attributes></xf:group>
+	<xf:group class="w2tb_td" tagname="td"><w2:attributes><w2:colspan>3</w2:colspan><w2:rowspan>1</w2:rowspan></w2:attributes>
+		<w2:attributes>
+			<w2:colspan>2</w2:colspan>
+			<w2:rowspan>1</w2:rowspan>
+		</w2:attributes>
+		<w2:attributes></w2:attributes>
+		<xf:select1 disabledClass="" renderType="native" appearance="minimal" direction="auto" chooseOption="" displayMode="label" optionOrder="" ev:onviewchange="scwin.cmb_sAutoTrnfDate_OnChanged" id="cmb_sAutoTrnfDate" ref="data:Ds_LTIFA03.sTrnfAsmtDate" style="" allOption="" submenuSize="" disabled="">
+			<xf:choices></xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group class="w2tb_th" tagname="th">이체적용일<w2:attributes><w2:scope>row</w2:scope></w2:attributes></xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<w2:attributes></w2:attributes>
+		<xf:input disabled="true" id="msk_ApplDate" ref="data:Ds_LTIFA03.sOpnApplDate" style="" displayFormat="####-##-##"></xf:input>
+	</xf:group>
+	<xf:group class="w2tb_th" tagname="th">신청일자<w2:attributes><w2:scope>row</w2:scope></w2:attributes></xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<w2:attributes>
+			<w2:colspan>3</w2:colspan>
+			<w2:rowspan>1</w2:rowspan>
+		</w2:attributes>
+		<w2:attributes>
+			<w2:scope>row</w2:scope>
+		</w2:attributes>
+		<w2:attributes></w2:attributes>
+		<w2:inputCalendar footerDiv="false" id="cal_sRecpDate"
+			style="position: relative;width: 110px;height: 23px;"
+			renderDiv="true" focusOnDateSelect="false"
+			calendarValueType="yearMonthDate" rightAlign="false"
+			renderType="native" ref="data:Ds_LTIFA03.sRecpDate" readOnly="true">
+		</w2:inputCalendar>
+	</xf:group></xf:group><xf:group tagname="tr" style=""><xf:group class="w2tb_th" tagname="th" id="Static1" style="">계약자와의&amp;nbsp;관계<w2:attributes><w2:scope>row</w2:scope><w2:colspan>2</w2:colspan><w2:rowspan>1</w2:rowspan></w2:attributes><w2:attributes></w2:attributes></xf:group><xf:group class="w2tb_td" tagname="td" id="Static1d">
+		<w2:attributes></w2:attributes>
+		<xf:select1 allOption="" appearance="minimal" chooseOption=""
+			direction="auto" disabled="" disabledClass="" displayMode="label"
+			ev:onviewchange="scwin.cmb_sRecvCrtorRelFlag_OnChanged" id="cmb_sRecvCrtorRelFlag" optionOrder="" ref="data:Ds_LTIFA03.sRecvCrtorRelCd" renderType="native"
+			style="" submenuSize="">
+			<xf:choices></xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group class="w2tb_th" tagname="th" id="Static2">예금주&amp;nbsp;전화번호<w2:attributes></w2:attributes></xf:group>
+	<xf:group class="w2tb_td" tagname="td" id="Static2d">
+		<w2:attributes>
+			<w2:scope>row</w2:scope>
+			<w2:colspan>2</w2:colspan>
+			<w2:rowspan>1</w2:rowspan>
+		</w2:attributes>
+		<w2:attributes></w2:attributes>
+		<xf:group class="input_btn t8" style="">
+			<xf:input id="edt_sHomeTel" style="" ref="data:Ds_LTIFA03.sRecvCrtorTelNo"></xf:input>
+			<w2:anchor class="btn_nml1" ev:onclick="scwin.lfn_PerAgree_OnClick" id="btn_PerAgree"
+				outerDiv="true">
+				<xf:label><![CDATA[개인신용정보동의]]></xf:label>
+			</w2:anchor>
+		</xf:group>
+	</xf:group>
+	<xf:group class="w2tb_th" tagname="th">출금동의일자<w2:attributes><w2:scope>row</w2:scope></w2:attributes></xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<w2:attributes></w2:attributes>
+		<xf:input disabled="" id="msk_AgmDt" ref="data:Ds_LTIFA03.sAgmDt" style="" displayFormat="####-##-##"></xf:input>
+	</xf:group>
+	<xf:group class="w2tb_th" tagname="th">동의방법<w2:attributes><w2:scope>row</w2:scope></w2:attributes></xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<w2:attributes></w2:attributes>
+		<xf:select1 allOption="" appearance="minimal" chooseOption=""
+			direction="auto" disabled="true" disabledClass="" displayMode="label"
+			ev:onviewchange="" id="cmb_WdrcAgreFlgcd" optionOrder=""
+			ref="data:Ds_LTIFA03.sWdrcAgreFlgcd" renderType="native"
+			style="width:55px;" submenuSize="">
+			<xf:choices>
+				<xf:itemset nodeset="data:Ds_WdrcAgreFlgcd">
+					<xf:label ref="name"></xf:label>
+					<xf:value ref="code"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+		<w2:anchor class="btn_nml1 bul" ev:onclick="scwin.btn_WdrcAgre_OnClick" id="btn_WdrcAgre"
+			outerDiv="true" style="">
+			<xf:label><![CDATA[출금동의]]></xf:label>
+		</w2:anchor>
+	</xf:group></xf:group></xf:group>
+		</xf:group>
+		<!-- group:e -->
+
+		<!-- group:s -->
+		<!-- group:e -->
+
+		<!-- group:s -->
+		<!-- group:e -->
+
+	</body>
+</html>

@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    <!-- 
+        ###################################################
+         파일명 : CBSC074P.xml
+         프로그램명 : 연금지급금액예시조회[G210_Pop]
+         설 명 :  연금지급금액예시조회[G210_Pop]
+         작성자 : 이경일
+         작성일 : 2017.09.29
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.09.29        이경일          최초작성
+        ###################################################
+     -->
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="Ds_CrBascMatt" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCrNo" name="sCrNo"/>
+                        <w2:column dataType="text" id="sGdName" name="sGdName"/>
+                        <w2:column dataType="text" id="sGnrzCd" name="sGnrzCd"/>
+                        <w2:column dataType="text" id="sGnrzName" name="sGnrzName"/>
+                        <w2:column dataType="text" id="sCrtorCd" name="sCrtorCd"/>
+                        <w2:column dataType="text" id="sCrtorName" name="sCrtorName"/>
+                        <w2:column dataType="text" id="sInsurStrtDate" name="sInsurStrtDate"/>
+                        <w2:column dataType="text" id="sInsurEndDate" name="sInsurEndDate"/>
+                        <w2:column dataType="text" id="sInsurTermPaymTermName" name="sInsurTermPaymTermName"/>
+                        <w2:column dataType="text" id="sCrStatCd" name="sCrStatCd"/>
+                        <w2:column dataType="text" id="sCrStatName" name="sCrStatName"/>
+                        <w2:column dataType="text" id="sChngStndDate" name="sChngStndDate"/>
+                        <w2:column dataType="text" id="sFinalRecpDate" name="sFinalRecpDate"/>
+                        <w2:column dataType="text" id="sFinalPaymMthy" name="sFinalPaymMthy"/>
+                        <w2:column dataType="number" id="nFinalPaymSeq" name="nFinalPaymSeq"/>
+                        <w2:column dataType="text" id="sAnntPymCyclCd" name="sAnntPymCyclCd"/>
+                        <w2:column dataType="text" id="sAnntPymCyclName" name="sAnntPymCyclName"/>
+                        <w2:column dataType="text" id="sAnntPymTypeCd" name="sAnntPymTypeCd"/>
+                        <w2:column dataType="text" id="sApplDclrRato" name="sApplDclrRato"/>
+                        <w2:column dataType="text" id="sApplDclrRatoName" name="sApplDclrRatoName"/>
+                        <w2:column dataType="number" id="nRealPaymTerm" name="nRealPaymTerm"/>
+                        <w2:column dataType="text" id="sCrAccd" name="sCrAccd"/>
+                        <w2:column dataType="text" id="sPymLmit" name="sPymLmit"/>
+                        <w2:column dataType="text" id="sPymLmitCd" name="sPymLmitCd"/>
+                        <w2:column dataType="text" id="sInrpsCd" name="sInrpsCd"/>
+                        <w2:column dataType="text" id="sInrpsName" name="sInrpsName"/>
+                        <w2:column dataType="text" id="sEndPftbpCd" name="sEndPftbpCd"/>
+                        <w2:column dataType="text" id="sEndPftbpName" name="sEndPftbpName"/>
+                        <w2:column dataType="text" id="sInsTypeNm" name="sInsTypeNm"/>
+                        <w2:column dataType="text" id="sAnntOpnAgeCd" name="sAnntOpnAgeCd"/>
+                        <w2:column dataType="text" id="sAnntPymTermCd" name="sAnntPymTermCd"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_RtnAmtCalc" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sPlanNo" name="sPlanNo"/>
+                        <w2:column dataType="text" id="sPyamtKind" name="sPyamtKind"/>
+                        <w2:column dataType="text" id="nSeqno" name="nSeqno"/>
+                        <w2:column dataType="text" id="sOccrDate" name="sOccrDate"/>
+                        <w2:column dataType="text" id="sCnclRtnrtPassPrd" name="sCnclRtnrtPassPrd"/>
+                        <w2:column dataType="text" id="nPaymPrem" name="nPaymPrem"/>
+                        <w2:column dataType="text" id="nLowGrntRato" name="nLowGrntRato"/>
+                        <w2:column dataType="text" id="nStndRato" name="nStndRato"/>
+                        <w2:column dataType="text" id="nDclrRato" name="nDclrRato"/>
+                        <w2:column dataType="text" id="nLowRtnAmt" name="nLowRtnAmt"/>
+                        <w2:column dataType="text" id="nLowRtnrt" name="nLowRtnrt"/>
+                        <w2:column dataType="text" id="nStndRtnAmt" name="nStndRtnAmt"/>
+                        <w2:column dataType="text" id="nStndRtnrt" name="nStndRtnrt"/>
+                        <w2:column dataType="text" id="nStndRtnAmt20" name="nStndRtnAmt20"/>
+                        <w2:column dataType="text" id="nStndRtnrt20" name="nStndRtnrt20"/>
+                        <w2:column dataType="text" id="nNewCrCost" name="nNewCrCost"/>
+                        <w2:column dataType="text" id="sInptDler" name="sInptDler"/>
+                        <w2:column dataType="text" id="sInptDlerIP" name="sInptDlerIP"/>
+                        <w2:column dataType="text" id="sInptDate" name="sInptDate"/>
+                        <w2:column dataType="text" id="sInptHms" name="sInptHms"/>
+                        <w2:column dataType="text" id="sMdfcDler" name="sMdfcDler"/>
+                        <w2:column dataType="text" id="sMdfcDlerIP" name="sMdfcDlerIP"/>
+                        <w2:column dataType="text" id="sMdfcDate" name="sMdfcDate"/>
+                        <w2:column dataType="text" id="sMdfcHms" name="sMdfcHms"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_CrBascMatt" repeatNode="map" userData2="//*/hashtable/data/LTIDA00"/>
+                <w2:dataList baseNode="list" id="DsWs_RtnAmtCalc" repeatNode="map" userData2="//*/hashtable/data/vector/data/LTIDA30"/>
+                <w2:dataList baseNode="list" id="DsWs_Warning" repeatNode="map" userData2="//*/WARNING"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/>
+		<script src="/cm/js/convertJs/LongTerm_Script.js"/>
+        <script><![CDATA[
+/*■■■■■■■■■■■■■■■■■■■■■스크립트 변환 결과■■■■■■■■■■■■■■■■■■■■■
+※본 주석은 수작업 변환 참고용입니다. ★개발완료 후에는 필히 삭제해주세요.★
+변환시간:  Fri Sep 01 2017 14:10:38 GMT+0900 (대한민국 표준시)
+파일ID:  G210_Pop.xml
+
+아래의 작업을 먼저 해주세요.
+
+
+1. scwin.init() 함수에 아래의 글로벌 데이터리스트를 선언합니다.
+--> 해당 화면에는 추가할 글로벌 변수가 없습니다. 
+
+2. 공통.JS 파일을 include해주세요.
+</xf:model>
+ ***include 위치(하단에 주석처리 되어 있습니다.)***
+<script><![CDATA[
+
+예시)
+</xf:model>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script><![CDATA[
+
+3. 표준에 어긋난 코딩인 경우 ✖ 으로 return 되어 있습니다. 검색으로 ✖이 나온다면 ASIS 소스를 확인해주세요.
+ex) ASIS if(a = 1 and b = 2) {} ------> TOBE if (✖ = 2) {}
+
+4. dialog함수로 팝업을 호출 할 경우에는 실제 파일이 있는 경로로 변경해주세요
+ex) 현재 PROJECT_PATH_TEMP입니다. 
+
+-호출구조-
+
+호출구조는 모든 화면이 아닌 변환대상화면을 기준으로 분석하였습니다.
+선언하지 않은 변수를 사용중이라면 caller 에서 넘겼을 가능성이 높습니다.
+파일 ID는 소스의 form ID로 가정했습니다. 아래의 결과는 따로 확인해주세요.
+G210_Pop.xml에서 호출 (callee ID):  
+G210_Pop.xml을 호출   (caller ID):  D020
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+/****************************************************************************
+ * 프로그램번호   : G210_Pop
+ * 프로그램명     : 연금액상세관리
+ * 파일명         : G210_Pop.xml
+ * 프로그램 내용  : 연금액상세관리
+ * 관련 프로그램  :
+ * 작성자         : 강상구
+ * 작성일         : 2011-04-04
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       :
+ ****************************************************************************/
+
+var sWrkFlag; // 작업구분
+var sScrnId; // 화면ID
+var sCrNo = ""; // 계약번호
+var sPlanNo = ""; // 설계번호
+var nPymSeqno; // 지급일련번호
+var sDmndDate; // 청구일
+var sPymFlag; // 지급구분(1;환급금지급, 2;준비금지급)
+var sPymResnCd; // 지급사유구분코드
+var nMwayWdraRqstAmt;
+var sysDate = "";
+var crntYMD = "";
+var sIssID = "";
+
+//---------------------------------------------------------------------------
+// function 명 : G210_Pop_OnLoadCompleted
+// 내용        : 폼로드할때 처리할 내용
+//---------------------------------------------------------------------------
+scwin.init = function() {
+
+var pro = Promise.resolve();
+
+window.top.util.winTopShowModalChk = "T";
+util.winTopShowModal();
+
+pro = pro.then(function(rv) {
+	return util.winTopShowModalPromise();
+});
+
+pro = pro.then(function(rv) {
+
+	wprom.setPopupInit(825, 577, "연금지급금액");
+	wprom.windowOpenInit(G210_Pop);
+
+	try {
+		var inJson; 
+		var indata = $w.getParameter("param");
+		inJson = JSON.parse(indata);
+		sCrNo    = wconv.trim(inJson.sCrNo);
+		sPlanNo  = wconv.trim(inJson.sPlanNo);
+		sWrkFlag = wconv.trim(inJson.sWrkFlag);
+		sScrnId  = wconv.trim(inJson.sScrnId);
+	} catch(e){}
+
+    if (sPymFlag == null || sPymFlag == "") {
+        sPymFlag = "1";
+    }
+    if (wconv.getParentId == "Div_form") {
+        if (nfn_checkAuthByID("ds_code", util.getGdsValue("gUserID"), "22030") == true) {
+            btn_Temp1.show();
+            btn_Temp2.show();
+        } else {
+            btn_Temp1.hide();
+            btn_Temp2.hide();
+        }
+    } else {
+        if (nfn_checkAuthByID("ds_code", util.getGdsValue("gUserID"), "22030")) {
+            btn_Temp1.show();
+            btn_Temp2.show();
+        } else {
+            btn_Temp1.hide();
+            btn_Temp2.hide();
+        }
+    }
+    if (sCrNo == "") {
+        lbl_CrNo.setValue("설계번호");
+        lbl_CrtorNm.setValue("피보험자");
+    } else {
+        lbl_CrNo.setValue("계약번호");
+        lbl_CrtorNm.setValue("계약자");
+    }
+
+    scwin.lfn_Search();
+    
+});
+
+pro = pro.then(function(rv) {
+	util.winTopHideModal();
+});
+
+return pro;
+
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 해약환급금 상세 사항을 조회한다.
+//---------------------------------------------------------------------------
+//비동기호출 
+scwin.lfn_Search_Async = function() {
+	util.eventAsyncCall(this, scwin.lfn_Search, arguments);
+};
+
+scwin.lfn_Search = function() {
+	var transObj = new callService("com.inswave.longterm.pay.pin.task.GBG210Task", "selectRtnAmtDtal", "", "");
+	transObj.setUrl("/contract/CBSC074PController.do");
+	transObj.setId("selectRtnAmtDtal");
+	transObj.setParam("sWrkFlag", sWrkFlag); // 작업구분
+	transObj.setParam("sCrNo", sCrNo); // 계약번호
+	transObj.setParam("sPlanNo", sPlanNo); // 설계번호
+	transObj.setParam("sScrnId", sScrnId); // 화면ID
+	transObj.setXPath("//*/hashtable/data/LTIDA00");
+	transObj.addXPath("//*/hashtable/data/vector/data/LTIDA30");
+	transObj.addXPath("//*/WARNING");
+	//transObj.callBack("scwin.subCallBackfunction");
+	transObj.sync();
+	transObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+
+	wconv.clear(DsWs_Warning);
+    wconv.clear(Ds_CrBascMatt);
+    wconv.clear(DsWs_CrBascMatt);
+    wconv.clear(Ds_RtnAmtCalc);
+    wconv.clear(DsWs_RtnAmtCalc);
+    
+    util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+	util.setCompBindRefresh("DsWs_Warning");
+	util.setRowPosition(DsWs_Warning, 0);
+
+	//	trace(DsWs_CrBascMatt.SaveXML());
+    //	trace(DsWs_RtnAmtCalc.SaveXML());
+    if (wconv.length(DsWs_Warning.getCellData(0, "msg")) > 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        msk_sCrNo.setValue(sCrNo);
+    } else {
+		util.jSonDsCreate(_tranSync.getDsJson("LTIDA00"), "DsWs_CrBascMatt");
+		util.setCompBindRefresh("DsWs_CrBascMatt");
+		util.setRowPosition(DsWs_CrBascMatt, 0);
+		
+		util.jSonDsCreate(_tranSync.getDsJson("LTIDA30"), "DsWs_RtnAmtCalc");
+		util.setCompBindRefresh("DsWs_RtnAmtCalc");
+		util.setRowPosition(DsWs_RtnAmtCalc, 0);
+		
+		util.jSonDsCreate(_tranSync.getDsJson("LTIDA00"), "Ds_CrBascMatt");
+		util.setCompBindRefresh("Ds_CrBascMatt");
+		util.setRowPosition(Ds_CrBascMatt, 0);
+		
+		util.jSonDsCreate(_tranSync.getDsJson("LTIDA30"), "Ds_RtnAmtCalc");
+		util.setCompBindRefresh("Ds_RtnAmtCalc");
+		util.setRowPosition(Ds_RtnAmtCalc, 0);
+		
+		if (sCrNo == "") {
+            msk_sCrNo.setValue(Ds_CrBascMatt.getCellData(0, "sPlanNo"));
+        } else {
+            msk_sCrNo.setValue(Ds_CrBascMatt.getCellData(0, "sCrNo"));
+        }
+        var sCrtorCd = Ds_CrBascMatt.getCellData(0, "sCrtorCd");
+        if (wconv.length(sCrtorCd) == 10) {
+            // 사업자등록번호
+            edt_sCrtorCd.setValue(sCrtorCd.substr(0, 3) + "-" + sCrtorCd.substr(3, 2) + "-" + sCrtorCd.substr(5));
+        } else {
+            edt_sCrtorCd.setValue(sCrtorCd.substr(0, 6) + "-" + sCrtorCd.substr(6));
+        }
+	}
+	/*
+	if (nMwayWdraRqstAmt != null && nMwayWdraRqstAmt != "") {
+        msk_nMwayWdraRqstAmt.Value = nMwayWdraRqstAmt;
+    }
+    */
+	/*
+    wconv.clear(DsWs_Warning);
+    wconv.clear(Ds_CrBascMatt);
+    wconv.clear(DsWs_CrBascMatt);
+    wconv.clear(Ds_RtnAmtCalc);
+    wconv.clear(DsWs_RtnAmtCalc);
+    SOBJ_DataSearch.WSDL = gds.gWsdlBasis;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_DataSearch, "com.inswave.longterm.pay.pin.task.GBG210Task", "selectRtnAmtDtal", "", "");
+    gfn_SetParam(MethodObj, "sWrkFlag", sWrkFlag); // 작업구분
+    gfn_SetParam(MethodObj, "sCrNo", sCrNo); // 계약번호
+    gfn_SetParam(MethodObj, "sPlanNo", sPlanNo); // 설계번호
+    gfn_SetParam(MethodObj, "sScrnId", sScrnId); // 화면ID
+    gfn_CallService(SOBJ_DataSearch, DOBJ_DataSearch, MethodObj);
+
+    //	trace(DsWs_CrBascMatt.SaveXML());
+    //	trace(DsWs_RtnAmtCalc.SaveXML());
+    if (wconv.Length(DsWs_Warning.getCellData(0, "msg")) > 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        msk_sCrNo.setValue(sCrNo);
+    } else {
+        // 계약기본사항, 환급금산출 내역
+        if (DsWs_CrBascMatt.getRowCount() == 0 || DsWs_CrBascMatt.getRowCount() == 0) {
+            wprom.alert("해당 데이터가 없습니다.");
+        } else {
+            wconv.copy(Ds_CrBascMatt, "DsWs_CrBascMatt");
+            wconv.copy(Ds_RtnAmtCalc, "DsWs_RtnAmtCalc");
+
+            // Ds_CrBascMatt.SetColumn(0, "sAnntOpnAgeCd" , parent.div_Annty.cmb_AnntOpnAgeCd.Text ); // 연금개시나이
+            // Ds_CrBascMatt.SetColumn(0, "sAnntPymTermCd", parent.div_Annty.cmb_AnntPymTermCd.Text); // 연금지급기간
+            // Ds_CrBascMatt.SetColumn(0, "sAnntPymTypeCd", parent.div_Annty.cmb_AnntPymTypeCd.Text); // 연금지급형태
+            // Ds_CrBascMatt.SetColumn(0, "sAnntPymCyclCd", parent.div_Annty.cmb_AnntPymCyclCd.Text); // 연금지급주기
+            // Ds_CrBascMatt.SetColumn(0, "sInsurTermPaymTermName", parent.div_Annty.edt_insuredPaym.Value ); // 보기/납기
+            // Ds_CrBascMatt.SetColumn(0, "sCrtorName", parent.Ds_Pibo.GetColumn(0, "sInrpsName") ); // 피보험자/계약자명
+            // Ds_CrBascMatt.SetColumn(0, "sCrtorCd"  , parent.Ds_Pibo.GetColumn(0, "sInrpsCd") ); // 피보험자/계약자 주민번호
+            if (sCrNo == "") {
+                msk_sCrNo.setValue(Ds_CrBascMatt.getCellData(0, "sPlanNo"));
+            } else {
+                msk_sCrNo.setValue(Ds_CrBascMatt.getCellData(0, "sCrNo"));
+            }
+            var sCrtorCd = Ds_CrBascMatt.getCellData(0, "sCrtorCd");
+            if (wconv.Length(sCrtorCd) == 10) {
+                // 사업자등록번호
+                edt_sCrtorCd.setValue(sCrtorCd.substr(0, 3) + "-" + sCrtorCd.substr(3, 2) + "-" + sCrtorCd.substr(5));
+            } else {
+                edt_sCrtorCd.setValue(sCrtorCd.substr(0, 6) + "-" + sCrtorCd.substr(6));
+            }
+        }
+    }
+    if (nMwayWdraRqstAmt != null && nMwayWdraRqstAmt != "") {
+        msk_nMwayWdraRqstAmt.Value = nMwayWdraRqstAmt;
+    }
+    */
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_Close_OnClick
+// 내용        : 닫기 선택시 Event처리
+//---------------------------------------------------------------------------
+scwin.btn_Close_OnClick = function(obj) {
+    var returnMsg = "";
+    if (Ds_RtnAmtCalc.getTotalCol() > 0) {
+        returnMsg = "1";
+    }
+    wprom.close(returnMsg);
+};
+
+scwin.btn_AnntPymAmt_OnClick_Async = function(obj) {
+	util.eventAsyncCall(this, scwin.btn_AnntPymAmt_OnClick, arguments);
+}
+scwin.btn_AnntPymAmt_OnClick = function(obj) {
+	var transObj = new callService("com.inswave.longterm.com.com.task.AXR710Task", "anntPymExpl", "", "");
+	transObj.setUrl("/contract/CBSC074PController.do");
+	transObj.setId("anntPymExpl");
+	var sAfterPrem = "200000";
+	transObj.setParam("sCrNo", sCrNo); // 계약번호
+	transObj.setParam("sAfterPrem", sAfterPrem); // 실보험료
+	transObj.setXPath("//*/hashtable/data/LTIDA00");
+	transObj.addXPath("//*/hashtable/data/vector/data/LTIDA30");
+	transObj.addXPath("//*/WARNING");
+	//transObj.callBack("scwin.subCallBackfunction");
+	transObj.sync();
+	transObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDA00"), "DsWs_CrBascMatt");
+	util.setCompBindRefresh("DsWs_CrBascMatt");
+	util.setRowPosition(DsWs_CrBascMatt, 0);
+	
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDA30"), "DsWs_RtnAmtCalc");
+	util.setCompBindRefresh("DsWs_RtnAmtCalc");
+	util.setRowPosition(DsWs_RtnAmtCalc, 0);
+	
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDA00"), "Ds_CrBascMatt");
+	util.setCompBindRefresh("Ds_CrBascMatt");
+	util.setRowPosition(Ds_CrBascMatt, 0);
+	
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDA30"), "Ds_RtnAmtCalc");
+	util.setCompBindRefresh("Ds_RtnAmtCalc");
+	util.setRowPosition(Ds_RtnAmtCalc, 0);
+	/*
+    wconv.clear(DsWs_Warning);
+    wconv.clear(Ds_CrBascMatt);
+    wconv.clear(DsWs_CrBascMatt);
+    wconv.clear(Ds_RtnAmtCalc);
+    wconv.clear(DsWs_RtnAmtCalc);
+    SOBJ_DataSearch.WSDL = gds.gWsdlBasis;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_DataSearch, "com.inswave.longterm.com.com.task.AXR710Task", "anntPymExpl", "", "");
+    var sAfterPrem = "200000";
+    gfn_SetParam(MethodObj, "sCrNo", sCrNo); // 계약번호
+    gfn_SetParam(MethodObj, "sAfterPrem", sAfterPrem); // 실보험료
+    gfn_CallService(SOBJ_DataSearch, DOBJ_DataSearch, MethodObj);
+    */
+};
+
+scwin.btn_Temp1_OnClick_Async = function(obj) {
+	util.eventAsyncCall(this, scwin.btn_Temp1_OnClick, arguments);
+}
+scwin.btn_Temp1_OnClick = function(obj) {
+	var transObj = new callService("com.inswave.longterm.pay.pin.task.GBG210Task", "selectRtnAmtDtal", "", "");
+	transObj.setUrl("/contract/CBSC074PController.do");
+	transObj.setId("selectRtnAmtDtal");
+	transObj.setParam("sWrkFlag", sWrkFlag); // 작업구분
+	transObj.setParam("sCrNo", sCrNo); // 계약번호
+	transObj.setParam("sPlanNo", sPlanNo); // 설계번호
+	transObj.setParam("sScrnId", sScrnId); // 화면ID
+	// 2014.07.03 성정태
+	transObj.setParam("sAccuLowtGrntRatoUseYn", "Y"); // 최저보증이율적용여부 (테스트 용으로 "Y" 입력)
+	transObj.setXPath("//*/hashtable/data/LTIDA00");
+	transObj.addXPath("//*/hashtable/data/vector/data/LTIDA30");
+	transObj.addXPath("//*/WARNING");
+	//transObj.callBack("scwin.subCallBackfunction");
+	transObj.sync();
+	transObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	
+	wconv.clear(DsWs_Warning);
+    wconv.clear(Ds_CrBascMatt);
+    wconv.clear(DsWs_CrBascMatt);
+    wconv.clear(Ds_RtnAmtCalc);
+    wconv.clear(DsWs_RtnAmtCalc);
+    
+    util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+	util.setCompBindRefresh("DsWs_Warning");
+	util.setRowPosition(DsWs_Warning, 0);
+	
+	if (wconv.length(DsWs_Warning.getCellData(0, "msg")) > 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        msk_sCrNo.setValue(sCrNo);
+    } else {
+		util.jSonDsCreate(_tranSync.getDsJson("LTIDA00"), "DsWs_CrBascMatt");
+		util.setCompBindRefresh("DsWs_CrBascMatt");
+		util.setRowPosition(DsWs_CrBascMatt, 0);
+		
+		util.jSonDsCreate(_tranSync.getDsJson("LTIDA30"), "DsWs_RtnAmtCalc");
+		util.setCompBindRefresh("DsWs_RtnAmtCalc");
+		util.setRowPosition(DsWs_RtnAmtCalc, 0);
+		
+		util.jSonDsCreate(_tranSync.getDsJson("LTIDA00"), "Ds_CrBascMatt");
+		util.setCompBindRefresh("Ds_CrBascMatt");
+		util.setRowPosition(Ds_CrBascMatt, 0);
+		
+		util.jSonDsCreate(_tranSync.getDsJson("LTIDA30"), "Ds_RtnAmtCalc");
+		util.setCompBindRefresh("Ds_RtnAmtCalc");
+		util.setRowPosition(Ds_RtnAmtCalc, 0);
+		
+		if (sCrNo == "") {
+            msk_sCrNo.setValue(Ds_CrBascMatt.getCellData(0, "sPlanNo"));
+        } else {
+            msk_sCrNo.setValue(Ds_CrBascMatt.getCellData(0, "sCrNo"));
+        }
+        var sCrtorCd = Ds_CrBascMatt.getCellData(0, "sCrtorCd");
+        if (wconv.length(sCrtorCd) == 10) {
+            // 사업자등록번호
+            edt_sCrtorCd.setValue(sCrtorCd.substr(0, 3) + "-" + sCrtorCd.substr(3, 2) + "-" + sCrtorCd.substr(5));
+        } else {
+            edt_sCrtorCd.setValue(sCrtorCd.substr(0, 6) + "-" + sCrtorCd.substr(6));
+        }
+	}
+	/*
+	if (nMwayWdraRqstAmt != null && nMwayWdraRqstAmt != "") {
+        msk_nMwayWdraRqstAmt.Value = nMwayWdraRqstAmt;
+    }
+    */
+	/*
+    wconv.clear(DsWs_Warning);
+    wconv.clear(Ds_CrBascMatt);
+    wconv.clear(DsWs_CrBascMatt);
+    wconv.clear(Ds_RtnAmtCalc);
+    wconv.clear(DsWs_RtnAmtCalc);
+    SOBJ_DataSearch.WSDL = gds.gWsdlBasis;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_DataSearch, "com.inswave.longterm.pay.pin.task.GBG210Task", "selectRtnAmtDtal", "", "");
+    gfn_SetParam(MethodObj, "sWrkFlag", sWrkFlag); // 작업구분
+    gfn_SetParam(MethodObj, "sCrNo", sCrNo); // 계약번호
+    gfn_SetParam(MethodObj, "sPlanNo", sPlanNo); // 설계번호
+    gfn_SetParam(MethodObj, "sScrnId", sScrnId); // 화면ID
+    // 2014.07.03 성정태
+    gfn_SetParam(MethodObj, "sAccuLowtGrntRatoUseYn", "Y"); // 최저보증이율적용여부 (테스트 용으로 "Y" 입력)
+    gfn_CallService(SOBJ_DataSearch, DOBJ_DataSearch, MethodObj);
+
+    //	trace(DsWs_CrBascMatt.SaveXML());
+    //	trace(DsWs_RtnAmtCalc.SaveXML());
+    if (wconv.Length(DsWs_Warning.getCellData(0, "msg")) > 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        msk_sCrNo.setValue(sCrNo);
+    } else {
+        // 계약기본사항, 환급금산출 내역
+        if (DsWs_CrBascMatt.getRowCount() == 0 || DsWs_CrBascMatt.getRowCount() == 0) {
+            wprom.alert("해당 데이터가 없습니다.");
+        } else {
+            wconv.copy(Ds_CrBascMatt, "DsWs_CrBascMatt");
+            wconv.copy(Ds_RtnAmtCalc, "DsWs_RtnAmtCalc");
+
+            // Ds_CrBascMatt.SetColumn(0, "sAnntOpnAgeCd" , parent.div_Annty.cmb_AnntOpnAgeCd.Text ); // 연금개시나이
+            // Ds_CrBascMatt.SetColumn(0, "sAnntPymTermCd", parent.div_Annty.cmb_AnntPymTermCd.Text); // 연금지급기간
+            // Ds_CrBascMatt.SetColumn(0, "sAnntPymTypeCd", parent.div_Annty.cmb_AnntPymTypeCd.Text); // 연금지급형태
+            // Ds_CrBascMatt.SetColumn(0, "sAnntPymCyclCd", parent.div_Annty.cmb_AnntPymCyclCd.Text); // 연금지급주기
+            // Ds_CrBascMatt.SetColumn(0, "sInsurTermPaymTermName", parent.div_Annty.edt_insuredPaym.Value ); // 보기/납기
+            // Ds_CrBascMatt.SetColumn(0, "sCrtorName", parent.Ds_Pibo.GetColumn(0, "sInrpsName") ); // 피보험자/계약자명
+            // Ds_CrBascMatt.SetColumn(0, "sCrtorCd"  , parent.Ds_Pibo.GetColumn(0, "sInrpsCd") ); // 피보험자/계약자 주민번호
+            if (sCrNo == "") {
+                msk_sCrNo.setValue(Ds_CrBascMatt.getCellData(0, "sPlanNo"));
+            } else {
+                msk_sCrNo.setValue(Ds_CrBascMatt.getCellData(0, "sCrNo"));
+            }
+            var sCrtorCd = Ds_CrBascMatt.getCellData(0, "sCrtorCd");
+            if (wconv.Length(sCrtorCd) == 10) {
+                // 사업자등록번호
+                edt_sCrtorCd.setValue(sCrtorCd.substr(0, 3) + "-" + sCrtorCd.substr(3, 2) + "-" + sCrtorCd.substr(5));
+            } else {
+                edt_sCrtorCd.setValue(sCrtorCd.substr(0, 6) + "-" + sCrtorCd.substr(6));
+            }
+        }
+    }
+    if (nMwayWdraRqstAmt != null && nMwayWdraRqstAmt != "") {
+        msk_nMwayWdraRqstAmt.Value = nMwayWdraRqstAmt;
+    }
+    */
+};
+
+scwin.btn_Temp2_OnClick_Async = function(obj) {
+	util.eventAsyncCall(this, scwin.btn_Temp2_OnClick, arguments);
+}
+scwin.btn_Temp2_OnClick = function(obj) {
+    scwin.lfn_Search();
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="G210_Pop"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;/*  height:448px;*/ left:0px; top:0px;/* width:736px;"
+            userData1="연금지급금액예시조회[G210_Pop]" userData2=" OnLoadCompleted:scwin.G210_Pop_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+            </ServiceObjects>
+            <w2:textbox id="Static5" label="연금 지급금액 예시" style="position:absolute; VAlign:Middle;  height:24px; left:0px; top:0px; " tagname="" class="sub_pop_title01">
+</w2:textbox>
+            
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.btn_Close_OnClick" id="btn_close"
+                style="position:absolute; ImageID:btn_Comm_Close;  height:20px;left:738px;top:4px; width:25px;" tabIndex="3" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+            <w2:textbox id="Static27" label="예상연금액조회"
+                style="position:absolute;height:20px;width:197px;left:0px;VAlign:Middle;top:161px;" tagname="" class="sub_pop_title02"/>
+            <xf:switch id="switch_75" style=" ">
+                <xf:case id="Default_76" style=" ">
+                    <w2:gridView autoFit="allColumn"
+                    	autoFitMinWidth="100" class="sty_Grid"
+                    	dataList="DsWs_RtnAmtCalc" focusMode="row"
+                    	id="Grd_AnntList" inputType="text" readOnly="true"
+                    	style="position:absolute; UseDBuff:true;  ScrollCell:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  AutoFitEndLine:Hide;height:337px; left:0px; right:728px;top:182px;width:789px;"
+                    	tabIndex="5">
+                    	<w2:header>
+                    		<w2:row>
+                    			<w2:column dataType="text"
+                    				id="head_id_568" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="0" userData3="0" value="No."
+                    				width="30" />
+                    			<w2:column dataType="text"
+                    				id="head_id_569" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="1" userData3="0" value="연차"
+                    				width="90" />
+                    			<w2:column dataType="text"
+                    				id="head_id_570" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="2" userData3="0" value="지급개시일"
+                    				width="120" />
+                    			<w2:column dataType="text"
+                    				id="head_id_571" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="3" userData3="0" value="1회예상연금지급액"
+                    				width="120" />
+                    			<w2:column dataType="text"
+                    				id="head_id_572" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="4" userData3="0" value="지급횟수(년)"
+                    				width="100" />
+                    			<w2:column dataType="text"
+                    				id="head_id_573" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="5" userData3="0" value="예상연금지급액"
+                    				width="120" />
+                    			<w2:column dataType="text"
+                    				id="head_id_574" inputType="text"
+                    				readOnly="true" style="height:20px;"
+                    				userData1="6" userData3="0" value="예상연금지급누계액"
+                    				width="120" />
+                    		</w2:row>
+                    	</w2:header>
+                    	<w2:gBody>
+                    		<w2:row>
+                    			<w2:column dataType="text" id="nSeqno"
+                    				inputType="text" readOnly="true"
+                    				style="height:20px;" textAlign="center"
+                    				userData1="0" userData3="0" width="14" />
+                    			<w2:column dataType="text" id="nAnnu"
+                    				inputType="text" readOnly="true"
+                    				textAlign="center" userData1="1" userData3="0"
+                    				width="90" style="height:20px;"/>
+                    			<w2:column dataType="text"
+                    				displayFormat="####-##-##" id="sPymOpnDate"
+                    				inputType="text" readOnly="true"
+                    				textAlign="center" userData1="2" userData3="0"
+                    				width="120" style="height:20px;"/>
+                    			<w2:column dataType="number"
+                    				displayFormat="#,###" id="nT1ExptAnntPamAmt"
+                    				inputType="text" readOnly="true"
+                    				textAlign="right" userData1="3" userData3="0"
+                    				width="120" style="height:20px;" value=""/>
+                    			<w2:column dataType="text" id="nPymCt"
+                    				inputType="text" readOnly="true"
+                    				textAlign="center" userData1="4" userData3="0"
+                    				width="100" style="height:20px;"/>
+                    			<w2:column dataType="number"
+                    				displayFormat="#,###" id="nExptAnntPamAmt"
+                    				inputType="text" readOnly="true"
+                    				textAlign="right" userData1="5" userData3="0"
+                    				width="120" style="height:20px;"/>
+                    			<w2:column dataType="number"
+                    				displayFormat="#,###" id="nExptAnntPamAccumAmt"
+                    				inputType="text" readOnly="true"
+                    				textAlign="right" userData1="6" userData3="0"
+                    				width="120" style="height:20px;"/>
+                    		</w2:row>
+                    	</w2:gBody>
+                    </w2:gridView>
+                </xf:case>
+            </xf:switch>
+            <xf:group arcsize="8" class="sty_area_form" id="Shape3"
+                style="position:absolute;height:101px;width:793px;bottom:146px;border-color:user23;left:0px;right:731px;top:55px;" userData3="RoundRect">
+                <xf:group class="form_w_line" id="" style="top:24px;" />
+                <xf:group class="form_w_line" id="" style="top:49px;" />
+                <xf:group class="form_w_line" id="" style="top:74px;" />
+            </xf:group>
+            <w2:textbox id="Static13" label="계약기본정보"
+                style="position:absolute;height:20px;width:277px;left:0px;VAlign:Middle;top:30px;" tagname="" class="sub_pop_title02"/>
+            <w2:textbox class="sty_lb_Basic" id="lbl_CrNo" label="계약번호"
+                style="position:absolute;height:24px;min-width:72px;width:72px;left:0px;VAlign:Middle;top:55px;" tagname=""/>
+            <xf:input class="sty_ipt_form" dataType="text" disabled="true" displayFormat="#-####-#######" id="msk_sCrNo"
+                ref="data:Ds_CrBascMatt.sCrNo"
+                style="position:absolute; border-style:solid;  height:20px;left:93px;top:58px; width:101px;" tabIndex="23"/>
+            <w2:textbox class="sty_lb_Basic" id="Static7" label="상품명"
+                style="position:absolute;height:24px;min-width:72px;width:72px;left:291px;VAlign:Middle;top:55px;" tagname=""/>
+            <xf:input class="sty_ipt_form" disabled="true" id="edt_sGdName" ref="data:Ds_CrBascMatt.sGdName"
+                style="position:absolute; border-style:solid;  height:20px;left:381px;top:58px; width:191px;" tabIndex="22"/>
+            <w2:textbox class="sty_lb_Basic" id="Static0" label="지급형태"
+                style="position:absolute;height:24px;min-width:72px;width:72px;left:580px;VAlign:Middle;top:55px;" tagname=""/>
+            <xf:input class="sty_ipt_form" disabled="true" id="edt_sGnrzName" ref="data:Ds_CrBascMatt.sAnntPymTypeCdNm"
+                style="position:absolute;height:20px;width:112px;border-style:solid;left:671px;top:58px;" tabIndex="24"/>
+            <w2:textbox class="sty_lb_Basic" id="lbl_CrtorNm" label="계약자"
+                style="position:absolute;height:24px;min-width:72px;width:72px;left:0px;VAlign:Middle;top:80px;" tagname=""/>
+            <xf:input class="sty_ipt_form" disabled="true" id="edt_sCrtorName" ref="data:Ds_CrBascMatt.sCrtorName"
+                style="position:absolute;height:20px;width:69px;border-style:solid;left:93px;top:83px;" tabIndex="29"/>
+            <w2:textbox class="sty_lb_Basic" id="Static48" label="보험기간"
+                style="position:absolute;height:24px;min-width:72px;width:72px;left:291px;VAlign:Middle;top:80px;" tagname=""/>
+            <xf:input class="sty_ipt_form" dataType="text" disabled="true" displayFormat="####-##-##" id="msk_sInsurStrtDate"
+                ref="data:Ds_CrBascMatt.sInsurStrtdate"
+                style="position:absolute;height:20px;width:78px;border-style:solid;left:381px;top:83px;" tabIndex="26"/>
+            <w2:textbox id="Static43" label="~"
+                style="position:absolute;height:20px;text-align:right;width:22px;left:467px;VAlign:Middle;top:83px;" tagname=""/>
+            <xf:input class="sty_ipt_form" dataType="text" disabled="true" displayFormat="####-##-##" id="msk_sInsurEndDate"
+                ref="data:Ds_CrBascMatt.sInsurEndDate"
+                style="position:absolute;height:20px;width:78px;border-style:solid;left:495px;top:83px;" tabIndex="27"/>
+            <w2:textbox class="sty_lb_Basic" id="Static6" label="보기/납기"
+                style="position:absolute;height:24px;min-width:72px;width:72px;left:580px;VAlign:Middle;top:80px;" tagname=""/>
+            <xf:input class="sty_ipt_form" disabled="true" id="edt_sPytrEnd" ref="data:Ds_CrBascMatt.sInsurTermPaymTermName"
+                style="position:absolute;height:20px;width:112px;border-style:solid;left:671px;top:83px;" tabIndex="25"/>
+            <w2:textbox class="sty_lb_Basic" id="Static49" label="개시연령"
+                style="position:absolute;height:24px;min-width:72px;width:72px;left:0px;VAlign:Middle;top:105px;" tagname=""/>
+            <xf:input class="sty_ipt_form" disabled="true" id="edt_sAnntOpnAgeCd" ref="data:Ds_CrBascMatt.sAnntOpnAgeCdNm"
+                style="position:absolute;height:20px;width:189px;border-style:solid;left:93px;top:108px;" tabIndex="30"/>
+            <xf:input class="sty_ipt_form" dataType="text" disabled="true" displayFormat="####-##-##" id="msk_sAnntPymStrtDate"
+                ref="data:Ds_CrBascMatt.sAnntPymStrtDate"
+                style="position:absolute;height:20px;width:189px;border-style:solid;left:93px;top:133px;" tabIndex="31"/>
+            <w2:textbox class="sty_lb_Basic" id="Static47" label="지급기간"
+                style="position:absolute;height:24px;min-width:72px;width:72px;left:291px;VAlign:Middle;top:105px;" tagname=""/>
+            <xf:input class="sty_ipt_form" disabled="true" id="edt_sAnntPymTermCd" ref="data:Ds_CrBascMatt.sAnntPymTermCdNm"
+                style="position:absolute;height:20px;width:191px;border-style:solid;left:381px;top:108px;" tabIndex="32"/>
+            <w2:textbox class="sty_lb_Basic" id="Static1" label="납입보험료"
+                style="position:absolute;height:24px;min-width:72px;width:72px;left:580px;VAlign:Middle;top:105px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static51" label="개시일자"
+                style="position:absolute; VAlign:Middle;  height:24px;left:0px;top:130px;width:72px;min-width:72px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static52" label="지급주기"
+                style="position:absolute;height:24px;min-width:72px;width:72px;left:291px;VAlign:Middle;top:130px;" tagname=""/>
+            <xf:input class="sty_ipt_form" disabled="true" id="edt_sAnntPymCyclCd"
+                ref="data:Ds_CrBascMatt.sAnntPymCyclCdNm"
+                style="position:absolute;height:20px;width:192px;border-style:solid;left:381px;top:133px;" tabIndex="33"/>
+            <w2:textbox class="sty_lb_Basic" id="Static53" label="적립보험료"
+                style="position:absolute;height:24px;min-width:72px;width:72px;left:580px;VAlign:Middle;top:130px;" tagname=""/>
+            <xf:input class="sty_ipt_form" disabled="true" id="edt_sInsTypeNm" ref="data:Ds_CrBascMatt.sInsTypeNm"
+                style="position:absolute; border-style:solid;height:20px;left:199px;top:58px;width:82px;" tabIndex="34"/>
+            <xf:input class="sty_ipt_form" disabled="true" id="edt_sCrtorCd" ref="data:Ds_CrBascMatt.sCrtorCd"
+                style="position:absolute;height:20px;width:117px;border-style:solid;left:164px;top:83px;" tabIndex="35"/>
+            <xf:input class="sty_ipt_search" dataType="number" disabled="true" displayFormat="#,###" id="Msk_AcuPrm" placeholder=""
+                ref="data:Ds_CrBascMatt.nAccuPrem"
+                style="position:absolute;height:20px;text-align:right;width:112px;border-style:solid;left:671px;top:133px;" tabIndex="37"/>
+            <xf:input class="sty_ipt_search" dataType="number" disabled="true" displayFormat="#,###" id="msk_nPaymPrem" placeholder=""
+                ref="data:Ds_CrBascMatt.nApplPrem"
+                style="position:absolute;height:20px;text-align:right;width:112px;border-style:solid;left:671px;top:108px;" tabIndex="38"/>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.btn_AnntPymAmt_OnClick_Async" id="btn_AnntPymAmt"
+                style="position:absolute; display:none;  Transparent:TRUE;  ImageID:btn_Input_05;  height:20px;left:514px;top:4px; width:90px;" tabIndex="39" type="anchor">
+                <xf:label><![CDATA[연금지급예시]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.btn_Temp1_OnClick_Async" id="btn_Temp1"
+                style="position:absolute; display:none;  Transparent:TRUE;  ImageID:btn_Input_05;  height:20px;left:611px;top:4px; width:90px;" tabIndex="40" type="anchor">
+                <xf:label><![CDATA[최저보증]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.btn_Temp2_OnClick_Async" id="btn_Temp2"
+                style="position:absolute; display:none;  Transparent:TRUE;  ImageID:btn_Input_05;  height:20px;left:683px;top:4px; width:90px;" tabIndex="41" type="anchor">
+                <xf:label><![CDATA[공시]]></xf:label>
+            </xf:trigger>
+        </xf:group>
+    </body>
+</html>

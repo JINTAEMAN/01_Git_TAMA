@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="Ds_BntpCd" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="Ds_BntpGrid1" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sBntpLargClsfCd" name="sBntpLargClsfCd"/>
+                        <w2:column dataType="text" id="sBntpLargClsfCdName" name="sBntpLargClsfCdName"/>
+                        <w2:column dataType="text" id="sBntpDurnClsfCd" name="sBntpDurnClsfCd"/>
+                        <w2:column dataType="text" id="sBntpDurnClsfCdName" name="sBntpDurnClsfCdName"/>
+                        <w2:column dataType="text" id="sBntpCd" name="sBntpCd"/>
+                        <w2:column dataType="text" id="sBntpCdName" name="sBntpCdName"/>
+                        <w2:column dataType="text" id="nRato" name="nRato"/>
+                        <w2:column dataType="text" id="sBntpExpln1" name="sBntpExpln1"/>
+                        <w2:column dataType="text" id="sBntpExpln2" name="sBntpExpln2"/>
+                        <w2:column dataType="text" id="sUdrtkStndCont1" name="sUdrtkStndCont1"/>
+                        <w2:column dataType="text" id="sUdrtkStndCont2" name="sUdrtkStndCont2"/>
+                        <w2:column dataType="text" id="sBntpEqmtUnit" name="sBntpEqmtUnit"/>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <nRato/>
+                            <sBntpCd/>
+                            <sBntpCdName/>
+                            <sBntpDurnClsfCd/>
+                            <sBntpDurnClsfCdName/>
+                            <sBntpEqmtUnit/>
+                            <sBntpExpln1/>
+                            <sBntpExpln2/>
+                            <sBntpLargClsfCd/>
+                            <sBntpLargClsfCdName/>
+                            <sUdrtkStndCont1/>
+                            <sUdrtkStndCont2/>
+                        </w2:row>
+                        <w2:row>
+                            <nRato/>
+                            <sBntpCd/>
+                            <sBntpCdName/>
+                            <sBntpDurnClsfCd/>
+                            <sBntpDurnClsfCdName/>
+                            <sBntpEqmtUnit/>
+                            <sBntpExpln1/>
+                            <sBntpExpln2/>
+                            <sBntpLargClsfCd/>
+                            <sBntpLargClsfCdName/>
+                            <sUdrtkStndCont1/>
+                            <sUdrtkStndCont2/>
+                        </w2:row>
+                        <w2:row>
+                            <nRato/>
+                            <sBntpCd/>
+                            <sBntpCdName/>
+                            <sBntpDurnClsfCd/>
+                            <sBntpDurnClsfCdName/>
+                            <sBntpEqmtUnit/>
+                            <sBntpExpln1/>
+                            <sBntpExpln2/>
+                            <sBntpLargClsfCd/>
+                            <sBntpLargClsfCdName/>
+                            <sUdrtkStndCont1/>
+                            <sUdrtkStndCont2/>
+                        </w2:row>
+                        <w2:row>
+                            <nRato/>
+                            <sBntpCd/>
+                            <sBntpCdName/>
+                            <sBntpDurnClsfCd/>
+                            <sBntpDurnClsfCdName/>
+                            <sBntpEqmtUnit/>
+                            <sBntpExpln1/>
+                            <sBntpExpln2/>
+                            <sBntpLargClsfCd/>
+                            <sBntpLargClsfCdName/>
+                            <sUdrtkStndCont1/>
+                            <sUdrtkStndCont2/>
+                        </w2:row>
+                        <w2:row>
+                            <nRato/>
+                            <sBntpCd/>
+                            <sBntpCdName/>
+                            <sBntpDurnClsfCd/>
+                            <sBntpDurnClsfCdName/>
+                            <sBntpEqmtUnit/>
+                            <sBntpExpln1/>
+                            <sBntpExpln2/>
+                            <sBntpLargClsfCd/>
+                            <sBntpLargClsfCdName/>
+                            <sUdrtkStndCont1/>
+                            <sUdrtkStndCont2/>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_BntpGrid2" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sBntpLargClsfCd" name="sBntpLargClsfCd"/>
+                        <w2:column dataType="text" id="sBntpLargClsfCdName" name="sBntpLargClsfCdName"/>
+                        <w2:column dataType="text" id="sBntpDurnClsfCd" name="sBntpDurnClsfCd"/>
+                        <w2:column dataType="text" id="sBntpDurnClsfCdName" name="sBntpDurnClsfCdName"/>
+                        <w2:column dataType="text" id="sBntpCd" name="sBntpCd"/>
+                        <w2:column dataType="text" id="sBntpCdName" name="sBntpCdName"/>
+                        <w2:column dataType="text" id="nRato" name="nRato"/>
+                        <w2:column dataType="text" id="sBntpExpln1" name="sBntpExpln1"/>
+                        <w2:column dataType="text" id="sBntpExpln2" name="sBntpExpln2"/>
+                        <w2:column dataType="text" id="sUdrtkStndCont1" name="sUdrtkStndCont1"/>
+                        <w2:column dataType="text" id="sUdrtkStndCont2" name="sUdrtkStndCont2"/>
+                        <w2:column dataType="text" id="sBntpEqmtUnit" name="sBntpEqmtUnit"/>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <nRato/>
+                            <sBntpCd/>
+                            <sBntpCdName/>
+                            <sBntpDurnClsfCd/>
+                            <sBntpDurnClsfCdName/>
+                            <sBntpEqmtUnit/>
+                            <sBntpExpln1/>
+                            <sBntpExpln2/>
+                            <sBntpLargClsfCd/>
+                            <sBntpLargClsfCdName/>
+                            <sUdrtkStndCont1/>
+                            <sUdrtkStndCont2/>
+                        </w2:row>
+                        <w2:row>
+                            <nRato/>
+                            <sBntpCd/>
+                            <sBntpCdName/>
+                            <sBntpDurnClsfCd/>
+                            <sBntpDurnClsfCdName/>
+                            <sBntpEqmtUnit/>
+                            <sBntpExpln1/>
+                            <sBntpExpln2/>
+                            <sBntpLargClsfCd/>
+                            <sBntpLargClsfCdName/>
+                            <sUdrtkStndCont1/>
+                            <sUdrtkStndCont2/>
+                        </w2:row>
+                        <w2:row>
+                            <nRato/>
+                            <sBntpCd/>
+                            <sBntpCdName/>
+                            <sBntpDurnClsfCd/>
+                            <sBntpDurnClsfCdName/>
+                            <sBntpEqmtUnit/>
+                            <sBntpExpln1/>
+                            <sBntpExpln2/>
+                            <sBntpLargClsfCd/>
+                            <sBntpLargClsfCdName/>
+                            <sUdrtkStndCont1/>
+                            <sUdrtkStndCont2/>
+                        </w2:row>
+                        <w2:row>
+                            <nRato/>
+                            <sBntpCd/>
+                            <sBntpCdName/>
+                            <sBntpDurnClsfCd/>
+                            <sBntpDurnClsfCdName/>
+                            <sBntpEqmtUnit/>
+                            <sBntpExpln1/>
+                            <sBntpExpln2/>
+                            <sBntpLargClsfCd/>
+                            <sBntpLargClsfCdName/>
+                            <sUdrtkStndCont1/>
+                            <sUdrtkStndCont2/>
+                        </w2:row>
+                        <w2:row>
+                            <nRato/>
+                            <sBntpCd/>
+                            <sBntpCdName/>
+                            <sBntpDurnClsfCd/>
+                            <sBntpDurnClsfCdName/>
+                            <sBntpEqmtUnit/>
+                            <sBntpExpln1/>
+                            <sBntpExpln2/>
+                            <sBntpLargClsfCd/>
+                            <sBntpLargClsfCdName/>
+                            <sUdrtkStndCont1/>
+                            <sUdrtkStndCont2/>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_BntpResult" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sBntpLargClsfCd" name="sBntpLargClsfCd"/>
+                        <w2:column dataType="text" id="sBntpLargClsfCdName" name="sBntpLargClsfCdName"/>
+                        <w2:column dataType="text" id="sBntpDurnClsfCd" name="sBntpDurnClsfCd"/>
+                        <w2:column dataType="text" id="sBntpDurnClsfCdName" name="sBntpDurnClsfCdName"/>
+                        <w2:column dataType="text" id="sBntpCd" name="sBntpCd"/>
+                        <w2:column dataType="text" id="sBntpCdName" name="sBntpCdName"/>
+                        <w2:column dataType="text" id="nRato" name="nRato"/>
+                        <w2:column dataType="text" id="sBntpExpln1" name="sBntpExpln1"/>
+                        <w2:column dataType="text" id="sBntpExpln2" name="sBntpExpln2"/>
+                        <w2:column dataType="text" id="sUdrtkStndCont1" name="sUdrtkStndCont1"/>
+                        <w2:column dataType="text" id="sUdrtkStndCont2" name="sUdrtkStndCont2"/>
+                        <w2:column dataType="text" id="sBntpEqmtUnit" name="sBntpEqmtUnit"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_Warning" repeatNode="map" userData2="//*/WARNING"/>
+                <w2:dataList baseNode="list" id="DsWs_BntpCd" repeatNode="map" userData2="//*/vector/data/LTIBB01Bntp"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+    <script src="/cm/js/convertJs/Global_Script.js" />
+	<script src="/cm/js/convertJs/comm_Webservice.js" />
+        <script><![CDATA[
+
+//---------------------------------------------------------------------------
+// 전역변수 선언 영역
+//---------------------------------------------------------------------------
+var iArea = "";
+var argArea = "";
+var fv_args;
+// 면적
+//---------------------------------------------------------------------------
+// function 명 : FORM_OnLoadCompleted(obj)
+// 내용        : FORM OnLoad
+//---------------------------------------------------------------------------
+scwin.init = function() {
+	var pro = Promise.resolve();
+		window.top.util.winTopShowModalChk = "T";
+		util.winTopShowModal();
+	pro = pro.then(function(rv) {
+    	return util.winTopShowModalPromise();
+	}); 
+	pro = pro.then(function(rv) {
+     //init 부분 함수 입력하는곳
+	wprom.setPopupInit(600,562, "주택 종류별 m2당 건축단가 예시표");
+		var indata = $w.getParameter("param");//
+	try {
+		fv_args = JSON.parse(indata);
+	} catch(e) {
+	};
+
+    iArea = fv_args.argArea;
+    if (iArea > 0) {
+        medt_area.setValue(iArea);
+    }
+      return ;		// init 함수를 종료하고자 할때 사용
+		// return Promise.reject("오류관련처리"); 
+	});
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});	
+	pro = pro.catch(function(rj) {
+		util.winTopHideModal();
+		//alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+	});	 
+	return pro; 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : MaskEdit0_OnClick(obj)
+// 내용        : 단가클릭
+//---------------------------------------------------------------------------
+scwin.MaskEdit0_OnClick = function(e) {
+    medt_unprc.setValue("");
+    medt_unprc.setValue(this.getValue());
+    //medt_area.Value   = "";
+    medt_insAmt.setValue("");
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_Calc_OnClick(obj)
+// 내용        : 계산 버튼 클릭
+//---------------------------------------------------------------------------
+scwin.btn_Calc_OnClick = function(e) {
+    if (wconv.trim(medt_unprc.getValue()) == "" || medt_unprc.getValue() <= 0) {
+        wprom.alert("\u33A1당 건축단가를 바르게 입력하세요");
+        return false;
+    }
+    if (wconv.trim(medt_area.getValue()) == "" || medt_area.getValue() <= 0) {
+        wprom.alert("면적을 바르게 입력하세요");
+        return false;
+    }
+    var m2 = parseFloat(medt_unprc.getValue()) * parseFloat(medt_area.getValue());
+    m2 = Math.floor(m2);    
+    medt_insAmt.setValue(m2);
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_Close_OnClick(obj)
+// 내용        : 닫기 버튼 클릭
+//---------------------------------------------------------------------------
+scwin.btn_Close_OnClick = function(e) {
+    wprom.close();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_Pop01_OnClick(obj)
+// 내용        : 세부건물가액조회 버튼 클릭
+//---------------------------------------------------------------------------
+scwin.btn_Pop01_OnClick = function(e) {
+    var url = gds.gLtiUrl + "/theK/html/longterm/ssr/LongBuildingAmt.pdf";
+    window.open(url);
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B690_Pop"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;/*  height:536px;*/ left:0px; top:0px;/* width:532px;"
+            userData1="주택 종류별 m2당 건축단가 예시표(추정)(B690_Pop)" userData2=" OnLoadCompleted:scwin.B690_Pop_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+            </ServiceObjects>
+            <xf:group class="sty_area_form" id="Static26"
+                style="position:absolute; VAlign:Middle; height:76px;left:0px;top:22px; width:566px;" tagname="">
+                <xf:group class="form_w_line" id="" style="top:49px;left:0px;" />
+            </xf:group>
+            <xf:group class="sty_area_form" id=""
+                style="position:absolute; VAlign:Middle; height:76px;left:0px;top:132px; width:566px;" tagname="">
+                <xf:group class="form_w_line" id="" style="top:49px;left:0px;" />
+            </xf:group>
+            <xf:group class="sty_area_form" id=""
+                style="position:absolute; VAlign:Middle; height:76px;left:0px;top:242px; width:566px;" tagname="">
+                <xf:group class="form_w_line" id="" style="top:49px;left:0px;" />
+            </xf:group>
+            <xf:group class="sty_area_form" id=""
+                style="position:absolute; VAlign:Middle; height:51px;left:0px;top:383px; width:566px;" tagname="">
+            </xf:group>
+            <w2:textbox class="sty_lb_Basic" id="Static3" label="구분"
+                style="position:absolute; height:24px;left:0px;top:22px; " tagname=""/>
+            <w2:textbox id="Static5" label="아파트" style="position:absolute; VAlign:Middle;  height:20px;left:0px;top:0px; width:197px;" tagname="" class="sub_pop_title01"/>
+            <w2:textbox class="sty_lb_Basic" id="Static1" label="저층아파트"
+                style="position:absolute;height:24px;width:100px;left:101px;top:22px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static4" label="초고층아파트"
+                style="position:absolute;height:24px;width:100px;left:333px;top:22px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static6" label="고층아파트"
+                style="position:absolute;height:24px;width:100px;left:217px;top:22px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static7" label="주상복합아파트"
+                style="position:absolute;height:24px;width:100px;left:449px;top:22px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static8" label="최고가"
+                style="position:absolute; height:24px;left:0px;top:47px; " tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static9" label="최저가"
+                style="position:absolute; height:24px;left:0px;top:72px; " tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static10" label="구분"
+                style="position:absolute; height:24px;left:0px;top:132px; " tagname=""/>
+            <w2:textbox id="Static11" label="단독주택"
+                style="position:absolute; VAlign:Middle;  height:20px;left:0px;top:110px; width:197px;" tagname="" class="sub_pop_title01"/>
+            <w2:textbox class="sty_lb_Basic" id="Static12" label="일반단독주택"
+                style="position:absolute;height:24px;width:100px;left:101px;top:132px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static13" label="조립식판넬주택"
+                style="position:absolute;height:24px;width:100px;left:333px;top:132px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static14" label="고급단독주택"
+                style="position:absolute;height:24px;width:100px;left:217px;top:132px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static15" label="통나무주택"
+                style="position:absolute;height:24px;width:100px;left:449px;top:132px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static16" label="최고가"
+                style="position:absolute; height:24px;left:0px;top:157px; ;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static17" label="최저가"
+                style="position:absolute; height:24px;left:0px;top:182px; ;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static18" label="구분"
+                style="position:absolute; height:24px;left:0px;top:242px; " tagname=""/>
+            <w2:textbox id="Static19" label="연립(다세대)주택"
+                style="position:absolute; VAlign:Middle;  height:20px;left:0px;top:220px; width:197px;" tagname="" class="sub_pop_title01"/>
+            <w2:textbox class="sty_lb_Basic" id="Static20" label="일반연립"
+                style="position:absolute;height:24px;width:100px;left:101px;top:242px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static21" label="다세대"
+                style="position:absolute;height:24px;width:100px;left:333px;top:242px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static22" label="고급연립"
+                style="position:absolute;height:24px;width:100px;left:217px;top:242px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static23" label="다가구"
+                style="position:absolute;height:24px;width:100px;left:449px;top:242px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static24" label="최고가"
+                style="position:absolute; height:24px;left:0px;top:269px; " tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static25" label="최저가"
+                style="position:absolute; height:24px;left:0px;top:296px; " tagname=""/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick" id="MaskEdit0"
+                maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute; text-align:right;  height:20px;left:107px;top:50px; width:98px;" tabIndex="54" initValue="953000" disabled=""/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick" id="MaskEdit1"
+                maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:222px;top:50px;" tabIndex="55" initValue="959000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick" id="MaskEdit2"
+                maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:338px;top:50px;" tabIndex="56" initValue="1128000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick" id="MaskEdit3"
+                maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:454px;top:50px;" tabIndex="57" initValue="1547000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick" id="MaskEdit4"
+                maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:454px;top:75px;" tabIndex="61" initValue="1183000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick" id="MaskEdit5"
+                maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:338px;top:75px;" tabIndex="60" initValue="696000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick" id="MaskEdit6"
+                maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:222px;top:75px;" tabIndex="59" initValue="687000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick" id="MaskEdit7"
+                maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute; text-align:right;  height:20px;left:107px;top:75px; width:98px;" tabIndex="58" initValue="674000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick" id="MaskEdit8"
+                maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:454px;top:160px;" tabIndex="65" initValue="1654000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick" id="MaskEdit9"
+                maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:338px;top:160px;" tabIndex="64" initValue="609000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick"
+                id="MaskEdit10" maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:222px;top:160px;" tabIndex="63" initValue="2022000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick"
+                id="MaskEdit11" maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute; text-align:right;  height:20px;left:106px;top:160px; width:98px;" tabIndex="62" initValue="1246000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick"
+                id="MaskEdit12" maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:454px;top:185px;" tabIndex="69" initValue="1072000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick"
+                id="MaskEdit13" maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:338px;top:185px;" tabIndex="68" initValue="341000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick"
+                id="MaskEdit14" maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:222px;top:185px;" tabIndex="67" initValue="1310000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick"
+                id="MaskEdit15" maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute; text-align:right;  height:20px;left:106px;top:185px; width:98px;" tabIndex="66" initValue="808000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick"
+                id="MaskEdit16" maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:454px;top:270px;" tabIndex="73" initValue="841000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick"
+                id="MaskEdit17" maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:338px;top:270px;" tabIndex="72" initValue="846000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick"
+                id="MaskEdit18" maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:222px;top:270px;" tabIndex="71" initValue="1931000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick"
+                id="MaskEdit19" maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute; text-align:right;  height:20px;left:106px;top:270px; width:98px;" tabIndex="70" initValue="988000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick"
+                id="MaskEdit20" maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:454px;top:295px;" tabIndex="77" initValue="545000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick"
+                id="MaskEdit21" maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:338px;top:295px;" tabIndex="76" initValue="548000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick"
+                id="MaskEdit22" maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute;height:20px;text-align:right;width:98px;left:222px;top:295px;" tabIndex="75" initValue="1476000"/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" ev:onclick="scwin.MaskEdit0_OnClick"
+                id="MaskEdit23" maxlength="10" placeholder="" readOnly="true"
+                style="position:absolute; text-align:right;  height:20px;left:106px;top:295px; width:98px;" tabIndex="74" initValue="640000"/>
+            <w2:textbox id="Static42" label="(단위:원)"
+                style="position:absolute; VAlign:Middle;  height:20px;left:515px;top:2px; width:51px;" tagname=""/>
+            <w2:textbox id="Static43" label="(단위:원)"
+                style="position:absolute; VAlign:Middle;  height:20px;left:515px;top:112px; width:51px;" tagname=""/>
+            <w2:textbox id="Static44" label="(단위:원)"
+                style="position:absolute; VAlign:Middle;  height:20px;left:516px;top:221px; width:51px;" tagname=""/>
+            <w2:textbox id="Static45" label="☞ 건물가입금액 추정금액 계산" style="position:absolute;height:18px;width:200px;left:0px;top:342px;" tagname=""/>
+            <w2:textbox id="Static46" label="※ 상기 표의 건물별 건축단가를 참고하여 적정한 금액를 입력하십시오"
+                style="position:absolute;height:16px;width:500px;left:0px;top:363px;" tagname=""/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###,###" id="medt_unprc" maxlength="10"
+                style="position:absolute; text-align:right;  height:20px;left:123px;top:386px; width:115px;" tabIndex="85"/>
+            <w2:textbox class="sty_lb_Basic" id="Static47" label="㎡당 건축단가"
+                style="position:absolute; height:24px;left:0px;top:383px; width:100px;" tagname=""/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###,###" id="medt_area" maxlength="10"
+                style="position:absolute; text-align:right;  height:20px;left:397px;top:386px; width:98px;" tabIndex="88"/>
+            <w2:textbox class="sty_lb_Basic" id="Static48" label="면적"
+                style="position:absolute; height:24px;left:259px;top:383px; width:116px;" tagname=""/>
+            <w2:textbox id="Static49" label="㎡" style="position:absolute; VAlign:Middle;  height:20px;left:499px;top:388px; width:12px;" tagname=""/>
+            <xf:input class="sty_ipt_form" dataType="number" displayFormat="#,###,###" id="medt_insAmt" maxlength="10"
+                style="position:absolute; text-align:right;  height:20px;left:397px;top:411px; width:98px;" tabIndex="92" minByteLength=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static50" label="추정건물가입금액"
+                style="position:absolute; height:24px;left:259px;top:408px; width:116px;" tagname=""/>
+            <w2:textbox id="Static51" label="원" style="position:absolute; VAlign:Middle;  height:20px;left:499px;top:413px; width:12px;" tagname=""/>
+            <xf:trigger class="btn_Calculate" ev:onclick="scwin.btn_Calc_OnClick" id="btn_Calc"
+                style="position:absolute; Transparent:TRUE;  ImageID:btn_Calculate;left:519px;top:386px;" tabIndex="94" type="anchor"/>
+            <w2:textbox id="Static0" label="※ 본 건물추정가입금액은 2012년 건물신축단가표(한국감정원)를 바탕으로 작성되었으며 "
+                style="position:absolute;height:16px;width:500px;left:0px;top:440px;" tagname=""/>
+            <w2:textbox id="Static2" label="    실제 건물가액과는 차이가 있을 수 있으니 참고용으로 활용하시기 바랍니다. "
+                style="position:absolute;height:16px;width:500px;left:0px;top:456px;" tagname=""/>
+            <w2:textbox id="Static52" label="×" style="position:absolute; VAlign:Middle;  height:20px;left:246px;top:387px; width:13px;" tagname=""/>
+            <w2:textbox id="Static53" label="=" style="position:absolute; VAlign:Middle;  height:20px;left:247px;top:412px; width:13px;" tagname=""/>
+            <xf:trigger class="detail_bu02" ev:onclick="scwin.btn_Close_OnClick" id="btn_Close"
+                style="position:absolute; ImageID:btn_Comm_Close;  height:20px;left:517px;top:482px; width:25px;" tabIndex="99" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="detail_bu02" ev:onclick="scwin.btn_Pop01_OnClick" id="btn_Pop01"
+                style="position:absolute; Transparent:TRUE;  ImageID:btn_Input_08;  height:20px;left:394px;top:482px; width:100px;" tabIndex="100" type="anchor">
+                <xf:label><![CDATA[세부건물가액조회]]></xf:label>
+            </xf:trigger>
+        </xf:group>
+    </body>
+</html>

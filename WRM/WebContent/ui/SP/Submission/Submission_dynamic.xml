@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataMap baseNode="map" id="dma_fileDesc">
+					<w2:keyInfo>
+						<w2:key id="desc" name="파일 설명" dataType="text"></w2:key>
+						<w2:key id="test" name="파일 테스트 방법" dataType="text"></w2:key>
+					</w2:keyInfo>
+					<w2:data use="true">
+						<desc><![CDATA[
+<pre class="textNor" style="">
+<div class="etcbox">동적 submission을 사용하는 화면이다.
+공통 개발자가 개발자가 공통 요소 관리를 위한 용도로 사용한다.
+</div>
+<div class="etc_tit">동적 submission 생성 </div>
+  - 아래와 같은 공통함수를 통하여 동적으로 submission을 생성할 수 있다.
+  예) var searchCodeGrpOption = { id : "sbm_SelectTempDynamic",
+							  action : "/sample/tempSelect",
+								 ref : "data:json,dma_search",
+							  target : 'data:json,{"id":"dlt_temp","key":"dlt_temp"}',
+				   submitDoneHandler : scwin.sbm_SelectTemp_submitdone, isShowMeg : false };
+	  com.executeSubmission_dynamic(searchCodeGrpOption);
+</pre>
+						]]></desc>
+						<test><![CDATA[
+<pre class="textNor">
+<div class="etc_tit">1. 과정</div>
+- 아래와 같이 동적으로 생성한 submission을 실행한다.
+  com.executeSubmission_dynamic(searchCodeGrpOption);
+</div>
+<div class="etc_tit">2. 결과</div>
+- 동적 submission을 통해 실행된 결과가 gridView에 표현된다.
+</pre>
+						]]></test>
+					</w2:data>
+				</w2:dataMap>
+				<w2:dataMap id="dma_search">
+					<w2:keyInfo>
+						<w2:key id="CUST_NM" name="CUST_NM" dataType="text"></w2:key>
+						<w2:key id="SHIP_TO_SIDO" name="시도" dataType="text"></w2:key>
+						<w2:key id="SHIP_TO_SIGUNGU" name="SHIP_TO_SIGUNGU" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList id="dlt_temp" baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="DEL" name="삭제" dataType="text"></w2:column>
+						<w2:column id="id" name="id" dataType="text"></w2:column>
+						<w2:column id="SEQ" name="SEQ" dataType="text"></w2:column>
+						<w2:column id="CUST_NM" name="CUST_NM" dataType="text"></w2:column>
+						<w2:column id="SHIP_TO_SIDO" name="SHIP_TO_SIDO" dataType="text"></w2:column>
+						<w2:column id="SHIP_TO_SIGUNGU" name="SHIP_TO_SIGUNGU" dataType="text"></w2:column>
+						<w2:column id="SHIP_TO_STREET" name="SHIP_TO_STREET" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[ 
+	//화면 초기 로딩 시 호출 - config.xml 설정에 화면 로딩 후 자동 호출된다.
+	scwin.onpageload = function() {
+		com.setEnterKeyEvent(grp_search, scwin.btn_search_onclick);
+	};
+	
+	scwin.onpageunload = function() {
+	
+	};
+	
+	scwin.btn_search_onclick = function() {
+		if (com.validateGroup(grp_search) === false) {
+			return;
+		} else {
+			var searchCodeGrpOption = { id : "sbm_SelectTempDynamic", 
+										action : "/sample/tempSelect", ref : "data:json,dma_search",
+										target : 'data:json,{"id":"dlt_temp","key":"dlt_temp"}', 
+										submitDoneHandler : scwin.sbm_SelectTemp_submitdone, isShowMeg : false };
+			com.executeSubmission_dynamic(searchCodeGrpOption);
+		}
+	};
+	
+	scwin.sbm_SelectTemp_submitdone = function(e) {
+		if (com.getResultCode(e) == "S") {
+			com.alert("Submission 호출에 성공했습니다.")
+		}
+	};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="contentWrap" id="" style="">
+			<w2:wframe id="" style="" src="/cm/common/wf_titleFav.xml"></w2:wframe>
+			<w2:wframe id="" style="" initScript="" src="/cm/common/wf_titleDesc.xml"></w2:wframe>
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="" class="tbl_search">
+					<xf:group id="grp_search" style="" adaptive="layout" class="w2tb tbl_sc" adaptiveThreshold="768" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:80px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+							<xf:group style="width:100px;" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="" class="w2tb_th" tagname="th">시도</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="" ref="data:dma_search.SHIP_TO_SIDO" style="width:50%;" class="" mandatory="true" placeholder="충청북도" refSync="true"></xf:input>
+							</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:group id="" class="fr"></xf:group>
+								<w2:anchor id="btn_search" style="" clickEventElement="outerDiv" ev:onclick="scwin.btn_search_onclick" class="btn_sh" outerDiv="true">
+									<xf:label><![CDATA[조회]]></xf:label>
+								</w2:anchor>
+							</xf:group>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group id="" style="" class="section">
+				<w2:gridView autoFit="allColumn" adaptive="crosstab" visibleRowNum="" autoFitMinWidth="800" class="cm_grid" rowNumVisible="true" fixedColumnWithHidden="true" dataList="dlt_temp"
+					id="grd_customer" style="height:300px;" scrollByColumn="false" useShiftKey="true" adaptiveThreshold="1024" rowStatusVisible="true" keyMoveEditMode="true" editModeEvent="onclick" readOnly="a">
+					<w2:header id="header1" style="">
+						<w2:row id="row1" style="">
+							<w2:column blockSelect="false" id="column7" style="height:20px" inputType="checkbox" width="30" displayMode="label"></w2:column>
+							<w2:column id="column1" blockSelect="false" style="height:20px;" inputType="text" width="195" value="사용자" displayMode="label"></w2:column>
+							<w2:column id="column3" blockSelect="false" style="height:20px;" width="119" inputType="text" value="주소1" displayMode="label"></w2:column>
+							<w2:column id="column4" blockSelect="false" style="height:20px;" width="317" inputType="text" value="주소2" displayMode="label"></w2:column>
+							<w2:column id="column6" blockSelect="false" style="height:20px;" width="121" inputType="text" value="주소3" displayMode="label"></w2:column>
+						</w2:row>
+					</w2:header>
+					<w2:gBody id="gBody1" style="">
+						<w2:row id="row2" style="">
+							<w2:column blockSelect="false" id="DEL" style="height:20px" inputType="checkbox" width="70" displayMode="label"></w2:column>
+							<w2:column id="CUST_NM" blockSelect="false" style="height:20px" inputType="text" width="195" displayMode="label"></w2:column>
+							<w2:column id="SHIP_TO_SIDO" blockSelect="false" style="height:20px" width="119" inputType="text" displayMode="label"></w2:column>
+							<w2:column id="SHIP_TO_SIGUNGU" blockSelect="false" style="height:20px" width="317" inputType="text" displayMode="label" textAlign="left"></w2:column>
+							<w2:column id="SHIP_TO_STREET" blockSelect="false" style="height:20px" width="121" inputType="text" displayMode="label"></w2:column>
+						</w2:row>
+					</w2:gBody>
+				</w2:gridView>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

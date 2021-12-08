@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<!--
+		#####################################################################
+		파일명 : BM006P01.xml
+		프로그램명 : 파일그룹관리팝업
+		설 명 : 파일그룹관리팝업
+		작성자 : Inswave Systems
+		작성일 : 2019.01.09
+
+		수정일자	  수정자			 수정내용
+		=====================================================================
+		2019.01.09	Inswave Systems	최초작성
+		#####################################################################
+		--> 
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataMap baseNode="map" id="dma_fileGrp">
+					<w2:keyInfo>
+						<w2:key id="FILE_GRP_SEQ" name="FILE_GRP_SEQ" dataType="text"></w2:key>
+						<w2:key id="FILE_GRP_SEQ_PARENT" name="FILE_GRP_SEQ_PARENT" dataType="text"></w2:key>
+						<w2:key id="FILE_GRP_CD" name="FILE_GRP_CD" dataType="text"></w2:key>
+						<w2:key id="FILE_GRP_NM" name="FILE_GRP_NM" dataType="text"></w2:key>
+						<w2:key id="FILE_STORED_PATH" name="FILE_STORED_PATH" dataType="text"></w2:key>
+						<w2:key id="SORT_ORDER" name="SORT_ORDER" dataType="number"></w2:key>
+						<w2:key id="FILE_MAX_COUNT" name="FILE_MAX_COUNT" dataType="number"></w2:key>
+						<w2:key id="FILE_MAX_SIZE" name="FILE_MAX_SIZE" dataType="number"></w2:key>
+						<w2:key id="ALLOWED_EXTENSION" name="ALLOWED_EXTENSION" dataType="text"></w2:key>
+						<w2:key id="DENIED_EXTENSION" name="DENIED_EXTENSION" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+			<xf:submission id="sbm_insertFileGrp" ref="data:json,dma_fileGrp" target="" action="/file/insertFileGrp" method="post" mediatype="application/json" encoding="UTF-8"
+				instance="" replace="" errorHandler="" customHandler="" mode="asynchronous" processMsg="" ev:submit="" ev:submitdone="scwin.submission1_submitdone"
+				ev:submiterror="" abortTrigger="">
+			</xf:submission>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+	/**
+	  * 초기 스크립트 수행 함수 정의
+	  */
+	scwin.onpageload = function() {
+		scwin.param = com.getParameter();
+		if(scwin.param.mode == "add"){ // 등록일 경우 노드 생성 위치 row show
+			grp_controlRow.show("");
+		}
+		
+		scwin.closeCallbackFncName = scwin.param.callbackFn;
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+	
+	/**
+	  * 확인
+	  */
+	scwin.btn_confirm_onclick = function() {
+	
+		var level = rad_level.getValue();
+		if (level == "0") {
+			dma_fileGrp.set("FILE_GRP_SEQ_PARENT" , scwin.param.fileGrpSeqParent);
+		} else {
+			dma_fileGrp.set("FILE_GRP_SEQ_PARENT" , scwin.param.fileGrpSeq);
+		}
+		dma_fileGrp.set("FILE_STORED_PATH" , ""); 
+		dma_fileGrp.set("SORT_ORDER" , "0");
+		dma_fileGrp.set("FILE_MAX_COUNT" , 0);
+		dma_fileGrp.set("FILE_MAX_SIZE" , 0);
+		
+		com.executeSubmission(sbm_insertFileGrp);
+	};
+	
+	/**
+	  * 취소
+	  */
+	scwin.btn_cancel_onclick = function() {
+		com.closePopup();
+	};
+	
+	scwin.submission1_submitdone = function(e) {
+		com.closePopup(scwin.closeCallbackFncName);
+	};
+	]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="pop_L" id="" style="">
+			<xf:group id="" style="" class="pop_con">
+				<xf:group tagname="table" style="width:100%;" id="" class="w2tb">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="caption"></xf:group>
+					<xf:group tagname="colgroup">
+						<xf:group tagname="col" style="width:30.00%;"></xf:group>
+						<xf:group tagname="col" style="width:70.00%"></xf:group>
+					</xf:group>
+					<xf:group tagname="tr" style="">
+						<xf:group tagname="th" style="" class="w2tb_th">파일그룹명<w2:attributes>
+								<w2:scope>row</w2:scope>
+							</w2:attributes></xf:group>
+						<xf:group tagname="td" style="" class="w2tb_td">
+							<xf:input adjustMaxLength="false" id="ibx_fileGrpNm" ref="data:dma_fileGrp.FILE_GRP_NM" style="width:99%;height:21px;"></xf:input>
+						</xf:group>
+					</xf:group>
+					<xf:group tagname="tr" style="">
+						<xf:group tagname="th" style="" class="w2tb_th">파일그룹&amp;nbsp;KEY<w2:attributes>
+								<w2:scope>row</w2:scope>
+							</w2:attributes></xf:group>
+						<xf:group tagname="td" style="" class="w2tb_td">
+							<xf:input adjustMaxLength="false" id="ibx_fileGrpCd" ref="data:dma_fileGrp.FILE_GRP_CD" style="width:99%;height:21px;"></xf:input>
+						</xf:group>
+					</xf:group>
+					<xf:group tagname="tr" style="" id="grp_controlRow">
+						<xf:group tagname="th" style="" class="w2tb_th">노드&amp;nbsp;생성&amp;nbsp;위치<w2:attributes>
+								<w2:scope>row</w2:scope>
+							</w2:attributes></xf:group>
+						<xf:group tagname="td" style="" class="w2tb_td">
+							<xf:select1 appearance="full" cols="" id="rad_level" rows="1" selectedIndex="0" style="" ref="">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[동위 레벨]]></xf:label>
+										<xf:value><![CDATA[0]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[하위 레벨]]></xf:label>
+										<xf:value><![CDATA[1]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select1>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+				<xf:group id="group10" style="width: 100%;text-align:center;margin-top:10px;" class="">
+					<w2:anchor id="btn_confirm" style="" ev:onclick="scwin.btn_confirm_onclick" class="btn_cm">
+						<xf:label><![CDATA[확인]]></xf:label>
+					</w2:anchor>
+					<w2:anchor id="btn_cancel" style="" ev:onclick="scwin.btn_cancel_onclick" class="btn_cm" outerDiv="">
+						<xf:label><![CDATA[취소]]></xf:label>
+					</w2:anchor>
+				</xf:group>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

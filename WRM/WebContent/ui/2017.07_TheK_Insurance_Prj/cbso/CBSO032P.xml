@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="DsWs_TotCnt" repeatNode="map" userData2="//*/vector"/>
+                <w2:dataList baseNode="list" id="DsWs_Search"
+                	repeatNode="map" userData2="//*/vector/data/ADMAC01">
+                	<w2:columnInfo>
+                		<w2:column id="sTeamCode" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sLevel" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sTeamName" name="name3"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCenterCode" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sCenterName" name="name5"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_SearchWarnnig" repeatNode="map" userData2="//*/WARNING"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+ <script src="/cm/js/common.js"/>
+ <script src="/cm/js/val_lib.js"/>
+ <script src="/cm/js/util.js"/>
+ <script src="/cm/js/transSub.js"/>
+ <script src="/cm/js/callService.js"/>
+ <script src="/cm/js/gds.js"/>
+ <script src="/cm/js/wconv.js"/>
+ <script src="/cm/js/convertJs/Global_Script.js"/>
+ <script src="/cm/js/convertJs/comm_Webservice.js"/>
+ <script src="/cm/js/convertJs/Accounting_Script.js"/>        
+        <script><![CDATA[
+/*
+ *===================================File description================================================
+ * Create Date : 20010.08.24
+ * Creator     : 이정수
+ * Desc        : 부서목록조회 팝업
+ *====================================================================================================
+ */
+var pageSize = "99999999";
+// 페이지처리 없이 한페이지에 모두나오도록
+var pageCount = "5";
+var gsSysDate;// 파라메터
+var psButton = "";
+var pCode = "";// 코드
+var pDeptCode = "";// 부서코드(세금계산서 팝업에서 센터코드가 넘어옴)
+var pBaseDate= "";// 기준일자
+var pLevel= "";// 부서레벨
+//------------------------
+var bOpenSearchFlag = true;
+var args;
+// 오픈시 자동조회 여부
+scwin.init = function() {
+
+	var indata = $w.getParameter("param");//
+	try {
+		args = JSON.parse(indata);
+	} catch(e) {}
+	if(!util.isNull(args.psButton)) psButton = args.psButton;
+	if(!util.isNull(args.pCode)) pCode = args.pCode;
+	if(!util.isNull(args.pDeptCode)) pDeptCode = args.pDeptCode;
+	if(!util.isNull(args.pBaseDate)) pBaseDate = args.pBaseDate;
+	if(!util.isNull(args.pLevel)) pLevel = args.pLevel;
+
+    bOpenSearchFlag = true;
+    //SOBJ_Account.WSDL = gds.gWsdlAccounting;
+
+    // 초기화
+    scwin.form_init();
+    bOpenSearchFlag = false;
+
+    // 조회
+    scwin.getSearchList();
+    if (!bOpenSearchFlag) {
+        return;
+    }
+    agf_FormMove();
+};
+
+scwin.form_init = function() {
+	// 버튼클릭일때는 설정안되도록
+    if (psButton != "버튼") {
+         //파라메터로 넘어온값이 숫자로 되어있으면 코드
+        if (agf_isNum(pCode) == true) {
+            sCenterCode.setValue(pCode);
+        } else {
+            sCenterName.setValue(pCode);
+        }
+    }
+    if (wconv.length(pDeptCode) > 0) {
+        sCenterCode.setValue(pDeptCode);
+    }
+    if (wconv.length(pBaseDate) > 0) {
+        sBaseDate.setValue(pBaseDate);
+    } else {
+        sBaseDate.setValue(wconv.today());
+    }
+    if (wconv.length(pLevel) > 0) {
+        sLevel.setValue(pLevel);
+    } else {
+        //sLevel.Value      = "3";
+        sLevel.setValue("5"); //2011-10-25 서영지 조직개편관련 레벨 수정
+    }
+};
+
+/*******************************************/
+//화면 초기화
+/*******************************************/
+scwin.initialize = function() {
+    sBaseDate.setValue(wconv.today());
+    if (wconv.length(pLevel) > 0) {
+        sLevel.setValue(pLevel);
+    } else {
+        //sLevel.Value      = "3";
+        sLevel.setValue("5"); //2011-10-25 서영지 조직개편관련 레벨 수정
+    }
+    sCenterCode.setValue("");
+    sCenterName.setValue("Y");
+};
+
+/*******************************************/
+// 조회 버튼 클릭시
+/*******************************************/
+scwin.getSearchList = function() {
+    scwin.doSearch("1");
+};
+
+/*******************************************/
+// 조회
+/*******************************************/
+scwin.doSearch = function(pageNo) {
+
+	/*    
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Account, "com.inswave.admin.task.AdminTask", "getNewDepartbyLevel", pageSize, pageNo);
+    // 파라메터설정
+    gfn_SetParam(MethodObj, "sBaseDate", sBaseDate.getValue()); // 기준일자
+    if (bOpenSearchFlag) &&    psButton != "버튼"; {
+        gfn_SetParam(MethodObj, "sLevel", "A"); // 부서레벨과 상관없이 전체에서 조회
+    } else {
+        gfn_SetParam(MethodObj, "sLevel", sLevel.getValue()); // 부서레벨
+    }
+    gfn_SetParam(MethodObj, "sCenterCode", sCenterCode.getValue()); // 센타팀코드
+    gfn_SetParam(MethodObj, "sCenterName", sCenterName.getValue()); // 부서명
+    // 조회실행
+    gfn_CallService(SOBJ_Account, DOBJ_Search, MethodObj);
+    */
+    wconv.clear(DsWs_Search);
+	var MethodObj = new callService("com.inswave.admin.task.AdminTask", "getNewDepartbyLevel", pageSize, pageNo);
+	MethodObj.setId("getNewDepartbyLevel");
+	MethodObj.setParam("sBaseDate", sBaseDate.getValue()); // 기준일자
+//    if (bOpenSearchFlag  &&    psButton != "버튼") {
+//        MethodObj.setParam( "sLevel", "A"); // 부서레벨과 상관없이 전체에서 조회
+//    } else {
+        MethodObj.setParam(  "sLevel", sLevel.getValue()); // 부서레벨
+//    }
+    MethodObj.setParam( "sCenterCode", sCenterCode.getValue()); // 센타팀코드
+    MethodObj.setParam( "sCenterName", sCenterName.getValue()); // 부서명
+	MethodObj.setUrl("/common/CBSO032PController.do");
+	MethodObj.setXPath("//*/vector/data/ADMAC01");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+
+	util.interfaceKey(_tranSync.result.serviceDs);
+	DsWs_Search.setJSON (_tranSync.getDsJson("ADMAC01")); // dataset 데이터     
+    //trace(replace(gfn_XmlEncoder(DOBJ_Search.Contents),"><",">\n<"));
+    //trace(DsWs_Search.SaveXML());
+    // 전체 건수 얻어오기
+    totalRows.setValue(DsWs_Search.getRowCount());
+    if (DsWs_Search.getRowCount() < 1) {
+//        if (bOpenSearchFlag) {
+//            alert("존재하지 않는 부서코드입니다.");
+//            wprom.close("noneClose");
+//        }
+        wprom.alert("해당 데이터가 존재하지 않습니다.");
+        return;
+    }
+//    if (bOpenSearchFlag  &&    psButton != "버튼"    &&    DsWs_Search.getRowCount() == 1) {
+//        bOpenSearchFlag = false;
+//        scwin.uf_getDataChoice(0);
+//        return;
+//    }
+};
+
+/*******************************************/
+//  닫기
+/*******************************************/
+scwin.Btn_Close_OnClick = function(obj) {
+    wprom.close();
+};
+
+/*******************************************/
+//  엔터 이벤트 때 조회처리
+/*******************************************/
+scwin.doEnter = function(e){//obj, nChar, bShift, bCtrl, bAlt, LLParam, HLParam) {
+    if (e.keyCode == 13) {
+        scwin.getSearchList();
+    }
+};
+
+/*******************************************/
+//  그리드 선택시
+/*******************************************/
+scwin.Grd_List_OnCellClick = function(row,col) {
+    //if(nCell != 1 and !(nCell == 3 and sLevel.Value == "4"))	return;
+	if( col != 1 && !(col == 3 && sLevel.getValue() == "6"))	return;//2011-10-25 서영지 조직개편관련 레벨 수정
+    
+    scwin.uf_getDataChoice(row);
+};
+
+scwin.Grd_List_OnCellDblClick = function(row,col) {
+    scwin.uf_getDataChoice(row);
+};
+
+// 자료선택
+//
+scwin.uf_getDataChoice = function(nRow) {
+    var sArg = "";
+
+    if (sLevel.getValue() == "4" || sLevel.getValue() == "5") {
+        //2011-10-25 서영지 조직개편관련 레벨 수정
+        sArg = DsWs_Search.getCellData(nRow, "sCenterCode"); // 팀/센터코드
+        sArg += "^" + DsWs_Search.getCellData(nRow, "sCenterName"); // 팀/센터명
+        if (wconv.length(DsWs_Search.getCellData(nRow, "sTeamCode")) == 0) {
+            sArg += "^ ^ ";
+        } else {
+            sArg += "^" + DsWs_Search.getCellData(nRow, "sTeamCode"); // 보상팀
+            sArg += "^" + DsWs_Search.getCellData(nRow, "sTeamName"); // 보상팀명
+        }
+        sArg += "^" + DsWs_Search.getCellData(nRow, "sLevel"); // 레벨
+    } else {
+        sArg = DsWs_Search.getCellData(nRow, "sTeamCode"); // 보상팀
+        sArg += "^" + DsWs_Search.getCellData(nRow, "sTeamName"); // 보상팀명
+        if (wconv.length(DsWs_Search.getCellData(nRow, "sCenterCode")) == 0) {
+            sArg += "^ ^ ";
+        } else {
+            sArg += "^" + DsWs_Search.getCellData(nRow, "sCenterCode"); // 팀/센터코드
+            sArg += "^" + DsWs_Search.getCellData(nRow, "sCenterName"); // 팀/센터명
+        }
+        sArg += "^" + DsWs_Search.getCellData(nRow, "sLevel"); // 레벨
+    }
+    wprom.close(sArg);
+};
+
+// 부서레벨클릭
+scwin.sLevel_OnClick = function(obj) {
+    //scwin.getSearchList();
+};
+
+// 엔터
+scwin.sBaseDate_OnKeyDown = function(e){
+    if (e.keyCode != 13) {
+        return;
+    }
+    sLevel.focus();
+};
+
+scwin.sLevel_OnKeyDown = function(e){//obj, nChar, bShift, bCtrl, bAlt, nLLParam, nHLParam) {
+    if (e.keyCode != 13) {
+        return;
+    }
+    sCenterCode.focus();
+};
+
+scwin.sCenterCode_OnKeyDown = function(e){//obj, nChar, bShift, bCtrl, bAlt, LLParam, HLParam) {
+    if (e.keyCode != 13) {
+        return;
+    }
+    sCenterName.focus();
+};
+
+scwin.sCenterName_OnKeyDown = function(e){//obj, nChar, bShift, bCtrl, bAlt, LLParam, HLParam) {
+    if (e.keyCode != 13) {
+        return;
+    }
+    scwin.getSearchList();
+};
+	]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="7007"
+        	style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;height:468px;left:0px;top:-6px;"
+        	userData1="부서목록[7007]"
+        	userData2=" OnLoadCompleted:scwin.OnLoadCompleted; ">
+        	<DataObjects>
+        		<DataObject />
+        	</DataObjects>
+        	<ServiceObjects>
+        		<ServiceObject />
+        	</ServiceObjects>
+        	<xf:switch id="switch_12" style=" ">
+        		<xf:case id="Default_13" style=" ">
+        			<w2:gridView autoFit="allColumn"
+        				autoFitMinWidth="100" class="sty_Grid"
+        				dataList="DsWs_Search"
+        				ev:oncellclick="scwin.Grd_List_OnCellClick"
+        				ev:oncelldblclick="scwin.Grd_List_OnCellDblClick"
+        				focusMode="row" id="Grd_List" inputType="text"
+        				readOnly="true"
+        				style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  height:348px; left:0 px; right:487px;top:124px; width:550px;"
+        				tabIndex="8">
+        				<w2:header>
+        					<w2:row>
+        						<w2:column dataType="text"
+        							id="head_id_86" inputType="text" readOnly="true"
+        							style="height:20px;" textAlign="center" userData1="0"
+        							userData3="0" value="No" width="30" />
+        						<w2:column colSpan="2" dataType="text"
+        							id="head_id_87" inputType="text" readOnly="true"
+        							style="height:20px;" textAlign="center" userData1="1"
+        							userData3="0" value="부실/센터/팀 코드" width="218" />
+        						<w2:column colSpan="2" dataType="text"
+        							id="head_id_88" inputType="text" readOnly="true"
+        							style="height:20px;" textAlign="center" userData1="3"
+        							userData3="0" value="보상팀" width="160" />
+        					</w2:row>
+        				</w2:header>
+        				<w2:gBody>
+        					<w2:row>
+        						<w2:column dataType="text"
+        							expression="rowIndex() + 1" id="nRowNum" inputType="expression"
+        							readOnly="true" style="height:20px;" textAlign="center"
+        							userData1="0" userData3="0" width="30" />
+        						<w2:column dataType="text"
+        							id="sCenterCode" inputType="link" readOnly="true"
+        							style="height:20px;" textAlign="center" userData1="1" userData3="0"
+        							width="58" />
+        						<w2:column dataType="text"
+        							id="sCenterName" inputType="text" readOnly="true"
+        							style="height:20px;" textAlign="left" userData1="2" userData3="0"
+        							width="160" />
+        						<w2:column dataType="text"
+        							id="sTeamCode" inputType="link" readOnly="true" style="height:20px;"
+        							textAlign="center" userData1="3" userData3="0"
+        							width="58" />
+        						<w2:column dataType="text"
+        							id="sTeamName" inputType="text" readOnly="true" style="height:20px;"
+        							textAlign="left" userData1="4" userData3="0" width="160" value=""/>
+        					</w2:row>
+        				</w2:gBody>
+        			</w2:gridView>
+        		</xf:case>
+        	</xf:switch>
+        	<w2:textbox id="Static5" label="부서목록"
+        		style="position:absolute; VAlign:Middle;  height:22px; left:0px; top:0px; width:63px;"
+        		tagname="" class="sub_pop_title01" />
+        	<xf:group arcsize="6" class="search_area" id="Shape0" style="position:absolute; bottom:87px; height:55px;left:0px;top:30px; width:550px;" userData3="RoundRect">
+        	</xf:group><w2:textbox class="sty_lb_Search_ness" id="Stat_sBaseDate"
+        		label="기준일자"
+        		style="position:absolute;height:20px;width:60px;left:5px;VAlign:Middle;top:36px;"
+        		tagname="" />
+        	<w2:textbox id="Static10" label="총건수"
+        		style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:-3px;top:99px; width:40px;"
+        		tagname="" />
+        	<w2:textbox id="Static17" label="건"
+        		style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:75px;top:99px; width:16px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Search" id="Stat_sCenterCode"
+        		label="조직코드"
+        		style="position:absolute;height:20px;width:60px;left:10px;VAlign:Middle;top:59px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Search" id="Stat_sLevel"
+        		label="조직레벨"
+        		style="position:absolute;height:20px;width:60px;left:197px;VAlign:Middle;top:36px;"
+        		tagname="" />
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="totalRows"
+        		style="position:absolute; border-style:solid;  text-align:CENTER;  height:20px;left:42px;top:99px; width:31px;"
+        		tabIndex="18" />
+        	<xf:select1 appearance="full" class="sty_ipt_search"
+        		cols="4" ev:onblur="scwin.uf_getDataChoice"
+        		ev:onclick="scwin.sLevel_OnClick" id="sLevel" rows=""
+        		selectedIndex="1"
+        		style="position:absolute; ColumnCount:4;  height:20px;left:268px;top:36px; width:240px;"
+        		tabIndex="1" userData1="all" ev:onlabelclick="scwin.getSearchList()" ev:onradioclick="scwin.getSearchList()">
+        		<xf:choices>
+        			<xf:item>
+        				<xf:label><![CDATA[부/실]]></xf:label>
+        				<xf:value><![CDATA[4]]></xf:value>
+        			</xf:item>
+        			<xf:item>
+        				<xf:label><![CDATA[센터/팀]]></xf:label>
+        				<xf:value><![CDATA[5]]></xf:value>
+        			</xf:item>
+        			<xf:item>
+        				<xf:label><![CDATA[보상팀]]></xf:label>
+        				<xf:value><![CDATA[6]]></xf:value>
+        			</xf:item>
+        		</xf:choices>
+        		<Layout />
+        		<Layout />
+        		<Layout />
+        	</xf:select1>
+        	<w2:textbox class="sty_lb_Search" id="Stat_sCenterName"
+        		label="조직명"
+        		style="position:absolute;height:20px;width:60px;left:197px;VAlign:Middle;top:59px;"
+        		tagname="" />
+        	<xf:input class="sty_ipt_search" dataType="number"
+        		editType="select" ev:onblur="scwin.sCenterCode_OnKeyDown"
+        		id="sCenterCode" maxByteLength="7"
+        		style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:81px;top:59px; width:81px;"
+        		tabIndex="2" />
+        	<xf:input class="sty_ipt_search" editType="select"
+        		ev:onblur="scwin.sCenterName_OnKeyDown" id="sCenterName"
+        		maxByteLength="60"
+        		style="position:absolute; border-style:solid;  height:20px;left:268px;top:59px; width:190px;"
+        		tabIndex="3" />
+        	<xf:trigger class="btn_Comm_Search "
+        		ev:onclick="scwin.getSearchList" id="Btn_Search"
+        		style="position:absolute;  height:20px;left:471px;top:56px; width:54px;"
+        		tabIndex="4" type="anchor">
+        		<xf:label><![CDATA[조회]]></xf:label>
+        	</xf:trigger>
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.initialize" id="Btn_Init"
+        		style="position:absolute; ImageID:btn_Input_02;left:439px;top:0px;width:48px;"
+        		tabIndex="5" type="anchor">
+        		<xf:label><![CDATA[새작업]]></xf:label>
+        	</xf:trigger>
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.Btn_Close_OnClick" id="Btn_Close"
+        		style="position:absolute; ImageID:btn_Input_02;left:502px;top:0px;"
+        		tabIndex="6" type="anchor">
+        		<xf:label><![CDATA[닫기]]></xf:label>
+        	</xf:trigger>
+        	<WebBrowser id="WebBrowser0"
+        		style="position:absolute; display:none;  height:24px; left:240px; top:4px; width:37px;"
+        		tabIndex="20" />
+        	<w2:inputCalendar class="sty_ipt_search"
+        		ev:onblur="scwin.sBaseDate_OnKeyDown" id="sBaseDate"
+        		style="position:absolute; SundayTextColor:red;  SaturdayTextColor:blue;  border-style:solid;  height:20px;left:81px;top:36px; width:106px;"
+        		tabIndex="21" validCheck="true" />
+        	
+        </xf:group>
+    </body>
+</html>

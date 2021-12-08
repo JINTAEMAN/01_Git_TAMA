@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="Ds_List"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column id="nTotAmt" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nBaseGrntPrem" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="saleRt" name="name3"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="saleAmt" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="mgtRt" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="mgtAmt" name="name6"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="mgtCtRt" name="name7"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="mgtCtAmt" name="name8"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="BETA_2" name="name9"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nSumRt" name="name10"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nSumAmt" name="name11"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="ANN" name="name12"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nRiskAmt" name="name13"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_List"
+                	repeatNode="map" userData2="//*/LTIDA00">
+                	<w2:columnInfo>
+                		<w2:column id="nTotAmt" name="name11"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nBaseGrntPrem" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="saleRt" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="saleAmt" name="name3"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="mgtRt" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="mgtAmt" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="mgtCtRt" name="name6"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="mgtCtAmt" name="name7"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="BETA_2" name="name8"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nSumRt" name="name9"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nSumAmt" name="name10"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                	<w2:data use="false">
+                		<w2:row>
+                			<nBaseGrntPrem><![CDATA[125000]]></nBaseGrntPrem>
+                		</w2:row>
+                	</w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_Warning" repeatNode="map" userData2="//*/WARNING"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+ <script src="/cm/js/convertJs/Global_Script.js"/>
+ <script src="/cm/js/convertJs/comm_Webservice.js"/>
+ <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+        <script><![CDATA[
+/****************************************************************************
+ * 프로그램번호  : CBSC051P - ssr_pln::B017_Pop.xml
+ * 프로그램명     : 환급금계좌정보
+ * 파일명           : 
+ * 프로그램 내용 : 환급금계좌정보
+ * 관련 프로그램 : 
+ * 작성자           : 구종식
+ * 작성일           : 2017-07-07
+ * 저작권           : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역        : 
+ ****************************************************************************/
+ var fv_args;
+ 
+scwin.init = function() {
+
+	var pro = Promise.resolve();
+	window.top.util.winTopShowModalChk = "T";
+	util.winTopShowModal();
+	
+	pro = pro.then(function(rv) {
+    	return util.winTopShowModalPromise();
+	}); //맨끝에 처리
+	 
+	pro = pro.then(function(rv) {
+	
+	var indata = $w.getParameter("param");//
+	try {
+		fv_args = JSON.parse(indata);
+	} catch(e) {}
+
+    //sToday = wconv.substr(gfn_GetSysTime(), 0, 8);
+    //sTime = wconv.substr(gfn_GetSysTime(), 8, 6);
+	gfn_getServerTime();
+    var sToday = wconv.substr(gDs_ServerTime.getCellData(0,"sToday"), 0, 8);
+    var sTime = gDs_ServerTime.getCellData(0,"sHour") + gDs_ServerTime.getCellData(0,"sMinute") + gDs_ServerTime.getCellData(0,"sSecond");
+    
+    swDiv.show();
+    //grd_b.show();
+    //grd_c.show();
+    wconv.clear(Ds_List);
+    //wconv.clear(DsWs_List);
+    
+    //SOBJ_DataSearch.WSDL = gds.gWsdlBasis;
+    if (fv_args.sFlag == "b") {
+        //grd_c.hide();
+        swDiv.setSelectedID( "case4" );
+        /*
+        var MethodObj = gfn_CreateMethodObj(SOBJ_DataSearch, "com.inswave.longterm.ssr.pln.task.DBB330Task", "getHappyCall", null);
+        gfn_SetParam(MethodObj, "sPlanNo", sPlanNo); // 조회구분
+        gfn_CallService(SOBJ_DataSearch, DOBJ_DataSearch, MethodObj);
+        */
+		var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB330Task", "getHappyCall");
+		MethodObj.setId("getHappyCall");
+		MethodObj.setParam("sPlanNo", fv_args.sPlanNo); // 조회구분
+		MethodObj.setUrl("/contract/CBSC051PController.do");
+		MethodObj.setXPath("//*/LTIDA00");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();
+		//util.interfaceKey(_tranSync.result.serviceDs);
+		//DsWs_Team.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+		util.jSonDsCreate(_tranSync.getDsJson("LTIDA00"), "DsWs_List");
+		util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+		util.setCompBindRefresh("DsWs_List");
+		util.setRowPosition(DsWs_List, 0);
+        
+        if (wconv.length(DsWs_Warning.getCellData(0, "msg")) > 0) {
+            wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+            util.insertColumn(DsWs_List, [["nTotAmt", "nTotAmt", "text"  ]]);
+			DsWs_List.insertRow(0);
+        } else {
+            if (DsWs_List.getRowCount() == 0) {
+                wprom.alert("조회건이 없습니다.");
+            } else {
+                wconv.copy(Ds_List, "DsWs_List");
+                var sInsurStrtdate = DsWs_List.getCellData(0, "sInsurStrtdate");
+                var YY = wconv.substr(sInsurStrtdate, 0, 4);
+                var MM = wconv.substr(sInsurStrtdate, 4, 2);
+                var DD = wconv.substr(sInsurStrtdate, 6, 2);
+                edt_rato.setValue("(" + YY + "." + MM + "." + DD + " 현재 " + DsWs_List.getCellData(0, "nRato") + " %)");
+                edt_date.setValue("약 " + DsWs_List.getCellData(0, "sCnclRtnrtPassPrd")); //nTotAmt+" 원"+"(기본보장 "+nBaseGrntPrem+" 원 + 적립 "+nBaseAccuPrem+" 원)"
+                //grd_b.SetCellProp("Head", 3, "Text", "abs\nabc");
+            }
+        }       
+    } else {
+       //grd_b.hide();
+        swDiv.setSelectedID( "case3" );    
+	        /*
+        var MethodObj = gfn_CreateMethodObj(SOBJ_DataSearch, "com.inswave.longterm.ssr.pln.task.DBB330Task", "getHappyCallC", null);
+        gfn_SetParam(MethodObj, "sPlanNo", sPlanNo); // 조회구분
+        gfn_CallService(SOBJ_DataSearch, DOBJ_DataSearch, MethodObj);
+        */
+		var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB330Task", "getHappyCallC");
+		MethodObj.setId("getHappyCallC");
+		MethodObj.setParam("sPlanNo", fv_args.sPlanNo); // 조회구분
+		MethodObj.setUrl("/contract/CBSC051PController.do");
+		MethodObj.setXPath("//*/LTIDA00");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();
+		//util.interfaceKey(_tranSync.result.serviceDs);
+		//DsWs_Team.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+		util.jSonDsCreate(_tranSync.getDsJson("LTIDA00"), "DsWs_List");
+		util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+		util.setCompBindRefresh("DsWs_List");
+		//util.setRowPosition(DsWs_List, 0);
+        
+        if (wconv.length(DsWs_Warning.getCellData(0, "msg")) > 0) {
+            wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        } else {
+            if (DsWs_List.getRowCount() == 0) {
+                wprom.alert("조회건이 없습니다.");
+            } else {
+                wconv.copy(Ds_List, "DsWs_List");
+                var sInsurStrtdate = DsWs_List.getCellData(0, "sInsurStrtdate");
+                var YY = wconv.substr(sInsurStrtdate, 0, 4);
+                var MM = wconv.substr(sInsurStrtdate, 4, 2);
+                var DD = wconv.substr(sInsurStrtdate, 6, 2);
+                edt_rato.setValue("(" + YY + "." + MM + "." + DD + " 현재 " + DsWs_List.getCellData(0, "sApplRato") + " %)");
+                edt_date.setValue("약 " + DsWs_List.getCellData(0, "sCnclRtnrtPassPrd"));
+                var nSumAmt = parseFloat(DsWs_List.getCellData(0, "saleAmt").replace(",","")) 
+                                    + parseFloat(DsWs_List.getCellData(0, "mgtAmt").replace(",",""))
+                                    + parseFloat(DsWs_List.getCellData(0, "mgtCtAmt").replace(",",""))
+                                    + parseFloat(DsWs_List.getCellData(0, "BETA_2").replace(",",""));
+//console.log("DsWs_List.getCellData(0, 'saleAmt')      :    "+DsWs_List.getCellData(0, "saleAmt"));
+                //util.insertColumn(DsWs_List, [   [        "nSumAmt", "nSumAmt",             "text"       ]   ]);
+//alert("nSumAmt : "+nSumAmt);                
+                DsWs_List.setCellData(0, "nSumAmt", nSumAmt);
+            }
+        }
+    }
+    return;
+    //프로미스
+    });
+    pro = pro.then(function(rv) {
+    	util.winTopHideModal();
+	});
+	return pro;
+};
+
+scwin.lfn_Close_OnClick = function(e) {
+    wprom.close();
+};
+scwin.ExprDis = function(gridId, colId, rowIndex) {
+	console.log("EXPR : " + gridId + "_" + colId + "_" + rowIndex);
+	var rtnValue = "";
+	try {
+		//console.log("EXPR : " + gridId + "_" + colId + "_" + rowIndex);
+		var grdOb = eval(gridId);
+		var dataListOb = eval(eval(gridId).getDataList());
+		
+		switch (gridId) {
+			case "grd_b" :
+			
+				if (colId == "nTotAmt") {//"보험료 "+nTotAmt+" 원"+
+					rtnValue = "보험료 "+util.nvl(dataListOb.getCellData(rowIndex, colId),"") +" 원";
+				}
+				if (colId == "nBaseGrntPrem") {
+					rtnValue = "(기본보장 "+util.nvl(dataListOb.getCellData(rowIndex, "nBaseGrntPrem"),"0") +" 원 + 적립 " 
+					                                +util.nvl(dataListOb.getCellData(rowIndex, "nBaseAccuPrem"),"0") +" 원";
+				}
+				if (colId == "saleRt") {//saleRt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" %";
+				}
+				if (colId == "saleAmt") {//saleAmt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" 원";
+				}
+				if (colId == "mgtRt") {//mgtRt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" %";
+				}
+				if (colId == "mgtAmt") {//mgtAmt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" 원";
+				}
+				if (colId == "mgtCtRt") {//mgtCtRt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" %";
+				}
+				if (colId == "mgtCtAmt") {//mgtCtRt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" 원";
+				}
+				if (colId == "BETA_2") {//mgtCtRt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" 원";
+				}
+				//nSumRt+" %"
+				if (colId == "nSumRt") {//mgtCtRt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" %";
+				}
+				//nSumAmt+" 원"+
+				if (colId == "nSumAmt") {//mgtCtRt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" 원";
+				}
+				break;
+			case "grd_c":
+				if (colId == "nTotAmt") {//"보험료 "+nTotAmt+" 원"+
+					rtnValue = "보험료 "+util.nvl(dataListOb.getCellData(rowIndex, colId),"0") +" 원";
+				}
+				if (colId == "nBaseGrntPrem") {
+					rtnValue = "(기본보장 "+util.nvl(dataListOb.getCellData(rowIndex, "nBaseGrntPrem"),"0") +" 원 + 적립 " 
+					                                +util.nvl(dataListOb.getCellData(rowIndex, "nBaseAccuPrem"),"0") +" 원";
+				}
+				if (colId == "saleRt") {//saleRt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" %";
+				}
+				if (colId == "saleAmt") {//saleAmt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" 원";
+				}
+				if (colId == "mgtRt") {//mgtRt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" %";
+				}
+				if (colId == "mgtAmt") {//mgtAmt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" 원";
+				}
+				if (colId == "mgtCtRt") {//mgtCtRt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" %";
+				}
+				if (colId == "mgtCtAmt") {//mgtCtRt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" 원";
+				}
+				if (colId == "BETA_2") {//mgtCtRt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" 원";
+				}
+				//nSumRt+" %"
+				if (colId == "nSumRt") {//mgtCtRt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" %";
+				}
+				//nSumAmt+" 원"+
+				if (colId == "nSumAmt") {//mgtCtRt+" %"+
+					rtnValue = util.appendComma(util.nvl(dataListOb.getCellData(rowIndex, colId),"0"))+" 원";
+				}
+				//ANN+" %"+
+				if (colId == "ANN") {//mgtCtRt+" %"+
+					rtnValue = util.nvl(dataListOb.getCellData(rowIndex, colId),"0")+" %";
+				}
+				
+				break;
+			default:
+				break;		
+		}
+	} catch(e){
+		rtnValue = "error";
+		console.log("EXPR ERROR : lfn_exprDisplay " + gridId + "_" + colId + "_" + rowIndex);
+	}
+	return rtnValue;
+};
+
+scwin_lfn_Bgcolor_Chg = function(data, formattedData, rowIndex, colIndex) {
+	grd_b.setCellBackgroundColor( rowIndex , colIndex , "#E3F0FF" );
+	return formattedData;
+};
+]]></script>
+    </head>
+    <body>
+    	<xf:group class="cont_wrap layer" id="B017_Pop"
+    		style="position:absolute;width:705px;height:410px;    overflow: hidden;left:-553px;top:-103px;"
+    		userData1="모니터링"
+    		userData2=" OnLoadCompleted:scwin.B017_OnLoadCompleted; ">
+    		<DataObjects>
+    			<DataObject />
+    		</DataObjects>
+    		<ServiceObjects>
+    			<ServiceObject />
+    		</ServiceObjects>
+    		<xf:group arcsize="8" class="" id="Shape5"
+    			style="position:absolute; right:760px;  bottom:408px;height:375px; left:0px; top:30px;width:707px;"
+    			userData3="RoundRect">
+    		</xf:group>
+    		<w2:textbox id="Static5" label="모니터링"
+    			style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; width:249px;"
+    			tagname="" class="sub_pop_title01" />
+    		<xf:trigger class="popup_top_btn"
+    			ev:onclick="scwin.lfn_Close_OnClick" id="btn_close"
+    			style="position:absolute; ImageID:btn_Comm_Close; height:20px;left:656px;top:0px; width:58px;"
+    			tabIndex="3" type="anchor">
+    			<xf:label><![CDATA[닫기]]></xf:label>
+    		</xf:trigger>
+
+
+    		<w2:textbox id="Static0" label="① 보험료 중 사업비 수준"
+    			style="position:absolute; VAlign:Middle;  height:20px;left:2px;top:62px; width:249px;"
+    			tagname="" />
+    		<xf:switch caseClass=""
+    			style="position: absolute;width:707px;height:227px;margin-top:75px;" id="swDiv"
+    			class="">
+    			<xf:case
+    				style="width:507;height:27;"
+    				id="case3" class="">
+    			<w2:gridView id="grd_c" ignoreToggleOnDisabled="false"
+    				useShiftKey="true"
+    				style="position: absolute;width:695px;height:216px;margin-top:50px;margin-left:5px;left:0px;top:-40px;"
+    				useFilterList="false" scrollByColumn="false"
+    				showSortableUseFilter="false" scrollByColumnAdaptive="false"
+    				summaryAuto="false" fixedColumnWithHidden="true"
+    				summaryOnlyAuto="false" dataList="DsWs_List"
+    				ignoreCellClick="false" focusMode="row" autoFit="allColumn"
+    				hideHeader="true" autoFitMinWidth="100"
+    				noResultMessageVisible="true">
+    				<w2:header style="" id="header1">
+    					<w2:row style="" id="row1">
+    						<w2:column width="154" inputType="text"
+    							style="height:20px;" id="column1" blockSelect="false"
+    							displayMode="label">
+    						</w2:column>
+    						<w2:column width="70" inputType="text"
+    							style="height:20px;" id="column2" blockSelect="false"
+    							displayMode="label">
+    						</w2:column>
+    						<w2:column width="100" inputType="text"
+    							style="height:20px;" id="column4" blockSelect="false"
+    							displayMode="label">
+    						</w2:column>
+    						<w2:column width="105" inputType="text"
+    							style="height:20px;" id="column6" blockSelect="false"
+    							displayMode="label">
+    						</w2:column>
+    						<w2:column width="105" inputType="text"
+    							style="height:20px;" id="column8" blockSelect="false"
+    							displayMode="label">
+    						</w2:column>
+    						<w2:column width="160" inputType="text"
+    							style="height:20px;" id="column10" blockSelect="false"
+    							displayMode="label">
+    						</w2:column>
+    					</w2:row>
+    				</w2:header>
+    				<w2:gBody style="" id="gBody1">
+    					<w2:row style="" id="row2">
+    						<w2:column width="324" inputType="text"
+    							style="height:40px;" id="column62" blockSelect="false"
+    							dataType="text" value="구분" colSpan="3" rowSpan="2">
+    						</w2:column>
+    						<w2:column width="105"
+    							inputType="expression" style="height:20px;" id="nTotAmt"
+    							blockSelect="false" displayMode="label" colSpan="2"
+    							expression="scwin.ExprDis('grd_c','nTotAmt',rowIndex())">
+    						</w2:column>
+    						<w2:column width="160" inputType="text"
+    							style="height:20px;" id="column11" blockSelect="false"
+    							displayMode="label" rowSpan="2" value="비고">
+    						</w2:column>
+    					</w2:row>
+    					<w2:row style="" id="row3">
+    						<w2:column width="105"
+    							inputType="expression" style="height:20px;"
+    							id="nBaseGrntPrem" blockSelect="false" displayMode="label"
+    							colSpan="2"
+    							expression="scwin.ExprDis('grd_c','nBaseGrntPrem',rowIndex())">
+    						</w2:column>
+    					</w2:row>
+    					<w2:row style="" id="row4">
+    						<w2:column width="154" inputType="text"
+    							style="height:120px;" id="column23" blockSelect="false"
+    							displayMode="label" rowSpan="6" value="예정사업비">
+    						</w2:column>
+    						<w2:column width="70" inputType="text"
+    							style="height:20px;" id="column22" blockSelect="false"
+    							displayMode="label" rowSpan="2" value="체결비용">
+    						</w2:column>
+    						<w2:column width="100" inputType="text"
+    							style="height:20px;" id="column21" blockSelect="false"
+    							displayMode="label" value="판매보수">
+    						</w2:column>
+    						<w2:column width="105"
+    							inputType="expression" style="height:20px;" id="saleRt"
+    							blockSelect="false" displayMode="label"
+    							expression="scwin.ExprDis('grd_c','saleRt',rowIndex())" textAlign="right">
+    						</w2:column>
+    						<w2:column width="105"
+    							inputType="expression" style="height:20px;" id="saleAmt"
+    							blockSelect="false" displayMode="label"
+    							expression="scwin.ExprDis('grd_c','saleAmt',rowIndex())" textAlign="right">
+    						</w2:column>
+    						<w2:column width="160" inputType="text"
+    							style="height:20px;" id="column18" blockSelect="false"
+    							displayMode="label" value="10년이내">
+    						</w2:column>
+    					</w2:row>
+    					<w2:row style="" id="row5">
+    						<w2:column width="100" inputType="text"
+    							style="height:20px;" id="column27" blockSelect="false"
+    							displayMode="label" value="유지보수">
+    						</w2:column>
+    						<w2:column width="105"
+    							inputType="expression" style="height:20px;" id="mgtRt"
+    							blockSelect="false" displayMode="label"
+    							expression="scwin.ExprDis('grd_c','mgtRt',rowIndex())" textAlign="right">
+    						</w2:column>
+    						<w2:column width="105"
+    							inputType="expression" style="height:20px;" id="mgtAmt"
+    							blockSelect="false" displayMode="label"
+    							expression="scwin.ExprDis('grd_c','mgtAmt',rowIndex())" textAlign="right">
+    						</w2:column>
+    						<w2:column width="160" inputType="text"
+    							style="height:20px;" id="column24" blockSelect="false"
+    							displayMode="label" value="7년이내">
+    						</w2:column>
+    					</w2:row>
+    					<w2:row style="" id="row6">
+    						<w2:column width="70" inputType="text"
+    							style="height:60px;" id="column34" blockSelect="false"
+    							displayMode="label" colSpan="2" rowSpan="3" value="관리비용">
+    						</w2:column>
+    						<w2:column width="105"
+    							inputType="expression" style="height:20px;" id="mgtCtRt"
+    							blockSelect="false" displayMode="label"
+    							expression="scwin.ExprDis('grd_c','mgtCtRt',rowIndex())" textAlign="right">
+    						</w2:column>
+    						<w2:column width="105"
+    							inputType="expression" style="height:20px;" id="mgtCtAmt"
+    							blockSelect="false" displayMode="label"
+    							expression="scwin.ExprDis('grd_c','mgtCtAmt',rowIndex())" textAlign="right">
+    						</w2:column>
+    						<w2:column width="160" inputType="text"
+    							style="height:20px;" id="column30" blockSelect="false"
+    							displayMode="label" value="납입기간이내">
+    						</w2:column>
+    					</w2:row>
+    					<w2:row style="" id="row7">
+    						<w2:column width="105" inputType="text"
+    							style="height:40px;" id="column38" blockSelect="false"
+    							displayMode="label" rowSpan="2" textAlign="right">
+    						</w2:column>
+    						<w2:column width="105"
+    							inputType="expression" style="height:40px;" id="BETA_2"
+    							blockSelect="false" displayMode="label" rowSpan="2"
+    							expression="scwin.ExprDis('grd_c','BETA_2',rowIndex())"
+    							colSpan="" textAlign="right">
+    						</w2:column>
+    						<w2:column width="160" inputType="text"
+    							style="height:20px;" id="column36" blockSelect="false"
+    							displayMode="label" value="납입기간이후거치기간중">
+    						</w2:column>
+    					</w2:row>
+    					<w2:row style="" id="row8">
+    						<w2:column width="160" inputType="text"
+    							style="height:20px;" id="column42" blockSelect="false"
+    							displayMode="label" value="책임준비금에서 차감">
+    						</w2:column>
+    					</w2:row>
+    					<w2:row style="" id="row9">
+    						<w2:column hidden="false" width="170"
+    							inputType="text" style="height:20px;" id="column60"
+    							blockSelect="false" displayMode="label" colSpan="2"
+    							value="연금수령기간중의 관리비용">
+    						</w2:column>
+    						<w2:column width="105"
+    							inputType="expression" style="height:20px;" id="ANN"
+    							blockSelect="false" displayMode="label"
+    							expression="scwin.ExprDis('grd_c','ANN',rowIndex())" textAlign="right">
+    						</w2:column>
+    						<w2:column width="105"
+    							inputType="expression" style="height:20px;" id="nRiskAmt"
+    							blockSelect="false" displayMode="label"
+    							expression="scwin.ExprDis('grd_c','nRiskAmt',rowIndex())" textAlign="right">
+    						</w2:column>
+    						<w2:column width="160" inputType="text"
+    							style="height:20px;" id="column48" blockSelect="false"
+    							displayMode="label" value="연금연액기준">
+    						</w2:column>
+    					</w2:row>
+    					<w2:row style="" id="row10">
+    						<w2:column width="154" inputType="text"
+    							style="height:20px;" id="column59" blockSelect="false"
+    							displayMode="label" colSpan="3" value="합계">
+    						</w2:column>
+    						<w2:column width="105"
+    							inputType="expression" style="height:20px;" id="nSumRt"
+    							blockSelect="false" displayMode="label"
+    							expression="scwin.ExprDis('grd_c','nSumRt',rowIndex())" textAlign="right">
+    						</w2:column>
+    						<w2:column width="105"
+    							inputType="expression" style="height:20px;" id="nSumAmt"
+    							blockSelect="false" displayMode="label"
+    							expression="scwin.ExprDis('grd_c','nSumAmt',rowIndex())" textAlign="right">
+    						</w2:column>
+    						<w2:column width="160" inputType="text"
+    							style="height:20px;" id="column54" blockSelect="false"
+    							displayMode="label">
+    						</w2:column>
+    					</w2:row>
+    				</w2:gBody>
+    			</w2:gridView></xf:case>
+    			<xf:case
+    				style="width:507;height:27;"
+    				id="case4" class="">
+    			<w2:gridView showSortableUseFilter="false" scrollByColumnAdaptive="false" summaryAuto="false" useShiftKey="true" scrollByColumn="false" summaryOnlyAuto="false" focusMode="row" fixedColumnWithHidden="true" dataList="DsWs_List" ignoreCellClick="false" style="position: absolute;width:695px;height:207px;margin-top:-60px;margin-left:-514px;left:519px;top:67px;" id="grd_b" useFilterList="false" ignoreToggleOnDisabled="false" hideHeader="false" autoFit="allColumn" autoFitMinWidth="100" noResultMessageVisible="true" rowNumVisible="">
+    			<w2:header style="" id="header1">
+    				<w2:row style="" id="row1">
+    					<w2:column width="154" inputType="text" style="height:20px" id="column1" blockSelect="false" displayMode="label">
+    					</w2:column>
+    					<w2:column width="70" inputType="text" style="height:20px" id="column2" blockSelect="false" displayMode="label">
+    					</w2:column>
+    					<w2:column width="100" inputType="text" style="height:20px" id="column10" blockSelect="false" displayMode="label">
+    					</w2:column>
+    					<w2:column width="105" inputType="text" style="height:20px" id="column8" blockSelect="false" displayMode="label">
+    					</w2:column>
+    					<w2:column width="105" inputType="text" style="height:20px" id="column6" blockSelect="false" displayMode="label">
+    					</w2:column>
+    					<w2:column width="160" inputType="text" style="height:20px" id="column4" blockSelect="false" displayMode="label">
+    					</w2:column>
+    				</w2:row>
+    			</w2:header>
+    			<w2:gBody style="" id="gBody1">
+    				<w2:row style="" id="row2">
+    					<w2:column dataType="text" width="324" inputType="text" style="height:40px;" id="column1" blockSelect="false" colSpan="3" rowSpan="2" value="구분">
+    					</w2:column>
+    					<w2:column width="210" inputType="expression" style="height:20px;" id="nTotAmt" blockSelect="false" displayMode="label" colSpan="2" expression="scwin.ExprDis('grd_b','nTotAmt',rowIndex())">
+    					</w2:column>
+    					<w2:column width="160" inputType="text" style="height:20px;" id="column5" blockSelect="false" displayMode="label" rowSpan="2" value="비고">
+    					</w2:column>
+    				</w2:row>
+    				<w2:row style="" id="row3">
+    					<w2:column width="210" inputType="expression" style="height:20px;" id="nBaseGrntPrem" blockSelect="false" displayMode="label" colSpan="2" expression="scwin.ExprDis('grd_b','nBaseGrntPrem',rowIndex())">
+    					</w2:column>
+    				</w2:row>
+    				<w2:row style="" id="row4">
+    					<w2:column width="154" inputType="text" style="height:20px;" id="column23" blockSelect="false" displayMode="label" rowSpan="5" value="예정사업비">
+    					</w2:column>
+    					<w2:column width="70" inputType="text" style="height:20px;" id="column22" blockSelect="false" displayMode="label" rowSpan="2" value="체결비용">
+    					</w2:column>
+    					<w2:column width="100" inputType="text" style="height:20px;" id="column21" blockSelect="false" displayMode="label" value="판매보수">
+    					</w2:column>
+    					<w2:column width="105" inputType="expression" style="height:20px;" id="saleRt" blockSelect="false" displayMode="label" expression="scwin.ExprDis('grd_b','saleRt',rowIndex())" textAlign="right">
+    					</w2:column>
+    					<w2:column width="105" inputType="expression" style="height:20px;" id="saleAmt" blockSelect="false" displayMode="label" expression="scwin.ExprDis('grd_b','saleAmt',rowIndex())" textAlign="right">
+    					</w2:column>
+    					<w2:column width="160" inputType="text" style="height:20px;" id="column18" blockSelect="false" displayMode="label">
+    					</w2:column>
+    				</w2:row>
+    				<w2:row style="" id="row5">
+    					<w2:column width="100" inputType="text" style="height:20px;" id="column27" blockSelect="false" displayMode="label" value="유지보수">
+    					</w2:column>
+    					<w2:column width="105" inputType="expression" style="height:20px;" id="mgtRt" blockSelect="false" displayMode="label" expression="scwin.ExprDis('grd_b','mgtRt',rowIndex())" textAlign="right">
+    					</w2:column>
+    					<w2:column width="105" inputType="expression" style="height:20px;" id="mgtAmt" blockSelect="false" displayMode="label" expression="scwin.ExprDis('grd_b','mgtAmt',rowIndex())" textAlign="right">
+    					</w2:column>
+    					<w2:column width="160" inputType="text" style="height:20px;" id="column24" blockSelect="false" displayMode="label">
+    					</w2:column>
+    				</w2:row>
+    				<w2:row style="" id="row6">
+    					<w2:column width="170" inputType="text" style="height:60px;" id="column34" blockSelect="false" displayMode="label" colSpan="2" rowSpan="3" value="관리비용">
+    					</w2:column>
+    					<w2:column width="105" inputType="expression" style="height:20px;" id="mgtCtRt" blockSelect="false" displayMode="label" expression="scwin.ExprDis('grd_b','mgtCtRt',rowIndex())" textAlign="right">
+    					</w2:column>
+    					<w2:column width="105" inputType="expression" style="height:20px;" id="mgtCtAmt" blockSelect="false" displayMode="label" expression="scwin.ExprDis('grd_b','mgtCtAmt',rowIndex())" textAlign="right">
+    					</w2:column>
+    					<w2:column width="160" inputType="text" style="height:20px;" id="column30" blockSelect="false" displayMode="label" value="납입기간이내">
+    					</w2:column>
+    				</w2:row>
+    				<w2:row style="" id="row7">
+    					<w2:column width="105" inputType="text" style="height:40px;" id="column38" blockSelect="false" displayMode="label" rowSpan="2" textAlign="right">
+    					</w2:column>
+    					<w2:column width="105" inputType="expression" style="height:40px;" id="BETA_2" blockSelect="false" displayMode="label" rowSpan="2" expression="scwin.ExprDis('grd_b','BETA_2',rowIndex())" textAlign="right">
+    					</w2:column>
+    					<w2:column width="160" inputType="text" style="height:20px;" id="column36" blockSelect="false" displayMode="label" value="납입기간이후 거치기간중">
+    					</w2:column>
+    				</w2:row>
+    				<w2:row style="" id="row8">
+    					<w2:column width="160" inputType="text" style="height:20px;" id="column42" blockSelect="false" displayMode="label" value="책임준비금에서 차감">
+    					</w2:column>
+    				</w2:row>
+    				<w2:row style="" id="row9">
+    					<w2:column width="100" inputType="text" style="height:20px;" id="column53" blockSelect="false" displayMode="label" colSpan="3" value="합계">
+    					</w2:column>
+    					<w2:column width="105" inputType="expression" style="height:20px;" id="nSumRt" blockSelect="false" displayMode="label" expression="scwin.ExprDis('grd_b','nSumRt',rowIndex())" textAlign="right">
+    					</w2:column>
+    					<w2:column width="105" inputType="expression" style="height:20px;" id="nSumAmt" blockSelect="false" displayMode="label" expression="scwin.ExprDis('grd_b','nSumAmt',rowIndex())" textAlign="right">
+    					</w2:column>
+    					<w2:column width="160" inputType="text" style="height:20px;" id="column48" blockSelect="false" displayMode="label">
+    					</w2:column>
+    				</w2:row>
+    			</w2:gBody>
+    		</w2:gridView></xf:case>
+    		</xf:switch>
+    		
+    		
+
+
+
+    		<w2:textbox id="Static1" label="② 적용이율의 변동가능성"
+    			style="position:absolute; VAlign:Middle;  height:20px;left:1px;top:339px; width:249px;"
+    			tagname="" />
+    		<w2:textbox id="Static2" label="적용이율 : 공시이율"
+    			style="position:absolute; VAlign:Middle;  height:20px;left:25px;top:363px; width:112px;"
+    			tagname="" />
+    		<w2:textbox id="Static3" label="③ 원금도달기간 :"
+    			style="position:absolute; VAlign:Middle;  height:20px;left:2px;top:386px; width:103px;"
+    			tagname="" />
+    		<w2:textbox id="edt_rato"
+    			style="position:absolute; VAlign:Middle;  height:20px;left:145px;top:363px; width:176px;"
+    			tagname="" />
+    		<w2:textbox id="edt_date"
+    			style="position:absolute; VAlign:Middle;  height:20px;left:105px;top:386px; width:176px;"
+    			tagname="" />
+
+    		<w2:textbox id="Static4"
+    			label="불완전판매 예방을 위한 해피콜 제도 개선 일환으로 저축성보험 개방형(선택형ㆍ단답형) 질문관련 내용입니다."
+    			style="position:absolute; VAlign:Middle;  height:20px;left:2px;top:35px; width:623px;"
+    			tagname="" />
+    		<w2:textbox id="Static7"
+    			label="※ 상세내용은 상품설명서 內 '사업비등 공제금액 안내표'를 참고하시기 바랍니다."
+    			style="position:absolute;height:20px;width:623px;left:2px;VAlign:Middle;top:312px;"
+    			tagname="" />
+    		<w2:textbox id="Static6"
+    			label="※ 예정사업비는 기본계약 보험료(적립보험료)를 기준으로 산출됩니다."
+    			style="position:absolute;height:20px;width:623px;left:2px;VAlign:Middle;top:294px;"
+    			tagname="" />
+
+    	</xf:group>
+    </body>
+</html>

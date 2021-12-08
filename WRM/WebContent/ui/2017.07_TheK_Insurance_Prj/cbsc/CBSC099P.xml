@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+    <!-- 
+		 ###################################################
+         파일명 : CBSC099P.xml
+         프로그램명 : 즉시위험고객대상
+         설 명 :  즉시위험고객대상
+         작성자 : 진태만
+         작성일 : 2017.10.02
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.10.02        진태만          최초작성
+        ###################################################
+     -->
+	 <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+         		 
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        
+	<!--// js Script include //--> 
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/> 
+	 	<script src="/cm/js/convertJs/LongTerm_Script.js"/>
+ 
+        <script><![CDATA[
+/****************************************************************************
+ * 프로그램번호   : B014_Pop
+ * 프로그램명     : 즉시위험고객대상
+ * 파일명         : B1014_Pop.xml
+ * 작성자         : 신동주
+ * 작성일         : 2014-09-26
+  ****************************************************************************/
+
+//---------------------------------------------------------------------------
+// function 명 : FORM_OnLoadCompleted(obj)
+// 내용        : FORM OnLoad
+//---------------------------------------------------------------------------
+scwin.init = function() { 
+	//console.log("[/CBSC099P.xml] [init()] ==> [폼 로딩] [TEST_01]" );  
+	
+ 	var pro = Promise.resolve();
+	window.top.util.winTopShowModalChk = "T";
+	util.winTopShowModal();
+
+	pro = pro.then(function(rv) {
+		return util.winTopShowModalPromise();
+	});
+
+	pro = pro.then(function(rv) {
+		// init 부분 함수 입력하는곳  // =================================================>
+		 
+		return ;		// init 함수를 종료하고자 할때 사용
+		// return Promise.reject("오류관련처리"); // =================================================>
+	});
+
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});
+	
+	//pro = pro.catch(function(rj) {
+		//util.winTopHideModal();
+		//alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+	//});
+	 
+	return pro;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_Close_OnClick(obj)
+// 내용        : 닫기 OnClick
+//---------------------------------------------------------------------------
+scwin.btn_Close_OnClick = function(obj) {
+    wprom.close("");
+};
+ ]]></script>
+    </head>
+     <body>
+        <xf:group class="cont_wrap layer" id="B014_Pop"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;/*  height:496px;*/ left:0px; top:0px;/* width:544px;" userData1="즉시 고위험 고객">
+            <w2:textbox class="search_area" id="Static3"
+                label="1. 종합자산관리서비스를 받는 고액자산고객으로 추가정보 확인이 필요하다 판단되는 고객&lt;br/&gt;&lt;br/&gt;
+                2. 외국의 정치적 주요인물&lt;br/&gt;&lt;br/&gt;
+                3. 국내 비거주자&lt;br/&gt;&lt;br/&gt;
+                4. 대량의 현금(또는 현금등가물)거래가 수반되는 카지노사업자, 대부업자, 환전상 등&lt;br/&gt;&lt;br/&gt;
+                5. 고각의 귀금속 판매상&lt;br/&gt;&lt;br/&gt;
+                6. 금융위원회가 공중협박자금조달과 관련하여 고시하는 금융거래제한대상자&lt;br/&gt;&lt;br/&gt;
+                7. UN에서 발표하는 테러리스트에 포함된 자&lt;br/&gt;&lt;br/&gt;
+                8. 신탁받은 개인자산을 운영, 관리하기 위하여 별도로 설립된 법인 또는 단체&lt;br/&gt; &amp;nbsp; &amp;nbsp;(「자본시장과 금융투자업에 관한 법률」에 의한 집합투자기구 및 신탁업자는 제외)&lt;br/&gt;&lt;br/&gt;
+                9. 명의주주가 있거나 무기명주식을 발행한 회사&lt;br/&gt;&lt;br/&gt;
+                10. 가상통화 취급업자(전자상거래 소매업/소매 중개업자, 응용 소프트웨어 개발 및 공급업자* 등 대상 고객확인으로 식별)  * 통계청 표준산업분류 기준 &lt;br/&gt;&lt;br/&gt;
+                11. 양도성  예금증서(증서식무기명)&lt;br/&gt;&lt;br/&gt;
+                12. 환거래 서비스&lt;br/&gt;&lt;br/&gt;
+                13. 기타 정부 또는 감독기관에서 고위험으로 판단하는 상품 및 서비스 등"
+                style="position:absolute; WordWrap:TRUE;  VAlign:Middle; left:0px; top:30px; width:520px;height:440px;padding:15px;line-height:14px" tagname=""/>
+            <w2:textbox id="Static13" label="즉시 고위험 고객 분류 대상" style="position:absolute; VAlign:Middle;  height:24px; left:0px; top:0px; " tagname="" class="sub_pop_title01">
+</w2:textbox>
+            
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.btn_Close_OnClick" id="btn_close"
+                style="position:absolute; ImageID:btn_Comm_Close;  height:20px;left:471px;top:0px; width:25px;" tabIndex="4" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+        </xf:group>
+    </body>
+</html>

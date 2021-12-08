@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+	
+	/**
+	 * 화면 초기 로딩시 수행 스크립트
+	 */
+	scwin.onpageload = function() {
+		console.log("[/footer.xml] [onpageload()] ==> [TEST_01] [footer 화면 로딩...@@@]");
+	
+	};
+	
+	scwin.onpageunload = function() {
+
+	};
+	
+	scwin.spn_message_onclick = function(e) {
+		console.log("[/footer.xml] [spn_message_onclick()] ==> [TEST_01]");
+		
+		var messageData = grp_message.getUserData("message");
+		var statusCode = messageData.statusCode;
+		var message = messageData.message;
+		var messageDetail = messageData.messageDetail;
+
+		var noticeInfo = $p.top().wfm_header.getWindow().notice_Info;
+		console.log("[/footer.xml] [spn_message_onclick()] ==> [TEST_02] [noticeInfo]"+ noticeInfo );
+		
+		noticeInfo.removeClass("success");
+		noticeInfo.removeClass("warning");
+		noticeInfo.removeClass("error");
+		console.log("[/footer.xml] [spn_message_onclick()] ==> [TEST_51] [statusCode]"+ statusCode );
+	
+		if (statusCode == "S") {
+			noticeInfo.addClass("success");
+		} else if (statusCode == "W") {
+			noticeInfo.addClass("warning");
+		} else if (statusCode == "E") {
+			noticeInfo.addClass("error");
+		}
+		
+		$p.top().wfm_header.getWindow().tbx_message.setValue(messageData.message);
+		$p.top().wfm_header.getWindow().txa_messageDetail.toggleClass("hidden");
+		$p.top().wfm_header.getWindow().btn_notiMore.hide();
+	
+		if (statusCode == "E") {
+			$p.top().wfm_header.getWindow().tbx_status.setValue("[" + messageData.errorCode + "] ");
+			$p.top().wfm_header.getWindow().tbx_message.setValue(messageData.messageDetail || messageData.message);
+		}
+		if (statusCode != "S") {
+			$(".notice").show();
+			$(".notice").css({ "opacity" : "0" }).animate({ bottom : "46px", "opacity" : "1" }, 1000);
+		} else {
+			$(".notice").hide();
+		}
+	};
+	
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group id="grp_message" style="" class="grp_message">
+			<w2:span label="" id="spn_message" style="font-weight:bold;" ev:onclick="scwin.spn_message_onclick" class="spn_message"></w2:span>
+		</xf:group>
+	</body>
+</html>

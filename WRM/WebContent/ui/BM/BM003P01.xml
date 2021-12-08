@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<!--
+		#####################################################################
+		파일명 : BM003P01.xml
+		프로그램명 : 메뉴별 사용자 조회 팝업
+		설 명 : 메뉴별 사용자 조회 팝업
+		작성자 : Inswave Systems
+		작성일 : 2016.10.25
+
+		수정일자	  수정자			 수정내용
+		=====================================================================
+		2016.10.25	Inswave Systems	최초작성
+		2018.01.26	Inswave Systems	WebSquare5 SP2 기능을 적용하도록 소스 업그레이드
+		2018.11.12	Inswave Systems	WebSquare5 SP3 기능을 적용하도록 소스 업그레이드
+		#####################################################################
+		-->
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataList id="dlt_programAuthority" baseNode="list" style="" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="chk" name="선택" dataType="text"></w2:column>
+						<w2:column id="AUTHORITY_CD" name="권한코드" dataType="text"></w2:column>
+						<w2:column id="AUTHORITY_NM" name="권한명" dataType="text"></w2:column>
+						<w2:column id="NOTE" name="비고" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" id="dma_search">
+					<w2:keyInfo>
+						<w2:key id="PROGRAM_CD" name="프로그램코드" dataType="text"></w2:key>
+						<w2:key id="IS_USE" name="사용여부" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>
+			<xf:submission id="sbm_excludeSearchProgramAuthority" ref='data:json,dma_search' target='data:json,dlt_programAuthority'
+				action="/program/excludeSelectProgramAuthority" method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler=""
+				customHandler="" mode="asynchronous" processMsg="" ev:submit="" ev:submitdone="" ev:submiterror="">
+			</xf:submission>			
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+	/**
+	  * 초기 스크립트 수행 함수 정의
+	  */
+	scwin.onpageload = function() {
+		var param = com.getParameter();
+		dma_search.set("PROGRAM_CD" , param.data.PROGRAM_CD);
+		dma_search.set("IS_USE" , "Y");
+		
+		scwin.closeCallbackFncName = param.callbackFn;
+		com.setEnterKeyEvent(tbl_search, scwin.btn_search_onclick);
+		com.executeSubmission(sbm_excludeSearchProgramAuthority);
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+		
+	/**
+	 * 프로그램에 등록되지 않은 권한을 조회한다.
+	 */			
+	scwin.btn_search_onclick = function() {
+		com.executeSubmission(sbm_excludeSearchProgramAuthority);
+	};
+	
+	/**
+	 * 선택된 권한 정보를 반환한다.
+	 */
+	scwin.btn_confirm_onclick = function() {
+		var data = grd_excludeProgramAuthority.getCheckedJSON("chk");
+		com.closePopup(scwin.closeCallbackFncName, data);
+	};
+		
+	/**
+	 * 권한 선택을 취소한다.
+	 */
+	scwin.btn_cancel_onclick = function() {
+		com.closePopup();
+	};
+
+	]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="pop_L" id="" style="">
+		<xf:group id="" style="" class="pop_con"><xf:group id="tbl_search" style="" class="tbl_search mb10">
+				<xf:group id="" style="" adaptive="layout" class="w2tb tbl_sc" adaptiveThreshold="768" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:80.00px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+						<xf:group style="width:180.00px;" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">권한</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:input id="" ref="data:dma_search.CONTENT" style="width: 100%;" class=""></xf:input>
+						</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<w2:anchor id="btn_search" style="" clickEventElement="outerDiv" ev:onclick="scwin.btn_search_onclick" class="btn_sh" outerDiv="true">
+								<xf:label><![CDATA[조회]]></xf:label>
+							</w2:anchor>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group><w2:gridView id="grd_excludeProgramAuthority" dataList="dlt_programAuthority" autoFit="allColumn" readOnly="true" style="height:240px;" useShiftKey="false" scrollByColumn="false" class="cm_grid" fixedColumnWithHidden="true" adaptive="crosstab">
+				<w2:header id="header1" style="">
+					<w2:row id="row1" style="">
+						<w2:column id="chkHeader" blockSelect="false" style="height:20px" width="39" inputType="checkbox" value="선택"></w2:column>
+						<w2:column id="column7" blockSelect="false" style="height:20px" width="101" inputType="text" value="권한코드"></w2:column>
+						<w2:column id="column5" blockSelect="false" style="height:20px" width="140" inputType="text" value="권한명"></w2:column>
+						<w2:column id="column1" blockSelect="false" style="height:20px" width="201" inputType="text" value="비고"></w2:column>
+					</w2:row>
+				</w2:header>
+				<w2:gBody id="gBody1" style="">
+					<w2:row id="row2" style="">
+						<w2:column id="chk" blockSelect="false" trueValue="1" readOnly="false" style="height:20px" falseValue="0" width="39" inputType="checkbox" defaultValue="">
+						</w2:column>
+						<w2:column id="AUTHORITY_CD" blockSelect="false" style="height:20px" width="101" inputType="text"></w2:column>
+						<w2:column id="AUTHORITY_NM" blockSelect="false" style="height:20px" width="140" inputType="text"></w2:column>
+						<w2:column id="NOTE" blockSelect="false" style="height:20px" width="201" inputType="text"></w2:column>
+					</w2:row>
+				</w2:gBody>
+			</w2:gridView><xf:group id="group10" style="width: 100%;text-align:center;margin-top:10px;" class="">
+				<w2:anchor id="btn_confirm" style="" ev:onclick="scwin.btn_confirm_onclick" class="btn_cm">
+					<xf:label><![CDATA[확인]]></xf:label>
+				</w2:anchor>
+				<w2:anchor id="btn_cancel" style="" ev:onclick="scwin.btn_cancel_onclick" class="btn_cm" outerDiv="">
+					<xf:label><![CDATA[취소]]></xf:label>
+				</w2:anchor>
+			</xf:group></xf:group></xf:group>
+	</body>
+</html>

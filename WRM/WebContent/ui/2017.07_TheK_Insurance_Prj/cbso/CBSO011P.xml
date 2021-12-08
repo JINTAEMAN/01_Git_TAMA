@@ -1,0 +1,3694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+            	<w2:dataList baseNode="list" id="Ds_TelType"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sCode"
+            				name="sCode" />
+            			<w2:column dataType="text" id="sName"
+            				name="sName" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<sCode><![CDATA[1]]></sCode>
+            				<sName><![CDATA[핸드폰]]></sName>
+            			</w2:row>
+            			<w2:row>
+            				<sCode><![CDATA[2]]></sCode>
+            				<sName><![CDATA[기타]]></sName>
+            			</w2:row>
+            			<w2:row>
+            				<sCode><![CDATA[3]]></sCode>
+            				<sName><![CDATA[수기입력]]></sName>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_Customer"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="cTel1"
+            				name="cTel1" />
+            			<w2:column dataType="text" id="cTel2"
+            				name="cTel2" />
+            			<w2:column dataType="text" id="cTel3"
+            				name="cTel3" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_CallCd"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="CODE"
+            				name="CODE" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<CODE><![CDATA[010]]></CODE>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[011]]></CODE>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[016]]></CODE>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[017]]></CODE>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[018]]></CODE>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[019]]></CODE>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_Send_Costomer"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sCustNo"
+            				name="sCustNo" />
+            			<w2:column dataType="text" id="sCellTel1"
+            				name="sCellTel1" />
+            			<w2:column dataType="text" id="sCellTel2"
+            				name="sCellTel2" />
+            			<w2:column dataType="text" id="sCellTel3"
+            				name="sCellTel3" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_Send_ORG"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sCellTel11"
+            				name="sCellTel11" />
+            			<w2:column dataType="text" id="sCellTel21"
+            				name="sCellTel21" />
+            			<w2:column dataType="text" id="sCellTel31"
+            				name="sCellTel31" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_Send_Direct"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sCallBackTel1"
+            				name="sCallBackTel1" />
+            			<w2:column dataType="text" id="sCallBackTel2"
+            				name="sCallBackTel2" />
+            			<w2:column dataType="text" id="sCallBackTel3"
+            				name="sCallBackTel3" />
+            			<w2:column dataType="text" id="sMsgContent"
+            				name="sMsgContent" />
+            			<w2:column dataType="text" id="sSendStaff"
+            				name="sSendStaff" />
+            			<w2:column dataType="text" id="sCertCouponType"
+            				name="sCertCouponType" />
+            			<w2:column dataType="text" id="send_num11"
+            				name="send_num11" />
+            			<w2:column dataType="text" id="send_num12"
+            				name="send_num12" />
+            			<w2:column dataType="text" id="send_num13"
+            				name="send_num13" />
+            			<w2:column dataType="text" id="send_num21"
+            				name="send_num21" />
+            			<w2:column dataType="text" id="send_num22"
+            				name="send_num22" />
+            			<w2:column dataType="text" id="send_num23"
+            				name="send_num23" />
+            			<w2:column dataType="text" id="send_num31"
+            				name="send_num31" />
+            			<w2:column dataType="text" id="send_num32"
+            				name="send_num32" />
+            			<w2:column dataType="text" id="send_num33"
+            				name="send_num33" />
+            			<w2:column dataType="text" id="send_num41"
+            				name="send_num41" />
+            			<w2:column dataType="text" id="send_num42"
+            				name="send_num42" />
+            			<w2:column dataType="text" id="send_num43"
+            				name="send_num43" />
+            			<w2:column dataType="text" id="send_num51"
+            				name="send_num51" />
+            			<w2:column dataType="text" id="send_num52"
+            				name="send_num52" />
+            			<w2:column dataType="text" id="send_num53"
+            				name="send_num53" />
+            			<w2:column dataType="text" id="send_num61"
+            				name="send_num61" />
+            			<w2:column dataType="text" id="send_num62"
+            				name="send_num62" />
+            			<w2:column dataType="text" id="send_num63"
+            				name="send_num63" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_Send_base1"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sCallBackTel1"
+            				name="sCallBackTel1" />
+            			<w2:column dataType="text" id="sCallBackTel2"
+            				name="sCallBackTel2" />
+            			<w2:column dataType="text" id="sCallBackTel3"
+            				name="sCallBackTel3" />
+            			<w2:column dataType="text" id="sMsgContent"
+            				name="sMsgContent" />
+            			<w2:column dataType="text" id="sSendStaff"
+            				name="sSendStaff" />
+            			<w2:column dataType="text" id="sCertCouponType"
+            				name="sCertCouponType" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_Send_base2"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sCallBackTel1"
+            				name="sCallBackTel1" />
+            			<w2:column dataType="text" id="sCallBackTel2"
+            				name="sCallBackTel2" />
+            			<w2:column dataType="text" id="sCallBackTel3"
+            				name="sCallBackTel3" />
+            			<w2:column dataType="text" id="sMsgContent"
+            				name="sMsgContent" />
+            			<w2:column dataType="text" id="sSendStaff"
+            				name="sSendStaff" />
+            			<w2:column dataType="text" id="sCertCouponType"
+            				name="sCertCouponType" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_CLMMA37"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sSerialNo" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sContent" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputTime" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUserID" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDiv" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sStaff" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="CHK" name="name8"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_SMSType2"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="nCode1"
+            				name="nCode1" />
+            			<w2:column dataType="text" id="nCode2"
+            				name="nCode2" />
+            			<w2:column dataType="text" id="sName"
+            				name="sName" />
+            			<w2:column dataType="text" id="sContent"
+            				name="sContent" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_sCenter"
+            		repeatNode="map" userData2="//*/data/ADMAC01">
+            		<w2:columnInfo>
+            			<w2:column id="sOpenDate" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCloseYN" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sLevel" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTel3" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTel2" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAcctUnit" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDepartName" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTel1" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDepartCode" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUpperCode" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDepartType" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCloseDate" name="name12"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_sTeam"
+            		repeatNode="map" userData2="//*/data/ADMAC01">
+            		<w2:columnInfo>
+            			<w2:column id="sOpenDate" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCloseYN" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sLevel" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTel3" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTel2" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAcctUnit" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDepartName" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTel1" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDepartCode" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUpperCode" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDepartType" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCloseDate" name="name12"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_sStaff"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sStaff" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sName" name="name2"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_ADMAB01"
+            		repeatNode="map" userData2="//*/data/DsWs_ADMAB01" />
+            	<w2:dataList baseNode="list" id="DsWs_CLMMA12"
+            		repeatNode="map" userData2="//*/data/CLMMA12">
+            		<w2:columnInfo>
+            			<w2:column id="sLast" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCenterName" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nAddrStdSeq" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sLicenseOne" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sChargeBiz1" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sChargeBiz2" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sChargeBiz3" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sStaffGrade" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApprRightAgree" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUserID" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeZip1" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOffTel3" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOffTel1" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOffTel2" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sChargeBiz1Name" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeRegionCode" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sObtainOneDate" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sObtainTwoDate" name="name18"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeZip2" name="name19"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sChargeBiz2Name" name="name20"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeAddr2" name="name21"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTodt" name="name22"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeAddr1" name="name23"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sZipType" name="name24"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputTime" name="name25"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeam" name="name26"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSerialNo" name="name27"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDuty" name="name28"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sChargeBiz3Name" name="name29"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sLicenseTwo" name="name30"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApprRightDmge" name="name31"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAddrMgtNo" name="name32"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCenter" name="name33"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPromoteDate" name="name34"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name35"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSecondStaffNo" name="name36"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeamName" name="name37"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellTel3" name="name38"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellTel2" name="name39"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDutyChngDate" name="name40"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDiv" name="name41"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellTel1" name="name42"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApprRightVictim" name="name43"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sFmdt" name="name44"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSocNo" name="name45"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sResTel1" name="name46"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sStaff" name="name47"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sName" name="name48"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplyDate" name="name49"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sResTel2" name="name50"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sResTel3" name="name51"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_SearchList"
+            		repeatNode="map" userData2="//*/data/ADMAB01">
+            		<w2:columnInfo>
+            			<w2:column id="sDepartCode1" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEmpNo1" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDepartCode2" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEmpNo2" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellTel22" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDepartName2" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEmpName2" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellTel11" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDepartName1" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEmpName1" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellTel12" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellTel21" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellTel31" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellTel32" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="editYN" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="editYN2" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="CHK" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="CHK2" name="name18"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_SearchWarning"
+            		repeatNode="map" userData2="//*/WARNING">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list"
+            		ev:oncelldatachange="scwin.DsWs_CUSAA03_OnColumnChanged"
+            		id="DsWs_CUSAA03" repeatNode="map"
+            		userData2="//*/CUSAA03">
+            		<w2:columnInfo>
+            			<w2:column id="result" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sFax2" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sFax3" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sLast" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSeqNo" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sFax1" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeTel2" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEtcType" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeTel3" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeTel1" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUserID" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRealCustNo" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHomeTel2" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHomeTel1" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEmail2" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHomeTel3" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEmail1" name="name18"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCustNo" name="name19"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEtcTel3" name="name20"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEtcTel2" name="name21"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAffiliatedConcern" name="name22"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellPhone3" name="name23"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellPhone1" name="name24"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellPhone2" name="name25"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nChangeNo" name="name26"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEtcTel1" name="name27"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHomepageUrl" name="name28"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInnerPhone" name="name29"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputTime" name="name30"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sName" name="name31"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="CHK" name="name32"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTelType" name="name33"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDirectTel1" name="name34"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDirectTel2" name="name35"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDirectTel3" name="name36"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_SMSType1"
+            		repeatNode="map" userData2="//*/vector/data/CCCIB01">
+            		<w2:columnInfo>
+            			<w2:column id="nOrder" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sContent" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSendType" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMsgChgYN" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCode2" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUseYN" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCode1" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCertCouponType" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCertValidDay" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sName" name="name10"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_SMSType2"
+            		repeatNode="map" userData2="//*/vector/data/CCCIB01">
+            		<w2:columnInfo>
+            			<w2:column id="nOrder" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sContent" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSendType" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMsgChgYN" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCode2" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUseYN" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCode1" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCertCouponType" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCertValidDay" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sName" name="name10"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_commonSMS"
+            		repeatNode="map" userData2="//*/vector/data/CCCIB01">
+            		<w2:columnInfo>
+            			<w2:column id="nOrder" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sContent" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSendType" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMsgChgYN" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCode2" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUseYN" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCode1" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCertCouponType" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCertValidDay" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sName" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="CHK" name="name11"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_SearchWarning2"
+            		repeatNode="map" userData2="//*/WARNING">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_commonSMS_P"
+            		repeatNode="map" userData2="//*/vector/data/CCCIB01">
+            		<w2:columnInfo>
+            			<w2:column id="nOrder" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sContent" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSendType" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMsgChgYN" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCode2" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUseYN" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCode1" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCertCouponType" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCertValidDay" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sName" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="CHK" name="name11"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_getAutoStaff"
+            		repeatNode="map" userData2="//*/ADMAC03">
+            		<w2:columnInfo>
+            			<w2:column id="result" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="afterEJBCall" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPartCode" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCenterCode" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCenterName" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sClaimCenter" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="beforeEJBCall" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDptOfficeName" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGroupCode" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeZip1" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOffTel3" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOffTel1" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOffTel2" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHeadCenterName" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHeadCenterCode" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeamCode" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDptOfficeCode" name="name18"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGroupName" name="name19"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeZip2" name="name20"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTeamName" name="name21"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeAddr2" name="name22"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellTel3" name="name23"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sClaimTeam" name="name24"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellTel2" name="name25"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeAddr1" name="name26"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellTel1" name="name27"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgentName" name="name28"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPartName" name="name29"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputTime" name="name30"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sClaimCenterName" name="name31"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgentCode" name="name32"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sClaimTeamName" name="name33"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_getSendStaffTel"
+            		repeatNode="map" userData2="//*/ADMAB01">
+            		<w2:columnInfo>
+            			<w2:column id="sOfficeTel2" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeTel3" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="result" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOfficeTel1" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="afterEJBCall" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="beforeEJBCall" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellTel3" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellTel2" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCellTel1" name="name9"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_SendWarning"
+            		repeatNode="map" userData2="//*/WARNING">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_CLMMA37"
+            		repeatNode="map"
+            		userData2="//*/hashtable/data/vector/data/CLMMA37">
+            		<w2:columnInfo>
+            			<w2:column id="sSerialNo" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sContent" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputTime" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUserID" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDiv" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sStaff" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="CHK" name="name8"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_CLMMA37_P"
+            		repeatNode="map"
+            		userData2="//*/hashtable/data/vector/data/CLMMA37_P">
+            		<w2:columnInfo>
+            			<w2:column id="sSerialNo" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sContent" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputTime" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUserID" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDiv" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sStaff" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="CHK" name="name8"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_searchSMSWarning"
+            		repeatNode="map" userData2="//*/WARNING">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_selfInsert"
+            		repeatNode="map" userData2="//*/CLMMA37" />
+            	<w2:dataList baseNode="list" id="DsWs_selfInsertWarning"
+            		repeatNode="map" userData2="//*/WARNING">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_selfDelete"
+            		repeatNode="map" userData2="//*/CLMMA37" />
+            	<w2:dataList baseNode="list" id="DsWs_selfDeleteWarning"
+            		repeatNode="map" userData2="//*/WARNING">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_selfUpdate"
+            		repeatNode="map" userData2="//*/CLMMA37" />
+            	<w2:dataList baseNode="list" id="DsWs_selfUpdateWarning"
+            		repeatNode="map" userData2="//*/WARNING">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_SMSTypeACC"
+            		repeatNode="map" userData2="//*/vector/data/CCCIB01">
+            		<w2:columnInfo>
+            			<w2:column id="nOrder" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sContent" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSendType" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMsgChgYN" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCode2" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUseYN" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCode1" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCertCouponType" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCertValidDay" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sName" name="name10"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_SMSTypeFax"
+            		repeatNode="map" userData2="//*/vector/data/CCCIB01">
+            		<w2:columnInfo>
+            			<w2:column id="nOrder" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sContent" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSendType" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMsgChgYN" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCode2" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUseYN" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCode1" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCertCouponType" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCertValidDay" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sName" name="name10"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" repeatNode="map"
+            		id="WARNING" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+ <script src="/cm/js/common.js"/>
+ <script src="/cm/js/val_lib.js"/>
+ <script src="/cm/js/util.js"/>
+ <script src="/cm/js/transSub.js"/>
+ <script src="/cm/js/callService.js"/>
+ <script src="/cm/js/gds.js"/>
+ <script src="/cm/js/wconv.js"/>
+ <script src="/cm/js/convertJs/Global_Script.js"/>
+ <script src="/cm/js/convertJs/comm_Webservice.js"	/>        
+        <script><![CDATA[
+/*
+ *===================================File description================================================
+ * Create Date : 2009/10/05 
+ * Creater     : 원신희 
+ *====================================================================================================
+ */
+
+//***************************************************************************
+//****************************** 초기화 *************************************
+//***************************************************************************
+//var gUserID = '3031000';// 개발완료후 삭제
+//var gUserID = "3080001";// 개발완료후 삭제
+var userID = util.getGdsValue("gUserID");//util.getGdsValue("gUserID");
+var sSendStaff;
+var pCustNo = "";
+
+//**************************************************************************************************
+//  폼 로딩시 초기화 
+//************************************************************************************************** 
+scwin.init = function() {
+ 
+    Tab0.setSelectedTabIndex( 0 );       
+	Grd_Cus.setHeaderHide( true );
+	//console.log("==="+Tab0_tab1_Grid0.getColumnWidth( "sEtcTel1"));
+	Tab0_tab1_Grid0.setColumnVisible( "sDirectTel1" , false);
+	Tab0_tab1_Grid0.setColumnVisible( "sDirectTel2" , false );
+	Tab0_tab1_Grid0.setColumnVisible( "sDirectTel3" , false );
+	Tab0_tab1_Grid0.setColumnVisible( "sCellPhone1" , true );
+	Tab0_tab1_Grid0.setColumnVisible( "sCellPhone2" , true );
+	Tab0_tab1_Grid0.setColumnVisible( "sCellPhone3" , true );
+	Tab0_tab1_Grid0.setColumnVisible( "sEtcTel1" , false );
+	Tab0_tab1_Grid0.setColumnVisible( "sEtcTel2" , false);
+	Tab0_tab1_Grid0.setColumnVisible( "sEtcTel3" , false );
+	Tab0_tab1_Grid0.setColumnVisible( "sEtcType2" , false );
+	
+	//console.log("==="+Tab0_tab1_Grid0.getColumnWidth( "sEtcTel1"));
+	
+    sSendStaff = userID;
+    scwin.getAutoStaff();
+    scwin.setDepartCenter();
+    scwin.setDepartTeamInt();
+    scwin.setDepartStaffInt();
+    scwin.setSMSTypeName1();
+    scwin.setSMSTypeName2();
+    
+    Radio_searchType.setValue("1");
+    
+    scwin.changeSearchType(1);
+    if (sCustNo.getValue() != "") {
+        scwin.lfn_Search();
+    }
+    
+};
+
+//**************************************************************************************************
+// 파라미터 받기 (기간계일경우 고객번호 받아서 set)
+//**************************************************************************************************
+scwin.setCustNo = function(pCustNo) {
+    sCustNo.setValue(pCustNo);
+};
+
+//**************************************************************************************************
+//  로그인 유저 정보 조회
+//************************************************************************************************** 
+scwin.getAutoStaff = function() {
+
+    wconv.clear(DsWs_getAutoStaff);
+    /*orign
+    SOBJ_Claim.WSDL = gds.gWsdlClaim;
+    var MethodObj1 = gfn_CreateMethodObj(SOBJ_Claim, "ClaimManageTask", "selectCenterTeamStaffAdmin");
+    gfn_SetParam(MethodObj1, "sAgentCode", util.getGdsValue("gUserID"));
+    gfn_CallService(SOBJ_Claim, DOBJ_getAutoStaff, MethodObj1);
+    */
+	var MethodObj = new callService("com.inswave.claim.task.ClaimManageTask", "selectCenterTeamStaffAdmin");
+	MethodObj.setId("selectCenterTeamStaffAdmin");
+	MethodObj.setParam("sAgentCode", util.getGdsValue("gUserID") );
+	MethodObj.setUrl("/common/CBSO011PController.do");
+	MethodObj.setXPath("//*/ADMAC03"); 
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	DsWs_getAutoStaff.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터     
+	//
+    scwin.adrsCallbackAuto();
+};
+//**************************************************************************************************
+//  발신번호 set
+//************************************************************************************************** 
+scwin.adrsCallbackAuto = function() {
+    sSendStaff = DsWs_getAutoStaff.getCellData(0, "sAgentCode");
+    if (wconv.substr(sSendStaff, 0, 1) == "3") {
+        St_sSendCenterName.setValue("");
+        St_sSendName.setValue("에듀카");
+        Txt_MsgContent.setValue("[에듀카]");
+        
+        scwin.Txt_MsgContent_OnCharChanged(); //텍스트 크기
+        
+        Ed_CallBackTel1.setValue("");
+        Ed_CallBackTel2.setValue("1566");
+        Ed_CallBackTel3.setValue("3000");
+        CallBackTel1.setValue("");
+        CallBackTel2.setValue("1566");
+        CallBackTel3.setValue("3000");
+    } else {
+        St_sSendCenterName.setValue(DsWs_getAutoStaff.getCellData(0, "sCenterName"));
+        St_sSendName.setValue(DsWs_getAutoStaff.getCellData(0, "sAgentName"));
+        Txt_MsgContent.setValue("[" + DsWs_getAutoStaff.getCellData(0, "sAgentName") + "]");
+        scwin.Txt_MsgContent_OnCharChanged(); //텍스트 크기
+        Ed_CallBackTel1.setValue("");
+        Ed_CallBackTel2.setValue("");
+        Ed_CallBackTel3.setValue("");
+        scwin.getSendStaffTel();
+    }
+};
+//**************************************************************************************************
+//  로그인 유저 핸드폰 번호 조회 set
+//************************************************************************************************** 
+scwin.getSendStaffTel = function() {
+    wconv.clear(DsWs_getSendStaffTel);
+    /*
+    SOBJ_Admin.WSDL = gds.gWsdlAdmin;
+    var MethodObj1 = gfn_CreateMethodObj(SOBJ_Admin, "AdminTask", "selectSendCellTel");
+    gfn_SetParam(MethodObj1, "sStaff", sSendStaff);
+    gfn_CallService(SOBJ_Admin, DOBJ_getSendStaffTel, MethodObj1);
+    */
+    var MethodObj = new callService("com.inswave.admin.task.AdminTask", "selectSendCellTel");
+	MethodObj.setId("selectSendCellTel");
+	MethodObj.setParam("sStaff", sSendStaff);
+	MethodObj.setUrl("/common/CBSO011PController.do");
+	MethodObj.setXPath("//*/ADMAB01");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	DsWs_getSendStaffTel.setJSON (_tranSync.getDsJson("ADMAB01")); // dataset 데이터 
+
+    scwin.adrsCallbackAuto2();
+};
+scwin.adrsCallbackAuto2 = function() {
+    Ed_CallBackTel1.setValue(DsWs_getSendStaffTel.getCellData(0, "sCellTel1"));
+    Ed_CallBackTel2.setValue(DsWs_getSendStaffTel.getCellData(0, "sCellTel2"));
+    Ed_CallBackTel3.setValue(DsWs_getSendStaffTel.getCellData(0, "sCellTel3"));
+    CallBackTel1.setValue(DsWs_getSendStaffTel.getCellData(0, "sCellTel1"));
+    CallBackTel2.setValue(DsWs_getSendStaffTel.getCellData(0, "sCellTel2"));
+    CallBackTel3.setValue(DsWs_getSendStaffTel.getCellData(0, "sCellTel3"));
+};
+
+//**************************************************************************************************
+//  고객명 클릭 
+//************************************************************************************************** 
+scwin.btn_search0_OnClick = function(obj) {
+    var promise = Promise.resolve();
+    if (sName.getValue() == "") {
+        wprom.alertF("고객명을 입력해주세요.",{},sName);
+        //sName.focus();
+        return;
+    } else {
+        promise = promise.then(function(rtnVal) {
+        	var sArgs = {"sName":sName.getValue()};
+        	var popInfo = {
+				"width"     : 744,
+				"height"    : 720,
+				"title":"고객검색",
+				"indata":sArgs        	
+        	};
+            return wprom.popupOpen("/ui/cbso/CBSO043P.xml",popInfo);
+        });
+        promise = promise.then(function(Rst) {
+            if (wconv.length(Rst) != 0) {
+                sCustNo.setValue(Rst);
+            }
+        });
+    }
+    return promise;
+};
+//**************************************************************************************************
+//  고객번호 입력시 
+//**************************************************************************************************
+scwin.sCustNo_OnKeyDown = function(e){
+    if (e.keyCode == 13) {}
+};
+
+//**************************************************************************************************
+//  센터 콤보박스 초기화
+//**************************************************************************************************
+scwin.setDepartCenter = function() {
+    wconv.clear(DsWs_sCenter);
+    /*
+    SOBJ_Claim.WSDL = gds.gWsdlClaim;
+    var MethodObj1 = gfn_CreateMethodObj(SOBJ_Claim, "ClaimManageTask", "selectTeam");
+    gfn_SetParam(MethodObj1, "sDepartLevel", "4");
+    gfn_SetParam(MethodObj1, "sDepartType", "01");
+    gfn_CallService(SOBJ_Claim, DOBJ_sCenter, MethodObj1);
+	*/
+//console.log	("================="+gfn_checkAuthByID(util.getGdsValue("gUserID"), "61024"));
+	var MethodObj = new callService("com.inswave.claim.task.ClaimManageTask", "selectTeam");
+	MethodObj.setId("selectTeam");
+	MethodObj.setParam("sDepartLevel",  "4");
+	MethodObj.setParam("sDepartType", "01");
+	MethodObj.setUrl("/common/CBSO011PController.do");
+	MethodObj.setXPath("//*/data/ADMAC01"); 
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	DsWs_sCenter.setJSON (_tranSync.getDsJson("ADMAC01")); // dataset 데이터     
+		
+    //var insRow = util.insertRow(DsWs_sCenter, 0);
+    DsWs_sCenter.insertRow( 0 );
+    DsWs_sCenter.setCellData(0, "sDepartCode", "all");
+    DsWs_sCenter.setCellData(0, "sDepartName", "전체");
+    
+    //Cmb_sCenter.InnerDataset = "DsWs_sCenter";
+    //Cmb_sCenter.CodeColumn = "sDepartCode";
+    //Cmb_sCenter.DataColumn = "sDepartName";
+    Cmb_sCenter.setValue("all");
+};
+
+//**************************************************************************************************
+//  팀 콤보박스 초기화
+//**************************************************************************************************
+scwin.setDepartTeamInt = function() {
+    wconv.clear(DsWs_sTeam);
+    //util.insertColumn(DsWs_sTeam, [ [  "sDepartCode",         "sDepartCode",           "text"    ] ]);
+    //util.insertColumn(DsWs_sTeam, [ [  "sDepartName",        "sDepartName",          "text"     ] ]);
+    //var insRow = util.insertRow(DsWs_sTeam, 0);
+    DsWs_sTeam.insertRow( 0 );
+    DsWs_sTeam.setCellData(0, "sDepartCode", "all");
+    DsWs_sTeam.setCellData(0, "sDepartName", "전체");
+
+    //Cmb_sTeam.InnerDataset = "DsWs_sTeam";
+    //Cmb_sTeam.CodeColumn = "sDepartCode";
+    //Cmb_sTeam.DataColumn = "sDepartName";
+    Cmb_sTeam.setValue("all");
+};
+//**************************************************************************************************
+//  사원 콤보박스 초기화
+//**************************************************************************************************
+scwin.setDepartStaffInt = function() {
+    //Cmb_sStaff.InnerDataset = "";
+    //Cmb_sStaff.CodeColumn = "";
+    //Cmb_sStaff.DataColumn = "";
+    wconv.clear(DsWs_sStaff);
+    //util.insertColumn(DsWs_sStaff, [ [ "sStaff", "sStaff",       "text"     ]   ]);
+    //util.insertColumn(DsWs_sStaff, [ [           "sName",            "sName",            "text"        ] ]);
+    //var insRow = util.insertRow(DsWs_sStaff, 0);
+    DsWs_sStaff.insertRow( 0 );
+    DsWs_sStaff.setCellData(0, "sStaff", "all");
+    DsWs_sStaff.setCellData(0, "sName", "전체");
+    //Cmb_sStaff.InnerDataset = "DsWs_sStaff";
+    //Cmb_sStaff.CodeColumn = "sStaff";
+    //Cmb_sStaff.DataColumn = "sName";
+    Cmb_sStaff.setNodeSet( "data:DsWs_sStaff" , "sName" , "sStaff" );
+    Cmb_sStaff.setValue("all");
+};
+
+//**************************************************************************************************
+//  센터 콤보 클릭시
+//**************************************************************************************************
+scwin.Cmb_sCenter_OnChanged = function(info){//obj, strCode, strText, nOldIndex, nNewIndex) {
+    scwin.setDepartTeam(info.newValue);
+};
+
+scwin.setDepartTeam = function(strCode) {
+    if (strCode == "all") {
+        scwin.setDepartTeamInt();
+        scwin.setDepartStaffInt();
+        return;
+    }
+    wconv.clear(DsWs_sTeam);
+    /*
+    SOBJ_Claim.WSDL = gds.gWsdlClaim;
+    var MethodObj1 = gfn_CreateMethodObj(SOBJ_Claim, "com.inswave.claim.task.ClaimManageTask", "selectTeam");
+    gfn_SetParam(MethodObj1, "sDepartLevel", "3");
+    gfn_SetParam(MethodObj1, "sDepartType", "01");
+    gfn_SetParam(MethodObj1, "sUpperDepart", strCode);
+    gfn_CallService(SOBJ_Claim, DOBJ_sTeam, MethodObj1);
+    */
+	var MethodObj = new callService("com.inswave.claim.task.ClaimManageTask", "selectTeam");
+	MethodObj.setId("selectTeam");
+	MethodObj.setParam("sDepartLevel",  "3");
+	MethodObj.setParam("sDepartType",  "01");
+	MethodObj.setParam("sUpperDepart",  strCode);
+	MethodObj.setUrl("/common/CBSO011PController.do");
+	MethodObj.setXPath("//*/data/ADMAC01");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	DsWs_sTeam.setJSON (_tranSync.getDsJson("ADMAC01")); // dataset 데이터 
+	    
+    //var insRow = util.insertRow(DsWs_sTeam, 0);
+    DsWs_sTeam.insertRow( 0 );
+    DsWs_sTeam.setCellData(0, "sDepartCode", "all");
+    DsWs_sTeam.setCellData(0, "sDepartName", "전체");
+
+    //Cmb_sTeam.InnerDataset = "DsWs_sTeam";
+    //Cmb_sTeam.CodeColumn = "sDepartCode";
+    //Cmb_sTeam.DataColumn = "sDepartName";
+    Cmb_sTeam.setValue("all");
+
+    scwin.setDepartStaffInt();
+};
+//**************************************************************************************************
+//  팀 콤보 클릭시
+//**************************************************************************************************
+scwin.Cmb_sTeam_OnChanged = function(info){
+    scwin.setDepartStaff(info.newValue);
+};
+
+scwin.setDepartStaff = function(strCode) {
+    if (strCode == "all") {
+        scwin.setDepartStaffInt();
+        return;
+    }
+    //Cmb_sStaff.InnerDataset = "";
+    //Cmb_sStaff.CodeColumn = "";
+    //Cmb_sStaff.DataColumn = "";
+    wconv.clear(DsWs_ADMAB01); ////*/vector/data/ADMAB01 경우 
+    wconv.clear(DsWs_CLMMA12); ////*/vector/data/CLMMA12 경우
+    /*
+    SOBJ_Claim.WSDL = gds.gWsdlClaim;
+    var MethodObj1 = gfn_CreateMethodObj(SOBJ_Claim, "ClaimManageTask", "selectStaff");
+    gfn_SetParam(MethodObj1, "sDepartCode", strCode);
+    gfn_CallService(SOBJ_Claim, DOBJ_sStaff, MethodObj1);
+    */
+	var MethodObj = new callService("com.inswave.claim.task.ClaimManageTask", "selectStaff");
+	MethodObj.setId("selectStaff");
+	MethodObj.setParam("sDepartCode",  strCode);
+	MethodObj.setUrl("/common/CBSO011PController.do");
+	MethodObj.setXPath("//*/data/DsWs_ADMAB01");
+	MethodObj.addXPath("//*/data/CLMMA12");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	DsWs_ADMAB01.setJSON (_tranSync.getDsJson("DsWs_ADMAB01")); // dataset 데이터 
+	DsWs_CLMMA12.setJSON (_tranSync.getDsJson("CLMMA12")); // dataset 데이터 
+       
+	    
+    if (DsWs_ADMAB01.getRowCount() != 0) {
+        //var insRow = util.insertRow(DsWs_ADMAB01, 0);
+        DsWs_ADMAB01.insertRow( 0 );
+        DsWs_ADMAB01.setCellData(0, "sEmpNo", "all");
+        DsWs_ADMAB01.setCellData(0, "sEmpName", "전체");
+        //Cmb_sStaff.InnerDataset = "DsWs_ADMAB01";
+        //Cmb_sStaff.CodeColumn = "sEmpNo";
+        //Cmb_sStaff.DataColumn = "sEmpName";
+        Cmb_sStaff.setNodeSet("data:DsWs_ADMAB01","sEmpName","sEmpNo");
+        Cmb_sStaff.setValue("all");
+    } else {
+        //var insRow = util.insertRow(DsWs_CLMMA12, 0);
+        DsWs_CLMMA12.insertRow( 0 );
+        DsWs_CLMMA12.setCellData(0, "sStaff", "all");
+        DsWs_CLMMA12.setCellData(0, "sName", "전체");
+        //Cmb_sStaff.InnerDataset = "DsWs_CLMMA12";
+        //Cmb_sStaff.CodeColumn = "sStaff";
+        //Cmb_sStaff.DataColumn = "sName";
+        Cmb_sStaff.setNodeSet("data:DsWs_CLMMA12","sName","sStaff");
+        Cmb_sStaff.setValue("all");
+    }
+};
+
+//**************************************************************************************************
+//  조회조건 부분 회신번호 자동 입력 
+//**************************************************************************************************
+scwin.CallBackTel_OnCharChanged = function(e){
+console.log("★★★★:"+ e.keyCode);
+	if(e.keyCode > 95 && e.keyCode < 106 && e.keyCode != null){
+	    Ed_CallBackTel1.setValue(CallBackTel1.getValue());
+	    Ed_CallBackTel2.setValue(CallBackTel2.getValue());
+	    Ed_CallBackTel3.setValue(CallBackTel3.getValue());
+	}    
+};
+//**************************************************************************************************
+// SMS 공용보관함 대분류  set
+//**************************************************************************************************
+scwin.setSMSTypeName1 = function() {
+    wconv.clear(DsWs_SMSType1);
+    /*orign
+    SOBJ_CCC.WSDL = gds.gWsdlCCC;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_CCC, "SMSTask", "selectSMSType1");
+    gfn_CallService(SOBJ_CCC, do_SMSTypeName1, MethodObj);
+    */    
+    
+	var MethodObj = new callService("com.inswave.ccc.task.SMSTask", "selectSMSType1");
+	MethodObj.setId("selectSMSType1");
+	MethodObj.setUrl("/common/CBSO011PController.do");
+	MethodObj.setXPath("//*/vector/data/CCCIB01");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	DsWs_SMSType1.setJSON (_tranSync.getDsJson("CCCIB01")); // dataset 데이터
+	     
+    if (DsWs_SMSType1.getRowCount() == 0) {
+        //util.insertColumn(DsWs_SMSType1, [ [       "nCode1",          "nCode1",                "text"            ]        ]);
+        //util.insertColumn(DsWs_SMSType1, [            [                "sName",                "sName",                "text"            ]        ]);
+    }
+    DsWs_SMSType1.insertRow( 0 );
+    DsWs_SMSType1.setCellData(0, "nCode1", "all");
+    DsWs_SMSType1.setCellData(0, "sName", " 전체 ");
+    Tab1_tab1_cmb_SMSType1.setSelectedIndex( 0 ) ;
+    
+    //wconv.clear(Ds_SMSType2);
+    //util.insertColumn(Ds_SMSType2, [        [            "nCode2",            "nCode2",            "text"        ]    ]);
+    //util.insertColumn(Ds_SMSType2, [        [            "sName",            "sName",            "text"        ]    ]);
+    Ds_SMSType2.insertRow( 0 );
+    Ds_SMSType2.setCellData(0, "nCode2", "all");
+    Ds_SMSType2.setCellData(0, "sName", " 전체 ");
+    Tab1_tab1_cmb_SMSType2.setSelectedIndex( 0 ) ;
+};
+//**************************************************************************************************
+// SMS 공용보관함 소분류  set
+//**************************************************************************************************
+scwin.setSMSTypeName2 = function() {
+    wconv.clear(DsWs_SMSType2);
+    /*
+    SOBJ_CCC.WSDL = gds.gWsdlCCC;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_CCC, "SMSTask", "selectSMSType2");
+    gfn_CallService(SOBJ_CCC, do_SMSTypeName2, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.ccc.task.SMSTask", "selectSMSType2");
+	MethodObj.setId("selectSMSType2");
+	MethodObj.setUrl("/common/CBSO011PController.do");
+	MethodObj.setXPath("//*/vector/data/CCCIB01");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	DsWs_SMSType2.setJSON (_tranSync.getDsJson("CCCIB01")); // dataset 데이터
+	     
+    if (DsWs_SMSType2.getRowCount() == 0) {
+        //util.insertColumn(DsWs_SMSType2, [            [                "nCode2",                "nCode2",                "text"            ]        ]);
+        //util.insertColumn(DsWs_SMSType2, [            [                "sName",                "sName",                "text"            ]        ]);
+    }
+    var insRow = util.insertRow(DsWs_SMSType2, 0);
+    DsWs_SMSType2.setCellData(0, "nCode2", "all");
+    DsWs_SMSType2.setCellData(0, "sName", " 전체 ");
+    Tab1_tab1_cmb_SMSType2.setSelectedIndex(0);
+};
+
+//**************************************************************************************************
+// SMS 공용보관함 대분류 선택시 해당 소분류  set
+//**************************************************************************************************
+scwin.Tab1_tab1_cmb_SMSType1_OnChanged = function(info){//obj, strCode, strText, nOldIndex, nNewIndex) {
+    var nCode = Tab1_tab1_cmb_SMSType1.getValue();
+    wconv.clear(Ds_SMSType2);
+    if (nCode == "1") {
+        //계좌안내 
+        wconv.clear(DsWs_SMSTypeACC);
+        /*
+        SOBJ_CCC.WSDL = gds.gWsdlCCC;
+        var MethodObj = gfn_CreateMethodObj(SOBJ_CCC, "SMSTask", "selectAgentAcctNo");
+        gfn_SetParam(MethodObj, "sUserID", util.getGdsValue("gUserID"));
+        gfn_SetParam(MethodObj, "nCode1", nCode);
+        gfn_SetParam(MethodObj, "nCode2", "all");
+        gfn_CallService(SOBJ_CCC, do_SMSTypeACC, MethodObj);
+        */
+		var MethodObj = new callService("com.inswave.ccc.task.SMSTask", "selectAgentAcctNo");
+		MethodObj.setId("selectAgentAcctNo");
+		MethodObj.setParam("sUserID", util.getGdsValue("gUserID"));
+		MethodObj.setParam("nCode1", nCode);
+		MethodObj.setParam("nCode2",  "all");
+		MethodObj.setUrl("/common/CBSO011PController.do");
+		MethodObj.setXPath("//*/vector/data/CCCIB01");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();
+		console.log("==========DsWs_SMSTypeACC================");
+		//util.interfaceKey(_tranSync.result.serviceDs);
+		DsWs_SMSTypeACC.setJSON (_tranSync.getDsJson("CCCIB01")); // dataset 데이터 
+		Ds_SMSType2.setJSON (_tranSync.getDsJson("CCCIB01")); // dataset 데이터 
+        
+        if (DsWs_SMSTypeACC.getRowCount() == 0) {
+            //gooutil.insertColumn(DsWs_SMSTypeACC, [ [ "nCode2",                    "nCode2",                    "text"                ] ]);
+            //util.insertColumn(DsWs_SMSTypeACC, [ [  "sName",                    "sName",                    "text"                ] ]);
+        }
+        
+        wconv.copy(Ds_SMSType2, "DsWs_SMSTypeACC");
+        var insRow = util.insertRow(Ds_SMSType2, 0);
+        Ds_SMSType2.setCellData(0, "nCode2", "all");
+        Ds_SMSType2.setCellData(0, "sName", " 전체 ");
+    } else if (nCode == "9") {
+        //팩스 안내	
+        wconv.clear(DsWs_SMSTypeFax);
+
+        //상담원일 경우에만 본인 팩스 조회하여 보여준다
+        if (wconv.substr(sSendStaff, 0, 1) == "3") {
+        	/*
+            SOBJ_CCC.WSDL = gds.gWsdlCCC;
+            var MethodObj = gfn_CreateMethodObj(SOBJ_CCC, "SMSTask", "selectFaxByAgent");
+            gfn_SetParam(MethodObj, "sEmpNo", util.getGdsValue("gUserID"));
+            gfn_SetParam(MethodObj, "nCode1", nCode);
+            gfn_SetParam(MethodObj, "nCode2", "all");
+            gfn_CallService(SOBJ_CCC, do_SMSTypeFax, MethodObj);
+            */
+			var MethodObj = new callService("com.inswave.ccc.task.SMSTask", "selectFaxByAgent");
+			MethodObj.setId("selectAgentAcctNo");
+			MethodObj.setParam("sUserID", util.getGdsValue("gUserID"));
+			MethodObj.setParam("nCode1", nCode);
+			MethodObj.setParam("nCode2",  "all");
+			MethodObj.setUrl("/common/CBSO011PController.do");
+			MethodObj.setXPath("//*/vector/data/CCCIB01");
+			MethodObj.addXPath("//WARNING");
+			MethodObj.sync();
+			MethodObj.send();
+		
+			//util.interfaceKey(_tranSync.result.serviceDs);
+			DsWs_SMSTypeFax.setJSON (_tranSync.getDsJson("CCCIB01")); // dataset 데이터 
+			Ds_SMSType2.setJSON (_tranSync.getDsJson("CCCIB01")); // dataset 데이터             
+        }
+        if (DsWs_SMSTypeFax.getRowCount() == 0) {
+            //goo util.insertColumn(DsWs_SMSTypeFax, [ [ "nCode2",     "nCode2",      "text"    ] ]);
+            //util.insertColumn(DsWs_SMSTypeFax, [ [  "sName",      "sName",      "text"    ] ]);
+        }
+        
+        wconv.copy(Ds_SMSType2, "DsWs_SMSTypeFax");
+        var insRow = util.insertRow(Ds_SMSType2, 0);
+        Ds_SMSType2.setCellData(0, "nCode2", "all");
+        Ds_SMSType2.setCellData(0, "sName", " 전체 ");
+    } else {
+        //기타 
+        wconv.copy(Ds_SMSType2, "DsWs_SMSType2");
+        wconv.filter(Ds_SMSType2, "nCode1=='" + nCode + "'",true);
+        var insRow = util.insertRow(Ds_SMSType2, 0);
+        Ds_SMSType2.setCellData(0, "nCode2", "all");
+        Ds_SMSType2.setCellData(0, "sName", " 전체 ");
+    }
+    Tab1_tab1_cmb_SMSType2.setSelectedIndex(0);
+//alert("1111111111111111111");    
+    scwin.btn_searchCommon_Onclick(); //공용보관함 조회
+};
+
+//**************************************************************************************************
+// SMS 공용보관함 소분류 선택시 조회 
+//**************************************************************************************************
+scwin.Tab1_tab1_cmb_SMSType2_OnChanged = function(info){//obj, strCode, strText, nOldIndex, nNewIndex) {
+    scwin.btn_searchCommon_Onclick(); //공용보관함 조회
+};
+
+//**************************************************************************************************
+// 발송구분 클릭시
+//**************************************************************************************************
+scwin.Radio_searchType_OnChanged = function(info){//obj, strCode, strText, nOldIndex, nNewIndex) {
+	Grd_Cus.setHeaderHide( true );
+    scwin.changeSearchType(info.value);
+};
+
+scwin.changeSearchType = function(stype) {
+    //고객
+//console.log("++++++"+stype);
+    if (stype == "1") {
+        //gfn_ButtonEnable(true, false, false, false, false, false, false, false, true);
+        Tab0.setSelectedTabIndex( 0);
+        Tab0_tab1_Grid0.show();//Visible = true;
+        Tab0_tab2_Grid1.hide();//Visible = false;
+        Tab0_tab2_Grid2.hide();//Visible = false;
+        //Grd_Cus.Editable = false; //핸드폰번호직접 입력기능
+        Ds_Customer.removeAll();
+        switch1.setSelectedID("case1");
+//        Static_cust.show();
+//        btn_search0.show();
+//        sName.show();
+//        Static_custNo.show();
+//        sCustNo.show();
+//        Static_cust.Top = 33;
+//        Static_cust.Left = 250;
+//        btn_search0.Top = 33;
+//        btn_search0.Left = 302;
+//        sName.Top = 33;
+//        sName.Left = 323;
+//        Static_custNo.Top = 33;
+//        Static_custNo.Left = 431;
+//        sCustNo.Top = 33;
+//        sCustNo.Left = 498;
+//        Static_org.hide();
+//        Cmb_sCenter.hide();
+//        Cmb_sTeam.hide();
+//        Cmb_sStaff.hide();
+//        EtcText.hide(); //조직 
+    } else if (stype == "2") {
+        //gfn_ButtonEnable(true, false, false, false, false, false, false, false, true);
+        Tab0.setSelectedTabIndex(  1);
+        Tab0_tab1_Grid0.hide();//Visible = false;
+        Tab0_tab2_Grid1.show();//Visible = true;
+        Tab0_tab2_Grid2.show;//Visible = true;
+        //Grd_Cus.Editable = false; //핸드폰번호직접 입력기능 
+        Ds_Customer.removeAll();
+        switch1.setSelectedID("case2");
+//        Static_cust.hide();
+//        btn_search0.hide();
+//        sName.hide();
+//        Static_custNo.hide();
+//        sCustNo.hide();
+//        EtcText.hide();
+//        Static_org.show();
+//        Cmb_sCenter.show();
+//        Cmb_sTeam.show();
+//        Cmb_sStaff.show();
+//        Static_org.Top = 33;
+//        Static_org.Left = 250;
+//        Cmb_sCenter.Top = 32;
+//        Cmb_sCenter.Left = 321;
+//        Cmb_sTeam.Top = 32;
+//        Cmb_sTeam.Left = 420;
+//        Cmb_sStaff.Top = 32;
+//        Cmb_sStaff.Left = 514; //기타 	
+    } else {
+        //gfn_ButtonEnable(true, false, false, false, false, false, false, false, true);
+        Tab0_tab1_Grid0.hide();//Visible = false;
+        Tab0_tab2_Grid1.hide();//Visible = false;
+        Tab0_tab2_Grid2.hide();//Visible = false;
+        //Grd_Cus.Editable = true; //핸드폰번호직접 입력기능 
+        switch1.setSelectedID("case3");
+
+//        Static_cust.hide();
+//        btn_search0.hide();
+//        sName.hide();
+//        Static_custNo.hide();
+//        sCustNo.hide();
+//        Static_org.hide();
+//        Cmb_sCenter.hide();
+//        Cmb_sTeam.hide();
+//        Cmb_sStaff.hide();
+//        EtcText.show();
+//        EtcText.Top = 33;
+//        EtcText.Left = 250;
+        for (var i = 0; i < 6; i++) {
+            //var insRow = util.insertRow(Ds_Customer, i);
+            Ds_Customer.insertRow( i )
+            Ds_Customer.setCellData(i, "cTel1", "010");
+        }
+        wconv.clear(DsWs_CUSAA03); //고객조회 데이터셋 클리어 
+        wconv.clear(DsWs_SearchList); //조직조회 데이터셋 클리어
+        //Grd_Cus.Editable = true;
+        Ds_Customer.setRowPosition( 0 );
+        Grd_Cus.focus();
+    }
+};
+
+//**************************************************************************************************
+// 공통 조회 클릭
+//**************************************************************************************************
+//비동기호출 
+scwin.lfn_Search = function() {
+	util.eventAsyncCall(this, scwin.lfn_Search_sync, arguments);
+};
+
+scwin.lfn_Search_sync = function(e) {
+    if (Radio_searchType.getValue() == "1") {
+        //고객
+        if (sCustNo.getValue() == "") {
+            wprom.alertF("고객번호 입력후 조회해주세요.",{},sCustNo);
+            return;
+        } else {
+            scwin.getCustomerInfo();
+        }
+    } else if (Radio_searchType.getValue() == "2") {
+        //조직 
+        scwin.getSmsStaffInfo();
+    }
+};
+
+//**************************************************************************************************
+// 고객 조회
+//**************************************************************************************************
+scwin.getCustomerInfo = function() {
+    wconv.clear(DsWs_CUSAA03);
+    /*
+    SOBJ_Cust.WSDL = gds.gWsdlCustomer;
+    var MethodObj1 = gfn_CreateMethodObj(SOBJ_Cust, "CustTask", "getCustomerInfo");
+    gfn_SetParam(MethodObj1, "sCustNo", sCustNo.getValue());
+    gfn_SetParam(MethodObj1, "nSeqNo", 0);
+    gfn_CallService(SOBJ_Cust, DOBJ_CUSAA03, MethodObj1);
+    */
+   	var MethodObj = new callService("com.inswave.customer.task.CustTask", "getCustomerInfo");
+	MethodObj.setId("getCustomerInfo");
+	MethodObj.setParam("sCustNo", sCustNo.getValue());
+	MethodObj.setParam("nSeqNo", 0);
+	MethodObj.setUrl("/common/CBSO011PController.do");
+	MethodObj.setXPath("//*/CUSAA03");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	DsWs_CUSAA03.setJSON (_tranSync.getDsJson("CUSAA03")); // dataset 데이터 
+    
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert(WARNING.getCellData(0, "msg"));
+        return;
+    } else {
+        var DsWs_CUSAA03_COUNT = DsWs_CUSAA03.getRowCount();
+        if (DsWs_CUSAA03_COUNT == 0) {
+            wconv.clear(DsWs_CUSAA03);
+            wprom.alert("해당 데이터가 존재하지 않습니다.");
+            return;
+        }
+        
+        //util.insertColumn(DsWs_CUSAA03, [[                "CHK",                "CHK",                "text"            ]        ]);
+        DsWs_CUSAA03.setCellData(0, "CHK", "1");
+        //util.insertColumn(DsWs_CUSAA03, [[ "sTelType",  "sTelType",  "text"  ] ]);
+        DsWs_CUSAA03.setCellData(0, "sTelType", "1");
+
+        //수기입력번호 저장을 위해서 컬럼추가 
+        //util.insertColumn(DsWs_CUSAA03, [[ "sDirectTel1",  "sDirectTel1",     "text"   ]]);
+        DsWs_CUSAA03.setCellData(0, "sDirectTel1", "");
+        //util.insertColumn(DsWs_CUSAA03, [["sDirectTel2", "sDirectTel2",  "text" ]]);
+        DsWs_CUSAA03.setCellData(0, "sDirectTel2", "");
+        //util.insertColumn(DsWs_CUSAA03, [[ "sDirectTel3", "sDirectTel3",  "text"]]);
+        DsWs_CUSAA03.setCellData(0, "sDirectTel3", "");
+        
+        //gfn_ClearSortText(Tab0_tab1.Grid0);
+        //Tab0_tab1_Grid0.BindDataset = "DsWs_CUSAA03";
+    }
+};
+
+//**************************************************************************************************
+//  고객탭 구분(핸드폰,기타,수기입력)클릭시 번호 변경하여 set
+//**************************************************************************************************
+scwin.DsWs_CUSAA03_OnColumnChanged = function(info){//obj, nRow, strColumnID, varOldValue, varNewValue, nPivotIndex) {
+console.log(info.newValue+"================"+info.colID);
+    if (info.colID == "sTelType") {
+        //obj.FireEvent = false; // column0 이 변경되면 column1도 변경어 아래 이밴트도 같이 실행되므로 데이타셋이밴트를 막습니다.
+        if (info.newValue == "1") {
+            //핸드폰 
+			Tab0_tab1_Grid0.setColumnVisible( "sDirectTel1" , false);
+			Tab0_tab1_Grid0.setColumnVisible( "sDirectTel2" , false );
+			Tab0_tab1_Grid0.setColumnVisible( "sDirectTel3" , false );
+			Tab0_tab1_Grid0.setColumnVisible( "sCellPhone1" , true );
+			Tab0_tab1_Grid0.setColumnVisible( "sCellPhone2" , true );
+			Tab0_tab1_Grid0.setColumnVisible( "sCellPhone3" , true );
+			Tab0_tab1_Grid0.setColumnVisible( "sEtcTel1" , false );
+			Tab0_tab1_Grid0.setColumnVisible( "sEtcTel2" , false);
+			Tab0_tab1_Grid0.setColumnVisible( "sEtcTel3" , false );
+			Tab0_tab1_Grid0.setColumnVisible( "sEtcType" , true );
+			Tab0_tab1_Grid0.setColumnVisible( "sEtcType2" , false );
+            
+//            Tab0_tab1_Grid0.SetCellProp("body", 4, "ColId", "sCellPhone1");
+//            Tab0_tab1_Grid0.SetCellProp("body", 5, "ColId", "sCellPhone2");
+//            Tab0_tab1_Grid0.SetCellProp("body", 6, "ColId", "sCellPhone3");
+//            Tab0_tab1_Grid0.SetCellProp("body", 4, "Edit", "none");
+//            Tab0_tab1_Grid0.SetCellProp("body", 5, "Edit", "none");
+//            Tab0_tab1_Grid0.SetCellProp("body", 6, "Edit", "none");
+//            Tab0_tab1_Grid0.SetCellProp("body", 4, "BkColor", "lightgrey");
+//            Tab0_tab1_Grid0.SetCellProp("body", 5, "BkColor", "lightgrey");
+//            Tab0_tab1_Grid0.SetCellProp("body", 6, "BkColor", "lightgrey");
+//            Tab0_tab1_Grid0.SetCellProp("body", 7, "ColId", "");
+//            Tab0_tab1_Grid0.SetCellProp("body", 7, "Expr", "");
+        } else if (info.newValue == "2") {
+			Tab0_tab1_Grid0.setColumnVisible( "sDirectTel1" , true);
+			Tab0_tab1_Grid0.setColumnVisible( "sDirectTel2" , true );
+			Tab0_tab1_Grid0.setColumnVisible( "sDirectTel3" , true );
+			Tab0_tab1_Grid0.setColumnVisible( "sCellPhone1" , false );
+			Tab0_tab1_Grid0.setColumnVisible( "sCellPhone2" , false );
+			Tab0_tab1_Grid0.setColumnVisible( "sCellPhone3" , false );
+			Tab0_tab1_Grid0.setColumnVisible( "sEtcTel1" , false );
+			Tab0_tab1_Grid0.setColumnVisible( "sEtcTel2" , false);
+			Tab0_tab1_Grid0.setColumnVisible( "sEtcTel3" , false );        
+			Tab0_tab1_Grid0.setColumnVisible( "sEtcType" , false );
+			Tab0_tab1_Grid0.setColumnVisible( "sEtcType2" , true );
+            //기타==> 기타번호가 010,011,016,017,018,019이면 보여준다.
+//            if (DsWs_CUSAA03.getCellData(0, "sEtcTel1") == "010" || DsWs_CUSAA03.getCellData(0, "sEtcTel1") == "011" || DsWs_CUSAA03.getCellData(0, "sEtcTel1") == "016" || DsWs_CUSAA03.getCellData(0, "sEtcTel1") == "017" || DsWs_CUSAA03.getCellData(0, "sEtcTel1") == "018" || DsWs_CUSAA03.getCellData(0, "sEtcTel1") == "019") {
+//                Tab0_tab1_Grid0.SetCellProp("body", 4, "ColId", "sEtcTel1");
+//                Tab0_tab1_Grid0.SetCellProp("body", 5, "ColId", "sEtcTel2");
+//                Tab0_tab1_Grid0.SetCellProp("body", 6, "ColId", "sEtcTel3");
+//                Tab0_tab1_Grid0.SetCellProp("body", 7, "ColId", "sEtcType");
+//                Tab0_tab1_Grid0.SetCellProp("body", 7, "Expr", "decode(sEtcType,'1','등록사업소','2','매매상사','3','영업사원','4','타보험사','5','배우자','6','부모','7','자녀','8','형제/자매','')");
+//            } else {
+//                Tab0_tab1_Grid0.SetCellProp("body", 4, "ColId", "");
+//                Tab0_tab1_Grid0.SetCellProp("body", 5, "ColId", "");
+//                Tab0_tab1_Grid0.SetCellProp("body", 6, "ColId", "");
+//                Tab0_tab1_Grid0.SetCellProp("body", 7, "ColId", "");
+//                Tab0_tab1_Grid0.SetCellProp("body", 7, "Expr", "");
+//            }
+//            Tab0_tab1_Grid0.SetCellProp("body", 4, "Edit", "none");
+//            Tab0_tab1_Grid0.SetCellProp("body", 5, "Edit", "none");
+//            Tab0_tab1_Grid0.SetCellProp("body", 6, "Edit", "none");
+//            Tab0_tab1_Grid0.SetCellProp("body", 4, "BkColor", "lightgrey");
+//            Tab0_tab1_Grid0.SetCellProp("body", 5, "BkColor", "lightgrey");
+//            Tab0_tab1_Grid0.SetCellProp("body", 6, "BkColor", "lightgrey");
+        } else {
+			Tab0_tab1_Grid0.setColumnVisible( "sDirectTel1" , true);
+			Tab0_tab1_Grid0.setColumnVisible( "sDirectTel2" , true );
+			Tab0_tab1_Grid0.setColumnVisible( "sDirectTel3" , true );
+			Tab0_tab1_Grid0.setColumnVisible( "sCellPhone1" , false );
+			Tab0_tab1_Grid0.setColumnVisible( "sCellPhone2" , false );
+			Tab0_tab1_Grid0.setColumnVisible( "sCellPhone3" , false );
+			Tab0_tab1_Grid0.setColumnVisible( "sEtcTel1" , false );
+			Tab0_tab1_Grid0.setColumnVisible( "sEtcTel2" , false);
+			Tab0_tab1_Grid0.setColumnVisible( "sEtcTel3" , false );
+			Tab0_tab1_Grid0.setColumnVisible( "sEtcType" , true );
+			Tab0_tab1_Grid0.setColumnVisible( "sEtcType2" , false );
+        
+            //수기입력
+//            Tab0_tab1_Grid0.SetCellProp("body", 4, "ColId", "sDirectTel1");
+//            Tab0_tab1_Grid0.SetCellProp("body", 5, "ColId", "sDirectTel2");
+//            Tab0_tab1_Grid0.SetCellProp("body", 6, "ColId", "sDirectTel3");
+//            Tab0_tab1_Grid0.SetCellProp("body", 4, "Edit", "number");
+//            Tab0_tab1_Grid0.SetCellProp("body", 5, "Edit", "number");
+//            Tab0_tab1_Grid0.SetCellProp("body", 6, "Edit", "number");
+//            Tab0_tab1_Grid0.SetCellProp("body", 4, "Limit", "3");
+//            Tab0_tab1_Grid0.SetCellProp("body", 5, "Limit", "4");
+//            Tab0_tab1_Grid0.SetCellProp("body", 6, "Limit", "4");
+//            Tab0_tab1_Grid0.SetCellProp("body", 7, "ColId", "");
+//            Tab0_tab1_Grid0.SetCellProp("body", 7, "Expr", "");
+//            Tab0_tab1_Grid0.SetCellProp("body", 4, "BkColor", "");
+//            Tab0_tab1_Grid0.SetCellProp("body", 5, "BkColor", "");
+//            Tab0_tab1_Grid0.SetCellProp("body", 6, "BkColor", "");
+        }
+        //obj.FireEvent = true;
+    }
+};
+
+//**************************************************************************************************
+// 조직별 조회
+//**************************************************************************************************
+scwin.getSmsStaffInfo = function() {
+    wconv.clear(DsWs_SearchList);
+    /*
+    SOBJ_Admin.WSDL = gds.gWsdlAdmin;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Admin, "AdminTask", "getSmsStaffList", "", "");
+    var sDutyAll = " '01','02','03','04','11','20','22','05','06','07','09'";
+    gfn_SetParam(MethodObj, "sBonbu", "2000003");
+    gfn_SetParam(MethodObj, "sCenter", Cmb_sCenter.getValue());
+    gfn_SetParam(MethodObj, "sTeam", Cmb_sTeam.getValue());
+    gfn_SetParam(MethodObj, "sStaff", Cmb_sStaff.getValue());
+    gfn_SetParam(MethodObj, "sEmpNo", Cmb_sStaff.getValue());
+    gfn_SetParam(MethodObj, "sDuty", "all");
+    gfn_SetParam(MethodObj, "sDutyAll", sDutyAll);
+    gfn_CallService(SOBJ_Admin, DOBJ_SearchN, MethodObj);
+    */
+    //debugger;
+	var MethodObj = new callService("com.inswave.admin.task.AdminTask", "getSmsStaffList");
+	MethodObj.setId("getSmsStaffList");
+    var sDutyAll = " '01','02','03','04','11','20','22','05','06','07','09'";
+    MethodObj.setParam( "sBonbu", "2000003");
+    MethodObj.setParam( "sCenter", Cmb_sCenter.getValue());
+    MethodObj.setParam( "sTeam", Cmb_sTeam.getValue());
+    MethodObj.setParam( "sStaff", Cmb_sStaff.getValue());
+    MethodObj.setParam( "sEmpNo", Cmb_sStaff.getValue());
+    MethodObj.setParam( "sDuty", "all");
+    MethodObj.setParam( "sDutyAll", sDutyAll);
+	MethodObj.setUrl("/common/CBSO011PController.do");
+	MethodObj.setXPath("//*/data/ADMAB01");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	DsWs_SearchList.setJSON (_tranSync.getDsJson("ADMAB01")); // dataset 데이터 
+    
+    //util.insertColumn(DsWs_SearchList, [        [            "editYN",            "editYN",            "text"        ]    ]);
+    //util.insertColumn(DsWs_SearchList, [        [            "editYN2",            "editYN2",            "text"        ]    ]);
+    //util.insertColumn(DsWs_SearchList, [        [            "CHK",            "CHK",            "text"        ]    ]);
+    //util.insertColumn(DsWs_SearchList, [        [            "CHK2",            "CHK2",            "text"        ]    ]);
+
+    //전화번호 없는 직원 체크박스 disable
+    for (var i = 0; i < DsWs_SearchList.getRowCount(); i++) {
+        if (wconv.length(DsWs_SearchList.getCellData(i, "sCellTel11")) == 0 
+         || wconv.length(DsWs_SearchList.getCellData(i, "sCellTel21")) == 0 
+         || wconv.length(DsWs_SearchList.getCellData(i, "sCellTel31")) == 0) {
+            DsWs_SearchList.setCellData(i, "editYN", "N");
+        }
+        if (wconv.length(DsWs_SearchList.getCellData(i, "sCellTel12")) == 0 
+         || wconv.length(DsWs_SearchList.getCellData(i, "sCellTel22")) == 0 
+         || wconv.length(DsWs_SearchList.getCellData(i, "sCellTel32")) == 0) {
+            DsWs_SearchList.setCellData(i, "editYN2", "N");
+        }
+    }
+};
+
+//**************************************************************************************************
+//  보상조직 전체선택 1
+//**************************************************************************************************
+scwin.Tab0_tab2_Grid1_OnHeadClick = function(headerId){
+console.log(Tab0_tab2_Grid1.getHeaderValue( "chk" ));
+    if (headerId == "chk") {
+        var txt = Tab0_tab2_Grid1.getHeaderValue( "chk" );
+        if (txt) {
+            //Tab0_tab2_Grid1.SetCellProp("head", nCell, "text", "1");
+            for (var i = 0; i < DsWs_SearchList.getRowCount(); i++) {
+                if (wconv.length(DsWs_SearchList.getCellData(i, "sCellTel11")) == 0 || wconv.length(DsWs_SearchList.getCellData(i, "sCellTel21")) == 0 || wconv.length(DsWs_SearchList.getCellData(i, "sCellTel31")) == 0) {
+                    DsWs_SearchList.setCellData(i, "CHK", "0");
+                    //continue;
+                }else{
+                	DsWs_SearchList.setCellData(i, "CHK", "1");
+                };	
+            }
+        } else {
+            //Tab0_tab2_Grid1.SetCellProp("head", nCell, "text", "0");
+            for (var i = 0; i < DsWs_SearchList.getRowCount(); i++) {
+                DsWs_SearchList.setCellData(i, "CHK", "0");
+            }
+        }
+    }
+};
+
+//**************************************************************************************************
+//  보상조직 전체선택 2
+//**************************************************************************************************
+scwin.Tab0_tab2_Grid2_OnHeadClick = function(headerId){//obj, nCell, nX, nY, nPivotIndex) {
+    if (headerId == "chk") {
+        var txt = Tab0_tab2_Grid2.getHeaderValue( "chk" );
+        if (txt) {
+            //Tab0_tab2_Grid2.SetCellProp("head", nCell, "text", "1");
+            for (var i = 0; i < DsWs_SearchList.getRowCount(); i++) {
+                if (wconv.length(DsWs_SearchList.getCellData(i, "sCellTel12")) == 0 || wconv.length(DsWs_SearchList.getCellData(i, "sCellTel22")) == 0 || wconv.length(DsWs_SearchList.getCellData(i, "sCellTel32")) == 0) {
+                	DsWs_SearchList.setCellData(i, "CHK2", "0");
+                    //continue;
+                }else{
+                	DsWs_SearchList.setCellData(i, "CHK2", "1");
+                };	
+            }
+        } else {
+            //Tab0_tab2_Grid2.SetCellProp("head", nCell, "text", "0");
+            for (var i = 0; i < DsWs_SearchList.getRowCount(); i++) {
+                DsWs_SearchList.setCellData(i, "CHK2", "0");
+            }
+        }
+    }
+};
+
+//**************************************************************************************************
+// 공용보관함 조회 
+//**************************************************************************************************
+scwin.btn_searchCommon_Onclick = function(e) {
+    var MethodObj;
+    wconv.clear(DsWs_commonSMS);
+    wconv.clear(DsWs_commonSMS_P);
+    wconv.clear(WARNING);
+    /*
+    SOBJ_CCC.WSDL = gds.gWsdlCCC;
+    var nCode1 = Tab1_tab1_cmb_SMSType1.Value;
+    if (nCode1 == "1") {
+        MethodObj = gfn_CreateMethodObj(SOBJ_CCC, "SMSTask", "selectAgentAcctNo");
+    } else if (nCode1 == "9") {
+        MethodObj = gfn_CreateMethodObj(SOBJ_CCC, "SMSTask", "selectFaxByAgent");
+    } else {
+        MethodObj = gfn_CreateMethodObj(SOBJ_CCC, "SMSTask", "selectCommonSMS");
+    }
+    gfn_SetParam(MethodObj, "nCode1", Tab1_tab1_cmb_SMSType1.Value);
+    gfn_SetParam(MethodObj, "nCode2", Tab1_tab1_cmb_SMSType2.Value);
+    gfn_SetParam(MethodObj, "sUserID", util.getGdsValue("gUserID"));
+    gfn_SetParam(MethodObj, "sEmpNo", util.getGdsValue("gUserID"));
+    gfn_CallService(SOBJ_CCC, DOBJ_commonSMS, MethodObj);
+    */
+    var nCode1 = Tab1_tab1_cmb_SMSType1.getValue();
+    if (nCode1 == "1") {
+		MethodObj = new callService("com.inswave.ccc.task.SMSTask", "selectAgentAcctNo");
+		MethodObj.setId("selectAgentAcctNo");
+    } else if (nCode1 == "9") {
+		MethodObj = new callService("com.inswave.ccc.task.SMSTask", "selectFaxByAgent");
+		MethodObj.setId("selectFaxByAgent");
+    } else {
+		MethodObj = new callService("com.inswave.ccc.task.SMSTask", "selectCommonSMS");
+		MethodObj.setId("selectCommonSMS");
+	};
+    MethodObj.setParam( "nCode1", util.isNull(Tab1_tab1_cmb_SMSType1.getValue() )?"all": Tab1_tab1_cmb_SMSType1.getValue());
+    MethodObj.setParam( "nCode2", util.isNull(Tab1_tab1_cmb_SMSType2.getValue() )?"all": Tab1_tab1_cmb_SMSType2.getValue());
+    MethodObj.setParam( "sUserID", util.getGdsValue("gUserID") );
+    MethodObj.setParam( "sEmpNo", util.getGdsValue("gUserID") );
+	MethodObj.setUrl("/common/CBSO011PController.do");
+	MethodObj.setXPath("//*/vector/data/CCCIB01");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	DsWs_commonSMS.setJSON (_tranSync.getDsJson("CCCIB01")); // dataset 데이터     
+	DsWs_commonSMS_P.setJSON (_tranSync.getDsJson("CCCIB01")); // dataset 데이터     
+	
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert(WARNING.getCellData(0, "msg"));
+        return;
+    } else {
+        //goo util.insertColumn(DsWs_commonSMS, [ [          "CHK",                "CHK",                "text"            ] ]);
+        //util.insertColumn(DsWs_commonSMS_P, [  [                "CHK",                "CHK",                "text"           ] ]);
+    }
+};
+
+//**************************************************************************************************
+// 공용보관함 체크박스 클릭
+//**************************************************************************************************
+scwin.Tab1_tab1_Grid0_OnCellClick = function(row,col) {
+    scwin.commonGrdOneChk(row, "DsWs_commonSMS", "DsWs_commonSMS_P", "CHK", col);
+    scwin.Txt_MsgContent_OnCharChanged();
+};
+
+//**************************************************************************************************
+//  공용보관함 한개 row의 체크박스만 선택되도록 함
+//**************************************************************************************************
+scwin.commonGrdOneChk = function(nRow, objDsDt, objDsDt_del, chk_col, nCell) {
+//debugger;
+    if (nCell == 0) {
+        var dt = eval(objDsDt);
+        //object(objDsDt).fireEvent = false;
+        for (var i = 0; i < dt.getRowCount(); i++) {
+            if (nRow != i) {
+                dt.setCellData(i, chk_col, "0");
+            } else {
+                dt.setCellData(i, "CHK", "1");
+                if (objDsDt == "DsWs_commonSMS") {
+                    if (wconv.substr(sSendStaff, 0, 1) == "3") {
+                        Txt_MsgContent.setValue("[에듀카]" + DsWs_commonSMS.getCellData(i, "sContent"));
+                        scwin.Txt_MsgContent_OnCharChanged(); //텍스트 크기
+                    } else {
+                        Txt_MsgContent.setValue( "[" + DsWs_getAutoStaff.getCellData(0, "sAgentName") + "]" + DsWs_commonSMS.getCellData(i, "sContent"));
+                    }
+                } else {
+                    if (wconv.substr(sSendStaff, 0, 1) == "3") {
+                        Txt_MsgContent.setValue( "[에듀카]" + DsWs_commonSMS_P.getCellData(i, "sContent"));
+                        scwin.Txt_MsgContent_OnCharChanged(); //텍스트 크기
+                    } else {
+                        Txt_MsgContent.setValue( "[" + DsWs_getAutoStaff.getCellData(0, "sAgentName") + "]" + DsWs_commonSMS_P.getCellData(i, "sContent"));
+                    }
+                }
+            }
+        }
+        //object(objDsDt).fireEvent = true;
+        var dt2 = eval(objDsDt_del);
+        //object(objDsDt_del).fireEvent = false;
+        for (var i = 0; i < dt2.getRowCount(); i++) {
+            dt2.setCellData(i, chk_col, "0");
+        }
+        //object(objDsDt_del).fireEvent = true;
+    }
+};
+
+//**************************************************************************************************
+//  문자보관함 탭 변경 
+//**************************************************************************************************
+scwin.Tab1_OnChanged = function(tabID, idx, userTabID) {
+    if (wconv.substr(sSendStaff, 0, 1) == "3") {
+        if (idx == 1) {
+            Tab1.setSelectedTabIndex(  0 );
+            wprom.alert("공용보관함을 이용해 주세요.");
+            return;
+        }
+    } else {
+        if (idx == 1) {
+            scwin.searchSelfSms(); //개인 보관함 조회	
+        }
+    }
+};
+
+//**************************************************************************************************
+//  개인 보관함 조회 
+//**************************************************************************************************
+scwin.searchSelfSms = function() {
+    //웹서비스 호출
+    wconv.clear(DsWs_CLMMA37);
+    wconv.clear(DsWs_CLMMA37_P);
+    wconv.clear(DsWs_searchSMSWarning);
+    /*
+    SOBJ_Claim.WSDL = gds.gWsdlClaim;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Claim, "NewClaimCodeTask", "searchSmsList", "", "");
+    gfn_SetParam(MethodObj, "sStaff", util.getGdsValue("gUserID"));
+    var result = gfn_CallService(SOBJ_Claim, DOBJ_searchSMS, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.claim.task.NewClaimCodeTask", "searchSmsList");
+	MethodObj.setId("searchSmsList");
+	MethodObj.setParam("sStaff", util.getGdsValue("gUserID"));
+	MethodObj.setUrl("/common/CBSO011PController.do");
+	MethodObj.setXPath("//*/hashtable/data/vector/data/CLMMA37");
+	MethodObj.addXPath("//*/hashtable/data/vector/data/CLMMA37_P");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	util.interfaceKey(_tranSync.result.serviceDs);
+	DsWs_CLMMA37.setJSON (_tranSync.getDsJson("CLMMA37")); // dataset 데이터 
+	DsWs_CLMMA37_P.setJSON (_tranSync.getDsJson("CLMMA37_P")); // dataset 데이터 
+	DsWs_searchSMSWarning.setJSON (_tranSync.getDsJson("WARNING")); // dataset 데이터 
+    
+    if (DsWs_searchSMSWarning.getRowCount() != 0) {
+        wprom.alert(DsWs_searchSMSWarning.getCellData(0, "msg"));
+        return;
+    } else {
+        //util.insertColumn(DsWs_CLMMA37, [            [                "CHK",                "CHK",                "text"            ]        ]);
+        //util.insertColumn(DsWs_CLMMA37_P, [            [                "CHK",                "CHK",                "text"            ]        ]);
+    }
+
+
+    //if(DsWs_CLMMA37.GetCount() == 0) {//데이터가 없을경우 빈row를 입력해준다. 
+    util.appendRow(Ds_CLMMA37); //}
+};
+
+//**************************************************************************************************
+//  개인보관함 셀클릭시
+//**************************************************************************************************
+scwin.Tab1_tab2_Grid0_OnCellClick = function(nRow,nCell){
+    if (nCell == 0) {
+        scwin.selfGrdOneChk(nRow, "DsWs_CLMMA37", "DsWs_CLMMA37_P", "CHK", nCell);
+        scwin.Txt_MsgContent_OnCharChanged();
+    }
+//debugger;    
+    Ds_CLMMA37.removeAll();
+    //util.appendRow(Ds_CLMMA37);
+    //Ds_CLMMA37.insertRow( 0 );
+    //wconv.mi_copyRow("Ds_CLMMA37", 0, "DsWs_CLMMA37", nRow);
+    var jsonData = DsWs_CLMMA37.getRowJSON(nRow);
+    Ds_CLMMA37.setRowJSON( 0 , jsonData , false );
+    scwin.Tab1_tab2_Txt_sContent_OnCharChanged();
+};
+
+//**************************************************************************************************
+//  개인보관함 셀클릭시 한개 row의 체크박스만 선택 + 핸드폰이미지에 보여줌 
+//**************************************************************************************************
+scwin.selfGrdOneChk = function(nRow, objDsDt, objDsDt_del, chk_col, nCell) {
+    if (nCell == 0) {
+        var dt = eval(objDsDt);
+        //object(objDsDt).fireEvent = false;
+        for (var i = 0; i < dt.getRowCount(); i++) {
+            if (nRow != i) {
+                dt.setCellData(i, chk_col, "0");
+            } else {
+                dt.setCellData(i, "CHK", "1");
+                if (objDsDt == "DsWs_CLMMA37") {
+                    if (wconv.substr(sSendStaff, 0, 1) == "3") {
+                        Txt_MsgContent.setValue( "[에듀카]" + DsWs_CLMMA37.getCellData(i, "sContent") );
+                        scwin.Txt_MsgContent_OnCharChanged(); //텍스트 크기
+                    } else {
+                        Txt_MsgContent.setValue( "[" + DsWs_getAutoStaff.getCellData(0, "sAgentName") + "]" + DsWs_CLMMA37.getCellData(i, "sContent"));
+                    }
+                } else {
+                    if (wconv.substr(sSendStaff, 0, 1) == "3") {
+                        Txt_MsgContent.setValue( "[에듀카]" + DsWs_CLMMA37_P.getCellData(i, "sContent") );
+                        scwin.Txt_MsgContent_OnCharChanged(); //텍스트 크기
+                    } else {
+                        Txt_MsgContent.setValue( "[" + DsWs_getAutoStaff.getCellData(0, "sAgentName") + "]" + DsWs_CLMMA37_P.getCellData(i, "sContent") );
+                    }
+                }
+            }
+        }
+        //object(objDsDt).fireEvent = true;
+        var dt2 = eval(objDsDt_del);
+        //eval(objDsDt_del).fireEvent = false;
+        for (var i = 0; i < dt2.getRowCount(); i++) {
+            dt2.setCellData(i, chk_col, "0");
+        }
+        //object(objDsDt_del).fireEvent = true;
+    }
+};
+
+//**************************************************************************************************
+//  개인보관함 byte count
+//**************************************************************************************************
+scwin.Tab1_tab2_Txt_sContent_OnCharChanged = function(info){
+    var WriteCount = wconv.lengthb(Tab1_tab2_Txt_sContent.getValue());
+    if (WriteCount <= 80) {
+        Tab1_tab2_byteText.setValue( wconv.lengthb(Tab1_tab2_Txt_sContent.getValue()) );
+    }
+    if (WriteCount >= 80) {
+        wprom.alert("메세지 내용은 80byte까지 입력 가능 합니다."); 
+    }
+};
+//키업
+scwin.Tab1_tab2_Txt_sContent_onkeyup = function(e){
+    var WriteCount = wconv.lengthb(Tab1_tab2_Txt_sContent.getValue());
+    if (WriteCount <= 80) {
+        Tab1_tab2_byteText.setValue( wconv.lengthb(Tab1_tab2_Txt_sContent.getValue()) );
+    }
+    if (WriteCount >= 80) {
+        wprom.alert("메세지 내용은 80byte까지 입력 가능 합니다."); 
+    }
+};
+//**************************************************************************************************
+//  개인보관함 등록  
+//**************************************************************************************************
+scwin.Tab1_tab2_btn_input_OnClick = function(obj) {
+    if (wconv.lengthb(Tab1_tab2_Txt_sContent.getValue()) == 0) {
+        wprom.alertF("내용을 입력하세요.",{},Tab1_tab2_Txt_sContent);
+        //Tab1_tab2_Txt_sContent.SetFocus();
+        return;
+    }
+    if (DsWs_CLMMA37.getRowCount() == 10) {
+        wprom.alert("개인보관함의 최대갯수는 10개입니다.");
+        return;
+    }
+    if (wconv.length(wconv.trim(Ds_CLMMA37.getCellData(0, "sDiv"))) == 0) {
+        Ds_CLMMA37.setCellData(0, "sDiv", "1");
+    }
+    if (wconv.length(wconv.trim(Ds_CLMMA37.getCellData(0, "sStaff"))) == 0) {
+        Ds_CLMMA37.setCellData(0, "sStaff", userID);
+    }
+    if (wconv.length(wconv.trim(Ds_CLMMA37.getCellData(0, "sUserID"))) == 0) {
+        Ds_CLMMA37.setCellData(0, "sUserID", userID);
+    }
+    if (wconv.length(wconv.trim(Ds_CLMMA37.getCellData(0, "sContent"))) == 0) {
+        Ds_CLMMA37.setCellData(0, "sContent", Tab1_tab2_Txt_sContent.getValue());
+    }
+    wconv.clear(DsWs_selfInsertWarning);
+    wconv.clear(DsWs_selfInsert);
+    /*
+    SOBJ_Claim.WSDL = gds.gWsdlClaim;
+    var MethodObj = SOBJ_Claim.CreateMethodObj("perform");
+    setHeader("CLMMA37", "NewClaimCodeTask", "privateInsert");
+    addDocumentData(Ds_CLMMA37);
+    setTail("CLMMA37");
+    SOBJ_Claim.CreateObj("in0");
+    MethodObj.in0 = insertStr;
+    var result = gfn_CallService(SOBJ_Claim, DOBJ_selfInsert, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.claim.task.NewClaimCodeTask", "privateInsert");  	// 수납확정 저장 Obj
+	MethodObj.setId("privateInsert")	// ID 셋팅
+	//addDocumentData(Ds_CLMMA37);
+	MethodObj.setParam("sDiv","1");
+	MethodObj.setParam("sStaff",userID);
+	MethodObj.setParam("sUserID",userID);
+	MethodObj.setParam("sContent",Tab1_tab2_Txt_sContent.getValue());
+	MethodObj.setUrl("/common/CBSO011PController.do");  	// 서버단 호출 URL (수납 확정)    
+	MethodObj.setXPath("//WARNING");	// XPath
+	MethodObj.setInput("CLMMA37");
+	MethodObj.sync();					// 동기 처리[기본(async:비동기)]
+	MethodObj.send(); 					// 최종 전송 		// TEST @@@ ===>
+    
+	//DsWs_selfInsert.setJSON(_tranSync.getDsJson("CLMMA37"));		// 조회 DS 셋팅(조회 결과)  
+	DsWs_selfInsertWarning.setJSON(_tranSync.getDsJson("WARNING"));  		// Warning DS 셋팅(조회 결과) 
+    
+    if (DsWs_selfInsertWarning.getRowCount() != 0) {
+        wprom.alert(DsWs_selfInsertWarning.getCellData(0, "msg"));
+        return;
+    } else {
+        Ds_CLMMA37.removeAll();
+        var insRow = util.insertRow(Ds_CLMMA37, 0);
+        scwin.Tab1_tab2_Txt_sContent_OnCharChanged();
+        scwin.searchSelfSms();
+        wprom.alert("개인보관함에 등록되었습니다.");
+    }
+};
+
+//**************************************************************************************************
+//  개인보관함 수정
+//**************************************************************************************************
+scwin.Tab1_tab2_btn_modify_OnClick = function(obj) {
+    if (wconv.length(wconv.trim(Ds_CLMMA37.getCellData(0, "sSerialNo"))) == 0) {
+        wprom.alert("수정할건을 선택하세요.");
+        return;
+    }
+    if (wconv.length(wconv.trim(Ds_CLMMA37.getCellData(0, "sContent"))) == 0) {
+        wprom.alert("내용을 입력하세요.");
+        return;
+    }
+    if (Ds_CLMMA37.getCellData(0, "sDiv") == "2") {
+        if (util.getGdsValue("gUserDepartCode") != "6500000") {
+            wprom.alert("보상지원팀만 가능합니다.");
+            return;
+        }
+    }
+    wconv.clear(DsWs_selfUpdateWarning);
+    wconv.clear(DsWs_selfUpdate);
+    /*
+    Ds_CLMMA37.setCellData(0, "sUserID", userID);
+    SOBJ_Claim.WSDL = gds.gWsdlClaim;
+    var MethodObj = SOBJ_Claim.CreateMethodObj("perform");
+    setHeader("CLMMA37", "NewClaimCodeTask", "updateSms");
+    addDocumentData(Ds_CLMMA37);
+    setTail("CLMMA37");
+    SOBJ_Claim.CreateObj("in0");
+    MethodObj.in0 = insertStr;
+    var result = gfn_CallService(SOBJ_Claim, DOBJ_selfUpdate, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.claim.task.NewClaimCodeTask", "updateSms");  	
+	MethodObj.setId("updateSms")	// ID 셋팅
+	//addDocumentData(Ds_CLMMA37);
+	MethodObj.setParam("sSerialNo",Ds_CLMMA37.getCellData(0,"sSerialNo"));
+	MethodObj.setParam("sDiv",Ds_CLMMA37.getCellData(0,"sDiv"));
+	MethodObj.setParam("sStaff",Ds_CLMMA37.getCellData(0,"sStaff"));
+	MethodObj.setParam("sUserID",userID);
+	MethodObj.setParam("sContent",Ds_CLMMA37.getCellData(0,"sContent"));
+	MethodObj.setUrl("/common/CBSO011PController.do");  	// 서버단 호출 URL (수납 확정)    
+	MethodObj.setXPath("//WARNING");	// XPath
+	MethodObj.setInput("CLMMA37");
+	MethodObj.sync();					// 동기 처리[기본(async:비동기)]
+	MethodObj.send(); 					// 최종 전송 		// TEST @@@ ===>
+    
+	//DsWs_selfInsert.setJSON(_tranSync.getDsJson("CLMMA37"));		// 조회 DS 셋팅(조회 결과)  
+	DsWs_selfUpdateWarning.setJSON(_tranSync.getDsJson("WARNING"));  		// Warning DS 셋팅(조회 결과)     
+	
+    if (DsWs_selfUpdateWarning.getRowCount() != 0) {
+        wprom.alert(DsWs_selfUpdateWarning.getCellData(0, "msg"));
+        return;
+    } else {
+        Ds_CLMMA37.removeAll();
+        scwin.Tab1_tab2_Txt_sContent_OnCharChanged();
+        scwin.searchSelfSms();
+        wprom.alert("수정 되었습니다.");
+    }
+};
+
+//**************************************************************************************************
+//  개인보관함 삭제   
+//**************************************************************************************************
+scwin.Tab1_tab2_btn_delete_OnClick = function(e) {
+    if (wconv.length(wconv.trim(Ds_CLMMA37.getCellData(0, "sSerialNo"))) == 0) {
+        wprom.alert("삭제할건을 선택하세요.");
+        return;
+    }
+    if (Ds_CLMMA37.getCellData(0, "sDiv") == "2") {
+        if (util.getGdsValue("gUserDepartCode") != "6500000") {
+            wprom.alert("보상지원팀만 가능합니다.");
+            return;
+        }
+    }
+    wconv.clear(DsWs_selfDeleteWarning);
+    wconv.clear(DsWs_selfDelete);
+    /*
+    SOBJ_Claim.WSDL = gds.gWsdlClaim;
+    var MethodObj = SOBJ_Claim.CreateMethodObj("perform");
+    setHeader("CLMMA37", "NewClaimCodeTask", "deleteSms");
+    addDocumentData(Ds_CLMMA37);
+    setTail("CLMMA37");
+    SOBJ_Claim.CreateObj("in0");
+    MethodObj.in0 = insertStr;
+    var result = gfn_CallService(SOBJ_Claim, DOBJ_selfDelete, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.claim.task.NewClaimCodeTask", "deleteSms");  	
+	MethodObj.setId("deleteSms")	// ID 셋팅
+	//addDocumentData(Ds_CLMMA37);
+	MethodObj.setParam("sSerialNo",Ds_CLMMA37.getCellData(0,"sSerialNo"));
+	MethodObj.setParam("sDiv",Ds_CLMMA37.getCellData(0,"sDiv"));
+	MethodObj.setParam("sStaff",Ds_CLMMA37.getCellData(0,"sStaff"));
+	MethodObj.setParam("sUserID",userID);
+	MethodObj.setParam("sContent",Ds_CLMMA37.getCellData(0,"sContent"));
+	MethodObj.setUrl("/common/CBSO011PController.do");  	// 서버단 호출 URL (수납 확정)    
+	MethodObj.setXPath("//WARNING");	// XPath
+	MethodObj.setInput("CLMMA37");
+	MethodObj.sync();					// 동기 처리[기본(async:비동기)]
+	MethodObj.send(); 					// 최종 전송 		// TEST @@@ ===>
+	DsWs_selfDeleteWarning.setJSON(_tranSync.getDsJson("WARNING"));  		// Warning DS 셋팅(조회 결과)     
+    
+    if (DsWs_selfDeleteWarning.getRowCount() != 0) {
+        wprom.alert(DsWs_selfDeleteWarning.getCellData(0, "msg"));
+        return;
+    } else {
+        Ds_CLMMA37.removeAll();
+        var insRow = util.insertRow(Ds_CLMMA37, 0);
+        scwin.Tab1_tab2_Txt_sContent_OnCharChanged();
+        scwin.searchSelfSms();
+        wprom.alert("삭제 되었습니다.");
+    }
+};
+
+//**************************************************************************************************
+//  텍스트 입력시 이벤트
+//**************************************************************************************************
+scwin.Txt_MsgContent_OnCharChanged = function(obj, strPreText, strPostText) {
+    var WriteCount = wconv.lengthb(Txt_MsgContent.getValue());
+    if (WriteCount <= 80) {
+        St_Byte.setValue(wconv.lengthb(Txt_MsgContent.getValue()));
+    }
+    if (WriteCount >= 80)
+        wprom.alert("메세지는 80byte까지 전송할수 있습니다.");
+};
+
+//**************************************************************************************************
+//  새로쓰기 버튼클릭
+//**************************************************************************************************
+scwin.Image2_OnClick = function(obj, nX, nY) {
+    Txt_MsgContent.setValue("");
+    if (wconv.substr(sSendStaff, 0, 1) == "3") {
+        Txt_MsgContent.setValue("[에듀카]");
+    } else {
+        Txt_MsgContent.setValue("[" + DsWs_getAutoStaff.getCellData(0, "sAgentName") + "]");
+    }
+    scwin.Txt_MsgContent_OnCharChanged();
+};
+
+//**************************************************************************************************
+//  핸드폰이미지에서 x 클릭
+//**************************************************************************************************
+scwin.Grd_Cus_OnCellClick = function(row,col){//obj, nRow, nCell, nX, nY, nPivotIndex) {
+    if (col != 3)
+        return;
+    Ds_Customer.setCellData(row, "cTel1", "");
+    Ds_Customer.setCellData(row, "cTel2", "");
+    Ds_Customer.setCellData(row, "cTel3", "");
+};
+
+//**************************************************************************************************
+//  핸드폰이미지 보내기 버튼 클릭
+//**************************************************************************************************
+scwin.Image3_OnClick = function(e) {
+    scwin.SendMsg();
+};
+
+scwin.SendMsg = function() {
+    //조회조건의 회신번호와 동일하게 처리 
+    Ed_CallBackTel1.setValue(CallBackTel1.getValue());
+    Ed_CallBackTel2.setValue(CallBackTel2.getValue());
+    Ed_CallBackTel3.setValue(CallBackTel3.getValue());
+    if (wconv.substr(sSendStaff, 0, 1) != "3") {
+        if (wconv.length(Ed_CallBackTel1.getValue()) == 0) {
+            wprom.alertF("회신번호를 입력하세요!",{},Ed_CallBackTel1);
+            //Ed_CallBackTel1.focus();
+            return;
+        }
+    }
+    if (wconv.length(Ed_CallBackTel2.getValue()) == 0) {
+        wprom.alertF("회신번호를 입력하세요!",{},Ed_CallBackTel2);
+        //Ed_CallBackTel2.focus();
+        return;
+    }
+    if (wconv.length(Ed_CallBackTel3.getValue()) == 0) {
+        wprom.alertF("회신번호를 입력하세요!",{},Ed_CallBackTel3);
+        //Ed_CallBackTel3.focus();
+        return;
+    }
+    if (wconv.length(Txt_MsgContent.getValue()) == 0) {
+        wprom.alertF("메세지 내용을 입력하세요!",{},Txt_MsgContent);
+        //Txt_MsgContent.focus();
+        return;
+    }
+//debugger;
+    var aRow=0;
+    if (Radio_searchType.getValue() == "1") {
+        //발송구분 고객 일때
+        Ds_Send_Costomer.removeAll();
+        if (DsWs_CUSAA03.getCellData(0, "CHK") == "1") {
+            //aRow = util.appendRow(Ds_Send_Costomer);
+            Ds_Send_Costomer.insertRow( 0 );
+            var sCustNo = DsWs_CUSAA03.getCellData(0, "sCustNo");
+            var sTelType = DsWs_CUSAA03.getCellData(0, "sTelType");
+            var sCellPhone1 = DsWs_CUSAA03.getCellData(0, "sCellPhone1");
+            var sCellPhone2 = DsWs_CUSAA03.getCellData(0, "sCellPhone2");
+            var sCellPhone3 = DsWs_CUSAA03.getCellData(0, "sCellPhone3");
+            var sEtcTel1 = DsWs_CUSAA03.getCellData(0, "sEtcTel1");
+            var sEtcTel2 = DsWs_CUSAA03.getCellData(0, "sEtcTel2");
+            var sEtcTel3 = DsWs_CUSAA03.getCellData(0, "sEtcTel3");
+            var sDirectTel1 = DsWs_CUSAA03.getCellData(0, "sDirectTel1");
+            var sDirectTel2 = DsWs_CUSAA03.getCellData(0, "sDirectTel2");
+            var sDirectTel3 = DsWs_CUSAA03.getCellData(0, "sDirectTel3");
+            Ds_Send_Costomer.setCellData(aRow, "sCustNo", sCustNo);
+            if (sTelType == "1") {
+                if (sCellPhone1 == "" && sCellPhone1 == "" && sCellPhone1 == "") {
+                    wprom.alert("고객의 수신번호를 입력해 주세요.");
+                    //sCellPhone1.SetFocus();
+                    return;
+                } else {
+                    Ds_Send_Costomer.setCellData(aRow, "sCellTel1", sCellPhone1);
+                    Ds_Send_Costomer.setCellData(aRow, "sCellTel2", sCellPhone2);
+                    Ds_Send_Costomer.setCellData(aRow, "sCellTel3", sCellPhone3);
+                }
+            } else if (sTelType == "2") {
+                if (sEtcTel1 == "" && sEtcTel2 == "" && sEtcTel3 == "") {
+                    wprom.alert("고객의 수신번호를 입력해 주세요.");
+                    //sEtcTel1.SetFocus();
+                    return;
+                } else {
+                    Ds_Send_Costomer.setCellData(aRow, "sCellTel1", sEtcTel1);
+                    Ds_Send_Costomer.setCellData(aRow, "sCellTel2", sEtcTel2);
+                    Ds_Send_Costomer.setCellData(aRow, "sCellTel3", sEtcTel3);
+                }
+            } else {
+                if (sDirectTel1 == "" && sDirectTel2 == "" && sDirectTel3 == "") {
+                    wprom.alert("고객의 수신번호를 입력해 주세요.");
+                    //sDirectTel1.SetFocus();
+                    return;
+                } else {
+                    Ds_Send_Costomer.setCellData(aRow, "sCellTel1", sDirectTel1);
+                    Ds_Send_Costomer.setCellData(aRow, "sCellTel2", sDirectTel2);
+                    Ds_Send_Costomer.setCellData(aRow, "sCellTel3", sDirectTel3);
+                }
+            }
+        }
+        if (Ds_Send_Costomer.getRowCount() == 0) {
+            wprom.alert("받는 사람을 선택하세요.");
+            return;
+        }
+
+
+        //trace(Ds_Send_Costomer.SaveXML());
+        Ds_Send_base1.removeAll();
+        //var insRow = util.insertRow(Ds_Send_base1, 0);
+        Ds_Send_base1.insertRow( 0 );
+        Ds_Send_base1.setCellData(0, "sCallBackTel1", wconv.trim(Ed_CallBackTel1.getValue()));
+        Ds_Send_base1.setCellData(0, "sCallBackTel2", wconv.trim(Ed_CallBackTel2.getValue()));
+        Ds_Send_base1.setCellData(0, "sCallBackTel3", wconv.trim(Ed_CallBackTel3.getValue()));
+        Ds_Send_base1.setCellData(0, "sMsgContent", Txt_MsgContent.getValue());
+        Ds_Send_base1.setCellData(0, "sSendStaff", sSendStaff);
+        Ds_Send_base1.setCellData(0, "sCertCouponType", "0");
+
+        //trace(Ds_Send_base1.SaveXML());	
+        wconv.clear(DsWs_SendWarning);
+        /*
+        SOBJ_CCC.WSDL = gds.gWsdlCCC;
+        var MethodObj = SOBJ_CCC.CreateMethodObj("perform");
+        setHeader("hashtable", "SMSTask", "SendMsgcustomer");
+        addVectorData("tel", "CLMMA12", Ds_Send_Costomer);
+        addSingleData("base", "sendDoc", Ds_Send_base1);
+        setTail("hashtable");
+
+        //trace(Ds_Send_Costomer.SaveXML());	
+        SOBJ_CCC.CreateObj("in0");
+        MethodObj.in0 = insertStr;
+        gfn_CallService(SOBJ_CCC, DOBJ_Send, MethodObj);
+        */
+		var MethodObj = new callService("com.inswave.ccc.task.SMSTask", "SendMsgcustomer");
+		MethodObj.setId("SendMsgcustomer");
+        MethodObj.addVectorData("tel", "CLMMA12", "Ds_Send_Costomer");
+        MethodObj.addSingleData("base", "sendDoc", "Ds_Send_base1");
+		MethodObj.setUrl("/common/CBSO011PController.do");  	// 서버단 호출 URL (수납 확정)    
+		//MethodObj.setXPath("//ACCBA02");		// XPath
+		MethodObj.addXPath("//WARNING");	// XPath
+		MethodObj.setHashTable();   	//  전문의 앞이 hashtable로 보낼 때
+		MethodObj.sync();					// 동기 처리[기본(async:비동기)]
+		MethodObj.send(); 					// 최종 전송 		// TEST @@@ ===>
+		DsWs_SendWarning.setJSON( _tranSync.getDsJson("WARNING"));
+        
+    } else if (Radio_searchType.getValue() == "2") {
+        //발송구분 조직일때
+        Ds_Send_ORG.removeAll();
+        for (var j = 0; j < DsWs_SearchList.getRowCount(); j++) {
+            if (DsWs_SearchList.getCellData(j, "CHK") == "1") {
+                var aRow = util.appendRow(Ds_Send_ORG);
+                Ds_Send_ORG.setCellData(aRow, "sCellTel11", DsWs_SearchList.getCellData(j, "sCellTel11"));
+                Ds_Send_ORG.setCellData(aRow, "sCellTel21", DsWs_SearchList.getCellData(j, "sCellTel21"));
+                Ds_Send_ORG.setCellData(aRow, "sCellTel31", DsWs_SearchList.getCellData(j, "sCellTel31"));
+            }
+            if (DsWs_SearchList.getCellData(j, "CHK2") == "1") {
+                var aRow = util.appendRow(Ds_Send_ORG);
+                Ds_Send_ORG.setCellData(aRow, "sCellTel11", DsWs_SearchList.getCellData(j, "sCellTel12"));
+                Ds_Send_ORG.setCellData(aRow, "sCellTel21", DsWs_SearchList.getCellData(j, "sCellTel22"));
+                Ds_Send_ORG.setCellData(aRow, "sCellTel31", DsWs_SearchList.getCellData(j, "sCellTel32"));
+            }
+        }
+        if (Ds_Send_ORG.getRowCount() == 0) {
+            wprom.alert("받는 사람을 선택하세요.");
+            return;
+        }
+
+
+        //trace(Ds_Send_tel.SaveXML());
+        Ds_Send_base2.removeAll();
+        var insRow = util.insertRow(Ds_Send_base2, 0);
+        /*수작업 변환 개발자 가이드(테스트 중)
+        dataList에 row를 추가하고 setCellData를 하는 경우 첫 번째 인자를 insRow로 변경해주세요.*/
+        Ds_Send_base2.setCellData(0, "sCallBackTel1", wconv.trim(Ed_CallBackTel1.getValue()));
+        Ds_Send_base2.setCellData(0, "sCallBackTel2", wconv.trim(Ed_CallBackTel2.getValue()));
+        Ds_Send_base2.setCellData(0, "sCallBackTel3", wconv.trim(Ed_CallBackTel3.getValue()));
+        Ds_Send_base2.setCellData(0, "sMsgContent", Txt_MsgContent.getValue());
+        Ds_Send_base2.setCellData(0, "sSendStaff", sSendStaff);
+        Ds_Send_base2.setCellData(0, "sCertCouponType", "0");
+
+        //trace(Ds_Send_base.SaveXML());	
+        wconv.clear(DsWs_SendWarning);
+        /*
+        SOBJ_CCC.WSDL = gds.gWsdlCCC;
+        var MethodObj = SOBJ_CCC.CreateMethodObj("perform");
+        setHeader("hashtable", "SMSTask", "SendMsgstaff");
+        addVectorData("tel", "CLMMA12", Ds_Send_ORG);
+        addSingleData("base", "sendDoc", Ds_Send_base2);
+        setTail("hashtable");
+        SOBJ_CCC.CreateObj("in0");
+        MethodObj.in0 = insertStr;
+        gfn_CallService(SOBJ_CCC, DOBJ_Send, MethodObj);
+        */
+		var MethodObj = new callService("com.inswave.ccc.task.SMSTask", "SendMsgstaff");
+		MethodObj.setId("SendMsgstaff");
+        MethodObj.addVectorData("tel", "CLMMA12", "Ds_Send_ORG");
+        MethodObj.addSingleData("base", "sendDoc", "Ds_Send_base2");
+		MethodObj.setUrl("/common/CBSO011PController.do");  	// 서버단 호출 URL (수납 확정)    
+		//MethodObj.setXPath("//ACCBA02");		// XPath
+		MethodObj.addXPath("//WARNING");	// XPath
+		MethodObj.setHashTable();   	//  전문의 앞이 hashtable로 보낼 때
+		MethodObj.sync();					// 동기 처리[기본(async:비동기)]
+		MethodObj.send(); 					// 최종 전송 		// TEST @@@ ===>
+		DsWs_SendWarning.setJSON( _tranSync.getDsJson("WARNING"));
+        
+    } else {
+        //기타일 경우
+        Ds_Send_Direct.removeAll();
+        //var insRow = util.insertRow(Ds_Send_Direct, 0);
+        Ds_Send_Direct.insertRow(0);
+        Ds_Send_Direct.setCellData(0, "sCallBackTel1", wconv.trim(Ed_CallBackTel1.getValue()));
+        Ds_Send_Direct.setCellData(0, "sCallBackTel2", wconv.trim(Ed_CallBackTel2.getValue()));
+        Ds_Send_Direct.setCellData(0, "sCallBackTel3", wconv.trim(Ed_CallBackTel3.getValue()));
+        Ds_Send_Direct.setCellData(0, "sMsgContent", Txt_MsgContent.getValue());
+        Ds_Send_Direct.setCellData(0, "sSendStaff", sSendStaff);
+        Ds_Send_Direct.setCellData(0, "sCertCouponType", "0");
+        Ds_Send_Direct.setCellData(0, "send_num11", Ds_Customer.getCellData(0, "cTel1"));
+        Ds_Send_Direct.setCellData(0, "send_num12", Ds_Customer.getCellData(0, "cTel2"));
+        Ds_Send_Direct.setCellData(0, "send_num13", Ds_Customer.getCellData(0, "cTel3"));
+        Ds_Send_Direct.setCellData(0, "send_num21", Ds_Customer.getCellData(1, "cTel1"));
+        Ds_Send_Direct.setCellData(0, "send_num22", Ds_Customer.getCellData(1, "cTel2"));
+        Ds_Send_Direct.setCellData(0, "send_num23", Ds_Customer.getCellData(1, "cTel3"));
+        Ds_Send_Direct.setCellData(0, "send_num31", Ds_Customer.getCellData(2, "cTel1"));
+        Ds_Send_Direct.setCellData(0, "send_num32", Ds_Customer.getCellData(2, "cTel2"));
+        Ds_Send_Direct.setCellData(0, "send_num33", Ds_Customer.getCellData(2, "cTel3"));
+        Ds_Send_Direct.setCellData(0, "send_num41", Ds_Customer.getCellData(3, "cTel1"));
+        Ds_Send_Direct.setCellData(0, "send_num42", Ds_Customer.getCellData(3, "cTel2"));
+        Ds_Send_Direct.setCellData(0, "send_num43", Ds_Customer.getCellData(3, "cTel3"));
+        Ds_Send_Direct.setCellData(0, "send_num51", Ds_Customer.getCellData(4, "cTel1"));
+        Ds_Send_Direct.setCellData(0, "send_num52", Ds_Customer.getCellData(4, "cTel2"));
+        Ds_Send_Direct.setCellData(0, "send_num53", Ds_Customer.getCellData(4, "cTel3"));
+        Ds_Send_Direct.setCellData(0, "send_num61", Ds_Customer.getCellData(5, "cTel1"));
+        Ds_Send_Direct.setCellData(0, "send_num62", Ds_Customer.getCellData(5, "cTel2"));
+        Ds_Send_Direct.setCellData(0, "send_num63", Ds_Customer.getCellData(5, "cTel3"));
+
+        //trace(Ds_SendCustomer.SaveXML());
+        wconv.clear(DsWs_SendWarning);
+        /*
+        SOBJ_CCC.WSDL = gds.gWsdlCCC;
+        var MethodObj = SOBJ_CCC.CreateMethodObj("perform");
+        setHeader("hashtable", "SMSTask", "SendMsgDirect");
+        addSingleData("base1", "sendDoc", Ds_Send_Direct);
+        setTail("hashtable");
+        SOBJ_CCC.CreateObj("in0");
+        MethodObj.in0 = insertStr;
+        gfn_CallService(SOBJ_CCC, DOBJ_Send, MethodObj);
+        */
+		var MethodObj = new callService("com.inswave.ccc.task.SMSTask", "SendMsgDirect");
+		MethodObj.setId("SendMsgDirect");
+        MethodObj.addSingleData("base1", "sendDoc", "Ds_Send_Direct");
+		MethodObj.setUrl("/common/CBSO011PController.do");  	// 서버단 호출 URL (수납 확정)    
+		MethodObj.addXPath("//WARNING");	// XPath
+		MethodObj.setHashTable();   	//  전문의 앞이 hashtable로 보낼 때
+		MethodObj.sync();					// 동기 처리[기본(async:비동기)]
+		MethodObj.send(); 					// 최종 전송 		// TEST @@@ ===>
+		DsWs_SendWarning.setJSON( _tranSync.getDsJson("WARNING"));        
+    }
+    scwin._SendMsg();
+};
+
+scwin._SendMsg = function() {
+    if (DsWs_SendWarning.getRowCount() == 0) {
+        wprom.alert("전송이 완료되었습니다.");
+        return;
+    } else {
+        wprom.alert(DsWs_SendWarning.getCellData(0, "msg"));
+        return;
+    }
+};
+
+//**************************************************************************************************
+//  핸드폰 이미지 부분 회신번호 자동 입력 
+//**************************************************************************************************
+scwin.Ed_CallBackTel_OnCharChanged = function(obj, strPreText, strPostText) {
+    CallBackTel1.setValue(Ed_CallBackTel1.getValue());
+    CallBackTel2.setValue(Ed_CallBackTel2.getValue());
+    CallBackTel3.setValue(Ed_CallBackTel3.getValue());
+};
+
+//**************************************************************************************************
+//  발송구분이 기타(직접입력)일경우 고객, 보상조직 탭을 클릭할때 이벤트 
+//**************************************************************************************************
+scwin.Tab0_OnChanged = function(tabID,idx,userTabID) {
+    if (Radio_searchType.getValue() == "1") {
+        //고객
+        if (idx == 0) {} else {
+            Tab0.setSelectedTabIndex( 0 );
+            wprom.alert("고객탭만 사용가능합니다.");
+            return;
+        }
+    } else if (Radio_searchType.getValue() == "2") {
+        if (idx == 0) {
+            Tab0.setSelectedTabIndex( 1 );
+            wprom.alert("보상조직탭만 사용가능합니다.");
+            return;
+        } else {}
+    } else {
+        Ds_Customer.setRowPosition( 0 );
+        wprom.alertF("전화번호와 문자내용을 직접 입력해주세요.",{},Grd_Cus);
+        //Grd_Cus.focus();
+        return;
+    }
+};
+//expression
+scwin.fn_getExprEtcType = function(data, formattedData, rowIndex, colIndex) {
+	//decode(sEtcType,"1","인","2","아웃","3","프리뷰","4","콜백","5","내선","6","-","7","교환기","8","타센터",sEtcType)
+	var sEtcType = DsWs_CUSAA03.getCellData(rowIndex,"sEtcType");
+	var result;
+	switch(sEtcType){
+		case "1": result = "인"; 			break;
+		case "2": result = "아웃"; 		break;
+		case "3": result = "프리뷰"; 	break;
+		case "4": result = "콜백"; 		break;
+		case "5": result = "내선"; 		break;
+		case "6": result = "-"; 			break;
+		case "7": result = "교환기"; 	break;
+		case "8": result = "타센터"; 	break;
+		default: result = sEtcType ;	break;				
+	}
+	return result;
+};
+scwin.fn_getExprEtcType2 = function(data, formattedData, rowIndex, colIndex) {
+	//decode(sEtcType,"1","인","2","아웃","3","프리뷰","4","콜백","5","내선","6","-","7","교환기","8","타센터",sEtcType)
+	var sEtcType = DsWs_CUSAA03.getCellData(rowIndex,"sEtcType");
+	var result;
+	switch(sEtcType){
+		case "1": result = "등록사업소"; 			break;
+		case "2": result = "매매상사"; 		break;
+		case "3": result = "영업사원"; 	break;
+		case "4": result = "타보험사"; 		break;
+		case "5": result = "배우자"; 		break;
+		case "6": result = "부모"; 			break;
+		case "7": result = "자녀"; 	break;
+		case "8": result = "형제/자매"; 	break;
+		default: result = "" ;	break;				
+	}
+//                Tab0_tab1_Grid0.SetCellProp("body", 7, "Expr", "decode(sEtcType,'1','등록사업소','2','매매상사','3','영업사원','4','타보험사','5','배우자','6','부모','7','자녀','8','형제/자매','')");
+	return result;
+};
+
+scwin.fn_getExprCellTel1 = function(data, formattedData, rowIndex, colIndex) {
+	var sCellTel11 = DsWs_SearchList.getCellData( rowIndex , "sCellTel11" );
+	var sCellTel21 = DsWs_SearchList.getCellData( rowIndex , "sCellTel21" );
+	var sCellTel31 = DsWs_SearchList.getCellData( rowIndex , "sCellTel31" );
+	if(util.isNull(sCellTel11) || util.isNull(sCellTel21) || util.isNull(sCellTel31)){
+		return "";
+	}else{
+		return sCellTel11+"-"+sCellTel21+"-"+sCellTel31;
+	}
+//decode( sCellTel11+sCellTel21+sCellTel31, '', '', sCellTel11+"-"+sCellTel21+"-"+sCellTel31)
+};
+scwin.fn_getExprCellTel2 = function(data, formattedData, rowIndex, colIndex) {
+	var sCellTel12 = DsWs_SearchList.getCellData( rowIndex , "sCellTel12" );
+	var sCellTel22 = DsWs_SearchList.getCellData( rowIndex , "sCellTel22" );
+	var sCellTel32 = DsWs_SearchList.getCellData( rowIndex , "sCellTel32" );
+	if(util.isNull(sCellTel12) || util.isNull(sCellTel22) || util.isNull(sCellTel32)){
+		return "";
+	}else{
+		return sCellTel12+"-"+sCellTel22+"-"+sCellTel32;
+	}
+//decode( sCellTel11+sCellTel21+sCellTel31, '', '', sCellTel11+"-"+sCellTel21+"-"+sCellTel31)
+};
+	scwin.Tab0_tab2_Grid1_oncellclick = function(row,col) {
+		if(DsWs_SearchList.getCellData(row,"editYN")=="N"){
+			DsWs_SearchList.setCellData(row,"CHK","0");
+		};
+	};	
+	scwin.Tab0_tab2_Grid2_oncellclick = function(row,col) {
+		if(DsWs_SearchList.getCellData(row,"editYN2")=="N"){
+			DsWs_SearchList.setCellData(row,"CHK2","0");
+		};
+	};
+	]]></script>
+    </head>
+    <body>
+    	<xf:group class="cont_wrap layer" id="form"
+    		style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;/*height:587px;*/left:0px;top:0px;/*width:700px;"
+    		userData1="문자메세지전송"
+    		userData2=" OnLoadCompleted:scwin.form_OnLoadCompleted; ">
+    		<DataObjects>
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    		</DataObjects>
+    		<ServiceObjects>
+    			<ServiceObject />
+    			<ServiceObject />
+    			<ServiceObject />
+    			<ServiceObject />
+    		</ServiceObjects>
+    		<xf:group arcsize="6" class="search_area" id="Shape9"
+    			style="left:0px;top:32px;width:870px;" userData3="RoundRect">
+    			<xf:trigger class="btn_Comm_Search"
+    				ev:onclick="scwin.lfn_Search" id="btn_search"
+    				style="position:absolute; Transparent:TRUE;  ImageID:btn_Search_02;  height:20px;left:798px;top:6px; width:45px;"
+    				tabIndex="5" type="anchor">
+    				<xf:label><![CDATA[조회]]></xf:label>
+    			</xf:trigger>
+    		</xf:group>
+    		<w2:textbox id="Static5" label="문자메시지전송"
+    			style="position:absolute; VAlign:Middle;  height:22px;left:0px; width:253px;top:1px;"
+    			tagname="" class="sub_pop_title01" />
+    		<w2:wframe id="div0" scope="true" src=""
+    			style="position:absolute; height:28px; left:373px; top:0px; width:500px;" />
+    		<w2:textbox class="sty_lb_Search" id="Static6" label="발송구분"
+    			style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:1px;top:42px; width:48px;"
+    			tagname="" />
+
+    		<xf:group id=""
+    			style="width: 175px;height: 457px;margin-top:92px;margin-left:13px;"
+    			class="phone_bg">
+    			<w2:textbox
+    				style="position: absolute;width:67px;height:23px;left:21px;top:476px;font-size:7pt;color:#FFFFFF;"
+    				label="보내는사람" id="">
+    			</w2:textbox>
+    		</xf:group>
+    		<xf:select1 appearance="full" class="sty_ipt_search"
+    			ev:onchange="" id="Radio_searchType" rows="1"
+    			style="position:absolute;height:20px;left:68px;top:41px;width:171px;"
+    			tabIndex="1"
+    			ev:onviewchange="scwin.Radio_searchType_OnChanged">
+    			<xf:choices>
+    				<xf:item>
+    					<xf:label><![CDATA[고객]]></xf:label>
+    					<xf:value><![CDATA[1]]></xf:value>
+    				</xf:item>
+    				<xf:item>
+    					<xf:label><![CDATA[조직]]></xf:label>
+    					<xf:value><![CDATA[2]]></xf:value>
+    				</xf:item>
+    				<xf:item>
+    					<xf:label><![CDATA[기타]]></xf:label>
+    					<xf:value><![CDATA[3]]></xf:value>
+    				</xf:item>
+    			</xf:choices>
+    			<Layout />
+    			<Layout />
+    			<Layout />
+    		</xf:select1>
+    		<xf:image ev:onclick="scwin.Image2_OnClick" id="Image2"
+    			src=""
+    			style="position:absolute; Static:FALSE;  height:14px;left:39px;top:261px; width:41px;"
+    			tabIndex="12" class="sms_hp_reload" />
+    		<w2:textbox id="St_Byte" label="0"
+    			style="position:absolute; VAlign:Middle;  text-align:right; height:18px; left:108px; top:262px; width:20px;"
+    			tagname="" />
+    		<w2:textbox id="Static0" label="byte"
+    			style="position:absolute; VAlign:Middle;  height:18px; left:132px; top:262px; width:25px;"
+    			tagname="" />
+    		<w2:textbox id="St_sSendCenterName"
+    			style="position:absolute; VAlign:Middle;  text-align:right;height:18px;left:30px;top:345px;width:99px;"
+    			tagname="" />
+    		<w2:textbox id="St_sSendName"
+    			style="position:absolute; VAlign:Middle;  text-align:right;height:18px;left:129px; top:344px;width:40px;"
+    			tagname="" />
+    		<xf:image ev:onclick="scwin.Image3_OnClick" id="Image3"
+    			src=""
+    			style="position:absolute; Static:FALSE;  height:25px;left:73px;top:498px; width:47px;"
+    			tabIndex="17" class="sms_hp_send" />
+    		<xf:textarea
+    			ev:oneditkeyup="scwin.Txt_MsgContent_OnCharChanged"
+    			id="Txt_MsgContent" maxByteLength="80"
+    			style="position:absolute; ImeMode:native;  border-color:white;  border-style:solid;  background-color:#ccecff;  height:114px;left:36px;top:141px; width:125px;"
+    			tabIndex="2" />
+    		<xf:input dataType="number"
+    			ev:oneditkeyup="scwin.Ed_CallBackTel_OnCharChanged"
+    			id="Ed_CallBackTel1" maxlength="4"
+    			style="position:absolute; border-style:solid;  text-align:CENTER;  height:16px;left:69px;top:479px; width:27px;"
+    			tabIndex="4" class="sty_ipt_form" />
+    		<w2:gridView autoFit="allColumn" autoFitMinWidth="100"
+    			class="sty_Grid" dataList="Ds_Customer"
+    			ev:oncellclick="scwin.Grd_Cus_OnCellClick" focusMode="row"
+    			id="Grd_Cus" inputType="text" readOnly="false"
+    			style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  FillArea:TRUE;  EndLineColor:default;  border:None;  AutoEnter:TRUE;  height:117px; left:31px; right:170px; top:362px; width:139px;"
+    			tabIndex="3" editModeEvent="">
+    			<w2:header style="" id="header2">
+    				<w2:row style="" id="row2">
+    					<w2:column width="30" inputType="text"
+    						style="height:20px;" id="column8" blockSelect="false"
+    						displayMode="label">
+    					</w2:column>
+    					<w2:column width="40" inputType="text"
+    						style="height:20px;" id="column7" blockSelect="false"
+    						displayMode="label">
+    					</w2:column>
+    					<w2:column width="40" inputType="text"
+    						style="height:20px;" id="column6" blockSelect="false"
+    						displayMode="label">
+    					</w2:column>
+    					<w2:column width="20" inputType="text"
+    						style="height:20px;" id="column5" blockSelect="false"
+    						displayMode="label">
+    					</w2:column>
+    				</w2:row>
+    			</w2:header>
+    			<w2:gBody>
+    				<w2:row>
+    					<w2:column dataType="text" id="cTel1"
+    						inputType="select" readOnly="false"
+    						style="height:20px; combodisplayrowcnt:7; " textAlign="center"
+    						userData1="0" userData3="0" width="30">
+    						<w2:choices>
+    							<w2:itemset nodeset="data:Ds_CallCd">
+    								<w2:label ref="CODE"></w2:label>
+    								<w2:value ref="CODE"></w2:value>
+    							</w2:itemset>
+    						</w2:choices>
+    					</w2:column>
+    					<w2:column dataType="text" id="cTel2"
+    						inputType="text" maxlength="4" readOnly="false"
+    						textAlign="left" userData1="1" userData3="0" width="40"
+    						maxLength="4" style="height:20px; combodisplayrowcnt:7; " />
+    					<w2:column dataType="text" id="cTel3"
+    						inputType="text" maxlength="4" readOnly="false"
+    						textAlign="left" userData1="2" userData3="0" width="40"
+    						maxLength="4" style="height:20px; combodisplayrowcnt:7; " />
+    					<w2:column dataType="text" id="temp_id_381"
+    						inputType="text" readOnly="true" textAlign="center"
+    						userData1="3" userData3="0" width="20" value="x"
+    						style="height:20px; combodisplayrowcnt:7; " />
+    				</w2:row>
+    			</w2:gBody>
+    		</w2:gridView>
+    		<xf:switch id="switch_49" style=" ">
+    			<xf:case id="Default_50" style=" ">
+
+    			</xf:case>
+    		</xf:switch>
+    		<w2:tabControl class="sty_tab"
+    			ev:onchange="scwin.Tab0_OnChanged" id="Tab0"
+    			style="position:absolute;  height:249px;left:255px;top:74px; width:610px;"
+    			tabIndex="18">
+    			<w2:content alwaysDraw="false" id="Tab0_tab1"
+    				style="position:absolute; border-color:black;  height:213px; left:0px; top:35px; width:615px;">
+    				<xf:switch id="switch_50" style=" ">
+    					<xf:case id="Default_51" style=" ">
+    						<w2:gridView autoFit="allColumn"
+    							autoFitMinWidth="100" class="sty_Grid" focusMode="row"
+    							id="Tab0_tab1_Grid0" inputType="text" readOnly="true"
+    							style="position:absolute; Transparent:TRUE;  ImageID:btn_Search_Search;  height:180px;left:0px;top:0px; width:610px;"
+    							tabIndex="1" dataList="DsWs_CUSAA03">
+    							<w2:header>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="head_id_382" inputType="checkbox" readOnly="true"
+    										style="height:20px; dataType:checkbox; ;"
+    										textAlign="center" userData1="0" userData3="0" value="사원명"
+    										width="16" />
+    									<w2:column dataType="text"
+    										id="head_id_383" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="1"
+    										userData3="0" value="고객번호" width="110" />
+    									<w2:column dataType="text"
+    										id="head_id_384" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="2"
+    										userData3="0" value="고객명" width="85" />
+    									<w2:column dataType="text"
+    										id="head_id_385" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="3"
+    										userData3="0" value="구분" width="85" />
+    									<w2:column colSpan="3"
+    										dataType="text" id="head_id_386" inputType="text"
+    										readOnly="true" style="height:20px;" textAlign="center"
+    										userData1="4" userData3="0" value="수신번호" width="110" />
+    									<w2:column width="120"
+    										inputType="text" style="height:20px;" id="column1"
+    										blockSelect="false" displayMode="label" colSpan="3"
+    										rowSpan="" value="수신번호">
+    									</w2:column>
+    									<w2:column width="110"
+    										inputType="text" style="height:20px;" id="column6"
+    										blockSelect="false" displayMode="label" colSpan="3"
+    										rowSpan="" value="수신번호">
+    									</w2:column>
+    									<w2:column width="70"
+    										inputType="text" style="height:20px;" id="column8"
+    										blockSelect="false" displayMode="label" value="기타">
+    									</w2:column>
+    									<w2:column width="70"
+    										inputType="text" style="height:20px;" id="column10"
+    										blockSelect="false" displayMode="label" value="기타">
+    									</w2:column>
+    								</w2:row>
+    							</w2:header>
+    							<w2:gBody>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="CHK" inputType="checkbox" readOnly="false"
+    										style="height:20px; dataType:checkbox; ;" userData1="0"
+    										userData3="0" width="16" />
+    									<w2:column dataType="text"
+    										id="sCustNo" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="1"
+    										userData3="0" width="110" />
+    									<w2:column dataType="text"
+    										id="sName" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="2"
+    										userData3="0" width="85" value=""/>
+    									<w2:column dataType="own"
+    										id="sTelType" imageWidth="" inputType="select"
+    										readOnly="false" style="height:20px;" userData1=""
+    										userData3="" width="" chooseOption="" blockSelect=""
+    										editModeEvent="onsecondclick" allOption="">
+    										<w2:choices>
+    											<w2:itemset
+    												nodeset="data:Ds_TelType">
+    												<w2:label
+    													ref="sName">
+    												</w2:label>
+    												<w2:value
+    													ref="sCode">
+    												</w2:value>
+    											</w2:itemset>
+    										</w2:choices>
+    									</w2:column>
+    									<w2:column dataType="text"
+    										id="sCellPhone1" inputType="text" maxlength="3"
+    										readOnly="true" style="height:20px;background-color: lightgrey;" userData1="4"
+    										userData3="0" width="30" />
+    									<w2:column dataType="text"
+    										id="sCellPhone2" inputType="text" maxlength="4"
+    										readOnly="true" style="height:20px;background-color: lightgrey;" userData1="5"
+    										userData3="0" width="40" maxLength="4"/>
+    									<w2:column dataType="text"
+    										id="sCellPhone3" inputType="text" maxlength="4"
+    										readOnly="true" style="height:20px;background-color: lightgrey;" userData1="6"
+    										userData3="0" width="40" maxLength="4"/>
+    									<w2:column width="40"
+    										inputType="text" style="height:20px;background-color: lightgrey;" id="sEtcTel1"
+    										blockSelect="false" displayMode="label" readOnly="true">
+    									</w2:column>
+    									<w2:column width="40"
+    										inputType="text" style="height:20px;background-color: lightgrey;" id="sEtcTel2"
+    										blockSelect="false" displayMode="label" readOnly="true" maxLength="4">
+    									</w2:column>
+    									<w2:column width="40"
+    										inputType="text" style="height:20px;background-color: lightgrey;" id="sEtcTel3"
+    										blockSelect="false" displayMode="label" readOnly="true" maxLength="4">
+    									</w2:column>
+    									<w2:column width="30"
+    										inputType="text" style="height:20px;" id="sDirectTel1"
+    										blockSelect="false" displayMode="label" value="" readOnly="false" editModeEvent="onclick">
+    									</w2:column>
+    									<w2:column width="40"
+    										inputType="text" style="height:20px;" id="sDirectTel2"
+    										blockSelect="false" displayMode="label" value="" readOnly="false" editModeEvent="onclick" maxLength="4">
+    									</w2:column>
+    									<w2:column width="40"
+    										inputType="text" style="height:20px;" id="sDirectTel3"
+    										blockSelect="false" displayMode="label" value="" readOnly="false" editModeEvent="onclick" maxLength="4">
+    									</w2:column>
+    									<w2:column width="70"
+    										inputType="expression" style="height:20px;" id="sEtcType"
+    										blockSelect="false" displayMode="label" dataType="text"
+    										customFormatter="scwin.fn_getExprEtcType"
+    										expression="">
+    									</w2:column>
+    									<w2:column width="70"
+    										inputType="expression" style="height:20px;" id="sEtcType2"
+    										blockSelect="false" displayMode="label" dataType="text" customFormatter="scwin.fn_getExprEtcType2">
+    									</w2:column>
+    								</w2:row>
+    							</w2:gBody>
+    						</w2:gridView>
+    					</xf:case>
+    				</xf:switch>
+    			</w2:content>
+    			<w2:content alwaysDraw="false" id="Tab0_tab2"
+    				style="position:absolute;  height:223px; left:0px; top:24px; width:615px;">
+    				<xf:switch id="switch_51" style=" ">
+    					<xf:case id="Default_52" style=" ">
+    						<w2:gridView autoFit="allColumn"
+    							autoFitMinWidth="100" class="sty_Grid"
+    							dataList="DsWs_SearchList"
+    							ev:onheaderclick="scwin.Tab0_tab2_Grid1_OnHeadClick"
+    							focusMode="row" id="Tab0_tab2_Grid1" inputType="text"
+    							readOnly="true" sortEvent="onclick" sortable="true"
+    							style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;height:205px; left:0px; right:302px; top:13px;width:299px;"
+    							tabIndex="3" ev:oncellclick="scwin.Tab0_tab2_Grid1_oncellclick">
+    							<w2:header>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="chk" inputType="checkbox" readOnly="true"
+    										style="height:20px; dataType:checkbox; ;"
+    										textAlign="center" userData1="0" userData3="0" value="사원명"
+    										width="20" />
+    									<w2:column dataType="text"
+    										id="head_id_389" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="1"
+    										userData3="0" value="조직명" width="110" />
+    									<w2:column dataType="text"
+    										id="head_id_390" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="2"
+    										userData3="0" value="사원명" width="85" />
+    									<w2:column dataType="text"
+    										id="head_id_391" inputType="text" readOnly="true"
+    										style="height:20px;" userData1="3" userData3="0"
+    										value="휴대폰" width="85" />
+    								</w2:row>
+    							</w2:header>
+    							<w2:gBody>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="CHK" inputType="checkbox" readOnly="false"
+    										style="height:20px; dataType:checkbox; " userData1="0"
+    										userData2=" expr:decode(editYN,'N','none','checkbox') ;"
+    										userData3="0" width="16" />
+    									<w2:column dataType="text"
+    										id="sDepartName1" inputType="text" readOnly="true"
+    										textAlign="center" userData1="1" userData3="0"
+    										width="110" />
+    									<w2:column dataType="text"
+    										id="sEmpName1" inputType="text" readOnly="true"
+    										textAlign="center" userData1="2" userData3="0" width="85" />
+    									<w2:column dataType="text"
+    										expression=""
+    										id="temp_id_392" inputType="expression" readOnly="true"
+    										userData1="3" userData3="0" width="85"
+    										customFormatter="scwin.fn_getExprCellTel1" userData2="decode( sCellTel11+sCellTel21+sCellTel31, '', '', sCellTel11+&quot;-&quot;+sCellTel21+&quot;-&quot;+sCellTel31)"/>
+    								</w2:row>
+    							</w2:gBody>
+    						</w2:gridView>
+    					</xf:case>
+    				</xf:switch>
+    				<xf:switch id="switch_52" style=" ">
+    					<xf:case id="Default_53" style=" ">
+    						<w2:gridView autoFit="allColumn"
+    							autoFitMinWidth="100" class="sty_Grid"
+    							dataList="DsWs_SearchList"
+    							ev:onheaderclick="scwin.Tab0_tab2_Grid2_OnHeadClick"
+    							focusMode="row" id="Tab0_tab2_Grid2" inputType="text"
+    							readOnly="true" sortEvent="onclick" sortable="true"
+    							style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;height:206px; left:305px; right:603px; top:13px;width:298px;"
+    							tabIndex="4" ev:oncellclick="scwin.Tab0_tab2_Grid2_oncellclick">
+    							<w2:header>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="chk" inputType="checkbox" readOnly="true"
+    										style="height:20px; dataType:checkbox; ;"
+    										textAlign="center" userData1="0" userData3="0" value="사원명"
+    										width="20" />
+    									<w2:column dataType="text"
+    										id="head_id_394" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="1"
+    										userData3="0" value="조직명" width="110" />
+    									<w2:column dataType="text"
+    										id="head_id_395" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="2"
+    										userData3="0" value="사원명" width="85" />
+    									<w2:column dataType="text"
+    										id="head_id_396" inputType="text" readOnly="true"
+    										style="height:20px;" userData1="3" userData3="0"
+    										value="휴대폰" width="85" />
+    								</w2:row>
+    							</w2:header>
+    							<w2:gBody>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="CHK2" inputType="checkbox" readOnly="false"
+    										style="height:20px; dataType:checkbox; " userData1="0"
+    										userData2=" expr:decode(editYN2,'N','none','checkbox') ;"
+    										userData3="0" width="16" />
+    									<w2:column dataType="text"
+    										id="sDepartName2" inputType="text" readOnly="true"
+    										textAlign="center" userData1="1" userData3="0"
+    										width="110" />
+    									<w2:column dataType="text"
+    										id="sEmpName2" inputType="text" readOnly="true"
+    										textAlign="center" userData1="2" userData3="0" width="85" />
+    									<w2:column dataType="text"
+    										expression=""
+    										id="temp_id_397" inputType="expression" readOnly="true"
+    										userData1="3" userData3="0" width="85"
+    										customFormatter="scwin.fn_getExprCellTel2" userData2="decode( sCellTel12+sCellTel22+sCellTel32, '', '', sCellTel12+&quot;-&quot;+sCellTel22+&quot;-&quot;+sCellTel32)"/>
+    								</w2:row>
+    							</w2:gBody>
+    						</w2:gridView>
+    					</xf:case>
+    				</xf:switch>
+    			</w2:content>
+    			<w2:tabs disabled="false" id="tab0_tab1" label="고객"
+    				style="" />
+    			<w2:tabs disabled="false" id="tab0_tab2" label="보상조직"
+    				style="" />
+    		</w2:tabControl>
+    		<w2:textbox class="sty_lb_Search" id="Static1" label="발신번호"
+    			style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:607px;top:41px; width:48px;"
+    			tagname="" />
+    		<xf:input class="sty_ipt_search" dataType="number"
+    			ev:oneditkeyup="scwin.CallBackTel_OnCharChanged"
+    			id="CallBackTel1" maxlength="3"
+    			style="position:absolute; ImeMode:native;  border-style:solid;  text-align:CENTER;  height:21px;left:669px;top:40px; width:38px;"
+    			tabIndex="20" ev:onkeyup="scwin.CallBackTel_OnCharChanged" />
+    		<w2:tabControl class="sty_tab"
+    			ev:onchange="scwin.Tab1_OnChanged" id="Tab1"
+    			style="position:absolute;  height:249px;left:255px;top:327px; width:610px;"
+    			tabIndex="21">
+    			<w2:content alwaysDraw="false" id="Tab1_tab1"
+    				style="position:absolute; border-color:black;  height:223px; left:0px; top:24px; width:610px;">
+    				<xf:group arcsize="6" class="search_area" id=""
+    					style="left:0px;top:12px;width:610px;" userData3="RoundRect">
+    				</xf:group>
+    				<w2:textbox class="sty_lb_Search"
+    					id="Tab1_tab1_Static1" label="구분"
+    					style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:3px;top:20px; width:44px;"
+    					tagname="" />
+    				<xf:select1 appearance="minimal"
+    					class="sty_ipt_search" emptyItem="true" ev:onchange=""
+    					id="Tab1_tab1_cmb_SMSType1"
+    					style="position:absolute; Value:all;  Text:전체;  ImeMode:none;  INDEX:0;  border-style:solid;  height:20px;left:63px;top:20px; width:125px;"
+    					tabIndex="4" renderType="native"
+    					ev:onviewchange="scwin.Tab1_tab1_cmb_SMSType1_OnChanged"
+    					allOption="" chooseOption="">
+    					<xf:choices>
+    						<xf:itemset nodeset="data:DsWs_SMSType1">
+    							<xf:label ref="sName" />
+    							<xf:value ref="nCode1" />
+    						</xf:itemset>
+    					</xf:choices>
+    				</xf:select1>
+    				<xf:select1 appearance="minimal"
+    					class="sty_ipt_search" emptyItem="true" ev:onchange=""
+    					id="Tab1_tab1_cmb_SMSType2"
+    					style="position:absolute; border-style:solid;  height:20px;left:193px;top:20px; width:110px;"
+    					tabIndex="3" renderType="native" allOption="" chooseOption=""
+    					ev:onviewchange="scwin.Tab1_tab1_cmb_SMSType2_OnChanged">
+    					<xf:choices>
+    						<xf:itemset nodeset="data:Ds_SMSType2">
+    							<xf:label ref="sName" />
+    							<xf:value ref="nCode2" />
+    						</xf:itemset>
+    					</xf:choices>
+    				</xf:select1>
+    				<xf:trigger class="btn_Comm_Search"
+    					ev:onclick="scwin.btn_searchCommon_Onclick"
+    					id="Tab1_tab1_btn_searchCommon"
+    					style="position:absolute; Transparent:TRUE;  ImageID:btn_Search_02;  height:20px;left:533px;top:20px; width:45px;"
+    					tabIndex="5" type="anchor">
+    					<xf:label><![CDATA[조회]]></xf:label>
+    				</xf:trigger>
+    				<xf:switch id="switch_53" style=" ">
+    					<xf:case id="Default_54" style=" ">
+    						<w2:gridView autoFit="allColumn"
+    							autoFitMinWidth="100" class="sty_Grid"
+    							dataList="DsWs_commonSMS"
+    							ev:oncellclick="scwin.Tab1_tab1_Grid0_OnCellClick"
+    							focusMode="row" id="Tab1_tab1_Grid0" inputType="text"
+    							readOnly="true"
+    							style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;height:160px; left:0px; right:0px;top:56px;width:605px;"
+    							tabIndex="6">
+    							<w2:header>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="head_id_398" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="0"
+    										userData3="0" value="SMS" width="44" />
+    									<w2:column dataType="text"
+    										id="head_id_399" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="1"
+    										userData3="0" value="내용" width="397" />
+    								</w2:row>
+    							</w2:header>
+    							<w2:gBody>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="CHK" inputType="checkbox" readOnly="false"
+    										style="height:27px; dataType:checkbox; " userData1="0"
+    										userData3="0" width="44" />
+    									<w2:column dataType="text"
+    										id="sContent" inputType="text" readOnly="true"
+    										textAlign="left" userData1="1" userData3="0" width="397" />
+    								</w2:row>
+    							</w2:gBody>
+    						</w2:gridView>
+    					</xf:case>
+    				</xf:switch>
+
+    			</w2:content>
+    			<w2:content alwaysDraw="false" id="Tab1_tab2"
+    				style="position:absolute; border-color:black; left:0px; top:24px; width:615px; height:223px;">
+    				<w2:textbox id="Tab1_tab2_Static0" label="개인보관함"
+    					style="position:absolute; VAlign:Middle;  height:20px;left:0px;top:17px; width:91px;"
+    					tagname="" class="sub_pop_title02" />
+    				<xf:trigger class="popup_top_btn"
+    					ev:onclick="scwin.Tab1_tab2_btn_input_OnClick"
+    					id="Tab1_tab2_btn_input"
+    					style="position:absolute; ImageID:btn_Input_02;  height:20px;left:446px;top:13px;"
+    					tabIndex="5" type="anchor">
+    					<xf:label><![CDATA[등록]]></xf:label>
+    				</xf:trigger>
+    				<xf:trigger class="popup_top_btn"
+    					ev:onclick="scwin.Tab1_tab2_btn_modify_OnClick"
+    					id="Tab1_tab2_btn_modify"
+    					style="position:absolute; ImageID:btn_Input_02;  height:20px;left:497px;top:13px;"
+    					tabIndex="6" type="anchor">
+    					<xf:label><![CDATA[수정]]></xf:label>
+    				</xf:trigger>
+    				<xf:trigger class="popup_top_btn"
+    					ev:onclick="scwin.Tab1_tab2_btn_delete_OnClick"
+    					id="Tab1_tab2_btn_delete"
+    					style="position:absolute; ImageID:btn_Input_02;  height:20px;left:548px;top:13px;"
+    					tabIndex="7" type="anchor">
+    					<xf:label><![CDATA[삭제]]></xf:label>
+    				</xf:trigger>
+    				<w2:textbox id="Tab1_tab2_Static2" label="byte"
+    					style="position:absolute; height:16px; left:31px; top:39px; width:24px;"
+    					tagname="" />
+    				<w2:textbox class="sty_lb_Basic" id="Tab1_tab2_base"
+    					style="position:absolute; VAlign:Middle;border:1px solid #cacaca;  text-align:right; height:43px;left:0px;top:39px; width:60px;"
+    					tagname="" />
+    				<w2:textbox id="Tab1_tab2_Static3" label="byte"
+    					style="position:absolute; height:16px;left:30px;top:51px; width:24px;"
+    					tagname="" />
+    				<w2:textbox id="Tab1_tab2_byteText" label="0"
+    					style="position:absolute; text-align:right; height:16px;left:10px;top:51px; width:16px;"
+    					tagname="" />
+    				<xf:textarea class="sty_ipt_form"
+    					ev:oneditkeyup="scwin.Tab1_tab2_Txt_sContent_OnCharChanged"
+    					id="Tab1_tab2_Txt_sContent" maxByteLength="80"
+    					ref="data:Ds_CLMMA37.sContent"
+    					style="position:absolute; VScroll:TRUE;  height:45px;left:67px;top:39px; width:543px;"
+    					tabIndex="12"
+    					ev:onviewchange="scwin.Tab1_tab2_Txt_sContent_OnCharChanged" ev:onkeyup="scwin.Tab1_tab2_Txt_sContent_onkeyup"/>
+    				<xf:switch id="switch_54" style=" ">
+    					<xf:case id="Default_55" style=" ">
+    						<w2:gridView autoFit="allColumn"
+    							autoFitMinWidth="100" class="sty_Grid"
+    							dataList="DsWs_CLMMA37"
+    							ev:oncellclick="scwin.Tab1_tab2_Grid0_OnCellClick"
+    							focusMode="row" id="Tab1_tab2_Grid1" inputType="text"
+    							readOnly="true"
+    							style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;height:127px; left:0px; right:0px;top:92px;width:610px;"
+    							tabIndex="13">
+    							<w2:header>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="head_id_400" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="0"
+    										userData3="0" value="SMS" width="44" />
+    									<w2:column dataType="text"
+    										id="head_id_401" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="center" userData1="1"
+    										userData3="0" value="내용" width="397" />
+    								</w2:row>
+    							</w2:header>
+    							<w2:gBody>
+    								<w2:row>
+    									<w2:column dataType="text"
+    										id="CHK" inputType="checkbox" readOnly="false"
+    										style="height:20px; dataType:checkbox; ;" userData1="0"
+    										userData3="0" width="44" />
+    									<w2:column dataType="text"
+    										id="sContent" inputType="text" readOnly="true"
+    										style="height:20px;" textAlign="left" userData1="1"
+    										userData3="0" width="397" value="" />
+    								</w2:row>
+    							</w2:gBody>
+    						</w2:gridView>
+    					</xf:case>
+    				</xf:switch>
+    			</w2:content>
+    			<w2:tabs disabled="false" id="tab1_tab1" label="공용보관함"
+    				style="" />
+    			<w2:tabs disabled="false" id="tab1_tab2" label="개인보관함"
+    				style="" />
+    		</w2:tabControl>
+
+
+
+
+
+
+
+    		<xf:input class="sty_ipt_search" dataType="number"
+    			ev:oneditkeyup="scwin.CallBackTel_OnCharChanged"
+    			id="CallBackTel2" maxlength="4"
+    			style="position:absolute; ImeMode:native;  border-style:solid;  text-align:CENTER;  height:21px;left:709px;top:40px; width:38px;"
+    			tabIndex="30" ev:onkeyup="scwin.CallBackTel_OnCharChanged" />
+    		<xf:input class="sty_ipt_search" dataType="number"
+    			ev:oneditkeyup="scwin.CallBackTel_OnCharChanged"
+    			id="CallBackTel3" maxlength="4"
+    			style="position:absolute; ImeMode:native;  border-style:solid;  text-align:CENTER;  height:21px;left:749px;top:40px; width:38px;"
+    			tabIndex="31" ev:onviewchange=""
+    			ev:onkeyup="scwin.CallBackTel_OnCharChanged" />
+
+    		<xf:input dataType="number"
+    			ev:oneditkeyup="scwin.Ed_CallBackTel_OnCharChanged"
+    			id="Ed_CallBackTel2" maxlength="4"
+    			style="position:absolute; border-style:solid;  text-align:CENTER;  height:16px;left:100px;top:479px; width:30px;"
+    			tabIndex="33" class="sty_ipt_form" />
+    		<xf:input dataType="number"
+    			ev:oneditkeyup="scwin.Ed_CallBackTel_OnCharChanged"
+    			id="Ed_CallBackTel3" maxlength="4"
+    			style="position:absolute; border-style:solid;  text-align:CENTER;  height:16px;left:133px;top:479px; width:30px;"
+    			tabIndex="34" class="sty_ipt_form" />
+
+
+
+
+
+
+
+
+
+
+
+    		<xf:switch caseClass=""
+    			style="position: absolute;width:377px;height:32px;top:34px;left:238px;"
+    			id="switch1" class="">
+    			<xf:case style="width:-136;height:-572;" id="case1"
+    				class="">
+
+    				<w2:textbox tagname=""
+    					style="position:absolute; VAlign:Middle; height:20px;left:-2px;top:6px; width:4 6px;"
+    					id="Static_cust" label="고객명" class="sty_lb_Search">
+    				</w2:textbox>
+    				<xf:trigger ev:onclick="scwin.btn_search0_OnClick"
+    					style="position:absolute; Transparent:TRUE;  ImageID:btn_Search_Search;  height:18px;left:42px;top:7px; width:20px;"
+    					tabIndex="28" id="btn_search0" type="anchor"
+    					class="detail_search">
+    				</xf:trigger>
+    				<xf:input
+    					style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:65px;top:6px; width:106px;"
+    					tabIndex="29" id="sName" class="sty_ipt_search">
+    				</xf:input>
+    				<w2:textbox tagname=""
+    					style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:178px;top:7px; width:48px;"
+    					id="Static_custNo" label="고객코드" class="sty_lb_Search">
+    				</w2:textbox>
+    				<xf:input ev:onblur=""
+    					maxlength="14" dataType="text" displayFormat="######-#######"
+    					style="position:absolute; border-style:solid;  height:20px;left:239px;top:5px; width:110px;"
+    					tabIndex="25" id="sCustNo" class="sty_ipt_search" ev:onkeydown="scwin.sCustNo_OnKeyDown">
+    				</xf:input>
+    			</xf:case>
+    			<xf:case style="width:-136;height:-82;" id="case2"
+    				class="">
+    				<w2:textbox tagname=""
+    					style="position:absolute; VAlign:Middle;left:7px;top:7px;width:40px;min-width: 30px;"
+    					id="Static_org" label="조     직" class="sty_lb_Search">
+    				</w2:textbox>
+    				<xf:select1 appearance="minimal" ev:onchange=""
+    					emptyItem="true" ev:onviewchange="scwin.Cmb_sCenter_OnChanged"
+    					style="position:absolute; border-style:solid;  height:20px;left:63px;top:7px; width:100px;"
+    					tabIndex="22" id="Cmb_sCenter" renderType="native"
+    					class="sty_ipt_search" allOption="" chooseOption="">
+    					<xf:choices>
+    						<xf:itemset nodeset="data:DsWs_sCenter">
+    							<xf:label ref="sDepartName"></xf:label>
+    							<xf:value ref="sDepartCode"></xf:value>
+    						</xf:itemset>
+    					</xf:choices>
+    				</xf:select1>
+    				<xf:select1 appearance="minimal" ev:onchange=""
+    					emptyItem="true" ev:onviewchange="scwin.Cmb_sTeam_OnChanged"
+    					style="position:absolute; border-style:solid;  height:20px;left:166px;top:7px; width:95px;"
+    					tabIndex="23" id="Cmb_sTeam" renderType="native"
+    					class="sty_ipt_search" allOption="" chooseOption="">
+    					<xf:choices>
+    						<xf:itemset nodeset="data:DsWs_sTeam">
+    							<xf:label ref="sDepartName"></xf:label>
+    							<xf:value ref="sDepartCode"></xf:value>
+    						</xf:itemset>
+    					</xf:choices>
+    				</xf:select1>
+    				<xf:select1 appearance="minimal" emptyItem="true"
+    					style="position:absolute; border-style:solid;  height:20px;left:264px;top:7px; width:95px;"
+    					tabIndex="24" id="Cmb_sStaff" renderType="native"
+    					class="sty_ipt_search" allOption="" chooseOption="">
+    					<xf:choices></xf:choices>
+    				</xf:select1>
+    			</xf:case>
+    			<xf:case style="width:-136;height:-82;" id="case3"
+    				class="">
+
+
+
+
+
+    				<w2:textbox tagname=""
+    					style="position:absolute; height:20px;left:0px;top:8px; width:360px;font-weight:bold;color:#FF0000;"
+    					id="EtcText" label="  ※ 전화번호를 직접입력해주세요.(최대 6개)"
+    					class="sty_lb_Search">
+    				</w2:textbox>
+    			</xf:case>
+    		</xf:switch>
+    	</xf:group>
+
+
+    	
+    </body>
+</html>

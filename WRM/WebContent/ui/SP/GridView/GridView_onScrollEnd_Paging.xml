@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataMap baseNode="map" id="dma_fileDesc">
+					<w2:keyInfo>
+						<w2:key id="desc" name="" dataType="text"></w2:key>
+						<w2:key id="test" name="" dataType="text"></w2:key>
+					</w2:keyInfo>
+					<w2:data use="true">
+						<desc><![CDATA[
+<pre class="textNor" style="">
+<div class="etcbox">본 화면은 GridView의 세로 스크롤을 이용한 페이징 처리 방법을 제공한다.
+본 페이지는 5건씩 가져오도록 처리되어 있다.
+</div>
+<div class="etc_tit">1. onscrollend 이벤트</div>
+  - 최초 조회시에 전체 건수를 함께 조회하여 onscrollend 이벤트에서 조회된 데이터의 양이 전체 건수보다 작을 경우 
+	추가로 데이터를 조회하여 dataList에 append 해 주는 방식을 이용한다.
+</pre>
+						]]></desc>
+						<test><![CDATA[
+<pre class="textNor" style="">						
+<div class="etc_tit">1. 과정</div>
+1. 화면 로딩 후 GridView의 세로스크롤을 끝까지 내려 onscrollend 이벤트를 발생시킨다.
+<div class="etc_tit">2. 결과</div>
+1. onscrollend 후 전체 건수 보다 조회된 건수가 작을 경우 계속 추가로 조회 transaction이 발생한다.
+   (브라우저의 개발자 도구 Network 구간을 확인해 본다.)
+2. 전체 건수만큼의 데이터를 가져오면 더이상의 조회 transaction은 발생하지 않는다.  
+</pre>
+						]]></test>
+					</w2:data>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" id="dma_search">
+					<w2:keyInfo>
+						<w2:key id="TOTAL_YN" name="총건수 조회여부" dataType="text" defaultValue="Y"></w2:key>
+						<w2:key id="START_NUM" name="시작 순번" dataType="text" defaultValue="0"></w2:key>
+						<w2:key id="END_NUM" name="끝 순번" dataType="text" defaultValue="5"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList id="dlt_update" baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="UPT_SEQ" name="업데이트순번" dataType="text"></w2:column>
+						<w2:column id="UPT_TITLE" name="제목" dataType="text"></w2:column>
+						<w2:column id="UPT_DATE" name="작성일" dataType="text"></w2:column>
+						<w2:column id="UPT_CONTENT" name="내용" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+			<xf:submission id="sbm_mainList" ref='data:json,dma_search' target=''
+				action="/page/selectPageInfo" method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler=""
+				mode="asynchronous" processMsg="" ev:submit="" ev:submitdone="scwin.sbm_mainList_submitdone" ev:submiterror="">
+			</xf:submission>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+		scwin.append = false;
+		scwin.totalCnt = 0;
+			
+		scwin.onpageload = function() {
+			scwin.searchMain(0, "Y");
+		};
+		
+		scwin.onpageunload = function() {
+			
+		};
+		
+		scwin.sbm_mainList_submitdone = function(e) {
+			// 조회 성공인 경우  
+			if(e.responseJSON.rsMsg.statusCode == "S"){
+				var firstYn = dma_search.get( "TOTAL_YN" );
+				
+				// 최초 조회일 경우에만 전체 건수를 구하여 전역변수에 담는다.
+				if (firstYn == "Y") {
+					scwin.totalCnt = e.responseJSON.TOTAL_CNT.CNT;
+				}
+				dlt_update.setJSON( e.responseJSON.dlt_update , scwin.append );
+			}
+		};
+		
+		
+		/**
+		 * 조회 (현재 샘플은 5개씩 조회할 경우 기준) 
+		 * param1 - 조회 시작 순번
+		 * param2 - 총 건수 조회 여부 
+		 */
+		scwin.searchMain = function(idx, strYn){
+			dma_search.set("TOTAL_YN" , strYn);
+			dma_search.set("START_NUM", idx);
+			dma_search.set("END_NUM" , 5);
+			
+			com.executeSubmission(sbm_mainList);
+		};
+	
+		scwin.gridView1_onscrollend = function() {
+			var startRow = dlt_update.getRowCount();
+			
+			// 전체 건수보다 조회된 건수가 작을 경우에만 추가 조회를 한다.
+			if (scwin.totalCnt > startRow) {
+				scwin.append = true;
+				scwin.searchMain(startRow, "N");
+			}
+		};
+		
+		// 처음부터 다시 조회 
+		scwin.btn_search_onclick = function() {
+			scwin.append = false;
+			scwin.searchMain(0, "Y");
+		};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="contentWrap" id="" style="">
+			<w2:wframe id="" style="" src="/cm/common/wf_titleFav.xml"></w2:wframe>
+			<w2:wframe id="" src="/cm/common/wf_titleDesc.xml"></w2:wframe>
+			<xf:group id="" style="" class="section"><xf:group id="" style="" class="tbl_search">
+				<xf:group id="" style="width:100%;" adaptive="layout" class="w2tb tbl_sc" adaptiveThreshold="768" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:80px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+						<xf:group style="width:180px;" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th"></xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:group id="" class="fr"></xf:group>
+							<w2:anchor id="btn_search" style="left:0px;top:0px;" ev:onclick="scwin.btn_search_onclick" class="btn_sh" outerDiv="true">
+								<xf:label><![CDATA[조회]]></xf:label>
+							</w2:anchor>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group></xf:group>
+		<xf:group id="" style="" class="section"><xf:group id="" style="" class="defaultbox">
+				<w2:textbox id="" style="" class="df_tt fl" label="예제"></w2:textbox>
+			</xf:group><w2:gridView ignoreCellClick="false" id="gridView1" dataList="dlt_update" summaryAuto="false" autoFit="allColumn" ignoreToggleOnDisabled="false" style="height:100px;" useShiftKey="true" scrollByColumn="false" class="cm_grid" ev:onscrollend="scwin.gridView1_onscrollend" fixedColumnWithHidden="true" scrollByColumnAdaptive="false">
+				<w2:header id="header1" style="">
+					<w2:row id="row1" style="">
+						<w2:column id="column7" blockSelect="false" style="height:20px" width="100" inputType="text" value="업데이트순번" displayMode="label"></w2:column>
+						<w2:column id="column5" blockSelect="false" style="height:20px" width="100" inputType="text" value="제목" displayMode="label"></w2:column>
+						<w2:column id="column3" blockSelect="false" style="height:20px" width="100" inputType="text" value="작성일" displayMode="label"></w2:column>
+						<w2:column id="column1" blockSelect="false" style="height:20px" inputType="text" width="100" value="내용" displayMode="label"></w2:column>
+					</w2:row>
+				</w2:header>
+				<w2:gBody id="gBody1" style="">
+					<w2:row id="row2" style="">
+						<w2:column id="UPT_SEQ" blockSelect="false" style="height:20px" width="70" inputType="text" displayMode="label"></w2:column>
+						<w2:column id="UPT_TITLE" blockSelect="false" style="height:20px" width="70" inputType="text" displayMode="label"></w2:column>
+						<w2:column id="UPT_DATE" blockSelect="false" style="height:20px" width="70" inputType="text" displayMode="label"></w2:column>
+						<w2:column id="UPT_CONTENT" blockSelect="false" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+					</w2:row>
+				</w2:gBody>
+			</w2:gridView></xf:group></xf:group>
+	</body>
+</html>

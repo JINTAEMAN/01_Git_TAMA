@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<!--
+		#####################################################################
+		파일명 : shortcut.xml
+		프로그램명 : 단축키 설정
+		설 명 : 단축키를 설정하는 화면
+		작성자 : Inswave Systems
+		작성일 : 2019.03.22
+		
+		수정일자	  수정자			 수정내용
+		=====================================================================
+		2019.03.22	Inswave Systems	최초작성
+		#####################################################################
+		-->
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataList id="dlt_program" baseNode="list" saveRemovedData="true" repeatNode="map" ev:oncelldatachange="">
+					<w2:columnInfo>
+						<w2:column id="chk" name="선택" dataType="text" ignoreStatus="true"></w2:column>
+						<w2:column id="PROGRAM_CD" name="프로그램코드" dataType="text"></w2:column>
+						<w2:column id="PROGRAM_NM" name="프로그램명" dataType="text"></w2:column>
+						<w2:column id="PROGRAM_GROUP_CD" name="프로그램그룹명" dataType="text"></w2:column>
+						<w2:column id="SRC_PATH" name="프로그램소스경로" dataType="text"></w2:column>
+						<w2:column id="IS_USE" name="사용여부" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" id="dma_search">
+					<w2:keyInfo>
+						<w2:key id="PROGRAM_GROUP_CD" name="프로그램구분" dataType="text"></w2:key>
+						<w2:key id="PROGRAM" name="프로그램" dataType="text"></w2:key>
+						<w2:key id="IS_USE" name="사용여부" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" id="dma_program">
+					<w2:keyInfo>
+						<w2:key id="PROGRAM_CD" name="프로그램코드" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" repeatNode="map" id="dlt_shortcutList" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="chk" name="선택" dataType="text" ignoreStatus="true"></w2:column>
+						<w2:column id="SHORTCUT_SEQ" name="단축키순번" dataType="number"></w2:column>
+						<w2:column id="PROGRAM_CD" name="프로그램코드" dataType="text"></w2:column>
+						<w2:column id="COMPLEX_KEY" name="복합키" dataType="text"></w2:column>
+						<w2:column id="LAST_KEY" name="지정키" dataType="text"></w2:column>
+						<w2:column id="OLD_COMPLEX_KEY" name="복합키" dataType="text"></w2:column>
+						<w2:column id="OLD_LAST_KEY" name="지정키" dataType="text"></w2:column>
+						<w2:column id="EVENT_TYPE" name="이벤트타입" dataType="text"></w2:column>
+						<w2:column id="EVENT_DETAIL" name="이벤트설명" dataType="text"></w2:column>
+						<w2:column id="EVENT_YN" name="이벤트사용여부" dataType="text"></w2:column>
+						<w2:column id="EVENT_TARGET" name="이벤트 설정값" dataType="text"></w2:column>
+					</w2:columnInfo>
+					<w2:data use="false">
+						<w2:row></w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:linkedDataList bind="dlt_shortcutList" id="ldt_shortcutList">
+					<w2:condition type="filter"><![CDATA[]]></w2:condition>
+					<w2:condition type="sort"><![CDATA[]]></w2:condition>
+				</w2:linkedDataList>
+				<w2:dataMap baseNode="map" id="dma_shortcut">
+					<w2:keyInfo>
+						<w2:key id="PROGRAM_CD" name="프로그램명" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+			<xf:submission id="sbm_searchProgram" ref="data:json,dma_search" target="data:json,dlt_program" action="/program/searchProgram"
+				method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous"
+				processMsg="" ev:submit="" ev:submitdone="scwin.sbm_searchProgram_submitdone" ev:submiterror="" abortTrigger="">
+			</xf:submission>
+			<xf:submission id="sbm_selectShortcutList" ref="data:json,dma_shortcut" target="" action="/main/selectShortcutList" method="post"
+				mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous" processMsg=""
+				ev:submit="" ev:submitdone="scwin.selectShortcutCallback" ev:submiterror="" abortTrigger="">
+			</xf:submission>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+	/**
+	 * 초기 스크립트 수행 함수 정의
+	 * sbm_ProgramSearchItem은 검색박스에 검색어들을 나열한다.
+	 */
+	scwin.onpageload = function() {
+		var codeOptions = [{ code : "00026", compID : "sbx_ProgramGroup, grd_program:PROGRAM_GROUP_CD"}];
+		com.setCommonCode(codeOptions);
+		com.setEnterKeyEvent(tbl_search, scwin.btn_search_onclick);
+		com.setGridViewDelCheckBox([grd_shortcutList]);
+	};
+
+	scwin.onpageunload = function() {
+
+	};
+
+	/**
+	 * 프로그램 조회 버튼시 발생하며, 조건에 따른 프로그램 목록을 조회한다.
+	 */
+	scwin.btn_search_onclick = function() {
+		com.executeSubmission(sbm_searchProgram);
+	};
+
+	/**
+	 * 프로그램 조회 버튼 콜백 메소드
+	 */
+	scwin.sbm_searchProgram_submitdone = function(e) {
+		var sCode = com.getResultCode(e);
+		if (sCode == "S") {
+			spn_programCnt.setValue(grd_program.getTotalRow());
+			dlt_shortcutList.removeAll();
+			grd_program.setFocusedCell(0, "PROGRAM_NM");
+		}
+	};
+
+	/**
+	 * 프로그램관리 리스트의 row 인덱스 위치가 바뀔때 마다 실행되며 프로그램코드에 해당하는 단축키 설정 목록을 가져온다.
+	 */
+	scwin.grd_program_onrowindexchange = function(row, oldRow) {
+		scwin.searchShortCutByProgram(row);
+	};
+	
+	scwin.searchShortCutByProgram = function(row) {
+		var rowIndex = 0;
+		if (typeof row !== undefined) {
+			rowIndex = dlt_program.getRowPosition();
+		} else {
+			rowIndex = row;
+		}
+		
+		scwin.programCd = dlt_program.getCellData(rowIndex, "PROGRAM_CD");
+		dma_program.set("PROGRAM_CD", scwin.programCd );
+		var shortcutModifyCnt = dlt_shortcutList.getModifiedIndex().length;
+		if (shortcutModifyCnt > 0) {
+			com.confirm("기존 프로그램에 변경된 단축키가 존재합니다. 변경된 단축키를 저장하시겠습니까?", function(rtn) {
+				if (rtn) {
+					scwin.saveShortcut();
+				} else {
+					dlt_shortcutList.removeAll();
+					scwin.resetShortcutGrd(scwin.programCd );
+				}
+			});
+		} else {
+			dlt_shortcutList.removeAll();
+			scwin.resetShortcutGrd(scwin.programCd );
+		}
+	}
+
+	scwin.selectShortcutCallback = function(e) {
+		var rsMsg = e.responseJSON.rsMsg;
+		if (rsMsg.statusCode === "S") {
+			var shortcutArr = [];
+			var shortcutOptArr = [];
+			var shortCutList = e.responseJSON.dlt_shortcutList || [];
+			if (shortCutList) {
+				var shortcutListArr = [];
+				for (var i = 0; i < shortCutList.length; i++) {
+					var shortcutObj = shortCutList[i];
+					var shortcutData = {
+						"SHORTCUT_SEQ" : shortcutObj["SHORTCUT_SEQ"],
+						"PROGRAM_CD" : shortcutObj["PROGRAM_CD"],
+						"OLD_COMPLEX_KEY" : shortcutObj["COMPLEX_KEY"],
+						"COMPLEX_KEY" : shortcutObj["COMPLEX_KEY"],
+						"OLD_LAST_KEY" : shortcutObj["LAST_KEY"],
+						"LAST_KEY" : shortcutObj["LAST_KEY"],
+						"EVENT_TYPE" : shortcutObj["EVENT_TYPE"],
+						"EVENT_DETAIL" : shortcutObj["EVENT_DETAIL"],
+						"EVENT_YN" : shortcutObj["EVENT_YN"],
+						"EVENT_TARGET" : shortcutObj["EVENT_TARGET"]
+					};
+					shortcutListArr.push(shortcutData);
+				}
+				dlt_shortcutList.setJSON(shortcutListArr, false);
+				spn_shortcutCnt.setValue(dlt_shortcutList.getTotalRow());
+			}
+			
+		}
+	};
+
+	scwin.resetShortcutGrd = function(programCd) {
+		dma_shortcut.set("PROGRAM_CD", programCd);
+		com.executeSubmission(sbm_selectShortcutList);
+	};
+
+	/**
+	 * 단축키 설정.
+	 */
+	scwin.saveShortcut = function() {
+		var modifiedList = dlt_shortcutList.getModifiedJSON();
+	};
+
+	/**
+	 * 프로그램별 접근 프로그램 리스트 콜백 메소드
+	 * 건수 조회, ReadOnly 그리드뷰 컬럼색 변경. ReadOnly속성을 설정한다. 
+	 */
+	scwin.sbm_searchProgramAuthority_submitdone = function(e) {
+		var sCode = com.getResultCode(e);
+		
+		if (sCode == "S") {
+			spn_programAuthorityCnt.setValue(grd_programAuthority.getTotalRow());
+		}
+	};
+
+	/**
+	 * 프로그램관리의 프로그램 입력, 수정, 삭제  
+	 */
+	scwin.btn_save_onclick = function() { 
+		var modifiedShortcutList = dlt_shortcutList.getModifiedIndex();
+		
+	 	if (modifiedShortcutList.length > 0) {
+			var valInfo = [ { id : "COMPLEX_KEY", mandatory : true }, 
+							{ id : "LAST_KEY", mandatory : true },
+							{ id : "EVENT_TYPE", mandatory : true },
+							{ id : "EVENT_TARGET", mandatory : true } ];
+			if (com.validateGridView(grd_shortcutList, valInfo) == false) {
+				return;
+			}
+
+			com.confirm("해당 프로그램에 대한 단축키가 저장됩니다. \n 진행하시겠습니까? ", function(rtn) {
+				if (rtn) {
+					var modifiedList = dlt_shortcutList.getModifiedJSON();
+					for (var i = 0; i < modifiedList.length; i++) {
+						var options = {
+							"SHORTCUT_SEQ"	: modifiedList[i].SHORTCUT_SEQ,
+							"PROGRAM_CD"	: modifiedList[i].PROGRAM_CD,
+							"COMPLEX_KEY"	: modifiedList[i].COMPLEX_KEY,
+							"LAST_KEY"		: modifiedList[i].LAST_KEY,
+							"EVENT_TARGET"	: modifiedList[i].EVENT_TARGET,
+							"EVENT_DETAIL"	: modifiedList[i].EVENT_DETAIL,
+							"EVENT_TYPE"	: modifiedList[i].EVENT_TYPE,
+							"EVENT_NAME"	: modifiedList[i].EVENT_TARGET,
+							"EVENT_YN"		: modifiedList[i].EVENT_YN
+						};
+						
+						if (modifiedList[i].rowStatus == "D") {
+							//단축키 삭제.
+							var removeShortcutKey = modifiedList[i].OLD_COMPLEX_KEY+"+"+modifiedList[i].OLD_LAST_KEY;
+							
+							if (removeShortcutKey != "+") {
+								com.removeShortcut(removeShortcutKey, options);
+							}
+						} else if (modifiedList[i].rowStatus == "C") {
+							//단축키 추가.
+							var addShortcutKey = modifiedList[i].COMPLEX_KEY+"+"+modifiedList[i].LAST_KEY;
+							
+							if (addShortcutKey != "+") {
+								com.setShortcut(addShortcutKey, options);
+							}
+						} else if (modifiedList[i].rowStatus == "U") {
+							//단축키 변경.
+							var oldShortcut_key = modifiedList[i].OLD_COMPLEX_KEY + "+" + modifiedList[i].OLD_LAST_KEY;
+							var newShortcut_key = modifiedList[i].COMPLEX_KEY + "+" + modifiedList[i].LAST_KEY; 
+							
+							if (addShortcutKey != "+") {
+								com.setShortcut(newShortcut_key, options, oldShortcut_key);
+							}
+						}
+					}
+				}
+				dlt_shortcutList.removeRows(dlt_shortcutList.getDeletedIndex());
+				dlt_shortcutList.reform();
+			});
+		} else {
+			com.alert("저장할 데이터가 없습니다.");
+		}
+	};
+	
+	/**
+	 * 단축키 추가 버튼
+	 */
+	scwin.btn_addShortcut_onclick = function() {
+		var insertIndex = dlt_shortcutList.insertRow(grd_shortcutList.getFocusedRealRowIndex() + 1);
+		dlt_shortcutList.setCellData(insertIndex, "PROGRAM_CD", scwin.programCd);
+		dlt_shortcutList.setCellData(insertIndex, "EVENT_YN", "Y");
+		grd_shortcutList.setFocusedCell(insertIndex, "COMPLEX_KEY", true);
+	};
+	
+	/**
+	 * 단축키 설정 데이터 변경시 이벤트처리
+	 */
+	scwin.grd_shortcutList_onviewchange = function(info) {
+		var isFilterData = [];
+		var colId = this.getColumnID(info.colIndex);
+		if (colId == "COMPLEX_KEY") {
+			var lastKey = dlt_shortcutList.getCellData(info.rowIndex, "LAST_KEY");
+			isFilterData = com.dataListFilter("ldt_shortcutList", "COMPLEX_KEY == '"+info.newValue+"' && LAST_KEY == '"+lastKey+"'", false)
+		} else if (colId == "LAST_KEY") {
+			var complexKey = dlt_shortcutList.getCellData(info.rowIndex, "COMPLEX_KEY");
+			isFilterData = com.dataListFilter("ldt_shortcutList", "COMPLEX_KEY == '"+complexKey+"' && LAST_KEY == '"+info.newValue+"'", false)
+		}
+		
+		if (isFilterData.length > 1) {
+			scwin._resetInfo = {
+				row : info.rowIndex,
+				col : info.colIndex,
+				oldValue : info.oldValue
+			};
+			com.alert("이미 동일한 단축키가 존재 합니다.", function() {
+				com.setEventPause(dlt_shortcutList, true);
+				dlt_shortcutList.setCellData(scwin._resetInfo["row"], scwin._resetInfo["col"], scwin._resetInfo["oldValue"]);
+				dlt_shortcutList.removeColumnFilterAll();
+				com.setEventPause(dlt_shortcutList, false);
+			});
+		}
+	};
+	
+	/**
+	 * 단축키 설정 변경 데이터 취소
+	 */
+	scwin.btn_cancelShortcut_onclick = function() {
+		dlt_shortcutList.undoAll();
+		dlt_shortcutList.removeRows(dlt_shortcutList.getInsertedIndex());
+	};
+	
+	]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="contentWrap" id="" style="">
+			<xf:group id="" style="" class="section">
+				<xf:group id="tbl_search" style="" class="tbl_search" adaptive="layout">
+					<xf:group id="" style="width:100.00%;" adaptive="layout" class="w2tb tbl_sc" adaptiveThreshold="768" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:81.00px;" tagname="col"></xf:group>
+							<xf:group style="width:142.00px;" tagname="col"></xf:group>
+							<xf:group style="width:60.00px;" tagname="col"></xf:group>
+							<xf:group style="width:169.00px;" tagname="col"></xf:group>
+							<xf:group style="width:60px;" tagname="col"></xf:group>
+							<xf:group style="width:230px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group tagname="tr" style="">
+							<xf:group style="" class="w2tb_th" tagname="th">프로그램그룹</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="true"
+									displayMode="label" optionOrder="false" id="sbx_ProgramGroup" ref="data:dma_search.PROGRAM_GROUP_CD"
+									style="height:20px;width:120px;margin-right: 10px;float:left;" allOption="" disabled="false" submenuSize="auto" chooseOptionLabel="전체" textAlign="left">
+									<xf:choices></xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="" class="w2tb_th" tagname="th">프로그램</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input adjustMaxLength="false" id="ibx_program" style="width:149px;height:21px;" ref="data:dma_search.PROGRAM" toolTip=""></xf:input>
+							</xf:group>
+							<xf:group class="w2tb_th" tagname="th">사용여부</xf:group>
+							<xf:group class="w2tb_td" tagname="td">
+								<xf:select1 id="" ref="data:dma_search.IS_USE" selectedIndex="0" cols="" appearance="full"
+									style="margin-right: 10px;min-width: 200px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[전체]]></xf:label>
+											<xf:value><![CDATA[]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[사용]]></xf:label>
+											<xf:value><![CDATA[Y]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[미사용]]></xf:label>
+											<xf:value><![CDATA[N]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:group id="" class="fr"></xf:group>
+								<w2:anchor id="btn_search" style="left:0px;top:0px;margin-right: 5px;" ev:onclick="scwin.btn_search_onclick" class="btn_sh" outerDiv="true">
+									<xf:label><![CDATA[조회]]></xf:label>
+								</w2:anchor>
+								<w2:anchor class="btn_save" ev:onclick="scwin.btn_save_onclick" id="btn_save" outerDiv="true" style="left:0px;top:0px;">
+									<xf:label><![CDATA[저장]]></xf:label>
+								</w2:anchor>
+							</xf:group>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="" class="defaultbox">
+					<w2:textbox id="" style="" class="df_tt fl" label="프로그램"></w2:textbox>
+					<xf:group id="" style="height:22px;" class="fr">
+						<w2:span id="spn_programCnt" style="" class="df_total" label="" displayFormat="건"></w2:span>
+						<xf:group id="" style="" class="ml5 fr">
+							<w2:anchor id="btn_delProgram" style="display:none;" clickEventElement="outerDiv"
+								ev:onclick="scwin.btn_delProgram_onclick" class="btn_gcm" outerDiv="true">
+								<xf:label><![CDATA[삭제]]></xf:label>
+							</w2:anchor>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+				<w2:gridView ignoreCellClick="false" ev:onrowindexchange="scwin.grd_program_onrowindexchange" autoFit="allColumn"
+					rowStatusWidth="" visibleRowNum="" class="cm_grid" wheelRows="" ev:onviewchange="" fixedColumnWithHidden="true"
+					dataList="dlt_program" id="grd_program" style="height:280px;" scrollByColumn="false" useShiftKey="true" rowStatusVisible=""
+					ev:onafteredit="" rowStatusHeaderValue="" ev:oncellclick="" rowNumVisible="10" adaptive="crosstab" ev:oncellindexchange="">
+					<w2:header id="header1" style="">
+						<w2:row id="row2" style="">
+							<w2:column removeBorderStyle="false" width="131" inputType="text" style="height:25px;" id="column27" value="프로그램그룹"
+								blockSelect="false" displayMode="label">
+							</w2:column>
+							<w2:column id="column16" blockSelect="false" style="height:25px;" width="90" inputType="text" value="프로그램코드"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column11" blockSelect="false" style="height:25px;" width="194" inputType="text" value="프로그램명"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column26" blockSelect="false" width="302" inputType="text" value="프로그램소스경로" textAlign="left"
+								style="height:25px;">
+							</w2:column>
+							<w2:column id="column24" blockSelect="false" width="60" inputType="text" value="사용여부" style="height:25px;"></w2:column>
+							<w2:column id="column22" blockSelect="false" width="185" inputType="text" value="비고" style="height:25px;"></w2:column>
+						</w2:row>
+					</w2:header>
+					<w2:gBody id="gBody4" style="">
+						<w2:row id="row5" style="">
+							<w2:column removeBorderStyle="false" width="131" inputType="select" style="" id="PROGRAM_GROUP_CD" value=""
+								blockSelect="false" displayMode="label">
+								<w2:choices></w2:choices>
+							</w2:column>
+							<w2:column id="PROGRAM_CD" blockSelect="false" readOnly="true" style="height:25px" hidden="false" width="90"
+								inputType="text" customFormatter="" displayMode="label" class="req">
+							</w2:column>
+							<w2:column depthColumn="" id="PROGRAM_NM" blockSelect="false" showDepth="3" style="height:25px;" depthType="div"
+								width="194" inputType="text" displayMode="label" textAlign="left" class="req">
+							</w2:column>
+							<w2:column id="SRC_PATH" blockSelect="false" width="302" inputType="text" textAlign="left"></w2:column>
+							<w2:column id="IS_USE" blockSelect="false" trueValue="Y" falseValue="N" width="60" inputType="checkbox"
+								valueType="other" fixColumnWidth="true">
+							</w2:column>
+							<w2:column id="NOTE" blockSelect="false" width="185" inputType="text"></w2:column>
+						</w2:row>
+					</w2:gBody>
+				</w2:gridView>
+			</xf:group>
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="width: 100%;" class="defaultbox">
+					<w2:textbox id="" style="" class="df_tt fl" label="단축키 설정"></w2:textbox>
+					<xf:group id="" style="height:22px;" class="fr">
+						<w2:span id="spn_shortcutCnt" style="" class="df_total" label="" displayFormat="건"></w2:span>
+						<xf:group id="" style="" class="ml5 fr">
+							<w2:anchor id="btn_addShortcut" style="" clickEventElement="outerDiv"
+								ev:onclick="scwin.btn_addShortcut_onclick" class="btn_gcm" outerDiv="true">
+								<xf:label><![CDATA[등록]]></xf:label>
+							</w2:anchor>
+							<w2:anchor id="btn_cancelShortcut" style="" clickEventElement="outerDiv"
+								ev:onclick="scwin.btn_cancelShortcut_onclick" class="btn_gcm" outerDiv="true">
+								<xf:label><![CDATA[취소]]></xf:label>
+							</w2:anchor>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+				<w2:gridView ignoreCellClick="false" autoFit="allColumn" rowStatusWidth="40" visibleRowNum="8" class="cm_grid"
+					fixedColumnWithHidden="true" dataList="data:dlt_shortcutList" id="grd_shortcutList" readOnly="" style="height:240px;width:100%;"
+					scrollByColumn="false" useShiftKey="true" rowStatusVisible="true" rowStatusHeaderValue="상태" ev:oncellclick="" adaptive="crosstab" ev:onviewchange="scwin.grd_shortcutList_onviewchange">
+					<w2:caption style="" id="caption1" value="this is a grid caption."></w2:caption>
+					<w2:header style="" id="header1">
+						<w2:row style="" id="row3">
+							<w2:column removeBorderStyle="false" width="40" inputType="checkbox" style="height:45px;" id="chk"
+								value="선택" blockSelect="false" displayMode="label" rowSpan="2" fixColumnWidth="true">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="100" inputType="text" style="height:20px;" id="column37" value="단축키"
+								blockSelect="false" displayMode="label" colSpan="2">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="70" inputType="text" style="height:20px;" id="column35"
+								blockSelect="false" displayMode="label" hidden="true">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="80" inputType="text" style="height:45px;" id="column34"
+								value="이벤트&lt;br/&gt;타입" blockSelect="false" displayMode="label" rowSpan="2">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="150" inputType="text" style="height:45px;" id="column33"
+								value="이벤트&lt;br/&gt;설명" blockSelect="false" displayMode="label" rowSpan="2">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="70" inputType="text" style="height:45px;" id="column32"
+								value="이벤트&lt;br/&gt;사용여부" blockSelect="false" displayMode="label" rowSpan="2">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="100" inputType="text" style="height:45px;" id="column31"
+								value="이벤트&lt;br/&gt;설정" blockSelect="false" displayMode="label" rowSpan="2">
+							</w2:column>
+						</w2:row>
+						<w2:row style="" id="row1">
+							<w2:column removeBorderStyle="false" width="100" inputType="text" id="column13" value="복합키" blockSelect="false"
+								displayMode="label">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="70" inputType="text" id="column11" value="지정키" blockSelect="false"
+								displayMode="label">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="70" inputType="text" id="column9" value="프로그램코드" blockSelect="false"
+								displayMode="label">
+							</w2:column>
+						</w2:row>
+					</w2:header>
+					<w2:gBody style="" id="gBody1">
+						<w2:row style="" id="row2">
+							<w2:column width="40" id="chk" inputType="checkbox"></w2:column>
+							<w2:column removeBorderStyle="false" width="100" inputType="select" id="COMPLEX_KEY" blockSelect="false"
+								displayMode="label" chooseOption="true" chooseOptionLabel="-선택-" class="req">
+								<w2:choices>
+									<w2:item>
+										<w2:label><![CDATA[ALT +]]></w2:label>
+										<w2:value><![CDATA[altKey]]></w2:value>
+									</w2:item>
+									<w2:item>
+										<w2:label><![CDATA[SHIFT +]]></w2:label>
+										<w2:value><![CDATA[shiftKey]]></w2:value>
+									</w2:item>
+									<w2:item>
+										<w2:label><![CDATA[CTRL +]]></w2:label>
+										<w2:value><![CDATA[ctrlKey]]></w2:value>
+									</w2:item>
+									<w2:item>
+										<w2:label><![CDATA[ALT + SHIFT +]]></w2:label>
+										<w2:value><![CDATA[altShiftKey]]></w2:value>
+									</w2:item>
+									<w2:item>
+										<w2:label><![CDATA[CTRL + ALT +]]></w2:label>
+										<w2:value><![CDATA[ctrlAltKey]]></w2:value>
+									</w2:item>
+									<w2:item>
+										<w2:label><![CDATA[CTRL + SHIFT +]]></w2:label>
+										<w2:value><![CDATA[ctrlShiftKey]]></w2:value>
+									</w2:item>
+									<w2:item>
+										<w2:label><![CDATA[SINGLE]]></w2:label>
+										<w2:value><![CDATA[singleKey]]></w2:value>
+									</w2:item>
+								</w2:choices>
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="70" inputType="text" id="LAST_KEY" blockSelect="false"
+								displayMode="label" maxLength="1" allowChar="0-9,A-Z" class="req">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="70" inputType="text" id="PROGRAM_CD" blockSelect="false"
+								displayMode="label">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="80" inputType="select" id="EVENT_TYPE" blockSelect="false"
+								displayMode="label" chooseOption="true" chooseOptionLabel="-선택-" readOnly="" class="req">
+								<w2:choices>
+									<w2:item>
+										<w2:label><![CDATA[버튼클릭]]></w2:label>
+										<w2:value><![CDATA[B]]></w2:value>
+									</w2:item>
+									<w2:item>
+										<w2:label><![CDATA[함수실행]]></w2:label>
+										<w2:value><![CDATA[F]]></w2:value>
+									</w2:item>
+								</w2:choices>
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="70" inputType="text" id="EVENT_DETAIL" blockSelect="false"
+								displayMode="label" class="">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="70" inputType="select" id="EVENT_YN" blockSelect="false"
+								displayMode="label" allOption="" chooseOption="" ref="" value="Y" class="">
+								<w2:choices>
+									<w2:item>
+										<w2:label><![CDATA[Y]]></w2:label>
+										<w2:value><![CDATA[Y]]></w2:value>
+									</w2:item>
+									<w2:item>
+										<w2:label><![CDATA[N]]></w2:label>
+										<w2:value><![CDATA[N]]></w2:value>
+									</w2:item>
+								</w2:choices>
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="100" inputType="text" id="EVENT_TARGET" blockSelect="false"
+								displayMode="label" readOnly="" class="req">
+							</w2:column>
+						</w2:row>
+					</w2:gBody>
+				</w2:gridView>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

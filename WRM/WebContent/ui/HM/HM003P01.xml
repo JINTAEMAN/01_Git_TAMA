@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<!-- 
+		#####################################################################
+		파일명 : HM003P01.xml
+		프로그램명 : 사진 파일 업로드 팝업
+		설 명 : 사진 파일을 업로드하는 팝업 화면
+		작성자 : Inswave Systems
+		작성일 : 2017.12.18
+		
+		수정일자	  수정자			 수정내용
+		=====================================================================
+		2017.12.18	Inswave Systems	최초작성
+		2018.01.26	Inswave Systems	WebSquare5 SP2 기능을 적용하도록 소스 업그레이드
+		2018.11.12	Inswave Systems	WebSquare5 SP3 기능을 적용하도록 소스 업그레이드
+		#####################################################################
+		-->
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[ 
+	
+	/**
+	 * 화면 초기화에 필요한 로직을 수행한다.
+	 */
+	scwin.onpageload = function() {
+		var param = com.getParameter();
+		scwin.closeCallbackFncName = param.callbackFn;
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+	
+	/**
+	 * 사진 업로드를 반환한다.
+	 */
+	scwin.btn_confirm_onclick = function() {
+		upd_image.setSubDir('personImage'); 
+		upd_image.submit();
+	};
+	
+	scwin.upd_image_ondone = function(retXml) {
+		var filePath = WebSquare.xml.getValue(retXml, "ret/storedFileList");
+		com.closePopup(scwin.closeCallbackFncName, filePath);
+	};
+	
+	/**
+	 * 사진 업로드를 취소한다.
+	 */
+	scwin.btn_cancel_onclick = function() {
+		com.closePopup();
+	};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="contentWrap" id="content_popup_gp" style="">
+			<xf:group class="cnt_title_grp" id="group2" style="height:30px;">
+				<w2:textbox class="" id="textbox1" label="사진 업로드" style="" tagname="h2"></w2:textbox>
+			</xf:group>
+			<xf:group id="group4" style="height: 80px;" class="">
+				<w2:upload id="upd_image" style="position:relative;width:367px;height:23px;margin-top:30px;margin-left:45px;float:left;" imageStyle="position:absolute;vertical-align:middle;word-wrap:break-word"
+					inputStyle="position:absolute;vertical-align:middle;word-wrap:break-word" type="image" disabled="" ev:ondone="scwin.upd_image_ondone">
+				</w2:upload>
+			</xf:group>
+			<xf:group class="" id="group3" style="width: 100%;height: 40px;">
+				<w2:anchor class="btn_com" id="btn_confirm" outerDiv="" style="margin-top:10px;margin-left:185px;" ev:onclick="scwin.btn_confirm_onclick">
+					<xf:label><![CDATA[확인]]></xf:label>
+				</w2:anchor>
+				<w2:anchor class="btn_com" id="btn_cancel" outerDiv="" style="margin-left:5px;margin-top:10px;" ev:onclick="scwin.btn_cancel_onclick">
+					<xf:label><![CDATA[취소]]></xf:label>
+				</w2:anchor>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

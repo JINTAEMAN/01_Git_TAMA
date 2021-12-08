@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+            	<w2:dataList baseNode="list" id="Ds_LTIDA63"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sPlanNo"
+            				name="sPlanNo" />
+            			<w2:column dataType="text" id="nCrChngNo"
+            				name="nCrChngNo" />
+            			<w2:column dataType="text" id="sFatcaFlgCd"
+            				name="sFatcaFlgCd" />
+            			<w2:column dataType="text" id="sSurName"
+            				name="sSurName" />
+            			<w2:column dataType="text" id="sGivenName"
+            				name="sGivenName" />
+            			<w2:column dataType="text" id="sItinSsnNo"
+            				name="sItinSsnNo" />
+            			<w2:column dataType="text" id="sAddr"
+            				name="sAddr" />
+            			<w2:column dataType="text" id="sItinSsnNo2"
+            				name="sItinSsnNo2" />
+            			<w2:column dataType="text" id="sItinSsnNo3"
+            				name="sItinSsnNo3" />
+            			<w2:column dataType="text" id="sRsdNatnl"
+            				name="sRsdNatnl" />
+            			<w2:column dataType="text" id="sRsdNatnl2"
+            				name="sRsdNatnl2" />
+            			<w2:column dataType="text" id="sRsdNatnl3"
+            				name="sRsdNatnl3" />
+            			<w2:column dataType="text" id="sNinptResnCd"
+            				name="sNinptResnCd" />
+            			<w2:column dataType="text" id="sNinptResnCd2"
+            				name="sNinptResnCd2" />
+            			<w2:column dataType="text" id="sNinptResnCd3"
+            				name="sNinptResnCd3" />
+            			<w2:column dataType="text" id="sNinptResn"
+            				name="sNinptResn" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_NinptResnCd_Radio"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sCd" name="sCd" />
+            			<w2:column dataType="text" id="sHnglCdName"
+            				name="sHnglCdName" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<sCd><![CDATA[01]]></sCd>
+            				<sHnglCdName><![CDATA[미발급 국가]]></sHnglCdName>
+            			</w2:row>
+            			<w2:row>
+            				<sCd><![CDATA[02]]></sCd>
+            				<sHnglCdName><![CDATA[미요구 국가]]></sHnglCdName>
+            			</w2:row>
+            			<w2:row>
+            				<sCd><![CDATA[03]]></sCd>
+            				<sHnglCdName><![CDATA[미취득]]></sHnglCdName>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_LTIDA63"
+            		repeatNode="map"
+            		userData2="//hashtable/data[@hashkey='lTIDA63DocRtn']/LTIDA63" />
+            	<w2:dataList baseNode="list" id="DsWs_Warning"
+            		repeatNode="map" userData2="//*/WARNING" />
+            	<w2:dataList baseNode="list" id="DsWs_LTIDA03"
+            		repeatNode="map"
+            		userData2="//hashtable/data[@hashkey='lTIDA03DocRtn']/LTIDA03" />
+            	<w2:dataList baseNode="list" id="DsWs_LTIDA00"
+            		repeatNode="map"
+            		userData2="//hashtable/data[@hashkey='lTIDA00DocRtn']/LTIDA00" />
+            	<w2:dataList baseNode="list" id="DsWs_LTIEA00"
+            		repeatNode="map"
+            		userData2="//hashtable/data[@hashkey='lTIDA00DocRtn']/LTIEA00" />
+            	<w2:dataList baseNode="list" id="DsWs_LTIEA63"
+            		repeatNode="map"
+            		userData2="//hashtable/data[@hashkey='lTIDA63DocRtn']/LTIEA63" />
+            	<w2:dataList id="WARNING" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="tex">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+    <script src="/cm/js/convertJs/Global_Script.js" />
+	<script src="/cm/js/convertJs/LongTerm_Script.js" />
+	<script src="/cm/js/convertJs/comm_Webservice.js" />  
+        <script><![CDATA[
+/****************************************************************************
+ * 프로그램번호   : B171
+ * 프로그램명     : CRS 본인확인
+ * 파일명         : B171.xml
+ * 프로그램 내용  : CRS 본인확인
+ * 관련 프로그램  : 
+ * 작성자         : 백승철
+ * 작성일         : 2015-12-12
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+// <script src="/cm/js/common.js"/>
+// <script src="/cm/js/val_lib.js"/>
+// <script src="/cm/js/util.js"/>
+// <script src="/cm/js/transSub.js"/>
+// <script src="/cm/js/callService.js"/>
+// <script src="/cm/js/gds.js"/>
+// <script src="/cm/js/convertJs/conv.js"/>
+// <script src="/cm/js/convertJs/Global_Script.js"/>
+// <script src="/cm/js/convertJs/comm_Webservice.js"     // js 참조/>
+var sFatcaFlgCd = "";
+var sPlanNo = "";
+var sGb = "";
+var sGb2 = "";
+var sPlanProgRankCd = "";
+var fv_args;
+var pageSize = "";
+var pageNo = "";
+var sCrNo="";
+scwin.init = function() {
+	var pro = Promise.resolve();
+		window.top.util.winTopShowModalChk = "T";
+		util.winTopShowModal();
+	pro = pro.then(function(rv) {
+    	return util.winTopShowModalPromise();
+	}); 
+	pro = pro.then(function(rv) {
+     //init 부분 함수 입력하는곳
+	wprom.setPopupInit(802, 750, "CRS본인확인");
+	var indata = $w.getParameter("param");
+	try {
+		fv_args = JSON.parse(indata);
+		if (wconv.length(fv_args.sGb) > 0) {
+	        sGb = fv_args.sGb;
+	    }	    
+	    if (wconv.length(fv_args.sGb2) > 0) {
+	        sGb2 = fv_args.sGb2;
+	    }
+	     if (wconv.length(fv_args.sCrNo) > 0) {
+	        sCrNo=fv_args.sCrNo;	        
+	    }
+	         if (wconv.length(fv_args.sPlanNo) > 0) {
+	        sPlanNo=fv_args.sPlanNo;	        
+	    }
+	} catch(e) {
+	};
+    //화면초기화
+    
+    if (sGb == "2" || sGb2 == "2") {
+
+        //계약조회 화면에서 넘어 올 경우
+        if (sGb2 != "2") {
+            sPlanNo = sCrNo;
+        }
+        
+        btn_save.setDisabled(true); //수정 하지 못하도록 비활성화
+        eval("chk_sFatcaFlgCd_01").setDisabled(true);
+        chk_sFatcaFlgCd_01.setValue(true);
+        eval("chk_sFatcaFlgCd_02").setDisabled(true);
+        eval("chk_sFatcaFlgCd_03").setDisabled(true);
+        eval("chk_sFatcaFlgCd_04").setDisabled(true);
+        eval("chk_sFatcaFlgCd_05").setDisabled(true);
+        scwin.lfn_setComponent(false);
+    }
+    scwin.lfn_init();
+    
+    return ;		// init 함수를 종료하고자 할때 사용
+		// return Promise.reject("오류관련처리"); 
+	});
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});	
+	pro = pro.catch(function(rj) {
+		util.winTopHideModal();
+		//alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+	});	 
+	return pro; 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_init()
+// 내용        : 화면초기화
+//---------------------------------------------------------------------------
+scwin.lfn_init = function() {
+    Ds_LTIDA63.undoAll();
+    util.appendRow(Ds_LTIDA63);
+    // 조회
+    scwin.lfn_Search_Async();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : CRS 본인정보 조회
+//---------------------------------------------------------------------------
+scwin.lfn_Search_Async = function(e) {
+	util.eventAsyncCall(this, scwin.lfn_Search, arguments);
+};
+
+scwin.lfn_Search = function() { 
+    //데이터셋 초기화
+    wconv.clear(DsWs_Warning);
+    //DsWs_Warning.DataObject = "DOBJ_LTIDA63";
+    var MethodObj;
+    if (sGb == "2") {
+        wconv.clear(DsWs_LTIEA63);
+        wconv.clear(DsWs_LTIEA00);
+    } else {
+        wconv.clear(DsWs_LTIDA63);
+        wconv.clear(DsWs_LTIDA00);
+    }
+    wconv.clear(DsWs_LTIDA03);
+    
+//    SOBJ_LTIDA63.WSDL = gds.gWsdlBasis; //기본웹서비스
+//    MethodObj = gfn_CreateMethodObj(SOBJ_LTIDA63, "com.inswave.longterm.ssr.pln.task.DBB013Task", "getLtida63", "", "");
+//    gfn_SetParam(MethodObj, "sPlanNo", wconv.trim(sPlanNo)); // 설계/계약 번호
+//    gfn_SetParam(MethodObj, "sGb", wconv.trim(sGb));
+//    gfn_CallService(SOBJ_LTIDA63, DOBJ_LTIDA63, MethodObj);
+    
+    var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB013Task", "getLtida63", pageSize, pageNo);
+	MethodObj.setId("getLtida63");	
+	MethodObj.setParam( "sPlanNo", wconv.trim(sPlanNo)); // 설계/계약 번호
+	MethodObj.setParam( "sGb", wconv.trim(sGb));
+	
+	MethodObj.setUrl("/contract/CBSC001PController.do");//배포후변경할것(controller위치와 이름)
+	MethodObj.setXPath("//hashtable/data[@hashkey='lTIDA63DocRtn']/LTIDA63");//(dsWS의 XPath)
+	MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA03DocRtn']/LTIDA03");//(dsWS의 XPath)
+	MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA00DocRtn']/LTIDA00");//(dsWS의 XPath)
+	MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA00DocRtn']/LTIEA00");//(dsWS의 XPath)
+	MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA63DocRtn']/LTIEA63");//(dsWS의 XPath)
+	MethodObj.addXPath("//*/WARNING"); 
+	MethodObj.sync();
+	MethodObj.send();
+
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDA63"), "DsWs_LTIDA63");
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDA03"), "DsWs_LTIDA03");
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDA00"), "DsWs_LTIDA00");
+	util.jSonDsCreate(_tranSync.getDsJson("LTIEA00"), "DsWs_LTIEA00");
+	util.jSonDsCreate(_tranSync.getDsJson("LTIEA63"), "DsWs_LTIEA63");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+	
+	util.setCompBindRefresh("DsWs_LTIDA63");//바인딩을 해줌
+	util.setCompBindRefresh("DsWs_LTIEA63");//바인딩을 해줌
+	util.setCompBindRefresh("DsWs_LTIDA03");//바인딩을 해줌
+	util.setCompBindRefresh("DsWs_LTIDA00");//바인딩을 해줌
+	util.setCompBindRefresh("DsWs_LTIEA00");//바인딩을 해줌
+	util.setCompBindRefresh("DsWs_LTIDA03");//바인딩을 해줌
+
+	util.setRowPosition(DsWs_LTIDA00, 0);
+	util.setRowPosition(DsWs_LTIDA03, 0);
+	util.setRowPosition(DsWs_LTIDA63, 0);
+	util.setRowPosition(DsWs_LTIEA63, 0);
+	util.setRowPosition(Ds_LTIDA63, 0);
+
+    var PlanNo00;
+    var PlanNo63;
+    var sCrsYn = "";
+    if (sGb == "2") {
+        PlanNo00 = DsWs_LTIEA00.getCellData(0, "sPlanNo");
+        PlanNo63 = DsWs_LTIEA63.getCellData(0, "sPlanNo");
+        sCrsYn = DsWs_LTIEA00.getCellData(0, "sCrsYn");
+    } else {
+        PlanNo00 = DsWs_LTIDA00.getCellData(0, "sPlanNo");
+        sPlanProgRankCd = DsWs_LTIDA00.getCellData(0, "sPlanProgRankCd");
+        PlanNo63 = DsWs_LTIDA63.getCellData(0, "sPlanNo");
+        sCrsYn = DsWs_LTIDA00.getCellData(0, "sCrsYn");   
+    }
+    if (wconv.length(PlanNo63) != 0) {
+        if (sGb == "2") {
+        util.copyM(Ds_LTIDA63, DsWs_LTIEA63.getAllJSON());
+		util.setCompBindRefresh(Ds_LTIDA63.getID());
+    	util.setRowPosition(Ds_LTIDA63, 0);	
+//            wconv.copy(Ds_LTIDA63, DsWs_LTIEA63);
+        } else {
+        util.copyM(Ds_LTIDA63, DsWs_LTIDA63.getAllJSON());
+		util.setCompBindRefresh(Ds_LTIDA63.getID());
+    	util.setRowPosition(Ds_LTIDA63, 0);	
+//            wconv.copy(Ds_LTIDA63, DsWs_LTIDA63);
+        }
+        
+        eval("chk_sFatcaFlgCd_" + Ds_LTIDA63.getCellData(0, "sFatcaFlgCd")).setValue(true);
+        sFatcaFlgCd = Ds_LTIDA63.getCellData(0, "sFatcaFlgCd");
+    }
+    if (wconv.length(PlanNo00) != 0 && wconv.length(PlanNo63) == 0) {
+        //FATCA대상자가 아니지만 정보확인은 한 경우 해당없음으로 세팅
+        sFatcaFlgCd = "01";        
+        eval("chk_sFatcaFlgCd_" + sFatcaFlgCd).setValue(true);
+        scwin.lfn_setComponent(false);
+    }
+    if (sCrsYn == "Y") {
+        chk_sFatcaY.setValue(true);
+    } else {
+        chk_sFatcaY.setValue(false);
+    }
+
+   /*if(sPlanProgRankCd != "" and sPlanProgRankCd > "51"){ //청약사항입력(50)보다 이후 상태일경우는 수정 불가
+    	lfn_setComponent(false);
+    	btn_save.Enable = false;
+    }*/
+    edt_sBirth.setValue(wconv.substr(DsWs_LTIDA03.getCellData(0, "sCrtorCd"), 0, 2) + "." + wconv.substr(DsWs_LTIDA03.getCellData(0, "sCrtorCd"), 2, 2) + "." + wconv.substr(DsWs_LTIDA03.getCellData(0, "sCrtorCd"), 4, 2));
+    edt_sTelNo.setValue(util.nvl(DsWs_LTIDA03.getCellData(0, "sCellPhone1"),"") + "-" + util.nvl(DsWs_LTIDA03.getCellData(0, "sCellPhone2"),"") + "-" + util.nvl(DsWs_LTIDA03.getCellData(0, "sCellPhone3"),""));
+    edt_sAddress.setValue("(" + util.nvl(DsWs_LTIDA03.getCellData(0, "sZip1"),"") + "-" + util.nvl(DsWs_LTIDA03.getCellData(0, "sZip2"),"") + ")" + util.nvl(DsWs_LTIDA03.getCellData(0, "sAdrs1"),"") + "  " + util.nvl(DsWs_LTIDA03.getCellData(0, "sAdrsAdd"),""));
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Save
+// 내용        : CRS 본인확인 저장
+//---------------------------------------------------------------------------
+scwin.lfn_Save = function() {
+    wconv.clear(DsWs_Warning);
+    //DsWs_Warning.DataObject = "DOBJ_Save";
+    
+    if (scwin.lfn_Validation_Check()) {
+        util.insertColumn(Ds_LTIDA63, [
+            [
+                "gUserID",
+                "gUserID",
+                "text"
+            ]
+        ]);
+        util.setCompBindRefresh(Ds_LTIDA63.getID());
+        Ds_LTIDA63.setCellData(0, "sPlanNo", sPlanNo);
+        Ds_LTIDA63.setCellData(0, "sFatcaFlgCd", sFatcaFlgCd);
+        //Ds_LTIDA63.SetColumn(0,"sSurname",edt_sSurname.Value);        
+        //Ds_LTIDA63.SetColumn(0,"sGivenName",edt_sGivenName.Value);        
+        //Ds_LTIDA63.Setcolumn(0,"sAddr",edt_sAddr.Value);   
+        //Ds_LTIDA63.Setcolumn(0,"sItinSsnNo",msk_sItinSsnNo.Value);   
+        Ds_LTIDA63.setCellData(0, "gUserID", util.getGdsValue("gUserID"));
+//        SOBJ_save.WSDL = gds.gWsdlBasis;
+//        var MethodObj = SOBJ_save.CreateMethodObj("perform");
+//        setHeader("hashtable", "com.inswave.longterm.ssr.pln.task.DBB013Task", "saveLtida63Crs");
+//        addSingleData("LTIDA63", "LTIDA63", Ds_LTIDA63);
+//        setTail("hashtable");
+//        SOBJ_save.CreateObj("in0");
+//        MethodObj.in0 = insertStr;
+//        gfn_CallService(SOBJ_save, DOBJ_save, MethodObj);
+	 	var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB013Task", "saveLtida63Crs");
+	 	MethodObj.setId("saveLtida63Crs"); 
+	 	MethodObj.addSingleData("LTIDA63", "LTIDA63", Ds_LTIDA63.getID());
+	 	MethodObj.setUrl("/contract/CBSC001PController.do");   // 서버단 호출 URL (수납 확정)   
+	 	MethodObj.addXPath("//*/WARNING"); // XPath 	
+	 	MethodObj.setHashTable();    //  전문의 앞이 hashtable로 보낼 때
+	 	MethodObj.sync();     // 동기 처리[기본(async:비동기)]
+	 	MethodObj.send();     // 최종 전송
+
+	 	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+ 	//에러처리
+	    if (DsWs_Warning.getRowCount() != 0) {
+           wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+           return;
+       }
+        wprom.alert("CRS 본인정보 사항이 확인 되었습니다.");
+        wprom.close(); //lfn_Search(obj);
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Validation_Check
+// 내용        : 입력항목 정합성 체크
+//---------------------------------------------------------------------------
+scwin.lfn_Validation_Check = function() {
+    var chkFlag = true;
+    if (sFatcaFlgCd == "") {
+        wprom.alert("해외거주자 및 납세의무자 확인항목에 체크하시기 바랍니다.");
+        chkFlag = false;
+        return;
+    }
+    if (edt_sNation.getValue() == "US" || edt_sNation.getValue() == "UM" || edt_sNation.getValue() == "VI") {
+        if (sFatcaFlgCd == "01") {
+            wprom.alert(" 미국 국적자의 경우 해당사항없음 항목에 체크할 수 없습니다 ");
+            eval("chk_sFatcaFlgCd_01").setValue(false);
+            chkFlag = false;
+            return;
+        }
+    }
+    if (sFatcaFlgCd != "01") {
+        if (edt_sSurName.getValue() == "") {
+            wprom.alert("영문성명의 성(Surname)을 입력하시기 바랍니다.");
+            edt_sSurName.focus();
+            chkFlag = false;
+            return;
+        }
+        if (edt_sGivenName.getValue() == "") {
+            wprom.alert("영문성명의 이름(Given Name)을 입력하시기 바랍니다.");
+            edt_sGivenName.focus();
+            chkFlag = false;
+            return;
+        }
+           if (edt_sAddr.getValue() == "") {
+            wprom.alert("영문주소를 입력하시기 바랍니다.");
+            edt_sAddr.focus();
+            chkFlag = false;
+            return;
+        }
+        if (edt_sRsdNatnl.getValue() == "") {
+            wprom.alert("조세목적상 거주지국가(영문)를 입력하시기 바랍니다.");
+            edt_sRsdNatnl.focus();
+            chkFlag = false;
+            return;
+        }
+         
+        if (msk_sItinSsnNo.getValue() == "" && rdo_NinptResnCd.getValue() == "" ) {
+            wprom.alert("납세자번호(TIN: SSN 또는 ITIN)를 입력하시기 바랍니다.");
+            msk_sItinSsnNo.focus();
+            chkFlag = false;
+            return;
+        }
+        if (edt_NinptResnCd.getValue() == "" && rdo_NinptResnCd.getValue() == "03") {
+            wprom.alert("미취득 사유를 입력하시기 바랍니다.");
+            edt_NinptResnCd.focus();
+            chkFlag = false;
+            return;
+        }
+        /*
+        if(length(msk_sItinSsnNo.Value) < 9){
+        	alert("미국 납세자번호 또는 사회보장번호는 9자리입니다.");
+        	msk_sItinSsnNo.SetFocus();
+        	chkFlag = false;
+        	return ;
+        }
+        */
+
+ 		}
+ 		return chkFlag;	
+};
+
+//---------------------------------------------------------------------------
+// function 명 : chk_sFatcaFlgCd_OnClick
+// 내용        : 고객확인사항1
+//---------------------------------------------------------------------------
+scwin.chk_sFatcaFlgCd_onviewchange = function(info) {
+    sFatcaFlgCd = "";    
+    var sNum;
+    for (var i = 1; i <= 5; i++) {
+        sNum = i + "";
+        if (sNum.length < 2)
+            sNum = "0" + sNum;
+        if (this.id == ("chk_sFatcaFlgCd_" + sNum)) {
+            this.setValue(true);
+            sFatcaFlgCd = sNum;
+            continue;
+        }
+        eval("chk_sFatcaFlgCd_" + sNum).setValue(false);
+    }
+
+    if (this.id == "chk_sFatcaFlgCd_01") {
+    	if (edt_sNation.getValue() == "US" || edt_sNation.getValue() == "UM" || edt_sNation.getValue() == "VI") {
+            wprom.alert(" 미국 국적자의 경우 해당사항없음 항목에 체크할 수 없습니다 ");
+            eval("chk_sFatcaFlgCd_01").setValue(false);
+        }
+        scwin.lfn_setComponent(false);
+    } else {
+        scwin.lfn_setComponent(true);
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_setComponent
+// 내용        : 수정여부 세팅
+//---------------------------------------------------------------------------
+scwin.lfn_setComponent = function(val) {
+    if (val == false) {
+        if (sFatcaFlgCd == "01") {
+            edt_sSurName.setValue("");
+            edt_sGivenName.setValue("");
+            edt_sAddr.setValue("");
+            msk_sItinSsnNo.setValue("");
+            msk_sItinSsnNo2.setValue("");
+            msk_sItinSsnNo3.setValue("");
+            edt_sRsdNatnl.setValue("");
+            edt_sRsdNatnl2.setValue("");
+            edt_sRsdNatnl3.setValue("");
+            rdo_NinptResnCd.setValue("");
+            rdo_NinptResnCd2.setValue("");
+            rdo_NinptResnCd3.setValue("");
+            edt_NinptResnCd.setValue("");
+            chk_sFatcaY.setValue("");
+        }
+        edt_sSurName.setDisabled(true);
+        edt_sGivenName.setDisabled(true);
+        edt_sAddr.setDisabled(true);
+        msk_sItinSsnNo.setDisabled(true);
+        msk_sItinSsnNo2.setDisabled(true);
+        msk_sItinSsnNo3.setDisabled(true);
+        edt_sRsdNatnl.setDisabled(true);
+        edt_sRsdNatnl2.setDisabled(true);
+        edt_sRsdNatnl3.setDisabled(true);
+        rdo_NinptResnCd.setDisabled(true);
+        rdo_NinptResnCd2.setDisabled(true);
+        rdo_NinptResnCd3.setDisabled(true);
+        edt_NinptResnCd.setDisabled(true);
+        chk_sFatcaFlgCd_02.setDisabled(true);
+        chk_sFatcaFlgCd_03.setDisabled(true);
+        chk_sFatcaFlgCd_04.setDisabled(true);
+        chk_sFatcaFlgCd_05.setDisabled(true);
+    } else {
+        if (sFatcaFlgCd != "01") {
+            chk_sFatcaY.setValue(true);
+        }
+        edt_sSurName.setDisabled(false);
+        edt_sGivenName.setDisabled(false);
+        edt_sAddr.setDisabled(false);
+        msk_sItinSsnNo.setDisabled(false);
+        msk_sItinSsnNo2.setDisabled(false);
+        msk_sItinSsnNo3.setDisabled(false);
+        edt_sRsdNatnl.setDisabled(false);
+        edt_sRsdNatnl2.setDisabled(false);
+        edt_sRsdNatnl3.setDisabled(false);
+        rdo_NinptResnCd.setDisabled(false);
+        rdo_NinptResnCd2.setDisabled(false);
+        rdo_NinptResnCd3.setDisabled(false);
+        edt_NinptResnCd.setDisabled(false);
+        chk_sFatcaFlgCd_02.setDisabled(false);
+        chk_sFatcaFlgCd_03.setDisabled(false);
+        chk_sFatcaFlgCd_04.setDisabled(false);
+        chk_sFatcaFlgCd_05.setDisabled(false);
+        edt_sSurName.focus();
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_OnClose
+// 내용        : 화면종료
+//---------------------------------------------------------------------------
+scwin.lfn_OnClose = function() {
+    wprom.close();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : msk_sItinSsnNo_OnChanged
+// 내용        : 납세자번호 변경시
+//---------------------------------------------------------------------------
+scwin.msk_sItinSsnNo_OnviewChanged = function(info) {
+    if (this.id != "") {
+        if (this.id == "msk_sItinSsnNo") {
+        	rdo_NinptResnCd.setValue("");
+            rdo_NinptResnCd.setDisabled(true);
+        } else if (this.id == "msk_sItinSsnNo2") {
+            rdo_NinptResnCd2.setValue("");
+            rdo_NinptResnCd2.setDisabled(true);
+        } else if (this.id == "msk_sItinSsnNo3") {
+            rdo_NinptResnCd3.setValue("");
+            rdo_NinptResnCd3.setDisabled(true);
+        }
+        edt_NinptResnCd.setValue("");
+    } else {
+        if (this.id == "msk_sItinSsnNo") {
+        	rdo_NinptResnCd.setValue("");
+            rdo_NinptResnCd.setDisabled(false);
+        } else if (this.id == "msk_sItinSsnNo2") {
+			rdo_NinptResnCd2.setValue("");
+            rdo_NinptResnCd2.setDisabled(false);
+        } else if (this.id == "msk_sItinSsnNo3") {
+        	rdo_NinptResnCd3.setValue("");
+            rdo_NinptResnCd3.setDisabled(false);
+        }
+    }
+};]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B170_Pop"
+        	style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;  border-color:user18;left:210px;top:78px;"
+        	userData1="CRS 본인확인"
+        	userData2=" OnLoadCompleted:scwin.B170_OnLoadCompleted; ">
+        	<DataObjects>
+        		<DataObject />
+        		<DataObject />
+        		<DataObject />
+        	</DataObjects>
+        	<ServiceObjects>
+        		<ServiceObject />
+        		<ServiceObject />
+        		<ServiceObject />
+        	</ServiceObjects>
+        	<xf:group arcsize="6" class="sty_area_form" id="group1"
+        		style="position:absolute;  bottom:608px;height:55px;left:0px;top:232px; width:745px;"
+        		userData3="RoundRect">
+        		<xf:group class="form_w_line" id=""
+        			style="top:26px;left:0px;">
+        		</xf:group>
+        	</xf:group>
+        	<xf:group arcsize="6" class="sty_area_form" id="group2"
+        		style="position:absolute;  bottom:608px;height:335px;left:0px;top:327px;width:745px;"
+        		userData3="RoundRect">
+        		<xf:group class="form_w_line" id=""
+        			style="top:26px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id=""
+        			style="top:103px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_h_line" id=""
+        			style="position:absolute;top:0px;left:520px;width:1px;height:105px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id=""
+        			style="top:171px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id=""
+        			style="top:143px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id=""
+        			style="top:251px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id=""
+        			style="top:279px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id=""
+        			style="top:306px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_h_line" id=""
+        			style="position:absolute;top:224px;left:208px;width:1px;height:82px;">
+        		</xf:group>
+        		<xf:group class="form_h_line" id=""
+        			style="position:absolute;top:224px;left:437px;width:1px;height:82px;">
+        		</xf:group>
+        	</xf:group>
+        	<xf:group arcsize="8" class="" id="Shape7"
+        		style="position:absolute;height:22px;width:209px;bottom:405px;left:520px;top:409px;"
+        		userData3="Rectangle" />
+        	<xf:group arcsize="8" class="" id="Shape6"
+        		style="position:absolute;height:62px;width:209px;bottom:384px;left:520px;top:348px;"
+        		userData3="Rectangle" />
+        	<xf:group arcsize="8" class="" id="Shape3"
+        		style="position:absolute;height:22px;width:504px;bottom:405px;left:17px;top:409px;"
+        		userData3="Rectangle" />
+        	<xf:select appearance="full"
+        		id="chk_sFatcaFlgCd_05"
+        		style="position:absolute; Value:FALSE;  height:20px;left:532px;top:410px; width:192px;"
+        		tabIndex="68" cols="" rows="" falseValue="false" ev:onviewchange="scwin.chk_sFatcaFlgCd_onviewchange">
+        		<xf:choices>
+        			<xf:item>
+        				<xf:label><![CDATA[]]></xf:label>
+        				<xf:value><![CDATA[true]]></xf:value>
+        			</xf:item>
+        		</xf:choices>
+        	</xf:select>
+        	<xf:group arcsize="8" class="" id="Shape2"
+        		style="position:absolute;  bottom:442px; height:38px;left:17px;top:430px; width:712px;"
+        		userData3="Rectangle" />
+        	<xf:group arcsize="8" class="" id="Shape1"
+        		style="position:absolute; right:729px;  bottom:704px; height:94px;left:7px;top:700px; width:712px;"
+        		userData3="Rectangle" />
+        	<xf:group arcsize="8" class="" id="Shape0"
+        		style="position:absolute;height:22px;width:504px;bottom:323px;left:17px;top:327px;"
+        		userData3="Rectangle" />
+        	<w2:textbox id="Static9"
+        		label="가. 다음 중 해당란에 체크(√)해 주시기 바랍니다. (①과 ②는 중복 선택이 가능합니다.)"
+        		style="position:absolute; VAlign:Middle;  height:20px;left:22px;top:331px; width:470px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static0"
+        		style="position:absolute; VAlign:Middle;  border-style:solid;  background-color:white;  text-align:right; background-color:#ffffff; height:44px;left:615px;top:30px; width:112px;"
+        		tagname="" />
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.lfn_OnClose" id="btn_Close"
+        		style="position:absolute; ImageID:btn_Comm_Close;  height:20px;left:695px;top:0px; width:45px;"
+        		tabIndex="1" type="anchor">
+        		<xf:label><![CDATA[닫기]]></xf:label>
+        	</xf:trigger>
+        	<w2:textbox id="Static5" label="CRS 본인확인서(개인용)"
+        		style="position:absolute; VAlign:Middle;  height:20px;left:2px;top:114px; width:161px;"
+        		tagname="" class="sub_pop_title01" />
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.lfn_Save" id="btn_save"
+        		style="position:absolute; ImageID:btn_Input_02;  height:20px;left:644px;top:0px; width:45px;"
+        		tabIndex="4" type="anchor">
+        		<xf:label><![CDATA[확인]]></xf:label>
+        	</xf:trigger>
+        	<w2:textbox class="sty_lb_Basic" id="Static2" label="성명"
+        		style="position:absolute;min-width:70px;width:70px;left:0px;VAlign:Middle;top:232px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static3" label="국적"
+        		style="position:absolute; display:none;  VAlign:Middle;  border-style:solid;  text-align:right; height:20px; left:784px; top:80px; width:60px;"
+        		tagname="" />
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		ev:onchange="scwin.edt_sNation_OnChanged" id="edt_sNation"
+        		ref="data:DsWs_LTIDA03.sNation"
+        		style="position:absolute; display:none;  border-style:solid;  height:20px; left:846px; top:80px; width:60px;"
+        		tabIndex="8" />
+        	<w2:textbox class="sty_lb_Basic" id="Static4" label="전화번호"
+        		style="position:absolute;min-width:70px;width:70px;left:516px;VAlign:Middle;top:259px;"
+        		tagname="" />
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="edt_sTelNo"
+        		style="position:absolute; border-style:solid;  height:20px;left:609px;top:263px; width:118px;"
+        		tabIndex="9" />
+        	<w2:textbox class="sty_lb_Basic" id="Static6" label="주소"
+        		style="position:absolute;min-width:70px;width:70px;left:0px;VAlign:Middle;top:259px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static8" label="생년월일"
+        		style="position:absolute;min-width:70px;width:70px;left:516px;VAlign:Middle;top:232px;"
+        		tagname="" />
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="edt_sBirth" ref="data:DsWs_LTIDA03."
+        		style="position:absolute; border-style:solid;  height:20px;left:609px;top:235px; width:118px;"
+        		tabIndex="12" />
+        	<w2:textbox id="Static95" label="1. 고객 인적사항"
+        		style="position:absolute; VAlign:Middle;  height:20px;left:3px;top:209px; width:129px;"
+        		tagname="" class="sub_pop_title02" />
+        	<w2:textbox id="Static7" label="2. 해외거주자 여부확인"
+        		style="position:absolute; VAlign:Middle;  height:20px;left:2px;top:306px; width:140px;"
+        		tagname="" class="sub_pop_title02" />
+        	<xf:group arcsize="8" class="" id="Shape4"
+        		style="position:absolute;height:62px;width:504px;bottom:384px;left:17px;top:348px;"
+        		userData3="Rectangle" />
+        	<xf:select appearance="full"
+        		id="chk_sFatcaFlgCd_01"
+        		style="position:absolute; Value:FALSE;  height:20px;left:636px;top:32px; width:98px;"
+        		tabIndex="18"
+        		ev:onviewchange="scwin.chk_sFatcaFlgCd_onviewchange" cols=""
+        		rows="" falseValue="false">
+        		<xf:choices>
+        			<xf:item>
+        				<xf:label><![CDATA[해당사항 없음]]></xf:label>
+        				<xf:value><![CDATA[true]]></xf:value>
+        			</xf:item>
+        		</xf:choices>
+        	</xf:select>
+        	<xf:select appearance="full"
+        		id="chk_sFatcaFlgCd_02"
+        		style="position:absolute; Value:FALSE;  height:20px;left:532px;top:353px; width:192px;"
+        		tabIndex="20" cols="" rows="" falseValue="false"
+        		ev:onviewchange="scwin.chk_sFatcaFlgCd_onviewchange">
+        		<xf:choices>
+        			<xf:item>
+        				<xf:label><![CDATA[미국 시민권자(이중국적자 포함)]]></xf:label>
+        				<xf:value><![CDATA[true]]></xf:value>
+        			</xf:item>
+        		</xf:choices>
+        	</xf:select>
+        	<xf:select appearance="full"
+        		id="chk_sFatcaFlgCd_03"
+        		style="position:absolute; Value:FALSE;  height:20px;left:532px;top:371px; width:192px;"
+        		tabIndex="21" cols="" rows="" falseValue="false" ev:onviewchange="scwin.chk_sFatcaFlgCd_onviewchange">
+        		<xf:choices>
+        			<xf:item>
+        				<xf:label><![CDATA[미국 영주권자]]></xf:label>
+        				<xf:value><![CDATA[true]]></xf:value>
+        			</xf:item>
+        		</xf:choices>
+        	</xf:select>
+        	<xf:select appearance="full"
+        		id="chk_sFatcaFlgCd_04"
+        		style="position:absolute; Value:FALSE;  height:20px;left:532px;top:390px; width:192px;"
+        		tabIndex="23" cols="" rows="" falseValue="false" ev:onviewchange="scwin.chk_sFatcaFlgCd_onviewchange">
+        		<xf:choices>
+        			<xf:item>
+        				<xf:label><![CDATA[미국세법상 미국거주자]]></xf:label>
+        				<xf:value><![CDATA[true]]></xf:value>
+        			</xf:item>
+        		</xf:choices>
+        	</xf:select>
+        	<w2:textbox class="sty_lb_Basic" id="Static11" label="영문성명"
+        		style="position:absolute;width:60px;min-width:60px;left:0px;VAlign:Middle;top:471px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static13"
+        		label="납세자번호 (TIN: SSN 또는 ITIN)"
+        		style="position:absolute;width:216px;left:209px;VAlign:Middle;top:525px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static14"
+        		label="현재거주주소(영문)"
+        		style="position:absolute;width:193px;left:0px;VAlign:Middle;top:498px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static12"
+        		label="성(Surname)"
+        		style="position:absolute;width:117px;left:76px;VAlign:Middle;top:471px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static15"
+        		label="명(Given Name)"
+        		style="position:absolute;width:93px;left:371px;VAlign:Middle;top:471px;"
+        		tagname="" />
+        	<xf:input class="sty_ipt_form" id="edt_sAddr"
+        		ref="data:Ds_LTIDA63.sAddr"
+        		style="position:absolute; ImeMode:none;  border-style:solid;  height:21px;left:214px;top:501px; width:520px;"
+        		tabIndex="30" />
+        	<xf:input class="sty_ipt_form" id="edt_sSurName"
+        		ref="data:Ds_LTIDA63.sSurName"
+        		style="position:absolute; ImeMode:none;  border-style:solid;height:21px;left:214px;top:475px;width:150px;"
+        		tabIndex="31" />
+        	<xf:input class="sty_ipt_form" id="edt_sGivenName"
+        		ref="data:Ds_LTIDA63.sGivenName"
+        		style="position:absolute; ImeMode:none;  border-style:solid;  height:20px;left:484px;top:476px; width:249px;"
+        		tabIndex="32" />
+        	<xf:input class="sty_ipt_form" dataType="text"
+        		displayFormat="#,###"
+        		ev:onchange="scwin.msk_sGroupCrAdmNo_OnChanged"
+        		id="msk_sItinSsnNo1" maxlength="9"
+        		style="position:absolute; display:none;  border-style:solid;  height:24px; left:816px; top:512px; width:217px;"
+        		tabIndex="33" />
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="edt_sCrtorName" readOnly="TRUE"
+        		ref="data:DsWs_LTIDA03.sCrtorName"
+        		style="position:absolute; ImeMode:none;  border-style:solid;height:20px;left:91px;top:235px;width:410px;"
+        		tabIndex="34" />
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="edt_sAddress" readOnly="TRUE"
+        		style="position:absolute; ImeMode:none;  border-style:solid;height:20px;left:91px;top:263px;width:410px;"
+        		tabIndex="35" />
+        	<w2:textbox class="sty_lb_Basic" id="Static27"
+        		label="해외거주자 및  납세의무자 확인"
+        		style="position:absolute;line-height:15px;padding-top:5px;height:38px;width:96px;left:0px;VAlign:Middle;top:30px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static28"
+        		label="미국 납세의무자(시민권자, 영주권자, 미국세법상 미국거주자)에 해당하거나,  한국 이외에 조세목적상 거주지가 있습니까?"
+        		style="position:absolute;line-height:15px;padding-top:5px;height:38px;width:498px;left:110px;VAlign:Middle;top:30px;"
+        		tagname="" />
+        	<xf:select appearance="full"
+        		 id="chk_sFatcaY"
+        		style="position:absolute; Value:FALSE;  height:20px;left:636px;top:51px; width:98px;"
+        		tabIndex="38" falseValue="false"
+        		ev:onviewchange="scwin.chk_sFatcaFlgCd_onviewchange" cols=""
+        		rows="">
+        		<xf:choices>
+        			<xf:item>
+        				<xf:label><![CDATA[해당함]]></xf:label>
+        				<xf:value><![CDATA[true]]></xf:value>
+        			</xf:item>
+        		</xf:choices>
+        	</xf:select>
+        	<w2:textbox class="sty_lb_Basic" id="Static1"
+        		label=" ※ 미국 납세의무자에 해당하거나, 한국 이외의 조세목적상 거주지가 있는 경우 별도의 확인서 양식을 작성해 주시기 바랍니다."
+        		style="position:absolute; VAlign:Middle; height:21px;left:0px;top:74px; width:727px;"
+        		tagname="" />
+        	<w2:textbox id="Static30"
+        		label="▶ 본 확인서는 상호주의에 따른 정기적인 금융정보의 교환을 위한 조세조약의 이행과 관련하여 「국제조세조정에 관한 법률」 제31조 및 같은 법 시행령 제47조에 의거한 「정기 금융정보 자동교환을 위한 조세조약 이행규정」에 의하여 작성이 요구되는 필수서식입니다."
+        		style="position:absolute; VAlign:Middle;height:18px;left:10px;top:153px;width:728px;"
+        		tagname="" />
+        	<w2:textbox id="Static31"
+        		label="   ①  미국 거주자에 해당하는 경우 해당유형을 선택해 주시기 바랍니다.    "
+        		style="position:absolute; VAlign:Middle;  height:20px;left:23px;top:369px; width:397px;"
+        		tagname="" />
+        	<w2:textbox id="Static32"
+        		label="■ 본인은 본 확인서를 작성함에 있어 기재 내용에 오류 또는 허위가 없음을 확인하며, 기재 내용에 변경이 있을 경우 30일 이내에 귀행에 통지하겠습니다."
+        		style="position:absolute; VAlign:Middle;  height:17px;left:13px;top:705px; width:693px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static10"
+        		label="조세목적상 거주지국가(영문)"
+        		style="position:absolute;width:193px;left:0px;VAlign:Middle;top:525px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static33"
+        		label="납세자번호 미기재 사유 (미국 이외의 국가만 작성)"
+        		style="position:absolute;width:291px;left:438px;VAlign:Middle;top:525px;"
+        		tagname="" />
+        	<xf:input class="sty_ipt_form" id="edt_NinptResnCd"
+        		ref="data:Ds_LTIDA63.sNinptResn"
+        		style="position:absolute;ImeMode:none;  border-style:solid;  height:21px;left:335px;top:638px; width:400px;"
+        		tabIndex="48" />
+        	<w2:textbox class="sty_lb_Basic" id="Static34"
+        		label="미기재 사유가 미취득인 경우 사유를 기재하여 주십시요."
+        		style="position:absolute;width:313px;left:0px;VAlign:Middle;top:634px;"
+        		tagname="" />
+        	<xf:input class="sty_ipt_form"
+        		ev:onchange=""
+        		id="msk_sItinSsnNo" ref="data:Ds_LTIDA63.sItinSsnNo"
+        		style="position:absolute;height:21px;width:210px;border-style:solid;ImeMode:none;left:215px;top:556px;"
+        		tabIndex="50" ev:onviewchange="scwin.msk_sItinSsnNo_OnviewChanged"/>
+        	<xf:select1 appearance="full" class="sty_ipt_form" cols="4"
+        		id="rdo_NinptResnCd" ref="data:Ds_LTIDA63.sNinptResnCd"
+        		rows=""
+        		style="position:absolute;height:21px;width:300px;left:447px;border:none;ColumnCount:4;top:556px;"
+        		tabIndex="51" disabled="false">
+        		<xf:choices>
+        			<xf:itemset nodeset="data:Ds_NinptResnCd_Radio">
+        				<xf:label ref="sHnglCdName" />
+        				<xf:value ref="sCd" />
+        			</xf:itemset>
+        		</xf:choices>
+        	</xf:select1>
+        	<xf:input class="sty_ipt_form" id="edt_sRsdNatnl"
+        		ref="data:Ds_LTIDA63.sRsdNatnl"
+        		style="position:absolute; ImeMode:none;  border-style:solid;  height:21px;left:38px;top:556px; width:163px;"
+        		tabIndex="52" />
+        	<xf:input class="sty_ipt_form" id="edt_sRsdNatnl2"
+        		ref="data:Ds_LTIDA63.sRsdNatnl2"
+        		style="position:absolute; ImeMode:none;  border-style:solid;  height:21px;left:38px;top:582px; width:163px;"
+        		tabIndex="55" />
+        	<xf:input class="sty_ipt_form"
+        		ev:onchange=""
+        		id="msk_sItinSsnNo2" ref="data:Ds_LTIDA63.sItinSsnNo2"
+        		style="position:absolute;height:21px;width:210px;border-style:solid;ImeMode:none;left:215px;top:582px;"
+        		tabIndex="53" ev:onviewchange="scwin.msk_sItinSsnNo_OnviewChanged"/>
+        	<xf:select1 appearance="full" class="sty_ipt_form" cols="4"
+        		id="rdo_NinptResnCd2" ref="data:Ds_LTIDA63.sNinptResnCd2"
+        		rows="1"
+        		style="position:absolute;height:21px;width:300px;left:447px;border:none;ColumnCount:4;top:582px;"
+        		tabIndex="54" disabled="false">
+        		<xf:choices>
+        			<xf:itemset nodeset="data:Ds_NinptResnCd_Radio">
+        				<xf:label ref="sHnglCdName" />
+        				<xf:value ref="sCd" />
+        			</xf:itemset>
+        		</xf:choices>
+        	</xf:select1>
+        	<xf:input class="sty_ipt_form" id="edt_sRsdNatnl3"
+        		ref="data:Ds_LTIDA63.sRsdNatnl3"
+        		style="position:absolute; ImeMode:none;  border-style:solid;  height:21px;left:38px;top:610px; width:163px;"
+        		tabIndex="58" />
+        	<xf:input class="sty_ipt_form"
+        		ev:onchange=""
+        		id="msk_sItinSsnNo3" ref="data:Ds_LTIDA63.sItinSsnNo3"
+        		style="position:absolute;height:21px;width:210px;border-style:solid;ImeMode:none;left:215px;top:610px;"
+        		tabIndex="56" ev:onviewchange="scwin.msk_sItinSsnNo_OnviewChanged"/>
+        	<xf:select1 appearance="full" class="sty_ipt_form" cols="4"
+        		id="rdo_NinptResnCd3" ref="data:Ds_LTIDA63.sNinptResnCd3"
+        		rows="1"
+        		style="position:absolute;height:21px;width:300px;left:447px;border:none;ColumnCount:4;top:610px;"
+        		tabIndex="57" disabled="false">
+        		<xf:choices>
+        			<xf:itemset nodeset="data:Ds_NinptResnCd_Radio">
+        				<xf:label ref="sHnglCdName" />
+        				<xf:value ref="sCd" />
+        			</xf:itemset>
+        		</xf:choices>
+        	</xf:select1>
+        	<w2:textbox class="sty_lb_Basic" id="Static35" label="1"
+        		style="position:absolute;height:26px;min-width:15px;width:15px;background-color:#ffffff;left:0px;VAlign:Middle;top:552px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static36" label="2"
+        		style="position:absolute;height:27px;min-width:15px;width:15px;background-color:#ffffff;left:0px;VAlign:Middle;top:579px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static37" label="3"
+        		style="position:absolute;height:26px;min-width:15px;width:15px;background-color:#ffffff;left:0px;VAlign:Middle;top:607px;"
+        		tagname="" />
+        	<w2:textbox id="Static38" label="2. 본인확인"
+        		style="position:absolute; VAlign:Middle;left:2px;top:676px; width:129px;"
+        		tagname="" class="sub_pop_title02" />
+        	<w2:textbox id="Static39"
+        		label="■ 본인은 상황 변경이 있는 경우 본 확인서 작성 요청일로부터 90일 이내에 변경된 내용에 대한 본 확인서를 제출하겠습니다. "
+        		style="position:absolute; VAlign:Middle;  height:16px;left:13px;top:743px; width:693px;"
+        		tagname="" />
+        	<w2:textbox id="Static18"
+        		label="계좌(계약) 관련 정보가 국세청에 보고되고 거주관할권 등에 제공될 수 있음을 충분히 설명듣고 이해하였습니다."
+        		style="position:absolute; VAlign:Middle;  height:20px;left:21px;top:781px; width:677px;"
+        		tagname="" />
+        	<w2:textbox id="Static40"
+        		label="■ 본인은 보고대상 금융계좌에 해당하는 경우 또는 본 서식에 요청된 정보가 제공되지 않을 경우 관련 법에 의해 개인정보 및"
+        		style="position:absolute; VAlign:Middle;  height:20px;left:13px;top:765px; width:693px;"
+        		tagname="" />
+        	<w2:textbox id="Static42"
+        		label="  나. 가.에서 ① 또는 ②에 표기한 경우 영문성명, 영문주소, 조세목적상 거주지국 및 납세자번호(TIN: Taxpayer Identification"
+        		style="position:absolute; VAlign:Middle;  height:17px;left:14px;top:436px; width:693px;"
+        		tagname="" />
+        	<w2:textbox id="Static43" label="Number)등을 작성해 주시기 바랍니다."
+        		style="position:absolute; VAlign:Middle;  height:17px;left:39px;top:452px; width:621px;"
+        		tagname="" />
+        	<xf:group arcsize="8" class="" id="Shape5"
+        		style="position:absolute;  bottom:323px; height:22px;left:520px;top:327px; width:209px;"
+        		userData3="Rectangle" />
+        	<w2:textbox id="Static44" label="   ②  한국 이외의 조세목적상 해외 거주자 "
+        		style="position:absolute; VAlign:Middle;  height:20px;left:23px;top:400px; width:397px;"
+        		tagname="" />
+        	<w2:textbox id="Static45" label="선택 (√)"
+        		style="position:absolute;height:20px;text-align:right;width:198px;left:526px;VAlign:Middle;top:331px;"
+        		tagname="" />
+
+        	
+        </xf:group>
+    </body>
+</html>

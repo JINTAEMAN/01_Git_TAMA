@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+            	<w2:dataList baseNode="list" id="DS_chk"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="code"
+            				name="code" />
+            			<w2:column dataType="text" id="code_nm"
+            				name="code_nm" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<code><![CDATA[9]]></code>
+            				<code_nm><![CDATA[-선택-]]></code_nm>
+            			</w2:row>
+            			<w2:row>
+            				<code />
+            				<code_nm><![CDATA[예]]></code_nm>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[1]]></code>
+            				<code_nm><![CDATA[아니오]]></code_nm>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DS_con"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="Ds_UserInfo"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sCustNo"
+            				name="sCustNo" />
+            			<w2:column dataType="text" id="nSeqNo"
+            				name="nSeqNo" />
+            			<w2:column dataType="text" id="sCustType"
+            				name="sCustType" />
+            			<w2:column dataType="text" id="sName"
+            				name="sName" />
+            			<w2:column dataType="text" id="sMarry"
+            				name="sMarry" />
+            			<w2:column dataType="text" id="sMutualYn"
+            				name="sMutualYn" />
+            			<w2:column dataType="text" id="sTeachYn"
+            				name="sTeachYn" />
+            			<w2:column dataType="text" id="sJobMemo"
+            				name="sJobMemo" />
+            			<w2:column dataType="text" id="sClass"
+            				name="sClass" />
+            			<w2:column dataType="text" id="sJobGroup"
+            				name="sJobGroup" />
+            			<w2:column dataType="text" id="sJobCode"
+            				name="sJobCode" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="ds_Wanning"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="ds_accept"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="code"
+            				name="code" />
+            			<w2:column dataType="text" id="name"
+            				name="name" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<code />
+            				<name><![CDATA[예]]></name>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[1]]></code>
+            				<name><![CDATA[아니오]]></name>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="ds_genaa37"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sApplyType"
+            				name="sApplyType" />
+            			<w2:column dataType="text" id="sApplyYM"
+            				name="sApplyYM" />
+            			<w2:column dataType="text" id="sApplySer"
+            				name="sApplySer" />
+            			<w2:column dataType="text" id="sInsType"
+            				name="sInsType" />
+            			<w2:column dataType="text" id="sDescrDutyYN1"
+            				name="sDescrDutyYN1" />
+            			<w2:column dataType="text" id="sDescrDutyYN2"
+            				name="sDescrDutyYN2" />
+            			<w2:column dataType="text" id="sDescrDutyYN3"
+            				name="sDescrDutyYN3" />
+            			<w2:column dataType="text" id="sDescrDutyYN4"
+            				name="sDescrDutyYN4" />
+            			<w2:column dataType="text" id="sDescrDutyYN5"
+            				name="sDescrDutyYN5" />
+            			<w2:column dataType="text" id="sDescrDutyYN6"
+            				name="sDescrDutyYN6" />
+            			<w2:column dataType="text" id="sDescrDutyYN7"
+            				name="sDescrDutyYN7" />
+            			<w2:column dataType="text" id="sCancleYN"
+            				name="sCancleYN" />
+            			<w2:column dataType="text" id="sCredit32YN"
+            				name="sCredit32YN" />
+            			<w2:column dataType="text" id="sCredit33YN"
+            				name="sCredit33YN" />
+            			<w2:column dataType="text"
+            				id="sPolHolderCredit32YN" name="sPolHolderCredit32YN" />
+            			<w2:column dataType="text"
+            				id="sPolHolderCancelYN" name="sPolHolderCancelYN" />
+            			<w2:column dataType="text" id="sDescrDutyCD1"
+            				name="sDescrDutyCD1" />
+            			<w2:column dataType="text" id="sDescrDutyCD2"
+            				name="sDescrDutyCD2" />
+            			<w2:column dataType="text" id="sDescrDutyCD3"
+            				name="sDescrDutyCD3" />
+            			<w2:column dataType="text" id="sDescrDutyCD4"
+            				name="sDescrDutyCD4" />
+            			<w2:column dataType="text" id="sDescrDutyCD5"
+            				name="sDescrDutyCD5" />
+            			<w2:column dataType="text" id="sDescrDutyCD6"
+            				name="sDescrDutyCD6" />
+            			<w2:column dataType="text" id="sDescrDutyCD7"
+            				name="sDescrDutyCD7" />
+            			<w2:column dataType="text" id="sCancleCD"
+            				name="sCancleCD" />
+            			<w2:column dataType="text" id="sCredit32CD"
+            				name="sCredit32CD" />
+            			<w2:column dataType="text" id="sCredit33CD"
+            				name="sCredit33CD" />
+            			<w2:column dataType="text"
+            				id="sPolHolderCredit32CD" name="sPolHolderCredit32CD" />
+            			<w2:column dataType="text"
+            				id="sPolHolderCancelCD" name="sPolHolderCancelCD" />
+            			<w2:column dataType="text" id="sInputDate"
+            				name="sInputDate" />
+            			<w2:column dataType="text" id="sInputTime"
+            				name="sInputTime" />
+            			<w2:column dataType="text" id="sUserId"
+            				name="sUserId" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<sApplySer />
+            				<sApplyType />
+            				<sApplyYM />
+            				<sCancleCD />
+            				<sCancleYN><![CDATA[N]]></sCancleYN>
+            				<sCredit32CD />
+            				<sCredit32YN><![CDATA[N]]></sCredit32YN>
+            				<sCredit33CD />
+            				<sCredit33YN><![CDATA[N]]></sCredit33YN>
+            				<sDescrDutyCD1 />
+            				<sDescrDutyCD2 />
+            				<sDescrDutyCD3 />
+            				<sDescrDutyCD4 />
+            				<sDescrDutyCD5 />
+            				<sDescrDutyCD6 />
+            				<sDescrDutyCD7 />
+            				<sDescrDutyYN1><![CDATA[N]]></sDescrDutyYN1>
+            				<sDescrDutyYN2><![CDATA[N]]></sDescrDutyYN2>
+            				<sDescrDutyYN3><![CDATA[N]]></sDescrDutyYN3>
+            				<sDescrDutyYN4><![CDATA[N]]></sDescrDutyYN4>
+            				<sDescrDutyYN5><![CDATA[N]]></sDescrDutyYN5>
+            				<sDescrDutyYN6><![CDATA[N]]></sDescrDutyYN6>
+            				<sDescrDutyYN7><![CDATA[N]]></sDescrDutyYN7>
+            				<sInputDate />
+            				<sInputTime />
+            				<sInsType />
+            				<sPolHolderCancelCD />
+            				<sPolHolderCancelYN><![CDATA[N]]></sPolHolderCancelYN>
+            				<sPolHolderCredit32CD />
+            				<sPolHolderCredit32YN><![CDATA[N]]></sPolHolderCredit32YN>
+            				<sUserId />
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="ds_CUSAA35"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sApplyNo"
+            				name="sApplyNo" />
+            			<w2:column dataType="text" id="sCustNo"
+            				name="sCustNo" />
+            			<w2:column dataType="text" id="sAgmGvs"
+            				name="sAgmGvs" />
+            			<w2:column dataType="text" id="sCustType"
+            				name="sCustType" />
+            			<w2:column dataType="text" id="sName"
+            				name="sName" />
+            			<w2:column dataType="text" id="sAgmYn"
+            				name="sAgmYn" />
+            			<w2:column dataType="text" id="sAgmUser"
+            				name="sAgmUser" />
+            			<w2:column dataType="text" id="sAgmUserIp"
+            				name="sAgmUserIp" />
+            			<w2:column dataType="text" id="sCrtorRelCd"
+            				name="sCrtorRelCd" />
+            			<w2:column dataType="text" id="sTelNo"
+            				name="sTelNo" />
+            			<w2:column dataType="text" id="sRecStartDate"
+            				name="sRecStartDate" />
+            			<w2:column dataType="text" id="sRecStartTime"
+            				name="sRecStartTime" />
+            			<w2:column dataType="text" id="sRecEndDate"
+            				name="sRecEndDate" />
+            			<w2:column dataType="text" id="sRecEndTime"
+            				name="sRecEndTime" />
+            			<w2:column dataType="text" id="nCallSerial"
+            				name="nCallSerial" />
+            			<w2:column dataType="text" id="sAgmYn1"
+            				name="sAgmYn1" />
+            			<w2:column dataType="text" id="sAgmYn2"
+            				name="sAgmYn2" />
+            			<w2:column dataType="text" id="sAgmYn3"
+            				name="sAgmYn3" />
+            			<w2:column dataType="text" id="sAgmYn4"
+            				name="sAgmYn4" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DS_confidence"
+            		repeatNode="map" userData2="//*/CUSAA35">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sCustNo"
+            				name="sCustNo" />
+            			<w2:column dataType="text" id="sName"
+            				name="sName" />
+            			<w2:column dataType="text" id="nSeqNo"
+            				name="nSeqNo" />
+            			<w2:column dataType="text" id="nChangeNo"
+            				name="nChangeNo" />
+            			<w2:column dataType="text" id="sCallReject"
+            				name="sCallReject" />
+            			<w2:column dataType="text" id="sDMReject"
+            				name="sDMReject" />
+            			<w2:column dataType="text" id="sFaxReject"
+            				name="sFaxReject" />
+            			<w2:column dataType="text" id="sEmailReject"
+            				name="sEmailReject" />
+            			<w2:column dataType="text" id="sSMSReject"
+            				name="sSMSReject" />
+            			<w2:column dataType="text" id="sAffilReject"
+            				name="sAffilReject" />
+            			<w2:column dataType="text" id="sAffilCallReject"
+            				name="sAffilCallReject" />
+            			<w2:column dataType="text" id="sDesc"
+            				name="sDesc" />
+            			<w2:column dataType="text" id="sInputDate"
+            				name="sInputDate" />
+            			<w2:column dataType="text" id="sInputTime"
+            				name="sInputTime" />
+            			<w2:column dataType="text" id="sUserID"
+            				name="sUserID" />
+            			<w2:column dataType="text" id="sUserName"
+            				name="sUserName" />
+            			<w2:column dataType="text" id="sApproveStat"
+            				name="sApproveStat" />
+            			<w2:column dataType="text" id="sApproveDate"
+            				name="sApproveDate" />
+            			<w2:column dataType="text" id="sApproveTime"
+            				name="sApproveTime" />
+            			<w2:column dataType="text" id="sApproveID"
+            				name="sApproveID" />
+            			<w2:column dataType="text" id="sReflectYN"
+            				name="sReflectYN" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_Search"
+            		repeatNode="map" userData2="//*/CUSAA27" />
+            	<w2:dataList baseNode="list" id="DsWs_Warning"
+            		repeatNode="map" userData2="//*/WARNING" />
+            	<w2:dataList baseNode="list" id="DsWs_Insert"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="DS_SearchReq"
+            		repeatNode="map" userData2="//*/GENAD01" />
+            	<w2:dataList baseNode="list" repeatNode="map"
+            		id="WARNING" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+ <script src="/cm/js/common.js"/>
+ <script src="/cm/js/val_lib.js"/>
+ <script src="/cm/js/util.js"/>
+ <script src="/cm/js/transSub.js"/>
+ <script src="/cm/js/callService.js"/>
+ <script src="/cm/js/gds.js"/>
+ <script src="/cm/js/wconv.js"/>
+ <script src="/cm/js/convertJs/Global_Script.js"/>
+ <script src="/cm/js/convertJs/comm_Webservice.js"/>
+ <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+        <script><![CDATA[
+/****************************************************************************
+ * 프로그램번호   : A095_Pop
+ * 프로그램명      : 개인신용정보활용 제공 및 동의(비대면용)
+ * 파일명            : A095_Pop.xml
+ * 프로그램 내용  : 개인신용정보을 저장한다...
+ * 관련 프로그램  : 
+ * 작성자            : 구종식
+ * 작성일            : 2010-09-09
+ * 저작권            : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역        : 
+ ****************************************************************************/
+// 변수 
+var nSeqNo = 0;
+var sRejectYN;
+var sCrYn = 0;
+var s33AgreYn = "";
+var flag = 0;
+var sSaveClickYn = "N";
+var sSearchClickYn = "";
+var sGdFlag = "";
+var sRecStartDate = "";
+var sRecStartTime = "";
+var sRecEndDate = "";
+var sRecEndTime = "";
+var sSaveStartYn = "N";
+var sApplyNo = "";
+var sCustType = "";
+var fv_args;
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_OnLoadCompleted
+// 내용        : 폼로드할때 처리할 내용 
+//---------------------------------------------------------------------------
+scwin.init = function() {
+	var indata = $w.getParameter("param");//
+	try {
+		fv_args = JSON.parse(indata);
+	} catch(e) {}
+	
+    var resultArr = "";
+    if (wconv.length(fv_args.sCustNo) > 1) {
+        //resultArr = wconv.split(replace(argss, " ", ""), "^", "webstyle");
+        
+        Edt_CustNo.setValue(fv_args.sCustNo);//wconv.trim(resultArr[0]));
+        Edt_Name.setValue(fv_args.sName);//wconv.trim(resultArr[1]));
+        sApplyNo = wconv.trim(fv_args.sApplyNo);//resultArr[2]);
+        sCustType = wconv.trim(fv_args.sCustType);//resultArr[3]);
+        sGdType = wconv.trim(fv_args.sGdType);//resultArr[4]);
+        
+        scwin.lfn_bt_search(Edt_CustNo.getValue(), "Y");
+    } else {
+        wprom.alert("검색 조건이 없습니다.");
+        return false;
+    }
+    
+    if (wconv.length(sApplyNo) == 12) {        //일반보험이면
+        if (wconv.substr(sApplyNo, 0, 1) == "B") {
+			/*
+            SOBJ_GENAD01.WSDL = gds.gWsdlGen; // 서비스 Obj WSDC 설정
+            var MethodObj = gfn_CreateMethodObj(SOBJ_GENAD01, "com.inswave.newgen.fir.pol.task.GPR18223400Task", "getRequestNo", 0, 0);
+            gfn_SetParam(MethodObj, "sApplyNo", sApplyNo);
+            var result = gfn_CallService(SOBJ_GENAD01, DOBJ_GENAD01, MethodObj);
+            */
+            
+            //wconv.trace(wconv.saveXml(DS_SearchReq));
+            //소유권용 권리보험이면
+            if (wconv.length(DS_SearchReq.getCellData(0, "sRequestNo")) == 12) {
+                //alert("소유권용 권리보험일때");
+                /*Div0.Static2.Text = "법률상 업무수행, 계약목적 달성 등을 위해 개인식별정보, 보험계약 및 보험금지 \n" +
+                					"급정보 등을 보험개발원, 손생보협회, 권리조사기관, 등기관련업체 등(공공기관, 보험사 및 \n" +
+                					"업무수탁자)에 제공하는데 동의하십니까? ";
+                */
+                /*Div0.stc_32AgreText.Text = "보험계약 체결과 유지관리, 법률상 업무수행과 계약목적 달성을 위해 고객님의 \n" +
+                					"고유식별정보, 보험계약과 보험금 지급 정보 등을 목적 달성까지 \n" +
+                					"수집·이용하고 보험개발원과 손해보험협회 권리조사기관, 등기관련업체 등에 \n" +
+                					"조회·제공하는데 동의하십니까? ";*/
+                //Div0_stc_32AgreText.Font = "Size, 8";
+                /*Div0.stc_32AgreText.Text = "당사 및 당사 업무수탁자는 보험계약 체결과 유지·관리, 법률상 업무수행과 계약목적\n" +
+                						   "달성을 위해 고객님의 고유식별정보, 보험계약과 보험금 지급 정보, 계약전 알릴의무\n" +
+                						   "사항 등을 거래종료 후 5년까지 수집·이용 및 조회하고 보험개발원과 손해보험협회,\n" +
+                						   "권리조사기관, 등기관련업체 등에 조회·제공하는데 동의하십니까?(단, 거래종료 후 5년\n" +
+                						   "이 경과한 후에는 보험금 지급, 금융사고 조사, 보험사기 방지·적발, 민원처리, 법령상\n" +
+                						   "의무이행을 위한 경우에 한하여 보유·이용하며, 별도보관)";
+                */
+                //Div0_stc_32AgreText.setValue("당사 및 당사 업무수탁자는 보험계약 체결과 유지\xB7관리, 법률상 업무수행과 계약목적\n" + "달성을 위해 고객님의 고유식별정보, 보험계약과 보험금 지급 정보, 계약전 알릴의무\n" + "사항 등을 거래종료 후 5년까지 수집\xB7이용 및 조회하고 보험개발원과 손해보험협회,\n" + "한국신용정보원, 권리조사기관, 등기관련업체 등에 조회\xB7제공하는데 동의하십니까?\n" + "(단, 거래종료 후 5년이 경과한 후에는 보험금 지급, 금융사고 조사, 보험사기 방지\xB7적발,\n" + "민원처리, 법령상 의무이행을 위한 경우에 한하여 보유\xB7이용하며, 별도보관)");
+				Div0_stc_32AgreText.setValue( "당사 및 당사 업무수탁자는 보험계약 체결과 유지·관리, 법률상 업무수행과 계약목적\n" +
+										   "달성을 위해 고객님의 고유식별정보, 보험계약과 보험금 지급 정보, 계약전 알릴의무 \n" +
+										   "사항 등을 거래종료 후 5년까지 수집·이용 및 조회하고 신용정보집중기관 \n" +
+										   "(한국신용정보원), 보험요율산출기관, 권리조사기관, 등기관련업체 등에 조회·제공 \n" +
+										   "하는데 동의하십니까? \n" +
+										   "(단, 거래종료 후 5년이 경과한 후에는 보험금 지급, 금융사고 조사, 보험사기 방지·적발,\n" +
+										   "민원처리, 법령상 의무이행을 위한 경우에 한하여 보유·이용하며, 별도보관)") ;
+                
+                Div0_Static8.setValue("같은 목적으로 고유식별정보(주민등록번호)를 처리하는데도 동의하십니까? ");
+            }
+        }
+    }
+    if (sGdType == "2") {
+        btn_RecStrt.setValue("입력");
+        Btn_save.setValue("확인");
+    }
+
+
+
+
+
+
+    //Edt_CustNo.value = "821222**1081314";
+    Btn_save.setDisabled(true);
+    //Div0.Cmb_sCallReject.Visible = true;
+    //현재시간 가져오기
+    gfn_getServerTime();
+    var getSysDate = gds.gDs_ServerTime.getCellData(0, "sToday");
+    //서버시간으로 pc시간 동기화 처리
+    //goo ext_SetTime(getSysDate);
+    
+    if (wconv.length(Div0_Edt_sReqDate.getValue()) == 0) {
+        //goo util.appendRow(DS_con);
+        //util.insertColumn(DS_con, [  [                "sUserID",                "sUserID",                "text"            ]        ]);
+        //util.insertColumn(DS_con, [  [                "sUserName",                "sUserName",                "text"            ]        ]);
+        //util.insertColumn(DS_con, [  [                "sInputDate",                "sInputDate",                "text"            ]        ]);
+        Div0_Edt_sReqDate.setValue(getSysDate);
+        Div0_Edt_sReqID.setValue(util.getGdsValue("gUserID"));
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Btn_search_OnClick
+// 내용        : 조회버튼 클릭 이벤트
+//---------------------------------------------------------------------------
+scwin.lfn_Btn_search_OnClick = function(e) {
+    scwin.lfn_bt_search(Edt_CustNo.getValue(), "Y");
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_bt_search
+// 내용        : 개인신용정보 조회
+//---------------------------------------------------------------------------
+//비동기호출 
+scwin.lfn_bt_search_sync = function() {
+	util.eventAsyncCall(this, scwin.lfn_bt_search, arguments);
+};
+
+scwin.lfn_bt_search = function(sCustNo, sSearchYn) {
+
+    wconv.clear(DS_confidence);
+    wconv.clear(DS_con);
+    wconv.clear(WARNING);
+    if (sSearchYn == "Y") {
+    	/*
+        SOBJ.WSDL = gds.gWsdlCustomer; // 서비스 Obj WSDC 설정
+        var MethodObj = gfn_CreateMethodObj(SOBJ, "CustTask", "checkCUSAA35Info", 0, 0); // 자동차보험 Task Call 
+        //gfn_SetParam(MethodObj, "sCustNo", trim(sCustNo));
+        gfn_SetParam(MethodObj, "sApplyNo", sApplyNo);
+        gfn_SetParam(MethodObj, "sAgmGvs", "10"); //구분 계약체결
+        var result = gfn_CallService(SOBJ, DOBJ, MethodObj);
+        */
+		var MethodObj = new callService("com.inswave.customer.task.CustTask", "checkCUSAA35Info", 0, 0); // 자동차보험 Task Call 
+		MethodObj.setId("checkCUSAA35Info");
+        MethodObj.setParam( "sApplyNo", sApplyNo);
+        MethodObj.setParam( "sAgmGvs", "10"); //구분 계약체결
+		MethodObj.setUrl("/contract/CBSC144PController.do");
+		MethodObj.setXPath("//*/CUSAA35");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();
+		util.interfaceKey(_tranSync.result.serviceDs);
+		util.jSonDsCreate(_tranSync.getDsJson("CUSAA35"), "DS_confidence");
+		util.setCompBindRefresh("DS_confidence");
+		util.setRowPosition(DS_confidence, 0);
+        
+        if (WARNING.getRowCount() != 0) {
+            wprom.alert("웹서비스 이상입니다.");
+            return;
+        } else {
+            sSearchClickYn = "Y";
+            this.status = "정상적으로 조회 되었습니다..";
+        }
+    }
+    //wconv.trace(wconv.saveXml(DS_confidence));
+    
+    var new_valueYn = "";
+    var old_valueYn = "N"; // 기존 데이터가 있는 경우    //35번에 들어가 있으면
+    if (DS_confidence.getRowCount() > 0 && DS_confidence.getCellData(0, "result") != 0) {
+        if (DS_confidence.getCellData(0, "sAgmReq") == "Y") {
+
+            Div0_chk_agree1.setDisabled(false);
+            Div0_chk_agree4.setDisabled(false); 
+            //alert("동의 안했습니다. 동의하세요!");
+            //return;
+        } else {
+            Div0_chk_agree1.setValue("1");
+            Div0_chk_agree4.setValue("1");
+            Div0_chk_agree1.setDisabled(true);
+            Div0_chk_agree4.setDisabled(true);
+        }
+    } else {
+        //alert("CUSAA35에 데이터 없을때");
+        Div0_chk_agree1.setDisabled(false);
+        Div0_chk_agree4.setDisabled(false);
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Btn_save_OnClick
+// 내용        : 신용정보저장 버튼  클릭 이벤트
+//---------------------------------------------------------------------------
+scwin.lfn_Btn_save_OnClick = function(obj) {
+    if (sSaveStartYn == "N") {
+        wprom.alert("녹취시작 버튼을 눌러주세요.");
+        return;
+    }
+    if (Div0_chk_agree1.getValue() == "0") {
+        wprom.alert("수집.이용,조회 동의를 선택하세요.");
+        return;
+    }
+    if (Div0_chk_agree4.getValue() == "0") {
+        wprom.alert("고유식별 정보 동의를 선택하세요.");
+        return;
+    }
+    if (sRecStartDate == "" && sRecStartTime == "") {
+        wprom.alert("녹취시작 버튼을 안눌렀을 \uFFFD");
+        return;
+    }
+    if (wconv.length(sApplyNo) < 1) {
+        wprom.alert("청약번호가 없습니다 확인하세요");
+        return;
+    }
+    scwin.lfn_save();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_save
+// 내용        : 신용정보 저장 
+//---------------------------------------------------------------------------
+scwin.lfn_save = function() {
+    //wconv.trace("녹취정보 set");
+    // 서버시간 조회
+    gfn_getServerTime();
+    sysDate = gds.gDs_ServerTime.getCellData(0, "sToday"); // 서버시간	
+    //녹취종료시간
+    sRecEndDate = wconv.mid(sysDate, 0, 8);
+    sRecEndTime = wconv.mid(sysDate, 8, 6);
+    //wconv.trace(sysDate);
+    /*orign
+    SOBJ.WSDL = gds.gWsdlGen;
+    var MethodObj1 = SOBJ.CreateMethodObj("perform");
+    //insert XML문 Header 문구 작성
+    //setHeader("vector", "com.inswave.newgen.drv.pol.task.FReq01040Task", "saveCUSAA35"); 
+    setHeader("vector", "com.inswave.customer.task.CustTask", "insertPriInfoAgree");
+    */
+    var nRow = 0;
+    //nRow = util.appendRow(ds_CUSAA35);
+    ds_CUSAA35.insertRow( nRow );
+    ds_CUSAA35.setCellData(nRow, "sApplyNo", sApplyNo);
+    ds_CUSAA35.setCellData(nRow, "sCustNo", Edt_CustNo.getValue());
+    //ds_CUSAA35.SetColumn(nRow, "sApplyNo", parent.parent.Mdt_ID.value);
+    //ds_CUSAA35.SetColumn(nRow, "sCustNo", parent.parent.ds_SelectFTREQ020.GetColumn(0, "sPlrCsmNum"));
+    ds_CUSAA35.setCellData(nRow, "sAgmGvs", "10"); //동의구분 : 계약체결
+    ds_CUSAA35.setCellData(nRow, "sCustType", sCustType);
+    ds_CUSAA35.setCellData(nRow, "sName", Edt_Name.getValue());
+    ds_CUSAA35.setCellData(nRow, "sAgmYn", "Y");
+    ds_CUSAA35.setCellData(nRow, "sAgmUser", util.getGdsValue("gUserID"));
+    ds_CUSAA35.setCellData(nRow, "sAgmUserIp", util.getGdsValue("gUserIP"));
+    ds_CUSAA35.setCellData(nRow, "nCallSerial", util.getGdsValue("gCallSerial"));
+    ds_CUSAA35.setCellData(nRow, "sRecStartDate", sRecStartDate);
+    ds_CUSAA35.setCellData(nRow, "sRecStartTime", sRecStartTime);
+    ds_CUSAA35.setCellData(nRow, "sRecEndDate", sRecEndDate);
+    ds_CUSAA35.setCellData(nRow, "sRecEndTime", sRecEndTime);
+    ds_CUSAA35.setCellData(nRow, "sAgmYn1", "Y");
+    ds_CUSAA35.setCellData(nRow, "sAgmYn2", "Y");
+    ds_CUSAA35.setCellData(nRow, "sAgmYn3", "Y");
+    ds_CUSAA35.setCellData(nRow, "sAgmYn4", "Y");
+    //wconv.trace(wconv.saveXml(ds_CUSAA35));
+    //alert(ds_CUSAA35.GetCount());
+    /*
+    for (var i = 0; i < ds_CUSAA35.getRowCount(); i++) {
+        insertStr += "<data vectorkey=\"" + wconv.toNumber(i) + "\">";
+        insertStr += "<CUSAA35>";
+        insertStr += "<sApplyNo value=\"" + ds_CUSAA35.getCellData(i, "sApplyNo") + "\"/>";
+        insertStr += "<sCustNo value=\"" + ds_CUSAA35.getCellData(i, "sCustNo") + "\"/>";
+        insertStr += "<sAgmGvs value=\"" + ds_CUSAA35.getCellData(i, "sAgmGvs") + "\"/>";
+        insertStr += "<sCustType value=\"" + ds_CUSAA35.getCellData(i, "sCustType") + "\"/>";
+        insertStr += "<sName value=\"" + ds_CUSAA35.getCellData(i, "sName") + "\"/>";
+        insertStr += "<sAgmYn value=\"" + ds_CUSAA35.getCellData(i, "sAgmYn") + "\"/>";
+        insertStr += "<sAgmUser value=\"" + ds_CUSAA35.getCellData(i, "sAgmUser") + "\"/>";
+        insertStr += "<sAgmUserIp value=\"" + ds_CUSAA35.getCellData(i, "sAgmUserIp") + "\"/>";
+        insertStr += "<nCallSerial value=\"" + ds_CUSAA35.getCellData(i, "nCallSerial") + "\"/>";
+        insertStr += "<sRecStartDate value=\"" + ds_CUSAA35.getCellData(i, "sRecStartDate") + "\"/>";
+        insertStr += "<sRecStartTime value=\"" + ds_CUSAA35.getCellData(i, "sRecStartTime") + "\"/>";
+        insertStr += "<sRecEndDate value=\"" + ds_CUSAA35.getCellData(i, "sRecEndDate") + "\"/>";
+        insertStr += "<sRecEndTime value=\"" + ds_CUSAA35.getCellData(i, "sRecEndTime") + "\"/>";
+        insertStr += "<sAgmYn1 value=\"" + ds_CUSAA35.getCellData(i, "sAgmYn1") + "\"/>";
+        insertStr += "<sAgmYn2 value=\"" + ds_CUSAA35.getCellData(i, "sAgmYn2") + "\"/>";
+        insertStr += "<sAgmYn3 value=\"" + ds_CUSAA35.getCellData(i, "sAgmYn3") + "\"/>";
+        insertStr += "<sAgmYn4 value=\"" + ds_CUSAA35.getCellData(i, "sAgmYn4") + "\"/>";
+        insertStr += "</CUSAA35>";
+        insertStr += "</data>";
+    }
+    setTail("vector");
+    SOBJ.CreateObj("in0");
+    MethodObj1.in0 = insertStr; //XML 구조를 담은 변수
+    var result = gfn_CallService(SOBJ, DOBJ_CUSAA35, MethodObj1);
+	*/
+	var MethodObj = new callService("com.inswave.customer.task.CustTask", "insertPriInfoAgree");
+	MethodObj.setId("insertPriInfoAgree");
+	MethodObj.setInput("vector");
+	MethodObj.addVectorData("CUSAA35","CUSAA35","ds_CUSAA35");
+	MethodObj.setUrl("/contract/CBSC144PController.do");
+	MethodObj.setXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();	
+    //alert(result);
+    if (WARNING.getRowCount() != 0) {
+        return false;
+    } else {
+        sSaveClickYn = "Y";
+        sSaveStartYn = "N";
+        var promise = Promise.resolve();
+        promise = promise.then(function(){
+        	return wprom.alert("정상적으로 등록되었습니다..");
+        });
+        promise = promise.then(function(){
+	        return wprom.close(sSaveClickYn);
+	    });   
+	    return promise;
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_RecStrt_OnClick
+// 내용        : 녹취 정보 콜.
+//---------------------------------------------------------------------------
+scwin.btn_RecStrt_OnClick = function(obj) {
+    //wconv.trace("녹취정보 set");
+    sSaveStartYn = "Y";
+    // 서버시간 조회
+    gfn_getServerTime();
+    sysDate = gds.gDs_ServerTime.getCellData(0, "sToday"); // 서버시간	
+    sRecStartDate = wconv.mid(sysDate, 0, 8);
+    sRecStartTime = wconv.mid(sysDate, 8, 6);
+    Btn_save.setDisabled(false);
+    //wconv.trace(sysDate);
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="fCut01088s"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;/*  height:528px;*/ left:0px; top:0px;/* width:600px;"
+            userData1="계약체결이행 동의" userData2=" OnLoadCompleted:scwin.lfn_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+                <ServiceObject/>
+                <ServiceObject/>
+                <ServiceObject/>
+                <ServiceObject/>
+            </ServiceObjects>
+            <xf:group arcsize="8" class="search_area" id="Shape0"
+                style="left:0px;top:30px;width:688px;" userData3="RoundRect"/>
+            <w2:textbox class="" id="Static13" label="주민번호"
+                style="position:absolute; VAlign:Middle;    text-align:right; height:20px;left:-4px;top:39px; width:80px;" tagname=""/>
+            <xf:input class="sty_ipt_form" ev:onblur="scwin.Edt_Name_OnKeyDown" id="Edt_Name" maxByteLength="30" readOnly="TRUE"
+                style="position:absolute; ImeMode:native;    height:20px;left:209px;top:39px; width:100px;" tabIndex="2"/>
+            <xf:input class="sty_ipt_form" dataType="text" displayFormat="######-#######" id="Edt_CustNo"
+                style="position:absolute; cursor:text;    height:20px;left:84px;top:39px; width:120px;" tabIndex="1"/>
+            <xf:trigger class="btn_Comm_Search " ev:onclick="scwin.lfn_bt_search_sync" id="Btn_search"
+                style="position:absolute; ImageID:btn_Input_02;left:616px;top:38px;width:45px;" tabIndex="4" type="anchor">
+                <xf:label><![CDATA[조회]]></xf:label>
+            </xf:trigger>
+            <w2:textbox id="Static0" label="계약의 체결·이행 등을 위한 개인(신용)정보처리 동의" style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; " tagname="" class="sub_pop_title01"></w2:textbox>
+                
+            <xf:group class="sty_area_form" id="Div0" style="position:absolute; height:448px;left:0px;top:87px; width:688px;" tabIndex="7" userData1="Div0">
+            	<xf:group class="form_w_line" id="" style="top:215px;left:0px;">
+				</xf:group>
+				<xf:group class="form_w_line" id="" style="top:421px;left:0px;">
+				</xf:group>
+                <w2:textbox class="sty_lb_Detail" id="Div0_Static3"
+                    style="position:absolute;height:215px;width:76px;background-color:#f5f5f5;left:610px;VAlign:Middle;top:0px;" tagname=""/>
+                <w2:textbox class="sty_lb_Basic" id="Div0_Static16" label="1. 수집.이용    조회"
+                    style="position:absolute;height:214px;width:110px;left:-1px;VAlign:Middle;top:-1px;" tagname=""/>
+                <w2:textbox class="sty_lb_Basic" id="Div0_Static10" label="입력일"
+                    style="position:absolute;height:24px;width:110px;left:-1px;VAlign:Middle;top:421px;" tagname=""/>
+                <w2:textbox class="sty_lb_Basic" id="Div0_Static17" label="입력자"
+                    style="position:absolute; VAlign:Middle; height:24px;left:290px;top:421px; width:80px;" tagname=""/>
+                <xf:input class="sty_ipt_form" dataType="text" disabled="true" displayFormat="####/##/##" id="Div0_Edt_sReqDate"
+                    maxlength="8" readOnly="true" ref="data:DS_con.sInputDate"
+                    style="position:absolute;   height:20px;left:131px;top:424px; width:149px;" tabIndex="5"/>
+                <xf:input class="sty_ipt_form" disabled="true" id="Div0_Edt_sReqID" maxByteLength="30" readOnly="TRUE"
+                    ref="data:DS_con.sUserID"
+                    style="position:absolute; ImeMode:native;    height:20px;left:397px;top:424px; width:181px;" tabIndex="6"/>
+                <xf:input class="sty_ipt_form" disabled="true" id="Div0_Edt_sUserName" maxByteLength="30" readOnly="TRUE"
+                    ref="data:DS_con.sUserName"
+                    style="position:absolute; ImeMode:native;    height:20px;left:583px;top:424px; width:93px;" tabIndex="7"/>
+                <xf:select appearance="full" class="" disabled="true" id="Div0_chk_agree1"
+                    style="position:absolute;Value:FALSE;height:27px;width:59px;left:620px;top:94px;" tabIndex="8">
+                    <xf:choices>
+                        <xf:item>
+                            <xf:label><![CDATA[동의함]]></xf:label>
+                            <xf:value><![CDATA[FALSE]]></xf:value>
+                        </xf:item>
+                    </xf:choices>
+                </xf:select>
+                <w2:textbox class="sty_lb_Detail" id="Div0_stc_32AgreText"
+                    label="고객님의 보험계약 인수심사·체결·유지·관리, 보험금 등 지급·심사, 기존계약의 상담, 민원, 적부 및 사고조사, 모집질서 유지, 금융거래 신청 및 자동이체 등 금융거래 관련 업무를 위해 동의가 필요하며, 동의 내용은 녹음됩니다. [당사 및 당사 업무수탁자]는 고객님의 개인식별정보, 건강(질병/상해)정보, 적부, 보험계약, 보험금 지급, 금융거래업무 정보, 법률/국제협약등의 의무이행을 위한 정보 등을 거래종료 후 5년까지 수집·이용하고 동 정보와 실명/본인인증을 위한 정보 등을 조회하며, 보험개발원 등 공공기관, 신용정보집중기관(한국신용정보원, 은행연합회), 금융결제원(cms 출금동의 포함), 당사의 보험모집 및 계약 체결·이행 업무 위탁업체 등에 제공하는데 동의해 주시는 거죠? "
+                    style="position:absolute;height:214px;width:463px;left:131px;VAlign:Middle;top:3px;" tagname=""/>
+                <w2:textbox class="sty_lb_Detail" id="Div0_Static6"
+                    style="position:absolute;height:205px;width:76px;background-color:#f5f5f5;left:610px;VAlign:Middle;top:216px;" tagname=""/>
+                <xf:select appearance="full" class="" disabled="true" id="Div0_chk_agree4"
+                    style="position:absolute;Value:FALSE;height:26px;width:57px;left:620px;top:304px;" tabIndex="11">
+                    <xf:choices>
+                        <xf:item>
+                            <xf:label><![CDATA[동의함]]></xf:label>
+                            <xf:value><![CDATA[FALSE]]></xf:value>
+                        </xf:item>
+                    </xf:choices>
+                </xf:select>
+                <w2:textbox class="sty_lb_Basic" id="Div0_Static7" label="2. 고유식별    정보"
+                    style="position:absolute;height:206px;width:110px;left:-1px;VAlign:Middle;top:214px;" tagname=""/>
+                <w2:textbox class="sty_lb_Detail" id="Div0_Static8"
+                    label="같은 목적으로 주민등록번호(고유식별정보)와 질병, 상해정보 처리에도 동의해  주시는 거죠? (단, 거래종료 후 5년이 경과한 후에는 보험금 지급, 금융사고 조사,  보험사기 방지·적발, 민원처리, 법령상 의무이행을 위한 경우에 한하여  보유·이용 할 수 있습니다.)  ※ 거래종료일은 1) 보험계약 만기, 해지, 취소, 철회일 또는 소멸일 및 2) 보험금  청구권 소멸시효 완성일, 채권·채무관계 소멸일 중 가장 나중에 도래한 사유를  기준으로 판단합니다. 다만, 만기 등 사유발생일 이후라도 만기환급금 또는  해지환급금 등을 수령하지 않았거나 상환할 금액이 남아있는 경우, 보험금 지급이  진행중이거나 수사·소송이 진행중인 경우 거래종료에 해당하지 않습니다. "
+                    style="position:absolute;height:206px;width:463px;left:131px;VAlign:Middle;top:219px;" tagname=""/>
+            </xf:group>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.btn_RecStrt_OnClick" id="btn_RecStrt"
+                style="position:absolute; ImageID:btn_Input_04;  height:20px;left:514px;top:0px; width:60px;" tabIndex="9" type="anchor">
+                <xf:label><![CDATA[녹취 시작]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Btn_save_OnClick" id="Btn_save"
+                style="position:absolute; ImageID:btn_Input_06;  height:20px;left:597px;top:0px; width:70px;" tabIndex="10" type="anchor">
+                <xf:label><![CDATA[저장후 닫기]]></xf:label>
+            </xf:trigger>
+        </xf:group>
+    </body>
+</html>

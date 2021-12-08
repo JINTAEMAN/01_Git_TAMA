@@ -1,0 +1,1505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/new.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataList id="Ds_RealYN" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="value" name="value" dataType="text"
+							ignoreStatus="true">
+						</w2:column>
+						<w2:column id="name" name="name"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<value><![CDATA[0]]></value>
+							<name><![CDATA[-선택-]]></name>
+						</w2:row>
+						<w2:row>
+							<value><![CDATA[1]]></value>
+							<id9><![CDATA[0]]></id9>
+							<id10><![CDATA[1]]></id10>
+							<name><![CDATA[Y]]></name>
+						</w2:row>
+						<w2:row>
+							<value><![CDATA[2]]></value>
+							<name><![CDATA[N]]></name>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+
+				<w2:dataList baseNode="list" id="DsWs_Warning"
+					repeatNode="map" userData2="//*/WARNING">
+					<w2:columnInfo>
+						<w2:column dataType="text" id="timestamp"
+							name="timestamp" />
+						<w2:column dataType="text" id="detail"
+							name="detail" />
+						<w2:column dataType="text" id="level"
+							name="level" />
+						<w2:column dataType="text" id="msg" name="msg" />
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList baseNode="list" id="DsWs_LTIDA00"
+					repeatNode="map"
+					userData2="//hashtable/data[@hashkey='LTIDA00']/LTIDA00">
+					<w2:columnInfo>
+						<w2:column dataType="text" id="sHsecFlagCd"
+							name="sHsecFlagCd" />
+						<w2:column dataType="text" id="sInptDate"
+							name="sInptDate" />
+						<w2:column dataType="text" id="sAnntPymTypeCd"
+							name="sAnntPymTypeCd" />
+						<w2:column dataType="text"
+							id="sAutoLoanRqstDate" name="sAutoLoanRqstDate" />
+						<w2:column dataType="text" id="nCrStatCarrSeqno"
+							name="nCrStatCarrSeqno" />
+						<w2:column dataType="text" id="sCrStatCdName"
+							name="sCrStatCdName" />
+						<w2:column dataType="text" id="sInsurStrtdate"
+							name="sInsurStrtdate" />
+						<w2:column dataType="text" id="sCrStatFlgcd"
+							name="sCrStatFlgcd" />
+						<w2:column dataType="text" id="sCrNoSeq"
+							name="sCrNoSeq" />
+						<w2:column dataType="text" id="sGnrzCd"
+							name="sGnrzCd" />
+						<w2:column dataType="text" id="sBsmnRgstNo"
+							name="sBsmnRgstNo" />
+						<w2:column dataType="text" id="sGnrzName"
+							name="sGnrzName" />
+						<w2:column dataType="text" id="sDoer"
+							name="sDoer" />
+						<w2:column dataType="text" id="sCrsYn"
+							name="sCrsYn" />
+						<w2:column dataType="text" id="sTaxPrfrYn"
+							name="sTaxPrfrYn" />
+						<w2:column dataType="text" id="sSaleChnl"
+							name="sSaleChnl" />
+						<w2:column dataType="text" id="nMaxPrem"
+							name="nMaxPrem" />
+						<w2:column dataType="text" id="sPaymTermName"
+							name="sPaymTermName" />
+						<w2:column dataType="text" id="nObjtNum"
+							name="nObjtNum" />
+						<w2:column dataType="text" id="sGdTypeFlgCd"
+							name="sGdTypeFlgCd" />
+						<w2:column dataType="text" id="sCrStatCd"
+							name="sCrStatCd" />
+						<w2:column dataType="text"
+							id="sPeriMwayRqstDate" name="sPeriMwayRqstDate" />
+						<w2:column dataType="text" id="sElecNtAgreDate"
+							name="sElecNtAgreDate" />
+						<w2:column dataType="text" id="nAddPaymPrem"
+							name="nAddPaymPrem" />
+						<w2:column dataType="text" id="sSrdoIssuDate"
+							name="sSrdoIssuDate" />
+						<w2:column dataType="text" id="sFrstDoerPartCd"
+							name="sFrstDoerPartCd" />
+						<w2:column dataType="text"
+							id="sPlanProgRankCdName" name="sPlanProgRankCdName" />
+						<w2:column dataType="text" id="sCpayDate"
+							name="sCpayDate" />
+						<w2:column dataType="text" id="nDefrYct"
+							name="nDefrYct" />
+						<w2:column dataType="text" id="sScanObjtYn"
+							name="sScanObjtYn" />
+						<w2:column dataType="text" id="nGrntPrem"
+							name="nGrntPrem" />
+						<w2:column dataType="text" id="sItemCd"
+							name="sItemCd" />
+						<w2:column dataType="text" id="sFinalDueMthy"
+							name="sFinalDueMthy" />
+						<w2:column dataType="text" id="sPaymTermCd"
+							name="sPaymTermCd" />
+						<w2:column dataType="text" id="nPaymAge"
+							name="nPaymAge" />
+						<w2:column dataType="text" id="sAqamtChnlCd"
+							name="sAqamtChnlCd" />
+						<w2:column dataType="text" id="sRealOwnerYn"
+							name="sRealOwnerYn" />
+						<w2:column dataType="text" id="sInsurCrLoanYn"
+							name="sInsurCrLoanYn" />
+						<w2:column dataType="text" id="sCmprCrNotcSsrt"
+							name="sCmprCrNotcSsrt" />
+						<w2:column dataType="text" id="PaymCyclName"
+							name="PaymCyclName" />
+						<w2:column dataType="text" id="sMdfcHms"
+							name="sMdfcHms" />
+						<w2:column dataType="text" id="nAnntPymCt"
+							name="nAnntPymCt" />
+						<w2:column dataType="text"
+							id="sBunsMetdDocuClsfCd" name="sBunsMetdDocuClsfCd" />
+						<w2:column dataType="text" id="sPaymCyclCd"
+							name="sPaymCyclCd" />
+						<w2:column dataType="text" id="nRealInsurTerm"
+							name="nRealInsurTerm" />
+						<w2:column dataType="text" id="nEndRtnrt"
+							name="nEndRtnrt" />
+						<w2:column dataType="text" id="sPaymExptDate"
+							name="sPaymExptDate" />
+						<w2:column dataType="text" id="sFrstDoerUser"
+							name="sFrstDoerUser" />
+						<w2:column dataType="text" id="sTxfrYn"
+							name="sTxfrYn" />
+						<w2:column dataType="text" id="sUseCustType"
+							name="sUseCustType" />
+						<w2:column dataType="text" id="nFirstBussPrem"
+							name="nFirstBussPrem" />
+						<w2:column dataType="text" id="nRealPaymTerm"
+							name="nRealPaymTerm" />
+						<w2:column dataType="text" id="sGdCd"
+							name="sGdCd" />
+						<w2:column dataType="text" id="sAnntPymCyclCd"
+							name="sAnntPymCyclCd" />
+						<w2:column dataType="text" id="nGroupInsPsct"
+							name="nGroupInsPsct" />
+						<w2:column dataType="text" id="sGroupCrAdmNo"
+							name="sGroupCrAdmNo" />
+						<w2:column dataType="text" id="sInptHms"
+							name="sInptHms" />
+						<w2:column dataType="text" id="nBussPrem"
+							name="nBussPrem" />
+						<w2:column dataType="text" id="sAnntPymStrtDate"
+							name="sAnntPymStrtDate" />
+						<w2:column dataType="text" id="sGdName"
+							name="sGdName" />
+						<w2:column dataType="text" id="sDoerUser"
+							name="sDoerUser" />
+						<w2:column dataType="text" id="nEndAge"
+							name="nEndAge" />
+						<w2:column dataType="text" id="sCrNoType"
+							name="sCrNoType" />
+						<w2:column dataType="text" id="sMdfcDler"
+							name="sMdfcDler" />
+						<w2:column dataType="text" id="sHndwritJugmYn"
+							name="sHndwritJugmYn" />
+						<w2:column dataType="text" id="nCrChngNo"
+							name="nCrChngNo" />
+						<w2:column dataType="text" id="sFrstDoerHdqtCd"
+							name="sFrstDoerHdqtCd" />
+						<w2:column dataType="text" id="sCmprCrNotcCrNo"
+							name="sCmprCrNotcCrNo" />
+						<w2:column dataType="text" id="sFrstDoer"
+							name="sFrstDoer" />
+						<w2:column dataType="text" id="sDvdnFlagCd"
+							name="sDvdnFlagCd" />
+						<w2:column dataType="text" id="sConuResltName"
+							name="sConuResltName" />
+						<w2:column dataType="text" id="nDcPrem"
+							name="nDcPrem" />
+						<w2:column dataType="text" id="sLapsDate"
+							name="sLapsDate" />
+						<w2:column dataType="text" id="sFrstDoerTeamCd"
+							name="sFrstDoerTeamCd" />
+						<w2:column dataType="text" id="sAnntPymTermCd"
+							name="sAnntPymTermCd" />
+						<w2:column dataType="text" id="sInsurEndDate"
+							name="sInsurEndDate" />
+						<w2:column dataType="text" id="sCmMetd"
+							name="sCmMetd" />
+						<w2:column dataType="text" id="sPpayAvaYn"
+							name="sPpayAvaYn" />
+						<w2:column dataType="text" id="sInptDlerIP"
+							name="sInptDlerIP" />
+						<w2:column dataType="text" id="nInrpsPsct"
+							name="nInrpsPsct" />
+						<w2:column dataType="text" id="nExptEndRetrnAmt"
+							name="nExptEndRetrnAmt" />
+						<w2:column dataType="text" id="sCrStatFlgcdName"
+							name="sCrStatFlgcdName" />
+						<w2:column dataType="text" id="nAccuPrem"
+							name="nAccuPrem" />
+						<w2:column dataType="text" id="sInsurTermName"
+							name="sInsurTermName" />
+						<w2:column dataType="text" id="sPlanNo"
+							name="sPlanNo" />
+						<w2:column dataType="text" id="sConuResltCd"
+							name="sConuResltCd" />
+						<w2:column dataType="text" id="sCmprCrNotcCncl"
+							name="sCmprCrNotcCncl" />
+						<w2:column dataType="text" id="sFinalPaymMthy"
+							name="sFinalPaymMthy" />
+						<w2:column dataType="text" id="sHealDcYn"
+							name="sHealDcYn" />
+						<w2:column dataType="text" id="result"
+							name="result" />
+						<w2:column dataType="text" id="sCedeStndYm"
+							name="sCedeStndYm" />
+						<w2:column dataType="text" id="sElecNtltRvYn"
+							name="sElecNtltRvYn" />
+						<w2:column dataType="text" id="sApplDclrRato"
+							name="sApplDclrRato" />
+						<w2:column dataType="text" id="nFinalPaymSeq"
+							name="nFinalPaymSeq" />
+						<w2:column dataType="text" id="nTotPaymPrem"
+							name="nTotPaymPrem" />
+						<w2:column dataType="text" id="sFinalReviDate"
+							name="sFinalReviDate" />
+						<w2:column dataType="text" id="sPeriMwayWdraYn"
+							name="sPeriMwayWdraYn" />
+						<w2:column dataType="text" id="nHisExam"
+							name="nHisExam" />
+						<w2:column dataType="text" id="sSaleChnlDtal"
+							name="sSaleChnlDtal" />
+						<w2:column dataType="text"
+							id="sPlanProgRankName" name="sPlanProgRankName" />
+						<w2:column dataType="text" id="sAnntOpnAgeCd"
+							name="sAnntOpnAgeCd" />
+						<w2:column dataType="text" id="nMinPrem"
+							name="nMinPrem" />
+						<w2:column dataType="text" id="sInsType"
+							name="sInsType" />
+						<w2:column dataType="text" id="sRecvProgStat"
+							name="sRecvProgStat" />
+						<w2:column dataType="text" id="sPlanProgTbNo"
+							name="sPlanProgTbNo" />
+						<w2:column dataType="text" id="sMdfcDlerIP"
+							name="sMdfcDlerIP" />
+						<w2:column dataType="text" id="nExptEndRtnrt"
+							name="nExptEndRtnrt" />
+						<w2:column dataType="text" id="sFinalRecpDate"
+							name="sFinalRecpDate" />
+						<w2:column dataType="text" id="sInsurStrtHms"
+							name="sInsurStrtHms" />
+						<w2:column dataType="text" id="sFatcaYN"
+							name="sFatcaYN" />
+						<w2:column dataType="text" id="sJugmGradCd"
+							name="sJugmGradCd" />
+						<w2:column dataType="text"
+							id="sCmmcMeanCnclAgreYn" name="sCmmcMeanCnclAgreYn" />
+						<w2:column dataType="text"
+							id="sPaymExptCnclDate" name="sPaymExptCnclDate" />
+						<w2:column dataType="text" id="sEmailClasYn"
+							name="sEmailClasYn" />
+						<w2:column dataType="text" id="sFrstDoerGroupCd"
+							name="sFrstDoerGroupCd" />
+						<w2:column dataType="text" id="sCrNo"
+							name="sCrNo" />
+						<w2:column dataType="text" id="sBunsMetdClsfCd"
+							name="sBunsMetdClsfCd" />
+						<w2:column dataType="text" id="sPsnGroupFlgcd"
+							name="sPsnGroupFlgcd" />
+						<w2:column dataType="text" id="sMdfcDate"
+							name="sMdfcDate" />
+						<w2:column dataType="text" id="sAutoLoanYn"
+							name="sAutoLoanYn" />
+						<w2:column dataType="text" id="sPlanProgRankCd"
+							name="sPlanProgRankCd" />
+						<w2:column dataType="text" id="nApplPrem"
+							name="nApplPrem" />
+						<w2:column dataType="text" id="sTaxPrfrGdYn"
+							name="sTaxPrfrGdYn" />
+						<w2:column dataType="text" id="sFrstDoerCentrCd"
+							name="sFrstDoerCentrCd" />
+						<w2:column dataType="text" id="sCrPrtrRole"
+							name="sCrPrtrRole" />
+						<w2:column dataType="text" id="sSsrtDate"
+							name="sSsrtDate" />
+						<w2:column dataType="text" id="sJugmAuthCd"
+							name="sJugmAuthCd" />
+						<w2:column dataType="text" id="sPectSaleYn"
+							name="sPectSaleYn" />
+						<w2:column dataType="text" id="sInsurTermCd"
+							name="sInsurTermCd" />
+						<w2:column dataType="text"
+							id="sFrstDoerDeptOffcCd" name="sFrstDoerDeptOffcCd" />
+						<w2:column dataType="text" id="sInptDler"
+							name="sInptDler" />
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList baseNode="list" id="DsWs_LTIEA10"
+					repeatNode="map"
+					userData2="//hashtable/data[@hashkey='LTIEA10']/LTIEA10">
+					<w2:columnInfo>
+						<w2:column id="sRpstName" name=""
+							dataType="text">
+						</w2:column>
+						<w2:column id="sGroupName" name=""
+							dataType="text">
+						</w2:column>
+						<w2:column id="sRpstCd" name=""
+							dataType="text">
+						</w2:column>
+						<w2:column id="nGroupDcrt" name=""
+							dataType="text">
+						</w2:column>
+						<w2:column id="sRowType" name=""
+							dataType="text">
+						</w2:column>
+						<w2:column id="sGroupCrAdmNo" name=""
+							dataType="text">
+						</w2:column>
+						<w2:column id="nFrstPsct" name=""
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList baseNode="list" id="DsWs_PaymCycl"
+					repeatNode="map"
+					userData2="//hashtable/data[@hashkey='paymCyclCdList']/vector/data/multi">
+					<w2:columnInfo>
+						<w2:column id="sGdCd" name="" dataType="text"></w2:column>
+						<w2:column id="sPaymCyclName" name=""
+							dataType="text">
+						</w2:column>
+						<w2:column id="sPaymCyclCd" name=""
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList id="Ds_RlnmCnfmRgcr" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="value" name="name1"
+							dataType="text">
+						</w2:column>
+						<w2:column id="name" name="name2"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<value><![CDATA[00]]></value>
+							<name><![CDATA[선택]]></name>
+						</w2:row>
+						<w2:row>
+							<name><![CDATA[주민등록번호]]></name>
+							<value><![CDATA[01]]></value>
+						</w2:row>
+						<w2:row>
+							<name><![CDATA[운전면허증]]></name>
+							<value><![CDATA[02]]></value>
+						</w2:row>
+						<w2:row>
+							<name><![CDATA[여권]]></name>
+							<value><![CDATA[03]]></value>
+						</w2:row>
+						<w2:row>
+							<name><![CDATA[외국인등록증]]></name>
+							<value><![CDATA[04]]></value>
+						</w2:row>
+						<w2:row>
+							<name><![CDATA[재외국인(외국국적동포)]]></name>
+							<value><![CDATA[05]]></value>
+						</w2:row>
+						<w2:row>
+							<name><![CDATA[국내거소신고증]]></name>
+							<value><![CDATA[06]]></value>
+						</w2:row>
+						<w2:row>
+							<name><![CDATA[임시(연습용)운전면허증]]></name>
+							<value><![CDATA[07]]></value>
+						</w2:row>
+						<w2:row>
+							<name><![CDATA[군운전면허증]]></name>
+							<value><![CDATA[08]]></value>
+						</w2:row>
+						<w2:row>
+							<name><![CDATA[공무원증]]></name>
+							<value><![CDATA[09]]></value>
+						</w2:row>
+						<w2:row>
+							<name><![CDATA[장기하사관이상의 신분증]]></name>
+							<value><![CDATA[10]]></value>
+						</w2:row>
+						<w2:row>
+							<name><![CDATA[장애인증]]></name>
+							<value><![CDATA[11]]></value>
+						</w2:row>
+						<w2:row>
+							<name><![CDATA[국가유공자증]]></name>
+							<value><![CDATA[12]]></value>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataList id="DsWs_Warning" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+				</w2:dataList>
+				<w2:dataList id="DsWs_LTIDA03_1" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column dataType="text" id="sInsurPftbpName"
+							name="sInsurPftbpName" />
+						<w2:column dataType="text" id="sInptDate"
+							name="sInptDate" />
+						<w2:column dataType="text" id="sInptHms"
+							name="sInptHms" />
+						<w2:column dataType="text" id="sAdrs1"
+							name="sAdrs1" />
+						<w2:column dataType="text" id="sRvadAddr"
+							name="sRvadAddr" />
+						<w2:column dataType="text" id="sBirthDate"
+							name="sBirthDate" />
+						<w2:column dataType="text" id="sOfficeTel2"
+							name="sOfficeTel2" />
+						<w2:column dataType="text" id="sOfficeTel3"
+							name="sOfficeTel3" />
+						<w2:column dataType="text" id="sOfficeTel1"
+							name="sOfficeTel1" />
+						<w2:column dataType="text" id="sMdfcDler"
+							name="sMdfcDler" />
+						<w2:column dataType="text" id="sCrtorNation"
+							name="sCrtorNation" />
+						<w2:column dataType="text" id="nMailRvadChngSeq"
+							name="nMailRvadChngSeq" />
+						<w2:column dataType="text" id="nCrChngNo"
+							name="nCrChngNo" />
+						<w2:column dataType="text" id="sCrtorCd"
+							name="sCrtorCd" />
+						<w2:column dataType="text"
+							id="sInsurPftbpRelnCd" name="sInsurPftbpRelnCd" />
+						<w2:column dataType="text" id="sCrtorFlgcd"
+							name="sCrtorFlgcd" />
+						<w2:column dataType="text"
+							id="sEnntmPftbpFlagCd" name="sEnntmPftbpFlagCd" />
+						<w2:column dataType="text"
+							id="sRlnmCnfmInfoRvMatt1" name="sRlnmCnfmInfoRvMatt1" />
+						<w2:column dataType="text" id="nAddrChngSeq"
+							name="nAddrChngSeq" />
+						<w2:column dataType="text"
+							id="sRlnmCnfmInfoRvMatt2" name="sRlnmCnfmInfoRvMatt2" />
+						<w2:column dataType="text" id="sAsmtAgntCntad"
+							name="sAsmtAgntCntad" />
+						<w2:column dataType="text"
+							id="sAsmtAgntMailAddFlag" name="sAsmtAgntMailAddFlag" />
+						<w2:column dataType="text"
+							id="nEndPftbpMailChngSeq" name="nEndPftbpMailChngSeq" />
+						<w2:column dataType="text" id="sRlnmCnfmRgcr"
+							name="sRlnmCnfmRgcr" />
+						<w2:column dataType="text" id="sInptDlerIP"
+							name="sInptDlerIP" />
+						<w2:column dataType="text"
+							id="sInsurPftbpAsmtYn" name="sInsurPftbpAsmtYn" />
+						<w2:column dataType="text" id="sCstFlgcd"
+							name="sCstFlgcd" />
+						<w2:column dataType="text" id="sRlnmCnfmDate"
+							name="sRlnmCnfmDate" />
+						<w2:column dataType="text" id="nCstChngSeqno"
+							name="nCstChngSeqno" />
+						<w2:column dataType="text" id="sPlanNo"
+							name="sPlanNo" />
+						<w2:column dataType="text" id="sInsurPftbpCd"
+							name="sInsurPftbpCd" />
+						<w2:column dataType="text" id="sAsmtAgntFlagCd"
+							name="sAsmtAgntFlagCd" />
+						<w2:column dataType="text" id="sZip2"
+							name="sZip2" />
+						<w2:column dataType="text" id="result"
+							name="result" />
+						<w2:column dataType="text" id="sCrtorSexFlag"
+							name="sCrtorSexFlag" />
+						<w2:column dataType="text" id="sFax2"
+							name="sFax2" />
+						<w2:column dataType="text" id="sFax3"
+							name="sFax3" />
+						<w2:column dataType="text" id="sAdrsAdd"
+							name="sAdrsAdd" />
+						<w2:column dataType="text" id="sMdfcHms"
+							name="sMdfcHms" />
+						<w2:column dataType="text" id="sAsmtAgntRelnCd"
+							name="sAsmtAgntRelnCd" />
+						<w2:column dataType="text" id="sZip1"
+							name="sZip1" />
+						<w2:column dataType="text" id="sEndPftbpCd"
+							name="sEndPftbpCd" />
+						<w2:column dataType="text" id="sFax1"
+							name="sFax1" />
+						<w2:column dataType="text" id="sAddrFlgcd"
+							name="sAddrFlgcd" />
+						<w2:column dataType="text" id="sCrtorName"
+							name="sCrtorName" />
+						<w2:column dataType="text" id="nCrtorAge"
+							name="nCrtorAge" />
+						<w2:column dataType="text"
+							id="nAsmtAgntMailChngSeq" name="nAsmtAgntMailChngSeq" />
+						<w2:column dataType="text" id="sMdfcDlerIP"
+							name="sMdfcDlerIP" />
+						<w2:column dataType="text"
+							id="sEndPftbpMailAddFlag" name="sEndPftbpMailAddFlag" />
+						<w2:column dataType="text" id="sRlnmCnfm"
+							name="sRlnmCnfm" />
+						<w2:column dataType="text" id="sCrtorCstId"
+							name="sCrtorCstId" />
+						<w2:column dataType="text" id="sAsmtAgntCd"
+							name="sAsmtAgntCd" />
+						<w2:column dataType="text" id="sHomeTel2"
+							name="sHomeTel2" />
+						<w2:column dataType="text"
+							id="sMailRvadAddrFlagCd" name="sMailRvadAddrFlagCd" />
+						<w2:column dataType="text"
+							id="sRlnmCnfmPstnFlgcd" name="sRlnmCnfmPstnFlgcd" />
+						<w2:column dataType="text" id="sHomeTel1"
+							name="sHomeTel1" />
+						<w2:column dataType="text" id="sEmail1"
+							name="sEmail1" />
+						<w2:column dataType="text" id="sHomeTel3"
+							name="sHomeTel3" />
+						<w2:column dataType="text" id="sMdfcDate"
+							name="sMdfcDate" />
+						<w2:column dataType="text" id="sEndPftbpRelnCd"
+							name="sEndPftbpRelnCd" />
+						<w2:column dataType="text" id="sCellPhone3"
+							name="sCellPhone3" />
+						<w2:column dataType="text"
+							id="sInsurPftbpFlagCd" name="sInsurPftbpFlagCd" />
+						<w2:column dataType="text" id="sCellPhone1"
+							name="sCellPhone1" />
+						<w2:column dataType="text" id="sCellPhone2"
+							name="sCellPhone2" />
+						<w2:column dataType="text" id="sEndPftbpCntad"
+							name="sEndPftbpCntad" />
+						<w2:column dataType="text" id="nTelnoChngSeq"
+							name="nTelnoChngSeq" />
+						<w2:column dataType="text" id="sEndPftbpName"
+							name="sEndPftbpName" />
+						<w2:column dataType="text" id="sNation"
+							name="sNation" />
+						<w2:column dataType="text" id="sAsmtAgntName"
+							name="sAsmtAgntName" />
+						<w2:column dataType="text" id="sInsurPftbpCntad"
+							name="sInsurPftbpCntad" />
+						<w2:column dataType="text" id="sInptDler"
+							name="sInptDler" />
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList id="DsWs_LTIDA03" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column dataType="text" id="sInsurPftbpName"
+							name="sInsurPftbpName" />
+						<w2:column dataType="text" id="sInptDate"
+							name="sInptDate" />
+						<w2:column dataType="text" id="sInptHms"
+							name="sInptHms" />
+						<w2:column dataType="text" id="sAdrs1"
+							name="sAdrs1" />
+						<w2:column dataType="text" id="sRvadAddr"
+							name="sRvadAddr" />
+						<w2:column dataType="text" id="sBirthDate"
+							name="sBirthDate" />
+						<w2:column dataType="text" id="sOfficeTel2"
+							name="sOfficeTel2" />
+						<w2:column dataType="text" id="sOfficeTel3"
+							name="sOfficeTel3" />
+						<w2:column dataType="text" id="sOfficeTel1"
+							name="sOfficeTel1" />
+						<w2:column dataType="text" id="sMdfcDler"
+							name="sMdfcDler" />
+						<w2:column dataType="text" id="sCrtorNation"
+							name="sCrtorNation" />
+						<w2:column dataType="text" id="nMailRvadChngSeq"
+							name="nMailRvadChngSeq" />
+						<w2:column dataType="text" id="nCrChngNo"
+							name="nCrChngNo" />
+						<w2:column dataType="text" id="sCrtorCd"
+							name="sCrtorCd" />
+						<w2:column dataType="text"
+							id="sInsurPftbpRelnCd" name="sInsurPftbpRelnCd" />
+						<w2:column dataType="text" id="sCrtorFlgcd"
+							name="sCrtorFlgcd" />
+						<w2:column dataType="text"
+							id="sEnntmPftbpFlagCd" name="sEnntmPftbpFlagCd" />
+						<w2:column dataType="text"
+							id="sRlnmCnfmInfoRvMatt1" name="sRlnmCnfmInfoRvMatt1" />
+						<w2:column dataType="text" id="nAddrChngSeq"
+							name="nAddrChngSeq" />
+						<w2:column dataType="text"
+							id="sRlnmCnfmInfoRvMatt2" name="sRlnmCnfmInfoRvMatt2" />
+						<w2:column dataType="text" id="sAsmtAgntCntad"
+							name="sAsmtAgntCntad" />
+						<w2:column dataType="text"
+							id="sAsmtAgntMailAddFlag" name="sAsmtAgntMailAddFlag" />
+						<w2:column dataType="text"
+							id="nEndPftbpMailChngSeq" name="nEndPftbpMailChngSeq" />
+						<w2:column dataType="text" id="sRlnmCnfmRgcr"
+							name="sRlnmCnfmRgcr" />
+						<w2:column dataType="text" id="sInptDlerIP"
+							name="sInptDlerIP" />
+						<w2:column dataType="text"
+							id="sInsurPftbpAsmtYn" name="sInsurPftbpAsmtYn" />
+						<w2:column dataType="text" id="sCstFlgcd"
+							name="sCstFlgcd" />
+						<w2:column dataType="text" id="sRlnmCnfmDate"
+							name="sRlnmCnfmDate" />
+						<w2:column dataType="text" id="nCstChngSeqno"
+							name="nCstChngSeqno" />
+						<w2:column dataType="text" id="sPlanNo"
+							name="sPlanNo" />
+						<w2:column dataType="text" id="sInsurPftbpCd"
+							name="sInsurPftbpCd" />
+						<w2:column dataType="text" id="sAsmtAgntFlagCd"
+							name="sAsmtAgntFlagCd" />
+						<w2:column dataType="text" id="sZip2"
+							name="sZip2" />
+						<w2:column dataType="text" id="result"
+							name="result" />
+						<w2:column dataType="text" id="sCrtorSexFlag"
+							name="sCrtorSexFlag" />
+						<w2:column dataType="text" id="sFax2"
+							name="sFax2" />
+						<w2:column dataType="text" id="sFax3"
+							name="sFax3" />
+						<w2:column dataType="text" id="sAdrsAdd"
+							name="sAdrsAdd" />
+						<w2:column dataType="text" id="sMdfcHms"
+							name="sMdfcHms" />
+						<w2:column dataType="text" id="sAsmtAgntRelnCd"
+							name="sAsmtAgntRelnCd" />
+						<w2:column dataType="text" id="sZip1"
+							name="sZip1" />
+						<w2:column dataType="text" id="sEndPftbpCd"
+							name="sEndPftbpCd" />
+						<w2:column dataType="text" id="sFax1"
+							name="sFax1" />
+						<w2:column dataType="text" id="sAddrFlgcd"
+							name="sAddrFlgcd" />
+						<w2:column dataType="text" id="sCrtorName"
+							name="sCrtorName" />
+						<w2:column dataType="text" id="nCrtorAge"
+							name="nCrtorAge" />
+						<w2:column dataType="text"
+							id="nAsmtAgntMailChngSeq" name="nAsmtAgntMailChngSeq" />
+						<w2:column dataType="text" id="sMdfcDlerIP"
+							name="sMdfcDlerIP" />
+						<w2:column dataType="text"
+							id="sEndPftbpMailAddFlag" name="sEndPftbpMailAddFlag" />
+						<w2:column dataType="text" id="sRlnmCnfm"
+							name="sRlnmCnfm" />
+						<w2:column dataType="text" id="sCrtorCstId"
+							name="sCrtorCstId" />
+						<w2:column dataType="text" id="sAsmtAgntCd"
+							name="sAsmtAgntCd" />
+						<w2:column dataType="text" id="sHomeTel2"
+							name="sHomeTel2" />
+						<w2:column dataType="text"
+							id="sMailRvadAddrFlagCd" name="sMailRvadAddrFlagCd" />
+						<w2:column dataType="text"
+							id="sRlnmCnfmPstnFlgcd" name="sRlnmCnfmPstnFlgcd" />
+						<w2:column dataType="text" id="sHomeTel1"
+							name="sHomeTel1" />
+						<w2:column dataType="text" id="sEmail1"
+							name="sEmail1" />
+						<w2:column dataType="text" id="sHomeTel3"
+							name="sHomeTel3" />
+						<w2:column dataType="text" id="sMdfcDate"
+							name="sMdfcDate" />
+						<w2:column dataType="text" id="sEndPftbpRelnCd"
+							name="sEndPftbpRelnCd" />
+						<w2:column dataType="text" id="sCellPhone3"
+							name="sCellPhone3" />
+						<w2:column dataType="text"
+							id="sInsurPftbpFlagCd" name="sInsurPftbpFlagCd" />
+						<w2:column dataType="text" id="sCellPhone1"
+							name="sCellPhone1" />
+						<w2:column dataType="text" id="sCellPhone2"
+							name="sCellPhone2" />
+						<w2:column dataType="text" id="sEndPftbpCntad"
+							name="sEndPftbpCntad" />
+						<w2:column dataType="text" id="nTelnoChngSeq"
+							name="nTelnoChngSeq" />
+						<w2:column dataType="text" id="sEndPftbpName"
+							name="sEndPftbpName" />
+						<w2:column dataType="text" id="sNation"
+							name="sNation" />
+						<w2:column dataType="text" id="sAsmtAgntName"
+							name="sAsmtAgntName" />
+						<w2:column dataType="text" id="sInsurPftbpCntad"
+							name="sInsurPftbpCntad" />
+						<w2:column dataType="text" id="sInptDler"
+							name="sInptDler" />
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" id="dst_RlnmCnfmInfoVO"></w2:dataMap>
+				<w2:dataList id="DsWs_LTIDA64" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column dataType="text" id="sMdfcDate"
+							name="sMdfcDate" />
+						<w2:column dataType="text" id="sMdfcDlerIP"
+							name="sMdfcDlerIP" />
+						<w2:column dataType="text" id="sRealOwnerNatnl"
+							name="sRealOwnerNatnl" />
+						<w2:column dataType="text" id="result"
+							name="result" />
+						<w2:column dataType="text" id="sInptDate"
+							name="sInptDate" />
+						<w2:column dataType="text" id="sRealOwnerNm"
+							name="sRealOwnerNm" />
+						<w2:column dataType="text" id="sMdfcDler"
+							name="sMdfcDler" />
+						<w2:column dataType="text" id="sInptHms"
+							name="sInptHms" />
+						<w2:column dataType="text" id="sRealOwnerCd"
+							name="sRealOwnerCd" />
+						<w2:column dataType="text" id="sMdfcHms"
+							name="sMdfcHms" />
+						<w2:column dataType="text" id="nCrChngNo"
+							name="nCrChngNo" />
+						<w2:column dataType="text" id="sPlanNo"
+							name="sPlanNo" />
+						<w2:column dataType="text" id="sInptDlerIP"
+							name="sInptDlerIP" />
+						<w2:column dataType="text" id="sInptDler"
+							name="sInptDler" />
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList id="Ds_LTIDA64" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column dataType="text" id="sMdfcDate"
+							name="sMdfcDate" />
+						<w2:column dataType="text" id="sMdfcDlerIP"
+							name="sMdfcDlerIP" />
+						<w2:column dataType="text" id="sRealOwnerNatnl"
+							name="sRealOwnerNatnl" />
+						<w2:column dataType="text" id="result"
+							name="result" />
+						<w2:column dataType="text" id="sInptDate"
+							name="sInptDate" />
+						<w2:column dataType="text" id="sRealOwnerNm"
+							name="sRealOwnerNm" />
+						<w2:column dataType="text" id="sMdfcDler"
+							name="sMdfcDler" />
+						<w2:column dataType="text" id="sInptHms"
+							name="sInptHms" />
+						<w2:column dataType="text" id="sRealOwnerCd"
+							name="sRealOwnerCd" />
+						<w2:column dataType="text" id="sMdfcHms"
+							name="sMdfcHms" />
+						<w2:column dataType="text" id="nCrChngNo"
+							name="nCrChngNo" />
+						<w2:column dataType="text" id="sPlanNo"
+							name="sPlanNo" />
+						<w2:column dataType="text" id="sInptDlerIP"
+							name="sInptDlerIP" />
+						<w2:column dataType="text" id="sInptDler"
+							name="sInptDler" />
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList id="DsWs_LTIEA64" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+				</w2:dataList>
+				<w2:dataList id="DsWs_LTIEA00" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+				</w2:dataList>
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>			
+		</xf:model>
+  <script src="/cm/js/convertJs/Global_Script.js"/>
+  <script src="/cm/js/convertJs/comm_Webservice.js"/>
+  <script src="/cm/js/convertJs/NewGen_Script.js"/>
+  <script src="/cm/js/convertJs/LongTerm_Script.js"/>	
+  <script type="javascript"><![CDATA[
+	/*
+ 	 *===================================File description================================================
+ 	 * Create Date : 2017/10/09
+ 	 * Creater     : KMJ
+ 	 * PGM_ID	   : CBSC071P
+ 	 *====================================================================================================
+	 */
+
+	var gsSysDate;				// global 현재일자
+	var gUserID; 				// global 사용자 ID
+	var gUserEmpName; 	    	// global 부서명
+	
+	var gPlanNo;				// 호출화면 indata[sPlanNo]  
+	var gGb;					// 호출화면 indata[sGb]  
+	var gFATCAFlag;				// 호출화면 indata[sFATCAFlag]  
+	
+	var gPaymCyclCd;			// 호출화면 indata["sPaymCyclCd"] = parent.Ds_LTIDA00.getCellData(0, "sPaymCyclCd"); 
+	var gBussPrem;				// 호출화면 indata["nBussPrem"] = parent.Ds_LTIDA00.getCellData(0, "nBussPrem"); 
+	var gBunsMetdDocuClsfCd; 	// 호출화면 indata["sBunsMetdDocuClsfCd"] = parent.Ds_LTIDA00.getCellData(0,"sBunsMetdDocuClsfCd");
+	
+	
+//---------------------------------------------------------------------------
+// function 명 : lfn_OnLoadCompleted
+// 내용        : 폼로드할때 처리할 내용 
+//---------------------------------------------------------------------------
+	scwin.init = function() {
+wprom.setPopupInit(750,290, "실소유자 및 실명확인");	
+		// 실명확인버튼 hidden처리 
+		btn_RlnmCnfm.visible(false);
+						
+	    //Parent에서 넘어온 값을 설정한다.
+		var indata = $w.getParameter("param");
+		var args;
+		try {
+			args = JSON.parse(indata);
+		} catch(e) {
+		
+		}
+
+		// 호출화면에서 넘어오는 값 저장
+		if(!util.isNull(args)){
+	    	gPlanNo 			= args.sPlanNo;
+			gGb					= args.sGb;		 
+			gFATCAFlag			= args.sFATCAFlag;	
+			gPaymCyclCd 		= args.sPaymCyclCd;			// 호출화면 indata["sPaymCyclCd"] = parent.Ds_LTIDA00.getCellData(0, "sPaymCyclCd"); 
+			gBussPrem   		= args.nBussPrem;			// 호출화면 indata["nBussPrem"] = parent.Ds_LTIDA00.getCellData(0, "nBussPrem"); 
+			gBunsMetdDocuClsfCd = args.sBunsMetdDocuClsfCd; // 호출화면 indata["sRlnmCnfmRgcr"] = parent.Ds_LTIDA00.getCellData(0,"sBunsMetdDocuClsfCd");			
+	    }
+		gfn_getServerTime();//서버시간
+		gsSysDate = wconv.substr(gds.gDs_ServerTime.getCellData(0, "sToday"), 0, 8);
+		
+		gUserID 		= util.getGdsValue("gUserID");    					// global 사용자 ID
+		gUserEmpName 	= util.getGdsValue("gUserEmpName");    				// global 부서명
+		
+		scwin.lfn_init();
+	};
+			
+//---------------------------------------------------------------------------
+// function 명 : lfn_init()
+// 내용        : 화면초기화
+//---------------------------------------------------------------------------
+	scwin.lfn_init = function() {			
+		wconv.clear(Ds_LTIDA64);
+		util.appendRow(Ds_LTIDA64);
+		
+		if(gFATCAFlag == 1){
+			btn_save.setDisabled(true);
+		}else{
+		}
+
+		scwin.lfn_Search();
+		
+		
+	};
+		
+//**********************************************************
+// 본인정보 조회서비스  Call
+//**********************************************************
+	scwin.lfn_Search = function() {
+		wconv.clear(DsWs_Warning);
+			
+		if (gGb == "2") {
+			wconv.clear(DsWs_LTIEA64);
+	    	wconv.clear(DsWs_LTIEA00);
+	    } else {
+		    wconv.clear(DsWs_LTIDA64);
+		    wconv.clear(DsWs_LTIDA00);
+		}
+	    
+	    wconv.clear(DsWs_LTIDA03);
+	    
+		var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB013Task", "getLtida64", "", "");
+ 	    MethodObj.setId("getLtida64");
+	
+		// parent 넘겨주는 인자로 조회 입력데이터 세팅  	    
+	    MethodObj.setParam("sPlanNo", gPlanNo);
+	    MethodObj.setParam("sGb", gGb);
+		MethodObj.setUrl("/contract/CBSC071PController.do");
+		//DsWs_LTIDA64
+		MethodObj.setXPath("//hashtable/data[@hashkey='lTIDA64DocRtn']/LTIDA64");
+		//DsWs_LTIDA03
+		MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA03DocRtn']/LTIDA03");
+		//DsWs_LTIDA00
+		MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA00DocRtn']/LTIDA00");  
+		//DsWs_LTIEA00
+		MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA00DocRtn']/LTIEA00");		
+		//DsWs_LTIEA64
+		MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA64DocRtn']/LTIEA64");
+		//DsWs_Warning
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();
+
+		util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning", "Y");
+		if (DsWs_Warning.getRowCount() != 0) {
+			wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+			return;
+		} 
+		else {
+			util.jSonDsCreate(_tranSync.getDsJson("LTIDA64"), "DsWs_LTIDA64", "Y");
+			util.jSonDsCreate(_tranSync.getDsJson("LTIDA03"), "DsWs_LTIDA03", "Y");
+			util.jSonDsCreate(_tranSync.getDsJson("LTIDA00"), "DsWs_LTIDA00", "Y");
+			util.jSonDsCreate(_tranSync.getDsJson("LTIEA00"), "DsWs_LTIEA00", "Y");
+			util.jSonDsCreate(_tranSync.getDsJson("LTIEA64"), "DsWs_LTIEA64", "Y");
+	    }
+	    
+		var PlanNo00;
+		var PlanNo64;
+			
+		if(gGb == "2")	{		
+			PlanNo00 = DsWs_LTIEA00.getCellData(0,"sPlanNo");
+			PlanNo64 = DsWs_LTIEA64.getCellData(0,"sPlanNo");
+		} else{
+			PlanNo00 = DsWs_LTIDA00.getCellData(0,"sPlanNo");
+	//		sPlanProgRankCd = DsWs_LTIDA00.getCellData(0,"sPlanProgRankCd");
+			PlanNo64 = DsWs_LTIDA64.getCellData(0,"sPlanNo");
+		}
+		
+		if(wconv.length(PlanNo64) != 0){
+			
+			if(gGb == "2")	{
+				wconv.clear(Ds_LTIDA64);
+				util.copyM(Ds_LTIDA64, DsWs_LTIEA64.getAllJSON());
+				util.setCompBindRefresh(Ds_LTIDA64.getID());
+				util.setRowPosition(Ds_LTIDA64, 0);
+			}
+			else {
+				util.copyM(Ds_LTIDA64, DsWs_LTIDA64.getAllJSON());
+				util.setCompBindRefresh(Ds_LTIDA64.getID());
+				util.setRowPosition(Ds_LTIDA64, 0);
+			}
+			edt_RealName.setValue(Ds_LTIDA64.getCellData(0, "sRealOwnerNm"));
+			edt_RealCd.setValue(Ds_LTIDA64.getCellData(0, "sRealOwnerCd"));
+			edt_RealNatnl.setValue(Ds_LTIDA64.getCellData(0, "sRealOwnerNatnl"));
+	    }
+	    if((DsWs_LTIDA00.getCellData(0, "sRealOwnerYn")) == "N"){
+	         sel_RealOwner.setValue("2");
+	    }else{
+	        sel_RealOwner.setValue("1");
+	    }
+	    
+	    if(util.isNull(DsWs_LTIDA03.getCellData(0, "sRlnmCnfmRgcr")) || DsWs_LTIDA03.getCellData(0, "sRlnmCnfmRgcr") == ""){
+	       
+	    }else{
+	        sel_RlnmCnfmRgcr.setValue(DsWs_LTIDA03.getCellData(0, "sRlnmCnfmRgcr"));
+	    }
+	      
+		// 실소유자여부
+		scwin.sel_RealOwner_onviewchange();
+		// 실명확인 기준 세팅 
+		scwin.setRealOwnerSetting();	
+		
+		var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB330Task", "getInsPlan", "", "");
+ 	    MethodObj.setId("getInsPlan");
+	
+		// parent 넘겨주는 인자로 조회 입력데이터 세팅  	    
+	    MethodObj.setParam("sPlanNo", gPlanNo); // parent.Ds_LTIDA00.GetColumn(0, "sPlanNo"));//설계번호
+		MethodObj.setUrl("/contract/CBSC071PController.do");
+		MethodObj.setXPath("//hashtable/data[@hashkey='lTIDA03Doc']/LTIDA03");  
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();
+
+		util.jSonDsCreate(_tranSync.getDsJson("LTIDA03"), "DsWs_LTIDA03_1", "Y");
+		util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning", "Y");
+		if (DsWs_Warning.getRowCount() != 0) {
+			//wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+			//return;
+		}
+		
+		scwin.setRlnmCnfmRgcr();
+		      
+	    return;
+	};	
+	
+	//**********************************************************
+	// 실명확인표 선택에 따른 에디트박스 값 세팅
+	//**********************************************************	
+	scwin.setRlnmCnfmRgcr = function() {
+		var sRlnmCnfmRgcr = sel_RlnmCnfmRgcr.getValue();
+		switch(sRlnmCnfmRgcr) {
+			// 선택
+			case "00":
+				edt_RvMatt1.setDisabled(true);
+				edt_RvMatt2.setDisabled(true);
+				break;
+			// 주민등록번호
+			case "01" :
+//				Stat_RvMatt1.setStyle( propertyName , value )
+			    Stat_RvMatt1.setValue("발급일자");
+			    edt_RvMatt1.setDisabled(false);
+			    Stat_RvMatt2.setValue("");
+			    edt_RvMatt2.setDisabled(true);
+			    break;
+			// 운전면허증    
+			case "02" :
+			    Stat_RvMatt1.setValue("면허번호");
+			    edt_RvMatt1.setDisabled(false);
+			    Stat_RvMatt2.setValue("");
+			    edt_RvMatt2.setDisabled(true);
+				break;
+			// 여권	
+			case "03" :
+			    Stat_RvMatt1.setValue("여권기재명");
+			    edt_RvMatt1.setDisabled(false);
+			    Stat_RvMatt2.setValue("여권번호");
+			    edt_RvMatt2.setDisabled(false);
+			    break;
+			// 외국인등록증    
+			case "04" :
+			// 재외국인(외국국적동포)
+			case "05" :
+			// 국내거소신고증
+			case "06" :
+			    Stat_RvMatt1.setValue("등록번호");
+			    edt_RvMatt1.setDisabled(false);
+			    Stat_RvMatt2.setValue("발급일자");
+			    edt_RvMatt2.setDisabled(false);
+			    break;
+			// 그외			    
+			case "07" :
+			case "08" :
+			case "09" :
+			case "10" :
+			case "11" :
+			case "12" :
+			    Stat_RvMatt1.setValue("발급기관");
+			    edt_RvMatt1.setDisabled(false);
+			    Stat_RvMatt2.Text = "발급(신청일자)";
+			    edt_RvMatt2.setDisabled(false);
+			    break;			
+			default:
+				sel_RlnmCnfmRgcr.setValue("00");
+				edt_RvMatt1.setDisabled(true);
+				edt_RvMatt2.setDisabled(true);
+				break;		
+		}
+	};
+	
+	//**********************************************************
+	// 실명확인 기준 셋팅
+	//**********************************************************	
+	scwin.setRealOwnerSetting = function() {
+		//월납보험료 25만원초과, 연납 300만원초과, 일시납 500만원 초과시 고객정보 사항 입력필수, 미입력시 팝업안내
+		//          안내문구 : “고객 실명확인사항을 입력하세요”
+		//변경 : 저축/연금 가입 전건, 보장성 월납 25만원 이상 or 일시납 1천만원 이상[N1410-00071] -> 월납25만원이상제외
+	    var sRealOwnerFlag = false;
+	
+		if(gBunsMetdDocuClsfCd == "5" || gBunsMetdDocuClsfCd == "7") { //저축,연금
+		   sRealOwnerFlag = true;
+		}
+		else if(gPaymCyclCd == "99" &&  wconv.toNumber(gBussPrem) >= 10000000){ //일시납 1천만원이상
+		   sRealOwnerFlag = true;
+	    }
+
+		if(sRealOwnerFlag){
+		}else{
+			sel_RlnmCnfmRgcr.setDisabled(true);
+		    edt_RvMatt1.setDisabled(true);
+		    edt_RvMatt2.setDisabled(true);
+		}	
+	};	
+	
+	//**********************************************************
+	// 실명확인표 셀렉트박스 체인지
+	//**********************************************************
+	scwin.sel_RlnmCnfmRgcr_onchange = function() {
+		// 실명확인표 선택에 따른 에디트박스 값 세팅
+		scwin.setRlnmCnfmRgcr();	
+	};
+	
+	//**********************************************************
+	// 실소유자 여부 셀렉트박스 뷰체인지
+	//**********************************************************		
+	scwin.sel_RealOwner_onviewchange = function(info) {
+		// 실소유자 여부 변경 시	
+		var sRealOwner = sel_RealOwner.getValue();
+		switch(sRealOwner) {
+			// Y
+			case "1":
+				edt_RealName.setDisabled(true);
+				edt_RealCd.setDisabled(true);
+				edt_RealNatnl.setDisabled(true);
+				edt_RealName.setValue("");
+				edt_RealCd.setValue("");
+				edt_RealNatnl.setValue("");
+				break;
+			// N
+			case "2" :
+			    edt_RealName.setDisabled(false);
+				edt_RealCd.setDisabled(false);
+				edt_RealNatnl.setDisabled(false);
+			    break;
+			default:
+				
+				break;		
+		}
+	};
+	
+	//**********************************************************
+	// 실명확인 버튼 클릭이벤트
+	//**********************************************************			
+	scwin.btn_RlnmCnfm_onclick = function() {
+		// 실명확인정보조회
+		scwin.getRlnmCnfmInfo();	
+	};
+	
+	//**********************************************************
+	// 서브미션 완료후 CALLBACK 
+	//**********************************************************
+	scwin.subCallBackfunction = function(e){
+		// e.subID : 서브미션 ID
+		// e.flag  : S성공;
+		// e.msg   : 트렌젝션 처리후 메세지
+		// e."받을데이타셋"
+		switch(e.subID){
+			// 실명확인정보조회
+			case "retrieveRlnmCnfmInfo":
+				if(e.flag == "s") {
+//					dst_BussActDataInfoVo.setJSON(e.result);	
+					// 조회데이터로 화면세팅 		
+//					scwin.setBussActDataAdm();	
+				} else {
+					wprom.alert(e.msg);
+				}
+														
+			break;
+			
+		}
+	};
+	
+	//**********************************************************
+	// /contract/longterm/CBSC0008.do 실명확인정보조회
+	//**********************************************************
+	scwin.getRlnmCnfmInfo = function() {
+		dst_RlnmCnfmInfoVO.set("empNo" , gUserID);
+		
+		var trans = new transSub();                  		// transaction 보낼 객체 생성
+		trans.setId("retrieveRlnmCnfmInfo");        		// transaction 보낼 SubmissionID
+		trans.setUrl("/contract/longterm/CBSC0008.do");   	// Controller 쪽으로 보낼 주소
+		trans.setDs("dst_RlnmCnfmInfoVO");					
+		trans.targetDs("dst_RlnmCnfmInfoVO");		
+		trans.callBack("scwin.subCallBackfunction");  	// 받을 Dataset을 처리시 콜백함수
+		trans.send();
+	
+	};
+
+	//**********************************************************
+	// 저장버튼 클릭이벤트
+	//**********************************************************			
+	scwin.btn_save_onclick = function() {		
+		// 저장데이터 세팅 
+		var bRtn = scwin.lfn_SaveData();
+		//ㅍ입력항목 정합성 체크	
+		if(scwin.lfn_Validation_Check()) {
+			// 저장서비스 콜 
+			var sPlanNo = gPlanNo;	// 어디서 가져오는 값인지?
+			var sRealName = edt_RealName.getValue();
+			var sRealCd = edt_RealCd.getValue();
+			var sRealNatnl = edt_RealNatnl.getValue();
+			var sRealOwnerYn = sel_RealOwner.getValue();
+			
+			
+			Ds_LTIDA64.setCellData(0,"sPlanNo", gPlanNo);
+			Ds_LTIDA64.setCellData(0,"sRealOwnerNm", sRealName);        
+			Ds_LTIDA64.setCellData(0,"sRealOwnerCd", sRealCd);        
+			Ds_LTIDA64.setCellData(0,"sRealOwnerNatnl", sRealNatnl);
+			
+			util.insertColumn(Ds_LTIDA64, [ ["gUserID","gUserID","text"],      
+											["sRealOwnerYn","sRealOwnerYn","text"]
+											]);      
+	   	        
+			Ds_LTIDA64.setCellData(0,"gUserID", gUserID);
+			util.setCompBindRefresh(Ds_LTIDA64.getID());
+	   	    util.setRowPosition(Ds_LTIDA64, 0);  	
+			if(sRealOwnerYn == "2"){
+				Ds_LTIDA64.setCellData(0, "sRealOwnerYn", "N");
+			}else{
+				Ds_LTIDA64.setCellData(0, "sRealOwnerYn", "Y");
+			}
+				
+			// 저장 서비스 호출 
+			var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB013Task", "saveLtida64");
+			MethodObj.setId("saveLtida64");
+							    			
+			MethodObj.setUrl("/contract/CBSC071PController.do");
+			MethodObj.setHashTable();   // 저장할 때
+			
+			MethodObj.addSingleData("LTIDA64", "LTIDA64", "Ds_LTIDA64:A");	
+			MethodObj.setXPath("//WARNING");
+			MethodObj.sync();
+			MethodObj.send();
+		
+			//에러처리
+			util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+			if(DsWs_Warning.getRowCount() != 0){
+				alert(DsWs_Warning.getCellData(0, "msg"));
+				return;
+			}else{
+				alert("저장 되었습니다.");
+		    }
+			
+			// 재조회 
+			scwin.lfn_Search();
+			// 팝업화면 닫기 
+			scwin.btn_close_onclick();
+		}
+	};
+	
+	//**********************************************************
+	// 입력항목 정합성 체크
+	//**********************************************************			
+	scwin.lfn_Validation_Check = function() {
+		// 입력항목 정합성 체크
+		var chkFlag = true;
+		var sRlnmCnfmRgcr = sel_RlnmCnfmRgcr.getValue();
+		var sRvMatt1 = edt_RvMatt1.getValue();
+		var sRvMatt2 = edt_RvMatt2.getValue();
+		var sRealOwner = sel_RealOwner.getValue();
+		var sRealCd = edt_RealCd.getValue();
+		var sRealName = edt_RealName.getValue();
+		var sRealNatnl = edt_RealNatnl.getValue();
+
+  		if(sel_RlnmCnfmRgcr.getDisabled() == false) {
+  				
+		    if(sRlnmCnfmRgcr == "" || sRlnmCnfmRgcr == "00" || sRvMatt1 == "" ){
+		       
+		       wprom.alertF("내고객 실명 확인사항을 입력하세요", {}, edt_RvMatt1);	
+			   chkFlag = false;
+			   return chkFlag;
+		    }else if(sRlnmCnfmRgcr > "02" && sRvMatt2 == "" && rtrim(sRvMatt2) > ""){
+		              
+		       wprom.alertF("고객 실명 확인사항을 입력하세요", {}, edt_RvMatt2);	       
+     		   chkFlag = false;
+			   return chkFlag;
+			  }
+		}
+				
+	    if(sRealOwner == "0" ){
+	    	wprom.alertF("실소유자 여부를 구분해 주세요.", {}, sel_RealOwner);	      
+			chkFlag = false;
+	       	return chkFlag;
+	    }
+	    else if(sRealOwner == "2"){
+			if(util.isNull(sRealCd) && wconv.length(sRealCd) != 13){
+		   		wprom.alertF("주민번호를 정확히 입력해 주세요.", {}, edt_RealCd);	      
+		     	chkFlag = false;
+	       		return chkFlag;
+		 	}
+
+		  	if(sRealName == ""){
+		  		wprom.alertF("실소유자 이름을 입력하시기 바랍니다.", {}, edt_RealName);	    
+		    	chkFlag = false;
+	       		return chkFlag;
+	  		}
+			if(sRealCd == ""){
+				wprom.alertF("실소유자 주민번호를 입력하시기 바랍니다.", {}, edt_RealCd);	    
+		    	chkFlag = false;
+	       		return chkFlag;
+			  }
+		 	if(sRealNatnl == ""){
+		  		wprom.alertF("실소유자 국가를 입력하시기 바랍니다.", {}, edt_RealNatnl);	    
+	    		chkFlag = false;
+       			return chkFlag;
+		  	}
+     	}
+     	
+     	return chkFlag;
+	};
+     	
+//**********************************************************
+// 저장데이터 세팅 
+//**********************************************************			
+	scwin.lfn_SaveData = function() {
+     	// 입력데이터 데이터셋 세팅 
+     	// 실명확인표 비활성이면 
+     	if(sel_RlnmCnfmRgcr.getDisabled() == true){
+		    DsWs_LTIDA03.setCellData(0, "sRlnmCnfmDate", "");
+			DsWs_LTIDA03.setCellData(0, "sRlnmCnfm", "");
+			DsWs_LTIDA03.setCellData(0, "sRlnmCnfmPstnFlgcd", "");
+			DsWs_LTIDA03.setCellData(0, "sRlnmCnfmInfoRvMatt1", "");
+		    DsWs_LTIDA03.setCellData(0, "sRlnmCnfmInfoRvMatt2", "");
+		    DsWs_LTIDA03.setCellData(0, "sRlnmCnfmRgcr", "");
+		}else{    
+		    DsWs_LTIDA03.setCellData(0, "sRlnmCnfmDate", gsSysDate);
+			DsWs_LTIDA03.setCellData(0, "sRlnmCnfm", util.getGdsValue("gDoer"));
+			DsWs_LTIDA03.setCellData(0, "sRlnmCnfmPstnFlgcd", "01");//본인'01'
+ 		//미성년자 체크 
+		   	if(getAge(DsWs_LTIDA03.getCellData(0, "sCrtorCd"), gsSysDate) < 20 )
+		   	{
+				DsWs_LTIDA03.setCellData(0, "sRlnmCnfmPstnFlgcd", "02"); //법정대리인'02'
+		   	}
+			DsWs_LTIDA03.setCellData(0, "sRlnmCnfmInfoRvMatt1", edt_RvMatt1.getValue());
+			DsWs_LTIDA03.setCellData(0, "sRlnmCnfmInfoRvMatt2", edt_RvMatt2.getValue());
+			DsWs_LTIDA03.setCellData(0, "sRlnmCnfmRgcr", sel_RlnmCnfmRgcr.getValue());
+		}
+
+		// 저장 서비스 호출 
+		var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB013Task", "setCmMetd");
+		MethodObj.setId("setCmMetd");
+
+		MethodObj.setParam("sRlnmCnfmRgcr", DsWs_LTIDA03.getCellData(0, "sRlnmCnfmRgcr"));
+		MethodObj.setParam("sRlnmCnfmInfoRvMatt1", DsWs_LTIDA03.getCellData(0, "sRlnmCnfmInfoRvMatt1"));
+		MethodObj.setParam("sRlnmCnfmInfoRvMatt2", DsWs_LTIDA03.getCellData(0, "sRlnmCnfmInfoRvMatt2"));
+		MethodObj.setParam("sRlnmCnfmDate", DsWs_LTIDA03.getCellData(0, "sRlnmCnfmDate"));
+		MethodObj.setParam("sRlnmCnfm", DsWs_LTIDA03.getCellData(0, "sRlnmCnfm"));
+		MethodObj.setParam("sRlnmCnfmPstnFlgcd", DsWs_LTIDA03.getCellData(0, "sRlnmCnfmPstnFlgcd"));
+		MethodObj.setParam("sPlanNo", DsWs_LTIDA03.getCellData(0, "sPlanNo"));
+			    			
+		MethodObj.setUrl("/contract/CBSC071PController.do");
+		MethodObj.setXPath("//hashtable/data[@hashkey='lTIDA64DocRtn']/LTIDA64");
+		MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA03DocRtn']/LTIDA03");
+		MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA00DocRtn']/LTIDA00");  
+		MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA00DocRtn']/LTIEA00");
+		MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA64DocRtn']/LTIEA64");
+		MethodObj.addXPath("//WARNING");    
+		MethodObj.sync();
+		MethodObj.send();
+		
+		wconv.clear(DsWs_Warning);
+	    util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning", "Y");
+		if (DsWs_Warning.getRowCount() != 0) {
+			wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+			return;
+		} 
+		else {
+			util.jSonDsCreate(_tranSync.getDsJson("LTIDA64"), "DsWs_LTIDA64", "Y");
+			util.jSonDsCreate(_tranSync.getDsJson("LTIDA03"), "DsWs_LTIDA03", "Y");
+			util.jSonDsCreate(_tranSync.getDsJson("LTIDA00"), "DsWs_LTIDA00", "Y");
+			util.jSonDsCreate(_tranSync.getDsJson("LTIEA00"), "DsWs_LTIEA00", "Y");
+			util.jSonDsCreate(_tranSync.getDsJson("LTIEA64"), "DsWs_LTIEA64", "Y");
+	    }
+	};
+		
+	//**********************************************************
+	// 닫기버튼 클릭이벤트
+	//**********************************************************		
+	scwin.btn_close_onclick = function() {
+		// 팝업화면 닫기 
+		wprom.close();
+	};
+]]></script>
+	</head>
+	<body>
+		<xf:group class="contentWrap layer" id="" style="">
+
+			<!-- group:s -->
+			<xf:group id="" style="" class="section">
+				<xf:group class="defaultbox" id="" style="">
+					<w2:textbox class="df_tt fl" id="" label="고객신원정보 확인" style=""></w2:textbox>
+					<xf:group class="fr" id="" style="">
+						<w2:anchor class="btn_nml" ev:onclick="scwin.btn_save_onclick" id="btn_save"
+							outerDiv="true">
+							<xf:label><![CDATA[저장]]></xf:label>
+						</w2:anchor>
+						<w2:anchor class="btn_nml" ev:onclick="scwin.btn_close_onclick" id="btn_close"
+							outerDiv="true" style="">
+							<xf:label><![CDATA[닫기]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+				</xf:group>
+				
+				<xf:group class="roundbox" id="" style="">
+					<w2:textbox class="" id="txt_Msg" label='&lt;span class="txt_blue"&gt;『특정금융거래 정보의 보고 및 이용 등에 대한 법률 』&lt;/span&gt; &amp;nbsp;제5조 의2 및 동법 시행령 제 10조의4에 따라 모든, &amp;nbsp;금융기관 과의 거래시에는 거래와 같이 신분증을 확인하고 하여야 &amp;nbsp;하여야하며 이를 거부하거나 금증이 불가능한 경우 계약 체결이 제한되거나 거절될수 있습니다. 제공하신 정보는 동볍령에 의한 용도 외에는 사용되지 않습니다.' style=""></w2:textbox>
+				</xf:group>
+			</xf:group>
+			<!-- group:e -->
+			<!-- group:s -->
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="" class="w2tb tb" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:95.00px;" tagname="col"></xf:group>
+						<xf:group style="width:120px;" tagname="col"></xf:group>
+						<xf:group style="width:95.00px;" tagname="col"></xf:group>
+						<xf:group style="width:120px;" tagname="col"></xf:group>
+						<xf:group style="width:95.00px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">실명확인표</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:select1 allOption=""
+								appearance="minimal" chooseOption="" direction="auto"
+								disabled="false" disabledClass="" displayMode="label"
+								ev:onviewchange="" id="sel_RlnmCnfmRgcr" optionOrder="" ref=""
+								style="" submenuSize="" ev:onchange="scwin.sel_RlnmCnfmRgcr_onchange" renderType="native">
+								<xf:choices>
+									<xf:itemset
+										nodeset="data:Ds_RlnmCnfmRgcr">
+										<xf:label ref="name"></xf:label>
+										<xf:value ref="value"></xf:value>
+									</xf:itemset>
+								</xf:choices>
+							</xf:select1>
+						</xf:group>
+						<xf:group class="w2tb_th" tagname="th"
+							id=""><xf:input disabled=""
+								id="Stat_RvMatt1"
+								ref="" style="width:86px;margin-left:-5px;" readOnly="true" initValue="실명확인정보1">
+							</xf:input></xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<xf:input id="edt_RvMatt1" style="" disabled="" ref="data:DsWs_LTIDA03_1.sRlnmCnfmInfoRvMatt1"></xf:input>
+						</xf:group>
+						<xf:group class="w2tb_th" tagname="th"
+							id=""><xf:input disabled="" id="Stat_RvMatt2"
+								readOnly="true" ref="" style="width:86px;margin-left:-5px;" initValue="실명확인정보2">
+							</xf:input></xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+						<xf:group class="input_btn t4" style="">
+							<xf:input id="edt_RvMatt2" style="" ref="data:DsWs_LTIDA03_1.sRlnmCnfmInfoRvMatt2"></xf:input>
+							<w2:anchor class="btn_nml1" ev:onclick="scwin.btn_RlnmCnfm_onclick" id="btn_RlnmCnfm" outerDiv="true" disabled="true">
+								<xf:label><![CDATA[실명확인]]></xf:label>
+							</w2:anchor>
+						</xf:group>
+					</xf:group></xf:group>
+				</xf:group>
+				<w2:textbox class="" id="" label='주) 신분증 종류를 여권, 기타로 선택하신 경우는 사본을 함께 제출하셔야 합니다.' style=""></w2:textbox>
+				
+			</xf:group>
+			<!-- group:e -->
+			
+			<!-- group:s -->
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="" class="w2tb tb" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:95.00px;" tagname="col"></xf:group>
+						<xf:group style="width:80px;" tagname="col"></xf:group>
+						<xf:group style="width:95.00px;" tagname="col"></xf:group>
+						<xf:group style="width:90px;" tagname="col"></xf:group>
+						<xf:group style="width:95.00px;" tagname="col"></xf:group>
+						<xf:group style="width:120px;" tagname="col"></xf:group>
+						<xf:group style="width:60.00px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">실소유자&amp;nbsp;여부</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:select1 allOption=""
+								appearance="minimal" chooseOption="" direction="auto"
+								disabled="false" disabledClass="" displayMode="label"
+								ev:onviewchange="scwin.sel_RealOwner_onviewchange"
+								id="sel_RealOwner" optionOrder="" ref="" style=""
+								submenuSize="" renderType="native">
+								<xf:choices>
+									<xf:itemset
+										nodeset="data:Ds_RealYN">
+										<xf:label ref="name"></xf:label>
+										<xf:value ref="value"></xf:value>
+									</xf:itemset>
+								</xf:choices>
+							</xf:select1>
+						</xf:group>
+						<xf:group class="w2tb_th" tagname="th">실소유자&amp;nbsp;이름</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<xf:input id="edt_RealName" style="" disabled="" ref=""></xf:input>
+						</xf:group>
+					<xf:group class="w2tb_th" tagname="th">주민등록번호</xf:group>
+					<xf:group class="w2tb_td" tagname="td">
+						<xf:input disabled="" id="edt_RealCd" style="" ref="" displayFormat="######-#######"></xf:input>
+					</xf:group>
+					<xf:group class="w2tb_th" tagname="th">국적</xf:group>
+					<xf:group class="w2tb_td" tagname="td">
+						<xf:input disabled="" id="edt_RealNatnl" style="" ref=""></xf:input>
+					</xf:group></xf:group>
+				</xf:group>
+				<w2:textbox class="" id="" label='주) 신분증 종류를 여권, 기타로 선택하신 경우는 사본을 함께 제출하셔야 합니다.' style=""></w2:textbox>
+				
+			</xf:group>
+			<!-- group:e -->
+			
+		</xf:group>
+	</body>
+</html>

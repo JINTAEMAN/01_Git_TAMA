@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/new.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataList id="data1" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="id1" name="" dataType="text"
+							ignoreStatus="true">
+						</w2:column>
+						<w2:column id="id2" name="" dataType="text"></w2:column>
+						<w2:column id="id3" name="" dataType="text"></w2:column>
+						<w2:column id="id4" name="" dataType="text"></w2:column>
+						<w2:column id="id5" name="" dataType="number"></w2:column>
+						<w2:column id="id6" name="" dataType="text"></w2:column>
+						<w2:column id="id7" name="" dataType="number"></w2:column>
+						<w2:column id="id8" name="" dataType="text"></w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<id1><![CDATA[1]]></id1>
+							<id2><![CDATA[내국인]]></id2>
+							<id3><![CDATA[3]]></id3>
+							<id4><![CDATA[45]]></id4>
+							<id5><![CDATA[5]]></id5>
+							<id6><![CDATA[7]]></id6>
+							<id7><![CDATA[8]]></id7>
+							<id8><![CDATA[1]]></id8>
+							<id9><![CDATA[0]]></id9>
+							<id10><![CDATA[1]]></id10>
+						</w2:row>
+						<w2:row>
+							<id1><![CDATA[2]]></id1>
+						</w2:row>
+						<w2:row>
+							<id1><![CDATA[3]]></id1>
+						</w2:row>
+						<w2:row>
+							<id1><![CDATA[4]]></id1>
+						</w2:row>
+						<w2:row>
+							<id1><![CDATA[5]]></id1>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" id="dst_LginAuthInqrVo">
+					<w2:keyInfo>
+						<w2:key id="empNo" name="사번" dataType="text">
+						</w2:key>
+						<w2:key id="name" name="이름" dataType="text">
+						</w2:key>
+						<w2:key id="pstnDeptCd" name="소속부서코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="bizAdmrYn" name="업무관리자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="geafAdmrYn" name="대면총무여부,지점장여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gaEducMngrAdmrYn" name="GA교육매니저여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="agncyAdmrYn" name="대리점사용인관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="superAuthYn" name="super권한여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="drctMangYn" name="직영여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="crossYn" name="교차여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="atchYn" name="전속여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gAYn" name="GA여부" dataType="text">
+						</w2:key>
+						<w2:key id="drctMangAdmrYn" name="직영관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="crossAdmrYn" name="교차관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="atchAdmrYn" name="전속관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gAAdmrYn" name="GA관리자여부"
+							dataType="text">
+						</w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map"
+					id="dst_KniaOnline320InfoVo">
+					<w2:keyInfo>
+						<w2:key id="custNo" name="name1"
+							dataType="text">
+						</w2:key>
+						<w2:key id="psnInfoWrcsRvFlag" name="name2"
+							dataType="text">
+						</w2:key>
+						<w2:key id="totRgstCt" name="name3"
+							dataType="text">
+						</w2:key>
+						<w2:key id="addInqrMatt" name="name4"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inqrReplyCnt" name="name5"
+							dataType="text">
+						</w2:key>
+						<w2:key id="stndYymm" name="name6"
+							dataType="text">
+						</w2:key>
+						<w2:key id="custKey" name="name7"
+							dataType="text">
+						</w2:key>
+						<w2:key id="errMsg" name="name8"
+							dataType="text">
+						</w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList id="dst_knia320CarerInfoListVo"
+					baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="rgstDate" name="name1"
+							dataType="text">
+						</w2:column>
+						<w2:column id="quafFlg1" name="name2"
+							dataType="text">
+						</w2:column>
+						<w2:column id="quafFlg2" name="name3"
+							dataType="text">
+						</w2:column>
+						<w2:column id="name" name="name4"
+							dataType="text">
+						</w2:column>
+						<w2:column id="cmpnCd" name="name5"
+							dataType="text">
+						</w2:column>
+						<w2:column id="rgstNo" name="name6"
+							dataType="text">
+						</w2:column>
+						<w2:column id="ersrDate" name="name7"
+							dataType="text">
+						</w2:column>
+						<w2:column id="rgstCd" name="name8"
+							dataType="text">
+						</w2:column>
+						<w2:column id="ersrCd" name="name9"
+							dataType="text">
+						</w2:column>
+						<w2:column id="offcCd" name="name10"
+							dataType="text">
+						</w2:column>
+						<w2:column id="offcName" name="name11"
+							dataType="text">
+						</w2:column>
+						<w2:column id="edbgCd" name="name12"
+							dataType="text">
+						</w2:column>
+						<w2:column id="carerCd" name="name13"
+							dataType="text">
+						</w2:column>
+						<w2:column id="post" name="name14"
+							dataType="text">
+						</w2:column>
+						<w2:column id="dongBelo" name="name15"
+							dataType="text">
+						</w2:column>
+						<w2:column id="finalMdfcDate" name="name16"
+							dataType="text">
+						</w2:column>
+						<w2:column id="inqrDate" name="name17"
+							dataType="text">
+						</w2:column>
+						<w2:column id="custNo" name="name18"
+							dataType="text">
+						</w2:column>
+						<w2:column id="fileTrrvSeqno" name="name19"
+							dataType="text">
+						</w2:column>
+						<w2:column id="seqno" name="name20"
+							dataType="text">
+						</w2:column>
+						<w2:column id="psnInfoWrcsRvFlag" name="name21"
+							dataType="text">
+						</w2:column>
+						<w2:column id="totRgstCt" name="name22"
+							dataType="text">
+						</w2:column>
+						<w2:column id="addInqrMatt" name="name23"
+							dataType="text">
+						</w2:column>
+						<w2:column id="inqrReplyCnt" name="name24"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList id="dsl_psnInfoWrcsRvFlag" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="CODE" name="CODE"
+							dataType="text">
+						</w2:column>
+						<w2:column id="TEXT" name="TEXT"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<CODE><![CDATA[A]]></CODE>
+							<TEXT><![CDATA[설계사 등록 및 신고]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[B]]></CODE>
+							<TEXT><![CDATA[대리점 등록 및 신고]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[C]]></CODE>
+							<TEXT><![CDATA[설계사 자격시험 관련]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[D]]></CODE>
+							<TEXT><![CDATA[퇴직연금모집인 경력조회]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[E]]></CODE>
+							<TEXT><![CDATA[보험업법 위반자조회]]></TEXT>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataList id="dsl_quafFlg1" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="CODE" name="CODE"
+							dataType="text">
+						</w2:column>
+						<w2:column id="TEXT" name="TEST"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<CODE><![CDATA[01]]></CODE>
+							<TEXT><![CDATA[손보 설계사]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[02]]></CODE>
+							<TEXT><![CDATA[손보설계사 말소]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[03]]></CODE>
+							<TEXT><![CDATA[손보 사용인]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[04]]></CODE>
+							<TEXT><![CDATA[손보사용인 말소]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[05]]></CODE>
+							<TEXT><![CDATA[손보협회 사고자]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[21]]></CODE>
+							<TEXT><![CDATA[생보 설계사]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[22]]></CODE>
+							<TEXT><![CDATA[생보설계사 말소]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[23]]></CODE>
+							<TEXT><![CDATA[생보사용인]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[24]]></CODE>
+							<TEXT><![CDATA[생보사용인 말소]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[25]]></CODE>
+							<TEXT><![CDATA[생보협회 사고자]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[50]]></CODE>
+							<TEXT><![CDATA[자격없음(유자격자)]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[51]]></CODE>
+							<TEXT><![CDATA[손보유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[52]]></CODE>
+							<TEXT><![CDATA[생보유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[53]]></CODE>
+							<TEXT><![CDATA[손생보유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[54]]></CODE>
+							<TEXT><![CDATA[대리점 임원]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[55]]></CODE>
+							<TEXT><![CDATA[손보임원유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[56]]></CODE>
+							<TEXT><![CDATA[생보임원유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[57]]></CODE>
+							<TEXT><![CDATA[손생보임원유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[58]]></CODE>
+							<TEXT><![CDATA[대리점 대표]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[59]]></CODE>
+							<TEXT><![CDATA[손보대표유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[60]]></CODE>
+							<TEXT><![CDATA[생보대표유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[61]]></CODE>
+							<TEXT><![CDATA[손생보대표유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[62]]></CODE>
+							<TEXT><![CDATA[대리점 대표임원]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[63]]></CODE>
+							<TEXT><![CDATA[손보대표임원유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[64]]></CODE>
+							<TEXT><![CDATA[생보대표임원유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[65]]></CODE>
+							<TEXT><![CDATA[손생보대표임원유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[66]]></CODE>
+							<TEXT><![CDATA[3보 유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[67]]></CODE>
+							<TEXT><![CDATA[대리점 감사]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[71]]></CODE>
+							<TEXT><![CDATA[중개사 대표]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[72]]></CODE>
+							<TEXT><![CDATA[중개사 임원]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[73]]></CODE>
+							<TEXT><![CDATA[중개사 임원대표]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[74]]></CODE>
+							<TEXT><![CDATA[중개사 손보유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[75]]></CODE>
+							<TEXT><![CDATA[중개사 손보유자격대표]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[76]]></CODE>
+							<TEXT><![CDATA[중개사손보유자격임원]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[77]]></CODE>
+							<TEXT><![CDATA[중개사손보유자격임원대표]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[78]]></CODE>
+							<TEXT><![CDATA[중개사 생보유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[79]]></CODE>
+							<TEXT><![CDATA[중개사 생보유자격대표]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[80]]></CODE>
+							<TEXT><![CDATA[중개사생보유자격임원]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[81]]></CODE>
+							<TEXT><![CDATA[중개사생보유자격임원대표]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[82]]></CODE>
+							<TEXT><![CDATA[중개사 생손보유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[83]]></CODE>
+							<TEXT><![CDATA[중개사생손보유자격대표]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[84]]></CODE>
+							<TEXT><![CDATA[중개사생손보유자격임원]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[85]]></CODE>
+							<TEXT><![CDATA[중개사생손보유자격임원대표]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[86]]></CODE>
+							<TEXT><![CDATA[중개사 3보유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[87]]></CODE>
+							<TEXT><![CDATA[중개사 감사]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[88]]></CODE>
+							<TEXT><![CDATA[단종보험 대표]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[89]]></CODE>
+							<TEXT><![CDATA[단종보험 이사]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[90]]></CODE>
+							<TEXT><![CDATA[단종보험 감사]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[91]]></CODE>
+							<TEXT><![CDATA[단종보험 유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[92]]></CODE>
+							<TEXT><![CDATA[단종보험 설계사]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[93]]></CODE>
+							<TEXT><![CDATA[단종보험 대표유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[94]]></CODE>
+							<TEXT><![CDATA[단종보험 대표유자격설계사]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[95]]></CODE>
+							<TEXT><![CDATA[단종보험 이사유자격]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[96]]></CODE>
+							<TEXT><![CDATA[단종보험 이사유자격설계사]]></TEXT>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataList id="dsl_quafFlg2" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="CODE" name="CODE"
+							dataType="text">
+						</w2:column>
+						<w2:column id="TEXT" name="TEXT"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<CODE><![CDATA[1]]></CODE>
+							<TEXT><![CDATA[손보(전속)]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[2]]></CODE>
+							<TEXT><![CDATA[제3보(전속)]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[3]]></CODE>
+							<TEXT><![CDATA[손보 교차(생보)]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[4]]></CODE>
+							<TEXT><![CDATA[3보 교차]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[5]]></CODE>
+							<TEXT><![CDATA[생보(전속)]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[6]]></CODE>
+							<TEXT><![CDATA[생보제3보(전속)]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[7]]></CODE>
+							<TEXT><![CDATA[생보]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[8]]></CODE>
+							<TEXT><![CDATA[생보제3보]]></TEXT>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataList id="dsl_cmpnCd" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="CODE" name="CODE"
+							dataType="text">
+						</w2:column>
+						<w2:column id="TEXT" name="TEXT"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<CODE><![CDATA[N01]]></CODE>
+							<TEXT><![CDATA[메리츠화재]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N02]]></CODE>
+							<TEXT><![CDATA[한화손보]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N03]]></CODE>
+							<TEXT><![CDATA[롯데손보]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N04]]></CODE>
+							<TEXT><![CDATA[MG손보]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N05]]></CODE>
+							<TEXT><![CDATA[흥국화재]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N06]]></CODE>
+							<TEXT><![CDATA[제일화재]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N07]]></CODE>
+							<TEXT><![CDATA[리젠트화재]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N08]]></CODE>
+							<TEXT><![CDATA[삼성화재]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N09]]></CODE>
+							<TEXT><![CDATA[현대해상]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N10]]></CODE>
+							<TEXT><![CDATA[LIG손보]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N11]]></CODE>
+							<TEXT><![CDATA[동부화재]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N12]]></CODE>
+							<TEXT><![CDATA[서울보증]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N16]]></CODE>
+							<TEXT><![CDATA[AXA]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N17]]></CODE>
+							<TEXT><![CDATA[더케이]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N51]]></CODE>
+							<TEXT><![CDATA[차티스]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N52]]></CODE>
+							<TEXT><![CDATA[ACE]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N53]]></CODE>
+							<TEXT><![CDATA[페더럴]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N59]]></CODE>
+							<TEXT><![CDATA[DAS]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N60]]></CODE>
+							<TEXT><![CDATA[FATIC]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[N71]]></CODE>
+							<TEXT><![CDATA[농협손보]]></TEXT>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataList id="dsl_ersrCd" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="CODE" name="CODE"
+							dataType="text">
+						</w2:column>
+						<w2:column id="TEXT" name="TEXT"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<CODE><![CDATA[01]]></CODE>
+							<TEXT><![CDATA[말소]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[02]]></CODE>
+							<TEXT><![CDATA[사망]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[03]]></CODE>
+							<TEXT><![CDATA[부실모집]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[04]]></CODE>
+							<TEXT><![CDATA[비가동]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[05]]></CODE>
+							<TEXT><![CDATA[효력상실]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[06]]></CODE>
+							<TEXT><![CDATA[직접말소]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[07]]></CODE>
+							<TEXT><![CDATA[등록취소]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[08]]></CODE>
+							<TEXT><![CDATA[인터넷 직접말소]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[11]]></CODE>
+							<TEXT><![CDATA[대리점 등록취소]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[12]]></CODE>
+							<TEXT><![CDATA[대리점 계약해지]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[13]]></CODE>
+							<TEXT><![CDATA[대리점 폐지]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[14]]></CODE>
+							<TEXT><![CDATA[대리점지점폐쇄]]></TEXT>
+						</w2:row>
+						<w2:row>
+							<CODE><![CDATA[21]]></CODE>
+							<TEXT><![CDATA[사고자]]></TEXT>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>
+			
+		</xf:model>
+		<script src="/cm/js/common.js"/>
+		<script src="/cm/js/val_lib.js"/>
+		<script src="/cm/js/util.js"/>
+		<script src="/cm/js/transSub.js"/>
+		<script src="/cm/js/callService.js"/>
+		<script src="/cm/js/gds.js"/>
+		<script src="/cm/js/wconv.js"/>
+		<!--  <script src="/cm/js/convertJs/conv.js"/>-->
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/>
+		<script src="/cm/js/convertJs/NewGen_Script.js"/>
+		<script src="/cm/js/convertJs/Acd_Script.js"/>
+		<script src="/cm/js/convertJs/LongTerm_Script.js"/>
+		
+		<script type="javascript"><![CDATA[
+			
+	var gsSysDate;			// global 현재일자
+	var gUserID; 			// global 사용자 ID
+	var gUserEmpName; 	    // global 부서명
+	var ib_inputCustNo_Event;
+			
+	//**********************************************************
+	// 초기화
+	//**********************************************************
+	scwin.init = function() {
+		gsSysDate 		= WebSquare.date.getCurrentServerDate("yyyyMMdd"); 	// global 현재일자
+		gUserID 		= util.getGdsValue("gUserID");    					// global 사용자 ID
+		gUserEmpName 	= util.getGdsValue("gUserEmpName");    				// global 부서명
+						
+	    //----- 버튼 처리(입력, 수정, 삭제, 결재, 취소, 인쇄, 엑셀, 닫기)
+		gfn_btnEnable(false, false, false, false, false, false, false, true);
+		
+	    var maskRegExp = [ /^[A-Z\s]{1}[0-9\s]{4}[0-9\s]{7}$/,
+	    						/^[0-9\s]{6}$/,
+	    							/^[0-9\s]{6}[0-9\s]{1}[A-Z0-9\s]{6}$/
+	    								,/^[0-9A-Z\s]{7}$/
+	    									,/^[ㄱ-ㅎㅏ-ㅣ가-힣A-Za-z0-9\s]{20}$/ ];
+		var maxLength  = [12,6,13,7,20];
+		var chkIndex   = 0;	
+		ib_inputCustNo.setPlaceholder( "");
+		ib_inputCustNo_Event = new wMaskEditObj(ib_inputCustNo, maskRegExp, maxLength, chkIndex);	
+		ib_inputCustNo.setPlaceholder("______-_______");
+		ib_inputCustNo.setDisplayFormat("######-#######");
+		ib_inputCustNo_Event.setIndex(2);
+
+		
+	    var promise = Promise.resolve();
+	    promise = promise.then(function(rtnVal) {
+	     	// /common/CBSO0015.do 로그인자 권한조회	 
+			scwin.getLginAuthInfo();	
+  			
+	    });	    
+	    return promise;	
+	};	
+	
+	
+	//**********************************************************
+	// 로그인자 권한조회 /common/CBSO005.do 로그인자 권한조회
+	//**********************************************************
+	scwin.getLginAuthInfo = function() {		
+		// 사번으로 로그인자 권한조회	
+		dst_LginAuthInqrVo.set("empNo" , gUserID);
+		
+		var trans = new transSub();                  	// transaction 보낼 객체 생성
+		trans.setId("retrieveLginIDAuthInqr");        	// transaction 보낼 SubmissionID
+		trans.setUrl("/common/CBSO0015.do");   			// Controller 쪽으로 보낼 주소
+		trans.setDs("dst_LginAuthInqrVo");					
+		trans.targetDs("dst_LginAuthInqrVo");		
+		trans.callBack("scwin.subCallBackfunction");  	// 받을 Dataset을 처리시 콜백함수
+		trans.send();
+		
+	};
+	
+	//**********************************************************
+	// 
+	//**********************************************************
+	scwin.subCallBackfunction = function(e){
+		// e.subID : 서브미션 ID
+		// e.flag  : s성공;
+		// e.msg   : 트렌젝션 처리후 메세지
+		// e."받을데이타셋"
+		switch(e.subID){
+			// 로그인ID권한조회
+			case "retrieveLginIDAuthInqr":
+				if(e.flag == "s") {
+		
+					dst_LginAuthInqrVo.setJSON(e.result);		
+					
+					//장기업무부(4000103) - bizAdmrYn
+					//대면총무(34024) - geafAdmrYn
+					//모집인관리자(34025) - clprAdmrYn
+					if(dst_LginAuthInqrVo.get("bizAdmrYn") == "Y"
+						|| dst_LginAuthInqrVo.get("geafAdmrYn") == "Y"
+						|| dst_LginAuthInqrVo.get("clprAdmrYn") == "Y"
+					){												
+						btn_Search.setDisabled(false);
+							
+						if(dst_LginAuthInqrVo.get("bizAdmrYn") == "Y"){
+							btn_excelDown.setDisabled(true);
+							btn_excelDown.visible(false);
+						}
+					}else{						
+						btn_Search.setDisabled(true);
+        				wprom.alert("화면조회권한이 없습니다.");
+        				return;
+					}
+					
+				}else {
+					wprom.alert(e.msg);
+					
+				}															
+			break;			
+			
+			//손보협회 전기관경력조회
+			case "retrieveKniaTotOrgnCarerInfo":
+				if(e.flag == "s") {
+					dst_KniaOnline320InfoVo.setJSON(e.result);
+					dst_knia320CarerInfoListVo.setJSON(e.result.knia320CarerInfoVo);
+									
+					if(dst_KniaOnline320InfoVo.get("errMsg")!= null
+						&& dst_KniaOnline320InfoVo.get("errMsg")!= ""){
+						alert(dst_KniaOnline320InfoVo.get("errMsg"));
+					}
+				}else{
+					if(e.msg == null || e.msg == "null"){
+						wprom.alert("손보협회와 통신이 원활하지 않습니다.\n잠시후에 다시 조회해주세요.");
+					}else{
+						wprom.alert(e.msg);
+					}
+				}
+			break;
+		}
+	};
+	
+	
+	//**********************************************************
+	// 손보협회 모집인 전기관 경력조회
+	//**********************************************************
+	scwin.btn_Search_onclick = function() {
+			
+		wconv.clear(dst_knia320CarerInfoListVo);
+	
+		if(util.isNull(ib_inputCustNo.getValue())){			
+        	wprom.alertF("주민등록번호를 입력해 주세요.",{},ib_inputCustNo);
+        	return;
+		}
+		if(util.isNull(sel_psnInfoWrcsRvFlag.getValue())){			
+        	wprom.alertF("조회목적을 선택해 주세요.",{},sel_psnInfoWrcsRvFlag);
+        	return;
+		}		
+	
+		dst_KniaOnline320InfoVo.set("custNo",ib_inputCustNo.getValue());
+		dst_KniaOnline320InfoVo.set("psnInfoWrcsRvFlag",sel_psnInfoWrcsRvFlag.getValue());
+		
+		var trans = new transSub();                  	//transaction 보낼 객체 생성
+		trans.setId("retrieveKniaTotOrgnCarerInfo");    //transaction 보낼 SubmissionID
+		trans.setUrl("/sales/support/CBSB0028.do");   	//Controller 쪽으로 보낼 주소
+		trans.setDs("dst_KniaOnline320InfoVo");					
+		trans.targetDs("dst_KniaOnline320InfoVo");		
+		trans.callBack("scwin.subCallBackfunction");  	//받을 Dataset을 처리시 콜백함수
+		trans.send();
+		
+	};
+	
+    //**********************************************************
+	// 손보협회 전기관 경력조회 엑셀 다운로드
+	//**********************************************************	
+	scwin.btn_excelDown_onclick = function() {
+		var option={};
+		option.fileName= "손보협회전기관경력조회_"+".xlsx";
+	    common.downLoadExcel("grd_dataList",option,{});
+	};
+	]]></script>
+	</head>
+	<body>
+		<xf:group class="contentWrap" id="" style="">
+			<w2:wframe id="" style="" initScript="scwin.wfTitleFavInit();" src="/cm/common/wf_titleFav.xml"></w2:wframe>
+			
+			<!-- group:s -->
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="" class="tbl_search">
+					<xf:group id="" style="" adaptive="" class="w2tb tbl_sc" adaptiveThreshold="" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:100px" tagname="col"></xf:group>
+							<xf:group style="width:150px" tagname="col"></xf:group>
+							<xf:group style="width:80px" tagname="col"></xf:group>
+							<xf:group style="width:150px" tagname="col"></xf:group>
+							<xf:group style="width:80px" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group tagname="tr" style="">
+							<xf:group style="" class="w2tb_th" tagname="th">주민등록번호</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="ib_inputCustNo" style="" maxlength="13"></xf:input>
+							</xf:group>
+							<xf:group style="" class="w2tb_th" tagname="th">조회목적</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 allOption=""
+									appearance="minimal" chooseOption="true" direction="auto"
+									disabled="false" disabledClass="" displayMode="label"
+									ev:onviewchange="" id="sel_psnInfoWrcsRvFlag" optionOrder=""
+									ref="" style="" submenuSize="" renderType="native"
+									chooseOptionLabel=" - ">
+									<xf:choices>
+										<xf:itemset
+											nodeset="data:dsl_psnInfoWrcsRvFlag">
+											<xf:label ref="TEXT"></xf:label>
+											<xf:value ref="CODE"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="" class="w2tb_th" tagname="th">조회동의</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select appearance="full" id="" selectedindex="-1" cols="" rows="">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[]]></xf:label>
+											<xf:value><![CDATA[]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select>
+
+							</xf:group>
+							<w2:anchor id="btn_Search" style="" ev:onclick="scwin.btn_Search_onclick" class="btn_sh" outerDiv="true" disabled="">
+								<xf:label><![CDATA[조회]]></xf:label>
+							</w2:anchor>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<!-- group:e -->
+			
+			<!-- group:s -->
+			<xf:group id="" style="" class="section">
+				
+				<w2:gridView ignoreCellClick="false" ev:onrowindexchange="" autoFit="allColumn" rowStatusWidth="20" visibleRowNum="" class="cm_grid" wheelRows="" ev:onviewchange=""
+					fixedColumnWithHidden="" dataList="dst_knia320CarerInfoListVo" id="grd_dataList" style="height:548px" scrollByColumn="false" useShiftKey="true" rowStatusVisible="" ev:onafteredit="" rowStatusHeaderValue="상태"
+					ev:oncellclick="" rowNumVisible="true" rowNumWidth="50" rowNumHeaderValue="No." readOnly="true">
+					<w2:header id="header1" style="">
+						<w2:row id="row2" style="">
+							<w2:column id="column2" blockSelect="false" style="height:20px;" width="85" inputType="text" value="등록일자" displayMode="label"></w2:column>
+							<w2:column id="column3" blockSelect="false" style="height:20px;" width="80" inputType="text" value="자격구분" displayMode="label"></w2:column>
+							<w2:column id="column4" blockSelect="false" style="height:20px;" width="80" inputType="text" value="영업구분" displayMode="label"></w2:column>
+							<w2:column id="column5" blockSelect="false" style="height:20px;" width="100" inputType="text" value="성명" displayMode="label"></w2:column>
+							<w2:column id="column6" blockSelect="false" style="height:20px;" width="105" inputType="text" value="회사명" displayMode="label"></w2:column>
+							<w2:column id="column7" blockSelect="false" style="height:20px;" width="150" inputType="text" value="등록번호" displayMode="label"></w2:column>
+							<w2:column blockSelect="false" id="column16" style="height:20px;" inputType="text" width="70" displayMode="label" value="말소일자"></w2:column>
+							<w2:column blockSelect="false" id="column14" style="height:20px;" inputType="text" width="70" displayMode="label" value="말소유형"></w2:column>
+							<w2:column blockSelect="false" id="column12" style="height:20px;" inputType="text" width="120" displayMode="label" value="점포(대리점)코드"></w2:column>
+							<w2:column blockSelect="false" id="column10" style="height:20px;" inputType="text" width="120" displayMode="label" value="점포(대리점)명"></w2:column>
+							<w2:column blockSelect="false" id="column8" style="height:20px;" inputType="text" width="100" displayMode="label" value="최종수정일"></w2:column>
+						</w2:row>
+					</w2:header>
+					<w2:gBody id="gBody4" style="">
+						<w2:row id="row5" style="">
+							<w2:column id="rgstDate" blockSelect="false" style="" width="85" inputType="" displayMode="label"></w2:column>
+							<w2:column id="quafFlg1" blockSelect="false"
+								style="" width="80" inputType="select" displayMode="label"
+								allOption="" chooseOption="">
+								<w2:choices>
+									<w2:itemset
+										nodeset="data:dsl_quafFlg1">
+										<w2:label ref="TEXT"></w2:label>
+										<w2:value ref="CODE"></w2:value>
+									</w2:itemset>
+								</w2:choices>
+							</w2:column>
+							<w2:column id="quafFlg2" blockSelect="false"
+								style="" width="80" inputType="select" displayMode="label"
+								allOption="" chooseOption="">
+								<w2:choices>
+									<w2:itemset
+										nodeset="data:dsl_quafFlg2">
+										<w2:label ref="TEXT"></w2:label>
+										<w2:value ref="CODE"></w2:value>
+									</w2:itemset>
+								</w2:choices>
+							</w2:column>
+							<w2:column id="name" blockSelect="false" style="" width="100" inputType="" displayMode="label"></w2:column>
+							<w2:column id="cmpnCd" blockSelect="false"
+								style="" width="105" inputType="select" displayMode="label"
+								allOption="" chooseOption="">
+								<w2:choices>
+									<w2:itemset
+										nodeset="data:dsl_cmpnCd">
+										<w2:label ref="TEXT"></w2:label>
+										<w2:value ref="CODE"></w2:value>
+									</w2:itemset>
+								</w2:choices>
+							</w2:column>
+							<w2:column id="rgstNo" blockSelect="false" style="" width="150" inputType="" displayMode="label"></w2:column>
+							<w2:column blockSelect="false" id="ersrDate" style="height:20px" inputType="text" width="70" displayMode="label"></w2:column>
+							<w2:column blockSelect="false" id="ersrCd"
+								style="height:20px" inputType="select" width="70"
+								displayMode="label" allOption="" chooseOption="">
+								<w2:choices>
+									<w2:itemset
+										nodeset="data:dsl_ersrCd">
+										<w2:label ref="TEXT"></w2:label>
+										<w2:value ref="CODE"></w2:value>
+									</w2:itemset>
+								</w2:choices>
+							</w2:column>
+							<w2:column blockSelect="false" id="offcCd" style="height:20px" inputType="text" width="120" displayMode="label"></w2:column>
+							<w2:column blockSelect="false" id="offcName" style="height:20px" inputType="text" width="120" displayMode="label"></w2:column>
+							<w2:column blockSelect="false" id="finalMdfcDate" style="height:20px" inputType="text" width="100" displayMode="label"></w2:column>
+						</w2:row>
+					</w2:gBody>
+				</w2:gridView>
+			</xf:group>
+			<!-- group:e -->
+			
+			<!-- group:s -->
+			<xf:group id="" style="" class="section bottom_center">
+				<xf:group class="fr" id="" style="">
+					<w2:anchor class="btn_nml" ev:onclick="scwin.btn_excelDown_onclick" id="btn_excelDown"
+						outerDiv="true">
+						<xf:label><![CDATA[엑셀다운]]></xf:label>
+					</w2:anchor>
+				</xf:group>
+			</xf:group>
+			<!-- group:e -->
+			
+		</xf:group>
+	</body>
+</html>

@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+  <head>
+    <!-- 
+        ###################################################
+         파일명 : CBSC126P.xml
+         프로그램명 : 특정부위.질병 부담보[B210_Pop]
+         설 명 :  특정부위.질병 부담보[B210_Pop]
+         작성자 : 진태만
+         작성일 : 2017.10.06
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.10.06        진태만          최초작성
+        ###################################################
+     -->
+	 <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+             
+            	<!-- 부담보 정보 Ds(Ds_LTIDA09) -->
+            	<w2:dataList baseNode="list" id="Ds_LTIDA09" repeatNode="map">
+            		<w2:columnInfo>
+                        <w2:column dataType="text" id="fFlag" name="체크박스"/>
+                        <w2:column dataType="text" id="seqNo" name="seqNo"/>   
+						<w2:column dataType="text" id="sCd" name="부담보코드"/>
+						<w2:column dataType="text" id="sCdType" name="코드"/>
+						<w2:column dataType="text" id="sCdTypeName" name="코드명"/>
+						<w2:column dataType="text" id="sHnglCdName" name="특정부위명"/>
+						<w2:column dataType="text" id="sEngCdName" name="특정부위명_영"/> 
+						<w2:column dataType="text" id="sSbcvrCvrgePartCd" name="부담보코드"/> 
+						<w2:column dataType="text" id="sSubCvrgeTermCd" name="부담보기간코드"/>
+						<w2:column dataType="text" id="sApplStrtDate" name="적용시작일"/>
+                        <w2:column dataType="text" id="sApplEndDate" name="적용종료일"/>
+                    </w2:columnInfo>
+                </w2:dataList> 
+                
+                <!-- 부담보 정보2 Ds(Ds_LTIEA09) -->
+            	<w2:dataList baseNode="list" id="Ds_LTIEA09" repeatNode="map">
+            		<w2:columnInfo>
+						<w2:column dataType="text" id="sSbcvrCvrgePartCd" name="부담보코드"/>
+						<w2:column dataType="text" id="sSubCvrgeTermCd" name="부담보기간코드"/>
+						<w2:column dataType="text" id="sApplStrtDate" name="적용시작일"/>
+						<w2:column dataType="text" id="sApplEndDate" name="적용종료일"/>
+						<w2:column dataType="text" id="sMdfcDate" name="sMdfcDate"/>
+						<w2:column dataType="text" id="sInptDate" name="sInptDate"/>
+						<w2:column dataType="text" id="sInptHms" name="sInptHms"/>
+						<w2:column dataType="text" id="sMdfcHms" name="sMdfcHms"/>
+						<w2:column dataType="text" id="sInptDlerIP" name="sInptDlerIP"/>
+						<w2:column dataType="text" id="sMdfcDlerIP" name="sMdfcDlerIP"/>
+						<w2:column dataType="text" id="sMdfcDler" name="sMdfcDler"/> 
+						<w2:column dataType="text" id="nCrChngNo" name="nCrChngNo"/> 
+						<w2:column dataType="text" id="sCrNo" name="sCrNo"/>
+						<w2:column dataType="text" id="nInrpsSeqno" name="nInrpsSeqno"/>						 
+						<w2:column dataType="text" id="nSbcvrSeqno" name="nSbcvrSeqno"/>
+						<w2:column dataType="text" id="sInptDler" name="sInptDler"/>
+					</w2:columnInfo>
+                </w2:dataList> 
+                 
+				<!-- 조회된 부담보 정보 Ds(Ds_SbcvrCvrgePartCdL: 왼쪽 리스트) --> 
+       			<w2:dataList baseNode="list" ev:oncelldatachange="scwin.lfn_Grd_OnColumnChanged" id="Ds_SbcvrCvrgePartCdL" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="fFlag"  name="체크박스"/>
+                        <w2:column dataType="text" id="seqNo" name="seqNo"/>   
+						<w2:column dataType="text" id="sCd" name="부담보코드"/>
+						<w2:column dataType="text" id="sCdType" name="코드"/>
+						<w2:column dataType="text" id="sCdTypeName" name="코드명"/>
+						<w2:column dataType="text" id="sHnglCdName" name="특정부위명"/>
+						<w2:column dataType="text" id="sEngCdName" name="특정부위명_영"/> 
+						<w2:column dataType="text" id="sSbcvrCvrgePartCd" name="부담보코드"/> 
+						<w2:column dataType="text" id="sSubCvrgeTermCd" name="부담보기간코드"/>
+						<w2:column dataType="text" id="sApplStrtDate" name="적용시작일"/>
+                        <w2:column dataType="text" id="sApplEndDate" name="적용종료일"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+				
+				<!-- 저장된 부담보 정보 Ds(Ds_SbcvrCvrgePartCdR: 오른쪽 리스트) --> 
+				 <w2:dataList baseNode="list" ev:oncelldatachange="scwin.lfn_Grd_OnColumnChanged" id="Ds_SbcvrCvrgePartCdR" repeatNode="map">
+                    <w2:columnInfo>
+                       <w2:column dataType="text" id="fFlag" name="fFlag"/>
+                        <w2:column dataType="text" id="seqNo" name="seqNo"/>   
+						<w2:column dataType="text" id="sCd" name="sCd"/>
+						<w2:column dataType="text" id="sCdType" name="코드"/>
+						<w2:column dataType="text" id="sCdTypeName" name="코드명"/>
+						<w2:column dataType="text" id="sHnglCdName" name="특정부위명"/>
+						<w2:column dataType="text" id="sEngCdName" name="특정부위명_영"/> 
+						<w2:column dataType="text" id="sSbcvrCvrgePartCd" name="부담보코드"/> 
+						<w2:column dataType="text" id="sSubCvrgeTermCd" name="부담보기간코드"/>
+						<w2:column dataType="text" id="sApplStrtDate" name="적용시작일"/>
+                        <w2:column dataType="text" id="sApplEndDate" name="적용종료일"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+            	
+            	<!-- 부담보기간 정보 Ds(Ds_SubCvrgeTermCd) -->
+            	<w2:dataList baseNode="list" id="Ds_SubCvrgeTermCd" repeatNode="map">
+            		<w2:columnInfo>
+						<w2:column dataType="text" id="sCdType" name="sCdType"/>
+						<w2:column dataType="text" id="sHnglCdName" name="sHnglCdName"/>
+						<w2:column dataType="text" id="sCd" name="sCd"/>
+						<w2:column dataType="text" id="sCdTypeName" name="sCdTypeName"/>
+						<w2:column dataType="text" id="sEngCdName" name="sEngCdName"/> 
+					</w2:columnInfo>
+            	</w2:dataList> 
+ 
+            	<w2:dataList baseNode="list" id="Ds_MainReq"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sPlanNo"
+            				name="sPlanNo" />
+            			<w2:column dataType="text" id="nInrpsSeqno"
+            				name="nInrpsSeqno" />
+            			<w2:column dataType="text" id="nCrChngNo"
+            				name="nCrChngNo" />
+            			<w2:column dataType="text"
+            				id="sSbcvrCvrgePartCd" name="sSbcvrCvrgePartCd" />
+            			<w2:column dataType="text" id="sSubCvrgeTermCd"
+            				name="sSubCvrgeTermCd" />
+            			<w2:column dataType="text" id="sApplStrtDate"
+            				name="sApplStrtDate" />
+            			<w2:column dataType="text" id="sApplEndDate"
+            				name="sApplEndDate" />
+            			<w2:column dataType="text" id="sInptDler"
+            				name="sInptDler" />
+            			<w2:column dataType="text" id="sInptDlerIP"
+            				name="sInptDlerIP" />
+            			<w2:column dataType="text" id="nSbcvrSeqno"
+            				name="nSbcvrSeqno" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	
+            	<w2:dataList baseNode="list" id="Ds_OtherData"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sPlanNo"
+            				name="sPlanNo" />
+            			<w2:column dataType="text" id="nInrpsSeqno"
+            				name="nInrpsSeqno" />
+            			<w2:column dataType="text" id="sInsurEndDate"
+            				name="sInsurEndDate" />
+            			<w2:column dataType="text" id="nCrChngNo"
+            				name="nCrChngNo" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	
+            	<w2:dataList baseNode="list" id="DsWs_LTIDA09"
+            		repeatNode="map"
+            		userData2="//hashtable/data[@hashkey='lTIDA09ListDoc']/vector/data/LTIDA09" />
+            	<w2:dataList baseNode="list" id="DsWs_SubCvrgeTermCd"
+            		repeatNode="map"
+            		userData2="//hashtable/data[@hashkey='vSubCvrgeTermCd']/vector/data/com_SubCvrgeTermCd" />
+            	<w2:dataList baseNode="list" id="DsWs_SbcvrCvrgePartCdL"
+            		repeatNode="map"
+            		userData2="//hashtable/data[@hashkey='vSbcvrCvrgePartCdR']/vector/data/com_SbcvrCvrgePartCd" />
+            	<w2:dataList baseNode="list" id="DsWs_SbcvrCvrgePartCdR"
+            		repeatNode="map"
+            		userData2="//hashtable/data[@hashkey='vSbcvrCvrgePartCdL']/vector/data/com_SbcvrCvrgePartCd" />
+            	<w2:dataList baseNode="list" id="DsWs_Wanning"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="DsWs_LTIEA09"
+            		repeatNode="map"
+            		userData2="//hashtable/data[@hashkey='lTIDA09ListDoc']/vector/data/LTIEA09" />
+             
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        
+        <!--// js Script include //--> 
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/> 
+		<script src="/cm/js/convertJs/Marine_Script.js"/> 
+		<script src="/cm/js/convertJs/LongTerm_Script.js"/> 
+  
+        <script><![CDATA[
+		
+ /****************************************************************************
+ * 프로그램번호   : B210
+ * 프로그램명     : 특정부위 부담보
+ * 파일명         : B210_Pop.xml
+ * 프로그램 내용  : 특정부위 부담보 등록/삭제/조회
+ * 관련 프로그램  : 
+ * 작성자         : 김경일
+ * 작성일         : 2010-10-12
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ * [N1410-00298] 2014.10.31;백승철;장기보험 계약조회 프로그램 수정
+ ****************************************************************************/
+
+var sPlanNoPop = ""; 		//설계번호 
+var sCrNoPop = "";			 // 계약번호
+var nInrpsSeqnoPop = 0;	//계약일련번호 
+var nCrChngNoPop = 0;	//계약변경번호   
+var sInsurStrtdatePop = "";	//보험시작일자  
+var sInsurEndDatePop = "";	//보험종료일자  
+var sChngFlagPop = "";	//청약/변경구분 Y 변경 없으면 청약 
+var sOnlySrarch = "";	//조회만 가능하게 처리
+var parent_Ds_LTIDA00 = "";;		// 부모창 기본사항 정보 Ds Set 
+var parent_Ds_LTIDA09 = "";		// 부모창 부담보 정보 Ds Set 
+ 
+ //---------------------------------------------------------------------------
+// function 명 : B210_OnLoadCompleted
+// 내용        : 화면로딩시 메인으로부터 파라메터값 담음
+//---------------------------------------------------------------------------
+scwin.init = function() {
+
+	console.log("[/CBSC126P.xml] [init()] ==> [폼 로딩] [TEST_01]" );
+	
+	var pro = Promise.resolve();
+	window.top.util.winTopShowModalChk = "T";
+	util.winTopShowModal();
+
+	pro = pro.then(function(rv) {
+		return util.winTopShowModalPromise();
+	});
+
+	pro = pro.then(function(rv) {
+		// init 부분 함수 입력하는곳  // =================================================>
+		
+		indata = $w.getParameter("param");
+		var inJSON = JSON.parse(indata); 	// 부모창에서 받아온 값( 예) inJSON.sMyPlan)
+	 
+		if (!util.isNull(inJSON.sPlanNo)) 	sPlanNoPop = inJSON.sPlanNo;	 // 설계번호
+		if (!util.isNull(inJSON.sCrNo)) 	sCrNoPop = inJSON.sCrNo;	 // 계약번호 
+		if (!util.isNull(inJSON.nInrpsSeqno)) 	nInrpsSeqnoPop = inJSON.nInrpsSeqno;		 // 계약일련번호 
+		if (!util.isNull(inJSON.nCrChngNo)) 	nCrChngNoPop = inJSON.nCrChngNo;			// 계약변경번호 
+		if (!util.isNull(inJSON.sInsurStrtdate)) 	sInsurStrtdatePop = inJSON.sInsurStrtdate;	 // 보험시작일자
+		if (!util.isNull(inJSON.sInsurEndDate)) 	sInsurEndDatePop = inJSON.sInsurEndDate;		// 보험종료일자 
+		if (!util.isNull(inJSON.sChngFlag)) 	sChngFlagPop = inJSON.sChngFlag;	// 계약번호 Flag 
+		if (!util.isNull(inJSON.sOnlySrarch)) 	sOnlySrarch = inJSON.sOnlySrarch;	//조회만 가능하게 처리 
+		//sPlanNoPop = "M20170003323";	 // 설계번호  // TEST @@@ ===>
+	 
+		var pObj = wprom.getParamObject();  
+		parent_Ds_LTIDA00 = pObj.Ds_LTIDA00;		// 부모창 기본사항 정보 Ds Set 
+		parent_Ds_LTIDA09 = pObj.Ds_LTIDA09;		// 부모창 부담보 정보 Ds Set  
+		//console.log("[/CBSC126P.xml] [init()] ==> [폼 로딩] [parent_Ds_LTIDA00_갯수]"+ parent_Ds_LTIDA00.getRowCount() +"[parent_Ds_LTIDA00]"+ WebSquare.xml.serialize(parent_Ds_LTIDA00.getAllXML()) );  
+	  
+	     if (wconv.length(sChngFlagPop) == 0) {
+	        if(util.isNull(sPlanNoPop) || util.isNull(nInrpsSeqnoPop) || util.isNull(sInsurStrtdatePop)) {
+	            wprom.alert("설계번호가 없습니다.");
+	            scwin.lfn_Close_OnClick();
+	        } else { 
+	            scwin.lfn_Search();	 // 메인으로부터 비지니스키가 넘어올 경우 부담보를 조회한다.
+	        }
+	    } else {
+	        scwin.lfn_Search();		// 부담보  조회
+	    } 
+	  	//console.log("[/CBSC126P.xml] [init()] ==> [폼 로딩] [TEST_02] [sOnlySrarch]"+ sOnlySrarch );
+	  	
+	     //조회만 가능하게 처리
+	    if (wconv.length(sOnlySrarch) > 0) {
+	        btn_save.setDisabled(true); 	// 조회만 가능(저장 버튼 비활성화 처리)
+	  		//console.log("[/CBSC126P.xml] [init()] ==> [폼 로딩] [TEST_03] [저장 버튼 비활성화 처리]"+ sOnlySrarch );
+	    } else {
+	        btn_save.setDisabled(false); 		 
+	    }
+	  
+		if (wconv.length(parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd")) > 0) {	 // 진행상태가 00 완료 90 수납대기, 52~58 조건부 승인일 경우 ==> 화면 비활성화
+	        if (parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd") == "00" || parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd") == "90" 
+	        	|| (wconv.toNumber(parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd")) >= 52 && wconv.toNumber(parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd")) <= 58)) {
+	        		console.log("[/CBSC126P.xml] [init()] ==> [폼 로딩] [TEST_51]  [활성화 처리] [진행상태]"+ parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd") );
+	        		scwin.lfn_ComponentEnable(B210_Pop, "btn_close", false);	 // 계약상태별 화면 비활성 처리
+	            	btn_save.setDisabled(true);	// 저장 버튼 비활성화 
+	        }
+	    }  
+	    //console.log("[/CBSC126P.xml] [init()] ==> [폼 로딩] [TEST_end]" );
+ 		
+		return ;		// init 함수를 종료하고자 할때 사용	// =================================================> 
+	});
+
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});
+ 
+	return pro; 
+};
+ 
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 특정부위 부담보 조회
+//---------------------------------------------------------------------------
+scwin.lfn_Search = function(obj) {
+	//console.log("[/CBSC126P.xml] [lfn_Search()] ==> [조회 처리] [TEST_01]" );
+	//console.log("[/CBSC126P.xml] [lfn_Search()] ==> [조회 처리] [TEST_01] [Param 셋팅(설계번호)]"+ sPlanNoPop +"[Param 셋팅(계약번호)]"+ sPlanNoPop +"[Param 셋팅(계약일련번호)]"+ nInrpsSeqnoPop );  
+	 
+	var MethodObj = new callService("com.inswave.longterm.ssr.sst.task.DBB210Task", "getSpclPartSbcvrList");	// 특정부위 부담보 조회 Obj
+	MethodObj.setId("getSpclPartSbcvrList");	// ID 셋팅   
+	MethodObj.setParam("sPlanNo", sPlanNoPop);	// Param 셋팅(설계번호)   
+	MethodObj.setParam("sCrNo", sCrNoPop);			// Param 셋팅(계약번호)  
+	MethodObj.setParam("nInrpsSeqno", nInrpsSeqnoPop);	// Param 셋팅(계약일련번호)   
+	MethodObj.setUrl("/contract/CBSC126PController.do");  			// 서버단 호출 URL 
+ 	MethodObj.setXPath("//hashtable/data[@hashkey='lTIDA09ListDoc']/vector/data/LTIDA09");					// XPath(Ds_LTIDA09) 
+	MethodObj.addXPath("//hashtable/data[@hashkey='vSubCvrgeTermCd']/vector/data/com_SubCvrgeTermCd");		// XPath(Ds_SubCvrgeTermCd) 
+	MethodObj.addXPath("//hashtable/data[@hashkey='vSbcvrCvrgePartCdR']/vector/data/com_SbcvrCvrgePartCd");	// XPath(Ds_SbcvrCvrgePartCdL) 
+	MethodObj.addXPath("//hashtable/data[@hashkey='vSbcvrCvrgePartCdL']/vector/data/com_SbcvrCvrgePartCd");	// XPath(Ds_SbcvrCvrgePartCdR) 
+	MethodObj.addXPath("//hashtable/data[@hashkey='lTIDA09ListDoc']/vector/data/LTIEA09");					// XPath(Ds_LTIEA09)  
+	MethodObj.setXPathDs(); 	// XPath 전체 경로 사용할 경우 
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)] 
+	MethodObj.send();		// 최종 전송 
+	//console.log("[/CBSC126P.xml] [lfn_Search()] ==> [01. 특정부위 부담보 조회, 전송_완료] [TEST_91]");
+ 
+	//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+ 
+	Ds_LTIDA09.setJSON(_tranSync.getDsJson("//hashtable/data[@hashkey='lTIDA09ListDoc']/vector/data/LTIDA09"));				// 부담보 정보 Ds 셋팅  
+	Ds_SubCvrgeTermCd.setJSON(_tranSync.getDsJson("//hashtable/data[@hashkey='vSubCvrgeTermCd']/vector/data/com_SubCvrgeTermCd"));			// 부담보기간 정보 Ds 셋팅(Ds_SubCvrgeTermCd) 
+	Ds_SbcvrCvrgePartCdL.setJSON(_tranSync.getDsJson("//hashtable/data[@hashkey='vSbcvrCvrgePartCdR']/vector/data/com_SbcvrCvrgePartCd"));	// 상품속성 정보 Ds 셋팅(Ds_SbcvrCvrgePartCdL)
+	Ds_SbcvrCvrgePartCdR.setJSON(_tranSync.getDsJson("//hashtable/data[@hashkey='vSbcvrCvrgePartCdL']/vector/data/com_SbcvrCvrgePartCd"));	// 심사 정보 Ds 셋팅(Ds_SbcvrCvrgePartCdR)	
+	Ds_LTIEA09.setJSON(_tranSync.getDsJson("//hashtable/data[@hashkey='lTIDA09ListDoc']/vector/data/LTIEA09"));				// 부담보 정보2 Ds 셋팅   
+	//console.log("[/CBSC126P.xml] [lfn_Search()] ==> [I/F 조회 완료] [Ds_LTIDA09,_갯수]"+ Ds_LTIDA09.getRowCount() +"[Ds_LTIDA09]"+ WebSquare.xml.serialize(Ds_LTIDA09.getAllXML()) );
+	//console.log("[/CBSC126P.xml] [lfn_Search()] ==> [I/F 조회 완료] [Ds_LTIEA09,_갯수]"+ Ds_LTIEA09.getRowCount() +"[Ds_LTIEA09]"+ WebSquare.xml.serialize(Ds_LTIEA09.getAllXML()) );    
+  
+	if(sCrNoPop != "") {	//계약번호로 조회했을 경우 
+		wconv.copy(Ds_LTIDA09, Ds_LTIEA09)	 // Ds 복사
+	}
+	
+	//부담보기간 초기값 세팅
+    for (var i = 0; i < Ds_SbcvrCvrgePartCdL.getRowCount(); i++) { 
+        Ds_SbcvrCvrgePartCdL.setCellData(i, "sSubCvrgeTermCd", "01"); 	// 부담보기간(01: 1년)  
+	}     
+    
+	for (var i = 0; i < Ds_SbcvrCvrgePartCdR.getRowCount(); i++) {
+ 		Ds_SbcvrCvrgePartCdR.setCellData(i, "sSubCvrgeTermCd", "01");		// 부담보기간(01: 1년) 
+   	}
+  
+    if (wconv.length(sChngFlagPop) > 0) { 	  // 변경일 경우 메인에서 데이터셋 가져옴
+        wconv.copy(Ds_LTIDA09, parent_TIDA09); 	 // Ds 복사
+    }
+	//console.log("[/CBSC126P.xml] [lfn_Search()] ==> [Ds_LTIDA09,_갯수]"+ Ds_LTIDA09.getRowCount() +"[Ds_SbcvrCvrgePartCdL,_갯수]"+ Ds_SbcvrCvrgePartCdL.getRowCount()  );  
+ 
+    //저장된 부담보가 있을시 체크박스에 세팅한다.
+    if (Ds_LTIDA09.getRowCount() > 0) {  		// 부담보 정보 Ds
+        for (var i = 0; i < Ds_SbcvrCvrgePartCdL.getRowCount(); i++) { 	// 상품속성 정보 Ds
+            for (var j = 0; j < Ds_LTIDA09.getRowCount(); j++) {   
+                if (Ds_LTIDA09.getCellData(j, "sSbcvrCvrgePartCd") == Ds_SbcvrCvrgePartCdL.getCellData(i, "sCd")) {	//부담보코드가 같은 row에 체크박스체크
+                    Ds_SbcvrCvrgePartCdL.setCellData(i, "fFlag", "1");		// 체크박스
+                    Ds_SbcvrCvrgePartCdL.setCellData(i, "sSubCvrgeTermCd", Ds_LTIDA09.getCellData(j, "sSubCvrgeTermCd"));	// 부담보기간
+                    //console.log("[/CBSC126P.xml] [lfn_Search()] ==> [조회 처리] [TEST_51] [왼족 Ds 부담보코드가 같은 row에 체크 박스 체크] ===> 같으면: 체크박스 체크, 부담보기간 설정" );
+                }
+            }
+        }
+        for (var i = 0; i < Ds_SbcvrCvrgePartCdR.getRowCount(); i++) {	// 심사 정보 Ds
+            for (var j = 0; j < Ds_LTIDA09.getRowCount(); j++) { 
+                if (Ds_LTIDA09.getCellData(j, "sSbcvrCvrgePartCd") == Ds_SbcvrCvrgePartCdR.getCellData(i, "sCd")) {	 //부담보코드가 같은 row에 체크박스체크
+                    Ds_SbcvrCvrgePartCdR.setCellData(i, "fFlag", "1");	// 체크박스
+                    Ds_SbcvrCvrgePartCdR.setCellData(i, "sSubCvrgeTermCd", Ds_LTIDA09.getCellData(j, "sSubCvrgeTermCd"));	// 부담보기간
+                    //console.log("[/CBSC126P.xml] [lfn_Search()] ==> [조회 처리] [TEST_52] [오른쪽 Ds 부담보코드가 같은 row에 체크 박스 체크] ===> 같으면: 체크박스 체크, 부담보기간 설정" );
+                }
+            }
+        }
+    } 
+    
+	//console.log("[/CBSC126P.xml] [lfn_Search()] ==> [TEST_end]" ); 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Input
+// 내용        : 저장
+//---------------------------------------------------------------------------
+scwin.lfn_Input = function(e) {
+	//console.log("[/CBSC126P.xml] [lfn_Input()] ==> [저장] [TEST_01]" ); 
+	var gUserID = util.getGdsValue("gUserID");    // 사용자 ID
+	var gUserIP = util.getGdsValue("gUserIP");    // 사용자 IP
+ 
+	var cnt = 0; 
+	var iRow = 0; 
+    wconv.clear(Ds_MainReq);
+ 
+	for (var i = 0; i < Ds_SbcvrCvrgePartCdL.getRowCount(); i++) {
+        if (Ds_SbcvrCvrgePartCdL.getCellData(i, "fFlag") == "1") {  
+           cnt = Ds_MainReq.insertRow(); 
+             
+            Ds_MainReq.setCellData(cnt, "sPlanNo", sPlanNoPop); //설계번호
+            Ds_MainReq.setCellData(cnt, "nInrpsSeqno",  nInrpsSeqnoPop); //피보험자일련번호
+            Ds_MainReq.setCellData(cnt, "nCrChngNo",  nCrChngNoPop); //계약변경번호 
+            Ds_MainReq.setCellData(cnt, "sSbcvrCvrgePartCd", Ds_SbcvrCvrgePartCdL.getCellData(i, "sCd")); //부담보코드
+            Ds_MainReq.setCellData(cnt, "sSubCvrgeTermCd", Ds_SbcvrCvrgePartCdL.getCellData(i, "sSubCvrgeTermCd")); //부담보기간
+            Ds_MainReq.setCellData(cnt, "sApplStrtDate", sInsurStrtdatePop); //적용시작일 
+            Ds_MainReq.setCellData(cnt, "sInptDler", gUserID); //입력자
+            Ds_MainReq.setCellData(cnt, "sInptDlerIP", gUserIP); //입력자아이피
+        	//console.log("[/CBSC126P.xml] [lfn_Input()] ==> [01. Ds_SbcvrCvrgePartCdL 처리] [i_번째]"+ i +"[설계번호]"+ sPlanNoPop +"[피보험자일련번호]"+ nInrpsSeqnoPop +"[계약변경번호]"+ nCrChngNoPop +"[부담보코드]"+ Ds_SbcvrCvrgePartCdL.getCellData(i, "sCd")+"[부담보기간]"+ Ds_SbcvrCvrgePartCdL.getCellData(i, "sSubCvrgeTermCd") );  
+			//console.log("[/CBSC126P.xml] [lfn_Input()] ==> [cnt]"+ cnt +"[Ds_MainReq.설계번호]"+ Ds_MainReq.getCellData(cnt, "sPlanNo") +"[Ds_MainReq.피보험자일련번호]"+ Ds_MainReq.getCellData(cnt, "nInrpsSeqno") +"[Ds_MainReq.부담보코드]"+ Ds_MainReq.getCellData(cnt, "sSubCvrgeTermCd") +"[부담보기간]"+ Ds_MainReq.getCellData(cnt, "sSubCvrgeTermCd") );  
+   
+            cnt++;
+        }
+    }
+  
+    for (var i = 0; i < Ds_SbcvrCvrgePartCdR.getRowCount(); i++) {
+        if (Ds_SbcvrCvrgePartCdR.getCellData(i, "fFlag") == "1") { 
+           // var insRow = util.insertRow(Ds_MainReq, cnt);	  // Ds_LTIDA06Tran Row를 입력후 복사
+           
+            cnt = Ds_MainReq.insertRow(); 
+            
+            Ds_MainReq.setCellData(cnt, "sPlanNo", sPlanNoPop); //설계번호 
+            Ds_MainReq.setCellData(cnt, "nInrpsSeqno",  nInrpsSeqnoPop); //피보험자일련번호
+            Ds_MainReq.setCellData(cnt, "nCrChngNo",  nCrChngNoPop); //계약변경번호
+            Ds_MainReq.setCellData(cnt, "sSbcvrCvrgePartCd", Ds_SbcvrCvrgePartCdR.getCellData(i, "sCd")); //부담보코드
+            Ds_MainReq.setCellData(cnt, "sSubCvrgeTermCd", Ds_SbcvrCvrgePartCdR.getCellData(i, "sSubCvrgeTermCd")); //부담보기간
+            Ds_MainReq.setCellData(cnt, "sApplStrtDate", sInsurStrtdatePop); //적용시작일 
+            Ds_MainReq.setCellData(cnt, "sInptDler", gUserID); //입력자
+            Ds_MainReq.setCellData(cnt, "sInptDlerIP", gUserIP); //입력자아이피 
+           	//console.log("[/CBSC126P.xml] [lfn_Input()] ==> [02. Ds_SbcvrCvrgePartCdR 처리] [i_번째]"+ i +"[설계번호]"+ sPlanNoPop +"[피보험자일련번호]"+ nInrpsSeqnoPop +"[계약변경번호]"+ nCrChngNoPop +"[부담보코드]"+ Ds_SbcvrCvrgePartCdL.getCellData(i, "sCd")+"[부담보기간]"+ Ds_SbcvrCvrgePartCdL.getCellData(i, "sSubCvrgeTermCd") );  
+			//console.log("[/CBSC126P.xml] [lfn_Input()] ==> [cnt]"+ cnt +"[Ds_MainReq.설계번호]"+ Ds_MainReq.getCellData(cnt, "sPlanNo") +"[Ds_MainReq.피보험자일련번호]"+ Ds_MainReq.getCellData(cnt, "nInrpsSeqno") +"[Ds_MainReq.부담보코드]"+ Ds_MainReq.getCellData(cnt, "sSubCvrgeTermCd") +"[부담보기간]"+ Ds_MainReq.getCellData(cnt, "sSubCvrgeTermCd") );  
+   
+            cnt++;
+        }
+    }
+   
+    if (cnt > 3) {	//체크값은 3개이상 할수 없음
+        wprom.alert("체크는 3개까지만 허용됩니다.");
+        return false;
+    } 
+ 
+    //나머지 정보 담는다 
+    var iRow = Ds_OtherData.insertRow(); 
+ 
+    Ds_OtherData.setCellData(0, "sPlanNo", sPlanNoPop); //설계번호	 
+ 	Ds_OtherData.setCellData(0, "nInrpsSeqno", nInrpsSeqnoPop); //피보험자일련번호	 
+    Ds_OtherData.setCellData(0, "sInsurEndDate", sInsurEndDatePop); //보험종료일자	 
+    Ds_OtherData.setCellData(0, "nCrChngNo", nCrChngNoPop); //계약변경번호
+ 	//console.log("[/CBSC126P.xml] [lfn_Input()] ==> [Ds_OtherData,_갯수]"+ Ds_OtherData.getRowCount() +"[Ds_OtherData]"+ WebSquare.xml.serialize(Ds_OtherData.getAllXML()) );  
+	//console.log("[/CBSC126P.xml] [lfn_Input()] ==> [Ds_MainReq,_갯수_51]"+ Ds_MainReq.getRowCount() +"[Ds_MainReq]"+ WebSquare.xml.serialize(Ds_MainReq.getAllXML()) );  
+  
+	//debugger;
+    if (wconv.length(sChngFlagPop) == 0) {	//청약일 경우
+    	//console.log("[/CBSC126P.xml] [lfn_Input()] ==> [저장] [TEST_41] [청약일 경우]" ); 
+    	
+		var MethodObj = new callService("com.inswave.longterm.ssr.sst.task.DBB210Task", "setSpclPartSbcvr"); 	// 01. 저장 처리 
+		MethodObj.setId("setSpclPartSbcvr");		// ID 셋팅 
+		MethodObj.addVectorData("vLTIDA09", "vLTIDA09", "Ds_MainReq:A");  	// Param 셋팅(부담보정보 Ds): A(전체), I(등록), U(수정), R 
+		MethodObj.addSingleData("OtherData", "OtherData", "Ds_OtherData:A");    // Param 셋팅(기타정보 Ds): A(전체), I(등록), U(수정), R	
+		MethodObj.setUrl("/contract/CBSC126PController.do");  			// 서버단 호출 URL  
+		MethodObj.addXPath("//WARNING");	// XPath(No) 
+		MethodObj.setXPathDs(); 	// XPath 전체 경로 사용할 경우
+		MethodObj.setHashTable();   	// 전문의 앞이 hashtable로 보낼 때  
+		MethodObj.sync();		// 동기 처리[기본(async:비동기)]  
+		MethodObj.send();		// 최종 전송  		 
+		//console.log("[/CBSC126P.xml] [lfn_Input()] ==> [02. 저장 처리_완료] [TEST_71]");  	
+	 
+		util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+	 
+	 	DsWs_Wanning.setJSON(_tranSync.getDsJson("WARNING"));  		// Warning DS 셋팅(조회 결과)  	
+	 	//console.log("[/CBSC126P.xml] [lfn_Input()] ==> [저장 처리] [DsWs_Wanning.getRowCount()]"+ DsWs_Wanning.getRowCount() +"[DsWs_Wanning]"+ WebSquare.xml.serialize(DsWs_Wanning.getAllXML()) ); 
+	  
+	    if (DsWs_Wanning.getRowCount() != 0) {
+	        wprom.alert(DsWs_Wanning.getCellData(0, "msg"));
+	        return;
+	        
+	    } else {  
+	    	wprom.alert("정상 처리되었습니다.");
+	     
+			//선택된 개수에 따라 메인에 가입 미가입에 대한 정보를 넘겨야함-- 지금은 미정의로 임시로 넘김
+			var sTmp = "";
+			
+			if(cnt == 0){
+				sTmp = "N";
+			}else{
+				sTmp = "Y";
+			}
+			wprom.close(sTmp); 
+	    } 
+	    
+    } else {	//변경일 경우    
+    	//console.log("[/CBSC126P.xml] [lfn_Input()] ==> [저장] [TEST_42] [변경일 경우]" ); 
+    	
+        for (var i = 0; i <	 Ds_MainReq.getRowCount(); i++) { 
+            if (Ds_MainReq.getCellData(i, "sSubCvrgeTermCd") == "99") {		  //전기간일 경우 보험종료일자 적용
+                Ds_MainReq.setCellData(i, "sApplEndDate", Ds_OtherData.getCellData(0, "sInsurEndDate"));
+            } else {
+                Ds_MainReq.setCellData(i, "sApplEndDate", wconv.toString(wconv.toNumber(wconv.substr(Ds_MainReq.getCellData(i, "sApplStrtDate"), 0, 4)) + wconv.toNumber(Ds_MainReq.getCellData(i, "sSubCvrgeTermCd"))) + wconv.substr(Ds_MainReq.getCellData(i, "sApplStrtDate"), 4, 4));
+            }
+            Ds_MainReq.setCellData(i, "nSbcvrSeqno", wconv.toString(i + 1)); // 부담보 일련번호
+        } 
+     
+        wconv.copy(parent_Ds_LTIDA09, Ds_MainReq);  	// 부모창 부담보 정보 Ds에 복사
+       
+        wprom.close("Y");
+    }
+	//console.log("[/CBSC126P.xml] [lfn_Input()] ==> [저장] [TEST_end]" ); 
+};
+ 
+//---------------------------------------------------------------------------
+// function 명 : llfn_grd_OnCellClick
+// 내용        : 그리드 기간콤보값 변경시 체크
+//---------------------------------------------------------------------------
+scwin.lfn_Grd_OnColumnChanged = function(obj, nRow, strColumnID, varOldValue, varNewValue, nPivotIndex) { 
+	//console.log("[/CBSC126P.xml] [lfn_Grd_OnColumnChanged()] ==> [그리드 기간콤보값 변경] [TEST_01]" ); 
+	
+    if (strColumnID == "sSubCvrgeTermCd") {
+        if (obj.getCellData(nRow, "fFlag") != "1") {
+            if (varOldValue.length > 0 && varOldValue != varNewValue && varNewValue != "01") { 
+                wprom.alert("분류에 체크하셔야 합니다");
+                obj.setCellData(nRow, "sSubCvrgeTermCd", "01");
+            }
+        }
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Close
+// 내용        : 팝업닫기
+//---------------------------------------------------------------------------
+scwin.lfn_Close_OnClick = function(obj) {
+    wprom.close("");
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_ComponentEnable
+// 내용        : 계약상태별 화면 비활성 처리
+//---------------------------------------------------------------------------
+scwin.lfn_ComponentEnable = function(step, exList, enable) {
+ 
+	var comp;
+    var compCnt = step.getChildrenCount();  // Components 총 수  
+	//console.log("[/CBSC126P.xml] [lfn_ComponentEnable()] ==> [계약상태별 화면 비활성 처리] [TEST_01] [compCnt]"+ compCnt +"[step]"+ step +"[exList]"+ exList +"[enable]"+ enable );
+    
+    for (var i = 0; i < compCnt; i++) {
+	    comp = step.getAllChildren()[i];  // Components 담기 
+        var Objects = WebSquare.util.getComponentById(comp.id); 
+	    var getType = Objects.getPluginName();  // Component 타입
+	    
+	    if(getType == "group"|| getType =="textbox"){
+	    }else{
+            if (exList.indexOf(comp.id) < 0) {     // exList(btn_close)이 아니면
+      			Objects.setDisabled(!enable);  //  비활성화 처리(enable = false 이면 비활성화)
+               	//console.log("[/CBSC126P.xml] [lfn_ComponentEnable()] ==> [비활성 처리★★] [comp.id]"+ comp.id +"[enable]"+ enable )
+            }                	
+	    };
+	 }       
+};
+
+//**************************************************************************************************
+// lfn_getColumnValue: 칼럼 expression 처리 함수
+//**************************************************************************************************
+scwin.lfn_getColumnValue = function(data, formattedData, rowIndex, colIndex) { 
+	//console.log("[/CBSC090M.xml] [lfn_getColumnValue()] ==> [TEST] [rowIndex]"+ rowIndex +"[colIndex]"+ colIndex ); 
+	 
+ 	var sRslt = 0; 
+ 
+   	if (grd_SpclPartSbcvrR.getColumnID(colIndex)  == "nSortNo") {  // Grid 칼럼이 "분류코드" 이면
+		sRslt = Ds_SbcvrCvrgePartCdL.getRowCount() + 1 + rowIndex; 
+	} 
+	//console.log("[/CBSC090M.xml] [lfn_getColumnValue()] ==> [sRslt]"+ sRslt); ;
+	
+	return sRslt;
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B210_Pop"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;  /*height:591px;*/ left:0px; top:0px;/* width:780px;*/"
+            userData1="특정부위.질병 부담보[B210_Pop]" userData2=" OnLoadCompleted:scwin.B210_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+                <ServiceObject/>
+            </ServiceObjects>
+            <w2:textbox id="Static5" label="특정부위.질병 부담보" style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; " tagname="" class="sub_pop_title01">
+</w2:textbox>
+            
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Close_OnClick" id="btn_close"
+                style="position:absolute;ImageID:btn_Comm_Close;height:20px;width:25px;left:738px;top:0px;" tabIndex="3" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+            <xf:switch id="switch_148" style=" ">
+                <xf:case id="Default_149" style=" ">
+                    <w2:gridView class="sty_Grid" dataList="Ds_SbcvrCvrgePartCdL" focusMode="row" id="grd_SpclPartSbcvrL" inputType="text"
+                        readOnly="true"
+                        style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  AutoEnter:TRUE;  height:549px; left:0px; right:388px;top:30px; width:390px;" tabIndex="5">
+                        <w2:header>
+                            <w2:row>
+                                <w2:column colSpan="2" dataType="text" id="head_id_1267" inputType="text" readOnly="true"
+                                    style="height:30px;" userData1="0" userData3="0" value="분류번호" width="75"/>
+                                <w2:column dataType="text" id="head_id_1268" inputType="text" readOnly="true" style="height:30px;"
+                                    userData1="2" userData3="0" value="특정부위" width="229"/>
+                                <w2:column dataType="text" id="head_id_1269" inputType="text" readOnly="true" style="height:30px;"
+                                    userData1="3" userData3="0" value="기간" width="65"/>
+                            </w2:row>
+                            <w2:row/>
+                        </w2:header>
+                        <w2:gBody>
+                            <w2:row>
+                                <w2:column dataType="text" id="fFlag" inputType="checkbox" readOnly="false"
+                                    style="height:27px; dataType:checkbox; " userData1="0"
+                                    userData2=" expr:iif(fFlag > 0,'skyblue','default')  expr:iif(fFlag > 0,'skyblue','user36') ;"
+                                    userData3="0" width="35"/>
+                                <w2:column dataType="text" expression="rowIndex+1" id="seq" inputType="expression" readOnly="true" style=""
+                                    textAlign="center" userData1="1"
+                                    userData2=" expr:iif(fFlag > 0,'skyblue','default')  expr:iif(fFlag > 0,'skyblue','user36') ;"
+                                    userData3="0" value="1" width="40"/>
+                                <w2:column dataType="text" id="sHnglCdName" inputType="text" readOnly="true" style="" textAlign="left"
+                                    userData1="2"
+                                    userData2=" expr:iif(fFlag > 0,'skyblue','default')  expr:iif(fFlag > 0,'skyblue','user36') ;"
+                                    userData3="0" value="위,십이지장 또는 공장" width="229"/>
+                                <w2:column dataType="text" id="sSubCvrgeTermCd" inputType="select" readOnly="false" style=""
+                                    textAlign="center" userData1="3"
+                                    userData2=" expr:iif(fFlag > 0,'skyblue','default')  expr:iif(fFlag > 0,'skyblue','user36') ;"
+                                    userData3="0" width="65">
+                                    <w2:choices>
+                                        <w2:itemset nodeset="data:Ds_SubCvrgeTermCd">
+                                            <w2:value ref="sCd"/>
+                                            <w2:label ref="sHnglCdName"/>
+                                        </w2:itemset>
+                                    </w2:choices>
+                                </w2:column>
+                            </w2:row>
+                        </w2:gBody>
+                    </w2:gridView>
+                </xf:case>
+            </xf:switch>
+            <xf:switch id="switch_149" style=" ">
+                <xf:case id="Default_150" style=" ">
+                    <w2:gridView class="sty_Grid" dataList="Ds_SbcvrCvrgePartCdR" focusMode="row" id="grd_SpclPartSbcvrR" inputType="text"
+                        readOnly="true"
+                        style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  AutoEnter:TRUE;  height:549px; left:398px; right:771px;top:30px; width:390px;" tabIndex="6">
+                        <w2:header>
+                            <w2:row>
+                                <w2:column colSpan="2" dataType="text" id="head_id_1270" inputType="text" readOnly="true"
+                                    style="height:30px;" userData1="0" userData3="0" value="분류번호" width="75"/>
+                                <w2:column dataType="text" id="head_id_1271" inputType="text" readOnly="true" style="height:30px;"
+                                    userData1="2" userData3="0" value="특정부위" width="226"/>
+                                <w2:column dataType="text" id="head_id_1272" inputType="text" readOnly="true" style="height:30px;"
+                                    userData1="3" userData3="0" value="기간" width="68"/>
+                            </w2:row>
+                        </w2:header>
+                        <w2:gBody>
+                            <w2:row>
+                                <w2:column dataType="text" id="fFlag" inputType="checkbox" readOnly="false"
+                                    style="height:27px; dataType:checkbox; " userData1="0"
+                                    userData2=" expr:iif(fFlag > 0,'skyblue','default')  expr:iif(fFlag > 0,'skyblue','user36') ;"
+                                    userData3="0" width="35"/>
+                                <w2:column dataType="text" expression=""
+                                	id="nSortNo" inputType="text"
+                                	readOnly="true" style=""
+                                	textAlign="center" userData1="1"
+                                	userData2=" expr:iif(fFlag > 0,'skyblue','default')  expr:iif(fFlag > 0,'skyblue','user36') ;"
+                                	userData3="0" value="1" width="40"
+                                	customFormatter="scwin.lfn_getColumnValue" />
+                                <w2:column dataType="text" id="sHnglCdName" inputType="text" readOnly="true" style="" textAlign="left"
+                                    userData1="2"
+                                    userData2=" expr:iif(fFlag > 0,'skyblue','default')  expr:iif(fFlag > 0,'skyblue','user36') ;"
+                                    userData3="0" value="위,십이지장 또는 공장" width="226"/>
+                                <w2:column dataType="text" id="sSubCvrgeTermCd" inputType="select" readOnly="false" style=""
+                                    textAlign="center" userData1="3"
+                                    userData2=" expr:iif(fFlag > 0,'skyblue','default')  expr:iif(fFlag > 0,'skyblue','user36') ;"
+                                    userData3="0" width="68">
+                                    <w2:choices>
+                                        <w2:itemset nodeset="data:Ds_SubCvrgeTermCd">
+                                            <w2:value ref="sCd"/>
+                                            <w2:label ref="sHnglCdName"/>
+                                        </w2:itemset>
+                                    </w2:choices>
+                                </w2:column>
+                            </w2:row>
+                        </w2:gBody>
+                    </w2:gridView>
+                </xf:case>
+            </xf:switch>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Input" id="btn_save"
+                style="position:absolute;ImageID:btn_Input_02;height:20px;width:25px;left:687px;top:0px;" tabIndex="7" type="anchor">
+                <xf:label><![CDATA[저장]]></xf:label>
+            </xf:trigger>
+        </xf:group>
+    </body>
+</html>

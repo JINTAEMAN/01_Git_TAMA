@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<!--
+		#####################################################################
+		파일명 : BM003M01.xml
+		프로그램명 : 프로그램 관리
+		설 명 : 프로그램을 관리하는 화면
+		작성자 : Inswave Systems
+		작성일 : 2016.10.25
+
+		수정일자	  수정자			 수정내용
+		=====================================================================
+		2016.10.25	Inswave Systems	최초작성
+		2018.01.26	Inswave Systems	WebSquare5 SP2 기능을 적용하도록 소스 업그레이드
+		2018.11.12	Inswave Systems	WebSquare5 SP3 기능을 적용하도록 소스 업그레이드
+		#####################################################################
+		-->
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataList id="dlt_program" baseNode="list" saveRemovedData="true" repeatNode="map" ev:oncelldatachange="">
+					<w2:columnInfo>
+						<w2:column id="chk" name="선택" dataType="text" ignoreStatus="true"></w2:column>
+						<w2:column id="PROGRAM_CD" name="프로그램코드" dataType="text"></w2:column>
+						<w2:column id="PROGRAM_NM" name="프로그램명" dataType="text"></w2:column>
+						<w2:column id="PROGRAM_GROUP_CD" name="프로그램그룹명" dataType="text"></w2:column>
+						<w2:column id="SRC_PATH" name="프로그램소스경로" dataType="text"></w2:column>
+						<w2:column id="IS_USE" name="사용여부" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList id="dlt_programAuthority" baseNode="list" saveRemovedData="true" repeatNode="map" ev:oncelldatachange="">
+					<w2:columnInfo>
+						<w2:column id="chk" name="선택" dataType="text" ignoreStatus="true"></w2:column>
+						<w2:column id="PROGRAM_CD" name="프로그램코드" dataType="text"></w2:column>
+						<w2:column id="AUTHORITY_CD" name="권한코드" dataType="text"></w2:column>
+						<w2:column id="AUTHORITY_NM" name="권한명" dataType="text"></w2:column>
+						<w2:column id="IS_AUTH_SELECT" name="조회권한여부" dataType="text"></w2:column>
+						<w2:column id="IS_AUTH_SAVE" name="저장권한여부" dataType="text"></w2:column>
+						<w2:column id="IS_AUTH_EXCEL" name="엑셀권한여부" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" id="dma_search">
+					<w2:keyInfo>
+						<w2:key id="PROGRAM_GROUP_CD" name="프로그램구분" dataType="text"></w2:key>
+						<w2:key id="PROGRAM" name="프로그램" dataType="text"></w2:key>
+						<w2:key id="IS_USE" name="사용여부" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" id="dma_program">
+					<w2:keyInfo>
+						<w2:key id="PROGRAM_CD" name="프로그램코드" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+			<xf:submission id="sbm_searchProgram" ref="data:json,dma_search" target="data:json,dlt_program" action="/program/searchProgram" method="post"
+				mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous" processMsg="" ev:submit=""
+				ev:submitdone="scwin.sbm_searchProgram_submitdone" ev:submiterror="" abortTrigger="">
+			</xf:submission>
+			<xf:submission id="sbm_saveProgramAll" ref='data:json,[{"id":"dlt_program","action":"modified"},{"id":"dlt_programAuthority","action":"modified"}]' target="data:json,dma_Result_All"  action="/program/saveProgramAll"
+				method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous"
+				processMsg="저장중 입니다..." ev:submit="" ev:submitdone="scwin.sbm_saveProgramAll_submitdone" ev:submiterror="">
+			</xf:submission>
+			<xf:submission id="sbm_saveProgram" ref='data:json,[{"id":"dlt_program","action":"modified"},"dma_search"]' target="data:json,dlt_program" action="/program/updateProgram"
+				method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous"
+				processMsg="저장중 입니다..." ev:submit="" ev:submitdone="scwin.sbm_saveProgram_submitdone" ev:submiterror="">
+			</xf:submission>
+			<xf:submission id="sbm_searchProgramAuthority" ref="data:json,dma_program" target='data:json,dlt_programAuthority' action="/program/searchProgramAuthority" method="post"
+				mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous" processMsg="" ev:submit=""
+				ev:submitdone="scwin.sbm_searchProgramAuthority_submitdone" ev:submiterror="" abortTrigger="">
+			</xf:submission>
+			<xf:submission id="sbm_saveProgramAuthority" ref='data:json,[{"id":"dlt_programAuthority","action":"modified"},"dma_program"]' target="data:json,dlt_programAuthority"
+				action="/program/updateProgramAuthority" method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler=""
+				mode="asynchronous" processMsg="저장중 입니다..." ev:submit="" ev:submitdone="scwin.sbm_saveProgramAuthority_submitdone" ev:submiterror="">
+			</xf:submission>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+	/**
+	 * 초기 스크립트 수행 함수 정의
+	 * sbm_ProgramSearchItem은 검색박스에 검색어들을 나열한다.
+	 */
+	scwin.onpageload = function() {
+		var codeOptions = [{ code : "00026", compID : "sbx_ProgramGroup, grd_program:PROGRAM_GROUP_CD"}];
+		com.setCommonCode(codeOptions);
+		com.setEnterKeyEvent(tbl_search, scwin.btn_search_onclick);
+		com.setGridViewDelCheckBox([grd_program, grd_programAuthority]);
+	};
+
+	scwin.onpageunload = function() {
+
+	};
+
+	/**
+	 * 프로그램 조회 버튼시 발생하며, 조건에 따른 프로그램 목록을 조회한다.
+	 */
+	scwin.btn_search_onclick = function() {
+		com.executeSubmission(sbm_searchProgram);
+	};
+
+	/**
+	 * 프로그램 조회 버튼 콜백 메소드
+	 */
+	scwin.sbm_searchProgram_submitdone = function(e) {
+		var sCode = com.getResultCode(e);
+		if (sCode == "S") {
+			spn_programCnt.setValue(grd_program.getTotalRow());
+			dlt_programAuthority.removeAll();
+			grd_program.setFocusedCell(0, "PROGRAM_NM");
+		}
+	};
+
+	/**
+	 * 프로그램관리 리스트의 row 인덱스 위치가 바뀔때 마다 실행되며 프로그램코드에 해당하는 권한 목록을 가져온다.
+	 */
+	scwin.grd_program_onrowindexchange = function(row, oldRow) {
+		var programCd = dlt_program.getCellData(row, "PROGRAM_CD");
+		dma_program.set("PROGRAM_CD", programCd);
+		var detailCodeModifyCnt = dlt_programAuthority.getModifiedIndex().length;
+		
+		if (detailCodeModifyCnt > 0) {
+			com.confirm("프로그램의 권한 정보를 저장하시겠습니까?", "scwin.indexChgSaveCode");
+		} else {
+			var rowStatus = dlt_program.getRowStatus(row);
+
+			if (rowStatus == "C") {
+				dlt_programAuthority.removeAll();
+			} else {
+				if (programCd) {
+					com.executeSubmission(sbm_searchProgramAuthority);
+				}
+			}
+		}
+	};
+
+	/**
+	 * 변경사항 저장 여부를 확인하여, 저장 혹은 다른 항목을 조회한다.
+	 */
+	scwin.indexChgSaveCode = function(isReturnVal) {
+		if (isReturnVal) {
+			var mainCodeModifyCnt = dlt_program.getModifiedIndex().length;
+			if (mainCodeModifyCnt > 0) {
+				com.executeSubmission(sbm_saveProgramAll);
+			} else {
+				com.executeSubmission(sbm_saveProgramAuthority);
+			}
+		} else {
+			var programCd = dlt_program.getCellData(grd_program.getFocusedRowIndex(), "PROGRAM_CD");
+			if (programCd) {
+				com.executeSubmission(sbm_searchProgramAuthority);
+			}
+		}
+	};
+
+	/**
+	 * 프로그램별 접근 프로그램 리스트 콜백 메소드
+	 * 건수 조회, ReadOnly 그리드뷰 컬럼색 변경. ReadOnly속성을 설정한다. 
+	 */
+	scwin.sbm_searchProgramAuthority_submitdone = function(e) {
+		var sCode = com.getResultCode(e);
+		
+		if (sCode == "S") {
+			spn_programAuthorityCnt.setValue(grd_programAuthority.getTotalRow());
+		}
+	};
+
+	/**
+	 * 프로그램관리 등록 버튼 클릭
+	 */
+	scwin.btn_addProgram_onclick = function() {
+		var menu_cnt = dlt_program.getTotalRow();
+
+		if (menu_cnt == 0) {
+			com.alert("조회 후 이용하세요.");
+			return;
+		}
+		
+		var insertIndex = dlt_program.insertRow(grd_program.getFocusedRealRowIndex() + 1);
+		grd_program.setReadOnly("cell", insertIndex, "PROGRAM_CD", false);
+		grd_program.setFocusedCell(insertIndex, "PROGRAM_GROUP_CD", true);
+	};
+
+	/**
+	 * 프로그램관리 리스트에서 취소 버튼클릭시 데이타를 이전 상태로 바꾸고 추가된 것들은 삭제한다.
+	 */
+	scwin.btn_cancelProgram_onclick = function() {
+		dlt_program.undoAll();
+		dlt_program.removeRows(dlt_program.getInsertedIndex());
+	};
+
+	/**
+	 * 프로그램관리의 프로그램 입력, 수정, 삭제  
+	 */
+	scwin.btn_saveProgram_onclick = function() {
+		var valProgramInfo = [ { id : "PROGRAM_NM", mandatory : true } ];				   
+		var modifiedProgramIdx = dlt_program.getModifiedIndex();
+		var modifiedAuthorityIdex = dlt_programAuthority.getModifiedIndex();
+	
+		if (modifiedProgramIdx.length > 0) {	
+			if (com.validateGridView(grd_program, valProgramInfo)) {
+				com.confirm("해당 프로그램에 대한 프로그램별 접근권한 정보도 함께 저장됩니다. \n 진행하시겠습니까? ", "scwin.saveProgramAll");
+			}
+		} else if (modifiedAuthorityIdex.length > 0) {
+			com.confirm("해당 프로그램에 대한 프로그램별 접근 권한이 저장됩니다. \n 진행하시겠습니까? ", "scwin.saveProgramAuthority");
+		} else {
+			com.alert("저장할 데이터가 없습니다.");
+		}
+	};
+
+	/**
+	 * 프로그램별 리스트 및 프로그램별 접근권한리스트에서 rowStatus C,U,D,E 상태(Modify)인것만 저장한다.
+	 */
+	scwin.saveProgramAll = function(rtn) { 
+		if (rtn) {
+			com.executeSubmission(sbm_saveProgramAll);
+		}
+	};
+
+	/**
+	 * 프로그램리스트 및 프로그램별 접근권한 리스트 저장 후 callback
+	 */
+	scwin.sbm_saveProgramAll_submitdone = function(e) {
+		var rsCode = com.getResultCode(e)
+		if (rsCode == "S") {
+			scwin.btn_search_onclick();
+		}
+	};
+
+	/**
+	 * 프로그램별 접근권한리스트에서 rowStatus C,U,D,E 상태(Modify)인것만 저장한다.
+	 */
+	scwin.saveProgramAuthority = function(rtn) {
+		if (rtn) {
+			com.executeSubmission(sbm_saveProgramAuthority);
+		}
+	};
+	
+	/**
+	 * 프로그램관리 저장 버튼의 콜백메소드
+	 */
+	scwin.sbm_saveProgram_submitdone = function(e) {
+		var sCode = com.getResultCode(e);
+		if (sCode == "S") {
+			com.executeSubmission(sbm_searchProgram);
+		}
+	};
+	
+	/**
+	 * 프로그램별 접근 프로그램 리스트에서 등록 버튼클릭시 수행되며, 프로그램별 접근 프로그램 등록 페이지를 layer popup으로 표현해준다.
+	 */
+	scwin.btn_addProgramAuthority_onclick = function() {
+		var focusRowIdx = grd_program.getFocusedRowIndex();
+		
+		if (focusRowIdx == -1) {
+			com.alert("프로그램 선택후 프로그램별 접근 권한을 등록하실 수 있습니다.");
+		} else {
+			var rowStatus = dlt_program.getRowStatus(focusRowIdx);
+			if (rowStatus == "C") {
+				com.alert("프로그램 등록 후에 사용 가능합니다.");
+			} else {
+				var programCd = dma_program.get("PROGRAM_CD");
+				if (programCd != "") {
+					var data = {data : dma_program.getJSON(), callbackFn : "scwin.insertProgramAuthority" };
+					var options = {
+						id : "ProgramAuthorityPop",
+						popupName : "프로그램별 접근 권한",
+						modal : true,
+						width : 560, height: 400 };
+					com.openPopup(com.getFullPath("/ui/BM/BM003P01.xml"), options, data);
+				}
+			}
+		}
+	};
+	
+	/**
+	 * 팝업창에 선택된 사용자 정보를 DataList( dlt_programAuthority )에 추가시킨다.
+	 */
+	scwin.insertProgramAuthority = function(obj) {
+		var dLength = obj.length;
+		for (i = 0; i < dLength; i++) {
+			var data = dlt_programAuthority.getMatchedIndex("AUTHORITY_CD", obj[i].AUTHORITY_CD, true);
+			if (data.length == 0) {
+				obj[i].PROGRAM_CD = dma_program.get("PROGRAM_CD");
+				obj[i].chk = "0";
+				var idx = dlt_programAuthority.insertRow();
+				dlt_programAuthority.setRowJSON(idx, obj[i], true);
+			}
+		}
+	};
+	
+	/**
+	 * 프로그램별 접근 프로그램 리스트에서 선택된 항목을 삭제 상태로 변경한다. ( rowStauts : D )
+	 */
+	scwin.btn_delProgramAuthority_onclick = function() {
+		dlt_programAuthority.deleteRows(grd_programAuthority.getCheckedIndex("chk"));
+	};
+	
+	/**
+	 * 프로그램별 접근 프로그램 리스트에서 취소 버튼클릭시 데이타를 이전 상태로 바꾸고 추가된 것들은 삭제한다.
+	 */
+	scwin.btn_cancelProgramAuthority_onclick = function() {
+		dlt_programAuthority.undoAll();
+		dlt_programAuthority.removeRows(dlt_programAuthority.getInsertedIndex());
+	};
+	
+	/**
+	 * 프로그램별 접근 프로그램의 권한 입력, 수정, 삭제  
+	 */
+	scwin.btn_saveProgramAuthority_onclick = function() {
+		var idx = dlt_programAuthority.getModifiedIndex();
+		var status = true;
+		for (i = 0; i < idx.length; i++) {
+			var rowStatus = dlt_programAuthority.getRowStatus(idx[i]);
+		}
+		if (status && idx.length > 0) {
+			com.confirm(idx + "건의 데이타를 반영하시겠습니까", function(rtn) {
+				if (rtn) {
+					//데이터 반영 동의
+					com.executeSubmission(sbm_saveProgramAuthority);
+				}
+			});
+		}
+	};
+	
+	/**
+	 * 프로그램별 접근 프로그램 콜백메소드
+	 */
+	scwin.sbm_saveProgramAuthority_submitdone = function(e) {
+		var sCode = com.getResultCode(e);
+		if (sCode == "S") {
+			com.executeSubmission(sbm_searchProgramAuthority);
+		}
+	};
+	
+	scwin.btn_excelProgram_onclick = function() {
+		com.downLoadExcel(grd_program);
+	};
+	
+	scwin.btn_excelProgramAuthority_onclick = function() {
+		com.downLoadExcel(grd_programAuthority);
+	};
+	]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="contentWrap" id="" style="">
+			<w2:wframe id="" style="" src="/cm/common/wf_titleFav.xml"></w2:wframe>
+			<xf:group id="" style="" class="section">
+				<xf:group id="tbl_search" style="" class="tbl_search" adaptive="layout">
+					<xf:group id="" style="width:100.00%;" adaptive="layout" class="w2tb tbl_sc" adaptiveThreshold="768" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:81.00px;" tagname="col"></xf:group>
+							<xf:group style="width:142.00px;" tagname="col"></xf:group>
+							<xf:group style="width:60.00px;" tagname="col"></xf:group>
+							<xf:group style="width:169.00px;" tagname="col"></xf:group>
+							<xf:group style="width:60px;" tagname="col"></xf:group>
+							<xf:group style="width:230px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group tagname="tr" style="">
+							<xf:group style="" class="w2tb_th" tagname="th">프로그램그룹</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="true"
+									displayMode="label" optionOrder="false" id="sbx_ProgramGroup" ref="data:dma_search.PROGRAM_GROUP_CD"
+									style="height:20px;width:120px;margin-right: 10px;float:left;" allOption="" disabled="false" submenuSize="auto" chooseOptionLabel="전체" textAlign="left">
+									<xf:choices></xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="" class="w2tb_th" tagname="th">프로그램</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input adjustMaxLength="false" id="ibx_program" style="width:149px;height:21px;" ref="data:dma_search.PROGRAM" toolTip=""></xf:input>
+							</xf:group>
+							<xf:group class="w2tb_th" tagname="th">사용여부</xf:group>
+							<xf:group class="w2tb_td" tagname="td">
+								<xf:select1 id="" ref="data:dma_search.IS_USE" selectedIndex="0" cols="" appearance="full"
+									style="margin-right: 10px;min-width: 200px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[전체]]></xf:label>
+											<xf:value><![CDATA[]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[사용]]></xf:label>
+											<xf:value><![CDATA[Y]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[미사용]]></xf:label>
+											<xf:value><![CDATA[N]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:group id="" class="fr"></xf:group>
+								<w2:anchor id="btn_search" style="left:0px;top:0px;margin-right: 5px;" ev:onclick="scwin.btn_search_onclick" class="btn_sh" outerDiv="true">
+									<xf:label><![CDATA[조회]]></xf:label>
+								</w2:anchor>
+								<w2:anchor class="btn_save" ev:onclick="scwin.btn_saveProgram_onclick" id="btn_saveProgram" outerDiv="true" style="left:0px;top:0px;">
+									<xf:label><![CDATA[저장]]></xf:label>
+								</w2:anchor>
+							</xf:group>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="" class="defaultbox">
+					<w2:textbox id="" style="" class="df_tt fl" label="프로그램"></w2:textbox>
+					<xf:group id="" style="height:22px;" class="fr">
+						<w2:span id="spn_programCnt" style="" class="df_total" label="" displayFormat="건"></w2:span>
+						<xf:group id="" style="" class="ml5 fr">
+							<w2:anchor id="btn_addProgram" style="" clickEventElement="outerDiv" ev:onclick="scwin.btn_addProgram_onclick"
+								class="btn_gcm" outerDiv="true">
+								<xf:label><![CDATA[등록]]></xf:label>
+							</w2:anchor>
+							<w2:anchor id="btn_delProgram" style="display:none;" clickEventElement="outerDiv"
+								ev:onclick="scwin.btn_delProgram_onclick" class="btn_gcm" outerDiv="true">
+								<xf:label><![CDATA[삭제]]></xf:label>
+							</w2:anchor>
+							<w2:anchor id="btn_cancelProgram" style="" clickEventElement="outerDiv"
+								ev:onclick="scwin.btn_cancelProgram_onclick" class="btn_gcm" outerDiv="true">
+								<xf:label><![CDATA[취소]]></xf:label>
+							</w2:anchor>
+							<w2:anchor class="btn_gcm" clickEventElement="outerDiv" ev:onclick="scwin.btn_excelProgram_onclick"
+								id="btn_excelProgram" outerDiv="true" style="">
+								<xf:label><![CDATA[엑셀]]></xf:label>
+							</w2:anchor>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+				<w2:gridView ignoreCellClick="false" ev:onrowindexchange="scwin.grd_program_onrowindexchange" autoFit="allColumn"
+					rowStatusWidth="40" visibleRowNum="" class="cm_grid" wheelRows="" ev:onviewchange="" fixedColumnWithHidden="true"
+					dataList="dlt_program" id="grd_program" style="height:280px;" scrollByColumn="false" useShiftKey="true" rowStatusVisible="true"
+					ev:onafteredit="" rowStatusHeaderValue="상태" ev:oncellclick="" rowNumVisible="10" adaptive="crosstab">
+					<w2:header id="header1" style="">
+						<w2:row id="row2" style="">
+							<w2:column id="chk" blockSelect="false" style="height:25px;" width="40" inputType="checkbox" value="" displayMode="label"
+								fixColumnWidth="true">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="131" inputType="text" style="height:25px;" id="column27" value="프로그램그룹"
+								blockSelect="false" displayMode="label">
+							</w2:column>
+							<w2:column id="column16" blockSelect="false" style="height:25px;" width="90" inputType="text" value="프로그램코드"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column11" blockSelect="false" style="height:25px;" width="194" inputType="text" value="프로그램명"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column26" blockSelect="false" width="302" inputType="text" value="프로그램소스경로" textAlign="left"
+								style="height:25px;">
+							</w2:column>
+							<w2:column id="column24" blockSelect="false" width="60" inputType="text" value="사용여부" style="height:25px;"></w2:column>
+							<w2:column id="column22" blockSelect="false" width="185" inputType="text" value="비고" style="height:25px;"></w2:column>
+						</w2:row>
+					</w2:header>
+					<w2:gBody id="gBody4" style="">
+						<w2:row id="row5" style="">
+							<w2:column id="chk" blockSelect="false" style="height:25px;" width="40" inputType="checkbox"
+								displayMode="label">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="131" inputType="select" style="" id="PROGRAM_GROUP_CD" value=""
+								blockSelect="false" displayMode="label">
+								<w2:choices></w2:choices>
+							</w2:column>
+							<w2:column id="PROGRAM_CD" blockSelect="false" readOnly="true" style="height:25px" hidden="false" width="90"
+								inputType="text" customFormatter="" displayMode="label" class="req">
+							</w2:column>
+							<w2:column depthColumn="" id="PROGRAM_NM" blockSelect="false" showDepth="3" style="height:25px;" depthType="div"
+								width="194" inputType="text" displayMode="label" textAlign="left" class="req">
+							</w2:column>
+							<w2:column id="SRC_PATH" blockSelect="false" width="302" inputType="text" textAlign="left"></w2:column>
+							<w2:column id="IS_USE" blockSelect="false" trueValue="Y" falseValue="N" width="60" inputType="checkbox"
+								valueType="other" fixColumnWidth="true">
+							</w2:column>
+							<w2:column id="NOTE" blockSelect="false" width="185" inputType="text"></w2:column>
+						</w2:row>
+					</w2:gBody>
+				</w2:gridView>
+			</xf:group>
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="width: 100%;" class="defaultbox">
+					<w2:textbox id="" style="" class="df_tt fl" label="프로그램별 접근 권한"></w2:textbox>
+					<xf:group id="" style="height:22px;" class="fr">
+						<w2:span id="spn_programAuthorityCnt" style="" class="df_total" label="" displayFormat="건"></w2:span>
+						<xf:group id="" style="" class="ml5 fr">
+							<w2:anchor id="btn_addProgramAuthority" style="" clickEventElement="outerDiv"
+								ev:onclick="scwin.btn_addProgramAuthority_onclick" class="btn_gcm" outerDiv="true">
+								<xf:label><![CDATA[등록]]></xf:label>
+							</w2:anchor>
+							<w2:anchor id="btn_delProgramAuthority" style="display:none;" clickEventElement="outerDiv"
+								ev:onclick="scwin.btn_delProgramAuthority_onclick" class="btn_gcm" outerDiv="true">
+								<xf:label><![CDATA[삭제]]></xf:label>
+							</w2:anchor>
+							<w2:anchor id="btn_cancelProgramAuthority" style="" clickEventElement="outerDiv"
+								ev:onclick="scwin.btn_cancelProgramAuthority_onclick" class="btn_gcm" outerDiv="true">
+								<xf:label><![CDATA[취소]]></xf:label>
+							</w2:anchor>
+							<w2:anchor id="btn_saveProgramAuthority" style="display:none;" clickEventElement="outerDiv"
+								ev:onclick="scwin.btn_saveProgramAuthority_onclick" class="btn_gcm ml5" outerDiv="true">
+								<xf:label><![CDATA[저장]]></xf:label>
+							</w2:anchor>
+							<w2:anchor class="btn_gcm" clickEventElement="outerDiv" ev:onclick="scwin.btn_excelProgramAuthority_onclick" id="btn_excelProgramAuthority" outerDiv="true"
+								style="">
+								<xf:label><![CDATA[엑셀]]></xf:label>
+							</w2:anchor>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+				<w2:gridView ignoreCellClick="false" autoFit="allColumn" rowStatusWidth="40" visibleRowNum="" class="cm_grid"
+					fixedColumnWithHidden="true" dataList="dlt_programAuthority" id="grd_programAuthority" readOnly="" style="height:160px;width:100%;"
+					scrollByColumn="false" useShiftKey="true" rowStatusVisible="true" rowStatusHeaderValue="상태" ev:oncellclick="" adaptive="crosstab">
+					<w2:header id="header1" style="">
+						<w2:row id="row2" style="">
+							<w2:column id="chk" blockSelect="false" style="height:25px;" width="40" inputType="checkbox" value="선택" displayMode="label"
+								fixColumnWidth="true">
+							</w2:column>
+							<w2:column id="column11" blockSelect="false" style="height:25px;" width="80" inputType="text" value="권한코드"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column9" blockSelect="false" style="height:25px;" width="227" inputType="text" value="권한명"
+								displayMode="label">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="90" inputType="text" style="height:25px;" id="column16" value="조회권한여부"
+								blockSelect="false" displayMode="label">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="90" inputType="text" style="height:25px;" id="column20" value="저장권한여부"
+								blockSelect="false" displayMode="label">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="90" inputType="text" style="height:25px;" id="column18" value="엑셀권한여부"
+								blockSelect="false" displayMode="label">
+							</w2:column>
+						</w2:row>
+					</w2:header>
+					<w2:gBody id="gBody4" style="">
+						<w2:row id="row5" style="">
+							<w2:column id="chk" blockSelect="false" style="height:25px;" width="20" inputType="checkbox"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="AUTHORITY_CD" blockSelect="false" readOnly="true" style="height:25px;" width="80"
+								inputType="text" displayMode="label">
+							</w2:column>
+							<w2:column id="AUTHORITY_NM" blockSelect="false" readOnly="true" style="height:25px;" width="227"
+								inputType="text" displayMode="label" textAlign="left">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="90" inputType="checkbox" style="" id="IS_AUTH_SELECT" value=""
+								blockSelect="false" displayMode="label" fixColumnWidth="true" valueType="other" trueValue="Y" falseValue="N" readOnly="">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="90" inputType="checkbox" style="" id="IS_AUTH_SAVE" value=""
+								blockSelect="false" displayMode="label" fixColumnWidth="true" valueType="other" trueValue="Y" falseValue="N" readOnly="">
+							</w2:column>
+							<w2:column removeBorderStyle="false" width="90" inputType="checkbox" style="" id="IS_AUTH_EXCEL" value=""
+								blockSelect="false" displayMode="label" fixColumnWidth="true" valueType="other" trueValue="Y" falseValue="N" readOnly="">
+							</w2:column>
+						</w2:row>
+					</w2:gBody>
+				</w2:gridView>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

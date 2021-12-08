@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hashtable>
+	<data hashkey="head">
+		<properties>
+			<property name="meta_screenId" default="" description="화면 ID"  necessary="no" type="string"/>
+			<property name="meta_screenName" default="" description="화면명"  necessary="no" type="string"/>
+			<property name="meta_desc" default="" description="화면 설명"  necessary="no" type="multiline"/>
+			<property name="meta_author" default="" description="생성자"  necessary="no" type="string"/>
+			<property name="meta_type" default="" description="화면 유형"  necessary="no" type="combobox">
+				<option name="메인" value="메인"/>
+				<option name="보고서" value="보고서"/>
+				<option name="팝업" value="팝업"/>
+			</property>
+			<property name="meta_process" default="" description="화면처리절차"  necessary="no" type="multiline"/>
+			<property name="meta_rule" default="" description="업무규칙"  necessary="no" type="multiline"/>
+			<property name="meta_etc" default="" description="비고"  necessary="no" type="multiline"/>
+		</properties>
+	</data>
+	<data hashkey="submission">
+		<properties>
+			<property name="meta_name" default="" description="submission 명"  necessary="no" type="string"/>
+			<property name="meta_desc" default="" description="submission 설명"  necessary="no" type="multiline"/>
+			<property name="meta_process" default="" description="submission 처리절차"  necessary="no" type="multiline"/>
+			<property name="meta_rule" default="" description="submission 업무규칙"  necessary="no" type="multiline"/>
+			<property name="meta_etc" default="" description="비고"  necessary="no" type="multiline"/>
+		</properties>
+	</data>
+	<data hashkey="workflow">
+		<properties>
+			<property name="meta_name" default="" description="submission 명"  necessary="no" type="string"/>
+			<property name="meta_desc" default="" description="submission 설명"  necessary="no" type="multiline"/>
+			<property name="meta_process" default="" description="submission 처리절차"  necessary="no" type="multiline"/>
+			<property name="meta_rule" default="" description="submission 업무규칙"  necessary="no" type="multiline"/>
+			<property name="meta_etc" default="" description="비고"  necessary="no" type="multiline"/>
+		</properties>
+	</data>
+	<data hashkey="dataCollection">
+		<properties>
+			<property name="meta_name" default="" description="dataCollection 명"  necessary="no" type="string"/>
+			<property name="meta_desc" default="" description="dataCollection 설명"  necessary="no" type="multiline"/>
+		</properties>
+	</data>
+	<data hashkey="event">
+		<properties>
+			<property name="metaev_name" default="" description="event명"  necessary="no" type="string"/>
+			<property name="metaev_desc" default="" description="event 설명"  necessary="no" type="multiline"/>
+			<property name="metaev_process" default="" description="event 처리절차"  necessary="no" type="multiline"/>
+			<property name="metaev_rule" default="" description="event 업무규칙"  necessary="no" type="multiline"/>
+			<property name="metaev_etc" default="" description="비고"  necessary="no" type="multiline"/>
+		</properties>
+	</data>
+	<data hashkey="component">
+		<properties>
+			<property name="meta_name" default="" description="component명"  necessary="no" type="string"/>
+			<property name="meta_desc" default="" description="component 설명"  necessary="no" type="multiline"/>
+		</properties>
+	</data>
+	<data hashkey="metaConfig">
+		<metainfo use="false" kormeta="" engmeta="" typemeta="" lengthmeta="" virtualpointmeta="">
+			<rtrvmeta url="http://" mediatype="" encoding="" timeout="30" />
+			<changemeta url="http://" mediatype="" encoding="" timeout="30" />
+		</metainfo>
+	</data>
+</hashtable>

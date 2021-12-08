@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1" metadata-complete="true">
+	<!-- web.xml : J2EE 웹 어플리케이션 기본 설정 파일 -->
+
+	<display-name>WEBSQUARE5</display-name>
+
+	<session-config>
+		<!-- url rewrite jsessionid remove -->
+		<tracking-mode>COOKIE</tracking-mode>
+	</session-config>
+
+	<!-- 웹스퀘어의 .wq 요청을 처리하기 위한 서블릿 -->
+
+	<servlet>
+		<servlet-name>websquareDispatcher</servlet-name>
+		<servlet-class>websquare.http.DefaultRequestDispatcher</servlet-class>
+		<init-param>
+			<param-name>WEBSQUARE_HOME</param-name>
+			<param-value>C:\WRM\RESOURCE\websquare_home</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>websquareDispatcher</servlet-name>
+		<url-pattern>*.wq</url-pattern>
+	</servlet-mapping>
+
+	<!-- 브라우저로 송신된 요청은 스프링 MVC의 DispatcherServlet 클래스가 관리. -->
+	<!-- 스프링 MVC는 org.springframework.web, org.springframework.servlet 패키지에 포함된 클래스 사용. -->
+
+	<!-- ContextLoaderListener 클래스는 DispatcherServlet 클래스 보다 먼저 동작하여 스프링 설정 파일(기본 :applicationContext.xml)을 로드한다. -->
+	<!-- 웹 어플리케이션이 시작되는 시점에 applicationContext 를 로딩하며, 로딩된 빈 정보는 모든 webApplicationContext들이 참조할 수 있다. -->
+	
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<!-- applicationContext 공통 빈 설정 파일 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			<!-- 빈 설정 파일들 간에 구분은 줄바꿈,콤마,세미콜론,공백 등으로 한다.  -->
+			/WEB-INF/spring/appServlet/*-context.xml
+		</param-value>
+	</context-param>
+
+	<!-- webApplicationContext 설정 파일 -->
+	<servlet>
+		<servlet-name>appServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>
+				/WEB-INF/spring/servlet-context.xml
+			</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>appServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<!-- !!!설정 파일 로드 순서!!! -->
+	<!-- 여러개의 설정 파일을 이용할 경우, 설정 파일의 참조 관계가 있기 때문에 로드 순서가 중요하다.
+		appServlet-servlet.xml 파일이 로드되기 전에 applicationContext.xml 파일이 로드되어 있어야 한다. -->
+
+	<!--
+		각 /WEB-INF/spring/appServlet/ 아래의 applicationContext 의 빈 정보는 모든 webApplicationContext( servlet-context.xml)에서 참조할 수 있다.
+		각 설정 파일의 경로는 웹 어플리케이션 / 디렉토리를 기준으로 한다.
+	-->
+
+
+	<!-- 스프링 시큐리티를 사용하는 경우, 포함되는 설정(내부업무, 포털사이트 ) -->
+	<!--
+		<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+		</filter>
+		<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+		</filter-mapping>
+	-->
+
+	<!-- 이중 로그인을 막기 위한 리스너 클래스. -->
+	<!--
+		<listener>
+		<listener-class>org.springframework.security.web.session.HttpSessionEventPublisher</listener-class>
+		</listener>
+	-->
+
+	<!-- 에러 페이지 설정. -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/view/error/error404.jsp</location>
+	</error-page>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/view/error/error500.jsp</location>
+	</error-page>
+
+	<error-page>
+		<exception-type>java.lang.NullPionterException</exception-type>
+		<location>/WEB-INF/view/error/errorNull.jsp</location>
+	</error-page>
+</web-app>

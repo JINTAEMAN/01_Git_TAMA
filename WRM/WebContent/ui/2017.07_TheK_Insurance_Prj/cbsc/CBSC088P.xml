@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+ 	<head>
+    <!-- 
+        ###################################################
+         파일명 : CBSC088P.xml
+         프로그램명 : 자금세탁방지 의심거래보고(STR)조회 및 선택[B160_Pop]
+         설 명 :  자금세탁방지 의심거래보고(STR)조회 및 선택[B160_Pop]
+         작성자 : 진태만
+         작성일 : 2017.10.16
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.10.16        진태만          최초작성
+        ###################################################
+     -->
+	 <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+            
+            	<w2:dataList id="Ds_SuspcTrnstRprt" baseNode="list" saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sSuspcTrnstYn" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nChngNo" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="chk" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSuspcTrnstResn" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPlanNo" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplStrtDate" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHnglCdName" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSuspcTrnstType" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCrNo" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplEndDate" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCd" name="name11"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	        	
+            	<w2:dataList baseNode="list" id="Ds_Suspc"  saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="chk1"  name="chk1" />
+            			<w2:column dataType="text" id="sSuspcTrnstResn" name="sSuspcTrnstResn" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	
+            	<w2:dataList baseNode="list" id="ds_condi"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="id_nm"
+            				name="id_nm" />
+            			<w2:column dataType="text" id="id_cd"
+            				name="id_cd" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<id_cd><![CDATA[01]]></id_cd>
+            				<id_nm><![CDATA[고객번호]]></id_nm>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+
+            	<w2:dataList baseNode="list" id="Ds_Yn_1"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="CODE"
+            				name="CODE" />
+            			<w2:column dataType="text" id="TEXT1"
+            				name="TEXT1" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<CODE><![CDATA[Y]]></CODE>
+            				<TEXT1><![CDATA[예]]></TEXT1>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[N]]></CODE>
+            				<TEXT1><![CDATA[아니오]]></TEXT1>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+      
+            	<w2:dataList baseNode="list" id="Ds_LTIDB09"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="Dbflag"
+            				name="Dbflag" />
+            			<w2:column dataType="text" id="chk" name="chk" />
+            			<w2:column dataType="text" id="sPlanNo"
+            				name="sPlanNo" />
+            			<w2:column dataType="text" id="sCrNo"
+            				name="sCrNo" />
+            			<w2:column dataType="text" id="nChngNo"
+            				name="nChngNo" />
+            			<w2:column dataType="text" id="sSuspcTrnstYn"
+            				name="sSuspcTrnstYn" />
+            			<w2:column dataType="text" id="sSuspcTrnstResn"
+            				name="sSuspcTrnstResn" />
+            			<w2:column dataType="text" id="sApplStrtDate"
+            				name="sApplStrtDate" />
+            			<w2:column dataType="text" id="sApplEndDate"
+            				name="sApplEndDate" />
+            			<w2:column dataType="text" id="sInptDler"
+            				name="sInptDler" />
+            			<w2:column dataType="text" id="sInptDlerIP"
+            				name="sInptDlerIP" />
+            			<w2:column dataType="text" id="sInptDate"
+            				name="sInptDate" />
+            			<w2:column dataType="text" id="sInptHms"
+            				name="sInptHms" />
+            			<w2:column dataType="text" id="sMdfcDler"
+            				name="sMdfcDler" />
+            			<w2:column dataType="text" id="sMdfcDlerIP"
+            				name="sMdfcDlerIP" />
+            			<w2:column dataType="text" id="sMdfcDate"
+            				name="sMdfcDate" />
+            			<w2:column dataType="text" id="chk1"
+            				name="chk1" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_LTIDB10"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sPlanNo"
+            				name="sPlanNo" />
+            			<w2:column dataType="text" id="sCrNo"
+            				name="sCrNo" />
+            			<w2:column dataType="text" id="nChngNo"
+            				name="nChngNo" />
+            			<w2:column dataType="text" id="sSuspcTrnstType"
+            				name="sSuspcTrnstType" />
+            			<w2:column dataType="text" id="sInptDler"
+            				name="sInptDler" />
+            			<w2:column dataType="text" id="sInptDlerIP"
+            				name="sInptDlerIP" />
+            			<w2:column dataType="text" id="sInptDate"
+            				name="sInptDate" />
+            			<w2:column dataType="text" id="sInptHms"
+            				name="sInptHms" />
+            			<w2:column dataType="text" id="sMdfcDler"
+            				name="sMdfcDler" />
+            			<w2:column dataType="text" id="sMdfcDlerIP"
+            				name="sMdfcDlerIP" />
+            			<w2:column dataType="text" id="sMdfcDate"
+            				name="sMdfcDate" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="ds_CommList"
+            		repeatNode="map"
+            		userData2="//*/vector/data/fCon01910_List" />
+            	<w2:dataList baseNode="list" id="DsWs_SuspcTrnstRprt"
+            		repeatNode="map" userData2="//*/vector/data/LTIDB09" />
+            	<w2:dataList baseNode="list" id="DsWs_Warning"
+            		repeatNode="map" userData2="//*/WARNING" />
+            	<w2:dataList baseNode="list" id="DsWs_YN"
+            		repeatNode="map"
+            		userData2="//hashtable/data[@hashkey='multi1']/data/LTIDB09" />
+            	<w2:dataList baseNode="list" id="DsWs_Save_Warning"
+            		repeatNode="map" userData2="//*/WARNING">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        
+   		<!--// js Script include //--> 
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/> 
+ 
+        <script><![CDATA[
+
+ /****************************************************************************
+ * 프로그램번호   : B160
+ * 프로그램명     : 자금세탁방지 의심거래보고(STR) 시스템 반영 사항
+ * 파일명         : B160.xml
+ * 프로그램 내용  : 자금세탁방지 의심거래보고(STR) 시스템 반영 사항
+ * 관련 프로그램  : 
+ * 작성자         : 이봉철
+ * 작성일         : 2013-11-14
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+ 
+var Dbflag = "";		// 저장 구분(1: 보관, null :수정)
+var sPlanNo = "";	// 설계번호
+var sCrNo = "";
+
+scwin.init = function() {
+	console.log("[/CBSC088P.xml] [init()] ==> [폼 로딩] [TEST_01]" ); 
+	
+	var pro = Promise.resolve();
+	window.top.util.winTopShowModalChk = "T";
+	util.winTopShowModal();
+
+	pro = pro.then(function(rv) {
+		return util.winTopShowModalPromise();
+	});
+
+	pro = pro.then(function(rv) {
+		// init 부분 함수 입력하는곳  // =================================================>
+		
+		var indata = $w.getParameter("param"); 
+		var inJSON = JSON.parse(indata); 	// 부모창에서 받아온 값( 예) inJSON.sPlanNo)
+	 
+		if (!util.isNull(inJSON.sPlanNo)) sPlanNo = inJSON.sPlanNo; 
+		if (!util.isNull(inJSON.sCrNo)) sCrNo = inJSON.sPlanNo; 
+		//sPlanNo = "M20170003047"; // 설계번호 ===> 		// TEST @@@ ===>
+	 
+		scwin.lfn_Search();		// 조회
+	     
+		return ;		// init 함수를 종료하고자 할때 사용
+		// return Promise.reject("오류관련처리"); // =================================================>
+	});
+
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});
+	
+	//pro = pro.catch(function(rj) {
+		//util.winTopHideModal();
+		//alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+	//});
+	 
+	return pro; 
+	//console.log("[/CBSC088P.xml] [init()] ==> [폼 로딩] [TEST_end]" );
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 조회버튼 클릭시 처리
+//---------------------------------------------------------------------------
+scwin.lfn_Search = function() {
+	//console.log("[/CBSC088P.xml] [lfn_Search()] ==> [조회 처리] [TEST_01]" );
+	
+	var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB160Task", "getSuspcTrnstTypeList");	// 개인청약사항 조회 Obj
+	MethodObj.setId("getSuspcTrnstTypeList");	// ID 셋팅  
+	MethodObj.setParam("sPlanNo", sPlanNo);	// Param 셋팅(설계번호)
+	MethodObj.setUrl("/contract/CBSC088PController.do");  // 서버단 호출 URL   
+	MethodObj.setXPath("//*/LTIDB09");					// XPath(Ds_SuspcTrnstRprt) 
+	MethodObj.addXPath("//hashtable/data[@hashkey='multi1']/data/LTIDB09")		// XPath(Ds_Trty)  
+	MethodObj.addXPath("//*/WARNING");		// XPath(DsWs_Warning)
+	MethodObj.setXPathDs(); 	// XPath 전체 경로 사용할 경우
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)]
+	MethodObj.setXPathDs();
+	MethodObj.send();		// 최종 전송 
+	//console.log("[/CBSC088P.xml] [lfn_Search()] ==> [01. 개인청약사항 조회, 전송_완료] [TEST_91]");
+ 	
+	//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+ 
+	Ds_SuspcTrnstRprt.setJSON(_tranSync.getDsJson("//*/LTIDB09"));				// 의심거래보고 정보 Ds 셋팅  
+	DsWs_Warning.setJSON(_tranSync.getDsJson("//*/WARNING"));  		// Warning DS 셋팅(조회 결과)    
+	//console.log("[/CBSC088P.xml] [lfn_Search()] ==> [Ds_SuspcTrnstRprt_갯수]"+ Ds_SuspcTrnstRprt.getRowCount() +"[Ds_SuspcTrnstRprt]"+ WebSquare.xml.serialize(Ds_SuspcTrnstRprt.getAllXML()) );  
+ 	
+  	if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    } 
+ 
+ 	var iRow = Ds_Suspc.insertRow(); 	// 줄 추가
+    Ds_Suspc.setCellData(0, "chk1",  Ds_SuspcTrnstRprt.getCellData(0, "sSuspcTrnstYn"));	  // 의심거래보고 대상여부 코드
+    Ds_Suspc.setCellData(0, "sSuspcTrnstResn", Ds_SuspcTrnstRprt.getCellData(0, "sSuspcTrnstResn"));
+	//console.log("[/CBSC088P.xml] [lfn_Search()] ==> [의심거래대상여부] [Ds_SuspcTrnstRprt.chk1]"+ Ds_SuspcTrnstRprt.getCellData(0, "sSuspcTrnstYn") ); 
+	      
+	rad_Suspc.setValue(Ds_SuspcTrnstRprt.getCellData(0, "sSuspcTrnstYn"));	  // 의심거래보고 대상여부 콤보 설정
+             	
+    if (Ds_SuspcTrnstRprt.getCellData(0, "sApplStrtDate") == "" && Ds_SuspcTrnstRprt.getCellData(0, "sPlanNo") == "") {
+        Dbflag = "1";  //보관 
+    } else {
+        Dbflag = "";	 // 수정 
+        TextArea_sSuspcTrnstResn.setValue(Ds_Suspc.getCellData(0, "sSuspcTrnstResn"));	  // 의심거래보고 대상여부 콤보 설정
+    } 
+	console.log("[/CBSC088P.xml] [lfn_Search()] ==> [대상여부 코드]"+ Ds_SuspcTrnstRprt.getCellData(0, "sSuspcTrnstYn") +"[Dbflag]"+ Dbflag +"[설계번호_Ds_SuspcTrnstRprt.sPlanNo]"+ Ds_SuspcTrnstRprt.getCellData(0, "sPlanNo") +"[적용시작일자_Ds_Suspc.sApplStrtDate]"+ Ds_SuspcTrnstRprt.getCellData(0, "sApplStrtDate")  +"[의심거래 선택 사유_Ds_Suspc.sSuspcTrnstResn]"+ Ds_SuspcTrnstRprt.getCellData(0, "sSuspcTrnstResn"));  
+ 
+	//console.log("[/CBSC088P.xml] [lfn_Search()] ==> [TEST_end]" ); 
+};
+ 
+//---------------------------------------------------------------------------
+// function 명 : btn_Close_OnClick(obj)
+// 내용        : 닫기 OnClick
+//---------------------------------------------------------------------------
+scwin.btn_Close_OnClick = function(obj) {
+    wprom.close();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Input(obj)
+// 내용        : 입력 수정 OnClick
+//---------------------------------------------------------------------------
+scwin.lfn_Input = function(obj) {
+	console.log("[/CBSC088P.xml] [lfn_Input()] ==> [입력 수정] [TEST_01]" );
+
+	 // 현재시간 setting
+    var sToday = ""; // 현재일자(서버일자)	
+    var sTime = ""; // 현재시간(서버일자)	
+    var gUserIP = "";    // 사용자 IP
+	var gUserID = "";    // 사용자 ID
+
+   	gUserID = util.getGdsValue("gUserID");    // 사용자 ID
+   	gUserIP = util.getGdsValue("gUserIP");    // 사용자 IP
+  
+    sToday = WebSquare.date.getCurrentServerDate("yyyyMMdd"); 		// global 현재일자 
+	sTime = wconv.substr(WebSquare.date.getCurrentServerDate("yyyyMMddHHmmss"), 8, 6); 		// global 현재시각(현재시간)
+ 
+    wconv.clear(Ds_LTIDB09); 	// LTIDB09 (의심거래보고) 기본내용 보관
+    wconv.clear(Ds_LTIDB10); 	//   
+     var iRow = Ds_LTIDB09.insertRow();  // 줄 추가
+    
+    Ds_LTIDB09.setCellData(0, "sPlanNo", Ds_SuspcTrnstRprt.getCellData(0, "sPlanNo")); 	// 청약번호
+    Ds_LTIDB09.setCellData(0, "sCrNo", Ds_SuspcTrnstRprt.getCellData(0, "sCrNo")); 			// 계약번호
+  
+    if (Ds_SuspcTrnstRprt.getCellData(0, "sCrNo") == "") {
+        Ds_LTIDB09.setCellData(0, "nChngNo", 0); // 변경번호
+        Ds_LTIDB09.setCellData(0, "sPlanNo", sPlanNo); // 청약번호
+       
+    } else if (Ds_SuspcTrnstRprt.getCellData(0, "sCrNo") != "" && Ds_SuspcTrnstRprt.getCellData(0, "nChngNo") == 0) { 
+        Ds_LTIDB09.setCellData(0, "nChngNo", wconv.toNumber(Ds_SuspcTrnstRprt.getCellData(0, "nChngNo")) + 1); // 변경 
+        Dbflag = "1"; //저장구분
+      
+    } else { 
+        Ds_LTIDB09.setCellData(0, "nChngNo", wconv.toNumber(Ds_SuspcTrnstRprt.getCellData(0, "nChngNo")) + 1); // 변경
+        Dbflag = "1"; //저장구분
+    }
+    
+	if(!util.isNull(sCrNo)) {
+        Ds_LTIDB09.setCellData(0, "sCrNo", sCrNo); //계약번호
+    }
+    
+    Ds_LTIDB09.setCellData(0, "Dbflag", Dbflag); //저장구분
+    //Ds_LTIDB09.setCellData(0, "sSuspcTrnstYn", Ds_Suspc.getCellData(0, "chk1")); // 의심거래대상여부
+    Ds_LTIDB09.setCellData(0, "sSuspcTrnstYn", rad_Suspc.getValue()); // 의심거래대상여부 
+   /// console.log("[/CBSC088P.xml] [lfn_Input()] ==> [의심거래대상여부] [rad_Suspc.getValue()]"+ rad_Suspc.getValue() ); 
+ 
+    if (rad_Suspc.getValue() == "N") {
+        Ds_LTIDB09.setCellData(0, "sSuspcTrnstResn", "");
+    } else {
+        Ds_LTIDB09.setCellData(0, "sSuspcTrnstResn", TextArea_sSuspcTrnstResn.getValue()); 	//의심거래유형사유
+    }
+    Ds_LTIDB09.setCellData(0, "sApplStrtDate", sToday); //적용시작일자
+    Ds_LTIDB09.setCellData(0, "sApplEndDate", "99991231"); //적용종료일자 
+    Ds_LTIDB09.setCellData(0, "sInptDler", gUserID); //입력처리자
+    Ds_LTIDB09.setCellData(0, "sInptDlerIP", gUserIP); //입력처리자ip
+    Ds_LTIDB09.setCellData(0, "sInptDate", sToday); //입력일자
+    Ds_LTIDB09.setCellData(0, "sInptHms", sTime); //입력시간 
+    Ds_LTIDB09.setCellData(0, "sMdfcDler", gUserID); //수정처리자
+	Ds_LTIDB09.setCellData(0, "sMdfcDlerIP", gUserIP); //수정처리자ip
+    Ds_LTIDB09.setCellData(0, "sMdfcDate", sToday); //수정일자
+ 
+    for (var i = 0; i < Ds_SuspcTrnstRprt.getRowCount(); i++) {
+        if (Ds_SuspcTrnstRprt.getCellData(i, "chk") == "1" && rad_Suspc.getValue() == "Y") {
+            
+ 			var iRow = Ds_LTIDB10.insertRow();  // 줄 추가
+ 				
+            Ds_LTIDB10.setCellData(Ds_LTIDB10.getRowCount() - 1, "sPlanNo", Ds_LTIDB09.getCellData(0, "sPlanNo")); //청약번호
+            Ds_LTIDB10.setCellData(Ds_LTIDB10.getRowCount() - 1, "nChngNo", Ds_LTIDB09.getCellData(0, "nChngNo")); //변경번호
+            Ds_LTIDB10.setCellData(Ds_LTIDB10.getRowCount() - 1, "sCrNo", Ds_LTIDB09.getCellData(0, "sCrNo")); //계약번호			
+            Ds_LTIDB10.setCellData(Ds_LTIDB10.getRowCount() - 1, "sSuspcTrnstType", Ds_SuspcTrnstRprt.getCellData(i, "sCd")); //의심거래유형 
+			Ds_LTIDB10.setCellData(Ds_LTIDB10.getRowCount() - 1, "sInptDler", gUserID); //입력처리자
+            Ds_LTIDB10.setCellData(Ds_LTIDB10.getRowCount() - 1, "sInptDlerIP",gUserIP); //입력처리자ip
+            Ds_LTIDB10.setCellData(Ds_LTIDB10.getRowCount() - 1, "sInptDate", sToday); //입력일자
+            Ds_LTIDB10.setCellData(Ds_LTIDB10.getRowCount() - 1, "sInptHms", sTime); //입력시간 
+      		Ds_LTIDB10.setCellData(Ds_LTIDB10.getRowCount() - 1, "sMdfcDler", gUserID); //수정처리자
+            Ds_LTIDB10.setCellData(Ds_LTIDB10.getRowCount() - 1, "sMdfcDlerIP", gUserIP); //수정처리자ip
+            Ds_LTIDB10.setCellData(Ds_LTIDB10.getRowCount() - 1, "sMdfcDate", sToday); //수정일자 
+        }
+    } 
+	//console.log("[/CBSC088P.xml] [lfn_Input()] ==> [rad_Suspc.getValue()]"+ rad_Suspc.getValue() +"[Ds_LTIDB10.getRowCount()]"+ Ds_LTIDB10.getRowCount() ); 
+ 
+   // if (Ds_Suspc.getCellData(0, "chk1") == "Y" && Ds_LTIDB10.getRowCount() == 0) {
+    if (rad_Suspc.getValue() == "Y" && Ds_LTIDB10.getRowCount() == 0) {
+        wprom.alert("의심거래유형을 선택하세요");
+        return;
+    }
+	//console.log("[/CBSC088P.xml] [lfn_Input()] ==> [저장 처리_전] [Ds_LTIDB09.getRowCount()]"+ Ds_LTIDB09.getRowCount() +"[Ds_LTIDB09]"+ WebSquare.xml.serialize(Ds_LTIDB09.getAllXML()) ); 
+   	//console.log("[/CBSC088P.xml] [lfn_Input()] ==> [저장 처리_전] [Ds_LTIDB10.getRowCount()]"+ Ds_LTIDB10.getRowCount() +"[Ds_LTIDB10]"+ WebSquare.xml.serialize(Ds_LTIDB10.getAllXML()) ); 
+  
+    //의심거래보고 기본사항을 담는다 
+	var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB160Task", "insertsSuspcTrnstType"); 	// 01. 의심거래보고 저장  처리 
+	MethodObj.setId("insertsSuspcTrnstType");		// ID 셋팅  
+	MethodObj.addSingleData("LTIDB09", "LTIDB09", "Ds_LTIDB09:A");  			// Param 셋팅(계약 정보 Ds): A(전체), I(등록), U(수정), R 
+	MethodObj.addVectorData("vLTIDB10", "vLTIDB104", "Ds_LTIDB10:A");		// Param 셋팅(실손사전 정보 Ds): A(전체), I(등록), U(수정), R	  
+	MethodObj.setUrl("/contract/CBSC088PController.do");  			// 서버단 호출 URL 
+	MethodObj.setXPath("//*/WARNING");	// XPath(No)  
+	MethodObj.setHashTable();   	// 전문의 앞이 hashtable로 보낼 때 
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)] 
+	MethodObj.send();		// 최종 전송  		 
+	//console.log("[/CBSC088P.xml] [lfn_Input()] ==> [02. 의심거래보고 저장  처리_완료] [TEST_71]");  	
+
+	//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+  
+ 	DsWs_Save_Warning.setJSON(_tranSync.getDsJson("WARNING"));  		// Warning DS 셋팅(조회 결과)  
+  	console.log("[/CBSC088P.xml] [lfn_Input()] ==> [저장 처리] [DsWs_Save_Warning.getRowCount()]"+ DsWs_Save_Warning.getRowCount()  +"[DsWs_Save_Warning]"+ WebSquare.xml.serialize(DsWs_Save_Warning.getAllXML()) ); 
+
+    if (DsWs_Save_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Save_Warning.getCellData(0, "msg"));
+        return;
+        
+    } else {  
+	   	if (Ds_LTIDB09.getCellData(0, "Dbflag") == "1") {
+            wprom.alert("보관되었습니다.");
+        } else {
+            wprom.alert("수정되었습니다.");
+        }
+        
+		scwin.lfn_Search(); //보관후 재조회 
+  	} 
+	
+	console.log("[/CBSC088P.xml] [lfn_Input()] ==> [입력 수정] [TEST_end]" );
+};
+
+scwin.lfn_rad_Suspc_OnClick = function(obj) {
+	//console.log("[/CBSC088P.xml] [lfn_rad_Suspc_OnClick()] ==> [의심거래보고 대상여부 콤보 클릭] [TEST_01]"+ rad_Suspc.getValue() ); 
+	
+    if (rad_Suspc.getValue() == "N") {
+    	//Ds_SuspcTrnstRprt.setDisabled(true);  // 사용 안 됨
+        Grd_SuspcTrnstRprt.setDisabled(true);  // 사용 안 됨
+        
+    } else {
+        Grd_SuspcTrnstRprt.setDisabled(false);	// 사용 됨
+    }
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B160_Pop"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;  border-color:user18;/*  height:544px;*/ left:0px; top:0px;/* width:692px;"
+            userData1="자금세탁방지 의심거래보고(STR)조회 및 선택[B160_Pop]" userData2=" OnLoadCompleted:scwin.B160_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+                <ServiceObject/>
+            </ServiceObjects>
+            <xf:group arcsize="6" class="search_area" id="Shape0"
+                style="position:absolute; right:688px;  border-color:user7; bottom:79px; height:68px; left:0px; top:30px; width:674px;" userData3="RoundRect"/>
+            <w2:textbox class="sty_lb_Search" id="Static0" label="- 의심거래보고 대상여부"
+                style="position:absolute; VAlign:Middle;  height:20px;left:6px;top:35px; width:140px;" tagname=""/>
+            <xf:switch id="switch_127" style=" ">
+                <xf:case id="Default_128" style=" ">
+                    <w2:gridView autoFit="allColumn" autoFitMinWidth="100" class="sty_Grid" dataList="Ds_SuspcTrnstRprt" focusMode="row"
+                        id="Grd_SuspcTrnstRprt" inputType="text" readOnly="true"
+                        style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  FixedColSizing:TRUE;  EndLineColor:default;  border:Flat;  AutoEnter:TRUE;height:496px; left:0px; right:682px;top:108px;width:674px;" tabIndex="3">
+                        <w2:header>
+                            <w2:row>
+                                <w2:column dataType="text" id="head_id_1087" inputType="text" readOnly="true" style="height:30px;"
+                                    userData1="0" userData3="0" value="순번" width="38"/>
+                                <w2:column dataType="text" id="head_id_1088" inputType="text" readOnly="true" style="height:30px;"
+                                    userData1="1" userData3="0" value="의심거래유형" width="608"/>
+                                <w2:column dataType="text" id="head_id_1089" inputType="text" readOnly="true" style="height:30px;"
+                                    userData1="2" userData3="0" value="선택" width="28"/>
+                            </w2:row>
+                            <w2:row/>
+                        </w2:header>
+                        <w2:gBody>
+                            <w2:row>
+                                <w2:column dataType="text" expression="rowIndex+1" id="seq" inputType="expression" readOnly="true"
+                                    style="height:27px;" textAlign="right" userData1="0" userData3="0" width="38"/>
+                                <w2:column dataType="text" id="sHnglCdName" inputType="text" readOnly="true" style="" userData1="1"
+                                    userData3="0" width="608" textAlign="left"/>
+                                <w2:column dataType="text" id="chk" inputType="checkbox" readOnly="false" style="" userData1="2"
+                                    userData3="0" width="28" falseValue="0" trueValue="1"/>
+                            </w2:row>
+                        </w2:gBody>
+                    </w2:gridView>
+                </xf:case>
+            </xf:switch>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.btn_Close_OnClick" id="btn_Close"
+                style="position:absolute;ImageID:btn_Comm_Close;height:20px;width:25px;left:625px;top:0px;" tabIndex="4" toolTip="" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+            <w2:textbox id="Static5" label="의심거래보고 업무처리" style="position:absolute; VAlign:Middle;  height:24px; left:0px; top:0px; " tagname="" class="sub_pop_title01">
+</w2:textbox>
+            
+            <w2:textbox class="sty_lb_Search" id="Static1" label="* 의심거래보고란 자금세탁행위 또는 공중협박자금조달행위를 하고 있다고 의심되는 합당한"
+                style="position:absolute; VAlign:Middle;  height:16px;left:5px;top:59px; width:507px;" tagname=""/>
+            <w2:textbox class="sty_lb_Search" id="Static2" label="  근거가 있는 경우 금융거래의 금액에 상관없이 금융정보분석원장에게 보고하도록 법률에서정한 의무사항임"
+                style="position:absolute; VAlign:Middle;  height:15px;left:14px;top:75px; width:589px;" tagname=""/>
+            <xf:select1 appearance="full" cols="2" ev:onclick="scwin.lfn_rad_Suspc_OnClick" id="rad_Suspc" ref="data:Ds_Suspc.chk1" rows="1"
+                style="position:absolute; ColumnCount:2;  border-color:user0;  height:19px;left:161px;top:35px;" tabIndex="10">
+                <xf:choices>
+                    <xf:itemset nodeset="data:Ds_Yn_1">
+                        <xf:label ref="TEXT1"/>
+                        <xf:value ref="CODE"/>
+                    </xf:itemset>
+                </xf:choices>
+            </xf:select1>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Input" id="btn_save"
+                style="position:absolute;ImageID:btn_Input_02;height:20px;width:25px;left:574px;top:0px;" tabIndex="11" toolTip="" type="anchor">
+                <xf:label><![CDATA[저장]]></xf:label>
+            </xf:trigger>
+            <xf:textarea id="TextArea_sSuspcTrnstResn" maxlength="1000" ref=""
+                style="position:absolute; height:52px;left:0px;top:632px; width:674px;" tabIndex="12"/>
+            <w2:textbox class="sub_pop_title02" id="Static3" label="의심거래 선택 사유(자유롭게 기술)"
+                style="position:absolute; VAlign:Middle;left:0px;top:612px;" tagname=""/>
+        </xf:group>
+    </body>
+</html>

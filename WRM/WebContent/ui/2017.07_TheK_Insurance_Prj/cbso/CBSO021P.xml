@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="ds_SelectJobInfo" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="cate1" name="cate1"/>
+                        <w2:column dataType="text" id="cate2" name="cate2"/>
+                        <w2:column dataType="text" id="cate3" name="cate3"/>
+                        <w2:column dataType="text" id="target" name="target"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="ds_search_job"
+                	repeatNode="map" userData2="//*/vector/data/CODAA13">
+                	<w2:columnInfo>
+                		<w2:column dataType="text" id="sJobCod"
+                			name="sJobCod" />
+                		<w2:column dataType="text" id="sJobNam"
+                			name="sJobNam" />
+                		<w2:column dataType="text" id="sJobRsk"
+                			name="sJobRsk" />
+                		<w2:column id="sKidiLongCode" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sName1" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sName2" name="name6"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sName3" name="name7"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sJobCode" name="name8"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sDriveClass" name="name9"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sKidiAutoCode" name="name10"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sOldJobCode" name="name11"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sJobClass" name="name12"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sJobDesc" name="name13"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="ds_cate_01"
+                	repeatNode="map" userData2="//*/vector/data/CODAA13">
+                	<w2:columnInfo>
+                		<w2:column dataType="text" id="cate1"
+                			name="cate1" />
+                		<w2:column dataType="text" id="sJobCod"
+                			name="sJobCod" />
+                		<w2:column dataType="text" id="sJobNam"
+                			name="sJobNam" />
+                		<w2:column id="sJobGroup" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sOldJobCode" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sJobGroupNm" name="name6"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="ds_cate_02"
+                	repeatNode="map" userData2="//*/vector/data/CODAA13">
+                	<w2:columnInfo>
+                		<w2:column dataType="text" id="cate2"
+                			name="cate2" />
+                		<w2:column dataType="text" id="sJobCod"
+                			name="sJobCod" />
+                		<w2:column dataType="text" id="sJobNam"
+                			name="sJobNam" />
+                		<w2:column id="sMidJobNm" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sMidJobCode" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sJobGroup" name="name6"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sOldJobCode" name="name7"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="ds_cate_03"
+                	repeatNode="map" userData2="//*/vector/data/CODAA13">
+                	<w2:columnInfo>
+                		<w2:column dataType="text" id="sJobCod"
+                			name="sJobCod" />
+                		<w2:column dataType="text" id="sJobNam"
+                			name="sJobNam" />
+                		<w2:column dataType="text" id="sJobRsk"
+                			name="sJobRsk" />
+                		<w2:column id="sJobCode" name="name4"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sPreJobCode" name="name5"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sDriveClass" name="name6"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sMidJobCode" name="name7"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sOldJobCode" name="name8"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sJobCodeNm" name="name9"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sJobClass" name="name10"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sJobDesc" name="name11"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sNewJobCode" name="name12"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="ds_aaa" repeatNode="map"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        
+		<script src="/cm/js/convertJs/comm_Webservice.js"/>
+		<script src="/cm/js/convertJs/LongTerm_Script.js"/>
+        
+        <script><![CDATA[
+/****************************************************************************
+ * 프로그램번호   : A230_Pop
+ * 프로그램명     : 직업코드조회 
+ * 파일명         : A230_Pop.xml
+ * 프로그램 내용  : 직업코드조회 
+ * 관련 프로그램  : 
+ * 작성자         : 김용석 
+ * 작성일         : 2010-10-27
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+
+ //  #include "Script::comm_Webservice.js"     // js 참조
+ //  #include "Script::LongTerm_Script.js"
+
+var str_jobname     = ""; // 직업명
+var str_jobcod      = ""; // 직업코드
+var str_jobrsk      = ""; // 직업등급
+var sDriveClass     = ""; // 운전등급
+var sOldJobCode     = ""; // 기존직업코드
+var flag_select_yn = "N";
+var flag;
+var sStandDate      = "";//기준시간
+
+	scwin.init = function() {
+		scwin.Load_Cate1_List_Async();
+	};
+	
+	scwin.Load_Cate1_List_Async = function() { //완료
+ 		util.eventAsyncCall(this, scwin.Load_Cate1_List, arguments);
+	};
+	scwin.Load_Cate1_List = function() {
+		// 대분류 리스트 서버에서 가져옴
+		ds_cate_01.removeAll();
+		ds_cate_02.removeAll();
+		ds_cate_03.removeAll();
+		
+		//현재시간 가져오기
+		if(sStandDate == ""){
+			gfn_getServerTime();
+			sStandDate = gds.gDs_ServerTime.getCellData(0, "sToday"); // 서버시간
+		}
+
+/* OLD S		
+		//alert(sStandDate);
+		SOBJ_Job_Cate1.WSDL = gWsdlBasis;
+		var MethodObj = gfn_CreateMethodObj(SOBJ_Job_Cate1,"com.inswave.newgen.com.cod.OCJ20200300Task", "readJobCodeStep1", "", "");
+		gfn_SetParam(MethodObj, "sStandDate", sStandDate);
+		gfn_CallService(SOBJ_Job_Cate1, DOBJ_Job_Cate1, MethodObj);
+		
+		//trace(ds_cate_01.SaveXML());
+OLD E */
+		
+		var MethodObj = new callService("com.inswave.newgen.com.cod.OCJ20200300Task", "readJobCodeStep1", 0, 0);
+		MethodObj.setId("readJobCodeStep1");
+		MethodObj.setParam("sStandDate", sStandDate);
+		MethodObj.setUrl("/common/CBSO021PController.do");
+		MethodObj.setXPath("//*/vector/data/CODAA13");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();
+		
+		util.interfaceKey(_tranSync.result.serviceDs);
+		ds_cate_01.setJSON(_tranSync.result.serviceDs.data[0].CODAA13);
+	};
+	
+	scwin.grid_cate_1_oncellindexchange_Async = function() { //완료
+ 		util.eventAsyncCall(this, scwin.grid_cate_1_oncellindexchange, arguments);
+	};
+	scwin.grid_cate_1_oncellindexchange = function(row,col,oldRow,oldCol) {
+		// 중분류 리스트 서버에서 가져옴
+		var cate_01 = ""; // 대분류 코드 첫째 한자리
+		cate_01 = ds_cate_01.getCellData(row, "sJobGroup");
+		
+		ds_cate_03.removeAll();
+		ds_cate_02.removeAll();
+		
+		scwin.clear_selected_job_info();
+		
+/* OLD S		
+		SOBJ_Job_Cate2.WSDL = gWsdlBasis;
+		
+		var MethodObj = gfn_CreateMethodObj(SOBJ_Job_Cate2,"com.inswave.newgen.com.cod.OCJ20200300Task", "readJobCodeStep2", "", "");
+		//gfn_SetParam(MethodObj, "sJobCode_cate2", cate_01);
+		gfn_SetParam(MethodObj, "sJobGroup", cate_01);
+		gfn_SetParam(MethodObj, "sStandDate", sStandDate);	
+		gfn_CallService(SOBJ_Job_Cate2, DOBJ_Job_Cate2, MethodObj);
+OLD E */
+
+		var MethodObj = new callService("com.inswave.newgen.com.cod.OCJ20200300Task", "readJobCodeStep2", 0, 0);
+		MethodObj.setId("readJobCodeStep2");
+		MethodObj.setParam("sJobGroup", cate_01);
+		MethodObj.setParam("sStandDate", sStandDate);
+		MethodObj.setUrl("/common/CBSO021PController.do");
+		MethodObj.setXPath("//*/vector/data/CODAA13");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();
+		
+		util.interfaceKey(_tranSync.result.serviceDs);
+		ds_cate_02.setJSON(_tranSync.result.serviceDs.data[0].CODAA13);
+		
+		ed_job_cate_1.setValue(ds_cate_01.getCellData(row, "sJobGroupNm"));
+		
+		//trace(ds_cate_02.SaveXML());
+	};
+	
+	scwin.clear_selected_job_info = function() {
+		// 선택 변경시 선택 항목 초기화
+		ed_job_cate_2.setValue("");
+		ed_job_cate_3.setValue("");
+		ed_job_code.setValue("");
+		ed_risk_code.setValue("");
+		ed_drive_class.setValue("");
+		flag_select_yn = "N";
+	};
+	
+	scwin.grid_cate_2_oncellindexchange_Async = function() { //완료
+ 		util.eventAsyncCall(this, scwin.grid_cate_2_oncellindexchange, arguments);
+	};
+	scwin.grid_cate_2_oncellindexchange = function(row,col,oldRow,oldCol) {
+		// 소분류 리스트 서버에서 가져옴
+		var cate_02 = ""; // 중분류 코드 1~3 자리 3자리
+		cate_02 = ds_cate_02.getCellData(row, "sMidJobCode");
+	
+		ds_cate_03.removeAll();
+		
+		scwin.clear_selected_job_info();
+		
+/* OLD S		
+		SOBJ_Job_Cate3.WSDL = gWsdlBasis;
+		
+		var MethodObj = gfn_CreateMethodObj(SOBJ_Job_Cate3,"com.inswave.newgen.com.cod.OCJ20200300Task", "readJobCodeStep3", "", "");
+		gfn_SetParam(MethodObj, "sMidJobCode", cate_02);
+		gfn_SetParam(MethodObj, "sStandDate", sStandDate);		
+		gfn_CallService(SOBJ_Job_Cate3, DOBJ_Job_Cate3, MethodObj);
+		//trace(replace(gfn_XmlEncoder(DOBJ_Job_Cate3.Value), "><", ">\n<"));
+OLD E */		
+		var MethodObj = new callService("com.inswave.newgen.com.cod.OCJ20200300Task", "readJobCodeStep3", 0, 0);
+		MethodObj.setId("readJobCodeStep3");
+		MethodObj.setParam("sMidJobCode", cate_02);
+		MethodObj.setParam("sStandDate", sStandDate);
+		MethodObj.setUrl("/common/CBSO021PController.do");
+		MethodObj.setXPath("//*/vector/data/CODAA13");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();
+		
+		util.interfaceKey(_tranSync.result.serviceDs);
+		ds_cate_03.setJSON(_tranSync.result.serviceDs.data[0].CODAA13);
+		
+		ed_job_cate_2.setValue(ds_cate_02.getCellData(row, "sMidJobNm"));
+	};
+	
+	scwin.grid_cate_3_oncellindexchange = function(row,col,oldRow,oldCol) {
+		ed_job_cate_3.setValue(ds_cate_03.getCellData(row, "sJobCodeNm"));
+		ed_job_code.setValue(ds_cate_03.getCellData(row, "sJobCode"));
+		ed_risk_code.setValue(ds_cate_03.getCellData(row, "sJobClass"));
+		ed_drive_class.setValue(ds_cate_03.getCellData(row, "sDriveClass"));
+		ta_Job_Descript.setValue(ds_cate_03.getCellData(row, "sJobDesc"));
+	
+		str_jobname = wconv.trim(ds_cate_03.getCellData(row,"sJobCodeNm"));
+		str_jobcod  = ds_cate_03.getCellData(row,"sJobCode");
+		str_jobrsk  = ds_cate_03.getCellData(row,"sJobClass");
+		sDriveClass = ds_cate_03.getCellData(row,"sDriveClass");
+		sOldJobCode = ds_cate_03.getCellData(row,"sOldJobCode");
+		
+		flag_select_yn = "Y";
+	};
+	
+	scwin.btn_ok_onclick = function(e) {
+		if (flag_select_yn == "Y")
+		{
+			var msg  = "'부모창에 넘길 값(부모창에 변수 선언하여 전달 바랍니다.)'\n";
+				msg += "직업명은 [" + str_jobname + "] 이고,\n";
+				msg += "직업코드는 [" + str_jobcod + "] 이고,\n";
+				msg += "직업등급은 [" + str_jobrsk + "] 이고,\n";
+				msg += "운전등급은 [" + sDriveClass + "] 이고,\n";
+				msg += "기존직업코드는 [" + sOldJobCode + "] 입니다.";
+
+			//alert(msg);
+			
+			// 직업정보 넘겨줌.
+			// 직업명|직업코드|상해등급|운전등급
+			var returnMsg = str_jobname + "^" + str_jobcod + "^" + str_jobrsk + "^" + sDriveClass + "^" + sOldJobCode;
+			
+			//A230_Pop.Close(returnMsg);
+			wprom.close(returnMsg);
+		}
+		else if (flag_select_yn == "N")
+		{
+			wprom.alert("직업을 선택해 주세요.");
+		}
+	};
+	
+	scwin.btn_retrieve_onclick_Async = function() { //완료
+ 		util.eventAsyncCall(this, scwin.btn_retrieve_onclick, arguments);
+	};
+	scwin.btn_retrieve_onclick = function(e) {
+		// 이름으로 직업 검색
+		if (ed_jobname.getValue() == "")
+		{
+			wprom.alertF("직업명을 입력하세요.", {}, ed_jobname);
+			return;
+		}
+	
+		var jobname = "";
+		jobname = wconv.trim(ed_jobname.getValue());
+	
+		ds_search_job.removeAll();
+
+/* OLD S		
+		SOBJ_Search_Job.WSDL = gWsdlBasis;
+		
+		var MethodObj = gfn_CreateMethodObj(SOBJ_Search_Job,"com.inswave.newgen.com.cod.OCJ20200300Task", "readJobCodeList", "", "");
+		
+		gfn_SetParam(MethodObj, "sSearchType", "1");
+		gfn_SetParam(MethodObj, "sKeyType", "3");
+		gfn_SetParam(MethodObj, "sKeyText", jobname);
+		gfn_SetParam(MethodObj, "sStandDate", sStandDate);		
+	
+		gfn_CallService(SOBJ_Search_Job, DOBJ_Search_Job, MethodObj);
+OLD E */		
+		var MethodObj = new callService("com.inswave.newgen.com.cod.OCJ20200300Task", "readJobCodeList", 0, 0);
+		MethodObj.setId("readJobCodeList");
+		MethodObj.setParam("sSearchType", "1");
+		MethodObj.setParam("sKeyType", "3");
+		MethodObj.setParam("sKeyText", jobname);
+		MethodObj.setParam("sStandDate", sStandDate);
+		MethodObj.setUrl("/common/CBSO021PController.do");
+		MethodObj.setXPath("//*/vector/data/CODAA13");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();
+		
+		util.interfaceKey(_tranSync.result.serviceDs);
+		ds_search_job.setJSON(_tranSync.result.serviceDs.data[0].CODAA13);
+		
+		if (ds_search_job.getRowCount() == 0)
+		{
+			wprom.alert("검색 결과가 없습니다.");
+		}
+		
+		scwin.tab_1_tab2_grid_cate_3_oncellclick(0, "");
+		
+		//trace(ds_search_job.SaveXML());
+	};
+	
+	scwin.tab_1_tab2_grid_cate_3_oncellclick = function(row,col) {
+		ed_job_cate_3.setValue(ds_search_job.getCellData(row, "sName3"));
+		ed_job_code.setValue(ds_search_job.getCellData(row, "sJobCode"));
+		ed_risk_code.setValue(ds_search_job.getCellData(row, "sJobClass"));
+		ed_drive_class.setValue(ds_search_job.getCellData(row, "sDriveClass"));
+		ta_Job_Descript.setValue(ds_search_job.getCellData(row, "sJobDesc"));
+	
+		str_jobname = wconv.trim(ds_search_job.getCellData(row,"sName3"));
+		str_jobcod  = ds_search_job.getCellData(row,"sJobCode");
+		str_jobrsk  = ds_search_job.getCellData(row,"sJobClass");
+		sDriveClass = ds_search_job.getCellData(row,"sDriveClass");
+		sOldJobCode = ds_search_job.getCellData(row,"sOldJobCode");
+		
+		flag_select_yn = "Y";
+		
+		ed_job_cate_1.setValue(ds_search_job.getCellData(row, "sName1"));
+		ed_job_cate_2.setValue(ds_search_job.getCellData(row, "sName2"));
+	};
+	
+	scwin.ed_jobname_onkeydown = function(e) {
+		if (e.keyCode == 13) {
+			scwin.btn_retrieve_onclick_Async();
+		}
+	};
+	
+	scwin.btn_close_onclick = function(e) {
+		wprom.close();
+	};
+	]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="A230_Pop"
+        	style="position:absolute;WorkArea:true;Ver:1.0;PidAttrib:7;left:0px;top:0px;"
+        	userData1="직업코드 조회"
+        	userData2=" OnLoadCompleted:scwin.form_OnLoadCompleted; ">
+        	<DataObjects>
+        		<DataObject />
+        		<DataObject />
+        		<DataObject />
+        		<DataObject />
+        		<DataObject />
+        	</DataObjects>
+        	<ServiceObjects>
+        		<ServiceObject />
+        		<ServiceObject />
+        		<ServiceObject />
+        		<ServiceObject />
+        		<ServiceObject />
+        	</ServiceObjects>
+        	<xf:group arcsize="8" class="" id="Shape3"
+        		style="position:absolute; right:816px;  bottom:495px; height:127px;left:4px;top:367px; width:800px;"
+        		userData3="RoundRect" />
+        	<w2:textbox id="st_tit_1" label="직업코드 조회"
+        		style="position:absolute; VAlign:Middle;  height:22px; left:0px; top:0px; width:253px;"
+        		tagname="" class="sub_pop_title01" />
+        	<w2:tabControl class="sty_tab"
+        		ev:onchange="scwin.tab_1_OnChanged" id="tab_1"
+        		style="position:absolute;  height:333px; left:0px; top:27px; width:812px;"
+        		tabIndex="0">
+        		<w2:content alwaysDraw="false" id="tab_1_tab1"
+        			style="position:absolute; border-color:black;  height:307px; left:2px; top:24px; width:808px;">
+        			<xf:switch id="switch_62" style=" ">
+        				<xf:case id="Default_63" style=" ">
+        					<w2:gridView autoFit="allColumn"
+        						autoFitMinWidth="100" class="sty_Grid"
+        						dataList="ds_cate_01"
+        						ev:oncellindexchange="scwin.grid_cate_1_oncellindexchange_Async"
+        						focusMode="row" id="grid_cate_1"
+        						inputType="text" readOnly="true"
+        						style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  height:290px; left:0px; right:265px;top:15px; width:262px;"
+        						tabIndex="1">
+        						<w2:header>
+        							<w2:row>
+        								<w2:column dataType="text"
+        									id="head_id_447" inputType="text" readOnly="true"
+        									userData1="0" userData3="0" width="0" />
+        								<w2:column dataType="text"
+        									id="head_id_448" inputType="text" readOnly="true"
+        									textAlign="center" userData1="1" userData3="0"
+        									value="대분류코드" width="0" />
+        								<w2:column dataType="text"
+        									id="head_id_449" inputType="text" readOnly="true"
+        									textAlign="center" userData1="2" userData3="0"
+        									value="대분류명" width="*" />
+        							</w2:row>
+        							<w2:row />
+        						</w2:header>
+        						<w2:gBody>
+        							<w2:row>
+        								<w2:column dataType="text"
+        									id="temp_id_450" inputType="text" readOnly="true"
+        									userData1="0" userData3="0" width="0" />
+        								<w2:column dataType="text"
+        									id="cate1" inputType="text" readOnly="true"
+        									textAlign="center" userData1="1" userData3="0"
+        									width="0" />
+        								<w2:column dataType="text"
+        									id="sJobGroupNm" inputType="text" readOnly="true"
+        									textAlign="left" userData1="2" userData3="0" width="*" />
+        							</w2:row>
+        						</w2:gBody>
+        					</w2:gridView>
+        				</xf:case>
+        			</xf:switch>
+        			<xf:switch id="switch_63" style=" ">
+        				<xf:case id="Default_64" style=" ">
+        					<w2:gridView autoFit="allColumn"
+        						autoFitMinWidth="100" class="sty_Grid"
+        						dataList="ds_cate_02"
+        						ev:oncellindexchange="scwin.grid_cate_2_oncellindexchange_Async"
+        						focusMode="row" id="grid_cate_2"
+        						inputType="text" readOnly="true"
+        						style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  height:290px; left:273px; right:535px;top:15px; width:262px;"
+        						tabIndex="2">
+        						<w2:header>
+        							<w2:row>
+        								<w2:column dataType="text"
+        									id="head_id_451" inputType="text" readOnly="true"
+        									userData1="0" userData3="0" width="0" />
+        								<w2:column dataType="text"
+        									id="head_id_452" inputType="text" readOnly="true"
+        									textAlign="center" userData1="1" userData3="0"
+        									value="중분류코드" width="0" />
+        								<w2:column dataType="text"
+        									id="head_id_453" inputType="text" readOnly="true"
+        									textAlign="center" userData1="2" userData3="0"
+        									value="중분류명" width="*" />
+        							</w2:row>
+        						</w2:header>
+        						<w2:gBody>
+        							<w2:row>
+        								<w2:column dataType="text"
+        									id="temp_id_454" inputType="text" readOnly="true"
+        									userData1="0" userData3="0" width="0" />
+        								<w2:column dataType="text"
+        									id="cate2" inputType="text" readOnly="true"
+        									textAlign="center" userData1="1" userData3="0"
+        									width="0" />
+        								<w2:column dataType="text"
+        									id="sMidJobNm" inputType="text" readOnly="true"
+        									textAlign="left" userData1="2" userData3="0" width="*" />
+        							</w2:row>
+        						</w2:gBody>
+        					</w2:gridView>
+        				</xf:case>
+        			</xf:switch>
+        			<xf:switch id="switch_64" style=" ">
+        				<xf:case id="Default_65" style=" ">
+        					<w2:gridView autoFit="allColumn"
+        						autoFitMinWidth="100" class="sty_Grid"
+        						dataList="ds_cate_03"
+        						ev:oncellindexchange="scwin.grid_cate_3_oncellindexchange"
+        						focusMode="row" id="grid_cate_3"
+        						inputType="text" readOnly="true"
+        						style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  height:290px; left:543px; right:805px;top:15px; width:262px;"
+        						tabIndex="3">
+        						<w2:header>
+        							<w2:row>
+        								<w2:column dataType="text"
+        									id="head_id_455" inputType="text" readOnly="true"
+        									userData1="0" userData3="0" width="0" />
+        								<w2:column dataType="text"
+        									id="head_id_456" inputType="text" readOnly="true"
+        									textAlign="center" userData1="1" userData3="0"
+        									value="소분류명" width="*" />
+        								<w2:column dataType="text"
+        									id="head_id_457" inputType="text" readOnly="true"
+        									textAlign="center" userData1="2" userData3="0"
+        									value="직업코드" width="0" />
+        								<w2:column dataType="text"
+        									id="head_id_458" inputType="text" readOnly="true"
+        									textAlign="center" userData1="3" userData3="0"
+        									value="직업등급" width="0" />
+        								<w2:column dataType="text"
+        									id="head_id_459" inputType="text" readOnly="true"
+        									textAlign="center" userData1="4" userData3="0"
+        									value="운전등급" width="0" />
+        								<w2:column dataType="text"
+        									id="head_id_460" inputType="text" readOnly="true"
+        									textAlign="center" userData1="5" userData3="0"
+        									value="기존직업코드" width="0" />
+        							</w2:row>
+        						</w2:header>
+        						<w2:gBody>
+        							<w2:row>
+        								<w2:column dataType="text"
+        									id="temp_id_461" inputType="text" readOnly="true"
+        									userData1="0" userData3="0" width="0" />
+        								<w2:column dataType="text"
+        									id="sJobCodeNm" inputType="text" readOnly="true"
+        									textAlign="left" userData1="1" userData3="0" width="*" />
+        								<w2:column dataType="text"
+        									id="sJobCode" inputType="text" readOnly="true"
+        									textAlign="left" userData1="2" userData3="0" width="0" />
+        								<w2:column dataType="text"
+        									id="sJobClass" inputType="text" readOnly="true"
+        									textAlign="left" userData1="3" userData3="0" width="0" />
+        								<w2:column dataType="text"
+        									id="sDriveClass" inputType="text" readOnly="true"
+        									textAlign="left" userData1="4" userData3="0" width="0" />
+        								<w2:column dataType="text"
+        									id="sOldJobCode" inputType="text" readOnly="true"
+        									textAlign="left" userData1="5" userData3="0" width="0" />
+        							</w2:row>
+        						</w2:gBody>
+        					</w2:gridView>
+        				</xf:case>
+        			</xf:switch>
+        		</w2:content>
+        		<w2:content alwaysDraw="false" id="tab_1_tab2"
+        			style="position:absolute; border-color:black;  height:307px; left:2px; top:24px; width:808px;">
+        			<xf:group arcsize="6" class="search_area"
+        				id="Shape9" style="left:0px;top:12px; width:802px;"
+        				userData3="RoundRect">
+        			</xf:group>
+        			<xf:input class="sty_ipt_search"
+        				ev:onblur=""
+        				id="ed_jobname"
+        				style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:80px;top:21px; width:169px;"
+        				tabIndex="2" ev:onkeydown="scwin.ed_jobname_onkeydown"/>
+        			<w2:textbox class="sty_lb_Search"
+        				id="tab_1_tab2_st_tit_1" label="직업명"
+        				style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:7px;top:21px; width:56px;"
+        				tagname="" />
+        			<xf:switch id="switch_65" style=" ">
+        				<xf:case id="Default_66" style=" ">
+        					<w2:gridView autoFit="allColumn"
+        						autoFitMinWidth="100" class="sty_Grid"
+        						dataList="ds_search_job"
+        						ev:oncellclick="scwin.tab_1_tab2_grid_cate_3_oncellclick"
+        						focusMode="row" id="tab_1_tab2_grid_cate_3"
+        						inputType="text" readOnly="true"
+        						style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  FillArea:TRUE;  EndLineColor:default;  border:Flat;  AutoFitEndLine:Hide;  height:251px; left:0px; right:805px;top:54px; width:802px;"
+        						tabIndex="4">
+        						<w2:header>
+        							<w2:row>
+        								<w2:column dataType="text"
+        									id="head_id_462" inputType="text" readOnly="true"
+        									userData1="0" userData3="0" width="0" />
+        								<w2:column dataType="text"
+        									id="head_id_463" inputType="text" readOnly="true"
+        									textAlign="center" userData1="1" userData3="0"
+        									value="소분류명" width="*" />
+        								<w2:column dataType="text"
+        									id="head_id_464" inputType="text" readOnly="true"
+        									textAlign="center" userData1="2" userData3="0"
+        									value="직업코드" width="120" />
+        								<w2:column dataType="text"
+        									id="head_id_465" inputType="text" readOnly="true"
+        									textAlign="center" userData1="3" userData3="0"
+        									value="직업등급" width="120" />
+        								<w2:column dataType="text"
+        									id="head_id_466" inputType="text" readOnly="true"
+        									textAlign="center" userData1="4" userData3="0"
+        									value="운전등급" width="120" />
+        								<w2:column dataType="text"
+        									id="head_id_467" inputType="text" readOnly="true"
+        									textAlign="center" userData1="5" userData3="0"
+        									value="기존직업코드" width="0" />
+        							</w2:row>
+        						</w2:header>
+        						<w2:gBody>
+        							<w2:row>
+        								<w2:column dataType="text"
+        									id="temp_id_468" inputType="text" readOnly="true"
+        									userData1="0" userData3="0" width="0" />
+        								<w2:column dataType="text"
+        									id="sName3" inputType="text" readOnly="true"
+        									textAlign="left" userData1="1" userData3="0" width="*" />
+        								<w2:column dataType="text"
+        									id="sJobCode" inputType="text" readOnly="true"
+        									textAlign="left" userData1="2" userData3="0"
+        									width="120" />
+        								<w2:column dataType="text"
+        									id="sJobClass" inputType="text" readOnly="true"
+        									textAlign="left" userData1="3" userData3="0"
+        									width="120" />
+        								<w2:column dataType="text"
+        									id="sDriveClass" inputType="text" readOnly="true"
+        									textAlign="left" userData1="4" userData3="0"
+        									width="120" />
+        								<w2:column dataType="text"
+        									id="sOldJobCode" inputType="text" readOnly="true"
+        									textAlign="left" userData1="5" userData3="0" width="0" />
+        							</w2:row>
+        						</w2:gBody>
+        					</w2:gridView>
+        				</xf:case>
+        			</xf:switch>
+
+        			<xf:trigger class="btn_Comm_Search"
+        				ev:onclick="scwin.btn_retrieve_onclick_Async" id="btn_retrieve"
+        				style="position:absolute; Transparent:TRUE;  ImageID:btn_Comm_Search;  height:20px;left:733px;top:18px;width:45px;"
+        				tabIndex="10" type="anchor">
+        				<xf:label><![CDATA[조회]]></xf:label>
+        			</xf:trigger>
+        		</w2:content>
+        		<w2:tabs disabled="false" id="tab_1_tab1" label="분류검색"
+        			style="" />
+        		<w2:tabs disabled="false" id="tab_1_tab2" label="명칭검색"
+        			style="" />
+        	</w2:tabControl>
+        	<xf:group arcsize="8" class="sty_area_form" id="" style="position:absolute;bottom:337px;height:136px;top:372px;left:0px;width:807px;" userData3="RoundRect">
+        		<xf:group class="form_w_line" id="" style="top:26px;width:370px;"></xf:group>
+        		<xf:group class="form_w_line" id="" style="top:53px;width:370px;"></xf:group>
+        		<xf:group class="form_w_line" id="" style="top:80px;left:0px;width:370px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id="" style="top:107px;left:0px;">
+        		</xf:group>
+        	</xf:group><w2:textbox class="sty_lb_Basic" id="st_bottom_1" label="선택"
+        		style="position:absolute;width:101px;left:0px;VAlign:Middle;top:372px;text-align: center;padding-left:0px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="st_bottom_2"
+        		label="직업명"
+        		style="position:absolute;width:263px;left:101px;VAlign:Middle;top:372px;text-align: center;padding-left:0px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="st_bottom_3"
+        		label="직업코드"
+        		style="position:absolute;width:81px;left:0px;VAlign:Middle;top:480px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="st_bottom_4"
+        		label="직업등급"
+        		style="position:absolute;min-width:68px;width:71px;left:278px;VAlign:Middle;top:480px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="st_bottom_5"
+        		label="대분류명"
+        		style="position:absolute;width:80px;left:0px;VAlign:Middle;top:399px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="st_bottom_6"
+        		label="중분류명"
+        		style="position:absolute;width:80px;left:0px;VAlign:Middle;top:426px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="st_bottom_7"
+        		label="소분류명"
+        		style="position:absolute;width:80px;left:0px;VAlign:Middle;top:453px;"
+        		tagname="" />
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.btn_close_onclick" id="btn_close"
+        		style="position:absolute; ImageID:btn_Comm_Close;  height:20px;left:762px;top:0px;"
+        		tabIndex="16" type="anchor">
+        		<xf:label><![CDATA[닫기]]></xf:label>
+        	</xf:trigger>
+        	<xf:trigger class="detail_bu02"
+        		ev:onclick="scwin.btn_ok_onclick" id="btn_ok"
+        		style="position:absolute; ImageID:btn_Input_02;  height:20px;left:712px;top:0px; width:40px;"
+        		tabIndex="17" type="anchor">
+        		<xf:label><![CDATA[적용]]></xf:label>
+        	</xf:trigger>
+        	<xf:input class="sty_ipt_form" id="ed_job_cate_3"
+        		readOnly="TRUE"
+        		style="position:absolute;height:20px;width:249px;left:107px;top:457px;"
+        		tabIndex="5" disabled="true"/>
+        	<xf:input class="sty_ipt_form" id="ed_job_code"
+        		readOnly="TRUE"
+        		style="position:absolute;height:20px;width:163px;left:107px;top:484px;"
+        		tabIndex="6" disabled="true"/>
+        	<xf:input class="sty_ipt_form" id="ed_job_cate_2"
+        		readOnly="TRUE"
+        		style="position:absolute;height:20px;width:249px;left:107px;top:430px;"
+        		tabIndex="14" disabled="true"/>
+        	<xf:input class="sty_ipt_form" id="ed_job_cate_1"
+        		readOnly="TRUE"
+        		style="position:absolute;height:20px;width:249px;left:107px;top:404px;"
+        		tabIndex="15" disabled="true"/>
+        	<w2:textbox class="sty_lb_Basic" id="Static8" label="운전등급"
+        		style="position:absolute;min-width:68px;width:81px;left:540px;VAlign:Middle;top:480px;"
+        		tagname="" />
+        	<xf:input class="sty_ipt_form" id="ed_drive_class"
+        		readOnly="TRUE"
+        		style="position:absolute;height:20px;width:155px;left:642px;top:484px;"
+        		tabIndex="20" disabled="true"/>
+        	<xf:input class="sty_ipt_form" id="ed_risk_code"
+        		readOnly="TRUE"
+        		style="position:absolute;height:20px;width:160px;left:369px;top:484px;"
+        		tabIndex="7" disabled="true"/>
+        	<w2:textbox class="sty_lb_Basic" id="Static0" label="직업설명"
+        		style="position:absolute;width:100px;left:365px;VAlign:Middle;top:372px;height:107px;text-align: center;padding-left:0px;"
+        		tagname="" />
+        	<xf:textarea ev:onfocus="scwin.lfn_Job_Descript_OnMouseOver"
+        		ev:onmouseover="scwin.lfn_Job_Descript_OnMouseOver"
+        		id="ta_Job_Descript"
+        		style="position:absolute; VScroll:TRUE;height:100px;left:472px;top:377px;width:327px;"
+        		tabIndex="23" disabled="true"/>
+        	
+        </xf:group>
+    </body>
+</html>

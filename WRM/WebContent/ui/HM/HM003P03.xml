@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<!-- 
+		#####################################################################
+		파일명 : HM003P03.xml
+		프로그램명 : 우편번호 조회 팝업
+		설 명 : 우편번호를 조회하고 선택하는 팝업 화면
+		작성자 : Inswave Systems
+		작성일 : 2017.12.26
+		
+		수정일자	  수정자			 수정내용
+		=====================================================================
+		2017.12.26	Inswave Systems	최초작성
+		2018.01.26	Inswave Systems	WebSquare5 SP2 기능을 적용하도록 소스 업그레이드
+		2018.11.12	Inswave Systems	WebSquare5 SP3 기능을 적용하도록 소스 업그레이드
+		#####################################################################
+		-->
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection>
+				<w2:dataList id="dlt_zipCode" baseNode="list" style="" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="ZIP_CD" name="우편번호" dataType="text"></w2:column>
+						<w2:column id="ADDRESS" name="주소" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap id="dma_searchParam" baseNode="param" style="">
+					<w2:keyInfo>
+						<w2:key id="SEARCH_KEYWORD" name="검색조건" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+			<xf:submission id="sbm_getZipCodeList" ref='data:json,{"id":"dma_searchParam","key":"param"}'
+				target='data:json,{"id":"dlt_zipCode","key":"data"}' action="/member/selectZipCodeList" method="post" mediatype="application/json"
+				encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous" processMsg="" ev:submit=""
+				ev:submitdone="scwin.searchCallback" ev:submiterror="" abortTrigger="">
+			</xf:submission>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[ 
+	/**
+	 * 우편번호 선택 화면 초기화 작업을 수행한다.
+	 */
+	scwin.onpageload = function() {
+		var param = com.getParameter();
+		scwin.closeCallbackFncName = param.callbackFn;
+		
+		ibx_searchKeyword.focus();
+		com.setEnterKeyEvent(tbl_search, scwin.btn_searchZip_onclick);
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+	
+	/**
+	 * 우편번호 선택를 조회한다.
+	 */
+	scwin.btn_searchZip_onclick = function() {
+		com.executeSubmission(sbm_getZipCodeList);
+	};
+	
+	scwin.searchCallback = function() {
+		grd_zipCode.setFocusedCell(0, 0);
+	};
+	
+	/**
+	 * 선택된 우편번호 정보를 반환한다.
+	 */
+	scwin.btn_confirm_onclick = function() {
+		var focusedRowIndex = grd_zipCode.getFocusedRowIndex();
+		
+		if (focusedRowIndex >= 0) {
+			var returnValue = dlt_zipCode.getRowJSON(focusedRowIndex);
+			com.closePopup(scwin.closeCallbackFncName, returnValue);
+		} else {
+			com.alert("우편번호를 선택하시기 바랍니다.");
+		}
+	};
+	
+	scwin.grd_zipCode_oncelldblclick = function(row,col) {
+		scwin.btn_confirm_onclick();
+	};
+	
+	scwin.grd_zipCode_onkeyup = function(e) {
+		if (e.keyCode === 13) {
+			scwin.btn_confirm_onclick();
+		}
+	};
+	
+	/**
+	 * 우편번호 정보 선택을 취소한다.
+	 */
+	scwin.btn_cancel_onclick = function() {
+		com.closePopup();
+	};
+	]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="contentWrap" id="content_popup_gp" style="">
+			<xf:group class="cnt_title_grp" id="group1" style="height:30px;">
+				<w2:textbox class="" id="textbox1" label="우편번호 조회" style="" tagname="h2"></w2:textbox>
+			</xf:group>
+			<xf:group id="grp_search" style="height:31px;">
+				<xf:group id="tbl_search" style="position: relative ;width:100.00%;height: 0;margin-top:5px;" class="w2tb" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:15%;" tagname="col"></xf:group>
+						<xf:group style="width:85%;" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">검색어</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<w2:attributes>
+								<w2:colspan>2</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:input id="ibx_searchKeyword" style="position: relative;width:183px;height:21px;" placeholder="주소명(동/읍/면/리/가) 입력" ref="data:dma_searchParam.SEARCH_KEYWORD" refSync="true"></xf:input>
+							<w2:anchor class="btn_com" id="btn_searchZip" outerDiv="" style="margin-left:10px;" ev:onclick="scwin.btn_searchZip_onclick">
+								<xf:label><![CDATA[검색]]></xf:label>
+							</w2:anchor>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<w2:gridView dataList="dlt_zipCode" scrollByColumn="false" id="grd_zipCode" style="position: relative;height: 300px;margin-top:5px;"
+				fixedColumnWithHidden="true" useShiftKey="false" autoFit="lastColumn" focusMove="true" focusMode="row" readOnly="true" ev:oncelldblclick="scwin.grd_zipCode_oncelldblclick" ev:onkeyup="scwin.grd_zipCode_onkeyup" class="cm_grid">
+				<w2:header id="header3" style="">
+					<w2:row id="row5" style="">
+						<w2:column blockSelect="false" id="column23" style="height:20px" inputType="text" width="85" value="우편번호"></w2:column>
+						<w2:column blockSelect="false" id="column21" style="height:20px" width="414" inputType="text" value="주소"></w2:column>
+					</w2:row>
+				</w2:header>
+				<w2:gBody id="gBody3" style="">
+					<w2:row id="row6" style="">
+						<w2:column blockSelect="false" id="ZIP_CD" style="height:20px" inputType="text" width="85" customFormatter="" displayFormat="###-###"></w2:column>
+						<w2:column blockSelect="false" id="ADDRESS" style="height:20px" width="414" inputType="text" textAlign="left"></w2:column>
+					</w2:row>
+				</w2:gBody>
+			</w2:gridView>
+			<xf:group class="" id="group4" style="height: 40px;">
+				<w2:anchor class="btn_com" id="btn_confirm" outerDiv="" style="margin-top:10px;margin-left:235px;" ev:onclick="scwin.btn_confirm_onclick">
+					<xf:label><![CDATA[확인]]></xf:label>
+				</w2:anchor>
+				<w2:anchor class="btn_com" id="btn_cancel" outerDiv="" style="margin-left:5px;margin-top:10px;" ev:onclick="scwin.btn_cancel_onclick">
+					<xf:label><![CDATA[취소]]></xf:label>
+				</w2:anchor>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

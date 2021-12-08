@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    <!-- 
+        ###################################################
+         파일명 : CBSC009P.xml
+         프로그램명 : 가입상품조회 및 선택
+         설 명 :  가입상품조회 및 선택
+         작성자 : 진태만
+         작성일 : 2017.10.06
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.10.06        진태만          최초작성
+        ###################################################
+     -->
+	 <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model> 
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+            	<w2:dataList baseNode="list" id="ds_condi"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="id_nm"
+            				name="id_nm" />
+            			<w2:column dataType="text" id="id_cd"
+            				name="id_cd" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<id_cd><![CDATA[01]]></id_cd>
+            				<id_nm><![CDATA[고객번호]]></id_nm>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+
+            	<w2:dataList baseNode="list" id="ds_CommList"
+            		repeatNode="map"
+            		userData2="//*/vector/data/fCon01910_List" />
+            	<w2:dataList baseNode="list" id="DsWs_Goods"
+            		repeatNode="map" userData2="//*/vector/data/multi" />
+            	<w2:dataList baseNode="list" id="DsWs_Warning"
+            		repeatNode="map" userData2="//*/WARNING" />
+            	<w2:dataList id="Ds_Goods" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sGdCd" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="GdTypeFlagCd" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGdName" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGnrzCd" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGnrzName" name="name5"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        
+        <!--// js Script include //--> 
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/>
+		
+        <script><![CDATA[
+
+/****************************************************************************
+ * 프로그램번호   : B061_Pop
+ * 프로그램명     : 마이플랜 등록 시 가입상품조회 및 선택
+ * 파일명         : B0601_Pop.xml
+ * 프로그램 내용  : 가입상품조회 및 선택
+ * 관련 프로그램  : 
+ * 작성자         : 신동주
+ * 작성일         : 2015-02-11
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+
+var sMyPlan;
+
+//---------------------------------------------------------------------------
+// function 명 : init
+// 내용        : 폼 로
+//---------------------------------------------------------------------------
+scwin.init = function() { 
+    
+	var pro = Promise.resolve();
+	window.top.util.winTopShowModalChk = "T";
+	util.winTopShowModal();
+
+	pro = pro.then(function(rv) {
+		return util.winTopShowModalPromise();
+	});
+
+	pro = pro.then(function(rv) {
+		// init 부분 함수 입력하는곳  // =================================================>
+		
+		var indata = $w.getParameter("param");
+		var inJSON = JSON.parse(indata); 	// 부모창에서 받아온 값( 예) inJSON.sMyPlan)
+	 
+		if (!util.isNull(inJSON.sMyPlan)) {
+			sMyPlan = inJSON.sMyPlan;
+		}
+	 
+	    scwin.lfn_Search();
+ 		
+		return ;		// init 함수를 종료하고자 할때 사용
+		// return Promise.reject("오류관련처리"); // =================================================>
+	});
+
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});
+	
+	//pro = pro.catch(function(rj) {
+		//util.winTopHideModal();
+		//alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+	//});
+	 
+	return pro; 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 현재판매중인 상품리스트를 조회
+//---------------------------------------------------------------------------
+scwin.lfn_Search = function(obj) {
+	//console.log("[/CBSC009P.xml] [lfn_Search()] ==> [가입상품조회] [TEST_01]" );  
+	
+ 	wconv.clear(Ds_Goods);
+ 
+    var MethodObj = new callService("com.inswave.longterm.prd.rle.task.BCA710Task", "getInsAvaGdList");		// 가입상품조회 Obj
+ 	MethodObj.setId("com.inswave.longterm.prd.rle.task.BCA710Task", "getInsAvaGdList");	// ID 셋팅  
+	MethodObj.setParam("sMyPlan", sMyPlan);	// Param 셋팅(마이플랜여부)  
+	MethodObj.setParam("sGdCd", wconv.trim(Edt_GdCd.getValue()));	//Param 셋팅(상품코드) 
+	MethodObj.setParam("sGdNm", wconv.trim(Edt_GdName.getValue()));	//Param 셋팅(상품명)
+	MethodObj.setParam("sUserID", util.getGdsValue("gUserID"));		
+	MethodObj.setUrl("/contract/CBSC009PController.do");  // 서버단 호출 URL  
+	MethodObj.setXPath("//*/vector/data/multi");			// XPath 
+	MethodObj.addXPath("//*/WARNING");		// XPath
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)]
+	MethodObj.send();		// 최종 전송 
+ 	//console.log("[/[/CBSC009P.xml] [lfn_Search()] ==> [01. 가입상품조회, 전송_완료] [TEST_91]");
+   
+	//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+	 
+	Ds_Goods.setJSON(_tranSync.getDsJson("multi"));				// 조회 DS 셋팅(조회 결과)   
+ 	DsWs_Warning.setJSON(_tranSync.getDsJson("WARNING"));  	// Warning DS 셋팅(조회 결과)   
+	//console.log("[/CBSC009P.xml] [lfn_Search()] ==> [Ds_Goods_갯수]"+ Ds_Goods.getRowCount() +"[Ds_Goods]"+ WebSquare.xml.serialize(Ds_Goods.getAllXML()) );  
+ 	
+  	if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    }
+    if (Ds_Goods.getRowCount() == 0) {
+        wprom.alert("플랜 등록 가능한 상품이 없습니다.");
+    } 
+    //console.log("[/lfn_Search.xml] [lfn_Search()] ==> [TEST_end]" ); 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : Grd_Goods_OnCellClick
+// 내용        : 그리드에서 상품선택시 처리(상위로 상품명,코드,종형 넘겨줌)
+//--------------------------------------------------------------------------- 
+scwin.Grd_Goods_OnCellClick = function(row,col) {
+	//console.log("[/CBSC009P.xml] [Grd_Goods_OnCellClick()] ==> [그리드에서 상품선택시 처리] [TEST_01]" );  
+	
+    if (col == 2) {
+        // 직업정보 넘겨줌.
+        // 상품코드|상품명|종형코드/종형명 
+			var returnMsg = Ds_Goods.getCellData(row, "sGdCd") + "^" + Ds_Goods.getCellData(row, "sGdName") + "^" +
+			                Ds_Goods.getCellData(row, "sGnrzCd") + "^" + Ds_Goods.getCellData(row, "sGnrzName")+ " " + "^" + 
+			                Ds_Goods.getCellData(row, "GdTypeFlagCd"); 
+			                
+			wprom.close(returnMsg); 
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_Close_OnClick(obj)
+// 내용        : 프로그램종료
+//---------------------------------------------------------------------------
+scwin.btn_Close_OnClick = function(obj) {
+    wprom.close("");
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B061"
+        	style="position:absolute; left:0px; top:0px;"
+        	userData1="가입상품조회 및 선택[B061_Pop]"
+        	userData2=" OnLoadCompleted:scwin.B061_OnLoadCompleted; ">
+        	<DataObjects>
+        		<DataObject />
+        	</DataObjects>
+        	<ServiceObjects>
+        		<ServiceObject />
+        	</ServiceObjects>
+        	<xf:group arcsize="6" class="search_area" id="Shape9" style="left:0px;top:30px;width:680px;" userData3="RoundRect">
+        	</xf:group><w2:textbox class="sty_lb_Search" id="Static0" label="상품코드"
+        		style="position:absolute;height:20px;width:60px;left:9px;VAlign:Middle;top:38px;"
+        		tagname="" />
+        	<xf:group arcsize="8" class="" id="Shape7"
+        		style="position:absolute;  bottom:317px;height:251px; left:4px; top:66px;width:674px;"
+        		userData3="RoundRect" />
+        	<xf:switch id="switch_119" style=" ">
+        		<xf:case id="Default_120" style=" ">
+        			<w2:gridView autoFit="allColumn"
+        				autoFitMinWidth="100" class="sty_Grid" dataList="Ds_Goods"
+        				ev:oncellclick="scwin.Grd_Goods_OnCellClick" focusMode="row"
+        				id="Grd_Goods" inputType="text" readOnly="true"
+        				style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  FixedColSizing:TRUE;  EndLineColor:default;  border:Flat;  AutoEnter:TRUE;  height:241px; left:0px; top:71px; width:680px;"
+        				tabIndex="3">
+        				<w2:header>
+        					<w2:row>
+        						<w2:column dataType="text"
+        							id="head_id_1001" inputType="text" readOnly="true"
+        							style="height:20px;" userData1="0" userData3="0"
+        							value="순번" width="36" />
+        						<w2:column dataType="text"
+        							id="head_id_1002" inputType="text" readOnly="true"  
+        							style="height:20px;" userData1="1" userData3="0"
+        							value="상품코드" width="80" />
+        						<w2:column dataType="text"
+        							id="head_id_1003" inputType="text" readOnly="true"
+        							style="height:20px;" userData1="2" userData3="0"
+        							value="상품명" width="275" />
+        						<w2:column dataType="text"
+        							id="head_id_1004" inputType="text" readOnly="true"
+        							style="height:20px;" userData1="3" userData3="0"
+        							value="종별" width="198" />
+        					</w2:row>
+        				</w2:header>
+        				<w2:gBody>
+        					<w2:row>
+        						<w2:column dataType="text"
+        							expression="rowIndex+1" id="seq" inputType="expression"
+        							readOnly="true" style="height:20px;" textAlign="right"
+        							userData1="0" userData3="0" width="36" />
+        						<w2:column dataType="text" id="sGdCd"
+        							inputType="text" readOnly="true" style="height:20px;" userData1="1"
+        							userData3="0" width="80" textAlign="left"/>
+        						<w2:column dataType="text" id="sGdName"
+        							inputType="link" readOnly="true" style="height:20px;" userData1="2"
+        							userData3="0" width="275" textAlign="left"/>
+        						<w2:column dataType="text"
+        							id="sGnrzName" inputType="text" readOnly="true" style="height:20px;"
+        							userData1="3" userData3="0" width="198" value="" textAlign="left"/>
+        					</w2:row>
+        				</w2:gBody>
+        			</w2:gridView>
+        		</xf:case>
+        	</xf:switch>
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.btn_Close_OnClick" id="btn_Close"
+        		style="position:absolute;ImageID:btn_Comm_Close;height:20px;left:630px;top:0px;"
+        		tabIndex="4" type="anchor">
+        		<xf:label><![CDATA[닫기]]></xf:label>
+        	</xf:trigger>
+        	<w2:textbox id="Static5" label="가입상품조회 및 선택"
+        		style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; width:197px;"
+        		tagname="" class="sub_pop_title01" />
+        	<xf:trigger class="btn_Comm_Search"
+        		ev:onclick="scwin.lfn_Search" id="btn_search"
+        		style="position:absolute;ImageID:btn_Comm_Search;left:605px;top:38px;width:45px;"
+        		tabIndex="5" type="anchor">
+        		<xf:label><![CDATA[조회]]></xf:label>
+        	</xf:trigger>
+        	<xf:input class="sty_ipt_search" id="Edt_GdCd"
+        		style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:79px;top:38px; width:104px;"
+        		tabIndex="9" />
+        	<xf:input class="sty_ipt_search" id="Edt_GdName"
+        		style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:245px;top:38px; width:152px;"
+        		tabIndex="11" />
+        	<w2:textbox class="sty_lb_Search" id="Static1" label="상품명"
+        		style="position:absolute;height:20px;width:48px;left:187px;VAlign:Middle;top:38px;"
+        		tagname="" />
+        	
+        </xf:group>
+    </body>
+</html>

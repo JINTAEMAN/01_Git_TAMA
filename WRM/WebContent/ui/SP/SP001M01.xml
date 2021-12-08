@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ev="http://www.w3.org/2001/xml-events"
+	xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<!-- 
+		#####################################################################
+		파일명 : SP001M01.xml
+		프로그램명 : 샘플 목록 조회 및 관리
+		설 명 : 샘플 목록을 조회하고 관리(등록,수정,삭제)하는 화면
+		작성자 : Inswave Systems
+		작성일 : 2018.12.18
+		
+		수정일자	수정자		 수정내용
+		=====================================================================
+		2018.12.18  Inswave Systems 최초작성
+		#####################################################################
+		-->
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataList baseNode="list" repeatNode="map" id="dlt_sample" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="chk" name="선택" dataType="text" ignoreStatus="true"></w2:column>
+						<w2:column id="SAMPLE_CD" name="샘플코드" dataType="text"></w2:column>
+						<w2:column id="SAMPLE_NM" name="샘플명" dataType="text"></w2:column>
+						<w2:column id="PARENT_SAMPLE_CD" name="부모샘플코드" dataType="text"></w2:column>
+						<w2:column id="SAMPLE_LEVEL" name="샘플레벨" dataType="number"></w2:column>
+						<w2:column id="SORT_ORDER" name="정렬순번" dataType="number"></w2:column>
+						<w2:column id="IS_USE" name="사용여부" dataType="text"></w2:column>
+						<w2:column id="FILE_PATH" name="샘플소스경로" dataType="text"></w2:column>
+						<w2:column id="CONTENT" name="샘플설명" dataType="text"></w2:column>
+						<w2:column id="KEYWORD" name="검색키워드" dataType="text"></w2:column>
+						<w2:column id="NOTE" name="비고" dataType="text"></w2:column>
+						<w2:column id="open" name="open" dataType="text" ignoreStatus="true"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" id="dma_search">
+					<w2:keyInfo>
+						<w2:key id="KEYWORD" name="검색키워드" dataType="text"></w2:key>
+						<w2:key id="IS_USE" name="사용여부" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+			<xf:submission id="sbm_searchSample" ref="data:json,dma_search" target="data:json,dlt_sample" action="/sample/searchSample"
+				method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous"
+				processMsg="" ev:submit="" ev:submitdone="scwin.sbm_searchSample_submitdone" ev:submiterror="" abortTrigger="">
+			</xf:submission>
+			<xf:submission id="sbm_saveSample" ref='data:json,["dlt_sample","dma_search"]' target="data:json,dlt_sample" action="/sample/updateSample"
+				method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous"
+				processMsg="" ev:submit="" ev:submitdone="" ev:submiterror="" abortTrigger="">
+			</xf:submission>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+	scwin.onpageload = function() {
+		com.executeSubmission(sbm_searchSample);
+		com.setEnterKeyEvent(tbl_search, scwin.btn_search_onclick);
+		com.setGridViewDelCheckBox([grd_sample]);
+	};
+
+	scwin.onpageunload = function() {
+
+	};
+
+	scwin.btn_search_onclick = function() {
+		com.executeSubmission(sbm_searchSample);
+	};
+
+	scwin.btn_add_onclick = function() {
+		var sampleCnt = dlt_sample.getTotalRow();
+		if (sampleCnt == 0) {
+			com.alert("조회 후 이용하세요.");
+			return;
+		}
+	
+		if (grd_sample.getFocusedRealRowIndex() === -1) {
+			grd_sample.setFocusedCell(0, "SAMPLE_CD");
+		}
+		var currSampleNm = dlt_sample.getCellData(grd_sample.getFocusedRealRowIndex(), "SAMPLE_NM");
+		var currSampleLevel = WebSquare.util.getNumber(dlt_sample.getCellData(grd_sample.getFocusedRealRowIndex(), "SAMPLE_LEVEL"));
+		if (sampleCnt != "0" && grd_sample.getFocusedRowIndex() == "-1") {
+			com.alert("샘플코드를 클릭하셔야 합니다.");
+		} else {
+			if (currSampleLevel < 2) {
+				scwin.selectLevel(currSampleNm);
+			} else {
+				scwin.equalLevel();
+			}
+		}
+	};
+	
+	/**
+	 * 샘플레벨이 1 또는 2일 경우에 실행되는 함수 Yes, No에 따라서 하위에 만들 것인지, 동일한 레벨로 만들 것인지 결정한다.
+	 */
+	scwin.selectLevel = function(returnValue) {
+		grd_sample.spanAll(true);
+		com.confirm(returnValue + " 메뉴 하위에 새로운 메뉴를 추가하시겠습니까?\n 취소를 누르면 동일한 레벨에 메뉴가 생성됩니다.", "scwin.selectLevelCallbak");
+	};
+	
+	scwin.selectLevelCallbak = function(value) {
+		if (value == true) {
+			scwin.lowerLevel();
+		} else {
+			scwin.equalLevel();
+		}
+	};  
+	
+	/**
+	 * 하위 레벨의 노드에 샘플을 추가한다.
+	 */
+	scwin.lowerLevel = function() {
+		var focusedRowIndex = grd_sample.getFocusedRealRowIndex();
+		var parentOrgCd = dlt_sample.getCellData(focusedRowIndex, "SAMPLE_CD");
+		var orgLevel = WebSquare.util.getNumber(dlt_sample.getCellData(focusedRowIndex, "SAMPLE_LEVEL")) + 1;
+		var sortOrder = 1;
+		var insertRowIndex = scwin.getInsertRowIndex(parentOrgCd);
+	
+		if (insertRowIndex === -1) {
+			insertRowIndex = focusedRowIndex + 1;
+		}
+		var orgCd = scwin.getInsertRowOrgCd(parentOrgCd, orgLevel, true);
+	
+		var isUse = "Y";
+		if (dma_search.get("IS_USE") == "N") {
+			isUse = "N";
+		}
+	
+		var insertJson = [ { "SAMPLE_CD" : orgCd, "PARENT_SAMPLE_CD" : parentOrgCd, "SAMPLE_LEVEL" : orgLevel, "SORT_ORDER" : sortOrder, "IS_USE" : isUse } ];
+		dlt_sample.insertJSON(insertRowIndex, insertJson);
+		grd_sample.setFocusedCell(insertRowIndex, "SAMPLE_NM", true);
+	};
+	
+	/**
+	 * 같은 레벨의 노트에 샘플을 추가한다.
+	 */
+	scwin.equalLevel = function() {
+		var focusedRowIndex = grd_sample.getFocusedRealRowIndex();
+		var parentOrgCd = dlt_sample.getCellData(focusedRowIndex, "PARENT_SAMPLE_CD");
+		var rowIndexArr = dlt_sample.getMatchedIndex("PARENT_SAMPLE_CD", parentOrgCd, true, 0, dlt_sample.getRowCount());
+		var orgLevel = WebSquare.util.getNumber(dlt_sample.getCellData(rowIndexArr[rowIndexArr.length - 1], "SAMPLE_LEVEL"));
+		var sortOrder = WebSquare.util.getNumber(dlt_sample.getCellData(rowIndexArr[rowIndexArr.length - 1], "SORT_ORDER")) + 1;
+		var insertRowIndex = scwin.getInsertRowIndex(parentOrgCd);
+		var orgCd = scwin.getInsertRowOrgCd(parentOrgCd, orgLevel, false);
+	
+		var isUse = "Y";
+		if (dma_search.get("IS_USE") == "N") {
+			isUse = "N";
+		}
+		
+		var insertJson = [ { "SAMPLE_CD" : orgCd, "PARENT_SAMPLE_CD" : parentOrgCd, "SAMPLE_LEVEL" : orgLevel, "SORT_ORDER" : sortOrder, "IS_USE" : isUse } ];
+	
+		dlt_sample.insertJSON(insertRowIndex, insertJson);
+		grd_sample.setFocusedCell(insertRowIndex, "SAMPLE_CD");
+		grd_sample.setFocusedCell(insertRowIndex, "SAMPLE_NM", true);
+	};
+	
+	/**
+	 * 새로 추가되는 샘플의 샘플 코드를 반환한다.
+	 */
+	scwin.getInsertRowOrgCd = function(parentOrgCd, orgLevel, isBottom) {
+		var OrgCdArr = dlt_sample.getMatchedColumnData("PARENT_SAMPLE_CD", parentOrgCd, "SAMPLE_CD", true, 0, dlt_sample.getRowCount());
+	
+		if (OrgCdArr.length > 0) {
+			var lastOrgCd = OrgCdArr[OrgCdArr.length - 1];
+			var nodeIndex = (orgLevel - 1) * 3;
+			var preNodeCd = lastOrgCd.substr(nodeIndex, 3);
+			var newNodeCd = com.fillZero(WebSquare.util.getNumber(preNodeCd) + 1, 3);
+			return lastOrgCd.substr(0, nodeIndex) + lastOrgCd.substr(nodeIndex).replace(preNodeCd, newNodeCd);
+		} else {
+			if (isBottom) {
+				var nodeIndex = parentOrgCd.indexOf("000");
+				return parentOrgCd.substr(0, nodeIndex) + parentOrgCd.substr(nodeIndex).replace("000", "001");
+			} else {
+				var nodeIndex = parentOrgCd.indexOf("000");
+				var preNodeCd = parentOrgCd.substr(nodeIndex, 3);
+				var newNodeCd = com.fillZero(WebSquare.util.getNumber(preNodeCd) + 1, 3);
+				return parentOrgCd.substr(0, nodeIndex) + parentOrgCd.substr(nodeIndex).replace(preNodeCd, newNodeCd);
+			}
+		}
+	};
+	
+	/**
+	 * 새로 추가되는 샘플으로 RowIndex를 반환한다.
+	 */
+	scwin.getInsertRowIndex = function(parentOrgCd) {
+		var rowIndexArr = dlt_sample.getMatchedIndex("PARENT_SAMPLE_CD", parentOrgCd, true, 0, dlt_sample.getRowCount());
+		if (rowIndexArr.length > 0) {
+			var lastOrgCd = dlt_sample.getCellData(rowIndexArr[rowIndexArr.length - 1], "SAMPLE_CD");
+			var rowIndex = scwin.getInsertRowIndex(lastOrgCd);
+			if (rowIndex !== -1) {
+				return rowIndex;
+			} else {
+				return rowIndexArr[rowIndexArr.length - 1] + 1;
+			}
+		} else {
+			return -1;
+		}
+	};
+	
+	scwin.btn_cancel_onclick = function() {
+		dlt_sample.undoAll();
+		dlt_sample.removeRows(dlt_sample.getInsertedIndex());
+	};
+	
+	scwin.btn_save_onclick = function() {
+		var valInfo = [ { id : "SAMPLE_CD", mandatory : true }, 
+						{ id : "SAMPLE_NM", mandatory : true } ];
+	
+		var modifiedCount = dlt_sample.getModifiedIndex().length;
+		
+		if (modifiedCount > 0) {
+			if (com.validateGridView(grd_sample, valInfo)) {
+				com.confirm(modifiedCount + "건의 데이타를 반영하시겠습니까", function(rtn) {
+					if (rtn) { 
+						com.executeSubmission(sbm_saveSample);
+					}
+				});
+			}
+		} else {
+			com.alert("저장할 데이터가 없습니다.");
+		}
+	};
+	
+	scwin.btn_excel_onclick = function() {
+		com.downLoadExcel(grd_sample);
+	};
+	
+	scwin.sbm_searchSample_submitdone = function(e) {
+		spn_sampleCnt.setValue(dlt_sample.getRowCount());
+	};
+	
+	scwin.grd_sample_oncelldblclick = function(row,col) {
+		if (dlt_sample.getColumnID(col) == "SAMPLE_CD") {
+			scwin.openSample(row, col);
+		}
+	};
+	
+	scwin.openSample = function(rowIndex, colId, nowValue) {
+		var _realRowIdx = grd_sample.getRealRowIndex(rowIndex);
+		var sampleCd = dlt_sample.getCellData(_realRowIdx, "SAMPLE_CD");
+		var sampleNm = dlt_sample.getCellData(_realRowIdx, "SAMPLE_NM");
+		var filePath = dlt_sample.getCellData(_realRowIdx, "FILE_PATH");
+		
+		if (filePath !== "") {
+			$p.top().wfm_side.getWindow().scwin.openMenu(sampleNm, filePath, sampleCd, null, "SP");
+		}
+	};
+	
+	scwin.displayImage = function(data, formattedData, rowIndex, colIndex){
+		var cellData = dlt_sample.getCellData(rowIndex, "FILE_PATH");
+		if (cellData != "") {
+			return "<img src='/cm/images/contents/icon_n_act.png'/>";
+		} else {
+			return "";
+		}
+	};
+	
+	scwin.grd_sample_oncellclick = function(row,col) {
+		if (col == 3) {
+			var filePath = dlt_sample.getCellData(row, "FILE_PATH");
+			if(filePath != ""){
+				scwin.openSample(row);
+			}
+		}
+	};
+	
+	scwin.grp_content_onclick = function(e) {
+		// GridView 안에서 Click 이벤트가 발생할 경우 화면 레이아웃 영역 밖으로 이벤트가 전파되지 않도록 막음
+		e.stopPropagation();
+	};
+	]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="contentWrap" id="grp_content" style="" ev:onclick="scwin.grp_content_onclick">
+			<w2:wframe id="" src="/cm/common/wf_titleFav.xml" style=""></w2:wframe>
+			<xf:group class="tbl_search" id="tbl_search" style="" adaptive="layout">
+				<xf:group adaptive="layout" class="w2tb tbl_sc" adaptiveThreshold="768" id="" style="" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:80px;" tagname="col"></xf:group>
+						<xf:group style="width:230px;" tagname="col"></xf:group>
+						<xf:group style="width:60px;" tagname="col"></xf:group>
+						<xf:group style="width:230px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group tagname="tr" style="">
+						<xf:group class="w2tb_th" style="" tagname="th">검색조건</xf:group>
+						<xf:group class="w2tb_td" style="" tagname="td">
+							<xf:input id="ibx_keyword" style="width:200px;height:20px;" ref="data:dma_search.KEYWORD" tengeMask="s"></xf:input>
+						</xf:group>
+							<xf:group class="w2tb_th" tagname="th">사용여부</xf:group>
+							<xf:group class="w2tb_td" tagname="td">
+								<xf:select1 id="" ref="data:dma_search.IS_USE" selectedIndex="1" cols="" appearance="full"
+									style="margin-right: 10px;min-width: 200px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[전체]]></xf:label>
+											<xf:value><![CDATA[]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[사용]]></xf:label>
+											<xf:value><![CDATA[Y]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[미사용]]></xf:label>
+											<xf:value><![CDATA[N]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						<xf:group class="w2tb_td" style="float: right;" tagname="td">
+							<xf:group class="fr" id="">
+							</xf:group>
+							<w2:anchor class="btn_sh" ev:onclick="scwin.btn_search_onclick" id="btn_search" outerDiv="true"
+								style="left:0px;top:0px;margin-right: 5px;">
+								<xf:label><![CDATA[조회]]></xf:label>
+							</w2:anchor>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group class="section" id="" style="">
+				<xf:group class="defaultbox" id="" style="">
+					<w2:textbox class="df_tt" id="" label="샘플화면 목록" style="" tagname="h2"></w2:textbox>
+					<xf:group class="fr" id="" style="height:22px;">
+						<w2:span id="spn_sampleCnt" style="" class="df_total" label="" displayFormat="건"></w2:span>
+						<w2:anchor class="btn_gcm" clickEventElement="outerDiv" ev:onclick="scwin.btn_add_onclick" id="btn_add" outerDiv="true" style="">
+							<xf:label><![CDATA[등록]]></xf:label>
+						</w2:anchor>
+						<w2:anchor class="btn_gcm" clickEventElement="outerDiv" ev:onclick="scwin.btn_cancel_onclick" id="btn_cancel" outerDiv="true" style="">
+							<xf:label><![CDATA[취소]]></xf:label>
+						</w2:anchor>
+						<w2:anchor class="btn_gcm" clickEventElement="outerDiv" ev:onclick="scwin.btn_save_onclick" id="btn_save" outerDiv="true" style="">
+							<xf:label><![CDATA[저장]]></xf:label>
+						</w2:anchor>
+						<w2:anchor class="btn_gcm" clickEventElement="outerDiv" ev:onclick="scwin.btn_excel_onclick"
+							id="btn_excel" outerDiv="true" style="">
+							<xf:label><![CDATA[엑셀]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+
+				</xf:group>
+			</xf:group>
+			<w2:gridView autoFit="allColumn" class="cm_grid" dataList="data:dlt_sample" ev:onafteredit=""
+				ev:oncellclick="scwin.grd_sample_oncellclick" ev:onrowindexchange="" ev:onviewchange="" fixedColumnWithHidden="true"
+				id="grd_sample" ignoreCellClick="false" rowNumVisible="10" rowStatusHeaderValue="상태" rowStatusVisible="true"
+				rowStatusWidth="40" scrollByColumn="false" style="height:400px;" useShiftKey="true" visibleRowNum="" wheelRows=""
+				ev:oncelldblclick="scwin.grd_sample_oncelldblclick" editModeEvent="" adaptive="crosstab">
+				<w2:caption style="" id="caption1" value="this is a grid caption."></w2:caption>
+				<w2:header style="" id="header1">
+					<w2:row style="" id="row1">
+						<w2:column removeBorderStyle="false" width="40" inputType="checkbox" id="column21" value="선택" blockSelect="false"
+							displayMode="label" fixColumnWidth="true" style="height:25px;">
+						</w2:column>
+						<w2:column removeBorderStyle="false" width="94" inputType="text" id="column19" value="샘플코드" blockSelect="false"
+							displayMode="label" style="height:25px;">
+						</w2:column>
+						<w2:column removeBorderStyle="false" width="142" inputType="text" id="column17" value="샘플명" blockSelect="false"
+							displayMode="label" style="height:25px;">
+						</w2:column>
+						<w2:column removeBorderStyle="false" width="40" inputType="text" style="height:25px;" id="column22" value="실행"
+							blockSelect="false" displayMode="label">
+						</w2:column>
+						<w2:column removeBorderStyle="false" width="65" inputType="text" id="column9" value="사용여부" blockSelect="false"
+							displayMode="label" style="height:25px;">
+						</w2:column>
+						<w2:column removeBorderStyle="false" width="270" inputType="text" id="column7" value="샘플소스경로" blockSelect="false"
+							displayMode="label" style="height:25px;">
+						</w2:column>
+						<w2:column removeBorderStyle="false" width="176" inputType="text" id="column5" value="샘플설명" blockSelect="false"
+							displayMode="label" style="height:25px;">
+						</w2:column>
+						<w2:column removeBorderStyle="false" width="102" inputType="text" id="column3" value="검색키워드" blockSelect="false"
+							displayMode="label" style="height:25px;">
+						</w2:column>
+						<w2:column removeBorderStyle="false" width="73" inputType="text" id="column1" value="비고" blockSelect="false"
+							displayMode="label" style="height:25px;">
+						</w2:column>
+					</w2:row>
+				</w2:header>
+				<w2:gBody style="" id="gBody1">
+					<w2:row style="" id="row2">
+						<w2:column removeBorderStyle="false" width="70" inputType="checkbox" id="chk" blockSelect="false"
+							displayMode="label" style="height:25px;">
+						</w2:column>
+						<w2:column removeBorderStyle="false" width="90" inputType="text" id="SAMPLE_CD" blockSelect="false"
+							displayMode="label" readOnly="true" fixColumnWidth="true" class="req" style="height:25px;">
+						</w2:column>
+						<w2:column removeBorderStyle="false" width="142" inputType="drilldown" id="SAMPLE_NM" blockSelect="false"
+							displayMode="label" textAlign="left" depthColumn="SAMPLE_LEVEL" depthType="div" showDepth="2" class="req"
+							style="height:25px;">
+						</w2:column>
+						<w2:column removeBorderStyle="false" width="40" inputType="text" style="height:25px;" id="open" blockSelect="false"
+							displayMode="label" fixColumnWidth="true" imageHeight="20" imageWidth="20" customFormatter="scwin.displayImage"
+							readOnly="true">
+						</w2:column>
+						<w2:column removeBorderStyle="false" width="65" inputType="checkbox" id="IS_USE" blockSelect="false"
+							displayMode="label" valueType="other" falseValue="N" trueValue="Y" fixColumnWidth="true" style="height:25px;">
+						</w2:column>
+						<w2:column removeBorderStyle="false" width="270" inputType="text" id="FILE_PATH" blockSelect="false"
+							displayMode="label" textAlign="left" style="height:25px;">
+						</w2:column>
+						<w2:column removeBorderStyle="false" width="176" inputType="text" id="CONTENT" blockSelect="false"
+							displayMode="label" textAlign="left" style="height:25px;">
+						</w2:column>
+						<w2:column removeBorderStyle="false" width="102" inputType="text" id="KEYWORD" blockSelect="false"
+							displayMode="label" textAlign="left" style="height:25px;">
+						</w2:column>
+						<w2:column removeBorderStyle="false" width="73" inputType="text" id="NOTE" blockSelect="false" displayMode="label"
+							textAlign="left" style="height:25px;">
+						</w2:column>
+					</w2:row>
+				</w2:gBody>
+			</w2:gridView>
+		</xf:group>
+	</body>
+</html>

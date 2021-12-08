@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head style="">
+     <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+         <xf:instance>
+          <data xmlns="" />
+         </xf:instance>
+         <w2:dataCollection baseNode="map">
+           <!-- 조회 dataMap -->
+          <w2:dataMap baseNode="map" id="dma_Search">
+           <w2:keyInfo>
+            <w2:key id="SCH_YYYY" name="name1" dataType="text"></w2:key>
+            <w2:key id="SCH_MM" name="name2" dataType="text"></w2:key>
+            <w2:key id="SCH_EQUIP" name="name3" dataType="text"></w2:key>
+            <w2:key id="ANALYSIS_EMPNO" name="name4" dataType="text"></w2:key>
+           </w2:keyInfo>
+          </w2:dataMap> 
+          <!--// 분석설비 정보 Ds -->
+          <w2:dataList id="dlt_VCodeListXX04" baseNode="list" saveRemovedData="true" repeatNode="map">
+           <w2:columnInfo>
+            <w2:column id="CODE_GROUP" name="name1" dataType="text"></w2:column>
+            <w2:column id="LOCAL_CODE" name="name2" dataType="text"></w2:column>
+            <w2:column id="LOCAL_KNAME" name="name3" dataType="text"></w2:column>
+            <w2:column id="BUFFER1" name="name4" dataType="text"></w2:column>
+            <w2:column id="BUFFER2" name="name5" dataType="text"></w2:column>
+            <w2:column id="BUFFER3" name="name6" dataType="text"></w2:column>
+            <w2:column id="BUFFER4" name="name7" dataType="text"></w2:column>
+           </w2:columnInfo>
+          </w2:dataList>
+          <!--// 분석자 정보 Ds -->
+          <w2:dataList id="dlt_VCodeListAM01" baseNode="list" saveRemovedData="true" repeatNode="map">
+           <w2:columnInfo>
+            <w2:column id="CODE_GROUP" name="name1" dataType="text"></w2:column>
+            <w2:column id="LOCAL_CODE" name="name2" dataType="text"></w2:column>
+            <w2:column id="LOCAL_KNAME" name="name3" dataType="text"></w2:column>
+            <w2:column id="BUFFER1" name="name4" dataType="text"></w2:column>
+            <w2:column id="BUFFER2" name="name5" dataType="text"></w2:column>
+            <w2:column id="BUFFER3" name="name6" dataType="text"></w2:column>
+            <w2:column id="BUFFER4" name="name7" dataType="text"></w2:column>
+           </w2:columnInfo>
+          </w2:dataList> 
+           <!--// 분석년월 - 년 정보 Ds -->
+          <w2:dataList id="dlt_Rh01YyList" baseNode="list" saveRemovedData="true" repeatNode="map">
+           <w2:columnInfo>
+           <w2:column id="code" name="name1" dataType="text"></w2:column>
+            <w2:column id="lable" name="name2" dataType="text"></w2:column>
+           </w2:columnInfo>
+            <w2:data use="true">
+            <w2:row>
+             <code><![CDATA[2019]]></code>
+             <lable><![CDATA[2019]]></lable>
+            </w2:row>
+            <w2:row>
+             <code><![CDATA[2018]]></code>
+             <lable><![CDATA[2018]]></lable>
+            </w2:row>
+             </w2:data>
+          </w2:dataList> 
+          <!--// 분석년월 - 월 정보 Ds -->
+          <w2:dataList id="dlt_month" baseNode="list" saveRemovedData="true" repeatNode="map">
+           <w2:columnInfo>
+            <w2:column id="code" name="name1" dataType="text"></w2:column>
+            <w2:column id="lable" name="name2" dataType="text"></w2:column>
+           </w2:columnInfo>
+           <w2:data use="true">
+            <w2:row>
+             <code><![CDATA[01]]></code>
+             <lable><![CDATA[01]]></lable>
+            </w2:row>
+            <w2:row>
+             <code><![CDATA[02]]></code>
+             <lable><![CDATA[02]]></lable>
+            </w2:row>
+            <w2:row>
+             <code><![CDATA[03]]></code>
+             <lable><![CDATA[03]]></lable>
+            </w2:row>
+            <w2:row>
+             <code><![CDATA[04]]></code>
+             <lable><![CDATA[04]]></lable>
+            </w2:row>
+            <w2:row>
+             <code><![CDATA[05]]></code>
+             <lable><![CDATA[05]]></lable>
+            </w2:row>
+            <w2:row>
+             <code><![CDATA[06]]></code>
+             <lable><![CDATA[06]]></lable>
+            </w2:row>
+            <w2:row>
+             <code><![CDATA[07]]></code>
+             <lable><![CDATA[07]]></lable>
+            </w2:row>
+            <w2:row>
+             <code><![CDATA[08]]></code>
+             <lable><![CDATA[08]]></lable>
+            </w2:row>
+            <w2:row>
+             <code><![CDATA[09]]></code>
+             <lable><![CDATA[09]]></lable>
+            </w2:row>
+            <w2:row>
+             <code><![CDATA[10]]></code>
+             <lable><![CDATA[10]]></lable>
+            </w2:row>
+            <w2:row>
+             <code><![CDATA[110]]></code>
+             <lable><![CDATA[110]]></lable>
+            </w2:row>
+            <w2:row>
+             <code><![CDATA[12]]></code>
+             <lable><![CDATA[12]]></lable>
+            </w2:row>
+           </w2:data>
+          </w2:dataList>
+          <!--// 분석일정 정보 Ds -->
+          <w2:dataList id="dlt_Rh01List" baseNode="list" saveRemovedData="true" repeatNode="map">
+           <w2:columnInfo>
+            <w2:column id="DD" name="name1" dataType="text"></w2:column>
+            <w2:column id="WEEK" name="name2" dataType="text"></w2:column>
+            <w2:column id="SEQ_AM" name="name3" dataType="text"></w2:column>
+            <w2:column id="BGCOLOR_AM" name="name4" dataType="text"></w2:column>
+            <w2:column id="TITLE_AM" name="name5" dataType="text"></w2:column>
+            <w2:column id="SEQ_PM" name="name6" dataType="text"></w2:column>
+            <w2:column id="BGCOLOR_PM" name="name7" dataType="text"></w2:column>
+            <w2:column id="TITLE_PM" name="name8" dataType="text"></w2:column>
+            <w2:column id="SEQAM0" name="name9" dataType="text"></w2:column>
+            <w2:column id="SEQAM1" name="name10" dataType="text"></w2:column>
+            <w2:column id="SEQAM2" name="name11" dataType="text"></w2:column>
+            <w2:column id="col12" name="name12" dataType="text"></w2:column>
+            <w2:column id="col13" name="name13" dataType="text"></w2:column>
+            <w2:column id="col14" name="name14" dataType="text"></w2:column>
+            <w2:column id="col15" name="name15" dataType="text"></w2:column>
+           </w2:columnInfo>
+            <w2:data use="true">
+            <w2:row>
+	             <DD><![CDATA[01]]></DD>
+	             <WEEK><![CDATA[1]]></WEEK>
+	             <SEQ_AM><![CDATA[1]]></SEQ_AM>
+	       		<TITLE_AM><![CDATA[TEST]]></TITLE_AM>
+            </w2:row>
+             </w2:data>
+          </w2:dataList>
+         </w2:dataCollection>
+         <w2:workflowCollection>
+      </w2:workflowCollection>
+      <!--  분석일정 초기화  -->
+         <xf:submission id="sbm_getSelectBo01Onload" ref='data:json,["dlt_Rh01YyList","dlt_VCodeListXX04","dlt_VCodeListAM01"]'
+          target='data:json,["dlt_Rh01YyList","dlt_VCodeListXX04","dlt_VCodeListAM01"]' action="/rh01/rh01Onload.do" method="post"
+          mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous"
+          processMsg="" ev:submit="" ev:submitdone="scwin.sbm_getSelectBo01Onload_submitdone" ev:submiterror="" abortTrigger="">
+         <!--  분석일정  조회  -->
+         </xf:submission>
+         <xf:submission id="sbm_selectRh01CalendarList" ref="data:json,dma_Search" target="data:json,dlt_Rh01List" action="/rh01/rh01List.do" method="post"
+          mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous"
+          processMsg="" ev:submit="" ev:submitdone="scwin.sbm_selectRh01CalendarList_submitdone" ev:submiterror="" abortTrigger="">
+         </xf:submission>
+        </xf:model>
+        <script type="text/javascript"><![CDATA[
+  
+	//**********************************************************
+	// 초기화 함수(셀렉트 박스의 항목을 가져온다)
+	//**********************************************************
+	 scwin.init = function() {
+	 	console.log("[/RH01.xml] [init()] ==> [TEST_01] [분석일정 화면_초기화]");
+	  
+	  	// common.executeSubmission("sbm_getSelectBo01Onload"); 
+	  	
+	  	scwin.resetLoad(); 		// 자동 조회 
+	 };
+ 
+	//**********************************************************
+	// 분석일정 초기화 정보 조회 결과
+	//**********************************************************
+	 scwin.resetLoad = function() {
+		console.log("[/RH01.xml] [resetLoad()] ==> [TEST_01]");
+	  
+		 var sToday = new Date();   // 오늘 날짜		  
+		var sYear = sToday.getFullYear();
+		var sMonth = sToday.getMonth()+1;
+		var sDay = sToday.getDate(); 
+		if ((sMonth + "").length < 2)  sMonth = "0" + sMonth;
+		if ((sDay + "").length < 2)  sDay = "0" + sDay;
+		
+		//  var nRow = dlt_Rh01YyList.insertRow(); 
+		//  dlt_Rh01YyList.setCellData( nRow, "YYYY",  sYear);    // YYYY
+		  //nRow = dlt_Rh01YyList.insertRow();
+		  //dlt_Rh01YyList.setRowPosition(5);
+		 
+		sbx_schyyyy.setValue(sYear);    // 분석년월 - 년
+		sbx_ssch_mm.setValue(sMonth); // 분석년월 - 월
+		sbx_sequip.setValue("EQ002");   // 분석설비  ==> TEST @@@ ===>
+		console.log("[/RH01.xml] [resetLoad()] ==>  [TEST_03] [sbx_schyyyy.getValue()]"+ sbx_schyyyy.getValue() );
+		   
+		dlt_Rh01List.removeAll();  
+		var nRow = dlt_Rh01List.insertRow();  
+		dlt_Rh01List.setCellData( nRow , "DD" ,  "01" );    // 분석일정 데이타 입력 ===> TEST @@@ ===>
+		dlt_Rh01List.setCellData( nRow , "WEEK" ,  "1" ); 
+		dlt_Rh01List.setCellData( nRow , "SEQ_AM" ,  "07" ); 
+		dlt_Rh01List.setCellData( nRow , "TITLE_AM" ,  "TEST" );   
+		console.log("[/RH01.xml] [resetLoad()] ==>  [TEST_41] [dlt_Rh01List.getValue()]"+ dlt_Rh01List.getRowCount() );
+		   	
+		dma_Search.set("SCH_YYYY" , sYear);   // 분석년월 - 년
+		dma_Search.set("SCH_MM" , sMonth);   // 분석년월 - 월
+		 
+		scwin.makeGrid();  		// 77.  Grid 다시 생성(동적 Grid)
+	 };
+ 
+	//**********************************************************
+	// 77.  Grid 다시 생성(동적 Grid)
+	//**********************************************************
+	 scwin.makeGrid = function() {
+		console.log("[/RH01.xml] [makeGrid()] ==> [TEST_01]" );
+		
+		var sToday = new Date();   // 오늘 날짜		  
+		var sYear = sToday.getFullYear();
+		var sMonth = sToday.getMonth()+1;
+		var sDay = sToday.getDate(); 
+		if ((sMonth + "").length < 2)  sMonth = "0" + sMonth;
+		if ((sDay + "").length < 2)  sDay = "0" + sDay;
+		console.log("[/RH01.xml] [makeGrid()] ==> [TEST_02] [오늘 날짜]"+ sToday +"[sYear]"+ sYear +"[sMonth]"+ sMonth );
+		 	
+		var sFirstDate = new Date(sToday.getFullYear(), sToday.getMonth(), 1);  		// 이번 달의 첫째 날
+		var nFirstDatetMonth = parseInt(sFirstDate.getMonth()) +1 ;      // 이번 달의 첫째 날_달
+		var sLastDate = new Date(sToday.getFullYear(), sToday.getMonth()+1, 0); 	// 이번 달의 마지막 날
+		var nLastDatetMonth = parseInt(sLastDate.getMonth()) +1 ;      // 이번 달의 마지막 날_달
+		var nLastDatetDay = parseInt(sLastDate.getDate());      // 이번 달의 마지막 날_일
+		console.log("[/RH01.xml] [makeGrid()] ==>  [TEST_03] [이번 달의 첫째 날]"+ sFirstDate +"[이번 달의 첫째 날2]"+ sFirstDate.getFullYear() +"-"+ nFirstDatetMonth +"-"+ parseInt(sFirstDate.getDate()) +"[이번 달의 첫째 날_요일]"+ sFirstDate.getDay() );
+		console.log("[/RH01.xml] [makeGrid()] ==>  [TEST_04] [이번 달의 마지막 날]"+ sLastDate +"[이번 달의 마지막 날2]"+ sLastDate.getFullYear() +"-"+ nLastDatetMonth +"-"+ parseInt(sLastDate.getDate()) +"[이번 달의 마지막 날_요일]"+ sLastDate.getDay() );
+		
+		var column = {};
+		var columnArr = [];
+		var gridHeader ="", gridBody="";
+		//var GlassCount = dlt_GlassList.getRowCount(); 
+		var GlassCount = 7;   // 요일 7일
+		//var glass_code = dma_BaseMap.get("GLASS_CODE");   // Glass 코드
+		//console.log("[/RH01.xml] [makeGrid()] ==> [TEST_05] [glass_code]"+ glass_code );
+	
+		// 2. 분석일정 정보 Grid 생성 시작 =============================================================================
+		// 2. 분석일정 정보 Grid 생성 
+		//     : xml 형식을 정의 하면 <w2:gridView 에 xmlns:w2="http://www.inswave.com/websquare" xmlns:ev="http://www.w3.org/2001/xml-events" 포함 합니다.
+	   var gridStr = '<w2:gridView id="grd_list" xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms" '
+		+ '               dataList="data:dlt_Rh01YyList" style="height:685px;" width="100" autoFit="" class="cm_grid" defaultCellHeight="30" ev:onafteredit="" ev:oncellclick="scwin.grd_list_oncellclick" ev:onrowindexchange="" fixedColumnWithHidden="true" ignoreCellClick="false" overflowX="auto" overflowY="auto" readOnly="true" rowStatusHeaderValue="" rowStatusVisible="" scrollByColumn="false" showSortableImage="" sortEvent="onclick" sortable="true" useShiftKey="true" visibleRowNum="">'
+		+ ' <w2:header id="header1" style="">'
+		// 1-2. 분석일정 정보 Grid 오른쪽 Header 칼럼명 생성
+	   + '<w2:row id="row1" style="">'
+		+ '   <w2:column blockSelect="false" id="WEEK_SUN" width="170" value="일" style="height:40px;border-bottom:1.5pt solid #b3b3b3;" removeBorderStyle="false" inputType="text" displayMode="label"></w2:column>'   // 일
+		+ '   <w2:column blockSelect="false" id="WEEK_MON" width="170" value="월" style="height:40px;border-bottom:1.5pt solid #b3b3b3;" removeBorderStyle="false" inputType="text" displayMode="label"></w2:column>'   // 월
+		+ '   <w2:column blockSelect="false" id="WEEK_TUE" width="170" value="화" style="height:40px;border-bottom:1.5pt solid #b3b3b3;" removeBorderStyle="false" inputType="text" displayMode="label"></w2:column>'   // 화
+		+ '   <w2:column blockSelect="false" id="WEEK_WEN" width="170" value="수" style="height:40px;border-bottom:1.5pt solid #b3b3b3;" removeBorderStyle="false" inputType="text" displayMode="label"></w2:column>'   // 수
+		+ '   <w2:column blockSelect="false" id="WEEK_THU" width="170" value="목" style="height:40px;border-bottom:1.5pt solid #b3b3b3;" removeBorderStyle="false" inputType="text" displayMode="label"></w2:column>'   // 목
+		+ '   <w2:column blockSelect="false" id="WEEK_FRI" width="170" value="금" style="height:40px;border-bottom:1.5pt solid #b3b3b3;" removeBorderStyle="false" inputType="text" displayMode="label"></w2:column>'   // 금
+		+ '   <w2:column blockSelect="false" id="WEEK_SAT" width="170" value="토" style="height:40px;border-bottom:1.5pt solid #b3b3b3;" removeBorderStyle="false" inputType="text" displayMode="label"></w2:column>'   // 토
+		+ '</w2:row>'
+		+ ' </w2:header>'
+	
+		var cnt = 0;
+		var nRow = 0;
+		var nRow2 = 0;
+		var sRow = "";    // Row 값 ID
+		// 2. 분석일정 정보 Grid Body 생성 시작 ===============================================================================
+		// 1-4. 분석일정 정보 Grid Body 생성(DATE, T1)
+		gridStr += '<w2:gBody id="gBody1" style="">'
+		gridStr += '<w2:row id="row1" style="">'		// 줄(<tr>과 유사)
+		console.log("[/RH01.xml] [makeGrid()] ==> [TEST_05]" );
+		 
+		var nFirstDateWeek = parseInt(sFirstDate.getDay());      // 이번 달의 첫째 날_요일
+		 console.log("[/RH01.xml] [makeGrid()] ==> [TEST_06] [nFirstDateWeek]"+ nFirstDateWeek );
+		 
+		// nFirstDateWeek = 0;  //  이번 달의 첫째 날_요일 ==> TEST @@ ===>
+		 
+		// 1일이 시작되는 칸을 맞추어 줌(요일 체크)
+		for(i=0; i<nFirstDateWeek; i++) 
+		{
+			var nMonthDayId2 = "MONTH_DAY_NULL"+ parseInt(i+1);
+			gridStr += ' <w2:column blockSelect="false" id="'+ nMonthDayId2 +'" width="170" removeBorderStyle="false" style="" inputType="text" displayMode="label" textAlign="left"></w2:column>';    // 날짜 없음
+			
+			cnt = cnt + 1;
+		}	 // end fo for()
+		
+		// nLastDatetDay = nLastDatetDay * 3;
+		var nMonthDayId = "";
+		var nMonthDayId = 0;
+		
+		for(var i=0; i<nLastDatetDay*3; i++)   		// 이번 달의 마지막 날까지 Loop
+		{ 
+		    nRow = i + 1; 
+			nRow2 = i + 2;
+			    
+			if (i == i +7)    //  i가 8 이면
+			{
+				 nRow2 = nRow2 + 14;		// 날짜 ID Row
+				 //nRow = i + 2;				// 날짜 값 Row
+			}
+			else
+			{
+			}
+			sMonthDayId = "MONTH_DAY"+ parseInt(nRow2);    // 날짜 ID
+			nMonthDay = parseInt(nRow); 		// 날짜 값 
+			sRow = "row"+ parseInt(nRow2);    // Row 값 ID
+			
+			// 날짜 설정 @@@ ===>
+//			if (i == 4 && nFirstDateWeek == 0)   //  4일이고 일요읾이면 
+//			{ 
+//				gridStr += ' <w2:column blockSelect="false" id="'+ nMonthDayId +'" value="'+ nMonthDay +'" width="170" removeBorderStyle="false" style="" inputType="text" displayMode="label" textAlign="left"></w2:column>';   // 날짜(8월이면 1 ~ 31일)
+//			}
+//			else
+//			{
+				gridStr += ' <w2:column blockSelect="false" id="'+ sMonthDayId +'" value="'+ nMonthDay +'" width="170" removeBorderStyle="false" style="" inputType="text" displayMode="label" textAlign="left"></w2:column>';   // 날짜(8월이면 1 ~ 31일)
+		//	}
+					 
+			cnt = cnt + 1;
+			var sTITLE_AM = "";
+		 	
+			for(var j=0; j<=dlt_Rh01List.getRowCount(); j++)		// dlt_Rh01List Ds 실제 데이타 Loop
+			{
+				//	console.log("[/RH01.java] [makeGrid()] ==> [TEST_50] [i_번째]"+ i );
+				
+				var nDay = parseInt(dlt_Rh01List.getCellData(j , "DD"));
+				// console.log("[/RH01.java] [makeGrid()] ==> [TEST_51] [i_번째]"+ i +"[nDay]"+ nDay );
+				
+				if (i == nDay)   // 일이 같으면
+				{ 
+					var sWEEK = dlt_Rh01List.getCellData(j , "WEEK");
+					var sSEQ_AM = dlt_Rh01List.getCellData(j , "SEQ_AM");   // SEQ_AM(AM)
+					sTITLE_AM = dlt_Rh01List.getCellData(j , "TITLE_AM");   // 제목(AM)
+					var sTITLE_PM = dlt_Rh01List.getCellData(j , "TITLE_PM");   // 제목(PM) 
+					//console.log("[/RH01.java] [makeGrid()] ==> [TEST_52] [i_번째]"+ i +"[nDay]"+ nDay +"[sTITLE_AM]"+ sTITLE_AM ); 
+					//gridStr += ' <w2:column blockSelect="false" id="TITLE_AM" value="'+ sTITLE_AM +'" width="170" removeBorderStyle="false" style="" inputType="text" displayMode="label" textAlign="left"></w2:column>'    // 제목(AM)
+				
+				}
+				//console.log("[/RH01.java] [makeGrid()] ==> [TEST_51] [i_번째]"+ i +"[nDay]"+ nDay +"[sTITLE_AM]"+ sTITLE_AM );
+				
+//				sRow = "row"+ parseInt(nRow + 1);    // Row 값 ID 
+// 				gridStr += '</w2:row>'    	// 줄(</tr>과 유사)
+// 				gridStr += '<w2:row id="'+sRow+'" style="">'		// 줄 추가 ==> 줄(<tr>과 유사)  
+				//gridStr += ' <w2:column blockSelect="false" id="TITLE_AM" value="'+ sTITLE_AM +'" width="170" removeBorderStyle="false" style="" inputType="text" displayMode="label" textAlign="left"></w2:column>'    // 제목(AM)
+				
+			}  // end fo for()
+			
+			//gridStr += ' <w2:column blockSelect="false" id="TITLE_AM" value="'+ sTITLE_AM +'" width="170" removeBorderStyle="false" style="" inputType="text" displayMode="label" textAlign="left"></w2:column>'    // 제목(AM)
+				
+			
+			if (cnt%7 == 0)	// 1주일이 7일 이므로 ==> 줄 바꾸기
+			{
+				gridStr += '</w2:row>'    	// 줄(</tr>과 유사)
+				gridStr += '<w2:row id="'+sRow+'" style="">'		// 줄 추가 ==> 줄(<tr>과 유사) 
+			}
+		}  // end fo for()
+				
+		var nLastDateWeek = parseInt(sLastDate.getDay());      // 이번 달의 마지막 날_요일
+		//console.log("[/RH01.xml] [makeGrid()] ==> [TEST_40] [nLastDateWeek]"+ nLastDateWeek );
+		 
+		//nLastDateWeek = 1;  //   이번 달의 마지막 날_요일 ==> TEST @@ ===>
+		//console.log("[/RH01.xml] [makeGrid()] ==> [TEST_41] [nLastDateWeek]"+ nLastDateWeek );
+		 	 
+		// 1일이 시작되는 칸을 맞추어 줌(요일 체크)
+		for(i=0; i< 7-nLastDateWeek; i++) 
+		//for(i=0; i< 6; i++) 
+		{
+			var nMonthDayId2 = "MONTH_DAY_NULL2"+ parseInt(i+1);
+			gridStr += ' <w2:column blockSelect="false" id="'+ nMonthDayId2 +'" width="170" removeBorderStyle="false" style="" inputType="text" displayMode="label" textAlign="right"></w2:column>';    // 날짜 없음
+			 
+		}	 // end fo for()
+		console.log("[/RH01.xml] [makeGrid()] ==> [TEST_51]" );
+		
+		// 1-5. 분석일정 정보 Grid Body 데이타 칼럼(마지막 칼럼) 생성
+		 gridStr += ''
+			+ '</w2:row>'    // 줄(</tr>과 유사)
+			+ '</w2:gBody>'
+			+ '</w2:gridView>'; 
+		//grd_list.setCellBackgroundColor( 1, 2 ,"#FFFF00" );    // 배경색 셋팅(상위 Grid row에 배경색 설정)
+		console.log("[/RH01.xml] [makeGrid()] ==> [TEST_61] [gridStr]"+ gridStr );
+	
+		grd_list.setGridStyle( WebSquare.xml.parse( gridStr , true ) );   		// 2. 분석일정 정보 조회  ==> 동적 Grid 생성
+ 	
+//		var nRow = dlt_Rh01YyList.insertRow(0);
+//	
+//		dlt_Rh01YyList.setCellData( nRow , "DD" , "");   // 측정일시
+		console.log("[/RH01.xml] [makeGrid()] ==> [TEST_99]" );
+	 }; 
+	   
+	 /**
+	  * 조회 버튼 클릭시 이벤트
+	 */             
+	 scwin.btn_Search_onclick = function() {
+	  console.log("[/RH01.xml] [btn_Search_onclick()] ==>  [TEST_01] [조회]");
+	  
+	  dlt_Rh01List.removeAll();  
+	 
+	  dma_Search.setEmptyValue();
+	  dma_Search.set("SCH_YYYY" , sbx_schyyyy.getValue() );  // 분석년월 - 년
+	  dma_Search.set("SCH_MM" , sbx_ssch_mm.getValue() );  // 분석년월 - 월
+	  dma_Search.set("SCH_EQUIP" , sbx_sequip.getValue());    // 분석설비
+	  dma_Search.set("ANALYSIS_EMPNO" , sbx_sanlaplys.getValue());
+	  
+	  common.executeSubmission("sbm_selectRh01CalendarList");
+	 };
+	 
+	 /**
+	  * 조회 후 콜백을 호출한다.
+	 */
+	 scwin.sbm_selectRh01CalendarList_submitdone = function(e) {
+		 console.log("[/RH01.xml] [sbm_selectRh01CalendarList_submitdone()] ==>  [TEST_01] [조회 결과]");
+		 console.log("[/RH01.xml] [sbm_selectRh01CalendarList_submitdone()] ==>  [TEST_41] [dlt_Rh01List.getValue()]"+ dlt_Rh01List.getRowCount() );
+		
+		 //var count = dlt_Rh01List.getRowCount();   // 분석일정 Dlt 갯수
+		 
+		 var sToday = new Date();   // 오늘 날짜
+		 var nFirstDay4Month = new Date(sToday.getFullYear(), sToday.getMonth(), 1);  // 이번 달의 첫째 날
+		 var nLastDatey4Month = new Date(sToday.getFullYear(), sToday.getMonth()+1, 0); // 이번 달의 마지막 날
+		 console.log("[/RH01.xml] [sbm_getSelectBo01Onload_submitdone()] ==> [TEST_21] [이번 달의 첫째 날]"+ nFirstDay4Month +"[이번 달의 마지막 날]"+ nLastDatey4Month );
+		 console.log("[/RH01.xml] [sbm_getSelectBo01Onload_submitdone()] ==> [TEST_21] [이번 달의 첫째 날_주]"+ nFirstDay4Month.getDay()  +"[이번 달의 마지막 날_주]"+ nLastDatey4Month.getDay()  );
+	  
+	  	// 1일이 시작되는 칸을 맞추어 줌
+		for (i=0; i<nFirstDay4Month.getDay(); i++) {
+	    	dlt_Rh01List.setCellData(0, 0, "test");
+	    
+	     //cell = row.insertCell();
+	     //cnt = cnt + 1;    //col_11
+	   }
+	   dlt_Rh01List.setCellData(col_11, "test_2");
+	   
+	   console.log("[/RH01.xml] [sbm_getSelectBo01Onload_submitdone()] ==> [TEST_41] [dlt_Rh01List.getCellData(0, 0)]"+ dlt_Rh01List.getCellData(0, 0) );
+	  
+	   for (i=1; i<=nLastDatey4Month.getDate(); i++) {
+		    //cell = row.insertCell();
+		 
+		    //cell.innerHTML = i;
+		    //cnt = cnt + 1;
+		 
+		    //if (cnt%7 == 0)// 1주일이 7일 이므로
+		    // row = calendar.insertRow();// 줄 추가
+		}
+	 
+		 for(var i=0; i<=dlt_Rh01List.getRowCount(); i++)
+		 {
+			  var DD = dlt_Rh01List.getCellData(i , "DD");
+			  var WEEK = dlt_Rh01List.getCellData(i , "WEEK");
+			  
+			  //dlt_Rh01List.setCellData(WEEK , "SEQAM"+WEEK , DD );
+		 }  // end fo for()
+	}; ]]></script>
+    </head>
+    <body>
+     <xf:group class="contentWrap" id="" style="w">
+      <w2:wframe id="" initScript="scwin.wfTitleFavInit();" src="/cm/common/wf_titleFav.xml" style=""></w2:wframe>
+      <xf:group class="RR_w2tb" id="group4" style="width:100.00%;height: 20px;margin-top:  5px;" tagname="table">
+       <w2:attributes>
+        <w2:summary></w2:summary>
+       </w2:attributes>
+       <xf:group tagname="caption"></xf:group>
+       <xf:group tagname="colgroup">
+        <xf:group style="width:0.50%;" tagname="col"></xf:group>
+        <xf:group style="width:4%;" tagname="col"></xf:group>
+        <xf:group style="width:69%;" tagname="col"></xf:group>
+        <xf:group style="width:9.21%;" tagname="col"></xf:group>
+       </xf:group>
+       <xf:group style="" tagname="tr">
+        <xf:group style="background-color:#4467A7;" tagname="td"></xf:group>
+        <xf:group style="font-weight:bold;padding-left: 5px" tagname="td">분석일정</xf:group>
+        <xf:group style="" tagname="td">[의뢰분석&amp;nbsp;&gt;&amp;nbsp;의뢰통계분석&amp;nbsp;&gt;&amp;nbsp;분석일정(RH01)]</xf:group>
+        <xf:group style="float: right;" tagname="td">
+         <w2:textbox id="" label="대외비"
+          style="width:80px;height:18px;text-align:center;padding-top:2px;padding-bottom:0px;text-align:center;border-top:0.5pt solid #000000;border-bottom:0.5pt solid #000000;border-left:0.5pt solid #000000;border-right:0.5pt solid #000000;color:#FF0000;">
+         </w2:textbox>
+        </xf:group>
+       </xf:group>
+      </xf:group>
+      <w2:textbox id="textbox5" label="" style="height: 3px;background-color: #4467a7;"></w2:textbox>
+      <xf:group class="w2tb" id="group5" style="width:100.00%;" tagname="table">
+       <w2:attributes>
+        <w2:summary></w2:summary>
+       </w2:attributes>
+       <xf:group tagname="caption"></xf:group>
+       <xf:group tagname="colgroup">
+        <xf:group style="width:6.99%;" tagname="col"></xf:group>
+        <xf:group style="width:18.39%;" tagname="col"></xf:group>
+        <xf:group style="width:10.99%;" tagname="col"></xf:group>
+        <xf:group style="width:21.67%;" tagname="col"></xf:group>
+        <xf:group style="width:9.00%;" tagname="col"></xf:group>
+        <xf:group style="width:0.75%;" tagname="col"></xf:group>
+        <xf:group style="width:7.00%;" tagname="col"></xf:group>
+        <xf:group style="width:20.00%;" tagname="col"></xf:group>
+       </xf:group>
+       <xf:group style="height:40px;" tagname="tr">
+        <xf:group class="w2tb_th" style="height:21px;background-color:#eaf3fc;" tagname="th">
+         분석년월
+         <w2:attributes>
+          <w2:scope>row</w2:scope>
+         </w2:attributes>
+        </xf:group>
+        <xf:group class="w2tb_td" style="" tagname="td">
+         <xf:select1 allOption="" appearance="minimal" chooseOption="" chooseOptionLabel="--------------" direction="auto"
+          disabled="false" disabledClass="w2selectbox_disabled" id="sbx_schyyyy" ref=""
+          style="width:120px;height: 30px;margin-left:5px;float: left;" submenuSize="auto" visibleRowNum="8">
+          <xf:choices>
+           <xf:itemset nodeset="data:dlt_Rh01YyList">
+            <xf:label ref="lable"></xf:label>
+            <xf:value ref="code"></xf:value>
+           </xf:itemset>
+          </xf:choices>
+         </xf:select1>
+         <w2:textbox id="" label="년"
+          style="width:15px;height:18px;float: left;margin-left:8px;padding-top:5px;padding-bottom:0px;text-align:center;margin-top:8px;">
+         </w2:textbox>
+         <xf:select1 allOption="" appearance="minimal" chooseOption="" chooseOptionLabel="--------------" direction="auto"
+          disabled="false" disabledClass="w2selectbox_disabled" id="sbx_ssch_mm" ref=""
+          style="width:60px;height: 30px;margin-left:15px;float: left;" submenuSize="auto" visibleRowNum="8">
+          <xf:choices>
+           <xf:itemset nodeset="data:dlt_month">
+            <xf:label ref="lable"></xf:label>
+            <xf:value ref="code"></xf:value>
+           </xf:itemset>
+          </xf:choices>
+         </xf:select1>
+         <w2:textbox id="" label="월"
+          style="width:15px;height:18px;float: left;margin-left:8px;padding-top:5px;padding-bottom:0px;text-align:center;margin-top:6px;">
+         </w2:textbox>
+        </xf:group>
+        <xf:group class="w2tb_th" style="background-color:#eaf3fc;" tagname="th">
+         분석설비
+         <w2:attributes>
+          <w2:scope>row</w2:scope>
+         </w2:attributes>
+        </xf:group>
+        <xf:group class="w2tb_td" style="vertical-align:middle;" tagname="td">
+         <xf:select1 allOption="" appearance="minimal" chooseOption="true" chooseOptionLabel="---전체---" direction="auto"
+          disabled="false" disabledClass="w2selectbox_disabled" ev:onchange="scwin.sbx_analEquip_onchange" id="sbx_sequip" ref=""
+          style="width:180px;height: 30px;margin-left:5px;" submenuSize="auto" visibleRowNum="10">
+          <xf:choices>
+           <xf:itemset nodeset="data:dlt_VCodeListXX04">
+            <xf:label ref="LOCAL_KNAME"></xf:label>
+            <xf:value ref="LOCAL_CODE"></xf:value>
+           </xf:itemset>
+          </xf:choices>
+         </xf:select1>
+        </xf:group>
+        <xf:group class="w2tb_th" style="background-color:#eaf3fc;" tagname="th">분석자<w2:attributes>
+          <w2:scope>row</w2:scope>
+         </w2:attributes></xf:group>
+        <xf:group class="w2tb_td" style="" tagname="td">
+         <w2:attributes>
+          <w2:colspan>3</w2:colspan>
+          <w2:rowspan>1</w2:rowspan>
+         </w2:attributes>
+         <xf:select1 allOption="" appearance="minimal" chooseOption="true" chooseOptionLabel="---전체---" direction="auto"
+          disabled="false" disabledClass="w2selectbox_disabled" id="sbx_sanlaplys" ref="" style="width:245px;height: 30px;margin-left:5px;"
+          submenuSize="auto" visibleRowNum="8">
+          <xf:choices>
+           <xf:itemset nodeset="data:dlt_VCodeListAM01">
+            <xf:label ref="LOCAL_KNAME"></xf:label>
+            <xf:value ref="LOCAL_CODE"></xf:value>
+           </xf:itemset>
+          </xf:choices>
+         </xf:select1>
+        </xf:group>
+       </xf:group>
+      </xf:group>
+      <xf:group class="w2tb" id="" style="width:100%;margin-top:10px;" tagname="table">
+       <w2:attributes>
+        <w2:summary></w2:summary>
+       </w2:attributes>
+       <xf:group tagname="caption"></xf:group>
+       <xf:group tagname="colgroup">
+        <xf:group style="width:100.00%" tagname="col"></xf:group>
+       </xf:group>
+       <xf:group tagname="tr">
+        <xf:group class="w2tb_td"
+         style="text-align:right;border-top:1pt none #000000;border-bottom:1pt none #000000;border-left:1pt none #000000;border-right:1pt none #000000;"
+         tagname="td">
+         <w2:anchor class="btn_gcm" clickEventElement="outerDiv" ev:onclick="scwin.btn_Download_onclick" id="btn_Download"
+          outerDiv="true" style="">
+          <xf:label><![CDATA[신규일정]]></xf:label>
+         </w2:anchor>
+         <w2:anchor class="btn_gcm" clickEventElement="outerDiv" ev:onclick="scwin.btn_Search_onclick" id="btn_Search"
+          outerDiv="true" style="">
+          <xf:label><![CDATA[조 &nbsp; &nbsp;회]]></xf:label>
+         </w2:anchor>
+        </xf:group>
+       </xf:group>
+      </xf:group>
+      <w2:textbox id="textbox6" label="" style="height: 3px;background-color: #4467a7;"></w2:textbox>
+      
+      <!--// 분석일정 Grid //-->
+      <w2:gridView ignoreCellClick="false" autoFit="allColumn" rowStatusWidth="20" visibleRowNum="" class="cm_grid" fixedColumnWithHidden="true" dataList="data:dlt_Rh01List" id="grd_list" readOnly="" style="height:160px;width:100%;left:5px;top:3px;" scrollByColumn="false" useShiftKey="true" rowStatusVisible="true" rowStatusHeaderValue="상태" ev:oncellclick="scwin.grd_MenuAccess_oncellclick">
+			 
+<!--      <w2:gridView autoFit="" autoFitMinWidth=""  dataList="data:dlt_Rh01List" defaultCellHeight="20"-->
+<!--       id="grd_list" overflowX="hidden" overflowY="hidden" rowNumHeaderValue="" rowNumVisible="" scrollByColumn="false"-->
+<!--        showSortableImage="false" sortable="false" style="width: 100%;height: 470px;" selectedRowOverColor="#FFFFFF" selectedRowColor="#FFFFFF" selectedCellColor="#FFFFFF" selectedCellOverColor="#FFFFFF" evenRowBackgroundColor="#FFFFFF" oddEvenColorDisplay="false" oddRowBackgroundColor="#FFFFFF" readOnly="true">-->
+       </w2:gridView>
+     </xf:group>
+    </body>
+</html>
+ 

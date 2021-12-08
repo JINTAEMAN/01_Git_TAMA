@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    	<head>
+    <!-- 
+        ###################################################
+         파일명 : CBSC033P.xml
+         프로그램명 : 금융거래제한대상자
+         설 명 :  금융거래제한대상자
+         작성자 : 진태만
+         작성일 : 2017.10.06
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.10.06        진태만          최초작성
+        ###################################################
+     -->
+	 <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+            	<w2:dataList baseNode="list" id="DsWs_Cnt"
+            		repeatNode="map" userData2="//*/hashtable/data/LTIDC92" />
+            	<w2:dataList baseNode="list" id="DsWs_List"
+            		repeatNode="map"
+            		userData2="//*/hashtable/data/vector/data/LTIDC92" />
+            	<w2:dataList baseNode="list" id="DsWs_Warning"
+            		repeatNode="map" userData2="//*/WARNING" />
+            	<w2:dataList id="Ds_List" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sMdfcDate" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMdfcDlerIP" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInptDate" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMdfcDler" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInptHms" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMdfcHms" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplStrtDate" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplEndDate" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sName" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInptDlerIP" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInptDler" name="name11"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList id="Ds_Cnt" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="count" name="name1"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        
+ 		<!--// js Script include //--> 
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/>  
+	 	<script src="/cm/js/convertJs/LongTerm_Script.js"/>
+	 	
+        <script><![CDATA[
+		
+/****************************************************************************
+ * 프로그램번호   : B014_POP
+ * 프로그램명     : Watch List(금융거래제한대상자)
+ * 파일명         : B014_POP.xml
+ * 프로그램 내용  : Watch List를 조회한다.
+ * 관련 프로그램  : 
+ * 작성자         : 백승철
+ * 작성일         : 2014-09-16
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ * [N1409-00008] 2014.09.16;백승철;자금세탁방지업무 관련 청약프로그램 개발
+ ****************************************************************************/
+ 
+var pageSize = "18";
+var pageCount = "10";
+var sRgstNo = "";
+var sUdrtkNotiName = "";
+
+//---------------------------------------------------------------------------
+// function 명 : B014_OnLoadCompleted
+// 내용        :  폼 onload 이벤트
+//---------------------------------------------------------------------------
+scwin.init = function() {
+	console.log("[/CBSC033P.xml] [init()] ==> [폼 로딩] [TEST_01]" );
+	
+	var pro = Promise.resolve();
+	window.top.util.winTopShowModalChk = "T";
+	util.winTopShowModal();
+
+	pro = pro.then(function(rv) {
+		return util.winTopShowModalPromise();
+	});
+
+	pro = pro.then(function(rv) {
+		// init 부분 함수 입력하는곳  // =================================================>
+		
+		scwin.getSearchList(); 
+ 		
+		return ;		// init 함수를 종료하고자 할때 사용
+		// return Promise.reject("오류관련처리"); // =================================================>
+	});
+
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});
+	
+	//pro = pro.catch(function(rj) {
+		//util.winTopHideModal();
+		//alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+	//});
+	 
+	return pro; 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 조회버튼  이벤트 처리
+//---------------------------------------------------------------------------
+scwin.getSearchList = function(obj) {
+	//console.log("[/CBSC033P.xml] [getSearchList()] ==> [조회 버튼 이벤트 처리] [TEST_01]" );
+ 
+    scwin.Search("1");		// 리스트 조회 
+ 
+	var sTotCnt = util.appendComma(Ds_Cnt.getCellData(0, "count")); 	// 전체 건수(3자리 콤마) 
+ 
+    // 전체 건수 얻어오기(Paging 처리)
+	gfn_MakePagingData(Ds_Page, Ds_Cnt.getCellData(0, "count"), "10", "10"); 
+ 
+    Cmb_Page.setValue("1"); //----- End
+  
+	totalRows_02.setValue(sTotCnt);	// 전체 갯수 DS 
+	//console.log("[/CBSC033P.xml] [getSearchList()] ==> [조회 버튼 이벤트 처리] [totalRows_02]"+ totalRows_02.getValue() );
+};
+ 
+//---------------------------------------------------------------------------
+// function 명 : Search
+// 내용        : 리스트 조회
+//---------------------------------------------------------------------------
+scwin.Search = function(pageNo) {
+	//console.log("[/CBSC033P.xml] [Search()] ==> [조회] [TEST_01]" );
+	
+	wconv.clear(Ds_List);	 //리스트 내용 clear
+ 	
+	var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB014Task", "selWatchList", pageSize, pageNo);		// 금융거래제한대상자 조회 Obj
+	MethodObj.setId("selWatchList");	// ID 셋팅    	 
+ 	MethodObj.setUrl("/contract/CBSC033PController.do");  				// 서버단 호출 URL  
+	MethodObj.setXPath("//*/hashtable/data/vector/data/LTIDC92");	// XPath(Ds_List) 
+	MethodObj.addXPath("//*/hashtable/data/LTIDC92");					// XPath(Ds_List) 
+	MethodObj.addXPath("//*/WARNING");		// XPath(DsWs_Warning)
+	MethodObj.setXPathDs(); 		// XPath 전체 경로 사용할 경우 
+	MethodObj.setHashTable();   	// 전문의 앞이 hashtable로 보낼 때
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)] 
+	MethodObj.send();		// 최종 전송  
+	//console.log("[/CBSC033P.xml] [Search()] ==> [01. 금융거래제한대상자 조회, 전송_완료] [TEST_91]");
+ 
+	//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+	
+	Ds_List.setJSON(_tranSync.getDsJson("//*/hashtable/data/vector/data/LTIDC92"))	// 보험 기본사항 Ds 셋팅 
+	Ds_Cnt.setJSON(_tranSync.getDsJson("//*/hashtable/data/LTIDC92")); 		// 조회 전체 건수 DS 셋팅(조회 결과) 
+	DsWs_Warning.setJSON(_tranSync.getDsJson("//*/WARNING"));  				// Warning DS 셋팅(조회 결과)    
+	//console.log("[/CBSC033P.xml] [Search()] ==> [Ds_List_갯수]"+ Ds_List.getRowCount() +"[Ds_List]"+ WebSquare.xml.serialize(Ds_List.getAllXML()) );  
+  		
+  	if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    }
+    
+    if (Ds_Cnt.getCellData(0, "count") == null || Ds_Cnt.getCellData(0, "count") <= 0) { 
+  		wprom.alert("조회 건이 없습니다.");
+     	return;      
+    }
+};
+
+//**************************************************************************************************
+// 페이징 처리 - 페이지 콤보 박스(Paging 처리 시작)
+//**************************************************************************************************
+scwin.Cmb_Page_OnChanged = function(info) { 
+    scwin.Search(info.newValue);
+};
+
+//**************************************************************************************************
+// 페이징 처리 - 이전 페이지 리스트
+//**************************************************************************************************
+scwin.Btn_PreV_OnClick = function(obj) { 
+	var ftVal = wconv.toNumber(Ds_Page.getCellData(0, "FILTERCD")) - 1;
+    if (wconv.toNumber(maxFilterVal) < wconv.toNumber(ftVal)) {
+        wprom.alert("조회의 처음입니다.");
+        return;
+    } else if (wconv.toNumber(ftVal) < 1) {
+        wprom.alert("조회의 처음입니다.");
+        return;
+    }
+    wconv.filter(Ds_Page, "FILTERCD=='" + ftVal + "'", true);
+    Cmb_Page.setValue(Ds_Page.getCellData(0, "CODE"));
+    scwin.Search(Cmb_Page.getValue());
+};
+
+//**************************************************************************************************
+// 페이징 처리 - 이전 페이지
+//**************************************************************************************************
+scwin.Btn_Pre_OnClick = function(obj) { 
+	var Idx = Cmb_Page.getValue();
+    if (wconv.toNumber(Idx) - 1 < 1) {
+        wprom.alert("조회의 처음입니다.");
+        return;
+    }
+    scwin.Search(wconv.toString(wconv.toNumber(Idx) - 1));
+    if (Ds_Page.getCellData(0, "CODE") == Idx) {
+        wconv.filter(Ds_Page, "FILTERCD=='" + wconv.toString(wconv.toNumber(Ds_Page.getCellData(0, "FILTERCD")) - 1) + "'", true);
+        Cmb_Page.setValue(Ds_Page.getCellData((Ds_Page.getRowCount() - 1), "CODE"));
+    } else {
+        Cmb_Page.setValue(wconv.toNumber(Idx) - 1);
+	}
+};
+
+//**************************************************************************************************
+// 페이징 처리 - 다음 페이지
+//**************************************************************************************************
+scwin.Btn_Next_OnClick = function(obj) {
+ 
+	var Idx = Cmb_Page.getValue();
+	 	
+	if (wconv.toNumber(maxPage) < wconv.toNumber(Idx) + 1) {
+		wprom.alert("더이상 자료가 존재하지 않습니다");
+		return;
+	}
+	 
+	scwin.Search(wconv.toString(wconv.toNumber(Idx) + 1));
+ 
+	if (Ds_Page.getCellData((Ds_Page.getRowCount() - 1), "CODE") == Idx) {
+		wconv.filter(Ds_Page, "FILTERCD=='" + wconv.toString(wconv.toNumber(Ds_Page.getCellData((Ds_Page.getRowCount() - 1), "FILTERCD")) + 1) + "'", true);
+	}
+	Cmb_Page.setValue(wconv.toNumber(Idx) + 1); 
+};
+
+//**************************************************************************************************
+// 페이징 처리 - 다음 페이지 리스트(Paging 처리 끝)
+//**************************************************************************************************
+scwin.Btn_NextV_OnClick = function(obj) { 
+	var ftVal = wconv.toNumber(Ds_Page.getCellData((Ds_Page.getRowCount() - 1), "FILTERCD")) + 1;
+    if (wconv.toNumber(maxFilterVal) < wconv.toNumber(ftVal)) {
+        wprom.alert("더이상 자료가 존재하지 않습니다");
+        return;
+    }
+    wconv.filter(Ds_Page, "FILTERCD=='" + ftVal + "'", true);
+    Cmb_Page.setValue(Ds_Page.getCellData(0, "CODE"));
+    scwin.Search(Cmb_Page.getValue());
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Close_OnClick
+// 내용        : 팝업닫기
+//---------------------------------------------------------------------------
+scwin.lfn_Close_OnClick = function(obj) {
+	wprom.close("");
+};
+
+]]></script>
+    </head>
+    	<body>
+    		<xf:group class="cont_wrap layer" id="A320"
+    			style="position:absolute;
+ WorkArea:true;
+ left:0px;
+ top:0px;
+"
+    			userData1="금융거래제한대상자"
+    			userData2=" OnLoadCompleted:scwin.B014_OnLoadCompleted; ">
+    			<DataObjects>
+    				<DataObject />
+    			</DataObjects>
+    			<ServiceObjects>
+    				<ServiceObject />
+    			</ServiceObjects>
+    			<w2:textbox id="Static5" label="금융거래제한대상자 내역"
+    				style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; width:249px;"
+    				tagname="" class="sub_pop_title01" />
+    			<xf:switch id="switch_108" style=" ">
+    				<xf:case id="Default_109" style=" ">
+    					<w2:gridView class="sty_Grid" dataList="Ds_List"
+    						focusMode="row" id="Grd_List" inputType="text" readOnly="true"
+    						style="position:absolute; UseDBuff:true;  ScrollCell:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  AutoFitEndLine:Hide;  height:403px; left:0px; right:627px; top:61px; width:618px;"
+    						tabIndex="8" autoFit="allColumn" autoFitMinWidth="100">
+    						<w2:header>
+    							<w2:row>
+    								<w2:column dataType="text"
+    									id="head_id_920" inputType="text" readOnly="true"
+    									style="height:20px;" userData1="0" userData3="0"
+    									value="고객명" width="614" />
+    							</w2:row>
+    						</w2:header>
+    						<w2:gBody>
+    							<w2:row>
+    								<w2:column dataType="text"
+    									id="sName" inputType="text" readOnly="true"
+    									style="height:20px;" textAlign="left" userData1="0"
+    									userData3="0" width="614" value="" />
+    							</w2:row>
+    						</w2:gBody>
+    					</w2:gridView>
+    				</xf:case>
+    			</xf:switch>
+    			<w2:textbox id="Static17" label="총 건 :"
+    				style="position:absolute; VAlign:Middle;height:20px;left:2px;top:36px;width:43px;"
+    				tagname="" />
+    			<w2:textbox id="totalRows_02" label="0"
+    				style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:43px;top:36px; width:28px;"
+    				tagname="" />
+    			<w2:textbox id="Static1" label="건"
+    				style="position:absolute; VAlign:Middle;  height:20px;left:73px;top:36px; width:16px;"
+    				tagname="" />
+    			<xf:trigger class="popup_top_btn"
+    				ev:onclick="scwin.lfn_Close_OnClick" id="btn_close"
+    				style="position:absolute; ImageID:btn_Comm_Close;  height:20px;left:570px;top:0px; width:58px;"
+    				tabIndex="9" type="anchor">
+    				<xf:label><![CDATA[닫기]]></xf:label>
+    			</xf:trigger>
+    		</xf:group>
+    		<w2:wframe id="div" scope="false"
+    			src="/cm/common/Main_btn_GridControl.xml"
+    			style="position:absolute; height:20px;left:362px;top:30px; width:155px;">
+    		</w2:wframe>
+    	</body>
+</html>

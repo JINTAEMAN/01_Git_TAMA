@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+    <!-- 
+        ###################################################
+         파일명 : CBSC023P.xml
+         프로그램명 : 갱신형 특약 경과기간별 보험료 조회
+         설 명 :  갱신형 특약 경과기간별 보험료 조회
+         작성자 : 진태만
+         작성일 : 2017.10.06
+  
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.10.06        진태만          최초작성
+        ###################################################
+     -->
+	 <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection> 
+            		<!-- 보험 기본사항 정보 Ds(Ds_LTIDA00) -->
+	 				<w2:dataList id="Ds_LTIDA00" baseNode="list"  saveRemovedData="true" repeatNode="map"> 
+	                	<w2:columnInfo>
+		                    <w2:column id="sPlanNo" name="설계번호" dataType="text"/>
+		                    <w2:column id="sCrNoType" name="sCrNoType" dataType="text"/>
+		                    <w2:column id="sItemCd" name="sItemCd" dataType="text"/>                    
+		                 	<w2:column id="sPaymTermCd" name="납입기간코드" dataType="text"/>
+		                 	<w2:column id="sInsurTermCd" name="보험기간코드" dataType="text"/>  
+		                 	<w2:column id="sInsurTermName" name="보험기간코드명" dataType="text"/>           
+							<w2:column id="sCmMetdName" name="입금방법" dataType="text"/>   
+		                    <w2:column id="sCrNoSeq" name="sCrNoSeq" dataType="text"/>
+							<w2:column id="nCrChngNo" name="변경번호" dataType="text"/>
+		                    <w2:column id="sHsecFlagCd" name="가계구분코드" dataType="text"/>
+		                    <w2:column id="sSaleChnlFlagCd" name="sSaleChnlFlagCd" dataType="text"/>
+		                    <w2:column id="sGdNm" name="sGdNm" dataType="text"/>
+		                    <w2:column id="sGdCd" name="sGdCd" dataType="text"/>
+							<w2:column id="sGnrzCd" name="종형코드" dataType="text"/>
+		                    <w2:column id="sBunsAchvDgrmClsfCd" name="sBunsAchvDgrmClsfCd" dataType="text"/>
+		                    <w2:column id="sApplDclrRato" name="sApplDclrRato" dataType="text"/>
+		                    <w2:column id="sDvdnFlagCd" name="sDvdnFlagCd" dataType="text"/>
+		                    <w2:column id="sPpayAvaYn" name="sPpayAvaYn" dataType="text"/>
+		                    <w2:column id="sTaxPrfrYn" name="sTaxPrfrYn" dataType="text"/>
+		                    <w2:column id="sCrStatCd" name="sCrStatCd" dataType="text"/>
+		                    <w2:column id="sCrStatFlgcd" name="sCrStatFlgcd" dataType="text"/>
+		                    <w2:column id="nCrStatCarrSeqno" name="nCrStatCarrSeqno" dataType="text"/>
+		                    <w2:column id="sInsurStrtdate" name="보험시작일자" dataType="text"/>
+		                    <w2:column id="sInsurEndDate" name="보험종료일자" dataType="text"/>
+		                    <w2:column id="sSsrtDate" name="sSsrtDate" dataType="text"/>
+		                    <w2:column id="sCpayDate" name="sCpayDate" dataType="text"/>
+		                    <w2:column id="sPaymExptDate" name="sPaymExptDate" dataType="text"/> 
+		                    <w2:column id="nRealPaymTerm" name="nRealPaymTerm" dataType="text"/>                    
+		                    <w2:column id="nRealInsurTerm" name="nRealInsurTerm" dataType="text"/>
+		                    <w2:column id="nDefrYct" name="nDefrYct" dataType="text"/>
+		                    <w2:column id="nPaymAge" name="nPaymAge" dataType="text"/>
+		                    <w2:column id="nEndAge" name="nEndAge" dataType="text"/>
+		                    <w2:column id="sPaymCyclCd" name="납입주기" dataType="text"/>
+		                    <w2:column id="sPaymCyclName" name="납입주기명" dataType="text"/>      
+		                    <w2:column id="sCmMetd" name="sCmMetd" dataType="text"/>  
+		                    <w2:column id="nBussPrem" name="nBussPrem" dataType="text"/>
+		                    <w2:column id="nDcPrem" name="nDcPrem" dataType="text"/> 
+							<w2:column id="nGroupDcrt" name="단체할인율" dataType="text"/>
+							<w2:column id="nEtcDcrt" name="기타할인율" dataType="text"/>       
+							<w2:column id="nApplPrem" name="적용보험료" dataType="text"/>
+							<w2:column id="nGrntPrem" name="보장보험료" dataType="text"/>
+							<w2:column id="nAccuPrem" name="적립보험료" dataType="text"/>
+		                    <w2:column id="nMinPrem" name="nMinPrem" dataType="text"/>
+		                    <w2:column id="nMaxPrem" name="nMaxPrem" dataType="text"/>
+		                    <w2:column id="sPsnGroupFlgcd" name="sPsnGroupFlgcd" dataType="text"/>
+		                    <w2:column id="sGroupCrAdmNo" name="sGroupCrAdmNo" dataType="text"/>
+		                    <w2:column id="sBsmnRgstNo" name="sBsmnRgstNo" dataType="text"/>
+		                    <w2:column id="sAnntOpnAgeCd" name="sAnntOpnAgeCd" dataType="text"/>
+		                    <w2:column id="sAnntPymTermCd" name="sAnntPymTermCd" dataType="text"/>
+		                    <w2:column id="sAnntPymCyclCd" name="sAnntPymCyclCd" dataType="text"/>
+		                    <w2:column id="sAnntPymTypeCd" name="sAnntPymTypeCd" dataType="text"/>
+		                    <w2:column id="sAnntPymStrtDate" name="sAnntPymStrtDate" dataType="text"/>
+		                    <w2:column id="nAnntPymCt" name="nAnntPymCt" dataType="text"/>
+		                    <w2:column id="nFinalPaymSeq" name="nFinalPaymSeq" dataType="text"/>
+		                    <w2:column id="sFinalPaymMthy" name="sFinalPaymMthy" dataType="text"/>
+		                    <w2:column id="sFinalRecpDate" name="sFinalRecpDate" dataType="text"/>
+		                    <w2:column id="nTotPaymPrem" name="nTotPaymPrem" dataType="text"/>
+		                    <w2:column id="sInsurCrLoanYn" name="sInsurCrLoanYn" dataType="text"/>
+		                    <w2:column id="sFinalReviDate" name="sFinalReviDate" dataType="text"/>
+		                    <w2:column id="sLapsDate" name="sLapsDate" dataType="text"/>
+		                    <w2:column id="sFrstSaleChnlCd" name="sFrstSaleChnlCd" dataType="text"/>
+		                    <w2:column id="sFrstDoerHdqtCd" name="sFrstDoerHdqtCd" dataType="text"/>
+		                    <w2:column id="sFrstDoerCentrCd" name="sFrstDoerCentrCd" dataType="text"/>
+		                    <w2:column id="sFrstDoerTeamCd" name="sFrstDoerTeamCd" dataType="text"/>
+		                    <w2:column id="sFrstDoerGroupCd" name="sFrstDoerGroupCd" dataType="text"/>
+		                    <w2:column id="sFrstDoerPartCd" name="sFrstDoerPartCd" dataType="text"/>
+		                    <w2:column id="sFrstDoer" name="sFrstDoer" dataType="text"/>
+		                    <w2:column id="sFrstDoerUser" name="sFrstDoerUser" dataType="text"/>
+		                    <w2:column id="sDoer" name="sDoer" dataType="text"/>
+		                    <w2:column id="sDoerUser" name="sDoerUser" dataType="text"/>
+		                    <w2:column id="sCrNo" name="sCrNo" dataType="text"/>
+		                    <w2:column id="sPlanProgRankCd" name="sPlanProgRankCd" dataType="text"/>
+		                    <w2:column id="sPlanProgTbNo" name="sPlanProgTbNo" dataType="text"/>
+		                    <w2:column id="sJugmAuthCd" name="sJugmAuthCd" dataType="text"/>
+		                    <w2:column id="sJugmGradCd" name="sJugmGradCd" dataType="text"/>
+		                    <w2:column id="sConuResltCd" name="sConuResltCd" dataType="text"/>
+		                    <w2:column id="sHndwritJugmYn" name="sHndwritJugmYn" dataType="text"/>
+		                    <w2:column id="nInrpsPsct" name="nInrpsPsct" dataType="text"/>
+		                    <w2:column id="nObjtNum" name="nObjtNum" dataType="text"/>
+		                    <w2:column id="nGroupInsPsct" name="nGroupInsPsct" dataType="text"/>
+		                    <w2:column id="sCedeStndYm" name="sCedeStndYm" dataType="text"/>
+		                    <w2:column id="nEndRtnrt" name="nEndRtnrt" dataType="text"/>
+		                    <w2:column id="nExptEndRetrnAmt" name="nExptEndRetrnAmt" dataType="text"/>
+		                    <w2:column id="nExptEndRtnrt" name="nExptEndRtnrt" dataType="text"/>
+		                    <w2:column id="sPectSaleYn" name="sPectSaleYn" dataType="text"/>
+		                    <w2:column id="sScanObjtYn" name="sScanObjtYn" dataType="text"/>
+		                    <w2:column id="sApplPlanCd" name="sApplPlanCd" dataType="text"/>
+		                    <w2:column id="sApplPlanName" name="sApplPlanName" dataType="text"/>
+		                    <w2:column id="sSaleChnlDtal" name="sSaleChnlDtal" dataType="text"/>
+		                    <w2:column id="sInsurTermPaymTermName" name="갱신주기" dataType="text"/>
+		                    <w2:column id="gUserID" name="gUserID" dataType="text"/>
+		                    <w2:column id="gUserIP" name="gUserIP" dataType="text"/>
+		                    <w2:column id="sPlanProgRankName" name="sPlanProgRankName" dataType="text"/>
+		                    <w2:column id="sConuResltName" name="sConuResltName" dataType="text"/>
+		                    <w2:column id="sGdTypeFlgCd" name="sGdTypeFlgCd" dataType="text"/>
+		                    <w2:column id="sTaxPrfrGdYn" name="sTaxPrfrGdYn" dataType="text"/>
+		                    <w2:column id="nEndRtnAmtCalElmnt1" name="nEndRtnAmtCalElmnt1" dataType="text"/>
+		                    <w2:column id="nEndRtnAmtCalElmnt2" name="nEndRtnAmtCalElmnt2" dataType="text"/>
+		                    <w2:column id="nEndRtnAmtCalElmnt3" name="nEndRtnAmtCalElmnt3" dataType="text"/>
+		                    <w2:column id="nEndRtnAmtCalElmnt4" name="nEndRtnAmtCalElmnt4" dataType="text"/>
+		                    <w2:column id="nEndRtnAmtCalElmnt5" name="nEndRtnAmtCalElmnt5" dataType="text"/>
+		                    <w2:column id="nEndRtnAmtCalElmnt6" name="nEndRtnAmtCalElmnt6" dataType="text"/>
+							<w2:column id="nEndRtnAmtCalElmnt10" name="nEndRtnAmtCalElmnt10" dataType="text"/>
+		                    <w2:column id="sSrdoIssuDate" name="sSrdoIssuDate" dataType="text"/>
+		                    <w2:column id="sGdName" name="sGdName" dataType="text"/> 
+		                    <w2:column id="sPeriMwayWdraYn" name="sPeriMwayWdraYn" dataType="text"/>
+		                    <w2:column id="sPeriMwayRqstDate" name="sPeriMwayRqstDate" dataType="text"/>
+		                    <w2:column id="nAddPaymPrem" name="nAddPaymPrem" dataType="text"/>
+		                    <w2:column id="sHealDcYn" name="sHealDcYn" dataType="text"/>		
+							<w2:column id="sInptDate" name="name2" dataType="text"/>		 
+							<w2:column id="sGnrzName" name="name10" dataType="text"/>		 
+							<w2:column id="sChnlCd" name="name13" dataType="text"/>
+							<w2:column id="sSaleChnl" name="name14" dataType="text"/>    
+							<w2:column id="sElecNtAgreDate" name="name22" dataType="text"/> 
+							<w2:column id="sFinalDueMthy" name="name31" dataType="text"/>  
+							<w2:column id="sAqamtChnlCd" name="name34" dataType="text"/> 
+							<w2:column id="sCmprCrNotcSsrt" name="name36" dataType="text"/>
+							<w2:column id="sMdfcHms" name="name37" dataType="text"/> 
+							<w2:column id="sBunsMetdDocuClsfCd" name="name39" dataType="text"/>	 
+							<w2:column id="sPlanPsnGroupCd" name="name46" dataType="text"/>				 
+							<w2:column id="sUseCustType" name="name48" dataType="text"/>			 
+							<w2:column id="sDrivFlagCd" name="name50" dataType="text"/>					 
+							<w2:column id="sStndDate" name="name55" dataType="text"/>
+							<w2:column id="sRdchCrYn" name="name56" dataType="text"/>
+							<w2:column id="sInptHms" name="name57" dataType="text"/>			 
+							<w2:column id="sMdfcDler" name="name64" dataType="text"/>			 
+							<w2:column id="sInsurEndDate" name="name76" dataType="text"/>				 
+							<w2:column id="sFlagCd" name="name78" dataType="text"/>					 
+							<w2:column id="sInptDlerIP" name="name80" dataType="text"/> 			 
+							<w2:column id="sCmprCrNotcCncl" name="name87" dataType="text"/>  
+							<w2:column id="result" name="name90" dataType="text"/> 
+							<w2:column id="sElecNtltRvYn" name="name92" dataType="text"/>		  
+							<w2:column id="sMdfcDlerIP" name="name102" dataType="text"/> 
+							<w2:column id="sInsurStrtHms" name="name105" dataType="text"/> 
+							<w2:column id="sCmmcMeanCnclAgreYn" name="name107" dataType="text"/>
+							<w2:column id="sEmailClasYn" name="name108" dataType="text"/>  
+							<w2:column id="sBunsMetdClsfCd" name="name111" dataType="text"/> 
+							<w2:column id="sMdfcDate" name="name113" dataType="text"/>			 
+							<w2:column id="sCrPrtrRole" name="name118" dataType="text"/> 
+							<w2:column id="sFrstDoerDeptOffcCd" name="name123" dataType="text"/>
+							<w2:column id="sInptDler" name="name124" dataType="text"/> 			                  
+							<w2:column id="sPaymTermName" name="납입기간코드명" dataType="text"/>	 
+	                </w2:columnInfo> 
+	            </w2:dataList> 	       
+	            
+      			<!-- 피보험자 정보 Ds(Ds_Pibo) -->
+      			<w2:dataList baseNode="list" id="Ds_Pibo"
+      				repeatNode="map">
+      				<w2:columnInfo>
+      					<w2:column id="sel" name="sel"
+      						dataType="text" />
+      					<w2:column id="sPlanNo" name="설계번호"
+      						dataType="text" />
+      					<w2:column id="sInrpsCd" name="피보험자코드"
+      						dataType="text" />
+      					<w2:column id="sInrpsName" name="피보험자명"
+      						dataType="text" />
+      					<w2:column id="sJobCd" name="직업코드"
+      						dataType="text" />
+      					<w2:column id="sJobGradCd" name="직업급수코드"
+      						dataType="text" />
+      					<w2:column id="sDrveFlagCd" name="운전구분코드"
+      						dataType="text" />
+      					<w2:column id="nGroupSeqno" name="nGroupSeqno"
+      						dataType="text" />
+      					<w2:column id="nInrpsSeqno" name="피보험자 코드"
+      						dataType="text" />
+      					<w2:column id="sInrpsFlagCd"
+      						name="sInrpsFlagCd" dataType="text" />
+      					<w2:column id="nCrChngNo" name="nCrChngNo"
+      						dataType="text" />
+      					<w2:column id="sInrpsSexFlag"
+      						name="sInrpsSexFlag" dataType="text" />
+      					<w2:column id="nInrpsAge" name="nInrpsAge"
+      						dataType="text" />
+      					<w2:column id="sExisPftbpInrpsRelnCd"
+      						name="sExisPftbpInrpsRelnCd" dataType="text" />
+      					<w2:column id="sExisPftbpCd"
+      						name="sExisPftbpCd" dataType="text" />
+      					<w2:column id="sExisPftbpName"
+      						name="sExisPftbpName" dataType="text" />
+      					<w2:column id="sExisPftbpTelno"
+      						name="sExisPftbpTelno" dataType="text" />
+      					<w2:column id="sPftbpInrpsRelnCd"
+      						name="sPftbpInrpsRelnCd" dataType="text" />
+      					<w2:column id="sPftbpCd" name="sPftbpCd"
+      						dataType="text" />
+      					<w2:column id="sPftbpName" name="sPftbpName"
+      						dataType="text" />
+      					<w2:column id="sPftbpTelno" name="sPftbpTelno"
+      						dataType="text" />
+      					<w2:column id="sPftbpFlagCd"
+      						name="sPftbpFlagCd" dataType="text" />
+      					<w2:column id="sApplPlanCd" name="sApplPlanCd"
+      						dataType="text" />
+      					<w2:column id="sApplPlanName"
+      						name="sApplPlanName" dataType="text" />
+      					<w2:column id="sInrpsStatCd"
+      						name="sInrpsStatCd" dataType="text" />
+      					<w2:column id="sInsurStrtdate"
+      						name="sInsurStrtdate" dataType="text" />
+      					<w2:column id="sInsurEndDate"
+      						name="sInsurEndDate" dataType="text" />
+      					<w2:column id="sCnclExtnEndDate"
+      						name="sCnclExtnEndDate" dataType="text" />
+      					<w2:column id="sJobName" name="sJobName"
+      						dataType="text" />
+      					<w2:column id="sPftbpInrpsRelnName"
+      						name="sPftbpInrpsRelnName" dataType="text" />
+      					<w2:column id="nGrntPrem" name="nGrntPrem"
+      						dataType="text" />
+      					<w2:column id="nMaxPrem" name="nMaxPrem"
+      						dataType="text" />
+      					<w2:column id="nMinPrem" name="nMinPrem"
+      						dataType="text" />
+      					<w2:column id="sRqstYn" name="sRqstYn"
+      						dataType="text" />
+      					<w2:column id="sRqstYnName" name="sRqstYnName"
+      						dataType="text" />
+      					<w2:column id="sOthrInsurCnt"
+      						name="sOthrInsurCnt" dataType="text" />
+      					<w2:column id="sOthrInsurCntName"
+      						name="sOthrInsurCntName" dataType="text" />
+      					<w2:column id="sSubCvrgeYn" name="sSubCvrgeYn"
+      						dataType="text" />
+      					<w2:column id="sSubCvrgeYnName"
+      						name="sSubCvrgeYnName" dataType="text" />
+      					<w2:column id="sDgnsObjtYn" name="sDgnsObjtYn"
+      						dataType="text" />
+      					<w2:column id="sDgnsObjtYnName"
+      						name="sDgnsObjtYnName" dataType="text" />
+      					<w2:column id="sPsnInfoOferAgreYn"
+      						name="sPsnInfoOferAgreYn" dataType="text" />
+      					<w2:column id="sMNumCrInsAgreYn"
+      						name="sMNumCrInsAgreYn" dataType="text" />
+      					<w2:column id="nAddrChngSeq"
+      						name="nAddrChngSeq" dataType="text" />
+      					<w2:column id="nTelnoChngSeq"
+      						name="nTelnoChngSeq" dataType="text" />
+      					<w2:column id="sMailRvadAddrFlagCd"
+      						name="sMailRvadAddrFlagCd" dataType="text" />
+      					<w2:column id="nMailRvadChngSeq"
+      						name="nMailRvadChngSeq" dataType="text" />
+      					<w2:column id="sAddrFlgcd" name="sAddrFlgcd"
+      						dataType="text" />
+      					<w2:column id="sInrpsCstId" name="sInrpsCstId"
+      						dataType="text" />
+      					<w2:column id="sCstFlgcd" name="sCstFlgcd"
+      						dataType="text" />
+      					<w2:column id="sCrtorRelnCd"
+      						name="sCrtorRelnCd" dataType="text" />
+      					<w2:column id="sPaymTermCd" name="sPaymTermCd"
+      						dataType="text" />
+      					<w2:column id="sInsurTermCd"
+      						name="sInsurTermCd" dataType="text" />
+      					<w2:column id="nRealPaymTerm"
+      						name="nRealPaymTerm" dataType="text" />
+      					<w2:column id="nRealInsurTerm"
+      						name="nRealInsurTerm" dataType="text" />
+      					<w2:column id="nPaymAge" name="nPaymAge"
+      						dataType="text" />
+      					<w2:column id="nEndAge" name="nEndAge"
+      						dataType="text" />
+      					<w2:column id="sMinsrRelnCd"
+      						name="sMinsrRelnCd" dataType="text" />
+      					<w2:column id="sXcptPftbpInrpsRelnCd"
+      						name="sXcptPftbpInrpsRelnCd" dataType="text" />
+      					<w2:column id="sXcptPftbpCd"
+      						name="sXcptPftbpCd" dataType="text" />
+      					<w2:column id="sXcptPftbpName"
+      						name="sXcptPftbpName" dataType="text" />
+      					<w2:column id="sXcptPftbpTelno"
+      						name="sXcptPftbpTelno" dataType="text" />
+      					<w2:column id="sXcptPftbpFlagCd"
+      						name="sXcptPftbpFlagCd" dataType="text" />
+      					<w2:column id="nManAge" name="nManAge"
+      						dataType="text" />
+      				</w2:columnInfo>
+      				<w2:data use="false">
+      				</w2:data>
+      			</w2:dataList>
+
+      			<w2:dataList baseNode="list" id="DsWs_PaymCycl" repeatNode="map" userData2="//hashtable/data[@hashkey='paymCyclCdList']/vector/data/multi">
+		            <w2:columnInfo>
+						<w2:column id="sGdCd" name="" dataType="text"></w2:column>
+						<w2:column id="sPaymCyclName" name="" dataType="text"></w2:column>
+						<w2:column id="sPaymCyclCd" name="" dataType="text"></w2:column>
+					</w2:columnInfo>
+          	  </w2:dataList>
+				
+                <w2:dataList baseNode="list" id="Ds_RenwlAmt"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column id="sTrtyName" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sRenwlElapsTerm" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nRenwlPaymPrem" name="name3"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="nIncrRato" name="증가율(%)"  dataType="number">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>                 
+                <w2:dataList baseNode="list" id="DsWs_RenwlAmt" repeatNode="map" userData2="//*/vector/data/LTIDA19"/>
+                <w2:dataList baseNode="list" id="DsWs_Warning" repeatNode="map" userData2="//*/WARNING"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        
+        <!--// js Script include //--> 
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/>  
+	 	<script src="/cm/js/convertJs/LongTerm_Script.js"/>
+	 	
+        <script><![CDATA[
+		
+  /****************************************************************************
+ * 프로그램번호   : B012_Pop
+ * 프로그램명     : 갱신형 특약 보험료 경과기간별 보험료조회
+ * 파일명         : B012_Pop.xml
+ * 프로그램 내용  : 갱신형 특약 보험료 경과기간별 보험료조회
+ * 관련 프로그램  : 
+ * 작성자         : 
+ * 작성일         : 
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+
+var sPsnGroupFlgcdPop = "";	// 피보험자단체구분코드
+var sPsnGroupFlgcd = "";	// 피보험자단체구분코드 
+var sCrNoPop = "";			// 계약번호(변경계약처리시 사용)  
+var sCrNo = "";				// 계약번호(변경계약처리시 사용)
+var parent_Ds_LTIDA00 = ""		// 부모창 기본사항 정보 Ds Set
+var parent_Ds_Pibo = "";		// 부모창 피보험자 Ds Set
+var parent_DsWs_PaymCycl = "" 	// 부모창 납입 정보 Ds Set  
+var parent_edt_sGdCdNm =  "";		// 부모창 상품명 Set
+
+//---------------------------------------------------------------------------
+// function 명 : B012_OnLoadCompleted
+// 내용        : 화면로딩시 메인으로부터 파라메터값 담음
+//---------------------------------------------------------------------------
+scwin.init = function() {
+	console.log("[/CBSC023P.xml] [init()] ==> [폼 로딩] [TEST_01]" );  
+	
+	var pro = Promise.resolve();
+	window.top.util.winTopShowModalChk = "T";
+	util.winTopShowModal();
+
+	pro = pro.then(function(rv) {
+		return util.winTopShowModalPromise();
+	});
+
+	pro = pro.then(function(rv) {
+		// init 부분 함수 입력하는곳  // =================================================>
+		
+		var pObj = wprom.getParamObject(); 
+		parent_Ds_LTIDA00 = pObj.Ds_LTIDA00;			// 부모창 보험 기본사항 정보 Ds Set
+		parent_Ds_Pibo = pObj.Ds_Pibo;					// 부모창 피보험자 정보 Ds Set 
+		parent_DsWs_PaymCycl = pObj.DsWs_PaymCycl;	// 부모창 납입 정보 Ds Set 
+		parent_edt_sGdCdNm = pObj.edt_sGdCdNm;	// 부모창 상품명 Set  
+	 
+	    wconv.copy(Ds_LTIDA00, parent_Ds_LTIDA00);	 // 부모창 보험 기본사항 정보 Ds 복사
+	    wconv.copy(Ds_Pibo, parent_Ds_Pibo);	 			// 부모창 피보험자 정보 Ds 복사
+	    wconv.copy(DsWs_PaymCycl, parent_DsWs_PaymCycl);	 // 부모창 납입 정보 Ds 복사
+	     
+		util.setCompBindRefresh(DsWs_PaymCycl.getID());  	// Ds Binding 처리
+		util.setCompBindRefresh(Ds_Pibo.getID());  	// Ds Binding 처리
+	  
+	    Ds_LTIDA00.setRowPosition(0);	 // Row 위치 0번째로 지정  
+	    Ds_Pibo.setRowPosition(0);	 // Row 위치 0번째로 지정 
+	 
+		edtGdName.setValue(parent_edt_sGdCdNm.getValue());	 // 상품명 
+		//console.log("[/CBSC023P.xml] [init()] ==> [폼 로딩] ==> [DsWs_PaymCycl,갯수,_01]"+ DsWs_PaymCycl.getRowCount() +"[DsWs_PaymCycl]"+ WebSquare.xml.serialize(DsWs_PaymCycl.getAllXML()) );    
+	 
+		scwin.lfn_Search();	// 보상한도 조회
+ 		
+		return ;		// init 함수를 종료하고자 할때 사용
+		// return Promise.reject("오류관련처리"); // =================================================>
+	});
+
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});
+	
+	//pro = pro.catch(function(rj) {
+		//util.winTopHideModal();
+		//alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+	//});
+	 
+	return pro; 
+	//console.log("[/CBSC023P.xml] [init()] ==> [폼 로딩] [TEST_end]" );
+};
+ 
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 조회버튼 클릭 Event처리
+//---------------------------------------------------------------------------
+scwin.lfn_Search = function() {
+	//console.log("[/CBSC023P.xml] [lfn_Search()] ==> [갱신보험료 조회] [TEST_01]" );  
+	//console.log("[/CBSC023P.xml] [lfn_Search()] ==> [갱신보험료 조회] [Ds_LTIDA00, 조회_전 Ds 갯수]"+ Ds_LTIDA00.getRowCount() +"[Ds_LTIDA00]"+ WebSquare.xml.serialize(Ds_LTIDA00.getAllXML()) );    
+ 
+	var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB012Task", "getRenwlAmtList");	// 갱신보험료 조회 Obj
+	MethodObj.setId("getRenwlAmtList");	// ID 셋팅    
+	MethodObj.setUrl("/contract/CBSC023PController.do"); 		// 서버단 호출 URL 
+	MethodObj.addSingleData("LTIDA00", "LTIDA00", "Ds_LTIDA00:A");  		// Param 셋팅(계약기본사항정보Ds): A, I, U, R 
+	MethodObj.setXPath("//*/LTIDA19");		// XPath(Ds_LTIDA00) 
+	MethodObj.addXPath("//*/WARNING");		// XPath(DsWs_Warning)
+	MethodObj.setXPathDs(); 		// XPath 전체 경로 사용할 경우
+	MethodObj.setHashTable();   	// 전문의 앞이 hashtable로 보낼 때
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)] 
+	MethodObj.send();		// 최종 전송  
+ 	//console.log("[/CBSC023P.xml] [lfn_SearchData()] ==> [01. 갱신보험료 조회, 전송_완료] [TEST_91]");
+ 
+	//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+	
+	Ds_RenwlAmt.setJSON(_tranSync.getDsJson("//*/LTIDA19"));				// 갱신보험료Ds 셋팅 
+	DsWs_Warning.setJSON(_tranSync.getDsJson("//*/WARNING"));  		// Warning DS 셋팅(조회 결과)    
+	console.log("[/CBSC023P.xml] [lfn_Search()] ==>  [I/F 조회 완료] [Ds_RenwlAmt, 갯수]"+ Ds_RenwlAmt.getRowCount() );  
+ 		
+  	if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    }
+    if (Ds_LTIDA00.getRowCount() == 0) {
+  		wprom.alert("해당 데이터가 없습니다.");
+     	return;
+    }
+    
+    //console.log("[/CBSC023P.xml] [lfn_Search()] ==> [갱신보험료 조회] [TEST_end]" );  
+ }; 
+ 
+/*-----------------------------------
+// function 명 : lfn_DataChangeCheck
+// 내용        : dataset 변경여부 체크
+-----------------------------------*/
+scwin.lfn_DataChangeCheck = function(obj, newObj) {
+
+    newObj.ClearData();
+    var cnt = 0;
+    for (var i = 0; i < obj.GetCountNF(); i++) {
+        if (obj.GetColumnNF(i, "chk") == "1") {
+            newObj.InsertRow(cnt);
+            for (var j = 0; j < obj.GetColCount(); j++) {
+                newObj.SetColumn(cnt, obj.GetColID(j), obj.GetColumnNF(i, obj.GetColID(j)));
+            }
+            cnt++;
+        }
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Close_OnClick
+// 내용        : 팝업닫기
+//---------------------------------------------------------------------------
+scwin.lfn_Close_OnClick = function(obj) {
+    wprom.close("");
+};
+
+scwin.cmb_sInrpsName_OnChanged = function(obj, strCode, strText, nOldIndex, nNewIndex) {
+ 	//console.log("[/CBSC023P.xml] [cmb_sInrpsName_OnChanged()] ==> [TEST] [cmb_sInrpsName.getValue()]"+ cmb_sInrpsName.getValue() ); 
+ 	
+    Ds_LTIDA00.setCellData(0, "nInrpsSeqno", cmb_sInrpsName.getValue()); 	// 피보험자명
+     
+    scwin.lfn_Search();
+};
+
+//**************************************************************************************************
+//  displayFormatter 처리 함수
+//**************************************************************************************************
+scwin.lfn_getColumnValue = function(data) { 
+	//console.log("[/CBSC023P.xml] [lfn_getColumnValue()] ==> [TEST] [rowIndex]"+ rowIndex +"[colIndex]"+ colIndex); 
+	
+ 	if (data == "0E-27"){  // 데이타가 0E-27로 넘어 오면
+ 		data = 0;
+ 		
+ 	} else{   
+ 		data = wconv.truncate(data, 1) + "%";	 // 소수점 1째자리 버림 처리
+ 	}
+ 	
+	return data;
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B012_Pop"
+        	style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;left:0px;top:0px;"
+        	userData1="갱신형 특약 경과기간별 보험료 조회[B012_Pop]"
+        	userData2=" OnLoadCompleted:scwin.B012_OnLoadCompleted; ">
+        	<DataObjects>
+        		<DataObject />
+        	</DataObjects>
+        	<ServiceObjects>
+        		<ServiceObject />
+        	</ServiceObjects>
+        	<xf:group arcsize="6" class="sty_area_form" id="group1"
+        		style="position:absolute;  bottom:608px;height:82px;left:0px;top:30px;width:640px;"
+        		userData3="RoundRect">
+        		<xf:group class="form_w_line" id=""
+        			style="top:26px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id=""
+        			style="top:53px;left:0px;">
+        		</xf:group>
+        		<xf:select1 appearance="minimal" class="sty_ipt_form"
+        			emptyItem="true" ev:onchange="scwin.cmb_sInrpsName_OnChanged"
+        			id="cmb_sInrpsName" renderType="native"
+        			style="position:absolute; ImeMode:none;  INDEX:0;  border-style:solid;  height:20px;left:87px;top:30px; width:238px;"
+        			tabIndex="20" ref="data:Ds_Pibo.nInrpsSeqno">
+        			<xf:choices>
+        				<xf:itemset nodeset="data:Ds_Pibo">
+        					<xf:label ref="sInrpsName"></xf:label>
+        					<xf:value ref="nInrpsSeqno"></xf:value>
+        				</xf:itemset>
+        			</xf:choices>
+        		</xf:select1>
+        	</xf:group>
+        	<w2:textbox id="Static5" label="갱신형 특약 경과기간별 보험료"
+        		style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; width:249px;"
+        		tagname="" class="sub_pop_title01" />
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.lfn_Close_OnClick" id="btn_close"
+        		style="position:absolute; ImageID:btn_Comm_Close;left:591px;top:0px; width:45px;"
+        		tabIndex="3" type="anchor">
+        		<xf:label><![CDATA[닫기]]></xf:label>
+        	</xf:trigger>
+        	<xf:switch id="switch_107" style=" ">
+        		<xf:case id="Default_108" style=" "></xf:case>
+        	</xf:switch>
+        	<w2:textbox class="sty_lb_Basic" id="Static14" label="상품명"
+        		style="position:absolute;min-width:65px;width:65px;left:0px;VAlign:Middle;top:30px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static10" label="갱신주기"
+        		style="position:absolute;min-width:65px;width:65px;left:333px;VAlign:Middle;top:57px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static8" label="청약번호"
+        		style="position:absolute;min-width:65px;width:65px;left:333px;VAlign:Middle;top:30px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static29" label="피보험자"
+        		style="position:absolute;min-width:65px;width:65px;left:0px;VAlign:Middle;top:57px;"
+        		tagname="" />
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="edt_inrpsName" readOnly="TRUE"
+        		ref="data:Ds_Pibo.sInrpsName"
+        		style="position:absolute; border-style:solid;  height:20px;left:402px;top:125px; width:235px;"
+        		tabIndex="10" />
+        	<w2:textbox class="sty_lb_Basic" id="Static9" label="보험기간"
+        		style="position:absolute;min-width:65px;width:65px;left:0px;VAlign:Middle;top:84px;"
+        		tagname="" />
+        	<w2:inputCalendar class="sty_cal_form"
+        		id="cal_sInsurStrtdate" readOnly="true"
+        		ref="data:Ds_LTIDA00.sInsurStrtdate"
+        		style="position:absolute;  height:20px;left:87px;top:88px; width:105px;"
+        		tabIndex="13" validCheck="true" />
+        	<w2:textbox class="ipt_Body" id="Static13" label="~"
+        		style="position:absolute; VAlign:Middle;  text-align:center; height:20px;left:193px;top:88px; width:16px;"
+        		tagname="" />
+        	<w2:inputCalendar class="sty_cal_form"
+        		id="cal_sInsurEndDate" readOnly="true"
+        		ref="data:Ds_LTIDA00.sInsurEndDate"
+        		style="position:absolute;  height:20px;left:210px;top:88px; width:105px;"
+        		tabIndex="14" validCheck="true" />
+        	<w2:textbox class="sty_lb_Basic" id="Static31" label="납입주기"
+        		style="position:absolute;min-width:65px;width:65px;left:333px;VAlign:Middle;top:84px;"
+        		tagname="" />
+        	<xf:select1 appearance="minimal" class="sty_ipt_form"
+        		disabled="true" emptyItem="true"
+        		ev:onblur="scwin.lfn_OnKillFocus_OnChanged"
+        		ev:onchange="scwin.lfn_PaymCycl_OnChanged" id="cmb_PaymCycl"
+        		ref="data:Ds_LTIDA00.sPaymCyclCd"
+        		style="position:absolute; ImeMode:none;  INDEX:0;  border-style:solid;  height:20px;left:420px;top:87px; width:75px;"
+        		tabIndex="16" renderType="native">
+        		<xf:choices>
+        			<xf:itemset nodeset="data:DsWs_PaymCycl">
+        				<xf:label ref="sPaymCyclName" />
+        				<xf:value ref="sPaymCyclCd" />
+        			</xf:itemset>
+        		</xf:choices>
+        	</xf:select1>
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="edt_InsurTermPaymTermName" readOnly="TRUE"
+        		ref="data:Ds_LTIDA00.sInsurTermPaymTermName"
+        		style="position:absolute; border-style:solid;  height:20px;left:420px;top:60px; width:210px;"
+        		tabIndex="17" />
+        	<xf:input class="sty_ipt_form" disabled="true"
+        		id="edtGdName" readOnly="TRUE" ref="data:Ds_LTIDA00.sGdName"
+        		style="position:absolute; border-style:solid;  height:20px;left:87px;top:33px; width:235px;"
+        		tabIndex="18" />
+        	<xf:input class="sty_ipt_search" dataType="text"
+        		disabled="true" displayFormat="#-####-#######"
+        		ev:oneditkeyup="scwin.lfn_sPlanNoChar" id="medt_PlanNo"
+        		readOnly="true" ref="data:Ds_LTIDA00.sPlanNo"
+        		style="position:absolute; border-style:solid;  height:20px;left:420px;top:33px; width:120px;"
+        		tabIndex="19" />
+        	<w2:gridView dataList="Ds_RenwlAmt" summaryAuto="false"
+        		useFilterList="false" scrollByColumn="false"
+        		showSortableUseFilter="false" scrollByColumnAdaptive="false"
+        		id="sty_Grid"
+        		style="position: relative;width:640px;height:450px;left:0px;top:126px;margin-top:-5px;"
+        		ignoreCellClick="false" ignoreToggleOnDisabled="false"
+        		summaryOnlyAuto="false" fixedColumnWithHidden="true"
+        		useShiftKey="true" class="sty_Grid" autoFit="allColumn"
+        		autoFitMinWidth="100">
+        		<w2:caption id="caption1" style=""
+        			value="this is a grid caption.">
+        		</w2:caption>
+        		<w2:header id="header1" style="">
+        			<w2:row id="row1" style="">
+        				<w2:column blockSelect="false" id="column7"
+        					style="height:20px;" inputType="text" width="347"
+        					displayMode="label" value="특약명">
+        				</w2:column>
+        				<w2:column blockSelect="false" id="column5"
+        					style="height:20px;" inputType="text" width="70"
+        					displayMode="label" value="경과기간">
+        				</w2:column>
+        				<w2:column blockSelect="false" id="column3"
+        					style="height:20px;" inputType="text" width="70"
+        					displayMode="label" value="보험료(원)">
+        				</w2:column>
+        				<w2:column blockSelect="false" id="column1"
+        					style="height:20px;" width="70" inputType="text"
+        					displayMode="label" value="증가율(%)">
+        				</w2:column>
+        			</w2:row>
+        		</w2:header>
+        		<w2:gBody id="gBody1" style="">
+        			<w2:row id="row2" style="">
+        				<w2:column blockSelect="false" id="sTrtyName"
+        					style="height:20px" inputType="text" width="70"
+        					displayMode="label" colMerge="true">
+        				</w2:column>
+        				<w2:column blockSelect="false"
+        					id="sRenwlElapsTerm" style="height:20px" inputType="text"
+        					width="70" displayMode="label" textAlign="right">
+        				</w2:column>
+        				<w2:column blockSelect="false"
+        					id="nRenwlPaymPrem" style="height:20px" inputType="text"
+        					width="70" displayMode="label" dataType="number"
+        					displayFormat="#,###" textAlign="right">
+        				</w2:column>
+        				<w2:column blockSelect="false" id="nIncrRato"
+        					style="height:20px" width="70" inputType="text"
+        					displayMode="label" textAlign="right"
+        					displayFormat="" dataType="number" expression=""
+        					customFormatter="" displayFormatter="scwin.lfn_getColumnValue">
+        				</w2:column>
+        			</w2:row>
+        		</w2:gBody>
+        	</w2:gridView>
+        </xf:group>
+    </body>
+</html>

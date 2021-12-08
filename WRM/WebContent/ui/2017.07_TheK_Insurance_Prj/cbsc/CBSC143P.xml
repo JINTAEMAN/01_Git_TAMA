@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="DS_chk" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="code" name="code"/>
+                        <w2:column dataType="text" id="code_nm" name="code_nm"/>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <code><![CDATA[9]]></code>
+                            <code_nm><![CDATA[-선택-]]></code_nm>
+                        </w2:row>
+                        <w2:row>
+                            <code/>
+                            <code_nm><![CDATA[예]]></code_nm>
+                        </w2:row>
+                        <w2:row>
+                            <code><![CDATA[1]]></code>
+                            <code_nm><![CDATA[아니오]]></code_nm>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DS_con" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="Ds_UserInfo" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCustNo" name="sCustNo"/>
+                        <w2:column dataType="text" id="nSeqNo" name="nSeqNo"/>
+                        <w2:column dataType="text" id="sCustType" name="sCustType"/>
+                        <w2:column dataType="text" id="sName" name="sName"/>
+                        <w2:column dataType="text" id="sMarry" name="sMarry"/>
+                        <w2:column dataType="text" id="sMutualYn" name="sMutualYn"/>
+                        <w2:column dataType="text" id="sTeachYn" name="sTeachYn"/>
+                        <w2:column dataType="text" id="sJobMemo" name="sJobMemo"/>
+                        <w2:column dataType="text" id="sClass" name="sClass"/>
+                        <w2:column dataType="text" id="sJobGroup" name="sJobGroup"/>
+                        <w2:column dataType="text" id="sJobCode" name="sJobCode"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="ds_Wanning" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="ds_accept" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="code" name="code"/>
+                        <w2:column dataType="text" id="name" name="name"/>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <code/>
+                            <name><![CDATA[예]]></name>
+                        </w2:row>
+                        <w2:row>
+                            <code><![CDATA[1]]></code>
+                            <name><![CDATA[아니오]]></name>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="ds_genaa37" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sApplyType" name="sApplyType"/>
+                        <w2:column dataType="text" id="sApplyYM" name="sApplyYM"/>
+                        <w2:column dataType="text" id="sApplySer" name="sApplySer"/>
+                        <w2:column dataType="text" id="sInsType" name="sInsType"/>
+                        <w2:column dataType="text" id="sDescrDutyYN1" name="sDescrDutyYN1"/>
+                        <w2:column dataType="text" id="sDescrDutyYN2" name="sDescrDutyYN2"/>
+                        <w2:column dataType="text" id="sDescrDutyYN3" name="sDescrDutyYN3"/>
+                        <w2:column dataType="text" id="sDescrDutyYN4" name="sDescrDutyYN4"/>
+                        <w2:column dataType="text" id="sDescrDutyYN5" name="sDescrDutyYN5"/>
+                        <w2:column dataType="text" id="sDescrDutyYN6" name="sDescrDutyYN6"/>
+                        <w2:column dataType="text" id="sDescrDutyYN7" name="sDescrDutyYN7"/>
+                        <w2:column dataType="text" id="sCancleYN" name="sCancleYN"/>
+                        <w2:column dataType="text" id="sCredit32YN" name="sCredit32YN"/>
+                        <w2:column dataType="text" id="sCredit33YN" name="sCredit33YN"/>
+                        <w2:column dataType="text" id="sPolHolderCredit32YN" name="sPolHolderCredit32YN"/>
+                        <w2:column dataType="text" id="sPolHolderCancelYN" name="sPolHolderCancelYN"/>
+                        <w2:column dataType="text" id="sDescrDutyCD1" name="sDescrDutyCD1"/>
+                        <w2:column dataType="text" id="sDescrDutyCD2" name="sDescrDutyCD2"/>
+                        <w2:column dataType="text" id="sDescrDutyCD3" name="sDescrDutyCD3"/>
+                        <w2:column dataType="text" id="sDescrDutyCD4" name="sDescrDutyCD4"/>
+                        <w2:column dataType="text" id="sDescrDutyCD5" name="sDescrDutyCD5"/>
+                        <w2:column dataType="text" id="sDescrDutyCD6" name="sDescrDutyCD6"/>
+                        <w2:column dataType="text" id="sDescrDutyCD7" name="sDescrDutyCD7"/>
+                        <w2:column dataType="text" id="sCancleCD" name="sCancleCD"/>
+                        <w2:column dataType="text" id="sCredit32CD" name="sCredit32CD"/>
+                        <w2:column dataType="text" id="sCredit33CD" name="sCredit33CD"/>
+                        <w2:column dataType="text" id="sPolHolderCredit32CD" name="sPolHolderCredit32CD"/>
+                        <w2:column dataType="text" id="sPolHolderCancelCD" name="sPolHolderCancelCD"/>
+                        <w2:column dataType="text" id="sInputDate" name="sInputDate"/>
+                        <w2:column dataType="text" id="sInputTime" name="sInputTime"/>
+                        <w2:column dataType="text" id="sUserId" name="sUserId"/>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <sApplySer/>
+                            <sApplyType/>
+                            <sApplyYM/>
+                            <sCancleCD/>
+                            <sCancleYN><![CDATA[N]]></sCancleYN>
+                            <sCredit32CD/>
+                            <sCredit32YN><![CDATA[N]]></sCredit32YN>
+                            <sCredit33CD/>
+                            <sCredit33YN><![CDATA[N]]></sCredit33YN>
+                            <sDescrDutyCD1/>
+                            <sDescrDutyCD2/>
+                            <sDescrDutyCD3/>
+                            <sDescrDutyCD4/>
+                            <sDescrDutyCD5/>
+                            <sDescrDutyCD6/>
+                            <sDescrDutyCD7/>
+                            <sDescrDutyYN1><![CDATA[N]]></sDescrDutyYN1>
+                            <sDescrDutyYN2><![CDATA[N]]></sDescrDutyYN2>
+                            <sDescrDutyYN3><![CDATA[N]]></sDescrDutyYN3>
+                            <sDescrDutyYN4><![CDATA[N]]></sDescrDutyYN4>
+                            <sDescrDutyYN5><![CDATA[N]]></sDescrDutyYN5>
+                            <sDescrDutyYN6><![CDATA[N]]></sDescrDutyYN6>
+                            <sDescrDutyYN7><![CDATA[N]]></sDescrDutyYN7>
+                            <sInputDate/>
+                            <sInputTime/>
+                            <sInsType/>
+                            <sPolHolderCancelCD/>
+                            <sPolHolderCancelYN><![CDATA[N]]></sPolHolderCancelYN>
+                            <sPolHolderCredit32CD/>
+                            <sPolHolderCredit32YN><![CDATA[N]]></sPolHolderCredit32YN>
+                            <sUserId/>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="ds_CUSAA35" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sApplyNo" name="sApplyNo"/>
+                        <w2:column dataType="text" id="sCustNo" name="sCustNo"/>
+                        <w2:column dataType="text" id="sAgmGvs" name="sAgmGvs"/>
+                        <w2:column dataType="text" id="sCustType" name="sCustType"/>
+                        <w2:column dataType="text" id="sName" name="sName"/>
+                        <w2:column dataType="text" id="sAgmYn" name="sAgmYn"/>
+                        <w2:column dataType="text" id="sAgmUser" name="sAgmUser"/>
+                        <w2:column dataType="text" id="sAgmUserIp" name="sAgmUserIp"/>
+                        <w2:column dataType="text" id="sCrtorRelCd" name="sCrtorRelCd"/>
+                        <w2:column dataType="text" id="sTelNo" name="sTelNo"/>
+                        <w2:column dataType="text" id="sRecStartDate" name="sRecStartDate"/>
+                        <w2:column dataType="text" id="sRecStartTime" name="sRecStartTime"/>
+                        <w2:column dataType="text" id="sRecEndDate" name="sRecEndDate"/>
+                        <w2:column dataType="text" id="sRecEndTime" name="sRecEndTime"/>
+                        <w2:column dataType="text" id="nCallSerial" name="nCallSerial"/>
+                        <w2:column dataType="text" id="sAgmYn1" name="sAgmYn1"/>
+                        <w2:column dataType="text" id="sAgmYn2" name="sAgmYn2"/>
+                        <w2:column dataType="text" id="sAgmYn3" name="sAgmYn3"/>
+                        <w2:column dataType="text" id="sAgmYn4" name="sAgmYn4"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="ds_CUSAA64" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sApplyNo" name="sApplyNo"/>
+                        <w2:column dataType="text" id="sAcctFlag" name="sAcctFlag"/>
+                        <w2:column dataType="text" id="nSeq" name="nSeq"/>
+                        <w2:column dataType="text" id="sCustNo" name="sCustNo"/>
+                        <w2:column dataType="text" id="sPolicyNo" name="sPolicyNo"/>
+                        <w2:column dataType="text" id="sAccountNo" name="sAccountNo"/>
+                        <w2:column dataType="text" id="sAgmYn" name="sAgmYn"/>
+                        <w2:column dataType="text" id="sAgmMethod" name="sAgmMethod"/>
+                        <w2:column dataType="text" id="sAgmDt" name="sAgmDt"/>
+                        <w2:column dataType="text" id="sAgmTime" name="sAgmTime"/>
+                        <w2:column dataType="text" id="sAgmUser" name="sAgmUser"/>
+                        <w2:column dataType="text" id="sAgmUserIp" name="sAgmUserIp"/>
+                        <w2:column dataType="text" id="sRecStartDate" name="sRecStartDate"/>
+                        <w2:column dataType="text" id="sRecStartTime" name="sRecStartTime"/>
+                        <w2:column dataType="text" id="sRecEndDate" name="sRecEndDate"/>
+                        <w2:column dataType="text" id="sRecEndTime" name="sRecEndTime"/>
+                        <w2:column dataType="text" id="nCallSerial" name="nCallSerial"/>
+                        <w2:column dataType="text" id="sAgmCheckInfo" name="sAgmCheckInfo"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DS_confidence" repeatNode="map" userData2="//*/CUSAA35">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCustNo" name="sCustNo"/>
+                        <w2:column dataType="text" id="sName" name="sName"/>
+                        <w2:column dataType="text" id="nSeqNo" name="nSeqNo"/>
+                        <w2:column dataType="text" id="nChangeNo" name="nChangeNo"/>
+                        <w2:column dataType="text" id="sCallReject" name="sCallReject"/>
+                        <w2:column dataType="text" id="sDMReject" name="sDMReject"/>
+                        <w2:column dataType="text" id="sFaxReject" name="sFaxReject"/>
+                        <w2:column dataType="text" id="sEmailReject" name="sEmailReject"/>
+                        <w2:column dataType="text" id="sSMSReject" name="sSMSReject"/>
+                        <w2:column dataType="text" id="sAffilReject" name="sAffilReject"/>
+                        <w2:column dataType="text" id="sAffilCallReject" name="sAffilCallReject"/>
+                        <w2:column dataType="text" id="sDesc" name="sDesc"/>
+                        <w2:column dataType="text" id="sInputDate" name="sInputDate"/>
+                        <w2:column dataType="text" id="sInputTime" name="sInputTime"/>
+                        <w2:column dataType="text" id="sUserID" name="sUserID"/>
+                        <w2:column dataType="text" id="sUserName" name="sUserName"/>
+                        <w2:column dataType="text" id="sApproveStat" name="sApproveStat"/>
+                        <w2:column dataType="text" id="sApproveDate" name="sApproveDate"/>
+                        <w2:column dataType="text" id="sApproveTime" name="sApproveTime"/>
+                        <w2:column dataType="text" id="sApproveID" name="sApproveID"/>
+                        <w2:column dataType="text" id="sReflectYN" name="sReflectYN"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_Search" repeatNode="map" userData2="//*/CUSAA64"/>
+                <w2:dataList baseNode="list" id="DsWs_Warning" repeatNode="map" userData2="//*/WARNING"/>
+                <w2:dataList baseNode="list" id="DsWs_Insert" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="DS_SearchReq" repeatNode="map" userData2="//*/GENAD01"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+ <script src="/cm/js/common.js"/>
+ <script src="/cm/js/val_lib.js"/>
+ <script src="/cm/js/util.js"/>
+ <script src="/cm/js/transSub.js"/>
+ <script src="/cm/js/callService.js"/>
+ <script src="/cm/js/gds.js"/>
+ <script src="/cm/js/wconv.js"/>
+ <script src="/cm/js/convertJs/Global_Script.js"/>
+ <script src="/cm/js/convertJs/comm_Webservice.js"/>
+ <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+        <script><![CDATA[
+/****************************************************************************
+ * 프로그램번호   : F150_Pop
+ * 프로그램명     : 개인신용정보활용 제공 및 동의(비대면용)
+ * 파일명         : F150_Pop.xml
+ * 프로그램 내용  : 개인신용정보을 저장한다...
+ * 관련 프로그램  : 
+ * 작성자         : 구종식
+ * 작성일         : 2016-06-08
+ * 변경내역       : 
+ ****************************************************************************/
+// 변수 
+var nSeqNo = 0;
+var sRejectYN;
+var sCrYn = 0;
+var s33AgreYn = "";
+var flag = 0;
+var sSaveClickYn = "N";
+var sSearchClickYn = "";
+var sGdFlag = "";
+var sRecStartDate = "";
+var sRecStartTime = "";
+var sRecEndDate = "";
+var sRecEndTime = "";
+var sSaveStartYn = "N";
+var getSysDate = "";
+var fv_args;
+//---------------------------------------------------------------------------
+// function 명 : lfn_OnLoadCompleted
+// 내용        : 폼로드할때 처리할 내용 
+//---------------------------------------------------------------------------
+scwin.init = function() {
+	var indata = $w.getParameter("param");
+	try {
+		fv_args = JSON.parse(indata);
+	} catch(e) {}
+	
+    var resultArr = "";
+    //wconv.trace("sApplyNo : " + sApplyNo);
+    //wconv.trace("sAcctFlag : " + sAcctFlag);
+    Btn_save.setDisabled(true);
+    Div0_stc_AgreText.setValue("전자금융거래법 시행령 제 10조에 의거하여 고객님 계좌에서 출금시 동의가 필요합니다. \n" + "해당계좌(" + fv_args.sBankNm + "/" + fv_args.sAccountNo + ")로 출금하는데 동의하시겠습니까?");
+
+    //현재시간 가져오기
+    gfn_getServerTime();
+    getSysDate = gds.gDs_ServerTime.getCellData(0, "sToday");
+    //서버시간으로 pc시간 동기화 처리
+    //ext_SetTime(getSysDate);
+    
+    if (wconv.length(Div0_Edt_sReqDate.getValue()) == 0) {}
+    scwin.lfn_search();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Btn_search_OnClick
+// 내용        : 조회버튼 클릭 이벤트
+//---------------------------------------------------------------------------
+scwin.lfn_Btn_search_OnClick = function(e) {
+    scwin.lfn_search();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_search
+// 내용        : 
+//---------------------------------------------------------------------------
+scwin.lfn_search = function() {
+    wconv.clear(DsWs_Search);
+    /*
+    SOBJ_Search.WSDL = gds.gWsdlCustomer; // 서비스 Obj WSDC 설정
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Search, "com.inswave.customer.task.CustInfoAgreeTask", "selectWithdrawAgree", 0, 0); // 자동차보험 Task Call 
+    gfn_SetParam(MethodObj, "sApplyNo", sApplyNo);
+    gfn_SetParam(MethodObj, "sAcctFlag", sAcctFlag);
+    gfn_SetParam(MethodObj, "nSeq", nSeq);
+    gfn_SetParam(MethodObj, "sAccountNo", sAccountNo);
+    var result = gfn_CallService(SOBJ_Search, DOBJ_Search, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.customer.task.CustInfoAgreeTask", "selectWithdrawAgree");
+	MethodObj.setId("selectWithdrawAgree");
+	
+    MethodObj.setParam( "sApplyNo", fv_args.sApplyNo);
+    MethodObj.setParam( "sAcctFlag", fv_args.sAcctFlag);
+    MethodObj.setParam( "nSeq", fv_args.nSeq);
+    MethodObj.setParam( "sAccountNo", fv_args.sAccountNo);
+	MethodObj.setUrl("/contract/CBSC143PController.do");
+	MethodObj.setXPath("//*/CUSAA64");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_Team.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("CUSAA64"), "DsWs_Search");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "WARNING");
+	util.setCompBindRefresh("DsWs_Search");
+	util.setRowPosition(DsWs_Search, 0);
+    
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert("웹서비스 이상입니다.");
+    } else {
+        sSearchClickYn = "Y";
+        //this.status = "정상적으로 조회 되었습니다..";
+        //wconv.trace("result : " + DsWs_Search.getCellData(0, "result"));
+        if (DsWs_Search.getCellData(0, "result") != "0") {
+            Div0_chk_agree1.setValue("1");
+            Div0_chk_agree1.setDisabled(true);
+            Div0_Edt_sReqDate.setValue(DsWs_Search.getCellData(0, "sAgmDt"));
+            Div0_Edt_sReqID.setValue(DsWs_Search.getCellData(0, "sAgmUser"));
+            gfn_getEmpName(DsWs_Search.getCellData(0, "sAgmUser"));
+            if (gds.gDsWs_SelectEmpName.getRowCount() != 0) {
+                Div0_Edt_sUserName.setValue(gds.gDsWs_SelectEmpName.getCellData(0, "sEmpName"));
+            }
+        } else {
+            Div0_chk_agree1.setDisabled(false);
+            util.appendRow(DS_con);
+            util.insertColumn(DS_con, [["sUserID",      "sUserID",                    "text"                ]            ]);
+            util.insertColumn(DS_con, [["sUserName", "sUserName",                    "text"                ]            ]);
+            util.insertColumn(DS_con, [["sInputDate",  "sInputDate",                    "text"                ]            ]);
+            Div0_Edt_sReqDate.setValue(getSysDate);
+            Div0_Edt_sReqID.setValue(util.getGdsValue("gUserID"));
+            gfn_getEmpName(util.getGdsValue("gUserID"));
+            if (gds.gDsWs_SelectEmpName.getRowCount() != 0) {
+                Div0_Edt_sUserName.setValue(gds.gDsWs_SelectEmpName.getCellData(0, "sEmpName"));
+            }
+        }
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Btn_save_OnClick
+// 내용        : 신용정보저장 버튼  클릭 이벤트
+//---------------------------------------------------------------------------
+scwin.lfn_Btn_save_OnClick = function(e) {
+    if (sSaveStartYn == "N") {
+        wprom.alert("녹취시작 버튼을 눌러주세요.");
+        return;
+    }
+    if (Div0_chk_agree1.getValue() == "0") {
+        wprom.alert("출금 동의를 선택하세요.");
+        return;
+    }
+    if (sRecStartDate == "" && sRecStartTime == "") {
+        wprom.alert("녹취시작 버튼을 안눌렀을 \uFFFD");
+        return;
+    }
+    if (wconv.length(fv_args.sApplyNo) < 1) {
+        wprom.alert("청약번호가 없습니다 확인하세요");
+        sreturn;
+    }
+    scwin.lfn_save();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_save
+// 내용        : 신용정보 저장 
+//---------------------------------------------------------------------------
+scwin.lfn_save = function() {
+    //wconv.trace("녹취정보 set");
+    // 서버시간 조회
+    gfn_getServerTime();
+    sysDate = gds.gDs_ServerTime.getCellData(0, "sToday"); // 서버시간	
+    //녹취종료시간
+    sRecEndDate = wconv.mid(sysDate, 0, 8);
+    sRecEndTime = wconv.mid(sysDate, 8, 6);
+    //wconv.trace(sysDate);
+
+
+    /*
+    청약번호	sApplyNo
+    계좌구분	sAcctFlag
+    순번	nSeq
+    고객번호	sCustNo
+    계약번호	sPolicyNo
+    계좌번호	sAccountNo
+    동의여부	sAgmYn
+    동의방법	sAgmMethod
+    동의일자	sAgmDt
+    동의시간	sAgmTime
+    동의처리자	sAgmUser
+    동의처리자IP	sAgmUserIp
+    녹취시작일자	sRecStartDate
+    녹취시작시간	sRecStartTime
+    녹취종료일자	sRecEndDate
+    녹취종료시간	sRecEndTime
+    콜번호	nCallSerial
+    동의검증정보	sAgmCheckInfo
+    */
+    /*
+        SOBJ_Insert.WSDL = gWsdlGen;
+    	var MethodObj1 = SOBJ.CreateMethodObj("perform");   
+    	
+     	//insert XML문 Header 문구 작성
+     	//setHeader("vector", "com.inswave.newgen.drv.pol.task.FReq01040Task", "saveCUSAA35"); 
+    	setHeader("vector", "com.inswave.customer.task.CustInfoAgreeTask", "insertWithdrawAgree"); 
+    	
+    	var nRow;
+    	nRow = ds_CUSAA64.AddRow();
+    	ds_CUSAA64.SetColumn(nRow, "sApplyNo", sApplyNo);
+    	ds_CUSAA64.SetColumn(nRow, "sAcctFlag", sAcctFlag);
+    	ds_CUSAA64.SetColumn(nRow, "nSeq", nCrChngNo);
+    	ds_CUSAA64.SetColumn(nRow, "sCustNo", sCustNo);
+    	ds_CUSAA64.SetColumn(nRow, "sPolicyNo", sPolicyNo);
+    	ds_CUSAA64.SetColumn(nRow, "sAccountNo", sAccountNo);
+    	ds_CUSAA64.SetColumn(nRow, "sAgmYn", "Y");
+    	ds_CUSAA64.SetColumn(nRow, "sAgmMethod", sAgmMethod);
+    	ds_CUSAA64.SetColumn(nRow, "sAgmDt", sAgmDt);
+    	ds_CUSAA64.SetColumn(nRow, "sAgmTime", sRecEndTime);
+    	ds_CUSAA64.SetColumn(nRow, "sAgmUser", gUserID);
+    	ds_CUSAA64.SetColumn(nRow, "sAgmUserIp", gUserIP);
+    	ds_CUSAA64.SetColumn(nRow, "sRecStartDate", sRecStartDate);
+    	ds_CUSAA64.SetColumn(nRow, "sRecStartTime", sRecStartTime);
+    	ds_CUSAA64.SetColumn(nRow, "sRecEndDate", sRecEndDate);
+    	ds_CUSAA64.SetColumn(nRow, "sRecEndTime", sRecEndTime);
+    	ds_CUSAA64.SetColumn(nRow, "nCallSerial", gCallSerial);
+    	ds_CUSAA64.SetColumn(nRow, "sAgmCheckInfo", "");
+    	
+    	setTail("vector"); 	
+    	
+    	SOBJ_Insert.CreateObj("in0");
+    	MethodObj1.in0 = insertStr;  //XML 구조를 담은 변수
+    	
+     	var result = gfn_CallService(SOBJ_Insert, DOBJ_Insert, MethodObj1);
+    */
+    //alert(result);
+    /*
+    SOBJ_Insert.WSDL = gds.gWsdlCustomer; // 서비스 Obj WSDC 설정
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Insert, "com.inswave.customer.task.CustInfoAgreeTask", "insertWithdrawAgree", 0, 0); // 자동차보험 Task Call 
+    gfn_SetParam(MethodObj, "sApplyNo", sApplyNo);
+    gfn_SetParam(MethodObj, "sAcctFlag", sAcctFlag);
+    gfn_SetParam(MethodObj, "nSeq", nSeq);
+    gfn_SetParam(MethodObj, "sCustNo", sCustNo);
+    gfn_SetParam(MethodObj, "sPolicyNo", sPolicyNo);
+    gfn_SetParam(MethodObj, "sAccountNo", sAccountNo);
+    gfn_SetParam(MethodObj, "sAgmYn", "Y");
+    gfn_SetParam(MethodObj, "sAgmMethod", sAgmMethod);
+    gfn_SetParam(MethodObj, "sAgmDt", sAgmDt);
+    gfn_SetParam(MethodObj, "sAgmUser", util.getGdsValue("gUserID"));
+    gfn_SetParam(MethodObj, "sAgmUserIp", util.getGdsValue("gUserIP"));
+    gfn_SetParam(MethodObj, "sRecStartDate", sRecStartDate);
+    gfn_SetParam(MethodObj, "sRecStartTime", sRecStartTime);
+    gfn_SetParam(MethodObj, "sRecEndDate", sRecEndDate);
+    gfn_SetParam(MethodObj, "sRecEndTime", sRecEndTime);
+    gfn_SetParam(MethodObj, "nCallSerial", gds.gCallSerial);
+    gfn_SetParam(MethodObj, "sAgmCheckInfo", "");
+    var result = gfn_CallService(SOBJ_Insert, DOBJ_Insert, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.customer.task.CustInfoAgreeTask", "insertWithdrawAgree");
+	MethodObj.setId("insertWithdrawAgree");
+    MethodObj.setParam( "sApplyNo", fv_args.sApplyNo);
+    MethodObj.setParam( "sAcctFlag", fv_args.sAcctFlag);
+    MethodObj.setParam( "nSeq", fv_args.nSeq);
+    MethodObj.setParam( "sCustNo", fv_args.sCustNo);
+    MethodObj.setParam( "sPolicyNo", fv_args.sPolicyNo);
+    MethodObj.setParam( "sAccountNo", fv_args.sAccountNo);
+    MethodObj.setParam( "sAgmYn", "Y");
+    MethodObj.setParam( "sAgmMethod", fv_args.sAgmMethod);
+    MethodObj.setParam( "sAgmDt", fv_args.sAgmDt);
+    MethodObj.setParam( "sAgmUser", util.getGdsValue("gUserID"));
+    MethodObj.setParam( "sAgmUserIp", util.getGdsValue("gUserIP"));
+    MethodObj.setParam( "sRecStartDate", sRecStartDate);
+    MethodObj.setParam( "sRecStartTime", sRecStartTime);
+    MethodObj.setParam( "sRecEndDate", sRecEndDate);
+    MethodObj.setParam( "sRecEndTime", sRecEndTime);
+    MethodObj.setParam( "nCallSerial", util.getGdsValue("gCallSerial"));
+    MethodObj.setParam( "sAgmCheckInfo", "");
+	MethodObj.setUrl("/contract/CBSC143PController.do");
+	//MethodObj.setXPath("//*/ADMAC03");
+	MethodObj.setXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_Team.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "WARNING");
+    
+    if (WARNING.getRowCount() != 0) {
+        return false;
+    } else {
+        sSaveClickYn = "Y";
+        sSaveStartYn = "N";
+        wprom.alert("정상적으로 등록되었습니다..");
+        wprom.close(sSaveClickYn);
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_RecStrt_OnClick
+// 내용        : 녹취 정보 콜.
+//---------------------------------------------------------------------------
+scwin.btn_RecStrt_OnClick = function(obj) {
+    //wconv.trace("녹취정보 set");
+    sSaveStartYn = "Y";
+    // 서버시간 조회
+    gfn_getServerTime();
+    sysDate = gds.gDs_ServerTime.getCellData(0, "sToday"); // 서버시간	
+    sRecStartDate = wconv.mid(sysDate, 0, 8);
+    sRecStartTime = wconv.mid(sysDate, 8, 6);
+    Btn_save.setDisabled(false);
+    //wconv.trace(sysDate);
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="F150_Pop"
+            style="position:absolute;/*  height:144px;*/ left:0px; top:0px;"
+            userData1="출금동의Pop" userData2=" OnLoadCompleted:scwin.lfn_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+                <ServiceObject/>
+                <ServiceObject/>
+                <ServiceObject/>
+                <ServiceObject/>
+            </ServiceObjects>
+            <w2:textbox id="Static0" label="출금동의" style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; " tagname="" class="sub_pop_title01">
+</w2:textbox>
+            
+            <xf:group class="sty_area_form" id="Div0" style="position:absolute; height:81px; left:0px; top:30px; width:584px;" tabIndex="3" userData1="Div0">
+            	<xf:group class="form_w_line" id="" style="top:54px;left:0px;">
+				</xf:group>
+                <w2:textbox class="sty_lb_Basic" id="Div0_Static10" label="입력일"
+                    style="position:absolute;height:24px;width:72px;left:-1px;VAlign:Middle;top:54px;" tagname=""/>
+                <w2:textbox class="sty_lb_Basic" id="Div0_Static17" label="입력자"
+                    style="position:absolute;height:24px;width:80px;left:224px;VAlign:Middle;top:54px;" tagname=""/>
+                <xf:input class="sty_ipt_form" dataType="text" disabled="true" displayFormat="####/##/##" id="Div0_Edt_sReqDate"
+                    maxlength="8" readOnly="true" ref="data:DS_con.sInputDate"
+                    style="position:absolute;   height:20px;left:106px;top:57px; width:108px;" tabIndex="4"/>
+                <xf:input class="sty_ipt_form" disabled="true" id="Div0_Edt_sReqID" maxByteLength="30" readOnly="TRUE"
+                    ref="data:DS_con.sUserID"
+                    style="position:absolute; ImeMode:native;    height:20px;left:331px;top:57px; width:113px;" tabIndex="5"/>
+                <xf:input class="sty_ipt_form" disabled="true" id="Div0_Edt_sUserName" maxByteLength="30" readOnly="TRUE"
+                    ref="data:DS_con.sUserName"
+                    style="position:absolute; ImeMode:native;    height:20px;left:448px;top:57px; width:126px;" tabIndex="6"/>
+                <xf:select appearance="full" class="" disabled="true"
+                	id="Div0_chk_agree1"
+                	style="position:absolute; height:27px;left:516px;top:16px; width:59px;"
+                	tabIndex="7" falseValue="0" cols="" rows="">
+                	<xf:choices>
+                		<xf:item>
+                			<xf:label><![CDATA[동의함]]></xf:label>
+                			<xf:value><![CDATA[1]]></xf:value>
+                		</xf:item>
+                	</xf:choices>
+                </xf:select>
+                <w2:textbox class="sty_lb_Basic" id="Div0_stc_AgreText"
+                    style="position:absolute; VAlign:Middle;    height:54px;left:-1px;top:-1px; width:490px;" tagname=""/>
+            </xf:group>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.btn_RecStrt_OnClick" id="btn_RecStrt"
+                style="position:absolute; ImageID:btn_Input_04;  height:20px;left:414px;top:0px; width:60px;" tabIndex="4" type="anchor">
+                <xf:label><![CDATA[녹취 시작]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Btn_save_OnClick" id="Btn_save"
+                style="position:absolute; ImageID:btn_Input_06;  height:20px;left:494px;top:0px; width:70px;" tabIndex="5" type="anchor">
+                <xf:label><![CDATA[저장후 닫기]]></xf:label>
+            </xf:trigger>
+        </xf:group>
+    </body>
+</html>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css"" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ev="http://www.w3.org/2001/xml-events"
+	xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<!-- 
+		#####################################################################
+		파일명 : HM003S01.xml
+		프로그램명 : 개인 정보 입력
+		설 명 : 개인 정보를 입력하는 화면
+		작성자 : Inswave Systems
+		작성일 : 2017.12.26
+		
+		수정일자	  수정자			 수정내용
+		=====================================================================
+		2017.12.26	Inswave Systems	최초작성
+		2018.01.26	Inswave Systems	WebSquare5 SP2 기능을 적용하도록 소스 업그레이드
+		2018.11.12	Inswave Systems	WebSquare5 SP3 기능을 적용하도록 소스 업그레이드
+		#####################################################################
+		-->
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""/>
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:aliasDataMap id="sdm_memberBasic" scope="../dma_memberBasic" studioSrc="/ui/HM/HM003M01.xml"/>
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>
+		</xf:model>
+		 <script type="text/javascript" lazy="false"><![CDATA[
+		
+	scwin.onpageload = function() {
+		var codeOptions = [ { code : "00004", compID : "sbx_Religion" },
+							{ code : "00013", compID : "sbx_SchoolCareer" },
+							{ code : "00022", compID : "sbx_HouseKind" } ];
+		com.setCommonCode(codeOptions);
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+	
+	/**
+	 * 우편번호를 검색할 수 있는 팝업창을 오픈한다.
+	 */
+	scwin.btn_searchZipCode_onclick = function(e) {
+		var rowJSON = {};
+		var data = { data : rowJSON, callbackFn : "scwin.searchZipCodeCallback" };
+		var opt = { id : "H3P03", 
+					popupName : "우편번호 검색", 
+					width : "600", height : "492" };
+		com.openPopup("/ui/HM/HM003P03.xml", opt, data);
+	};
+	
+	scwin.searchZipCodeCallback = function(returnValue) {
+		var selectedZipCode = returnValue;
+		sdm_memberBasic.set("ZIP_CD", selectedZipCode.ZIP_CD);
+		sdm_memberBasic.set("ADDRESS1", selectedZipCode.ADDRESS);
+		ibx_address2.focus();
+	};
+	
+	]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="" id="grp_memberBasic2" style="height:142px;padding:14px 9px 4px 9px;">
+			<table class="w2tb tb" id="table2" style="width:100.00%;" summary="" adaptive="layout">
+				<xf:group tagname="colgroup">
+					<xf:group style="idth:9.77%;" tagname="col"></xf:group>
+					<xf:group style="width:20.97%;" tagname="col"></xf:group>
+					<xf:group style="idth:9.77%;" tagname="col"></xf:group>
+					<xf:group style="width:23.67%;" tagname="col"></xf:group>
+					<xf:group style="width:10.85%;" tagname="col"></xf:group>
+					<xf:group style="width:22.49%;" tagname="col"></xf:group>
+				</xf:group>
+				<xf:group id="" tagname="tr">
+					<xf:group class="w2tb_th" style="" tagname="th">자택전화</xf:group>
+					<xf:group class="w2tb_td" style="" tagname="td">
+						<xf:input allowChar="0-9" id="ibx_homePhone1" maxlength="3" ref="data:sdm_memberBasic.HOME_PHONE1"
+							style="width: 40px;height: 21px;margin-left:0px;">
+						</xf:input>
+						<w2:span id="span6" label="-" style="width: 100px;height: 23px;margin-left:2px;margin-top:3px;"></w2:span>
+						<xf:input allowChar="0-9" id="ibx_homePhone2" maxlength="4" ref="data:sdm_memberBasic.HOME_PHONE2"
+							style="width: 40px;height: 21px;margin-left:2px;">
+						</xf:input>
+						<w2:span id="span7" label="-" style="width: 100px;height: 23px;margin-left:2px;"></w2:span>
+						<xf:input allowChar="0-9" id="ibx_homePhone3" maxlength="4" ref="data:sdm_memberBasic.HOME_PHONE3"
+							style="width: 40px;height: 21px;margin-left:2px;">
+						</xf:input>
+					</xf:group>
+					<xf:group class="w2tb_th" style="" tagname="th">종교</xf:group>
+					<xf:group class="w2tb_td" style="" tagname="td">
+						<xf:select1 allOption="false" appearance="minimal" chooseOption="false" direction="auto" disabled="false"
+							disabledClass="w2selectbox_disabled" displayMode="label" id="sbx_Religion" ref="data:sdm_memberBasic.RELIGION_CD"
+							style="width: 96%;height: 21px;" submenuSize="auto" textAlign="left">
+						</xf:select1>
+					</xf:group>
+					<xf:group class="w2tb_th" style="" tagname="th">주거형태</xf:group>
+					<xf:group class="w2tb_td" style="" tagname="td">
+						<xf:select1 allOption="false" appearance="minimal" chooseOption="false" direction="auto" disabled="false"
+							disabledClass="w2selectbox_disabled" displayMode="label" id="sbx_HouseKind" ref="data:sdm_memberBasic.HOUSE_KIND_CD"
+							style="width: 96%;height: 21px;" submenuSize="auto" textAlign="left">
+						</xf:select1>
+					</xf:group>
+				</xf:group>
+				<xf:group tagname="tr">
+					<xf:group class="w2tb_th" style="" tagname="th">최종학교</xf:group>
+					<xf:group class="w2tb_td" style="" tagname="td">
+						<xf:input id="ibx_lastSchoolNm" ref="data:sdm_memberBasic.LAST_SCHOOL_NM" style="width: 95%;height: 21px;"></xf:input>
+					</xf:group>
+					<xf:group class="w2tb_th" style="" tagname="th">전공</xf:group>
+					<xf:group class="w2tb_td" style="" tagname="td">
+						<xf:input id="ibx_majorNm" ref="data:sdm_memberBasic.MAJOR_NM" style="width: 95%;height: 21px;"></xf:input>
+					</xf:group>
+					<xf:group class="w2tb_th" style="" tagname="th">입사학력</xf:group>
+					<xf:group class="w2tb_td" style="" tagname="td">
+						<xf:select1 allOption="false" appearance="minimal" chooseOption="false" direction="auto" disabled="false"
+							disabledClass="w2selectbox_disabled" displayMode="label" id="sbx_SchoolCareer" ref="data:sdm_memberBasic.SCHOOL_CAREER_CD"
+							style="width: 96%;height: 21px;" submenuSize="auto" textAlign="left">
+						</xf:select1>
+					</xf:group>
+				</xf:group>
+				<xf:group tagname="tr">
+					<xf:group class="w2tb_th" style="" tagname="th">보훈대상여부</xf:group>
+					<xf:group class="w2tb_td" style="" tagname="td">
+						<xf:select1 allOption="" appearance="minimal" chooseOption="" direction="auto" disabled="false"
+							disabledClass="w2selectbox_disabled" displayMode="label" id="sbx_IsVeteranWelfare" ref="data:sdm_memberBasic.IS_VETERAN_WELFARE"
+							style="width: 96%;height: 21px;" submenuSize="auto" textAlign="left">
+							<xf:choices>
+								<xf:item>
+									<xf:label><![CDATA[예]]></xf:label>
+									<xf:value><![CDATA[Y]]></xf:value>
+								</xf:item>
+								<xf:item>
+									<xf:label><![CDATA[아니오]]></xf:label>
+									<xf:value><![CDATA[N]]></xf:value>
+								</xf:item>
+							</xf:choices>
+						</xf:select1>
+					</xf:group>
+					<xf:group class="w2tb_th" style="" tagname="th">군필여부</xf:group>
+					<xf:group class="w2tb_td" style="" tagname="td">
+						<xf:select1 allOption="" appearance="minimal" chooseOption="" direction="auto" disabled="false"
+							disabledClass="w2selectbox_disabled" displayMode="label" id="sbx_IsMilitaryService" ref="data:sdm_memberBasic.IS_MILITARY_SERVICE"
+							style="width: 96%;height: 21px;" submenuSize="auto" textAlign="left">
+							<xf:choices>
+								<xf:item>
+									<xf:label><![CDATA[예]]></xf:label>
+									<xf:value><![CDATA[Y]]></xf:value>
+								</xf:item>
+								<xf:item>
+									<xf:label><![CDATA[아니오]]></xf:label>
+									<xf:value><![CDATA[N]]></xf:value>
+								</xf:item>
+							</xf:choices>
+						</xf:select1>
+					</xf:group>
+					<xf:group class="w2tb_th" style="" tagname="th">휴퇴직사유</xf:group>
+					<xf:group class="w2tb_td" style="" tagname="td">
+						<xf:input id="ibx_retireReason" ref="data:sdm_memberBasic.RETIRE_REASON" style="width: 95%;height: 21px;"></xf:input>
+					</xf:group>
+				</xf:group>
+				<xf:group style="height:30px;" tagname="tr">
+					<xf:group class="w2tb_th req" tagname="th">생년월일</xf:group>
+					<xf:group class="w2tb_td" tagname="td">
+						<w2:inputCalendar calendarValueType="yearMonthDate" focusOnDateSelect="false" footerDiv="false" id="cal_birthDate"
+							minYear="" ref="data:sdm_memberBasic.BIRTH_DATE" renderDiv="true" renderType="component" style="width:120px;height: 23px;"
+							weekStartsOn="0" mandatory="true" class="req">
+						</w2:inputCalendar>
+						<xf:select1 allOption="" appearance="minimal" chooseOption="" direction="auto" disabled="false"
+							disabledClass="w2selectbox_disabled" displayMode="label" id="sbx_IsLunar" ref="data:sdm_memberBasic.IS_LUNAR"
+							style="width:18.250923%;height:21px;margin-left:4px;" submenuSize="auto" textAlign="left" mandatory="true" class="req">
+							<xf:choices>
+								<xf:item>
+									<xf:label><![CDATA[양]]></xf:label>
+									<xf:value><![CDATA[1]]></xf:value>
+								</xf:item>
+								<xf:item>
+									<xf:label><![CDATA[음]]></xf:label>
+									<xf:value><![CDATA[2]]></xf:value>
+								</xf:item>
+							</xf:choices>
+						</xf:select1>
+					</xf:group>
+					<xf:group class="w2tb_th req" tagname="th">결혼여부</xf:group>
+					<xf:group class="w2tb_td" tagname="td">
+						<xf:select1 allOption="" appearance="minimal" chooseOption="" direction="auto" disabled="false"
+							disabledClass="w2selectbox_disabled" displayMode="label" id="sbx_IsMarriage" ref="data:sdm_memberBasic.IS_MARRIAGE"
+							style="width: 96%;height: 21px;" submenuSize="auto" textAlign="left" mandatory="true" class="req">
+							<xf:choices>
+								<xf:item>
+									<xf:label><![CDATA[예]]></xf:label>
+									<xf:value><![CDATA[Y]]></xf:value>
+								</xf:item>
+								<xf:item>
+									<xf:label><![CDATA[아니오]]></xf:label>
+									<xf:value><![CDATA[N]]></xf:value>
+								</xf:item>
+							</xf:choices>
+						</xf:select1>
+					</xf:group>
+					<xf:group class="w2tb_th" tagname="th">취미</xf:group>
+					<xf:group class="w2tb_td" tagname="td">
+						<xf:input id="ibx_hoppy" ref="data:sdm_memberBasic.HOPPY" style="width: 95%;height: 21px;"></xf:input>
+					</xf:group>
+				</xf:group>
+				<xf:group style="height:30px;" tagname="tr">
+					<xf:group class="w2tb_th" tagname="th">특기</xf:group>
+					<xf:group class="w2tb_td" tagname="td">
+						<xf:input id="ibx_talent" ref="data:sdm_memberBasic.TALENT" style="width: 95%;height: 21px;"></xf:input>
+					</xf:group>
+					<xf:group class="w2tb_th" tagname="th">주소</xf:group>
+					<xf:group class="w2tb_td" tagname="td">
+						<w2:attributes>
+							<w2:colspan>3</w2:colspan>
+							<w2:rowspan>1</w2:rowspan>
+						</w2:attributes>
+						<xf:input displayFormat="###-###" id="ibx_zipCd" ref="data:sdm_memberBasic.ZIP_CD" style="width:11%;height:21px;"></xf:input>
+						<xf:image class="btn" ev:onclick="scwin.btn_searchZipCode_onclick" id="btn_searchZipCode" longdesc=""
+							src="/cm/images/inc/icon_search.gif" style="width:21px;height:23px;margin-left:5px;">
+						</xf:image>
+						<xf:input id="ibx_address1" ref="data:sdm_memberBasic.ADDRESS1" style="width:50%;height:21px;margin-left:5px;"></xf:input>
+						<xf:input id="ibx_address2" ref="data:sdm_memberBasic.ADDRESS2" style="width:30%;height:21px;margin-left:5px;"></xf:input>
+					</xf:group>
+				</xf:group>
+			</table>
+		</xf:group>
+	</body>
+</html>

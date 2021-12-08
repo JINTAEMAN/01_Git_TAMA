@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataMap baseNode="map" id="dma_fileDesc">
+					<w2:keyInfo>
+						<w2:key id="desc" name="" dataType="text"></w2:key>
+						<w2:key id="test" name="" dataType="text"></w2:key>
+					</w2:keyInfo>
+					<w2:data use="true">
+						<desc><![CDATA[
+<pre class="textNor" style="">
+<div class="etcbox">본 화면은 화면전환시 넘겨받은 Parameter Setting 방법을 제공한다. 
+com.getParameter 를 이용하여 넘겨받은 Parameter를 받아올 수 있다.
+</div>
+<div class="etc_tit">1. Parameter 처리 방법</div>
+  - com.getParameter 라는 API를 이용하여 넘겨받은 Parameter를 받아온다.
+  - 예시
+  com.getParameter("CODE");
+						]]></desc>
+						<test><![CDATA[
+<pre class="textNor" style="">						
+<div class="etc_tit">1. 과정</div>
+1. 이전화면인 [url 방식]화면에서 값을 입력 후 [url] 혹은 [newTab] 버튼을 클릭한다.
+<div class="etc_tit">2. 결과</div>
+1. 화면이 전환되면서 이전화면에서 넘겨준 Parameter값이 자동으로 setting됨을 확인한다.
+</pre>
+						]]></test>
+					</w2:data>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" id="dma_return">
+					<w2:keyInfo>
+						<w2:key id="cd" name="코드" dataType="text"></w2:key>
+						<w2:key id="nm" name="명" dataType="text"></w2:key>
+						<w2:key id="etc" name="기타" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+	/**
+	 * url로 이동시 Parameter 전달 값을 확인한다.
+	 */
+	scwin.onpageload = function() {
+		var p_gubn = com.getParameter("gubn");
+		if (p_gubn == "1") {
+			grp_search.show("");
+		} else {
+			grp_search.hide();
+		}
+		wfTitleFav_txt_H1.setValue("Get Parameter");
+		ibx_cd.setValue(com.getParameter("CODE"));
+		ibx_nm.setValue(com.getParameter("NAME"));
+		ibx_revEtc.setValue(com.getParameter("ETC"));
+	};
+	
+	scwin.onpageunload = function() {
+	
+	};
+	
+	/**
+	 * 이전 화면으로 이동한다.
+	 */
+	scwin.btn_back_onclick = function() {
+		var options = {};
+		options.spa = true;
+		options.replaceHistory = true;
+		// 파라미터 설정 부분: json 형태로 설정한다.
+		options.param = dma_return.getJSON();
+	
+		var move_url = com.getFullPath("/ui/SP/Parameter/Url_ParameterSend.xml");
+		var paramStr = "curPage=030401:F&menuNm=" + $p.URLEncoder("Uri 방식");
+		if ($p.top().scwin.getLayoutId() == "M" && com.FRAME_MODE === "wframe") {
+		$p.getFrame().setSrc(move_url+"?"+paramStr);
+		} else {
+			$p.url(move_url+"&"+paramStr, options);
+		}
+	};
+	
+	scwin.wfTitleFav_alertPageInfo = function() {
+		com.alert("[" + wfTitleFav_txt_H1.getValue() + "] 페이지의 파일 경로는 다음과 같습니다.<br/>" + com.getPageUrl());
+	};
+	
+	scwin.wfTitleFav_reload = function() {
+		$p.reinitialize(false);
+	};
+	
+	scwin.wfTitleFav_browserReload = function() {
+		$p.reinitialize(true);
+	};
+]]></script>
+		
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="contentWrap" id="" style="">
+			<xf:group id="" style="" class="tar fr">
+				<w2:span label="" id="wfTitleFav_tbx_navi" style="font-weight:bold;"></w2:span>
+			</xf:group>
+			<xf:group id="wfTitleFav_grp_main" style="" class="wf_contHeader pgtitlebox">
+				<w2:textbox id="wfTitleFav_txt_H1" style="" class="pg_tt fl mr5" label="" tagname=""></w2:textbox>
+				<w2:anchor id="" style="" ev:onclick="scwin.wfTitleFav_alertPageInfo" class="ico_help mr5" title="화면 정보" outerDiv="false">
+					<xf:label></xf:label>
+				</w2:anchor>
+				<w2:anchor id="" style="" ev:onclick="scwin.wfTitleFav_reload" class="ico_refresh mr5" outerDiv="false" title="화면 갱신">
+					<xf:label></xf:label>
+				</w2:anchor>
+				<w2:anchor id="" style="" ev:onclick="scwin.wfTitleFav_browserReload" class="ico_refresh_b mr5" outerDiv="false" title="브라우저 갱신">
+					<xf:label></xf:label>
+				</w2:anchor>
+			</xf:group>
+			<w2:wframe id="" src="/cm/common/wf_titleDesc.xml"></w2:wframe>
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="margin-bottom:10px;" class="defaultbox">
+					<w2:textbox id="" style="" class="df_tt fl" label="화면전환으로 전달받은 Prameter Setting"></w2:textbox>
+				</xf:group>
+				<xf:group id="grp_search" style="display:none;" class="tbl_search">
+					<xf:group id="" style="" adaptive="layout" class="w2tb tbl_sc" adaptiveThreshold="768" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:90%;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="" class="w2tb_th" tagname="th"></xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:group id="" class="fr"></xf:group>
+								<w2:anchor id="btn_back" clickEventElement="outerDiv" ev:onclick="scwin.btn_back_onclick" class="btn_sh" outerDiv="true">
+									<xf:label><![CDATA[이전화면]]></xf:label>
+								</w2:anchor>
+							</xf:group>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group id="" style="" class="section">
+				<xf:group id="grp_memberBasicDetailTop" style="width:100%;" class="w2tb tb" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:120px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+						<xf:group style="width:120px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+						<xf:group style="width:120px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">전달&amp;nbsp;받은&amp;nbsp;코드</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:input minlength="13" id="ibx_cd" applyFormat="" ref="data:dma_return.cd" maxlength="13" style="height:24px;" mandatory="true" displayFormat="" allowChar="" displayFormatter="">
+							</xf:input>
+						</xf:group>
+						<xf:group style="" class="w2tb_th" tagname="th">전달&amp;nbsp;받은&amp;nbsp;명&amp;nbsp;</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:input id="ibx_nm" ref="data:dma_return.nm" style="height:24px;" mandatory="true"></xf:input>
+						</xf:group>
+						<xf:group style="" class="w2tb_th" tagname="th">ETC</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:input id="ibx_revEtc" ref="data:dma_return.etc" style="height:24px;" mandatory="true" class="fl"></xf:input>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

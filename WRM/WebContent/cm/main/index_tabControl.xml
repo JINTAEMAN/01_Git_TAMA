@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/main.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/responsible.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns=""></data>
+			</xf:instance>
+		</xf:model>
+		<script src="/cm/js/main.js" />
+		<script type="text/javascript" lazy="false"><![CDATA[
+	
+	/**
+	 * 화면 초기 로딩시 수행 스크립트 
+	 */
+	scwin.onpageload = function() {
+		console.log("[/index_tabControl.xml] [onpageload()] ==> [TEST_01] [tabControl 로딩...@@@]");
+
+		scwin.initMainLoad();
+	};
+
+	scwin.onpageunload = function() {
+
+	};
+
+	scwin.tac_layout_onbeforeselect = function(selectedIndex, index) {
+		console.log("[/index_tabControl.xml] [tac_layout_onbeforeselect()] ==> [TEST_01] [selectedIndex]"+ selectedIndex +"[index]"+ index );
+	
+		try {
+			//자체 개발 (반응형 탭에서 현재 열린 창 닫는 코딩)
+			var isAdaptive = parseInt(this.getStyle("width"), 10) < 1024
+					? true
+					: false;
+			if (isAdaptive) {
+				if (selectedIndex == index) {
+					//현재 선택된 탭이 선택될 경우 접는 동작.
+					var classNm = "w2tabcontrol_contents_wrapper_selected";
+					var selectTac = this.getFrame(selectedIndex);
+					if (selectTac
+							.hasClass("w2tabcontrol_contents_wrapper_selected")) {
+						setTimeout(
+								function(comp) {
+									comp
+											.removeClass("w2tabcontrol_contents_wrapper_selected");
+									$("#" + comp.id)
+											.prev()
+											.removeClass(
+													"w2tabcontrol_contents_bridge_selected");
+								}, 200, selectTac);
+						return;
+					}
+				}
+				//새로운 탭을 선택 할 경우 현재 탭을 최상위로 스크롤 이동.
+				var moveHeight = 0;
+				for (var i = 0; i < index; i++) {
+					moveHeight += parseFloat($("#" + this.getFrame(i).id)
+							.prev().css("height"));
+				}
+				setTimeout(function(contentId, height) {
+					$("#" + contentId).scrollTop(height);
+				}, 200, this.parentControl.id, moveHeight);
+			}
+			//코딩 끝
+		} catch (e) {
+		}
+	};
+
+	scwin.tac_layout_ondrawcomplete = function(tabID, idx, userID) {
+		console.log("[/index_tabControl.xml] [tac_layout_ondrawcomplete()] ==> [TEST_01] [tabID]"+ tabID +"[idx]"+ idx +"[userID]"+ userID );
+		
+		var isAdaptive = parseInt(this.getStyle("width"), 10) < 1024
+				? true
+				: false;
+		//반응형일때 탭 생성시 탭이 접혀있는 상태로 표현됨. 이때 강제로 펼치도록 설정.
+		if (isAdaptive) {
+			this.getFrame(idx).addClass(
+					"w2tabcontrol_contents_wrapper_selected");
+		}
+	};
+
+	/**
+	 * TabControl의 모든 메뉴 닫기 버튼 이벤트
+	 * @lastUpdate 2016.08.28
+	 * @author InswaveSystems
+	 * @since 2016.08.28
+	 */
+	scwin.btn_closeAll_onclick = function() {
+		var cnt = tac_layout.getTabCount();
+		for (var i = cnt; i > 0; i--) {
+			tac_layout.deleteTab(i);
+		}
+	};
+]]></script>
+		<style type="text/css"><![CDATA[
+			/*
+			.btn_closeAll{display:inline-block; z-index:1; text-indent:-9999px; position:absolute; width:20px; height:19px; right:5px; top:9px; background:url(/cm/images/contents/close_off.png) no-repeat left top;}
+			.btn_CloseAll:hover{background-image:url(/cm/images/contents/close_on.png);}
+			*/
+		 ]]></style>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group style="" id="grp_dimLayer" class="dim"></xf:group>
+		<xf:group id="wrap" style="" class="main_wrap">
+			<w2:wframe id="wfm_header" class="main_header" style="" src="/cm/common/header.xml" scope="true"></w2:wframe>
+			<xf:group class="main_container" id="container" adaptive="" adaptiveThreshold="">
+				<w2:wframe class="main_side" id="wfm_side" src="/cm/common/side.xml" style="" scope="true"></w2:wframe>
+				<xf:group class="m_contents" id="contents">
+					<w2:tabControl alwaysDraw="false" class="tac_layout" confirmFalseAction="new" confirmTrueAction="exist" id="tac_layout"
+						style="" useConfirmMessage="false" useTabKeyOnly="true" tabScroll="true" adaptive="layout" adaptiveThreshold="768" closable="true"
+						spaInitCount="" spaAuto="" spaAutoDelay="1000" windowMaxNum="10" focusOnStart="" tabMove="true" ev:ontabclick=""
+						ev:onbeforeselect="scwin.tac_layout_onbeforeselect" ev:ondrawcomplete="scwin.tac_layout_ondrawcomplete">
+					</w2:tabControl>
+					<w2:anchor id="btn_closeAll" style="" outerDiv="false" class="btn_closeAll" ev:onclick="scwin.btn_closeAll_onclick">
+						<xf:label><![CDATA[closeAll]]></xf:label>
+					</w2:anchor>
+					<w2:wframe class="bot_option" id="wfm_footer" style="" src="/cm/common/footer.xml" scope="true"></w2:wframe>
+				</xf:group>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

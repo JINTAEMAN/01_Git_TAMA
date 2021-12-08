@@ -1,0 +1,1658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+              <data></data>
+            </xf:instance>
+            <w2:dataCollection>
+            	<w2:dataList baseNode="list" id="ds_combo"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="id_nm"
+            				name="id_nm" />
+            			<w2:column dataType="text" id="id_cd"
+            				name="id_cd" />
+            			<w2:column dataType="text" id="id_gubun"
+            				name="id_gubun" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<id_cd><![CDATA[0]]></id_cd>
+            				<id_gubun><![CDATA[0]]></id_gubun>
+            				<id_nm><![CDATA[전체]]></id_nm>
+            			</w2:row>
+            			<w2:row>
+            				<id_cd><![CDATA[1]]></id_cd>
+            				<id_gubun><![CDATA[0]]></id_gubun>
+            				<id_nm><![CDATA[주민번호]]></id_nm>
+            			</w2:row>
+            			<w2:row>
+            				<id_cd><![CDATA[2]]></id_cd>
+            				<id_gubun><![CDATA[0]]></id_gubun>
+            				<id_nm><![CDATA[조직코드]]></id_nm>
+            			</w2:row>
+            			<w2:row>
+            				<id_cd><![CDATA[3]]></id_cd>
+            				<id_gubun><![CDATA[1]]></id_gubun>
+            				<id_nm><![CDATA[취급자코드]]></id_nm>
+            			</w2:row>
+            			<w2:row>
+            				<id_cd><![CDATA[4]]></id_cd>
+            				<id_gubun><![CDATA[1]]></id_gubun>
+            				<id_nm><![CDATA[사용인코드]]></id_nm>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_LinkList"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="ds_Yn"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="Code"
+            				name="Code" />
+            			<w2:column dataType="text" id="Name"
+            				name="Name" />
+            			<w2:column dataType="text" id="Type1"
+            				name="Type1" />
+            			<w2:column dataType="text" id="Type2"
+            				name="Type2" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<Code><![CDATA[Y]]></Code>
+            				<Name><![CDATA[Y]]></Name>
+            				<Type1><![CDATA[1]]></Type1>
+            				<Type2><![CDATA[2]]></Type2>
+            			</w2:row>
+            			<w2:row>
+            				<Code><![CDATA[N]]></Code>
+            				<Name><![CDATA[N]]></Name>
+            				<Type1 />
+            				<Type2><![CDATA[2]]></Type2>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_AgreeListSave"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="ds_code"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="ds_AgreeKind"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="code"
+            				name="code" />
+            			<w2:column dataType="text" id="Name"
+            				name="Name" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<code><![CDATA[JCD1000602]]></code>
+            				<Name><![CDATA[가입설계동의]]></Name>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[JCD1000612]]></code>
+            				<Name><![CDATA[가입설계동의(자동차)]]></Name>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[JCD1000604]]></code>
+            				<Name><![CDATA[상품소개동의]]></Name>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[JCD1000605]]></code>
+            				<Name><![CDATA[제3자동의]]></Name>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[JCD1000601]]></code>
+            				<Name><![CDATA[가망고객동의서]]></Name>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[JCD1000603]]></code>
+            				<Name><![CDATA[체결이행동의]]></Name>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[JCD1000613]]></code>
+            				<Name><![CDATA[계약체결이행동의(자동차)]]></Name>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_AgreeListDel"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="DsWs_AgreeList"
+            		repeatNode="map"
+            		userData2="//hashtable/data[@hashkey='lTIDB07ListDoc']/vector/data/LTIDB07">
+            		<w2:columnInfo>
+            			<w2:column id="No" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sResno" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgreDate" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sScanDate" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sScanDler" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sScanYn" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmYn1" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmYn2" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmYn3" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmYn4" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPlanNo" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="temp_id_1630" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCnfmNm" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="temp_id_1631" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sManagerNm" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDmdrNm" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="temp_id_1632" name="name17"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_Warning"
+            		repeatNode="map" userData2="//*/WARNING" />
+            	<w2:dataList baseNode="list" id="DsWs_chekCrInqrAuth"
+            		repeatNode="map" userData2="//*/AXR931" />
+            	<w2:dataList baseNode="list" id="DsWs_AgreeListCnt"
+            		repeatNode="map"
+            		userData2="//hashtable/data[@hashkey='lTIDB07ListDocCnt']/LTIDB07CNT" />
+            	<w2:dataList baseNode="list" id="DsWs_AgreeKind_combo"
+            		repeatNode="map" />
+            	<w2:dataList id="Ds_UserInfo" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sUserID" name="sUserID"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            		<w2:data use="false">
+            			<w2:row>
+            				<sUserID><![CDATA[]]></sUserID>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+	
+	  <script src="/cm/js/convertJs/Global_Script.js"/>
+  <script src="/cm/js/convertJs/comm_Webservice.js"/>
+  <script src="/cm/js/convertJs/NewGen_Script.js"/>
+  <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+	<script src="/cm/js/convertJs/Cust_Script.js" />
+	
+        <script><![CDATA[
+/*■■■■■■■■■■■■■■■■■■■■■스크립트 변환 결과■■■■■■■■■■■■■■■■■■■■■
+※본 주석은 수작업 변환 참고용입니다. ★개발완료 후에는 필히 삭제해주세요.★
+변환시간:  Fri Sep 01 2017 14:10:39 GMT+0900 (대한민국 표준시)
+파일ID:  O320.xml
+
+아래의 작업을 먼저 해주세요.
+
+
+1. scwin.init() 함수에 아래의 글로벌 데이터리스트를 선언합니다.
+--> 해당 화면에는 추가할 글로벌 변수가 없습니다. 
+
+2. 공통.JS 파일을 include해주세요.
+</xf:model>
+ ***include 위치(하단에 주석처리 되어 있습니다.)***
+<script><![CDATA[
+
+예시)
+</xf:model>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script><![CDATA[
+
+3. 표준에 어긋난 코딩인 경우 ✖ 으로 return 되어 있습니다. 검색으로 ✖이 나온다면 ASIS 소스를 확인해주세요.
+ex) ASIS if(a = 1 and b = 2) {} ------> TOBE if (✖ = 2) {}
+
+4. dialog함수로 팝업을 호출 할 경우에는 실제 파일이 있는 경로로 변경해주세요
+ex) 현재 PROJECT_PATH_TEMP입니다. 
+
+-호출구조-
+
+호출구조는 모든 화면이 아닌 변환대상화면을 기준으로 분석하였습니다.
+선언하지 않은 변수를 사용중이라면 caller 에서 넘겼을 가능성이 높습니다.
+파일 ID는 소스의 form ID로 가정했습니다. 아래의 결과는 따로 확인해주세요.
+O320.xml에서 호출 (callee ID):  0120,R960_Pop
+O320.xml을 호출   (caller ID):  
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+/****************************************************************************
+ * 프로그램번호   : O320
+ * 프로그램명     : 개인신용정보 동의 New
+ * 파일명         : O320
+ * 프로그램 내용  : 개인신용정보 동의 스캔 확인 (이미지시스템 연동으로 인한 새로운 화면)
+ * 관련 프로그램  : 
+ * 작성자         : 류응철
+ * 작성일         : 2014-03-03
+ * 저작권         : Copyright ⓒ 2013. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+// <script src="/cm/js/common.js"/>
+// <script src="/cm/js/val_lib.js"/>
+// <script src="/cm/js/util.js"/>
+// <script src="/cm/js/transSub.js"/>
+// <script src="/cm/js/callService.js"/>
+// <script src="/cm/js/gds.js"/>
+// <script src="/cm/js/convertJs/conv.js"/>
+// <script src="/cm/js/convertJs/Global_Script.js"/>
+// <script src="/cm/js/convertJs/comm_Webservice.js"/>
+// <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+var pageSize = "20";
+
+var pageCount = "10";
+
+var sToday = "";
+
+//전역변수
+var sAgreeKind = "";
+
+//동의 종류
+var sApplyNo = "";
+
+//청약번호
+var sStandDate = "";
+
+//기준일자
+var sstrCode = "";
+
+//동의종류
+var sPostText = "";
+
+var n22040Auth;
+
+var pageNo = "";
+var cal_From_oldDate ="";
+var cal_To_oldDate ="";
+var medt_Str_Event;	// 주민번호(InputBox) MaskEdit 정규식 입력
+//심사권한유무
+/*
+JCD1000101 가입설계동의서
+JCD1000102 상품소개동의서
+JCD1000103 계약체결이행 동의서
+*/
+//---------------------------------------------------------------------------
+// function 명 : B040_OnLoadCompleted()
+// 내용        : 화면 오픈시처리
+//---------------------------------------------------------------------------
+scwin.init = function() {
+	var pro = Promise.resolve();
+
+window.top.util.winTopShowModalChk = "T";
+util.winTopShowModal();
+
+ 
+
+pro = pro.then(function(rv) {
+    return util.winTopShowModalPromise();
+});
+
+ 
+
+pro = pro.then(function(rv) {
+
+     //init 부분 함수 입력하는곳
+
+ 
+    sToday = wconv.substr(gfn_GetSysTime(), 0, 8);
+    cal_From.setValue(wconv.addDateSimple(sToday, -3));
+    cal_To.setValue(sToday);
+    medt_Str.hide();
+//    grd_AgreeList.setColProp(10, "Width", 0);
+	grd_AgreeList.setColumnVisible( 10 , false );
+//    gfn_GetLinkList("B040");
+    rad_AgreeKind.setSelectedIndex(0); //가입설계동의
+    sstrCode = rad_AgreeKind.getValue();
+
+		//Mask Edit 정규식 입력
+	//"######-#ZZZZZZ" , "A-####-#######", @@@@@@@
+	var maskRegExp = [ /^[0-9\s]{7}[A-Z0-9\s]{6}$/, /^[A-Z\s]{1}[0-9\s]{11}$/, /^[^ㄱ-ㅎ^ㅏ-ㅣ^가-힣a-zA-Z0-9\s]{7}$/ ];
+	var maxLength  = [13, 12, 7];
+	var chkIndex   = 0;
+	medt_Str_Event = new wMaskEditObj(medt_Str, maskRegExp, maxLength, chkIndex);
+	 
+    // 버튼 처리    (조회, 입력,  수정,  삭제, 결재,   취소,  인쇄,  엑셀,  닫기)
+//    gfn_ButtonEnable(true, false, false, false, false, false, false, false, true);
+	gfn_btnEnable(false, false, false, false, false, false, false, true);
+    //장기업무부 권한 체크
+    //var bAuthFlag = nfn_checkAuthByID(SOBJ_LOAD, DOBJ_LOAD, "ds_code", gUserID , "22040");
+    //공통코드dataset에 코드가 없으면 조회해 온다.
+//    gfn_getCommonCodes(SOBJ_Code, DOBJ_Code, "DsWs_AgreeKind_combo", "ImagClsfCd", "", "");
+	gfn_getCommonCodes("DsWs_AgreeKind_combo", "ImagClsfCd", "", "");
+
+    for (var i = 0; i < DsWs_AgreeKind_combo.getRowCount(); i++) {
+        for (var j = 0; j < ds_AgreeKind.getRowCount(); j++) {
+            if (DsWs_AgreeKind_combo.getCellData(i, "sCd") == ds_AgreeKind.getCellData(j, "code")) {
+                ds_AgreeKind.setCellData(j, "Name", DsWs_AgreeKind_combo.getCellData(i, "sHnglCdName"));
+            }
+        }
+    }
+
+
+
+    //trace(DsWs_AgreeKind_combo.savexml());
+    //DsWs_DmMethod.Filter("sCd!='02' && sCd!='04'");  
+    //ds_AgreeKind_0.Copy(DsWs_AgreeKind_combo.Filter("sCd like 'JCD10004' && sCd =='JCD10003'"));
+    //ds_AgreeKind_0.Copy("DsWs_AgreeKind_combo");
+    //ds_AgreeKind_0.Filter("sCd='JCD10004'");
+    //trace(ds_AgreeKind_0.SaveXML());
+    if (wconv.length(sAgreeKind) > 0 && wconv.length(sApplyNo) > 0 && wconv.length(sStandDate) > 0) {
+        rad_AgreeKind.setValue(sAgreeKind);
+        cal_From.setValue(wconv.addDateSimple(sStandDate, -5));
+        cal_To.setValue(sStandDate);
+//        scwin.lfn_AgreeKind_OnChanged(obj, rad_AgreeKind.getValue(), "", "", "");
+		scwin.lfn_AgreeKind_OnChanged( rad_AgreeKind.getValue(), "", "", "");
+        lfn_search();
+    }
+
+
+    // 장기보험 인수권한
+//    n22040Auth = nfn_checkAuthByID(SOBJ_LOAD, DOBJ_LOAD, "ds_code", gds.gUserID, "22040");
+	n22040Auth = nfn_checkAuthByID("ds_code", util.getGdsValue("gUserID"), "22040");
+	 cal_From_oldDate = cal_From.getValue();
+	 cal_To_oldDate = cal_To.getValue();
+
+    //init 함수를 종료하고자 할때 사용한다.
+//    return Promise.reject("오류관련처리");
+});
+
+
+pro = pro.then(function(rv) {
+    util.winTopHideModal();
+});
+
+ 
+
+pro = pro.catch(function(rj) {
+    util.winTopHideModal();
+    //alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+});
+
+ 
+
+return pro;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search)
+// 내용        : 조회버튼 클릭시 처리
+//---------------------------------------------------------------------------
+scwin.lfn_Search_Async = function(pageNo) { //완료
+    util.eventAsyncCall(this, scwin.lfn_Search, arguments);
+};
+
+scwin.lfn_Search = function(pageNo) {
+
+    //if(gfn_isCA(gUserID, gUserDuty)){
+    //	alert("현재 상담그룹은 청약조회가 불가합니다.");
+    //	return;
+    //}
+    scwin.lfn_SearchData(pageNo);
+    medt_nCount.setValue(DsWs_AgreeListCnt.getColData( "nCount" )  );
+    if (DsWs_AgreeListCnt.getRowCount() > 0) {
+
+        gfn_MakePagingData(Ds_Page, DsWs_AgreeListCnt.getCellData(0, "nCount"), pageSize, pageCount);
+        Cmb_Page.setValue("1");
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_SearchData
+// 내용        : 조회버튼 클릭시 처리
+//---------------------------------------------------------------------------
+scwin.lfn_SearchData = function(pageNo) {
+    //데이터셋 초기화
+
+    wconv.clear(DsWs_AgreeList);
+    wconv.clear(DsWs_Warning);
+
+//    SOBJ_AgreeList.WSDL = gds.gWsdlBasis; //기본 웹서비스
+//    DsWs_Warning.DataObject = "DOBJ_AgreeList";
+//    var sStr = iif(cmb_Gubun.getValue() == "1", medt_Str.getValue(), edt_Str.getValue());
+	 if(cmb_Gubun.getValue() == "1"){
+		sStr = medt_Str.getValue();
+	};
+
+//    var MethodObj = gfn_CreateMethodObj(SOBJ_AgreeList, "com.inswave.longterm.uwt.uwm.task.OBO320Task", "getPsnCrdtScanList", pageSize, pageNo);
+//    gfn_SetParam(MethodObj, "sImagClsfCd", rad_AgreeKind.getValue()); //이미지 분류 코드
+//    gfn_SetParam(MethodObj, "sFromDate", cal_From.getValue());
+//    gfn_SetParam(MethodObj, "sToDate", cal_To.getValue());
+	var MethodObj = new callService("com.inswave.longterm.uwt.uwm.task.OBO320Task", "getPsnCrdtScanList", pageSize, pageNo);
+	MethodObj.setId("getPsnCrdtScanList");
+	MethodObj.setParam( "sImagClsfCd", rad_AgreeKind.getValue()); 
+	MethodObj.setParam( "sFromDate", cal_From.getValue());
+	MethodObj.setParam( "sToDate", cal_To.getValue());
+	    
+    
+
+    if (cmb_Gubun.getValue() == "1") {
+//        gfn_SetParam(MethodObj, "sResno", sStr); //주민번호
+		MethodObj.setParam( "sResno", sStr); 
+    } else if (cmb_Gubun.getValue() == "2") {
+//        gfn_SetParam(MethodObj, "sDept", sStr); //조직코드
+		MethodObj.setParam( "sDept", sStr);
+    } else if (cmb_Gubun.getValue() == "3") {
+//        gfn_SetParam(MethodObj, "sManager", sStr); //취급자코드
+		MethodObj.setParam( "sManager", sStr);
+    } else if (cmb_Gubun.getValue() == "4") {
+//        gfn_SetParam(MethodObj, "sDmdr", sStr); //사용인
+		MethodObj.setParam( "sDmdr", sStr);
+    }
+//    gfn_SetParam(MethodObj, "sUserID", gds.gUserID); //사용자 정보
+	MethodObj.setParam( "sUserID", util.getGdsValue("gUserID"));
+    //상품소개 : getCUSAA0441Info, CUSAA04, CUSAA41
+    //가입설계 : getCUSAA42Info, CUSAA42
+    //계약체결 : CUSAA35
+    //대리점인지 여부(30:대리점,33:사용인,35:TM사용인)
+    //설계자 여부 (48:DP, 49:DPM)
+//    if (gds.gUserDuty == "30" || gds.gUserDuty == "33" || gds.gUserDuty == "35" || gds.gUserDuty == "48" || gds.gUserDuty == "49" || gds.gUserDuty == "62" || gds.gUserDuty == "65" || gds.gUserDuty == "64" || gds.gUserDuty == "66") {
+        //대리점 관리자
+//        if (nfn_checkAuthByID(SOBJ_LOAD, DOBJ_LOAD, "ds_code", gds.gUserID, "21013")) {
+//            gfn_SetParam(MethodObj, "sKeyDoer", gds.gDoer);
+//        } else if (nfn_checkAuthByID(SOBJ_LOAD, DOBJ_LOAD, "ds_code", gds.gUserID, "34009")) {
+//            gfn_SetParam(MethodObj, "sKeyDoer", "");
+//        } else if (nfn_checkAuthByID(SOBJ_LOAD, DOBJ_LOAD, "ds_code", gds.gUserID, "34011")) {
+//            gfn_SetParam(MethodObj, "sKeyDoer", gds.gDoer);
+//        } else if (nfn_checkAuthByID(SOBJ_LOAD, DOBJ_LOAD, "ds_code", gds.gUserID, "34030")) {
+//            gfn_SetParam(MethodObj, "sKeyDoer", gds.gDoer); //사용인
+//        } else {
+//            gfn_SetParam(MethodObj, "sKeyDoerUser", gds.gDoerUser);
+//        }
+//    }
+    if (util.getGdsValue("gUserDuty") == "30" || util.getGdsValue("gUserDuty") == "33" ||
+    	 util.getGdsValue("gUserDuty") == "35" || util.getGdsValue("gUserDuty") == "48" ||
+    	 util.getGdsValue("gUserDuty") == "49" || util.getGdsValue("gUserDuty") == "62" ||
+    	 util.getGdsValue("gUserDuty") == "65" || util.getGdsValue("gUserDuty") == "64" ||
+    	  util.getGdsValue("gUserDuty") == "66") {
+        if (nfn_checkAuthByID( "ds_code", util.getGdsValue("gUserID"), "21013")) {
+			MethodObj.setParam( "sKeyDoer", util.getGdsValue("gDoer"));
+        } else if (nfn_checkAuthByID("ds_code", util.getGdsValue("gUserID"), "34009")) {
+			MethodObj.setParam( "sKeyDoer", "");
+        } else if (nfn_checkAuthByID("ds_code", util.getGdsValue("gUserID"), "34011")) {
+			MethodObj.setParam( "sKeyDoer", util.getGdsValue("gDoer"));
+        } else if (nfn_checkAuthByID("ds_code", util.getGdsValue("gUserID"), "34030")) {
+			MethodObj.setParam( "sKeyDoer", util.getGdsValue("gDoer"));
+        } else {
+			MethodObj.setParam( "sKeyDoerUser", util.getGdsValue("gDoerUser"));
+        }
+    }
+//    var result = gfn_CallService(SOBJ_AgreeList, DOBJ_AgreeList, MethodObj);
+	MethodObj.setUrl("/contract/CBSC013MController.do");//배포후변경할것(controller위치와 이름)
+	MethodObj.setXPath("//hashtable/data[@hashkey='lTIDB07ListDoc']/vector/data/LTIDB07");//(dsWS의 XPath)
+	MethodObj.addXPath("//hashtable/data[@hashkey='lTIDB07ListDocCnt']/LTIDB07CNT");
+	MethodObj.addXPath("//*/WARNING"); 
+	MethodObj.sync();
+	MethodObj.send();
+	
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDB07"), "DsWs_AgreeList");
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDB07CNT"), "DsWs_AgreeListCnt");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+	util.setCompBindRefresh("DsWs_AgreeList");//바인딩을 해줌
+	util.setCompBindRefresh("DsWs_AgreeListCnt");//바인딩을 해줌
+	util.setCompBindRefresh("DsWs_Warning");//바인딩을 해줌
+	util.setRowPosition(DsWs_AgreeList, 0);
+		
+    if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    }
+    
+//    wconv.trace(wconv.saveXml(DsWs_AgreeList));
+    if (DsWs_AgreeListCnt.getRowCount() < 1) {
+        wprom.alert("조회결과값이 없습니다");
+    }
+    gfn_LogCreditInfoVt(DsWs_AgreeList, "", "S", "sResno", "", "N");
+
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Save
+// 내용        : 저장처리.
+//---------------------------------------------------------------------------
+scwin.lfn_Save = function(nRow) {
+
+    //trace("000000000000");
+    if (!scwin.lfn_Check_Validation(nRow)) {
+        return true;
+    }
+
+
+    //데이터셋 초기화
+    wconv.clear(Ds_AgreeListSave);
+    wconv.clear(DsWs_Warning);
+//    wconv.copy(Ds_AgreeListSave, "DsWs_AgreeList");
+	var jsonData = DsWs_AgreeList.getRowJSON(nRow);
+	//util.jSonDsCreate(jsonData, Ds_AgreeListSave.getID());
+	util.copyM(Ds_AgreeListSave, DsWs_AgreeList.getAllJSON());
+    //Ds_AgreeListSave.removeAll();
+    wconv.clear(Ds_AgreeListSave);
+    util.appendRow(Ds_AgreeListSave);
+    Ds_AgreeListSave.setRowJSON(0, jsonData);
+    //wconv.mi_copyRow(Ds_AgreeListSave.getID(), 0, DsWs_AgreeList.getID(), nRow);
+	
+//    DsWs_Warning.DataObject = "DOBJ_SAVE";
+    //trace("Ds_AgreeListSaveldh ==> " + Ds_AgreeListSave.savexml());
+    //trace("11111111111111111");
+//    SOBJ_SAVE.WSDL = gds.gWsdlBasis; //기본 웹서비스
+//    var MethodObj = SOBJ_SAVE.CreateMethodObj("perform");
+//    setHeader("hashtable", "com.inswave.longterm.uwt.uwm.task.OBO320Task", "setPsnCrdtScanList");
+//    addSingleData("Ds_AgreeList", "Ds_AgreeList", Ds_AgreeListSave, "Ds_AgreeList");
+//    addSingleData("sUserID", "sUserID", gds.gUserID, "sUserID");
+//    setTail("hashtable");
+//    SOBJ_SAVE.CreateObj("in0");
+//    MethodObj.in0 = insertStr;
+
+//gUserID를 addSingleData로 보내기 위해 추가
+	
+	Ds_UserInfo.setCellData( 0 , "sUserID" , util.getGdsValue("gUserID"));
+	
+	var MethodObj = new callService("com.inswave.longterm.uwt.uwm.task.OBO320Task", "setPsnCrdtScanList",pageSize,pageNo);
+ 	MethodObj.setId("setPsnCrdtScanList"); 
+ 	MethodObj.addSingleData("Ds_AgreeList", "Ds_AgreeList", Ds_AgreeListSave.getID()+":A");
+ 	MethodObj.addSingleData("sUserID", "sUserID", Ds_UserInfo.getID()+":A");
+	MethodObj.setUrl("/contract/CBSC013MController.do");   // 서버단 호출 URL (수납 확정)
+	MethodObj.setXPath("//hashtable/data[@hashkey='lTIDB07ListDoc']/vector/data/LTIDB07"); // XPath    
+ 	MethodObj.addXPath("//*/WARNING"); // XPath
+ 	MethodObj.setHashTable();    //  전문의 앞이 hashtable로 보낼 때
+ 	MethodObj.sync();     // 동기 처리[기본(async:비동기)]
+ 	MethodObj.send();      // 최종 전송   // TEST @@@ ===>
+ 	
+ 	util.jSonDsCreate(_tranSync.getDsJson("LTIDB07"), "Ds_AgreeListSave");
+ 	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");	
+	util.setCompBindRefresh("Ds_AgreeListSave");//바인딩을 해줌
+
+	util.setRowPosition(Ds_AgreeListSave, 0);	
+    //상품소개 : getCUSAA0441Info, CUSAA04, CUSAA41
+    //가입설계 : getCUSAA42Info, CUSAA42
+    //계약체결 : CUSAA35
+//    var result = gfn_CallService(SOBJ_SAVE, DOBJ_SAVE, MethodObj);
+
+    if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+    } else {
+        wprom.alert("저장되었습니다");
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Del
+// 내용        : 삭제처리.
+//---------------------------------------------------------------------------
+scwin.lfn_Del = function(nRow) {
+    var sCnfmDate = DsWs_AgreeList.getCellData(nRow, "sCnfmDate");
+    if (sCnfmDate != "") {
+        wprom.alert("동의서 확인이 되어서 삭제할 수 없습니다.");
+        return false;
+    }
+
+
+    //데이터셋 초기화
+    wconv.clear(Ds_AgreeListDel);
+    wconv.clear(DsWs_Warning);
+//    wconv.copy(Ds_AgreeListDel, DsWs_AgreeList);
+	util.copyM(Ds_AgreeListDel, DsWs_AgreeList.getAllJSON());
+//    Ds_AgreeListDel.removeAll();
+//    util.appendRow(Ds_AgreeListDel);
+    wconv.mi_copyRow(Ds_AgreeListDel, 0, "DsWs_AgreeList", nRow);
+//    DsWs_Warning.DataObject = "DOBJ_DEL";
+    //trace("Ds_AgreeListSaveldh ==> " + Ds_AgreeListSave.savexml());
+    //trace("11111111111111111");
+//    SOBJ_DEL.WSDL = gds.gWsdlBasis; //기본 웹서비스
+//    var MethodObj = gfn_CreateMethodObj(SOBJ_DEL, "com.inswave.longterm.uwt.uwm.task.OBO320Task", "delScanWrcsInfo", 0, 0);
+//    gfn_SetParam(MethodObj, "sImagClsfCd", Ds_AgreeListDel.getCellData(0, "sImagClsfCd")); //이미지 분류 코드
+//    gfn_SetParam(MethodObj, "sResno", Ds_AgreeListDel.getCellData(0, "sResno")); //주민번호
+//    gfn_SetParam(MethodObj, "sScanDate", Ds_AgreeListDel.getCellData(0, "sScanDate")); //스캔일자
+//    gfn_SetParam(MethodObj, "nProgDgre", Ds_AgreeListDel.getCellData(0, "nProgDgre")); //스캔일자
+//    gfn_SetParam(MethodObj, "gUserID", gds.gUserID); //로그인사용자
+//    var result = gfn_CallService(SOBJ_DEL, DOBJ_DEL, MethodObj);
+
+	var MethodObj = new callService("com.inswave.longterm.uwt.uwm.task.OBO320Task", "delScanWrcsInfo", pageSize, pageNo);
+	MethodObj.setId("delScanWrcsInfo");
+	MethodObj.setParam( "sImagClsfCd",Ds_AgreeListDel.getCellData(0, "sImagClsfCd")); 
+	MethodObj.setParam( "sResno", Ds_AgreeListDel.getCellData(0, "sResno"));
+	MethodObj.setParam( "sScanDate", Ds_AgreeListDel.getCellData(0, "sScanDate"));
+	MethodObj.setParam( "nProgDgre", Ds_AgreeListDel.getCellData(0, "nProgDgre")); 
+	MethodObj.setParam( "gUserID", util.getGdsValue("gUserID"));
+	
+	MethodObj.setUrl("/contract/CBSC013MController.do");//배포후변경할것(controller위치와 이름)
+	MethodObj.setXPath("//hashtable/data[@hashkey='lTIDB07ListDoc']/vector/data/LTIDB07"); // XPath   
+	MethodObj.addXPath("//*/WARNING"); 
+	MethodObj.sync();
+	MethodObj.send();
+
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDB07"), "Ds_AgreeListDel");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+	
+	util.setCompBindRefresh("Ds_AgreeListDel");//바인딩을 해줌
+	util.setCompBindRefresh("DsWs_Warning");//바인딩을 해줌
+	util.setRowPosition(Ds_AgreeListDel, 0);
+
+    if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+    } else {    
+//        if (MethodObj.pageSize > 0) {
+//            var url;
+//
+            //운영환경일 때 Y  아니면 N 
+//            if (util.getGdsValue("gProdYN") == "Y") {
+                //url = "https://limg.thekins.co.kr/imgsys/jsp/JCDDeleteProcess.jsp?";
+//                url = "http://10.1.1.58:9000/imgsys/jsp/JCDDeleteProcess.jsp?";
+//            } else {
+                //url = "https://dlimg.thekins.co.kr:8090/imgsys/jsp/JCDDeleteProcess.jsp?";
+//                url = "http://10.1.1.131:8090/imgsys/jsp/JCDDeleteProcess.jsp?";
+//            }
+//            var arg = "UsrId=" + gds.gUserID + "&";
+//            arg += "Rgno=" + Ds_AgreeListDel.getCellData(0, "sImagPath") + "&";
+//            arg += "ScanDt=" + Ds_AgreeListDel.getCellData(0, "sScanDate") + "&";
+//            arg += "Doc_Type=" + Ds_AgreeListDel.getCellData(0, "sImagClsfCd") + "&";
+//            arg += "SeqNum=" + Ds_AgreeListDel.getCellData(0, "nProgDgre");
+//            WebBrowser02.PageUrl = url + arg;
+//            WebBrowser02.Run();
+//        }
+
+        scwin.lfn_SearchData(1);
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Exit()
+// 내용        : 종료버튼 클릭시 처리
+//---------------------------------------------------------------------------
+scwin.lfn_Exit = function() {
+    this.close;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : cmb_Gubun_OnClick()
+// 내용        : 콤보값 변경시 처리
+//---------------------------------------------------------------------------
+scwin.cmb_Gubun_OnClick = function() {
+//주민번호
+    if (cmb_Gubun.getValue() == "1") {
+        medt_Str.show();
+        medt_Str.setValue("");
+        medt_Str.setDisplayFormat("######-#######");
+        medt_Str_Event.setIndex(0);
+        medt_Str.setPlaceholder( "______-_______" );
+        edt_Str.hide();
+//        btn_grup.hide();
+        btn_Doer.hide();
+        edt_StrNm.hide();
+        edt_Str.setValue("");
+        edt_StrNm.setValue("");
+        medt_Str.setValue("");
+        medt_Str.focus();
+    } else if (cmb_Gubun.getValue() == "2") {
+    //조직코드
+        medt_Str.hide();
+        medt_Str.setValue("");
+        edt_Str.show();
+        edt_StrNm.show();
+        btn_Doer.show();
+//        btn_grup.show();
+//        btn_Doer.hide();
+        edt_Str.setValue("");
+        edt_StrNm.setValue("");
+         edt_Str.setPlaceholder( "" );
+         edt_Str.focus();
+    } else if (cmb_Gubun.getValue() == "3" || cmb_Gubun.getValue() == "4") {
+    //취급자||사용인 코드
+        medt_Str.hide();
+        medt_Str.setValue("");
+        edt_Str.show();
+        edt_StrNm.show();
+//        btn_grup.hide();
+        btn_Doer.show();
+        edt_Str.setValue("");
+        edt_StrNm.setValue("");
+        edt_Str.setPlaceholder( "" );
+        edt_Str.focus();
+    } else {
+        medt_Str.hide();
+        medt_Str.setValue("");
+        edt_Str.show();
+        edt_Str.setPlaceholder( "_____________" );
+        edt_StrNm.show();
+        edt_Str.setValue("");
+        edt_StrNm.setValue("");
+        edt_Str.focus();
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : medt_Str_OnKeyDown()
+// 내용        : keyDown시 처리
+//---------------------------------------------------------------------------
+scwin.lfn_Search_Async_OnKeyDown = function(nChar) { //완료    
+
+    if (nChar.keyCode == 13) {
+    	util.eventAsyncCall(this, scwin.medt_Str_OnKeyDown, arguments);
+    }
+};
+//nChar, bShift, bCtrl, bAlt, LLParam, HLParam
+scwin.medt_Str_OnKeyDown = function( nChar) {
+        scwin.lfn_Search();
+};
+//**************************************************************************************************
+// 페이징 처리 - 이전 페이지 리스트
+//**************************************************************************************************
+scwin.Btn_PreV_OnClick = function(e) {
+	var ftVal = wconv.toNumber(Ds_Page.getCellData(0, "FILTERCD")) - 1;
+    if (wconv.toNumber(maxFilterVal) < wconv.toNumber(ftVal)) {
+        wprom.alert("조회의 처음입니다.");
+        return;
+    } else if (wconv.toNumber(ftVal) < 1) {
+        wprom.alert("조회의 처음입니다.");
+        return;
+    }
+    wconv.filter(Ds_Page, "FILTERCD=='" + ftVal + "'", true);
+    Cmb_Page.setValue(Ds_Page.getCellData(0, "CODE"));
+    scwin.lfn_SearchData(Cmb_Page.getValue());
+};
+
+//**************************************************************************************************
+// 페이징 처리 - 이전 페이지
+//**************************************************************************************************
+scwin.Btn_Pre_OnClick = function(obj) {
+	var Idx = Cmb_Page.getValue();
+    if (wconv.toNumber(Idx) - 1 < 1) {
+        wprom.alert("조회의 처음입니다.");
+        return;
+    }
+    scwin.lfn_SearchData(wconv.toString(wconv.toNumber(Idx) - 1)); //수정부분
+    if (Ds_Page.getCellData(0, "CODE") == Idx) {
+        wconv.filter(Ds_Page, "FILTERCD=='" + wconv.toString(wconv.toNumber(Ds_Page.getCellData(0, "FILTERCD")) - 1) + "'", true);
+        Cmb_Page.setValue(Ds_Page.getCellData((Ds_Page.getRowCount() - 1), "CODE"));
+    } else {
+        Cmb_Page.setValue(wconv.toNumber(Idx) - 1);
+	}
+};
+
+//**************************************************************************************************
+// 페이징 처리 - 다음 페이지
+//**************************************************************************************************
+scwin.Btn_Next_OnClick = function(obj) {
+	var Idx = Cmb_Page.getValue();
+	if (wconv.toNumber(maxPage) < wconv.toNumber(Idx) + 1) {
+		wprom.alert("더이상 자료가 존재하지 않습니다");
+		return;
+	}
+	scwin.lfn_SearchData(wconv.toString(wconv.toNumber(Idx) + 1)); //수정부분
+	if (Ds_Page.getCellData((Ds_Page.getRowCount() - 1), "CODE") == Idx) {
+		wconv.filter(Ds_Page, "FILTERCD=='" + wconv.toString(wconv.toNumber(Ds_Page.getCellData((Ds_Page.getRowCount() - 1), "FILTERCD")) + 1) + "'", true);
+	}
+	Cmb_Page.setValue(wconv.toNumber(Idx) + 1);
+};
+
+
+//**************************************************************************************************
+// 페이징 처리 - 다음 페이지 리스트
+//**************************************************************************************************
+scwin.Btn_NextV_OnClick = function(obj) {
+	var ftVal = wconv.toNumber(Ds_Page.getCellData((Ds_Page.getRowCount() - 1), "FILTERCD")) + 1;
+    if (wconv.toNumber(maxFilterVal) < wconv.toNumber(ftVal)) {
+        wprom.alert("더이상 자료가 존재하지 않습니다");
+        return;
+    }
+    wconv.filter(Ds_Page, "FILTERCD=='" + ftVal + "'", true);
+    Cmb_Page.setValue(Ds_Page.getCellData(0, "CODE"));
+    scwin.lfn_SearchData(Cmb_Page.getValue());
+};
+
+//**************************************************************************************************
+// 페이지 처리
+//**************************************************************************************************
+scwin.Cmb_Page_OnChanged = function( strCode) {
+    scwin.lfn_SearchData(strCode.newValue);
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_cmb_linkMenu_OnChanged
+// 내용        : 링크페이지 선택시 Event처리
+//---------------------------------------------------------------------------
+scwin.lfn_cmb_linkMenu_OnChanged = function( strCode) {
+    gfn_OpenLinkPage(strCode);
+};
+
+scwin.lfn_SearchDoer_OnClick = function() {
+    var promise = Promise.resolve();
+    if (cmb_Gubun.getValue() == "0"||cmb_Gubun.getValue() == "2") {
+        promise = promise.then(function(rtnVal) {
+//            return wprom.promise.popupOpen("PROJECT_PATH_TEMP/com_pop/0120.xml", "", 594, 321);
+			var indata  = { };				
+			var popInfo = {
+				"width"     : 740,
+				"height"    : 500,  
+				"indata"    : indata,
+				"title"     : "조직 찾기", 
+				"callback"  : ""
+			};			
+			return wprom.popupOpen("/ui/cbso/CBSO020P.xml", popInfo);
+        });
+        promise = promise.then(function(rst) {
+            /*wprom.popupOpen(가이드참조)*/
+            if (wconv.length(rst) != 0) {
+                var arrRst = wconv.split(rst, "^");
+                if (arrRst[2] == "5" || arrRst[2] == "6") {
+                    medt_Str.setValue(arrRst[0]);
+                } else {
+                    wprom.alert("팀/센터를 선택하셔야됩니다.");
+                    medt_Str.setValue("");
+                }
+            }
+        });
+    } else if (cmb_Gubun.getValue() == "3" || cmb_Gubun.getValue() == "4") {
+        promise = promise.then(function(rtnVal) {
+//            return wprom.promise.popupOpen("PROJECT_PATH_TEMP/popup/CBSO015P.xml", "", 640, 336);
+			var indata  = { };				
+			var popInfo = {
+				"width"     : 655,
+				"height"    : 435,  
+				"indata"    : indata,
+				"title"     : "사원찾기 [R960_Pop]",
+				"callback"  : ""
+			};			
+			return wprom.popupOpen("/ui/cbso/CBSO015P.xml", popInfo);
+        });
+        promise = promise.then(function(rst) {
+            /*wprom.popupOpen(가이드참조)*/
+            if (wconv.length(rst) != 0) {
+                var arrRst = wconv.split(rst, "^");
+                edt_Str.setValue(arrRst[0]);
+                edt_StrNm.setValue(arrRst[1]);
+            }
+        });
+    }
+    return promise;
+};
+/* 2017-11-06 개발자가이드에서 삭제처리
+//---------------------------------------------------------------------------
+// function 명 : medt_Str_OnCharChanged
+// 내용        : 계약자코드조회시 
+//---------------------------------------------------------------------------
+scwin.medt_Str_OnCharChanged = function(strPreText, strPostText) {
+    if (cmb_Gubun.getValue() == "1") {
+        if (wconv.length(medt_Str.getValue()) == 10) {
+            if (isBizRegNo(medt_Str.getValue())) {
+                medt_Str.setDisplayFormat("###-##-#####");
+            } else {
+//                medt_Str.setDisplayFormat("######-ZZZZZZZ");
+				medt_Str.setDisplayFormat("######-#######");
+            }
+        }
+    }
+};
+*/
+//---------------------------------------------------------------------------
+// function 명 : medt_Str_OnKillFocus
+// 내용        : 계약자코드OnKillFocus시 처리
+//---------------------------------------------------------------------------
+scwin.medt_Str_OnKillFocus = function() {
+//    scwin.medt_Str_OnCharChanged();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : medt_Str_OnKillFocus
+// 내용        : 계약자코드OnKillFocus시 처리
+//---------------------------------------------------------------------------
+scwin.medt_Str_OnFocus = function() {
+    if (cmb_Gubun.getValue() == 1) {
+        medt_Str.setDisplayFormat("######-#######");
+    }
+};
+//이전 날짜 이벤트
+//scwin.cal_From_OnChanged = function(obj, strOldText, strNewText) {
+//    if (cal_From.getValue() == "" || cal_To.getValue() == "") {
+//        return false;
+//    }
+//    if (isDate(strNewText) == false) {
+//        wprom.alert("날짜형식이 잘못 되었습니다.");
+//        cal_From.setValue(strOldText);
+//        return false;
+//    }
+//    if (minusDates(sToday, strNewText) > 0) {
+//        wprom.alert("조회기간 시작일이 현재일 이후 날짜입니다.");
+//        cal_From.setValue(strOldText);
+//        return false;
+//    }
+//    if (minusDates(strNewText, cal_To.getValue()) < 0) {
+//        wprom.alert("조회기간 시작일이 종료일 이후 날짜입니다.");
+//        cal_From.setValue(strOldText);
+//        return false;
+//    }
+//};
+//이전 날짜 이벤트
+
+scwin.cal_From_OnChanged = function(dateStr,dateObj) {
+	
+    if (cal_From.getValue() == "" || cal_To.getValue() == "") {
+        return false;
+    }
+    if (wconv.isDate(dateStr) == false) {
+        wprom.alert("날짜형식이 잘못 되었습니다.");
+        cal_From.setValue(cal_From_oldDate);
+        return false;
+    }
+    if ((sToday - dateStr) < 0) {
+        wprom.alert("조회기간 시작일이 현재일 이후 날짜입니다.");
+        cal_From.setValue(cal_From_oldDate);
+        return false;
+    }
+ 
+    if ((dateStr - cal_To.getValue()) > 0) {
+        wprom.alert("조회기간 시작일이 종료일 이후 날짜입니다.");
+        cal_From.setValue(cal_From_oldDate);
+        return false;
+    }
+    cal_From_oldDate = cal_From.getValue();
+};
+//이후 날짜 이벤트
+scwin.cal_To_OnChanged = function(dateStr,dateObj) {
+
+    if (cal_From.getValue() == "" || cal_To.getValue() == "") {
+        return false;
+    }
+//    if (isDate(dateStr) == false) {
+//        wprom.alert("날짜형식이 잘못 되었습니다.");
+//        cal_To.setValue(dateStr);
+//        return false;
+//    }
+//    if (minusDates(cal_From.getValue(), dateStr) < 0) {
+//        wprom.alert("조회기간 종료일이 시작일 이전 날짜입니다.");
+//        cal_To.setValue(dateStr);
+//        return false;
+//    }
+//    if (minusDates(sToday, cal_To.getValue()) > 0) {
+//        wprom.alert("조회기간 종료일이 현재일 이후 날짜입니다.");
+//        cal_To.setValue(dateStr);
+//        return false;
+//    }
+
+    if (wconv.isDate(dateStr) == false) {
+        wprom.alert("날짜형식이 잘못 되었습니다.");
+        cal_To.setValue(cal_To_oldDate);
+        return false;
+    }
+    if ((cal_From.getValue() - dateStr) > 0) {
+        wprom.alert("조회기간 종료일이 시작일 이전 날짜입니다.");
+        cal_To.setValue(cal_To_oldDate);
+        return false;
+    }
+    if ((sToday - cal_To.getValue()) < 0) {
+        wprom.alert("조회기간 종료일이 현재일 이후 날짜입니다.");
+        cal_To.setValue(cal_To_oldDate);
+        return false;
+    }
+     cal_To_oldDate = cal_To.getValue();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Excel
+// 내용        : 엑셀버튼 클릭시
+//---------------------------------------------------------------------------
+scwin.lfn_Exel = function() {
+    var sResult;
+    sResult = FileDialog0.Open();
+    if (sResult) {
+        grd_PlanListExcel.SaveExcel(FileDialog0.FilePath + "\\" + FileDialog0.FileName, "가입설계사항");
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_convert_maskexcel
+// 내용        : 그리드에서 마스킹 처리.
+// sType : 1: 주민번호  2:계좌번호 3:카드번호 9:기타(카드인지 계좌인지 모를경우)
+//---------------------------------------------------------------------------
+scwin.lfn_convert_maskexcel = function(sTarget, sType) {
+    var accountsMask = "#####***********";
+    var cardMask = "####-####-####-****";
+    var sMask = "";
+    if (sType == "1") {
+        if (wconv.length(sTarget) == 10) {
+            sMask = "###-##-*****";
+        } else {
+            sMask = "######-#******";
+        }
+    } else if (sType == "2") {
+        sMask = accountsMask;
+    } else if (sType == "3") {
+        sMask = cardMask;
+    } else {
+        if (wconv.length(sTarget) == 16) {
+            sMask = cardMask;
+        } else {
+            sMask = accountsMask;
+        }
+    }
+    return gfn_convert_mask(sTarget, sMask);
+};
+
+scwin.lfn_convert_mask = function(sTarget) {
+    var sMask = "######-#######";
+    /*
+    if (gUserDuty == '30' || gUserDuty == '33' || gUserDuty == '35'){
+    	sMask = "######-#******";
+    }
+    */
+    return gfn_convert_mask(sTarget, sMask);
+};
+
+//  
+//---------------------------------------------------------------------------
+// function 명 : grd_AgreeList_OnCellClick
+// 내용        : 입력자 셋팅.
+//---------------------------------------------------------------------------
+//function( nRow, nCell, nX, nY, nPivotIndex)
+scwin.grd_AgreeList_OnCellClick = function(nRow, nCell ) {
+
+    if (nCell == 6) {
+
+//        DsWs_AgreeList.setCellData(nRow, "sCnfm", gds.gUserID); //확인자
+//        DsWs_AgreeList.setCellData(nRow, "sMdfcDler", gds.gUserID); //수정처리자
+//        DsWs_AgreeList.setCellData(nRow, "sMdfcDlerIP", gds.gUserIP); //수정처리자IP
+        DsWs_AgreeList.setCellData(nRow, "sCnfm", util.getGdsValue("gUserID")); //확인자
+        DsWs_AgreeList.setCellData(nRow, "sMdfcDler", util.getGdsValue("gUserID")); //수정처리자
+        DsWs_AgreeList.setCellData(nRow, "sMdfcDlerIP", util.getGdsValue("gUserID")); //수정처리자IP
+    } else if (nCell == 5) {} else if (nCell == 11) {
+
+        //trace("sFixYn=" + DsWs_AgreeList.GetColumn(nRow,"sFixYn"));
+        //trace("sCnfm=" + DsWs_AgreeList.GetColumn(nRow,"sCnfm"));
+        if (DsWs_AgreeList.getCellData(nRow, "sFixYn") == "N" || DsWs_AgreeList.getCellData(nRow, "sCnfm") == "") {
+            DsWs_AgreeList.setCellData(nRow, "sPlanNo", sPostText);
+//            DsWs_AgreeList.setCellData(nRow, "sCnfm", gds.gUserID); //확인자
+//            DsWs_AgreeList.setCellData(nRow, "sMdfcDler", gds.gUserID); //수정처리자
+//            DsWs_AgreeList.setCellData(nRow, "sMdfcDlerIP", gds.gUserIP); //수정처리자IP
+
+            DsWs_AgreeList.setCellData(nRow, "sCnfm",  util.getGdsValue("gUserID")); //확인자
+            DsWs_AgreeList.setCellData(nRow, "sMdfcDler",  util.getGdsValue("gUserID")); //수정처리자
+            DsWs_AgreeList.setCellData(nRow, "sMdfcDlerIP", util.getGdsValue("gUserID")); //수정처리자IP
+            scwin.lfn_Save(nRow, sstrCode);
+        } else {
+            wprom.alert("저장할수 없습니다");
+        }
+    } else if (nCell == 16) {
+    	
+        scwin.lfn_Del(nRow, sstrCode);
+    }
+};
+
+//  
+//---------------------------------------------------------------------------
+// function 명 : lfn_AgreeKind_OnChanged
+// 내용        : 동의 종류 선택
+//---------------------------------------------------------------------------
+scwin.lfn_AgreeKind_OnChanged = function( value, strCode) {
+    sstrCode = strCode;
+    if (strCode == "JCD1000601") {
+    grd_AgreeList.setCol
+        //가망고객동의 //아직 확정이 아님 상품소개 동의 처럼 동의 확인 두개만 뚫어 놓음 20140310
+//        grd_AgreeList.setColProp(10, "Width", 0);
+//        grd_AgreeList.setColProp(8, "Width", 0);
+//        grd_AgreeList.setColProp(9, "Width", 0);
+		grd_AgreeList.setColumnVisible( 10 , false );
+		grd_AgreeList.setColumnVisible( 8 , false );
+		grd_AgreeList.setColumnVisible( 9 , false );
+        DsWs_AgreeList.removeAll();
+        DsWs_AgreeListCnt.removeAll();
+    } else if (strCode == "JCD1000602" || strCode == "JCD1000612") {
+        //가입설계동의
+//        grd_AgreeList.setColProp(10, "Width", 0);
+//        grd_AgreeList.setColProp(8, "Width", 35);
+//        grd_AgreeList.setColProp(9, "Width", 35);
+
+		grd_AgreeList.setColumnVisible( 8 , true );
+		grd_AgreeList.setColumnVisible( 9 , true);
+		grd_AgreeList.setColumnVisible( 10 , false );
+
+        DsWs_AgreeList.removeAll();
+        DsWs_AgreeListCnt.removeAll();
+    } else if (strCode == "JCD1000604") {
+        //상품소개동의
+//        grd_AgreeList.setColProp(10, "Width", 0);
+//        grd_AgreeList.setColProp(8, "Width", 0);
+//        grd_AgreeList.setColProp(9, "Width", 0);
+		grd_AgreeList.setColumnVisible( 10 , false );
+		grd_AgreeList.setColumnVisible( 8 , false );
+		grd_AgreeList.setColumnVisible( 9 , false );
+        DsWs_AgreeList.removeAll();
+        DsWs_AgreeListCnt.removeAll();
+    } else if (strCode == "JCD1000603" || strCode == "JCD1000613") {
+        //계약체결이행동의서
+//        grd_AgreeList.setColProp(10, "Width", 99);
+//        grd_AgreeList.setColProp(8, "Width", 35);
+//        grd_AgreeList.setColProp(9, "Width", 35);
+		grd_AgreeList.setColumnVisible( 10 , true );
+		grd_AgreeList.setColumnVisible( 8 , true );
+		grd_AgreeList.setColumnVisible( 9 , true );
+        DsWs_AgreeList.removeAll();
+        DsWs_AgreeListCnt.removeAll();
+    } else if (strCode == "JCD1000605") {
+        //제3자동의
+//        grd_AgreeList.setColProp(10, "Width", 99);
+//        grd_AgreeList.setColProp(8, "Width", 0);
+//        grd_AgreeList.setColProp(9, "Width", 0);
+
+		grd_AgreeList.setColumnVisible( 8 , false );
+		grd_AgreeList.setColumnVisible( 9 , false );
+		grd_AgreeList.setColumnVisible( 10 , true );
+        DsWs_AgreeList.removeAll();
+        DsWs_AgreeListCnt.removeAll();
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Check_Validation
+// 내용        : 동의 종류 선택에 다른 validation 선택
+//---------------------------------------------------------------------------
+scwin.lfn_Check_Validation = function(nRow, strCode) {
+    var sAgmYn1 = "";
+    var sAgmYn2 = "";
+    var sAgmYn3 = "";
+    var sAgmYn4 = "";
+    var sPlanNoTemp = "";
+    var strCode = DsWs_AgreeList.getCellData(nRow, "sImagClsfCd");
+    if (sstrCode == "JCD1000602" || sstrCode == "JCD1000612") {
+        //가입설계동의 - 가입설계동의서(자동차) 추가 (N1706-00106)
+        sAgmYn1 = DsWs_AgreeList.getCellData(nRow, "sAgmYn1");
+        sAgmYn2 = DsWs_AgreeList.getCellData(nRow, "sAgmYn2");
+        sAgmYn3 = DsWs_AgreeList.getCellData(nRow, "sAgmYn3");
+        sAgmYn4 = DsWs_AgreeList.getCellData(nRow, "sAgmYn4");
+        if (sAgmYn1 == "Y" && sAgmYn2 == "Y" && sAgmYn3 == "Y" && sAgmYn4 == "Y") {
+            return true;
+        } else {
+            wprom.alert("모두 동의선택이 되어야 합니다 ");
+            return false;
+        }
+    } else if (sstrCode == "JCD1000601") {
+        //가망고객동의
+        sAgmYn1 = DsWs_AgreeList.getCellData(nRow, "sAgmYn1");
+        sAgmYn2 = DsWs_AgreeList.getCellData(nRow, "sAgmYn2");
+        if (sAgmYn1 != "" && sAgmYn2 != "") {
+            return true;
+        } else {
+            wprom.alert("동의 여부 선택을 확인하세요 ");
+            return false;
+        }
+    } else if (sstrCode == "JCD1000604") {
+        //상품소개동의
+        sAgmYn1 = DsWs_AgreeList.getCellData(nRow, "sAgmYn1");
+        sAgmYn2 = DsWs_AgreeList.getCellData(nRow, "sAgmYn2");
+        if (sAgmYn1 != "" && sAgmYn2 != "") {
+            return true;
+        } else {
+            wprom.alert("동의 여부 선택을 확인하세요 ");
+            return false;
+        }
+    } else if (sstrCode == "JCD1000603" || sstrCode == "JCD1000613") {
+        //계약체결이행동의서
+        sAgmYn1 = DsWs_AgreeList.getCellData(nRow, "sAgmYn1");
+        sAgmYn2 = DsWs_AgreeList.getCellData(nRow, "sAgmYn2");
+        sAgmYn3 = DsWs_AgreeList.getCellData(nRow, "sAgmYn3");
+        sAgmYn4 = DsWs_AgreeList.getCellData(nRow, "sAgmYn4");
+        sPlanNoTemp = DsWs_AgreeList.getCellData(nRow, "sPlanNo");
+        if (sAgmYn1 == "Y" && sAgmYn2 == "Y" && sAgmYn3 == "Y" && sAgmYn4 == "Y") {
+            if (wconv.length(sPlanNoTemp) == 12) {
+                return true;
+            } else {
+                wprom.alert("청약번호를 입력하세요 ");
+                return false;
+            }
+        } else {
+            wprom.alert("모두 동의선택이 되어야 합니다 ");
+            return false;
+        }
+    } else if (sstrCode == "JCD1000605") {
+        //제3자동의
+        sAgmYn1 = DsWs_AgreeList.getCellData(nRow, "sAgmYn1");
+        sAgmYn2 = DsWs_AgreeList.getCellData(nRow, "sAgmYn2");
+        sPlanNoTemp = DsWs_AgreeList.getCellData(nRow, "sPlanNo");
+        if (sAgmYn1 == "Y" && sAgmYn2 == "Y") {
+            if (wconv.length(sPlanNoTemp) == 12) {
+                return true;
+            } else {
+                wprom.alert("청약번호를 입력하세요 ");
+                return false;
+            }
+        } else {
+            wprom.alert("모두 동의선택이 되어야 합니다");
+            return false;
+        }
+    }
+    return false;
+};
+
+scwin.grd_AgreeList_OnChar = function( strPreText, nChar, strPostText, nLLParam, nHLParam, nRow, nCell, nPivotIndex) {
+    sPostText = strPostText;
+    if (nCell == 11 && wconv.length(replace(replace(strPostText, "_", ""), "-", "")) >= 12) {
+        grd_AgreeList.wconv.moveToNextCell();
+    }
+};
+
+scwin.btn_Image_OnClick = function() {
+    var nRow;
+    var sPlanNo;
+//    nRow = DsWs_AgreeList.wconv.getRowPosition();
+	nRow = DsWs_AgreeList.getRowPosition();
+    //trace("nRow==" + nRow);
+    sPlanNo = DsWs_AgreeList.getCellData(nRow, "sPlanNo");
+    sRgno = DsWs_AgreeList.getCellData(nRow, "sImagPath"); //이미지시스템에서 오는 임의 생성 고객키 및 고객키가 이미지패스에 저장 됨
+    sScanDt = DsWs_AgreeList.getCellData(nRow, "sScanDate");
+
+    //trace("sPlanNo==" + sPlanNo);
+    var url;
+    //운영환경일 때 Y  아니면 N 
+    if (util.getGdsValue("gProdYN") == "Y") {
+        url = "http://10.1.1.58:9000/imgsys/jsp/index.jsp?";
+    } else {
+        url = "http://10.1.1.131:8090/imgsys/jsp/index.jsp?";
+    }
+
+
+    //url = gImgUrl;
+    //trace(DsWs_AgreeList.savexml());
+    var arg = "UsrId=" + util.getGdsValue("gUserID") + "&";
+    arg += "hidJob_gubun=3" + "&";
+    arg += "Rgno=" + sRgno + "&";
+    arg += "ScanDt=" + sScanDt;
+
+    //trace("arg==" +arg);
+    //동의서 : http://10.1.1.131:8090/imgsys/jsp/index.jsp?UsrId=5140023&hidJob_gubun=3&Rgno=1111111A00012&ScanDt=20140306
+    //      UsrId : 사용자ID
+    //      hidJob_gubun : 업무구분
+    //      Rgno : 주민번호(암호화)
+    //      ScanDt : 스캔일
+    ExecBrowser(url + arg);
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_SearchDept_OnClick
+// 내용        :  조직찾기 POPUP
+//---------------------------------------------------------------------------
+scwin.lfn_SearchDept_OnClick = function() {
+    var promise = Promise.resolve();
+    promise = promise.then(function(rtnVal) {
+//        return wprom.promise.popupOpen("PROJECT_PATH_TEMP/com_pop/0120.xml", "", 594, 321);
+			var indata  = { };				
+			var popInfo = {
+				"width"     : 594,
+				"height"    : 321,  
+				"indata"    : indata,
+				"title"     : "조직찾기",
+				"callback"  : ""
+			};			
+			return wprom.popupOpen("/ui/cbso/CBSO020P.xml", popInfo);
+    });
+    promise = promise.then(function(result) {
+        /*wprom.popupOpen(가이드참조)*/
+        //trace(result);	
+        if (wconv.length(result) != 0) {
+            var arrRst = wconv.split(result, "^", true);
+            if (wconv.toNumber(arrRst[2]) <= 2) {
+                wprom.alert("조직은 팀/센터이후부터 선택하세요");
+            } else {
+                edt_Str.setValue(arrRst[0]);
+                edt_StrNm.setValue(arrRst[1]); //edt_level.Text = arrRst[2];
+            }
+        }
+    });
+    return promise;
+};
+
+
+	]]></script>
+    </head>
+    <body>
+    	<xf:group class="cont_wrap" id="O320"
+    		style="position:absolute;WorkArea:true;Ver:1.0;  PidAttrib:7;  height:612px;left:0px;top:33px; width:100%;"
+    		userData1="동의서 확인 New"
+    		userData2=" OnLoadCompleted:scwin.O320_OnLoadCompleted; ">
+    		<DataObjects>
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    			<DataObject />
+    		</DataObjects>
+    		<ServiceObjects>
+    			<ServiceObject />
+    			<ServiceObject />
+    			<ServiceObject />
+    			<ServiceObject />
+    			<ServiceObject />
+    			<ServiceObject />
+    			<ServiceObject />
+    		</ServiceObjects>
+    		<xf:group arcsize="6" class="search_area" id="Shape9"
+    			style="height:85px;top:0px;left:0px;" userData3="RoundRect">
+    			<w2:anchor class="btn_search" disabled=""
+    				id="lfn_Search" outerDiv="false" style="top:53px;" tabIndex="7"
+    				ev:onclick="scwin.lfn_Search_Async">
+    				<xf:label><![CDATA[조회]]></xf:label>
+    			</w2:anchor>
+    		</xf:group>
+    		<w2:wframe id="div1"
+    			style="position:absolute; height:20px;right:50px;top:87px; width:219px;"
+    			scope="false" src="/cm/common/Main_btn_GridControl.xml"
+    			ev:onpageload="">
+    		</w2:wframe>
+    		<w2:textbox class="sty_lb_Search" id="sta_AgreKind"
+    			label="동의종류"
+    			style="position:absolute;  height:20px;left:19px;top:37px; width:64px;"
+    			tagname="" />
+    		<w2:inputCalendar rightAlign="" calendarValueType=""
+    			renderType="" id="cal_To" renderDiv=""
+    			style="position:absolute; SundayTextColor:red;  SaturdayTextColor:blue;  border-style:solid;  height:20px;left:207px;top:10px; width:105px;"
+    			focusOnDateSelect="" footerDiv="" class="sty_ipt_search"
+    			validCheck="true" tabIndex="11"
+    			ev:ondateselect="scwin.cal_To_OnChanged">
+    		</w2:inputCalendar>
+    		<w2:textbox id="Static1" label="~"
+    			style="position:absolute; VAlign:Middle;  text-align:center; height:20px;left:189px;top:10px; width:16px;"
+    			tagname="" />
+    		<w2:inputCalendar rightAlign="" calendarValueType=""
+    			renderType="" id="cal_From" renderDiv=""
+    			style="position:absolute; SundayTextColor:red;  SaturdayTextColor:blue;  border-style:solid;  height:20px;left:86px;top:10px; width:105px;"
+    			focusOnDateSelect="" footerDiv="" class="sty_ipt_search"
+    			validCheck="true" tabIndex="12"
+    			ev:ondateselect="scwin.cal_From_OnChanged">
+    		</w2:inputCalendar>
+    		<w2:textbox class="sty_lb_Search" id="Static12" label="조회기간"
+    			style="position:absolute; VAlign:Middle; height:20px;left:19px;top:12px; width:52px;"
+    			tagname="" />
+    		<xf:select1 disabledClass="" appearance="minimal"
+    			direction="" chooseOption="" id="cmb_Gubun"
+    			style="position:absolute; ImeMode:none;  INDEX:0;  border-style:solid;  height:20px;left:404px;top:11px; width:100px;"
+    			displayMode="" selectedData="" optionOrder="" allOption=""
+    			disabled="" submenuSize="" class="sty_ipt_search"
+    			renderType='native' emptyItem="true" ev:onviewchange=""
+    			ev:onchange="scwin.cmb_Gubun_OnClick">
+    			<xf:choices>
+    				<xf:itemset nodeset="data:ds_combo">
+    					<xf:label ref="id_nm"></xf:label>
+    					<xf:value ref="id_cd"></xf:value>
+    				</xf:itemset>
+    			</xf:choices>
+    		</xf:select1>
+    		<w2:textbox class="sty_lb_Search" id="Static0" label="조회구분"
+    			style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:329px;top:13px; width:58px;"
+    			tagname="" />
+    		<xf:input ev:onblur="scwin.lfn_Search_Async_OnKeyDown"
+    			id="edt_Str" maxlength="16"
+    			style="position:absolute; border-style:solid;  height:20px;left:509px;top:11px; width:120px;"
+    			tabIndex="16" displayFormat="" placeholder="_____________"
+    			ev:onkeydown="scwin.lfn_Search_Async_OnKeyDown" />
+    		<xf:input dataType="text" displayFormat="#############"
+    			ev:onblur="scwin.medt_Str_OnKillFocus"
+    			ev:oneditkeyup="scwin.medt_Str_OnCharChanged"
+    			ev:onfocus="scwin.medt_Str_OnFocus" id="medt_Str"
+    			style="position:absolute; border-style:solid;  height:20px;left:509px;top:11px; width:120px;"
+    			tabIndex="23" class="sty_ipt_search" disabled="ture"
+    			placeholder="" ev:onkeydown="scwin.lfn_Search_Async_OnKeyDown" />
+    		<xf:trigger class="detail_search"
+    			ev:onclick="scwin.lfn_SearchDoer_OnClick" id="btn_Doer"
+    			style="position:absolute; Transparent:TRUE;  ImageID:btn_Search_Search;  height:20px;left:629px;top:11px; width:20px;"
+    			tabIndex="17" type="anchor" />
+    		<xf:switch id="switch_178" style=" ">
+    			<xf:case id="Default_179" style=" "></xf:case>
+    		</xf:switch>
+    		<w2:textbox class="sty_lb_Search" id="Static2" label="총건"
+    			style="position:absolute; VAlign:Middle;  text-align:right;height:20px;right:85px;top:557px;width:37px;"
+    			tagname="" />
+
+    		<xf:input class="sty_ipt_form" dataType="number"
+    			disabled="true" displayFormat="#,###" id="medt_nCount" ref=""
+    			style="position:absolute; text-align:right;  border-style:solid;  height:20px;right:20px;top:556px; width:58px;"
+    			tabIndex="21" />
+    		<xf:select1 appearance="full" id="rad_AgreeKind"
+    			style="position:absolute; ColumnCount:5; height:44px;left:86px;top:36px; width:742px;"
+    			selectedIndex="0" cols="5" rows="1" tabIndex="22" ev:onchange=""
+    			ev:onviewchange=""
+    			ev:onlabelclick="scwin.lfn_AgreeKind_OnChanged">
+    			<xf:choices>
+    				<xf:itemset nodeset="data:ds_AgreeKind">
+    					<xf:label ref="Name"></xf:label>
+    					<xf:value ref="code"></xf:value>
+    				</xf:itemset>
+    			</xf:choices>
+    		</xf:select1>
+
+    		<xf:trigger class="detail_bu02"
+    			ev:onclick="scwin.btn_Image_OnClick" id="btn_Image"
+    			style="position:absolute; ImageID:btn_Input_06;  height:20px;right:130px;top:558px; width:80px;"
+    			tabIndex="24" type="anchor" disabled="true">
+    			<xf:label><![CDATA[이미지 시스템]]></xf:label>
+    		</xf:trigger>
+    		<xf:input class="sty_ipt_search" disabled="true"
+    			id="edt_StrNm" maxByteLength="7"
+    			style="position:absolute;  display:none; ImeMode:native;  border-style:solid;  height:20px;left:657px;top:11px; width:98px;"
+    			tabIndex="26" />
+    		<w2:gridView dataList="DsWs_AgreeList" summaryAuto="false"
+    			useFilterList="false" scrollByColumn="false"
+    			showSortableUseFilter="false" scrollByColumnAdaptive="false"
+    			id="grd_AgreeList"
+    			style="position:absolute;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  AutoFitEndLine:Hide;  AutoEnter:TRUE;  height:500px; left:0px; right:811px;top:120px; width:100%;"
+    			ignoreCellClick="false" ignoreToggleOnDisabled="false"
+    			summaryOnlyAuto="false" fixedColumnWithHidden="true"
+    			useShiftKey="true" autoFit="allColumn" class="sty_Grid"
+    			autoFitMinWidth="100"
+    			ev:oncellclick="scwin.grd_AgreeList_OnCellClick">
+    			<w2:caption id="caption1" style=""
+    				value="this is a grid caption.">
+    			</w2:caption>
+    			<w2:header id="header1" style="">
+    				<w2:row id="row1" style="">
+    					<w2:column blockSelect="false" id="column33"
+    						style="height:20px;" inputType="text" width="40"
+    						displayMode="label" value="No">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column31"
+    						style="height:20px;" inputType="text" width="120"
+    						displayMode="label" value="주민등록번호">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column29"
+    						style="height:20px;" inputType="text" width="80"
+    						displayMode="label" value="동의일">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column27"
+    						style="height:20px;" inputType="text" width="80"
+    						displayMode="label" value="스캔일자">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column25"
+    						style="height:20px;" inputType="text" width="70"
+    						displayMode="label" value="스캔자">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column23"
+    						style="height:20px;" inputType="text" width="70"
+    						displayMode="label" value="스캔여부">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column21"
+    						style="height:20px;background-color:pink;" inputType="text"
+    						width="280" displayMode="label" value="동의확인" colSpan="4">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column13"
+    						style="height:20px;background-color:pink;" inputType="text"
+    						width="120" displayMode="label" value="청약번호">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column11"
+    						style="height:20px;background-color:pink;" inputType="text"
+    						width="70" displayMode="label" value="확인">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column9"
+    						style="height:20px;" inputType="text" width="70"
+    						displayMode="label" value="확인자">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column7"
+    						style="height:20px;" inputType="text" width="120"
+    						displayMode="label" value="팀(센터)">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column5"
+    						style="height:20px;" inputType="text" width="70"
+    						displayMode="label" value="취급자">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column3"
+    						style="height:20px;" inputType="text" width="70"
+    						displayMode="label" value="사용인">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="column1"
+    						style="height:20px;" width="70" inputType="text"
+    						displayMode="label" value="삭제">
+    					</w2:column>
+    				</w2:row>
+    			</w2:header>
+    			<w2:gBody id="gBody1" style="">
+    				<w2:row id="row2" style="">
+    					<w2:column blockSelect="false" id="No"
+    						style="height:24px;" inputType="expression" width="40"
+    						displayMode="label" expression="rowIndex()+1"
+    						disabled="true">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="sResno"
+    						style="height:24px;text-align: left;" inputType="text" width="120"
+    						displayMode="label" displayFormat="######-#######"
+    						expression="scwin.lfn_convert_maskexcel(display('sResno'),1)"
+    						disabled="true">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="sAgreDate"
+    						style="height:24px;" inputType="text" width="80"
+    						displayMode="label" displayFormat="####-##-##"
+    						disabled="true">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="sScanDate"
+    						style="height:24px;" inputType="text" width="80"
+    						displayMode="label" displayFormat="####-##-##"
+    						disabled="true">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="sScanDler"
+    						style="height:24px;" inputType="text" width="70"
+    						displayMode="label" disabled="true">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="sScanYn"
+    						style="height:24px;" inputType="link" width="70"
+    						displayMode="label">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="sAgmYn1"
+    						style="height:24px;" inputType="select" width="70"
+    						displayMode="label">
+    						<w2:choices>
+    							<w2:itemset nodeset="data:ds_Yn">
+    								<w2:label ref="Name"></w2:label>
+    								<w2:value ref="Code"></w2:value>
+    							</w2:itemset>
+    						</w2:choices>
+    					</w2:column>
+    					<w2:column blockSelect="false" id="sAgmYn2"
+    						style="height:24px;" inputType="select" width="70"
+    						displayMode="label">
+    						<w2:choices>
+    							<w2:itemset nodeset="data:ds_Yn">
+    								<w2:label ref="Name"></w2:label>
+    								<w2:value ref="Code"></w2:value>
+    							</w2:itemset>
+    						</w2:choices>
+    					</w2:column>
+    					<w2:column blockSelect="false" id="sAgmYn3"
+    						style="height:24px;" inputType="select" width="70"
+    						displayMode="label">
+    						<w2:choices>
+    							<w2:itemset nodeset="data:ds_Yn">
+    								<w2:label ref="Name"></w2:label>
+    								<w2:value ref="Code"></w2:value>
+    							</w2:itemset>
+    						</w2:choices>
+    					</w2:column>
+    					<w2:column blockSelect="false" id="sAgmYn4"
+    						style="height:24px;width:;" inputType="select" width="70"
+    						displayMode="label">
+    						<w2:choices>
+    							<w2:itemset nodeset="data:ds_Yn">
+    								<w2:label ref="Name"></w2:label>
+    								<w2:value ref="Code"></w2:value>
+    							</w2:itemset>
+    						</w2:choices>
+    					</w2:column>
+    					<w2:column blockSelect="false" id="sPlanNo"
+    						style="height:24px;" inputType="text" width="120"
+    						displayMode="label" disabled="false" editModeEvent="onclick">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="temp_id_1630"
+    						style="height:24px;" inputType="image" width="70"
+    						displayMode="label"
+    						imageSrc='/cm/images/contents/ico_top_save.png'
+    						class="scwin.lfn_Save();" readOnly="true">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="sCnfmNm"
+    						style="height:24px;" inputType="text" width="70"
+    						displayMode="label" disabled="true">
+    					</w2:column>
+    					<w2:column blockSelect="false"
+    						id="sDmdrCentrCdNm" style="height:24px;" inputType="text"
+    						width="120" displayMode="label" disabled="true">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="sManagerNm"
+    						style="height:24px;" inputType="text" width="70"
+    						displayMode="label" disabled="true">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="sDmdrNm"
+    						style="height:24px;" inputType="text" width="70"
+    						displayMode="label" disabled="true">
+    					</w2:column>
+    					<w2:column blockSelect="false" id="temp_id_1632"
+    						style="height:24px;" width="70" inputType="image"
+    						displayMode="label"
+    						imageSrc="/cm/images/contents/btn_hori_del.png">
+    					</w2:column>
+    				</w2:row>
+    			</w2:gBody>
+    		</w2:gridView><w2:textbox id="Static94" label="건" style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:80px;top:93px; width:16px;" tagname="">
+    	</w2:textbox><xf:input class="sty_ipt_form" disabled="true" id="edt_TotCount" ref="data:DsWs_AgreeListCnt.nCount" style="position:absolute; border-style:solid;  text-align:RIGHT;  height:20px;left:34px;top:93px; width:45px;" tabIndex="8">
+    	</xf:input><w2:textbox id="Static92" label="전체" style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:-14px;top:93px; width:43px;" tagname="">
+    	</w2:textbox>
+    		<WebBrowser id="WebBrowser02"
+    			style="position:absolute;  display:none;  border-style:solid;  height:8px; left:216px; top:8px; width:8px;"
+    			tabIndex="27" />
+    	</xf:group>
+
+
+
+    	<xf:group class="footer_area_form" id="" style="top:582px;"></xf:group>
+    	<w2:wframe id="" initScript="scwin.wfTitleFavInit();"
+    		src="/cm/common/wf_titleFav.xml" style="margin-right: 15px;">
+    	</w2:wframe>
+    	
+    	
+    	
+    </body>
+</html>

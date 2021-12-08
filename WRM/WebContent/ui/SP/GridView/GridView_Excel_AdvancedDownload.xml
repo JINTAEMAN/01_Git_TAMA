@@ -1,0 +1,1423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataMap baseNode="map" id="dma_fileDesc">
+					<w2:keyInfo>
+						<w2:key id="desc" name="" dataType="text"></w2:key>
+						<w2:key id="test" name="" dataType="text"></w2:key>
+					</w2:keyInfo>
+					<w2:data use="true">
+						<desc><![CDATA[
+<pre class="textNor">
+<div class="etcbox">그리드뷰의 데이터를 고급 옵션 설정을 통해 엑셀 다운로드 하는 기능을 제공한다.
+파일명을 포함하여 70여 개의 옵션을 지정할 수 있으며, 제목이나 작성자와 같이 그리드뷰 데이터 이외의 추가 정보를 설정할 수 있다. 
+파일명을 제외하고 별도로 옵션 설정을 하지 않는 경우, 각 옵션의 기본 값으로 다운로드 된다.
+각 옵션 설명은 옵션명을 마우스 오버하면 툴팁으로 표현된다. 
+</div> 
+</pre>
+						]]></desc>
+						<test><![CDATA[
+<pre class="textNor">
+<div class="etc_tit">과정</div>
+  1. 그리드뷰의 조회된 데이터를 확인한다.
+  2. 설정으로 이동한다.   
+  3. options(Format), options(Style), infoArr(추가 정보)에 값을 입력한다. 
+  4. <font color=red>fileName은 필수 입력 사항이다.</font>
+  5. [설정코드 보기] 버튼을 클릭하여 현 엑셀 다운로드에 설정된 옵션 정보를 확인한다.
+  6. [다운로드] 버튼을 클릭한다.
+  7. [전체선택] 버튼을 클릭하여 설정된 옵션 정보를 선택한다. 
+  8. 선택된 설정 정보는 코드 복사(Ctrl+C)하여 활용한다.		
+<div class="etc_tit">결과</div>
+  ex) 코드  
+  var options = { fileName : "엑셀 샘플.xlsx" };
+  var infoArr = {};
+</pre>
+						]]></test>
+						
+					</w2:data>
+				</w2:dataMap>
+				<w2:dataList id="dlt_advancedExcel" baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="MENU_CD" name="메뉴코드" dataType="text"></w2:column>
+						<w2:column id="MENU_NM" name="메뉴명" dataType="text"></w2:column>
+						<w2:column id="PARENT_MENU_NM" name="부모메뉴명" dataType="text"></w2:column>
+						<w2:column id="MENU_LEVEL" name="메뉴레벨" dataType="text"></w2:column>
+						<w2:column id="SRC_PATH" name="경로" dataType="text"></w2:column>
+						<w2:column id="IS_USE" name="사용여부" dataType="text"></w2:column>
+						<w2:column id="SORT_ORDER" name="순서" dataType="text"></w2:column>
+						<w2:column id="PARENT_MENU_CD" name="부모메뉴코드" dataType="text"></w2:column>
+
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" id="dma_optionsSetting" firstSetSubmission="true">
+					<w2:keyInfo>
+						<w2:key id="fileName" name="name1" dataType="text"></w2:key>
+						<w2:key id="sheetName" name="name2" dataType="text"></w2:key>
+						<w2:key id="type" name="name3" dataType="text"></w2:key>
+						<w2:key id="removeColumns" name="name4" dataType="text" defaultValue="-1"></w2:key>
+						<w2:key id="removeHeaderRows" name="name5" dataType="text"></w2:key>
+						<w2:key id="foldColumns" name="name6" dataType="text" defaultValue="-1"></w2:key>
+						<w2:key id="startRowIndex" name="name7" dataType="text"></w2:key>
+						<w2:key id="startColumnIndex" name="name8" dataType="text"></w2:key>
+						<w2:key id="rowNumVisible" name="name9" dataType="text"></w2:key>
+						<w2:key id="showProcess" name="name10" dataType="text"></w2:key>
+						<w2:key id="massStorage" name="name11" dataType="text"></w2:key>
+						<w2:key id="showConfirm" name="name12" dataType="text"></w2:key>
+						<w2:key id="dataProvider" name="name13" dataType="text"></w2:key>
+						<w2:key id="providerRequestXml" name="name14" dataType="text"></w2:key>
+						<w2:key id="userDataXml" name="name15" dataType="text"></w2:key>
+						<w2:key id="bodyWordwrap" name="name16" dataType="text"></w2:key>
+						<w2:key id="useEuroLocale" name="name17" dataType="text"></w2:key>
+						<w2:key id="useHeader" name="name18" dataType="text"></w2:key>
+						<w2:key id="useSubTotal" name="name19" dataType="text"></w2:key>
+						<w2:key id="useFooter" name="name20" dataType="text"></w2:key>
+						<w2:key id="separator" name="name21" dataType="text"></w2:key>
+						<w2:key id="subTotalScale" name="name22" dataType="text"></w2:key>
+						<w2:key id="subTotalRoundingMode" name="name23" dataType="text"></w2:key>
+						<w2:key id="useStyle" name="name24" dataType="text"></w2:key>
+						<w2:key id="freezePane" name="name25" dataType="text"></w2:key>
+						<w2:key id="autoSizeColumn" name="name26" dataType="text"></w2:key>
+						<w2:key id="displayGridlines" name="name27" dataType="text"></w2:key>
+						<w2:key id="colMerge" name="name28" dataType="text"></w2:key>
+						<w2:key id="useDataFormat" name="name29" dataType="text"></w2:key>
+						<w2:key id="indent" name="name30" dataType="text"></w2:key>
+						<w2:key id="columnMove" name="name31" dataType="text"></w2:key>
+						<w2:key id="columnOrder" name="name32" dataType="text"></w2:key>
+						<w2:key id="fitToPage" name="name33" dataType="text"></w2:key>
+						<w2:key id="landScape" name="name34" dataType="text"></w2:key>
+						<w2:key id="fitWidth" name="name35" dataType="text"></w2:key>
+						<w2:key id="fitHeight" name="name36" dataType="text"></w2:key>
+						<w2:key id="scale" name="name37" dataType="text"></w2:key>
+						<w2:key id="pageSize" name="name38" dataType="text"></w2:key>
+						<w2:key id="headerColor" name="name39" dataType="text"></w2:key>
+						<w2:key id="headerFontName" name="name40" dataType="text"></w2:key>
+						<w2:key id="headerFontSize" name="name41" dataType="text"></w2:key>
+						<w2:key id="headerFontColor" name="name42" dataType="text"></w2:key>
+						<w2:key id="bodyColor" name="name43" dataType="text"></w2:key>
+						<w2:key id="bodyFontName" name="name44" dataType="text"></w2:key>
+						<w2:key id="bodyFontSize" name="name45" dataType="text"></w2:key>
+						<w2:key id="bodyFontColor" name="name46" dataType="text"></w2:key>
+						<w2:key id="subTotalColor" name="name47" dataType="text"></w2:key>
+						<w2:key id="subTotalFontName" name="name48" dataType="text"></w2:key>
+						<w2:key id="subTotalFontSize" name="name49" dataType="text"></w2:key>
+						<w2:key id="subTotalFontColor" name="name50" dataType="text"></w2:key>
+						<w2:key id="footerColor" name="name51" dataType="text"></w2:key>
+						<w2:key id="footerFontName" name="name52" dataType="text"></w2:key>
+						<w2:key id="footerFontSize" name="name53" dataType="text"></w2:key>
+						<w2:key id="footerFontColor" name="name54" dataType="text"></w2:key>
+						<w2:key id="oddRowBackgroundColor" name="name55" dataType="text"></w2:key>
+						<w2:key id="evenRowBackgroundColor" name="name56" dataType="text"></w2:key>
+						<w2:key id="rowNumHeaderColor" name="name57" dataType="text"></w2:key>
+						<w2:key id="rowNumHeaderFontName" name="name58" dataType="text"></w2:key>
+						<w2:key id="rowNumHeaderFontSize" name="name59" dataType="text"></w2:key>
+						<w2:key id="rowNumHeaderFontColor" name="name60" dataType="text"></w2:key>
+						<w2:key id="rowNumBodyColor" name="name61" dataType="text"></w2:key>
+						<w2:key id="rowNumBodyFontName" name="name62" dataType="text"></w2:key>
+						<w2:key id="rowNumBodyFontSize" name="name63" dataType="text"></w2:key>
+						<w2:key id="rowNumBodyFontColor" name="name64" dataType="text"></w2:key>
+						<w2:key id="rowNumFooterColor" name="name65" dataType="text"></w2:key>
+						<w2:key id="rowNumFooterFontName" name="name66" dataType="text"></w2:key>
+						<w2:key id="rowNumFooterFontSize" name="name67" dataType="text"></w2:key>
+						<w2:key id="rowNumFooterFontColor" name="name68" dataType="text"></w2:key>
+						<w2:key id="rowNumSubTotalColor" name="name69" dataType="text"></w2:key>
+						<w2:key id="rowNumSubTotalFontName" name="name70" dataType="text"></w2:key>
+						<w2:key id="rowNumSubTotalFontSize" name="name71" dataType="text"></w2:key>
+						<w2:key id="rowNumSubTotalFontColor" name="name72" dataType="text"></w2:key>
+						<w2:key id="rowNumHeaderValue" name="name73" dataType="text"></w2:key>
+						<w2:key id="freezePaneX" name="name74" dataType="text"></w2:key>
+						<w2:key id="freezePaneY" name="name75" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" id="dma_infoArr">
+					<w2:keyInfo>
+						<w2:key id="rowIndex" name="name1" dataType="text"></w2:key>
+						<w2:key id="colIndex" name="name2" dataType="text"></w2:key>
+						<w2:key id="rowSpan" name="name3" dataType="text"></w2:key>
+						<w2:key id="colSpan" name="name4" dataType="text"></w2:key>
+						<w2:key id="text" name="name5" dataType="text"></w2:key>
+						<w2:key id="textAlign" name="name6" dataType="text"></w2:key>
+						<w2:key id="fontSize" name="name7" dataType="text"></w2:key>
+						<w2:key id="fontName" name="name8" dataType="text"></w2:key>
+						<w2:key id="color" name="name9" dataType="text"></w2:key>
+						<w2:key id="fontWeight" name="name10" dataType="text"></w2:key>
+						<w2:key id="drawBorder" name="name11" dataType="text"></w2:key>
+						<w2:key id="wordWrap" name="name12" dataType="text"></w2:key>
+						<w2:key id="bgColor" name="name13" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList id="dlt_trueFalse" baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="key" name="name1" dataType="text"></w2:column>
+						<w2:column id="value" name="name2" dataType="text"></w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<key><![CDATA[true]]></key>
+							<value><![CDATA[true]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[false]]></key>
+							<value><![CDATA[false]]></value>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataList id="dlt_getColumnId" baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="key" name="name1" dataType="text"></w2:column>
+						<w2:column id="value" name="name2" dataType="text"></w2:column>
+
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList id="dlt_selectColor" baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="key" name="name1" dataType="text"></w2:column>
+						<w2:column id="value" name="name2" dataType="text"></w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<key><![CDATA[#33CCCC(청록색)]]></key>
+							<value><![CDATA[#33CCCC]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[#FFFFFF(흰색)]]></key>
+							<value><![CDATA[#FFFFFF]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[#CCFFCC(연초록색)]]></key>
+							<value><![CDATA[#CCFFCC]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[#008800(진초록색)]]></key>
+							<value><![CDATA[#008800]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[#FF0000(붉은색)]]></key>
+							<value><![CDATA[#FF0000]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[#FF5E00(주황색)]]></key>
+							<value><![CDATA[#FF5E00]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[#FFBB00(주황색)]]></key>
+							<value><![CDATA[#FFBB00]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[#FFE400(노란색)]]></key>
+							<value><![CDATA[#FFE400]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[#1DDB16(초록색)]]></key>
+							<value><![CDATA[#1DDB16]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[#00D8FF(하늘색)]]></key>
+							<value><![CDATA[#00D8FF]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[#0054FF(파란색)]]></key>
+							<value><![CDATA[#0054FF]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[#5F00FF(보라색)]]></key>
+							<value><![CDATA[#5F00FF]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[#FF007F(핫핑크)]]></key>
+							<value><![CDATA[#FF007F]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[#000000(검은색)]]></key>
+							<value><![CDATA[#000000]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[#BDBDBD(회색)]]></key>
+							<value><![CDATA[#BDBDBD]]></value>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataList id="dlt_fontName" baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="key" name="name1" dataType="text"></w2:column>
+						<w2:column id="value" name="name2" dataType="text"></w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<key><![CDATA[Arial]]></key>
+							<value><![CDATA[Arial]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[Courier New]]></key>
+							<value><![CDATA[Courier New]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[Tahoma]]></key>
+							<value><![CDATA[Tahoma]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[돋움]]></key>
+							<value><![CDATA[돋움]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[궁서]]></key>
+							<value><![CDATA[궁서]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[맑은 고딕]]></key>
+							<value><![CDATA[맑은 고딕]]></value>
+						</w2:row>
+						<w2:row>
+							<key><![CDATA[새굴림]]></key>
+							<value><![CDATA[새굴림]]></value>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+				<w2:dataList id="dlt_freezePane" baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="freezePaneX" name="name1" dataType="text"></w2:column>
+						<w2:column id="freezePaneY" name="name2" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+			<xf:submission id="sbm_advancedExcel" ref="" target="data:json,dlt_advancedExcel" action="/ui/SP/JsonData/advancedExcel.json" method="get" mediatype="application/json" encoding="UTF-8"
+				instance="" replace="" errorHandler="" customHandler="" mode="asynchronous" processMsg="" ev:submit="" ev:submitdone="scwin.sbm_advancedExcel_submitdone" ev:submiterror="" abortTrigger="">
+			</xf:submission>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+	/**
+	 * 초기 스크립트 수행 함수 정의
+	 */
+	scwin.onpageload = function() {
+		$p.executeSubmission("sbm_advancedExcel");
+	
+		var json = {};
+		dma_optionsSetting.setJSON(json);
+		dma_infoArr.setJSON(json);
+	};
+	
+	scwin.onpageunload = function() {
+	
+	};
+	
+	/**
+	 * sbm_advancedExcel의 submitdone, 조회된 행의 총 갯수를 count한다. removeColumns에 삭제할 행의 이름을 넣는다.
+	 */
+	scwin.sbm_advancedExcel_submitdone = function(e) {
+		spn_excelDownloadCnt.setValue(dlt_advancedExcel.getRowCount());
+		var length = dlt_advancedExcel.getColumnIndex(dlt_advancedExcel.getTotalCol());
+		var arr = [];
+		for (var idx = 0; idx < length; idx++) {
+			arr.push({ "key" : dlt_advancedExcel.getColumnName(idx), "value" : idx });
+		}
+		ccb_removeColumns.setValue(ccb_removeColumns.getInfo(0));
+		ccb_foldColumns.setValue(ccb_foldColumns.getInfo(0));
+		dlt_getColumnId.setJSON(arr);
+	};
+	
+	/**
+	 * 그리드뷰의 데이터를 엑셀로 다운로드 한다. 필요한 옵션이 있다면 options, infoArr배열에 옵션을 넣는다.
+	 */
+	scwin.btn_downloadData_onclick = function() {
+		var options = dma_optionsSetting.getJSON();
+		var infoArr = dma_infoArr.getJSON();
+		var fileName = ibx_fileName.getValue();
+	
+		if (fileName == "") {
+			com.alert("fileName은 필수입력 입니다,");
+		} else {
+			// options Settings
+			options.fileName = fileName + "." + rad_excelType.getValue();
+			options.removeColumns = ccb_removeColumns.getValueArray();
+			options.foldColumns = ccb_foldColumns.getValueArray();
+			options.freezePane = ibx_freezePaneX.getValue() + "," + ibx_freezePaneY.getValue();
+			ibx_fileName.setValue(fileName);
+	
+			com.gridDataDownLoad(grd_advancedExcel, options, infoArr);
+		}
+	};
+	
+	/**
+	 * 변경된 설정코드를 textArea에 표기
+	 */
+	scwin.btn_settingCodeView_onclick = function() {
+		var modifyOptions = dma_optionsSetting.getModifiedKey(); // Options Key
+		var modifyInfoArr = dma_infoArr.getModifiedKey(); // InfoArr Key
+		var optionsValue = []; // Options Value
+		var infoArrValue = []; // InfoArr Value
+		var optionsArr = []; // options Key, Value
+		var infoArr = [] // infoArr Key, Value
+	
+		// insertColumns의 형태인 JSON Array를 만들기 위해 DataList에 데이터를 넣는다.
+		dlt_freezePane.insertJSON(0, [ { "freezePaneX" : ibx_freezePaneX.getValue(), "freezePaneY" : ibx_freezePaneY.getValue() } ]);
+	
+		// options의 값이 기존과 달라졌다면
+		if (modifyOptions != "") {
+			for (var idx = 0; idx < modifyOptions.length; idx++) {
+				if (modifyOptions[idx] == "fileName") {
+					optionsValue.push(ibx_fileName.getValue() + "." + rad_excelType.getValue());
+				} else if (modifyOptions[idx] == "removeColumns") {
+					optionsValue.push(ccb_removeColumns.getValueArray());
+				} else if (modifyOptions[idx] == "foldColumns") {
+					optionsValue.push(ccb_foldColumns.getValueArray());
+				} else {
+					optionsValue.push(dma_optionsSetting.get(modifyOptions[idx]));
+				}
+			}
+	
+			for (var idx = 0; idx < modifyOptions.length; idx++) {
+				if (modifyOptions[idx] == "freezePaneX" || modifyOptions[idx] == "freezePaneY") {
+					continue;
+				} else {
+					optionsArr.push("\n\t" + modifyOptions[idx] + " : " + '"' + optionsValue[idx] + '"');
+				}
+			}
+	
+			// 달라진 배열에 freezePaneX, freezePaneY가 없으면 배열에 추가
+			if (modifyOptions.indexOf("freezePaneX") != -1 && modifyOptions.indexOf("freezePaneY") != -1) {
+				optionsArr.push("\n\t" + "freezePane" + " : " + "\"" + JSON.stringify(WebSquare.util.getNumber(dlt_freezePane.getRowJSON(0).freezePaneX)) + ", "
+						+ JSON.stringify(WebSquare.util.getNumber(dlt_freezePane.getRowJSON(0).freezePaneY)) + "\"");
+			}
+		}
+	
+		// infoArr의 값이 기존과 달라졌다면
+		if (modifyInfoArr != "") {
+			for (var idx = 0; idx < modifyInfoArr.length; idx++) {
+				infoArrValue.push(dma_infoArr.get(modifyInfoArr[idx]));
+			}
+			for (var idx = 0; idx < modifyInfoArr.length; idx++) {
+				infoArr.push("\n\t" + modifyInfoArr[idx] + " : " + '"' + infoArrValue[idx] + '"');
+			}
+		}
+	
+		// textArea(Copy the code) setting
+		txa_copyTheCode.setValue("var options = {" + optionsArr + "\n};" + "\n\n" + "var infoArr = {" + infoArr + "\n};");
+	};
+	
+	/**
+	 * 설명탭, 테스트 방법탭의 textBox 또는 설정탭의 tableLayout 컴포넌트가 보여지거나 감춰진다.
+	 */
+	scwin.btn_ExcelDownloadButtons_onclick = function() {
+		var id = this.getID().split("_")[1];
+		var btn_component = WebSquare.util.getComponentById("btn_" + id);
+		var tbx_component = WebSquare.util.getComponentById("tbx_" + id);
+		var grp_component = WebSquare.util.getComponentById("grp_Parent" + id);
+	
+		if (btn_component.getValue() == "닫기") {
+			btn_component.setValue("열기");
+			if (id == "ExcelDownloadSetting") {
+				grp_component.hide();
+			} else {
+				tbx_component.hide();
+			}
+		} else if (btn_component.getValue() == "열기") {
+			btn_component.setValue("닫기");
+			if (id == "ExcelDownloadSetting") {
+				grp_component.show("");
+			} else {
+				tbx_component.show("");
+			}
+		}
+	};
+	
+	/**
+	 * 모든 CheckComboBox 컴포넌트 우측에 있는 버튼이 클릭됐을 경우, 콤보박스를 초기화 한다.
+	 */
+	scwin.btn_ResetCheckComboBox_onclick = function() {
+		var id = this.getID().split("_Reset")[1];
+		var ccbId = "ccb_" + id;
+		var componentCcbId = WebSquare.util.getComponentById(ccbId);
+	
+		componentCcbId.setValue(-1);
+	};
+	
+	/**
+	 * 설정코드를 초기화 한다.
+	 */
+	scwin.btn_settingCodeReset_onclick = function() {
+		dma_optionsSetting.undo();
+		dma_infoArr.undo();
+		txa_copyTheCode.setValue("");
+	};
+	
+	/**
+	 * textArea에 표시된 설정코드를 전체선택 한다.
+	 */
+	scwin.btn_copytheCode_onclick = function() {
+		document.getElementById("txa_copyTheCode").select();
+		document.execCommand('copy');
+	};
+	
+	/**
+	 * subTotalScale의 값이 변경 되었을 경우, 앞에 -를 붙인다.
+	 */
+	scwin.ibx_subTotalScale_onviewchange = function(info) {
+		if (info.newValue.indexOf("-") == -1) {
+			this.setValue("-" + info.newValue);
+		}
+	};
+]]></script>
+
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="contentWrap" id="" style="">
+			<w2:wframe id="" style="" src="/cm/common/wf_titleFav.xml"></w2:wframe><w2:wframe id="" src="/cm/common/wf_titleDesc.xml"></w2:wframe><xf:group id="" style="" class="section"><xf:group id="" style="" class="defaultbox">
+
+				<w2:anchor id="btn_downloadData" style="margin-right: 5px;float: right;" clickEventElement="outerDiv" ev:onclick="scwin.btn_downloadData_onclick" class="btn_gcm" outerDiv="true" toolTip="그리드의 데이터를 엑셀로 다운로드 한다.">
+					<xf:label><![CDATA[다운로드]]></xf:label>
+				</w2:anchor>
+
+				<w2:anchor id="btn_settingCodeView" style="margin-right: 5px;float: right;" clickEventElement="outerDiv" ev:onclick="scwin.btn_settingCodeView_onclick" class="btn_gcm" outerDiv="true" toolTip="설정 코드 값을 텍스트로 표현한다.">
+					<xf:label><![CDATA[설정코드 보기]]></xf:label>
+				</w2:anchor>
+				<w2:anchor id="btn_settingCodeReset" style="float: right;margin-right: 5px;" clickEventElement="outerDiv" ev:onclick="scwin.btn_settingCodeReset_onclick" class="btn_gcm" outerDiv="true" toolTip="설정코드(options, infoArr) 값을 초기화 한다. ">
+					<xf:label><![CDATA[설정코드 초기화]]></xf:label>
+				</w2:anchor>
+				<xf:group id="" style="height:22px;" class="fr">
+					<w2:span id="spn_excelDownloadCnt" style="" class="df_total" label="" displayFormat="건"></w2:span>
+					<xf:group id="" style="" class="ml5 fr"></xf:group>
+				</xf:group>
+			</xf:group><w2:gridView autoFit="allColumn" class="cm_grid" dataList="dlt_advancedExcel" ev:onafteredit="" ev:onrowindexchange="" fixedColumnWithHidden="true" id="grd_advancedExcel" ignoreCellClick="false" rowStatusHeaderValue="상태" rowStatusVisible="false" scrollByColumn="false" sortEvent="ondblclick" sortable="true" style="height:200px;" useShiftKey="true" visibleRowNum="" rowNumVisible="true" rowNumHeaderValue="순서" columnMove="true" contextMenu="true">
+				<w2:header id="header1" style="">
+					<w2:row id="row2" style="">
+						<w2:column blockSelect="false" displayMode="label" id="column11" inputType="text" style="height:25px;" value="메뉴코드" width="50"></w2:column><w2:column blockSelect="false" displayMode="label" id="column9" inputType="text" style="height:25px;" value="메뉴명" width="40"></w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="column7" inputType="text" style="height:25px;" value="부모메뉴명" width="50"></w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="column3" inputType="text" style="height:25px;" value="메뉴레벨" width="50"></w2:column>
+						<w2:column blockSelect="false" id="column12" inputType="text" style="" value="경로" width="50" imageSrc=""></w2:column>
+						<w2:column blockSelect="false" id="column15" style="height:25px" inputType="text" width="70" displayMode="label" value="사용여부"></w2:column>
+					</w2:row>
+				</w2:header>
+				<w2:gBody id="gBody4" style="">
+					<w2:row id="row5" style="">
+						<w2:column blockSelect="false" displayMode="label" id="MENU_CD" inputType="text" style="height:25px;" width="50" textAlign="left"></w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="MENU_NM" inputType="text" readOnly="" style="height:25px;" width="40" textAlign="left"></w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="PARENT_MENU_NM" inputType="text" style="height:25px;" textAlign="left" width="50"></w2:column>
+						<w2:column blockSelect="false" defaultValue="" displayMode="" falseValue="N" id="MENU_LEVEL" inputType="text" style="height:25px;" trueValue="Y" value="" valueType="other" width="50" textAlign="left">
+						</w2:column>
+						<w2:column blockSelect="false" id="SRC_PATH" inputType="text" style="" width="50" textAlign="left"></w2:column>
+						<w2:column blockSelect="false" id="IS_USE" style="height:25px" inputType="text" width="70" displayMode="label" textAlign="left"></w2:column>
+					</w2:row>
+				</w2:gBody>
+			</w2:gridView></xf:group>
+		<xf:group id="" style="" class="section"><xf:group id="" style="overflow: hidden;" class="defaultbox">
+				<w2:anchor id="btn_copytheCode" style="float: right;" clickEventElement="outerDiv" ev:onclick="scwin.btn_copytheCode_onclick" class="btn_gcm" outerDiv="true" toolTip="코드 텍스트를 선택한다. ">
+					<xf:label><![CDATA[복사]]></xf:label>
+				</w2:anchor>
+				<w2:textbox id="" style="height: 23px;text-align: right;font-size:14pt;color:#3CD2AA;margin-bottom: 10px;width: 50%;" label="Copy the code"></w2:textbox>
+				<xf:textarea id="txa_copyTheCode" readOnly="true" style="height: 200px;width:99.7%;"></xf:textarea>
+			</xf:group></xf:group><xf:group id="grp_excelDownloadSetting" style="">
+				<xf:group id="" style="" class="section"><xf:group id="" style="" class="tbl_search">
+					<xf:group id="" style="" adaptive="layout" class="w2tb tbl_sc" adaptiveThreshold="768" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:80px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+							<xf:group style="width:80px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+							<xf:group style="width:180px;" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="" class="w2tb_th" tagname="th">설정</xf:group>
+							<xf:group style="width: 100%;" class="w2tb_td" tagname="td">
+								<w2:anchor id="btn_excelDownloadSetting" style="float: right;margin-right: 10px;" clickEventElement="outerDiv" ev:onclick="scwin.btn_ExcelDownloadButtons_onclick" class="btn_gcm" outerDiv="true">
+									<xf:label><![CDATA[닫기]]></xf:label>
+								</w2:anchor>
+							</xf:group>
+						</xf:group>
+					</xf:group>
+				</xf:group><w2:textbox id="1" style="" class="pl20" label=""></w2:textbox></xf:group><xf:group id="grp_parentExcelDownloadSetting" style="">
+					<xf:group id="" style="" class="section"><xf:group id="tbl_optionsSetting" style="width : 100%;" adaptive="layout" class="w2tb" adaptiveThreshold="800" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:175.00px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+							<xf:group style="width:175.00px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group class="w2tb_th" tagname="th">
+								options(&amp;nbsp;Format&amp;nbsp;)
+								<w2:attributes>
+									<w2:colspan>4</w2:colspan>
+									<w2:rowspan>1</w2:rowspan>
+								</w2:attributes>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align: left;" toolTip="[defalut: excel.xls] 다운로드하려는 파일의 이름으로 필수 입력 값이다." class="w2tb_th" tagname="th">*fileName</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:group id="" style="width: 88%;">
+									<xf:input id="ibx_fileName" ref="data:dma_optionsSetting.fileName" title="" style="width:48%;height: 21px;" displayFormatter=""></xf:input>
+									<xf:select1 id="rad_excelType" ref="" selectedIndex="0" cols="" appearance="full" style="width: 20%" rows="1">
+										<xf:choices>
+											<xf:item>
+												<xf:label><![CDATA[xlsx]]></xf:label>
+												<xf:value><![CDATA[xlsx]]></xf:value>
+											</xf:item>
+											<xf:item>
+												<xf:label><![CDATA[xls]]></xf:label>
+												<xf:value><![CDATA[xls]]></xf:value>
+											</xf:item>
+										</xf:choices>
+									</xf:select1>
+								</xf:group>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: true] 대용량 다운로드 여부 (default는 true 이 옵션을 true로 하고 showConfirm을 false로 한 경우에 IE에서 신뢰할만한 사이트를 체크하는 옵션이 뜬다.)" class="w2tb_th" tagname="th">
+								massStorage
+							</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="" ref="data:dma_optionsSetting.massStorage" selectedIndex="0" cols="2" appearance="full" style="width:100%;height: 21px;" rows="">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_trueFalse">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: sheet] excel의 sheet의 이름" class="w2tb_th" tagname="th">sheetName</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="" ref="data:dma_optionsSetting.sheetName" style="height: 21px;width:96%;" placeholder="sheet" initValue=""></xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: false] 다운로드 확인창을 띄울지 여부(옵션을 킨 경우 advancedExcelDownload를 호출후 사용자가 window의 버튼을 한번더 클릭해야 한다. massStorage는 자동으로 true가 된다)" class="w2tb_th" tagname="th">
+								showConfirm
+							</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="" ref="data:dma_optionsSetting.showConfirm" cols="2" selectedIndex="1" appearance="full" style="width:100%;height: 21px;" rows="">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_trueFalse">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: 0] type이 0인 경우 실제 데이터 1인 경우 눈에 보이는 데이터를  2이면 들어가 있는 data 그대로(filter무시 expression 타입의 셀은 나오지 않음)" class="w2tb_th" tagname="th">
+								type
+							</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" displayMode="label" selectedData="true" optionOrder="false" id="" ref="data:dma_optionsSetting.type" emptyItem="true" style="width:97%;height: 21px;" emptyValue="0" allOption="" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[0]]></xf:label>
+											<xf:value><![CDATA[0]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[1]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[2]]></xf:label>
+											<xf:value><![CDATA[2]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: 없음] 대량데이터 처리 및 사용자 데이터를 가공할 수 있는 Provider Package" class="w2tb_th" tagname="th">dataProvider</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="" ref="data:dma_optionsSetting.dataProvider" readOnly="" style="height: 21px;width:96%;"></xf:input>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: 없음]	다운로드시 excel에서 삭제하려는 열의 번호(여러 개일 경우 ,로 구분)" class="w2tb_th" tagname="th">removeColumns</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:checkcombobox id="ccb_removeColumns" ref="data:dma_optionsSetting.removeColumns" appearance="minimal" style="width:40%;height: 21px;" chooseOptionLabel="" direction="auto" chooseOption="" checkboxClickSync="" displayMode="" allOption="" submenuSize="auto" disabled="false">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_getColumnId">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:checkcombobox>
+								<w2:anchor id="btn_resetRemoveColumns" style="" clickEventElement="outerDiv" ev:onclick="scwin.btn_ResetCheckComboBox_onclick" class="btn_gcm" outerDiv="true">
+									<xf:label><![CDATA[초기화]]></xf:label>
+								</w2:anchor>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: 없음] Provider 내부에서 사용할 XML 문자열" class="w2tb_th" tagname="th">providerRequestXml</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="" ref="data:dma_optionsSetting.providerRequestXml" style="height: 21px;width:96%;"></xf:input>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: 없음]	다운로드시 excel에서 삭제하려는 Header의 row index(여러 개일 경우 ,로 구분)" class="w2tb_th" tagname="th">removeHeaderRows</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="" ref="data:dma_optionsSetting.removeHeaderRows" style="height: 21px;width:96%;"></xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: 없음] 사용자가 서버모듈 개발 시 필요한 데이터를 전송 할 수 있는 변수" class="w2tb_th" tagname="th">userDataXml</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="" ref="data:dma_optionsSetting.userDataXml" style="height: 21px;width:96%;"></xf:input>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: 없음] 다운로드시 excel에서 fold하려는 열의 번호(여러 개일 경우 ,로 구분)" class="w2tb_th" tagname="th">foldColumns</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:checkcombobox id="ccb_foldColumns" ref="data:dma_optionsSetting.foldColumns" appearance="minimal" style="width:40%;height: 21px;" chooseOptionLabel="" direction="auto" chooseOption="" checkboxClickSync="" allOption="" displayMode="label" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_getColumnId">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:checkcombobox>
+								<w2:anchor id="btn_resetFoldColumns" style="" clickEventElement="outerDiv" ev:onclick="scwin.btn_ResetCheckComboBox_onclick" class="btn_gcm" outerDiv="true">
+									<xf:label><![CDATA[초기화]]></xf:label>
+								</w2:anchor>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: false] 다운로드시 바디의 줄 바꿈 기능" class="w2tb_th" tagname="th">bodyWordwrap</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="" ref="data:dma_optionsSetting.bodyWordwrap" cols="2" selectedIndex="1" appearance="full" style="width:100%;height: 21px;" rows="">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_trueFalse">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: 0] excel파일에서 그리드의 데이터가 시작되는 행의 번호(헤더 포함)" class="w2tb_th" tagname="th">startRowIndex</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="ibx_startRowIndex" applyFormat="" ref="data:dma_optionsSetting.startRowIndex" style="height: 21px;width:96%;" placeholder="" initValue="0" displayFormat="">
+								</xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: false] 다운로드시 유로화 처리 기능(,와 .이 반대인 경우처리)" class="w2tb_th" tagname="th">useEuroLocale</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="" ref="data:dma_optionsSetting.useEuroLocale" cols="2" selectedIndex="1" appearance="full" style="width:100%;height: 21px;" rows="">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_trueFalse">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: 0] excel파일에서 그리드의 데이터가 시작되는 열의 번호(헤더 포함)" class="w2tb_th" tagname="th">startColumnIndex</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="ibx_startColumnIndex" applyFormat="" ref="data:dma_optionsSetting.startColumnIndex" style="height: 21px;width:96%;" placeholder="" initValue="0" displayFormat="">
+								</xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip='[defalut: true] 다운로드시 Header를 출력 할지 여부( "true"인경우 출력, "false"인경우 미출력)' class="w2tb_th" tagname="th">useHeader</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="" ref="data:dma_optionsSetting.useHeader" cols="2" selectedIndex="0" appearance="full" style="width:100%;height: 21px;" rows="">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_trueFalse">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: false] 순서출력 유무" class="w2tb_th" tagname="th">rowNumVisible</xf:group>
+							<xf:group class="w2tb_td" tagname="td">
+								<xf:select1 id="" ref="data:dma_optionsSetting.rowNumVisible" selectedIndex="1" cols="2" appearance="full" style="width:100%;height: 21px;" rows="">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_trueFalse">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip='[defalut: false] 다운로드시 SubTotal을 출력 할지 여부( "true"인경우 출력, "false"인경우 미출력), expression을 지정한 경우 avg,sum,min,max,targetColValue,숫자를 지원 함.' class="w2tb_th" tagname="th">
+								useSubTotal
+							</xf:group>
+							<xf:group class="w2tb_td" tagname="td">
+								<xf:select1 id="" ref="data:dma_optionsSetting.useSubTotal" cols="2" selectedIndex="1" appearance="full" style="width:100%;height: 21px;" rows="">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_trueFalse">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: true] 다운로드 시 프로세스 창을 보여줄지 여부" class="w2tb_th" tagname="th">showProcess</xf:group>
+							<xf:group class="w2tb_td" tagname="td">
+								<xf:select1 id="" ref="data:dma_optionsSetting.showProcess" selectedIndex="0" cols="2" appearance="full" style="width:100%;height: 21px;" rows="">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_trueFalse">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip='[defalut: true] 다운로드시 Footer를 출력 할지 여부( "true"인경우 출력, "false"인경우 미출력)' class="w2tb_th" tagname="th">useFooter</xf:group>
+							<xf:group class="w2tb_td" tagname="td">
+								<xf:select1 id="" ref="data:dma_optionsSetting.useFooter" cols="2" selectedIndex="0" appearance="full" style="width:100%;height: 21px;" rows="">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_trueFalse">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+					<xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: ,] 다운로드시 서버로 데이터 전송할때, 데이터를 구분짓는 구분자, default는 comma(,)" class="w2tb_th" tagname="th">separator</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<xf:input id="" ref="data:dma_optionsSetting.separator" style="height: 21px;width:96%;" placeholder="," initValue=""></xf:input>
+						</xf:group>
+						<xf:group style="text-align:left;" toolTip='[defalut: false] 그리드 컬럼이동시 이동된 상태로 다운로드 유무 ( "true"인경우 컬럼이동 순서대로 출력 )' class="w2tb_th" tagname="th">columnMove</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<xf:select1 id="" ref="data:dma_optionsSetting.columnMove" selectedIndex="1" cols="2" appearance="full" style="width:100%;height: 21px;" rows="">
+								<xf:choices>
+									<xf:itemset nodeset="data:dlt_trueFalse">
+										<xf:label ref="key"></xf:label>
+										<xf:value ref="value"></xf:value>
+									</xf:itemset>
+								</xf:choices>
+							</xf:select1>
+						</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: -1] 다운로드시 subTotal 평균계산시 소수점 자리수를 지정" class="w2tb_th" tagname="th">subTotalScale</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:input id="ibx_subTotalScale" ref="data:dma_optionsSetting.subTotalScale" applyFormat="" style="height: 21px;width:96%;" placeholder="" initValue="-1" displayFormat="" ev:onviewchange="scwin.ibx_subTotalScale_onviewchange" displayFormatter=""></xf:input>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip='[defalut: 없음] 엑셀 다운로드시 다운로드되는 컬럼 순서를 지정 할 수 있는 속성 ( ex) "0,3,2,1"로 지정시 지정한 순서로 다운로드된다 )' class="w2tb_th" tagname="th">columnOrder</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:input id="" ref="data:dma_optionsSetting.columnOrder" style="height: 21px;width:96%;"></xf:input>
+	</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip='[defalut: 없음] 다운로드시 subTotal 평균계산시 Round를 지정 한다. ("CEILING","FLOOR","HALF_UP")' class="w2tb_th" tagname="th">subTotalRoundingMode</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.subTotalRoundingMode" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" submenuSize="auto" disabled="false">
+			<xf:choices>
+				<xf:item>
+					<xf:label><![CDATA[CEILING]]></xf:label>
+					<xf:value><![CDATA[CEILING]]></xf:value>
+				</xf:item>
+				<xf:item>
+					<xf:label><![CDATA[FLOOR]]></xf:label>
+					<xf:value><![CDATA[FLOOR]]></xf:value>
+				</xf:item>
+				<xf:item>
+					<xf:label><![CDATA[HALF_UP]]></xf:label>
+					<xf:value><![CDATA[HALF_UP]]></xf:value>
+				</xf:item>
+			</xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip="[defalut: false] 엑셀 프린터 출력시 쪽맞춤 사용 유무" class="w2tb_th" tagname="th">fitToPage</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 id="" ref="data:dma_optionsSetting.fitToPage" selectedIndex="1" cols="2" appearance="full" style="width:100%;height: 21px;" rows="">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_trueFalse">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: false] 다운로드시 css를 제외한, style을 excel에도 적용할 지 여부 (배경색,폰트)" class="w2tb_th" tagname="th">useStyle</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 id="" ref="data:dma_optionsSetting.useStyle" selectedIndex="1" cols="2" appearance="full" style="width:100%;height: 21px;" rows="">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_trueFalse">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip="[defalut: false] 엑셀 프린터 출력시 가로 방향 출력 유무" class="w2tb_th" tagname="th">landScape</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 id="" ref="data:dma_optionsSetting.landScape" selectedIndex="1" cols="2" appearance="full" style="width:100%;height: 21px;" rows="">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_trueFalse">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip='[defalut: ""] 틀고정을 위한 좌표값 및 좌표값의 오픈셋 ( ex) freezePane="3,4" X축 3, Y축 4에서 틀고정, freezePane="0,1,0,5" X축 0, Y축 1에서 X축으로 0, Y축으로 5로 틀공정  )' class="w2tb_th" tagname="th">freezePane</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:group id="" style="height:30px;">
+			<xf:input id="ibx_freezePaneX" ref="data:dma_optionsSetting.freezePaneX" style="height: 21px;width:96%;" placeholder="FreezePaneX" initValue=""></xf:input>
+		</xf:group>
+		<xf:group id="" style="height:30px;">
+			<xf:input id="ibx_freezePaneY" ref="data:dma_optionsSetting.freezePaneY" style="height: 21px;width:96%;" placeholder="FreezePaneY" initValue=""></xf:input>
+		</xf:group>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip="[defalut: 1] 엑셀 프린터 출력시 용지너비" class="w2tb_th" tagname="th">fitWidth</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:input id="ibx_fitWidth" ref="data:dma_optionsSetting.fitWidth" applyFormat="" style="height: 21px;width:96%;" placeholder="" initValue="1" displayFormat=""></xf:input>
+	</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: false] 너비자동맞춤 설정 유무" class="w2tb_th" tagname="th">autoSizeColumn</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 id="" ref="data:dma_optionsSetting.autoSizeColumn" selectedIndex="0" cols="2" appearance="full" style="width:100%;height: 21px;" rows="">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_trueFalse">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip="[defalut: 1] 엑셀 프린터 출력시 용지높이" class="w2tb_th" tagname="th">fitHeight</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:input id="ibx_fitHeight" ref="data:dma_optionsSetting.fitHeight" applyFormat="" style="height: 21px;width:96%;" placeholder="" initValue="1" displayFormat=""></xf:input>
+	</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: false] 엑셀 전체 셀의 눈금선 제거 유무" class="w2tb_th" tagname="th">displayGridlines</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 id="" ref="data:dma_optionsSetting.displayGridlines" selectedIndex="1" cols="2" appearance="full" style="width:100%;height: 21px;" rows="">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_trueFalse">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip="[defalut: 100] 엑셀 프린터 출력시 확대/축소 배율, scale을 사용할 경우 fitToPage는 false로 설정 해야 한다." class="w2tb_th" tagname="th">scale</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:input id="ibx_scale" ref="data:dma_optionsSetting.scale" applyFormat="" style="height: 21px;width:96%;" placeholder="" initValue="100" displayFormat=""></xf:input>
+	</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: false] colMerge된 컬럼을 Merge해서 출력 할 지 여부" class="w2tb_th" tagname="th">colMerge</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 id="rad_colMerge" ref="data:dma_optionsSetting.colMerge" selectedIndex="1" cols="2" appearance="full" style="width:100%;height: 21px;" rows="">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_trueFalse">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip='[defalut: A4] 엑셀 프린터 출력시 인쇄용지 설정 ( ex) "A3", "A4", "A5", "B4" )' class="w2tb_th" tagname="th">pageSize</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.pageSize" style="width:97%;height: 21px;" emptyItem="true" emptyValue="A4" allOption="" submenuSize="auto" disabled="false">
+			<xf:choices>
+				<xf:item>
+					<xf:label><![CDATA[A3]]></xf:label>
+					<xf:value><![CDATA[A3]]></xf:value>
+				</xf:item>
+				<xf:item>
+					<xf:label><![CDATA[A4]]></xf:label>
+					<xf:value><![CDATA[A4]]></xf:value>
+				</xf:item>
+				<xf:item>
+					<xf:label><![CDATA[A5]]></xf:label>
+					<xf:value><![CDATA[A5]]></xf:value>
+				</xf:item>
+				<xf:item>
+					<xf:label><![CDATA[B4]]></xf:label>
+					<xf:value><![CDATA[B4]]></xf:value>
+				</xf:item>
+			</xf:choices>
+		</xf:select1>
+	</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: false] 그리드 dataType이 text인 경우, 엑셀의 표시형식 '텍스트' 출력 유무( &quot;true&quot;인 경우 표시형식 텍스트, &quot;false&quot;인 경우 표시형식 일반 출력)" class="w2tb_th" tagname="th">useDataFormat</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 id="" ref="data:dma_optionsSetting.useDataFormat" selectedIndex="1" cols="2" appearance="full" style="width:100%;height: 21px;" rows="">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_trueFalse">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip='[defalut: true] 다운로드시 Footer를 출력 할지 여부( "true"인경우 출력, "false"인경우 미출력)' class="w2tb_th" tagname="th"></xf:group><xf:group class="w2tb_td" tagname="td"></xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: 없음] 그리드 dataType이 drilldown인 경우, indent 표시를 위한 공백 삽입 개수, default값은 0" class="w2tb_th" tagname="th">indent</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:input id="ibx_indent" ref="data:dma_optionsSetting.indent" applyFormat="" style="height: 21px;width:96%;" placeholder="" initValue="0" displayFormat=""></xf:input>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip='[defalut: true] 다운로드시 Footer를 출력 할지 여부( "true"인경우 출력, "false"인경우 미출력)' class="w2tb_th" tagname="th"></xf:group><xf:group class="w2tb_td" tagname="td"></xf:group></xf:group></xf:group></xf:group>
+					<xf:group id="" style="" class="section"><xf:group id="tbl_optionsStyle" style="width:100%;" adaptive="layout" class="w2tb" adaptiveThreshold="800" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:175.00px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+							<xf:group style="width:175.00px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group class="w2tb_th" tagname="th">options(&amp;nbsp;Style&amp;nbsp;)<w2:attributes>
+									<w2:colspan>4</w2:colspan>
+									<w2:rowspan>1</w2:rowspan>
+								</w2:attributes></xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: #33CCCC] excel파일에서 그리드의 header부분의 색" class="w2tb_th" tagname="th">headerColor</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.headerColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_selectColor">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: 없음] excel파일에서 그리드의 subtotal부분의 font name" class="w2tb_th" tagname="th">subTotalFontName</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.subTotalFontName" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_fontName">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: 없음] excel파일에서 그리드의 header부분의 font name" class="w2tb_th" tagname="th">headerFontName</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.headerFontName" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_fontName">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: 10] excel파일에서 그리드의 subtotal부분의 font size" class="w2tb_th" tagname="th">subTotalFontSize</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="ibx_subTotalFontSize" applyFormat="" ref="data:dma_optionsSetting.subTotalFontSize" style="height: 21px;width:96%;" initValue="10" displayFormat="px"></xf:input>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: 10] excel파일에서 그리드의 header부분의 font size" class="w2tb_th" tagname="th">headerFontSize</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="ibx_headerFontSize" applyFormat="" ref="data:dma_optionsSetting.headerFontSize" style="height: 21px;width:96%;" initValue="10" displayFormat="px"></xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: 없음] excel파일에서 그리드의 subtotal부분의 font색" class="w2tb_th" tagname="th">subTotalFontColor</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.subTotalFontColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_selectColor">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: 없음] excel파일에서 그리드의 header부분의 font색" class="w2tb_th" tagname="th">headerFontColor</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.headerFontColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_selectColor">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: #008000] excel파일에서 그리드의 footer부분의 색" class="w2tb_th" tagname="th">footerColor</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.footerColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_selectColor">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: #FFFFFF] excel파일에서 그리드의 body부분의 색" class="w2tb_th" tagname="th">bodyColor</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.bodyColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_selectColor">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: 없음] excel파일에서 그리드의 footer부분의 font name" class="w2tb_th" tagname="th">footerFontName</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.footerFontName" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_fontName">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: 없음] excel파일에서 그리드의 body부분의 font name" class="w2tb_th" tagname="th">bodyFontName</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.bodyFontName" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_fontName">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: 10] excel파일에서 그리드의 footer부분의 font size" class="w2tb_th" tagname="th">footerFontSize</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="ibx_footerFontSize" applyFormat="" ref="data:dma_optionsSetting.footerFontSize" style="height: 21px;width:96%;" initValue="10" displayFormat="px"></xf:input>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: 10] excel파일에서 그리드의 body부분의 font size" class="w2tb_th" tagname="th">bodyFontSize</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="ibx_bodyFontSize" applyFormat="" ref="data:dma_optionsSetting.bodyFontSize" style="height: 21px;width:96%;" initValue="10" displayFormat="px"></xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: 없음] excel파일에서 그리드의 footer부분의 font색" class="w2tb_th" tagname="th">footerFontColor</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.footerFontColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_selectColor">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: 없음] excel파일에서 그리드의 body부분의 font색" class="w2tb_th" tagname="th">bodyFontColor</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.bodyFontColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_selectColor">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: 없음] excel파일에서 그리드 body의 홀수줄의 배경색" class="w2tb_th" tagname="th">oddRowBackgroundColor</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.oddRowBackgroundColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_selectColor">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: #CCFFCC] excel파일에서 그리드의 subtotal부분의 색" class="w2tb_th" tagname="th">subTotalColor</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.subTotalColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_selectColor">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: 없음] excel파일에서 그리드 body의 짝수줄의 배경색" class="w2tb_th" tagname="th">evenRowBackgroundColor</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.evenRowBackgroundColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_selectColor">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+					<xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 header 영역의 배경색" class="w2tb_th" tagname="th">rowNumHeaderColor</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.rowNumHeaderColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" submenuSize="auto" disabled="false">
+								<xf:choices>
+									<xf:itemset nodeset="data:dlt_selectColor">
+										<xf:label ref="key"></xf:label>
+										<xf:value ref="value"></xf:value>
+									</xf:itemset>
+								</xf:choices>
+							</xf:select1>
+						</xf:group>
+						<xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 Footer 영역의 폰트이름" class="w2tb_th" tagname="th">rowNumFooterFontName</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.rowNumFooterFontName" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" submenuSize="auto" disabled="false">
+								<xf:choices>
+									<xf:itemset nodeset="data:dlt_fontName">
+										<xf:label ref="key"></xf:label>
+										<xf:value ref="value"></xf:value>
+									</xf:itemset>
+								</xf:choices>
+							</xf:select1>
+						</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 header 영역의 폰트이름" class="w2tb_th" tagname="th">rowNumHeaderFontName</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.rowNumHeaderFontName" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" submenuSize="auto" disabled="false">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_fontName">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 Footer 영역의 폰트크기" class="w2tb_th" tagname="th">rowNumFooterFontSize</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:input id="ibx_rowNumFooterFontSize" ref="data:dma_optionsSetting.rowNumFooterFontSize" applyFormat="" style="height: 21px;width:96%;" initValue="10" displayFormat="px"></xf:input>
+	</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 header 영역의 폰트크기" class="w2tb_th" tagname="th">rowNumHeaderFontSize</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:input id="ibx_rowNumHeaderFontSize" ref="data:dma_optionsSetting.rowNumHeaderFontSize" applyFormat="" style="height: 21px;width:96%;" initValue="10" displayFormat="px"></xf:input>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 Footer 영역의 폰트색상" class="w2tb_th" tagname="th">rowNumFooterFontColor</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.rowNumFooterFontColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" submenuSize="auto" disabled="false">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_selectColor">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 header 영역의 폰트색상" class="w2tb_th" tagname="th">rowNumHeaderFontColor</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.rowNumHeaderFontColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" submenuSize="auto" disabled="false">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_selectColor">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 Subtotal 영역의 배경색" class="w2tb_th" tagname="th">rowNumSubTotalColor</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.rowNumSubTotalColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" submenuSize="auto" disabled="false">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_selectColor">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 Body 영역의 배경색" class="w2tb_th" tagname="th">rowNumBodyColor</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.rowNumBodyColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" submenuSize="auto" disabled="false">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_selectColor">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 Subtotal 영역의 폰트이름" class="w2tb_th" tagname="th">rowNumSubTotalFontName</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.rowNumSubTotalFontName" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" submenuSize="auto" disabled="false">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_fontName">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 Body 영역의 폰트이름" class="w2tb_th" tagname="th">rowNumBodyFontName</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.rowNumBodyFontName" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" submenuSize="auto" disabled="false">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_fontName">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 Subtotal 영역의 폰트크기" class="w2tb_th" tagname="th">rowNumSubTotalFontSize</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:input id="ibx_rowNumSubTotalFontSize" ref="data:dma_optionsSetting.rowNumSubTotalFontSize" applyFormat="" style="height: 21px;width:96%;" initValue="10" displayFormat="px"></xf:input>
+	</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 Body 영역의 폰트크기" class="w2tb_th" tagname="th">rowNumBodyFontSize</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:input id="ibx_rowNumBodyFontSize" ref="data:dma_optionsSetting.rowNumBodyFontSize" applyFormat="" style="height: 21px;width:96%;" initValue="10" displayFormat="px"></xf:input>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 Subtotal 영역의 폰트색상" class="w2tb_th" tagname="th">rowNumSubTotalFontColor</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.rowNumSubTotalFontColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" submenuSize="auto" disabled="false">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_selectColor">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 Body 영역의 폰트색상" class="w2tb_th" tagname="th">rowNumBodyFontColor</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.rowNumBodyFontColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" submenuSize="auto" disabled="false">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_selectColor">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 Header 영역의 출력값" class="w2tb_th" tagname="th">rowNumHeaderValue</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:input id="" ref="data:dma_optionsSetting.rowNumHeaderValue" style="height: 21px;width:96%;" initValue=""></xf:input>
+	</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="[defalut: 없음] rowNumVisible 속성이 true인 경우 순서출력 Footer 영역의 배경색" class="w2tb_th" tagname="th">rowNumFooterColor</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_optionsSetting.rowNumFooterColor" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" submenuSize="auto" disabled="false">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_selectColor">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip="[defalut: 없음] excel파일에서 그리드 body의 짝수줄의 배경색" class="w2tb_th" tagname="th"></xf:group><xf:group class="w2tb_td" tagname="td"></xf:group></xf:group></xf:group></xf:group><xf:group id="" style="" class="section"><xf:group id="tbl_infoArr" style="width:100%;" adaptive="layout" adaptiveThreshold="800" class="w2tb" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:175.00px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+							<xf:group style="width:175.00px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="" class="w2tb_th" tagname="th">infoArr(&amp;nbsp;추가&amp;nbsp;정보&amp;nbsp;)<w2:attributes>
+									<w2:colspan>4</w2:colspan>
+									<w2:rowspan>1</w2:rowspan>
+								</w2:attributes></xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="내용을 표시할 행번호" class="w2tb_th" tagname="th">rowIndex</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="" ref="data:dma_infoArr.rowIndex" dataType="number" style="height: 21px;width:96%;"></xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="표시할 내용" class="w2tb_th" tagname="th">text</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="" ref="data:dma_infoArr.text" dataType="" style="height: 21px;width:96%;"></xf:input>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="내용을 표시할 열번호" class="w2tb_th" tagname="th">colIndex</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="" ref="data:dma_infoArr.colIndex" dataType="number" style="height: 21px;width:96%;"></xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="표시할 내용의 정렬 방법 (left, center, right)" class="w2tb_th" tagname="th">textAlign</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" displayMode="label" selectedData="true" optionOrder="false" id="" ref="data:dma_infoArr.textAlign" emptyItem="true" style="width:97%;height: 21px;" emptyValue="left" allOption="" disabled="false" submenuSize="auto">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[left]]></xf:label>
+											<xf:value><![CDATA[left]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[center]]></xf:label>
+											<xf:value><![CDATA[center]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[right]]></xf:label>
+											<xf:value><![CDATA[right]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="병합할 행의 수" class="w2tb_th" tagname="th">rowSpan</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="" ref="data:dma_infoArr.rowSpan" dataType="number" style="height: 21px;width:96%;"></xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip='font size 설정 ( ex) "20px" )' class="w2tb_th" tagname="th">fontSize</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="ibx_fontSize" ref="data:dma_infoArr.fontSize" applyFormat="" style="height: 21px;width:96%;" initValue="5" displayFormat="px"></xf:input>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="병합할 열의 수" class="w2tb_th" tagname="th">colSpan</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="" ref="data:dma_infoArr.colSpan" dataType="number" style="height: 21px;width:96%;"></xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="font name 설정" class="w2tb_th" tagname="th">fontName</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_infoArr.fontName" style="width:97%;height: 21px;" emptyItem="true" emptyValue="" allOption="" submenuSize="auto" disabled="false">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_fontName">
+											<xf:label ref="key"></xf:label>
+											<xf:value ref="value"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+					<xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip='font color 설정 ( ex) "red" )' class="w2tb_th" tagname="th">color</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<xf:input id="" ref="data:dma_infoArr.color" dataType="" style="height: 21px;width:96%;"></xf:input>
+						</xf:group>
+						<xf:group style="text-align:left;" toolTip='cell의 배경 color 설정 ( ex) "red" )' class="w2tb_th" tagname="th">bgColor</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<xf:input id="" ref="data:dma_infoArr.bgColor" dataType="" style="height: 21px;width:96%;"></xf:input>
+						</xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip='font weight 설정 ( ex) "bold" )' class="w2tb_th" tagname="th">fontWeight</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption="" selectedData="true" displayMode="label" optionOrder="false" id="" ref="data:dma_infoArr.fontWeight" style="width:97%;height: 21px;" emptyItem="true" emptyValue="normal" allOption="" disabled="false" submenuSize="auto">
+			<xf:choices>
+				<xf:item>
+					<xf:label><![CDATA[normal]]></xf:label>
+					<xf:value><![CDATA[normal]]></xf:value>
+				</xf:item>
+				<xf:item>
+					<xf:label><![CDATA[bold]]></xf:label>
+					<xf:value><![CDATA[bold]]></xf:value>
+				</xf:item>
+				<xf:item>
+					<xf:label><![CDATA[bolder]]></xf:label>
+					<xf:value><![CDATA[bolder]]></xf:value>
+				</xf:item>
+				<xf:item>
+					<xf:label><![CDATA[lighter]]></xf:label>
+					<xf:value><![CDATA[lighter]]></xf:value>
+				</xf:item>
+			</xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip="font name 설정" class="w2tb_th" tagname="th"></xf:group><xf:group class="w2tb_td" tagname="td"></xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip="cell의 border 지정 ( ex) true )" class="w2tb_th" tagname="th">drawBorder</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 id="" ref="data:dma_infoArr.drawBorder" cols="2" selectedIndex="0" appearance="full" style="width:100%;height: 21px;" rows="">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_trueFalse">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip="font name 설정" class="w2tb_th" tagname="th"></xf:group><xf:group class="w2tb_td" tagname="td"></xf:group></xf:group><xf:group style="" tagname="tr"><xf:group style="text-align:left;" toolTip='cell의 줄 바꿈 기능 ( ex) "true" )' class="w2tb_th" tagname="th">wordWrap</xf:group>
+	<xf:group class="w2tb_td" tagname="td">
+		<xf:select1 id="" ref="data:dma_infoArr.wordWrap" cols="2" selectedIndex="0" appearance="full" style="width:100%;height: 21px;" rows="">
+			<xf:choices>
+				<xf:itemset nodeset="data:dlt_trueFalse">
+					<xf:label ref="key"></xf:label>
+					<xf:value ref="value"></xf:value>
+				</xf:itemset>
+			</xf:choices>
+		</xf:select1>
+	</xf:group>
+	<xf:group style="text-align:left;" toolTip="font name 설정" class="w2tb_th" tagname="th"></xf:group><xf:group class="w2tb_td" tagname="td"></xf:group></xf:group></xf:group></xf:group>
+				</xf:group>
+			</xf:group></xf:group>
+	</body>
+</html>

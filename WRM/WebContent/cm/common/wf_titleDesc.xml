@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:aliasDataMap id="sdm_fileDesc" scope="../dma_fileDesc" studio_src="/ui/HM/HM003M01.xml"/>
+			</w2:dataCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+	
+	/**
+	 * 화면 초기 로딩시 수행 스크립트
+	 */
+	scwin.onpageload = function() {
+		console.log("[/wf_titleDesc.xml] [onpageload()] ==> [TEST_01] [wf_titleDesc 로딩...@@@]");
+	};
+	
+	scwin.onpageunload = function() {
+	
+	};
+		
+	scwin.wfTitleDesc_btn_DescTitleBtn_onclick = function() {
+		var tmpType = this.getUserData("userData1");
+		switch(tmpType){
+			case "desc" :
+				wfTitleDesc_grp_excelBasicDescription.toggleClass( "act" );
+			break;
+			case "test" :
+				wfTitleDesc_grp_excelBasicTest.toggleClass( "act" );
+			break;
+			default :
+		};
+	};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+	<xf:group id="" style="" class="section"><xf:group id="wfTitleDesc_grp_excelBasicDescription" style="" class="titlelistbox mb5">
+			<xf:group id="" style="" class="titlelist_tit mb5">
+				<w2:anchor userData1="desc" style="" ev:onclick="scwin.wfTitleDesc_btn_DescTitleBtn_onclick" class="btn_titlelist" outerDiv="false">
+					<xf:label><![CDATA[화면 설명]]></xf:label>
+				</w2:anchor>
+			</xf:group>
+			<w2:textbox id="" ref="data:sdm_fileDesc.desc" class="contlistbox"></w2:textbox>
+		</xf:group><xf:group id="wfTitleDesc_grp_excelBasicTest" style="" class="titlelistbox mb5">
+			<xf:group id="" style="" class="titlelist_tit mb5">
+				<w2:anchor userData1="test" title="" style="" ev:onclick="scwin.wfTitleDesc_btn_DescTitleBtn_onclick" class="btn_titlelist" outerDiv="false">
+					<xf:label><![CDATA[테스트 방법]]></xf:label>
+				</w2:anchor>
+			</xf:group>
+			<w2:textbox ref="data:sdm_fileDesc.test" class="contlistbox"></w2:textbox>
+		</xf:group></xf:group></body>
+</html>

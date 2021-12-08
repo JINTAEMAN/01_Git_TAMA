@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataMap baseNode="map" id="dma_fileDesc">
+					<w2:keyInfo>
+						<w2:key id="desc" name="" dataType="text"></w2:key>
+						<w2:key id="test" name="" dataType="text"></w2:key>
+					</w2:keyInfo>
+					<w2:data use="true">
+						<desc><![CDATA[
+<pre class="textNor">
+<div class="etcbox">다양한 파일 형태(xlsx, xls, csv)의 데이터를 그리드뷰로 업로드하는 기능을 제공한다.
+시트 번호를 포함하여 10여 개의 옵션을 지정할 수 있다. 
+별도로 옵션 설정을 하지 않는 경우, 각 옵션의 기본값으로 업로드 된다.
+각 옵션 설명은 옵션명을 마우스 오버하면 툴팁으로 표현된다.
+</div> 
+</pre>
+						]]></desc>
+						<test><![CDATA[
+<pre class="textNor">
+<div class="etc_tit">과정</div>
+  1. 업로드할 파일을 준비한다. 파일 템플릿이 필요한 경우, 메뉴 > 샘플화면 > GridView > [엑셀,CSV업/다운] 화면을 참고한다.   
+  2. 설정으로 이동하여 options의 값을 입력한다.   
+  3. [설정코드 보기] 버튼을 클릭하여 현 엑셀 업로드에 설정된 옵션 정보를 확인한다. 
+  4. [업로드] 버튼을 클릭하여 업로드할 파일을 선택한다. 
+  5. 그리드뷰에 업로드된 데이터를 확인한다. 
+  6. [전체선택] 버튼을 클릭하여 설정된 옵션 정보를 선택한다. 
+  7. 선택된 설정 정보는 코드 복사(Ctrl+C)하여 활용한다.  
+  8. 필요에 따라 [지우기] 버튼을 활용하여 그리드뷰의 데이터를 지우고 1~7의 과정을 반복한다.	 
+<div class="etc_tit">결과</div>
+  ex) 코드  
+  var options = { sheetNo : "1", startRowIndex : "10" };
+</pre>
+						]]></test>
+						<!-- 
+						<desc><![CDATA[
+							<h2>엑셀 파일 업로드를 할 수 있는 방법이다.<br><font color='red'>해당 샘플에서는 옵션을 TableLayout에서 설정할 수 있다.</font><br>( page : excel_AdvancedUpload.xml )</h2>
+							<font color = 'red'>Tip : scwin.btn_uploadData_onclick 참조</font><br><br>
+							<h2>그리드 업로드</h2>
+							<li class='descLl'>각 옵션에 대한 설명은 TableLayout의 헤더셀에 마우스를 올리면 툴팁으로 나온다.</li>
+							<li class='descLl'>그리드의 지우기 버튼은 업로드 된 그리드의 데이터를 지운다.</li>
+						]]></desc>
+						<test><![CDATA[
+							1. 그리드의 Radio Button에서 원하는 형식의 파일 확장자를 선택한다.<br>
+							2. 설정탭의 TableLayout에서 원하는 옵션을 선택 및 기입한다.<br>
+							3. 그리드의 설정코드 보기 버튼을 클릭하면, 선택한 옵션이 Copy the code(textArea)에 나온다.<br>
+							4. 그리드의 업로드 버튼을 클릭한다. <font color = 'red'>( 현재 사용중인 옵션을 직접 넣고 싶다면 설정코드 보기 후, Copy the code의 전체선택 버튼을 클릭하고 Ctrl + C로 복사한다. )</font>
+						]]></test>
+						-->
+					</w2:data>
+				</w2:dataMap>
+				<w2:dataList id="dlt_advancedExcel" baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="MENU_CD" name="메뉴코드" dataType="text"></w2:column>
+						<w2:column id="MENU_NM" name="메뉴명" dataType="text"></w2:column>
+						<w2:column id="PARENT_MENU_NM" name="부모메뉴명" dataType="text"></w2:column>
+						<w2:column id="MENU_LEVEL" name="메뉴레벨" dataType="text"></w2:column>
+						<w2:column id="SRC_PATH" name="경로" dataType="text"></w2:column>
+						<w2:column id="IS_USE" name="사용여부" dataType="text"></w2:column>
+						<w2:column id="SORT_ORDER" name="순서" dataType="text"></w2:column>
+						<w2:column id="PARENT_MENU_CD" name="부모메뉴코드" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" id="dma_optionsSetting">
+					<w2:keyInfo>
+						<w2:key id="type" name="name1" dataType="text"></w2:key>
+						<w2:key id="sheetNo" name="name2" dataType="text"></w2:key>
+						<w2:key id="startRowIndex" name="name3" dataType="text"></w2:key>
+						<w2:key id="startColumnIndex" name="name4" dataType="text"></w2:key>
+						<w2:key id="endColumnIndex" name="name5" dataType="text"></w2:key>
+						<w2:key id="headerExist" name="name6" dataType="text"></w2:key>
+						<w2:key id="footerExist" name="name7" dataType="text"></w2:key>
+						<w2:key id="append" name="name8" dataType="text"></w2:key>
+						<w2:key id="hidden" name="name9" dataType="text"></w2:key>
+						<w2:key id="fillHidden" name="name10" dataType="text"></w2:key>
+						<w2:key id="skipSpace" name="name11" dataType="text"></w2:key>
+						<w2:key id="insertColumns" name="name12" dataType="text"></w2:key>
+						<w2:key id="popupUrl" name="name13" dataType="text"></w2:key>
+						<w2:key id="delim" name="name14" dataType="text"></w2:key>
+						<w2:key id="status" name="name15" dataType="text"></w2:key>
+						<w2:key id="pwd" name="name16" dataType="text"></w2:key>
+						<w2:key id="columnIndex" name="name17" dataType="text"></w2:key>
+						<w2:key id="columnValue" name="name18" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" id="dma_csvOptionSetting">
+					<w2:keyInfo>
+						<w2:key id="type" name="name1" dataType="text"></w2:key>
+						<w2:key id="header" name="name2" dataType="text"></w2:key>
+						<w2:key id="delim" name="name3" dataType="text"></w2:key>
+						<w2:key id="escapeChar" name="name4" dataType="text"></w2:key>
+						<w2:key id="startRowIndex" name="name5" dataType="text"></w2:key>
+						<w2:key id="append" name="name6" dataType="text"></w2:key>
+						<w2:key id="hidden" name="name7" dataType="text"></w2:key>
+						<w2:key id="fillHidden" name="name8" dataType="text"></w2:key>
+						<w2:key id="skipSpace" name="name9" dataType="text"></w2:key>
+						<w2:key id="expression" name="name10" dataType="text"></w2:key>
+						<w2:key id="popupUrl" name="name11" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList id="dlt_insertColumns" baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="columnIndex" name="name1" dataType="text"></w2:column>
+						<w2:column id="columnValue" name="name3" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+	/**
+	 * 초기 스크립트 수행 함수 정의
+	 */
+	scwin.onpageload = function() {
+		var json = {};
+		dma_optionsSetting.setJSON(json);
+		dma_csvOptionSetting.setJSON(json);
+	};
+	
+	scwin.onpageunload = function() {
+	
+	};
+	
+	/**
+	 * rad_excelType(엑셀타입을 고르는 라디오버튼)의 값이 변하면 옵션 설정의 테이블 레이아웃이 바뀐다.
+	 */
+	scwin.rad_excelType_onviewchange = function(info) {
+		dma_csvOptionSetting.undo();
+		dma_optionsSetting.undo();
+		txa_copyTheCode.setValue("");
+		if (info.value == "csv") {
+			tbl_xlsxOptionsSetting.hide();
+			tbl_csvOptionsSetting.show("");
+		} else {
+			tbl_csvOptionsSetting.hide();
+			tbl_xlsxOptionsSetting.show("");
+		}
+	};
+	
+	/**
+	 * 그리드의 데이터가 지워진다.
+	 */
+	scwin.btn_gridRemoveExcel_onclick = function() {
+		dlt_advancedExcel.removeAll();
+	};
+	
+	/**
+	 * 설명탭, 테스트 방법탭의 textBox 또는 설정탭의 tableLayout 컴포넌트가 보여지거나 감춰진다.
+	 */
+	scwin.btn_ExcelUploadButtons_onclick = function() {
+		var id = this.getID();
+		id = id.slice(id.lastIndexOf("_")+1);
+		var btn_component = $p.getComponentById("btn_" + id);
+		var tbx_component = $p.getComponentById("tbx_" + id);
+		var grp_component = $p.getComponentById("grp_Parent" + id);
+	
+		if (btn_component.getValue() == "닫기") {
+			btn_component.setValue("열기");
+			if (id == "ExcelUploadSetting") {
+				grp_component.hide();
+			} else {
+				tbx_component.hide();
+			}
+		} else if (btn_component.getValue() == "열기") {
+			btn_component.setValue("닫기");
+			if (id == "ExcelUploadSetting") {
+				grp_component.show("");
+			} else {
+				tbx_component.show("");
+			}
+		}
+	};
+	
+	/**
+	 * 변경된 설정코드를 textArea에 표기
+	 */
+	scwin.btn_settingCodeView_onclick = function() {
+		var xlsxOption = dma_optionsSetting.getModifiedKey(); // XLS, XLSX Key
+		var csvOption = dma_csvOptionSetting.getModifiedKey(); // CSV Key
+		var value = []; // Value
+		var nArr = []; // Key, Value
+	
+		// XLS, XLSX의 값이 기존과 달라졌다면
+		if (xlsxOption != "") {
+			// insertColumns의 형태인 JSON Array를 만들기 위해 DataList에 데이터를 넣는다.
+			dlt_insertColumns.insertJSON(0, [ { "columnIndex" : ibx_columnIndex.getValue(), "columnValue" : ibx_columnValue.getValue() } ]);
+	
+			// 기존 데이터와 현재 데이터의 값이 다른 Key의 Value값을 배열에 넣는다.
+			for (var idx = 0; idx < xlsxOption.length; idx++) {
+				value.push(dma_optionsSetting.get(xlsxOption[idx]));
+			}
+	
+			// 기존 데이터와 현재 데이터의 값이 다른 Key, Value값을 반복문을 수행하여 새로운 배열에 넣는다.
+			for (var idx = 0; idx < xlsxOption.length; idx++) {
+				if (xlsxOption[idx] == "columnIndex" || xlsxOption[idx] == "columnValue") {
+					continue; // Key값이 columnIndex또는 columnValue이면 넘어간다.
+				} else {
+					nArr.push("\n\t" + xlsxOption[idx] + " : " + '"' + value[idx] + '"'); // Key값이 columnIndex또는 columnValue가 아니면 배열에 담는다.
+				}
+			}
+	
+			// 달라진 배열에 columnIndex, columnValue가 없으면 배열에 추가
+			if (xlsxOption.indexOf("columnIndex") != -1 && xlsxOption.indexOf("columnValue") != -1) {
+				nArr.push("\n\t" + "insertColumns" + " : " + '[{"columnIndex":' + JSON.stringify(dlt_insertColumns.getRowJSON(0).columnIndex) + ", "
+						+ '"columnValue":' + JSON.stringify(dlt_insertColumns.getRowJSON(0).columnValue) + "}]");
+			}
+		}
+	
+		// CSV의 값이 기존과 달라졌다면
+		else {
+			// 기존 데이터와 현재 데이터의 값이 다른 Key의 Value값을 배열에 넣는다.
+			for (var idx = 0; idx < csvOption.length; idx++) {
+				value.push(dma_csvOptionSetting.get(csvOption[idx]));
+			}
+	
+			// 기존 데이터와 현재 데이터의 값이 다른 Key, Value값을 반복문을 수행하여 새로운 배열에 넣는다.
+			for (var idx = 0; idx < csvOption.length; idx++) {
+				nArr.push("\n\t" + csvOption[idx] + " : " + '"' + value[idx] + '"');
+			}
+		}
+	
+		// textArea(Copy the code) setting
+		txa_copyTheCode.setValue("var options = {" + nArr + "\n};");
+	};
+	
+	/**
+	 * 엑셀의 데이터를 그리드뷰로 업로드 한다. 필요한 옵션이 있다면 options배열에 옵션을 넣는다.
+	 */
+	scwin.btn_uploadData_onclick = function() {
+		var options;
+		var type = rad_excelType.getValue();
+	
+		if (rad_excelType.getValue() != "csv") {
+			options = dma_optionsSetting.getJSON();
+			options.insertColumns = [ { "columnIndex" : ibx_columnIndex.getValue(), "columnValue" : ibx_columnValue.getValue() } ];
+		} else {
+			options = dma_csvOptionSetting.getJSON();
+		}
+		com.gridDataUpload(grd_excelGrid, type, options);
+	};
+	
+	/**
+	 * 모든 Slider 컴포넌트의 움직임이 발생했을 경우 inputbox컴포넌트에 눈금을 표시한다.
+	 */
+	scwin.sdr_moveEvent = function() {
+		var id = this.getID().slice(id.lastIndexOf("_") + 1);
+
+		var sdrId = "sdr_" + id;
+		var ibxId = "ibx_" + id;
+		var componentIbxId = $p.getComponentById(ibxId);
+		var componentSdrId = $p.getComponentById(sdrId);
+	
+		componentIbxId.setValue(componentSdrId.getValue());
+	
+		if (ibxId == "ibx_SubTotalScale") {
+			componentIbxId.setValue("-" + componentSdrId.getValue());
+		}
+	};
+	
+	/**
+	 * 엑셀 업로드 후, 건수를 체크한다.
+	 */
+	scwin.grd_excelGrid_onfilereadend = function(value) {
+		spn_excelUploadCnt.setValue(grd_excelGrid.getTotalRow());
+	};
+	
+	/**
+	 * textArea에 표시된 설정코드를 전체선택 한다.
+	 */
+	scwin.btn_copytheCode_onclick = function() {
+		document.getElementById("txa_copyTheCode").select();
+		document.execCommand('copy');
+	};]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="contentWrap" id="" style="">
+			<w2:wframe id="" style="" src="/cm/common/wf_titleFav.xml"></w2:wframe>
+			<w2:wframe id="" src="/cm/common/wf_titleDesc.xml"></w2:wframe><xf:group id="" style="" class="section"><xf:group class="defaultbox" id="" style="">
+				<w2:textbox class="df_tt fl" id="" label="원하는 형식의 파일을 업로드하기" style=""></w2:textbox>
+
+				<xf:group class="fr" id="" style="height:22px;">
+					<w2:span class="df_total" displayFormat="건" id="spn_excelUploadCnt" label="" style=""></w2:span>
+					<xf:group class="ml5 fr" id="" style="">
+						<w2:anchor class="btn_gcm" clickEventElement="outerDiv" ev:onclick="scwin.btn_settingCodeView_onclick" id="btn_settingCodeView" outerDiv="true" style="margin-right: 5px;" toolTip="설정 코드 값을 텍스트로 표현한다.">
+							<xf:label><![CDATA[설정코드 보기]]></xf:label>
+						</w2:anchor>
+						<w2:anchor class="btn_gcm" clickEventElement="outerDiv" ev:onclick="scwin.btn_gridRemoveExcel_onclick" id="btn_gridRemoveExcel" outerDiv="true" style="margin-right: 5px;" toolTip="현재 그리드에 업로드 되어있는 데이터를 삭제한다.">
+							<xf:label><![CDATA[지우기]]></xf:label>
+						</w2:anchor>
+						<w2:anchor class="btn_gcm" clickEventElement="outerDiv" ev:onclick="scwin.btn_uploadData_onclick" id="btn_uploadData" outerDiv="true" style="" toolTip="엑셀의 데이터를 그리드로 업로드 한다.">
+							<xf:label><![CDATA[업로드]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+					<xf:select1 appearance="full" cols="" id="rad_excelType" ref="" rows="1" selectedIndex="0" style="margin-left: 10px;" ev:onviewchange="scwin.rad_excelType_onviewchange">
+						<xf:choices>
+							<xf:item>
+								<xf:label><![CDATA[xlsx]]></xf:label>
+								<xf:value><![CDATA[xlsx]]></xf:value>
+							</xf:item>
+							<xf:item>
+								<xf:label><![CDATA[xls]]></xf:label>
+								<xf:value><![CDATA[xls]]></xf:value>
+							</xf:item>
+							<xf:item>
+								<xf:label><![CDATA[csv]]></xf:label>
+								<xf:value><![CDATA[csv]]></xf:value>
+							</xf:item>
+						</xf:choices>
+					</xf:select1>
+				</xf:group>
+			</xf:group><w2:gridView autoFit="allColumn" class="cm_grid" dataList="dlt_advancedExcel" ev:onafteredit="" ev:onrowindexchange="" fixedColumnWithHidden="true" id="grd_excelGrid" ignoreCellClick="false" rowStatusHeaderValue="상태" rowStatusVisible="true" scrollByColumn="false" sortEvent="ondblclick" sortable="true" style="height:200px;" useShiftKey="true" visibleRowNum="" rowNumVisible="true" rowNumHeaderValue="순서" ev:onfilereadend="scwin.grd_excelGrid_onfilereadend">
+				<w2:header id="header1" style="">
+					<w2:row id="row2" style="">
+						<w2:column blockSelect="false" displayMode="label" id="column11" inputType="text" style="height:25px;" value="메뉴코드" width="50"></w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="column9" inputType="text" style="height:25px;" value="메뉴명" width="40"></w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="column7" inputType="text" style="height:25px;" value="부모메뉴명" width="50"></w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="column3" inputType="text" style="height:25px;" value="메뉴레벨" width="50"></w2:column>
+						<w2:column blockSelect="false" id="column12" inputType="text" style="" value="경로" width="50"></w2:column>
+						<w2:column blockSelect="false" id="column15" style="height:25px" inputType="text" width="70" displayMode="label" value="사용여부"></w2:column>
+					</w2:row>
+				</w2:header>
+				<w2:gBody id="gBody4" style="">
+					<w2:row id="row5" style="">
+						<w2:column blockSelect="false" displayMode="label" id="MENU_CD" inputType="text" style="height:25px;" width="50"></w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="MENU_NM" inputType="text" readOnly="" style="height:25px;" width="40"></w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="PARENT_MENU_NM" inputType="text" style="height:25px;" textAlign="left" width="50"></w2:column>
+						<w2:column blockSelect="false" defaultValue="" displayMode="" falseValue="N" id="MENU_LEVEL" inputType="text" style="height:25px;" trueValue="Y" value="" valueType="other" width="50" textAlign="left">
+						</w2:column>
+						<w2:column blockSelect="false" id="SRC_PATH" inputType="text" style="" width="50"></w2:column>
+						<w2:column blockSelect="false" id="IS_USE" style="height:25px" inputType="text" width="70" displayMode="label"></w2:column>
+					</w2:row>
+				</w2:gBody>
+			</w2:gridView></xf:group><xf:group id="" style="" class="section"><xf:group id="" style="" class="defaultbox">
+				<w2:anchor id="btn_copytheCode" style="float: right;" clickEventElement="outerDiv" ev:onclick="scwin.btn_copytheCode_onclick" class="btn_gcm" outerDiv="true" toolTip="코드 텍스트를 선택한다. ">
+					<xf:label><![CDATA[복사]]></xf:label>
+				</w2:anchor>
+				<w2:textbox id="" style="height: 23px;text-align: center;font-size:14pt;color:#3CD2AA;margin-bottom: 10px;" label="Copy the code"></w2:textbox>
+				<xf:textarea id="txa_copyTheCode" readOnly="true" style="height: 200px;width:99.7%;"></xf:textarea>
+
+			</xf:group></xf:group>
+		<xf:group id="grp_excelUploadSetting" style="">
+				<xf:group id="" style="" class="section"><xf:group id="" style="" class="tbl_search">
+					<xf:group id="" style="" adaptive="layout" adaptiveThreshold="768" class="w2tb tbl_sc" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:80px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+							<xf:group style="width:80px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+							<xf:group style="width:180px;" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="" class="w2tb_th" tagname="th">설정</xf:group>
+							<xf:group style="width: 100%;" class="w2tb_td" tagname="td">
+								<w2:anchor id="btn_excelUploadSetting" style="float: right;margin-right: 10px;" clickEventElement="outerDiv" ev:onclick="scwin.btn_ExcelUploadButtons_onclick" class="btn_gcm" outerDiv="true">
+									<xf:label><![CDATA[닫기]]></xf:label>
+								</w2:anchor>
+							</xf:group>
+						</xf:group>
+					</xf:group>
+				</xf:group><w2:textbox id="1" style="" class="pl20" label=""></w2:textbox></xf:group>
+			<xf:group id="" style="" class="section"><xf:group id="grp_parentExcelUploadSetting" style="">
+					<xf:group id="tbl_xlsxOptionsSetting" style="width:100%;" adaptive="layout" class="w2tb" adaptiveThreshold="1200" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:175.00px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+							<xf:group style="width:175.00px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group tagname="tr" style=""><xf:group toolTip="[defalut: 0] 1이면 엑셀 파일이 그리드의 보이는 결과로 만들어져있을때  0이면 엑셀 파일이 그리드의 실제 데이터로 구성되어있을때" class="w2tb_th" tagname="th">options<w2:attributes><w2:colspan>4</w2:colspan><w2:rowspan>1</w2:rowspan></w2:attributes></xf:group></xf:group><xf:group style="" tagname="tr">
+							<xf:group style="text-align: left;" toolTip="[defalut: 0] 1이면 엑셀 파일이 그리드의 보이는 결과로 만들어져있을때  0이면 엑셀 파일이 그리드의 실제 데이터로 구성되어있을때" class="w2tb_th" tagname="th">type</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:group id="" style="width: 88%;"></xf:group>
+								<xf:select1 id="rad_type" ref="data:dma_optionsSetting.type" selectedIndex="0" cols="" appearance="full" style="width: 150px;height: 21px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[0]]></xf:label>
+											<xf:value><![CDATA[0]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[1]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut : 0] 읽어들이려는 엑셀파일에 hidden column이 저장되어 있는지 여부를 설정하는 int형 숫자(0이면  엑셀파일에 hidden 데이터가 없으므로 그리드 hidden column에 빈 데이터를 삽입  1 : 엑셀파일에 hidden 데이터가 있으므로 엑셀 파일로부터 hidden 데이터를 삽입 )" class="w2tb_th" tagname="th">hidden</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="rad_hidden" ref="data:dma_optionsSetting.hidden" selectedIndex="0" cols="" appearance="full" style="width: 150px;height: 21px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[0]]></xf:label>
+											<xf:value><![CDATA[0]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[1]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut : 0] excel파일에서 그리드의 데이터가 있는 sheet번호" class="w2tb_th" tagname="th">sheetNo</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<w2:slider id="sdr_SheetNo" increment="1" ref="" ev:onthumbmove="scwin.sdr_moveEvent" style="position: relative;width:50%;height: 30px;margin-right: 10px;" minValue="0" class="" showScale="" maxValue="50">
+								</w2:slider>
+								<xf:input id="ibx_sheetNo" ref="data:dma_optionsSetting.sheetNo" userData1="" readOnly="" style="width:44%;height: 21px;" placeholder="0"></xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut : 0] Grid에 hiddenColumn에 빈 값을 넣을지를 결정하기 위한 int형 숫자(1이면 hidden Column에 빈 값을 저장하지 않음,0이면 hidden column이 저장되어있지 않은 Excel File이라 간주하고 hidden Column에 빈 값을 넣어줌)(hidden이 0인 경우에는 fillhidden은 영향을 끼치지 않음)" class="w2tb_th" tagname="th">fillHidden</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="rad_fillHidden" ref="data:dma_optionsSetting.fillHidden" selectedIndex="0" cols="" appearance="full" style="width: 150px;height: 21px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[0]]></xf:label>
+											<xf:value><![CDATA[0]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[1]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut : 0] excel파일에서 그리드의 데이터가 시작되는 행의 번호(헤더 포함)" class="w2tb_th" tagname="th">startRowIndex</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<w2:slider id="sdr_StartRowIndex" increment="1" ref="" ev:onthumbmove="scwin.sdr_moveEvent" style="position: relative;width:50%;height: 30px;margin-right: 10px;" minValue="0" class="" showScale="" maxValue="50">
+								</w2:slider>
+								<xf:input id="ibx_startRowIndex" ref="data:dma_optionsSetting.startRowIndex" userData1="" readOnly="" style="width:44%;height: 21px;" placeholder="0"></xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut : 0] 공백무시 여부(1이면 무시 0이면 포함)" class="w2tb_th" tagname="th">skipSpace</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="rad_skipSpace" ref="data:dma_optionsSetting.skipSpace" selectedIndex="0" cols="" appearance="full" style="width: 150px;height: 21px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[0]]></xf:label>
+											<xf:value><![CDATA[0]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[1]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut : 0] excel파일에서 그리드의 데이터가 시작되는 열의 번호" class="w2tb_th" tagname="th">startColumnIndex</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<w2:slider id="sdr_StartColumnIndex" increment="1" ref="" ev:onthumbmove="scwin.sdr_moveEvent" style="position: relative;width:50%;height: 30px;margin-right: 10px;" minValue="0" class="" showScale="" maxValue="50">
+								</w2:slider>
+								<xf:input id="ibx_startColumnIndex" ref="data:dma_optionsSetting.startColumnIndex" userData1="" readOnly="" style="width:44%;height: 21px;" placeholder="0"></xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip='radio, checkbox와 같은 컬럼을 엑셀에서 받아 오지 않고, 사용자 컬럼 설정 으로 업로드 ( 데이터 구조 : [ { columnIndex:1, columnValue:"1" } ] )' class="w2tb_th" tagname="th">insertColumns
+							</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<w2:slider id="sdr_ColumnIndex" increment="1" ref="" ev:onthumbmove="scwin.sdr_moveEvent" style="position: relative;width:50%;height: 30px;margin-right: 10px;" minValue="0" class="" showScale="" maxValue="50">
+								</w2:slider>
+								<xf:input id="ibx_columnIndex" ref="data:dma_optionsSetting.columnIndex" userData1="" readOnly="" style="width:44%;height: 21px;" placeholder="columnIndex"></xf:input>
+								<w2:slider id="sdr_ColumnValue" increment="1" ref="" ev:onthumbmove="scwin.sdr_moveEvent" style="position: relative;width:50%;height: 30px;margin-right: 10px;" minValue="0" class="" showScale="" maxValue="50">
+								</w2:slider>
+								<xf:input id="ibx_columnValue" ref="data:dma_optionsSetting.columnValue" readOnly="" style="width:44%;height: 21px;" placeholder="columnValue"></xf:input>
+
+
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut : 0] excel파일에서 그리드의 데이터가 끝나는 열의 index ( 엑셀컬럼수가 그리드컬럼수 보다 작은 경우 그리드 컬러수를 설정)" class="w2tb_th" tagname="th">
+								endColumnIndex
+							</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<w2:slider id="sdr_EndColumnIndex" increment="1" ref="" ev:onthumbmove="scwin.sdr_moveEvent" style="position: relative;width:50%;height: 30px;margin-right: 10px;" minValue="0" class="" showScale="" maxValue="50">
+								</w2:slider>
+								<xf:input id="ibx_endColumnIndex" ref="data:dma_optionsSetting.endColumnIndex" userData1="" readOnly="" style="width:44%;height: 21px;" placeholder="0"></xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="업로드시에 호출할 popup의 url" class="w2tb_th" tagname="th">popupUrl</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="ibx_popupUrl" ref="data:dma_optionsSetting.popupUrl" readOnly="" style="width:88%;height: 21px;"></xf:input>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut : 0] excel파일에서 그리드의 데이터에 header가 있는지 여부(1이면 header 존재 0이면 없음)" class="w2tb_th" tagname="th">headerExist</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="footerExist" ref="data:dma_optionsSetting.headerExist" cols="" selectedIndex="0" appearance="full" style="width: 150px;height: 21px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[0]]></xf:label>
+											<xf:value><![CDATA[0]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[1]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="(default : , ) 업로드시 데이터를 구분하는 구분자" class="w2tb_th" tagname="th">delim</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="ibx_delim" ref="data:dma_optionsSetting.delim" style="width:88%;height: 21px;" placeholder=","></xf:input>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut : 1] excel파일에서 그리드의 데이터에 footer가 있는지 여부(1이면 footer 존재 0이면 없음 기본값은 1 그리드에 footer가 없으면 적용되지 않음)" class="w2tb_th" tagname="th">
+								footerExist
+							</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="rad_footerExist" ref="data:dma_optionsSetting.footerExist" cols="" selectedIndex="1" appearance="full" style="width: 150px;height: 21px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[0]]></xf:label>
+											<xf:value><![CDATA[0]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[1]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip='[defalut : R]업로드된 데이터의 초기 상태값, 설정하지 않으면 "R"로 설정되며 "C"값을 설정 할 수 있다.' class="w2tb_th" tagname="th">status</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="rad_status" ref="data:dma_optionsSetting.status" selectedIndex="0" cols="" appearance="full" style="width: 150px;height: 21px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[R]]></xf:label>
+											<xf:value><![CDATA[R]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[C]]></xf:label>
+											<xf:value><![CDATA[C]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut : 0] excel파일에서 가져온 데이터를 그리드에 append시킬지 여부(1이면 현재 그리드에 데이터를 추가로 넣어줌 0이면 현재 그리드의 데이터를 삭제하고 넣음)" class="w2tb_th" tagname="th">
+								append
+							</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="rad_append" ref="data:dma_optionsSetting.append" selectedIndex="0" cols="" appearance="full" style="width: 150px;height: 21px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[0]]></xf:label>
+											<xf:value><![CDATA[0]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[1]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="엑셀파일에 암호가 걸려 있는 경우, 비밀번호" class="w2tb_th" tagname="th">pwd</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="ibx_pwd" ref="data:dma_optionsSetting.pwd" style="width:88%;height: 21px;" placeholder=""></xf:input>
+							</xf:group>
+						</xf:group>
+					</xf:group>
+					<xf:group id="tbl_csvOptionsSetting" style="width:100%;display: none;" adaptive="layout" class="w2tb" adaptiveThreshold="1200" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:175.00px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+							<xf:group style="width:175.00px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align: left;" toolTip="[default: 1, 0]데이터 형태 (0이면 실 데이터 형태,1이면 display 표시 방식)" class="w2tb_th" tagname="th">type</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:group id="" style="width: 88%;"></xf:group>
+								<xf:select1 id="rad_csvType" ref="data:dma_csvOptionSetting.type" selectedIndex="0" cols="" appearance="full" style="width: 150px;height: 21px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[0]]></xf:label>
+											<xf:value><![CDATA[0]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[1]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: 0, 1]hidden Column에 대한 저장 여부(0이면 저장하지않음,1이면 저장)" class="w2tb_th" tagname="th">hidden</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="rad_csvHidden" ref="data:dma_csvOptionSetting.hidden" cols="" selectedIndex="0" appearance="full" style="width: 150px;height: 21px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[0]]></xf:label>
+											<xf:value><![CDATA[0]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[1]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[default: 1, 0]Grid header 존재 유무 (0이면 header row수를 무시하고 전부 업로드하고 1이면 header row수 만큼 skip한다.)" class="w2tb_th" tagname="th">header</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="rad_csvHeader" ref="data:dma_csvOptionSetting.header" selectedIndex="0" cols="" appearance="full" style="width: 150px;height: 21px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[0]]></xf:label>
+											<xf:value><![CDATA[0]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[1]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: 0, 1]hidden Column에 빈 값을 넣을지를 결정(1이면 hidden Column에 빈 값을 저장하지 않음,0이면 hidden column이 저장되어있지 않은 csv File이라 간주하고 hidden Column에 빈 값을 넣어줌)(hidden이 0인 경우에는 fillhidden은 영향을 끼치지 않음)" class="w2tb_th" tagname="th">fillHidden</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="rad_csvFillHidden" ref="data:dma_csvOptionSetting.fillHidden" cols="" selectedIndex="0" appearance="full" style="width: 150px;height: 21px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[0]]></xf:label>
+											<xf:value><![CDATA[0]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[1]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[default: ',']CSV 파일에서 데이터를 구분할 구분자" class="w2tb_th" tagname="th">delim</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="ibx_csvDelim" ref="data:dma_csvOptionSetting.delim" style="width:88%;height: 21px;" placeholder="," initValue=""></xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: 0, 1]공백무시 여부(1이면 무시 0이면 포함)" class="w2tb_th" tagname="th">skipSpace</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="rad_csvSkipSpace" ref="data:dma_csvOptionSetting.skipSpace" cols="" selectedIndex="0" appearance="full" style="width: 150px;height: 21px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[0]]></xf:label>
+											<xf:value><![CDATA[0]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[1]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="CSV 데이터에서 제거해야 되는 문자셋 ( ex) '\'' )" class="w2tb_th" tagname="th">escapeChar</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="ibx_csvEscapeChar" ref="data:dma_csvOptionSetting.escapeChar" style="width:88%;height: 21px;" placeholder="0" initValue=""></xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="[defalut: 1, 0]expression 컬럼 데이터를 포함하고 있는지 여부, 기본값은 미포함(1이면 미포함, 0이면 포함)" class="w2tb_th" tagname="th">expression</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="rad_csvExpression" ref="data:dma_csvOptionSetting.expression" cols="" selectedIndex="1" appearance="full" style="width: 150px;height: 21px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[0]]></xf:label>
+											<xf:value><![CDATA[0]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[1]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: 0] csv파일에서 그리드의 데이터가 시작되는 행의 번호, startRowIndex가 설정되면, header 설정은 무시된다." class="w2tb_th" tagname="th">startRowIndex</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="ibx_csvStartRowIndex" ref="data:dma_csvOptionSetting.startRowIndex" userData1="" readOnly="" style="width:88%;height: 21px;" placeholder="0"></xf:input>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="업로드시에 호출할 popup의 url" class="w2tb_th" tagname="th">popupUrl</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:input id="ibx_csvPopupUrl" ref="data:dma_csvOptionSetting.popupUrl" style="width:88%;height: 21px;" placeholder="" initValue=""></xf:input>
+							</xf:group>
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group style="text-align:left;" toolTip="[defalut: 0, 1]csv파일에서 가져온 데이터를 그리드에 append시킬지 여부(1이면 현재 그리드에 데이터를 추가로 넣어줌 0이면 현재 그리드의 데이터를 삭제하고 넣음)" class="w2tb_th" tagname="th">append
+							</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 id="rad_csvAppend" ref="data:dma_csvOptionSetting.append" cols="" selectedIndex="0" appearance="full" style="width: 150px;height: 21px;" rows="1">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[0]]></xf:label>
+											<xf:value><![CDATA[0]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[1]]></xf:label>
+											<xf:value><![CDATA[1]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group style="text-align:left;" toolTip="" class="w2tb_th" tagname="th"></xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td"></xf:group>
+						</xf:group>
+					</xf:group>
+				</xf:group></xf:group></xf:group></xf:group>
+	</body>
+</html>

@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/new.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataMap id="FaqMngmVo">
+					<w2:keyInfo>
+						<w2:key id="faqId" name="FAQ ID"
+							dataType="number">
+						</w2:key>
+						<w2:key id="faqBizFlagCd" name="FAQ업무분류코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="faqBizDtclCd" name="FAQ업무세분류코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="qustCont" name="질문내용"
+							dataType="text">
+						</w2:key>
+						<w2:key id="replCont" name="답변내용"
+							dataType="text">
+						</w2:key>
+						<w2:key id="faqKeyWord" name="FAQ키워드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="apdxFilePath" name="첨부파일경로"
+							dataType="text">
+						</w2:key>
+						<w2:key id="apdxFileName" name="첨부파일명"
+							dataType="text">
+						</w2:key>
+						<w2:key id="useYn" name="사용여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptDler" name="입력처리자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptDlerIP" name="입력처리자IP"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptDate" name="입력일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptHms" name="입력시간"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcDler" name="수정처리자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcDlerIP" name="수정처리자IP"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcDate" name="수정일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcHms" name="수정시간"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptDlerName" name="입력처리자명"
+							dataType="text">
+						</w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList id="DsWs_FaqBizFlagCd" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+				</w2:dataList>
+				<w2:dataList id="DsWs_FaqBizDtclCd" baseNode="list"
+					saveRemovedData="true" repeatNode="map">
+				</w2:dataList>
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>
+			
+		</xf:model>
+		
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/LongTerm_Script.js"/>
+		
+		<script type="javascript"><![CDATA[
+var faqId = "";
+
+	scwin.init = function() {
+		//cbs - inparam 처리
+		var indata = $w.getParameter("param");
+		var inJSON = JSON.parse(indata);
+
+		gfn_getCommonCodes("DsWs_FaqBizFlagCd DsWs_FaqBizDtclCd", "FaqBizFlagCd FaqBizDtclCd", "id_faqBizFlagCd id_faqBizDtclCd", "N N");
+		
+		var info = {};
+		info = {
+			 "uploadObj"  : SingleFileUploadComponent  //UPLOAD Component ID
+			,"uploadText" : SingleFileUploadText       //파일명표시 InputBox ID
+			,"maxsize"    : 1                          //첨부파일 최대 크기 (MB)
+			,"callback"   : "scwin.fileUploadCallback"
+		};
+		util.setSingleFileUploadInit(info);
+	
+		if (util.isNull(inJSON.faqId)) {
+			FaqMngmVo.set("inptDler", util.getGdsValue("gUserID"));
+			FaqMngmVo.set("inptDlerName", util.getGdsValue("gUserEmpName"));
+			FaqMngmVo.set("useYn", "Y");
+			
+			gfn_getServerTime();
+			sStandDate = gds.gDs_ServerTime.getCellData(0, "sToday"); // 서버시간
+			FaqMngmVo.set("inptDate", gds.gDs_ServerTime.getCellData(0, "sToday").substring(0, 8));
+		} else {
+			faqId = inJSON.faqId;
+			scwin.lfn_Search();
+		}
+	};
+	
+	scwin.lfn_Search = function() {
+		FaqMngmVo.set("faqId", faqId);
+		
+		var trans = new transSub();						// transaction 보낼 객체 생성
+		trans.setId("retrieveFaq");					// transaction 보낼 SubmissionID
+		trans.setUrl("/contract/longterm/CBSC0002.do");		// Controller 쪽으로 보낼 주소
+		trans.setDs("FaqMngmVo");
+		trans.targetDs("FaqMngmVo");
+		trans.callBack("scwin.subCallBack");	// 받을 Dataset을 처리시 콜백함수
+		trans.send();
+	};
+	
+	scwin.subCallBack = function(e) {
+		switch(e.subID){
+			case "retrieveFaq":
+				if (e.flag == "s") {
+					FaqMngmVo.setJSON(e.result);
+					if (wconv.length(wconv.trim(FaqMngmVo.get("apdxFileName"))) > 0) {
+						SingleFileUploadText.setValue(FaqMngmVo.get("apdxFileName"));
+					} 
+				} else {
+					wprom.alert(e.msg);
+				}
+				break;
+				
+			case "registerFaq":
+				if (e.flag == "s") {
+					FaqMngmVo.setJSON(e.result);
+					wprom.close(FaqMngmVo.get("faqId"));
+				} else {
+					wprom.alert(e.msg);
+				}
+				break;
+		}
+	};
+
+	scwin.id_save_onclick = function() {
+		if (wconv.isNull(wconv.trim(FaqMngmVo.get("qustCont")))) {
+			wprom.alertF("질문내용을 입력하세요.", {}, id_qustCont);
+			return;
+		}
+		
+		if (wconv.isNull(wconv.trim(FaqMngmVo.get("replCont")))) {
+			wprom.alertF("답변내용을 입력하세요.", {}, id_replCont);
+			return;
+		}
+		
+		if (wconv.length(wconv.trim(SingleFileUploadText.getValue())) > 0 && wconv.length(wconv.trim(FaqMngmVo.get("apdxFilePath"))) <= 0) {
+			scwin.btn_SingleFileUpload_onclick();
+		} else {
+			scwin.lfn_save();
+		}
+	};
+	
+	scwin.lfn_save = function() {
+		var trans = new transSub();						// transaction 보낼 객체 생성
+		trans.setId("registerFaq");					// transaction 보낼 SubmissionID
+		trans.setUrl("/contract/longterm/CBSC0001.do");		// Controller 쪽으로 보낼 주소
+		trans.setDs("FaqMngmVo");
+		trans.targetDs("FaqMngmVo");
+		trans.callBack("scwin.subCallBack");	// 받을 Dataset을 처리시 콜백함수
+		trans.send();
+	}
+	
+	scwin.id_close_onclick = function() {
+		wprom.close();
+	};
+	
+	scwin.id_fileDelete_onclick = function() {
+		if (confirm("첨부파일을 삭제하시겠습니까?")) {
+			SingleFileUploadComponent.removeFile(SingleFileUploadText.getValue());
+			SingleFileUploadText.setValue("");
+			FaqMngmVo.set("apdxFilePath", "");
+			FaqMngmVo.set("apdxFileName", "");
+		}
+	};
+	
+	var ggelementId = "";
+	var ggfileName = "";
+	
+	//파일업로드 시작
+	scwin.btn_SingleFileUpload_onclick = function(e) {
+		//업무구분ID : "longterm","car","general","support","management","lsetm","composition" 중 입력
+		util.startSingleFileUpload(SingleFileUploadComponent, "longterm");
+	};
+
+	//파일업로드 완료후 CALLBACK 
+	scwin.fileUploadCallback = function(status, upCompId, UpFileCount, UpFileInfo) {
+		/*
+		status      : //UPLOAD 성공여부 SUCCESS, ERROR
+		upCompId    : //UPLOAD Component ID,
+		UpFileCount : //UPLOAD 파일 개수
+		UpFileInfo  : //UPLOAD 완료 후 완료된 파일건수 만큰 배열로 반환
+		[
+			{
+			 elementId:"XCV8CDJH1_THIS_ID_WILL_BE_REPLACED_AFTER_C:\cbs\cbsdata\cbs\upload\temp\캡처 - 복사본.JPGFPKFSDF29FJMDLSVL1HJFG"
+			,dupFileNewName:"캡처 - 복사본_1.JPG" 동일한 파일이 존재하는경우 _일련번호 변환 저장
+			,fileName:"캡처 - 복사본.JPG"
+			,filePath:"/cbs/cbsdata/cbs/upload/temp/캡처 - 복사본.JPG"
+			,fileSize:"37908"
+			},
+			{
+			.....
+			}
+		]
+		*/
+		switch (status) {
+			case "SUCCESS" :
+				console.log("upCompId : " + upCompId);
+				console.log("UpFileCount : " + UpFileCount);
+				console.log("UpFileCount : ");
+				console.log(UpFileInfo);
+				console.log("elementId : " + UpFileInfo[0].elementId);
+				
+				ggelementId = UpFileInfo[0].elementId;
+				ggfileName  = UpFileInfo[0].fileName;
+				
+				FaqMngmVo.set("apdxFilePath", ggelementId);
+				FaqMngmVo.set("apdxFileName", ggfileName);
+				
+				scwin.lfn_save();
+				
+				break;
+			case "ERROR" :
+				alert("파일 업로드 실패");
+				return;
+				break;
+		}
+		//console.log(rtnInfo)
+	};]]></script>
+	</head>
+	<body>
+		<xf:group class="contentWrap layer" id="" style="">
+
+			<!-- group:s -->
+			<xf:group class="defaultbox" id="" style="">
+				<w2:textbox class="df_tt fl" id="" label="FAQ등록"
+					style="">
+				</w2:textbox>
+				<xf:group class="fr" id="" style="">
+					<w2:anchor class="btn_nml" ev:onclick="scwin.id_save_onclick" id="id_save"
+						outerDiv="true">
+						<xf:label><![CDATA[저장]]></xf:label>
+					</w2:anchor>
+					<w2:anchor class="btn_nml" ev:onclick="scwin.id_close_onclick" id="id_close"
+						outerDiv="true">
+						<xf:label><![CDATA[닫기]]></xf:label>
+					</w2:anchor>
+				</xf:group>
+			</xf:group>
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="" class="w2tb tb"
+					tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:95px;" tagname="col">
+						</xf:group>
+						<xf:group style="width:200.00px;"
+							tagname="col">
+						</xf:group>
+						<xf:group style="width:95px;" tagname="col">
+						</xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th"
+							tagname="th">
+							업무구분
+						</xf:group>
+						<xf:group style="" class="w2tb_td"
+							tagname="td">
+							<w2:attributes>
+								<w2:colspan>3</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:select1 allOption=""
+								appearance="minimal" chooseOption="" direction="auto"
+								disabled="" disabledClass="" displayMode="label"
+								ev:onviewchange="" id="id_faqBizFlagCd" optionOrder=""
+								ref="data:FaqMngmVo.faqBizFlagCd" style="width:150px"
+								submenuSize="" renderType="native">
+								<xf:choices></xf:choices>
+							</xf:select1>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th"
+							tagname="th">
+							업무세분류
+						</xf:group>
+						<xf:group style="" class="w2tb_td"
+							tagname="td">
+							<w2:attributes>
+								<w2:colspan>3</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:select1 allOption=""
+								appearance="minimal" chooseOption="" direction="auto"
+								disabled="" disabledClass="" displayMode="label"
+								ev:onviewchange="" id="id_faqBizDtclCd" optionOrder=""
+								ref="data:FaqMngmVo.faqBizDtclCd" style="width:150px"
+								submenuSize="" renderType="native">
+								<xf:choices></xf:choices>
+							</xf:select1>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th"
+							tagname="th">
+							질문
+						</xf:group>
+						<xf:group style="" class="w2tb_td"
+							tagname="td">
+							<w2:attributes>
+								<w2:colspan>3</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:input id="id_qustCont"
+								style="width:390px" ref="data:FaqMngmVo.qustCont">
+							</xf:input>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th"
+							tagname="th">
+							답변
+						</xf:group>
+						<xf:group style="" class="w2tb_td"
+							tagname="td">
+							<w2:attributes>
+								<w2:colspan>3</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:textarea id="id_replCont"
+								style="width:390px" ref="data:FaqMngmVo.replCont" />
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th"
+							tagname="th">
+							키워드
+						</xf:group>
+						<xf:group style="" class="w2tb_td"
+							tagname="td">
+							<w2:attributes>
+								<w2:colspan>3</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:input id="" style="width:390px"
+								ref="data:FaqMngmVo.faqKeyWord">
+							</xf:input>
+							<w2:textbox class="txt_bw" id=""
+								label="다수 입력시’,’ 구분" tagname="span" style="">
+							</w2:textbox>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group class="w2tb_th" style=""
+							tagname="th">
+							첨부파일
+						</xf:group>
+						<xf:group class="w2tb_td" style=""
+							tagname="td">
+							<xf:group class="" id="" style="position: relative;width :400px;height: 20px;">
+								<xf:group class="" id="" style="position: absolute ;left: 0px;top: 0px;right : 120px;height:100%;">
+									<xf:input id="SingleFileUploadText" readOnly="true" style="position: absolute;width: 100%;height: 100%;" ref="">
+									</xf:input>
+								</xf:group>
+								<xf:group class="" id="" style="position: absolute ;right:65px;top: 0px;width: 50px;height: 100%;">
+									<w2:anchor class="btn_nml" ev:onclick="scwin.trigger1_onclick" id="SingleFileUploadButton" style="position: absolute;width: 100%;" type="">
+										<xf:label><![CDATA[첨부]]></xf:label>
+									</w2:anchor>
+									<w2:multiupload action="" clearOnError="false" ev:onComplete="" ev:ondone="" ev:onerror="util._setSingleFileError" filter="모든파일:*.*" fireEventOnError="" id="SingleFileUploadComponent" maxcount="" maxsize="10000000" mode="html5_transparent" selectCallback="" style="position: absolute;width: 100%;height: 100%;" uploadButton="true" wmode="false">
+									</w2:multiupload>
+								</xf:group><w2:anchor class="btn_nml1" ev:onclick="scwin.id_fileDelete_onclick" id="id_fileDelete" outerDiv="" style="position: absolute ;right:0px;top: 0px;" disabled="">
+								<xf:label><![CDATA[파일삭제]]></xf:label>
+							</w2:anchor>
+
+							</xf:group>
+							<w2:attributes>
+								<w2:colspan>3</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							
+							
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th"
+							tagname="th">
+							사용여부
+						</xf:group>
+						<xf:group style="" class="w2tb_td"
+							tagname="td">
+							<w2:attributes>
+								<w2:colspan>3</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:select1 appearance="full" cols="" id=""
+								rows="1" selectedIndex="-1" style=""
+								ref="data:FaqMngmVo.useYn">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[미사용]]></xf:label>
+										<xf:value><![CDATA[N]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[사용]]></xf:label>
+										<xf:value><![CDATA[Y]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select1>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th"
+							tagname="th">
+							작성일자
+						</xf:group>
+						<xf:group style="" class="w2tb_td"
+							tagname="td">
+							<xf:input id="" style="width:100px"
+								disabled="true" ref="data:FaqMngmVo.inptDate"
+								displayFormat="####-##-##">
+							</xf:input>
+						</xf:group>
+						<xf:group class="w2tb_th" tagname="th">
+							작성자
+							<w2:attributes></w2:attributes>
+						</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<xf:input id="" style="width:100px"
+								disabled="true" ref="data:FaqMngmVo.inptDlerName">
+							</xf:input>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<!-- group:e -->
+
+			<!-- group:s -->
+			<!-- group:e -->
+
+		</xf:group>
+	</body>
+</html>

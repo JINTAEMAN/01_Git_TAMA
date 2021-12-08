@@ -1,0 +1,2906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate></w2:buildDate>
+        <xf:model>
+            <xf:instance>
+                <data></data>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="Ds_LinkList" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_LTIEA00" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCrNo" name="sCrNo"></w2:column>
+                        <w2:column dataType="text" id="sGdCd" name="sGdCd"></w2:column>
+                        <w2:column dataType="text" id="GdNm" name="GdNm"></w2:column>
+                        <w2:column dataType="text" id="sCrtorCd" name="sCrtorCd"></w2:column>
+                        <w2:column dataType="text" id="sCrtorName" name="sCrtorName"></w2:column>
+                        <w2:column dataType="text" id="sZip1" name="sZip1"></w2:column>
+                        <w2:column dataType="text" id="sZip2" name="sZip2"></w2:column>
+                        <w2:column dataType="text" id="addrs" name="addrs"></w2:column>
+                        <w2:column dataType="text" id="sAdrsAdd" name="sAdrsAdd"></w2:column>
+                        <w2:column dataType="text" id="sEmail1" name="sEmail1"></w2:column>
+                        <w2:column dataType="text" id="sEmail2" name="sEmail2"></w2:column>
+                        <w2:column dataType="text" id="sFax1" name="sFax1"></w2:column>
+                        <w2:column dataType="text" id="sFax2" name="sFax2"></w2:column>
+                        <w2:column dataType="text" id="sFax3" name="sFax3"></w2:column>
+                        <w2:column dataType="text" id="sInsurStrtdate" name="sInsurStrtdate"></w2:column>
+                        <w2:column dataType="text" id="nMailRvadChngSeq" name="nMailRvadChngSeq"></w2:column>
+                        <w2:column dataType="text" id="sCrtorCstId" name="sCrtorCstId"></w2:column>
+                        <w2:column dataType="text" id="sCstFlgcd" name="sCstFlgcd"></w2:column>
+                        <w2:column dataType="text" id="sAddrFlgcd" name="sAddrFlgcd"></w2:column>
+                        <w2:column dataType="text" id="nAddrChngSeq" name="nAddrChngSeq"></w2:column>
+                        <w2:column dataType="text" id="nTelnoChngSeq" name="nTelnoChngSeq"></w2:column>
+                        <w2:column dataType="text" id="sMailRvadAddrFlagCd" name="sMailRvadAddrFlagCd"></w2:column>
+                        <w2:column dataType="text" id="sPlanNo" name="sPlanNo"></w2:column>
+                        <w2:column dataType="text" id="sPsnGroupFlgcd" name="sPsnGroupFlgcd"></w2:column>
+                        <w2:column dataType="text" id="nCrChngNo" name="nCrChngNo"></w2:column>
+                        <w2:column dataType="text" id="ea09cnt" name="ea09cnt"></w2:column>
+                        <w2:column dataType="text" id="sCrStatCd" name="sCrStatCd"></w2:column>
+                        <w2:column dataType="text" id="sScanObjtYn" name="sScanObjtYn"></w2:column>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_sDmCode" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="L164" name="L164"></w2:column>
+                        <w2:column dataType="text" id="L140" name="L140"></w2:column>
+                        <w2:column dataType="text" id="L006" name="L006"></w2:column>
+                        <w2:column dataType="text" id="L224" name="L224"></w2:column>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <L006><![CDATA[알릴의무]]></L006>
+                            <L140><![CDATA[가입설계동의서]]></L140>
+                            <L164><![CDATA[가입설계서일체]]></L164>
+                            <L224><![CDATA[상품설명서]]></L224>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_StdCd" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sIndex" name="sIndex"></w2:column>
+                        <w2:column dataType="text" id="sValue" name="sValue"></w2:column>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <sIndex><![CDATA[1]]></sIndex>
+                            <sValue><![CDATA[계약번호]]></sValue>
+                        </w2:row>
+                        <w2:row>
+                            <sIndex><![CDATA[2]]></sIndex>
+                            <sValue><![CDATA[설계번호]]></sValue>
+                        </w2:row>
+                        <w2:row>
+                            <sIndex><![CDATA[3]]></sIndex>
+                            <sValue><![CDATA[고객코드]]></sValue>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DS_SAVEFAXINFO"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column dataType="text" id="sBizCode"
+                			name="sBizCode">
+                		</w2:column>
+                		<w2:column dataType="text" id="sType"
+                			name="sType">
+                		</w2:column>
+                		<w2:column dataType="text" id="sCustNo"
+                			name="sCustNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="nSeqNo"
+                			name="nSeqNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sDmCode"
+                			name="sDmCode">
+                		</w2:column>
+                		<w2:column dataType="text" id="sFax1"
+                			name="sFax1">
+                		</w2:column>
+                		<w2:column dataType="text" id="sFax2"
+                			name="sFax2">
+                		</w2:column>
+                		<w2:column dataType="text" id="sFax3"
+                			name="sFax3">
+                		</w2:column>
+                		<w2:column dataType="text" id="sStatus"
+                			name="sStatus">
+                		</w2:column>
+                		<w2:column dataType="text" id="sRequiredDate"
+                			name="sRequiredDate">
+                		</w2:column>
+                		<w2:column dataType="text" id="sUserID"
+                			name="sUserID">
+                		</w2:column>
+                		<w2:column dataType="text" id="sUserName"
+                			name="sUserName">
+                		</w2:column>
+                		<w2:column dataType="text" id="sLoginName"
+                			name="sLoginName">
+                		</w2:column>
+                		<w2:column dataType="text" id="sFileName"
+                			name="sFileName">
+                		</w2:column>
+                		<w2:column dataType="text" id="sContents"
+                			name="sContents">
+                		</w2:column>
+                		<w2:column dataType="text" id="sApplyType"
+                			name="sApplyType">
+                		</w2:column>
+                		<w2:column dataType="text" id="sApplyKind"
+                			name="sApplyKind">
+                		</w2:column>
+                		<w2:column dataType="text" id="sApplySer"
+                			name="sApplySer">
+                		</w2:column>
+                		<w2:column dataType="number" id="nChgNum"
+                			name="nChgNum">
+                		</w2:column>
+                		<w2:column dataType="text" id="nEndorseNo"
+                			name="nEndorseNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sIssuYear"
+                			name="sIssuYear">
+                		</w2:column>
+                		<w2:column dataType="text" id="sDepartName"
+                			name="sDepartName">
+                		</w2:column>
+                		<w2:column dataType="text" id="sRecpNo"
+                			name="sRecpNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sIsspl"
+                			name="sIsspl">
+                		</w2:column>
+                		<w2:column dataType="text" id="sIssur"
+                			name="sIssur">
+                		</w2:column>
+                		<w2:column dataType="text" id="sIssuDate"
+                			name="sIssuDate">
+                		</w2:column>
+                		<w2:column dataType="text" id="sIssuHms"
+                			name="sIssuHms">
+                		</w2:column>
+                		<w2:column dataType="text" id="bgImage"
+                			name="bgImage">
+                		</w2:column>
+                		<w2:column dataType="text" id="sCrNo"
+                			name="sCrNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPlanNo"
+                			name="sPlanNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPsnGroupFlgcd"
+                			name="sPsnGroupFlgcd">
+                		</w2:column>
+                		<w2:column dataType="text" id="sGdCd"
+                			name="sGdCd">
+                		</w2:column>
+                		<w2:column dataType="text" id="sGdCdName"
+                			name="sGdCdName">
+                		</w2:column>
+                		<w2:column dataType="text" id="sCrtorCd"
+                			name="sCrtorCd">
+                		</w2:column>
+                		<w2:column dataType="text" id="sCrtorName"
+                			name="sCrtorName">
+                		</w2:column>
+                		<w2:column dataType="text" id="sInrpsCd"
+                			name="sInrpsCd">
+                		</w2:column>
+                		<w2:column dataType="text" id="sInrpsName"
+                			name="sInrpsName">
+                		</w2:column>
+                		<w2:column dataType="text" id="sCardNo"
+                			name="sCardNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sAdmitNo"
+                			name="sAdmitNo">
+                		</w2:column>
+                		<w2:column dataType="text"
+                			id="sIssueCardComName" name="sIssueCardComName">
+                		</w2:column>
+                		<w2:column dataType="text" id="sValidThru"
+                			name="sValidThru">
+                		</w2:column>
+                		<w2:column dataType="text" id="nReqAmt"
+                			name="nReqAmt">
+                		</w2:column>
+                		<w2:column dataType="text" id="sInstall"
+                			name="sInstall">
+                		</w2:column>
+                		<w2:column dataType="text" id="sAdmitDate"
+                			name="sAdmitDate">
+                		</w2:column>
+                		<w2:column dataType="text" id="sAdmitTime"
+                			name="sAdmitTime">
+                		</w2:column>
+                		<w2:column dataType="text" id="imgURL"
+                			name="imgURL">
+                		</w2:column>
+                		<w2:column dataType="text" id="sContName"
+                			name="sContName">
+                		</w2:column>
+                		<w2:column dataType="text" id="nBussPrem"
+                			name="nBussPrem">
+                		</w2:column>
+                		<w2:column dataType="text" id="copies"
+                			name="copies">
+                		</w2:column>
+                		<w2:column id="sTaskValue" name="sTaskValue"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sActionValue" name="sActionValue"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sRptName" name="sRptName"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="col53" name="name53"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="col54" name="name54"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="col55" name="name55"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sDatatype" name="name56"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sBottom_arg1" name="name57"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sBottom_arg2" name="name58"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sBottom_arg3" name="name59"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DS_SAVESENDINFO"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column dataType="text" id="sDmCode"
+                			name="sDmCode">
+                		</w2:column>
+                		<w2:column dataType="text" id="sRelKey"
+                			name="sRelKey">
+                		</w2:column>
+                		<w2:column dataType="text" id="sCallSawon"
+                			name="sCallSawon">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPolicyNo"
+                			name="sPolicyNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="nChangeNo"
+                			name="nChangeNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sCustNo"
+                			name="sCustNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sDmMethod"
+                			name="sDmMethod">
+                		</w2:column>
+                		<w2:column dataType="text" id="sAdrEx"
+                			name="sAdrEx">
+                		</w2:column>
+                		<w2:column dataType="text" id="nSeqNo"
+                			name="nSeqNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sLoginName"
+                			name="sLoginName">
+                		</w2:column>
+                		<w2:column dataType="text" id="sNewBizCode"
+                			name="sNewBizCode">
+                		</w2:column>
+                		<w2:column dataType="text" id="sCsmNum"
+                			name="sCsmNum">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPlrNam"
+                			name="sPlrNam">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPlrZco"
+                			name="sPlrZco">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPlrAdr1"
+                			name="sPlrAdr1">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPlrAdr2"
+                			name="sPlrAdr2">
+                		</w2:column>
+                		<w2:column dataType="text" id="sBizCode"
+                			name="sBizCode">
+                		</w2:column>
+                		<w2:column dataType="text" id="sApplyType"
+                			name="sApplyType">
+                		</w2:column>
+                		<w2:column dataType="text" id="sApplyKind"
+                			name="sApplyKind">
+                		</w2:column>
+                		<w2:column dataType="text" id="sApplySer"
+                			name="sApplySer">
+                		</w2:column>
+                		<w2:column dataType="number" id="nChgNum"
+                			name="nChgNum">
+                		</w2:column>
+                		<w2:column dataType="number" id="nAdrsChangeNo"
+                			name="nAdrsChangeNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sAdrsType"
+                			name="sAdrsType">
+                		</w2:column>
+                		<w2:column dataType="text" id="nEndorseNo"
+                			name="nEndorseNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sKeyType"
+                			name="sKeyType">
+                		</w2:column>
+                		<w2:column dataType="text" id="sCrNo"
+                			name="sCrNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPlanNo"
+                			name="sPlanNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sSsrtDate"
+                			name="sSsrtDate">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPsnGroupFlgcd"
+                			name="sPsnGroupFlgcd">
+                		</w2:column>
+                		<w2:column dataType="text" id="sGdCd"
+                			name="sGdCd">
+                		</w2:column>
+                		<w2:column dataType="text" id="L007Yn"
+                			name="L007Yn">
+                		</w2:column>
+                		<w2:column dataType="text" id="nBussPrem"
+                			name="nBussPrem">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPrintReason"
+                			name="sPrintReason">
+                		</w2:column>
+                		<w2:column dataType="text" id="L133Yn"
+                			name="L133Yn">
+                		</w2:column>
+                		<w2:column id="sTaskValue" name="name35"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sActionValue" name="name36"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sRptName" name="name37"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sDatatype" name="name38"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sBottom_arg1" name="name39"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sBottom_arg2" name="name40"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sBottom_arg3" name="name41"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DS_SAVEEMAILINFO"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column dataType="text" id="sBizCode"
+                			name="sBizCode">
+                		</w2:column>
+                		<w2:column dataType="text" id="xslPath"
+                			name="xslPath">
+                		</w2:column>
+                		<w2:column dataType="text" id="sCustNo"
+                			name="sCustNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sDmCode"
+                			name="sDmCode">
+                		</w2:column>
+                		<w2:column dataType="text" id="sTargetDate"
+                			name="sTargetDate">
+                		</w2:column>
+                		<w2:column dataType="text" id="sUserID"
+                			name="sUserID">
+                		</w2:column>
+                		<w2:column dataType="text" id="sFromName"
+                			name="sFromName">
+                		</w2:column>
+                		<w2:column dataType="text" id="sFromEmail"
+                			name="sFromEmail">
+                		</w2:column>
+                		<w2:column dataType="text" id="sToName"
+                			name="sToName">
+                		</w2:column>
+                		<w2:column dataType="text" id="sToEmail"
+                			name="sToEmail">
+                		</w2:column>
+                		<w2:column dataType="text" id="sFileName"
+                			name="sFileName">
+                		</w2:column>
+                		<w2:column dataType="text" id="sContents"
+                			name="sContents">
+                		</w2:column>
+                		<w2:column dataType="text" id="sContactSerial"
+                			name="sContactSerial">
+                		</w2:column>
+                		<w2:column dataType="text" id="sRelkey"
+                			name="sRelkey">
+                		</w2:column>
+                		<w2:column dataType="text" id="sRelkeyType"
+                			name="sRelkeyType">
+                		</w2:column>
+                		<w2:column dataType="text" id="sBodyHTML"
+                			name="sBodyHTML">
+                		</w2:column>
+                		<w2:column dataType="text" id="sLoginName"
+                			name="sLoginName">
+                		</w2:column>
+                		<w2:column dataType="text" id="sSecureFlag"
+                			name="sSecureFlag">
+                		</w2:column>
+                		<w2:column dataType="text" id="sSecurePWD"
+                			name="sSecurePWD">
+                		</w2:column>
+                		<w2:column dataType="text" id="sApplyType"
+                			name="sApplyType">
+                		</w2:column>
+                		<w2:column dataType="text" id="sApplyKind"
+                			name="sApplyKind">
+                		</w2:column>
+                		<w2:column dataType="text" id="sApplySer"
+                			name="sApplySer">
+                		</w2:column>
+                		<w2:column dataType="text" id="sCheckSecureFlag"
+                			name="sCheckSecureFlag">
+                		</w2:column>
+                		<w2:column dataType="text" id="sAction"
+                			name="sAction">
+                		</w2:column>
+                		<w2:column dataType="number" id="nChgNum"
+                			name="nChgNum">
+                		</w2:column>
+                		<w2:column dataType="text" id="nEndorseNo"
+                			name="nEndorseNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPsnGroupFlgcd"
+                			name="sPsnGroupFlgcd">
+                		</w2:column>
+                		<w2:column dataType="text" id="sGdCd"
+                			name="sGdCd">
+                		</w2:column>
+                		<w2:column dataType="text" id="sRecpNo"
+                			name="sRecpNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sDepartName"
+                			name="sDepartName">
+                		</w2:column>
+                		<w2:column dataType="text" id="nBussPrem"
+                			name="nBussPrem">
+                		</w2:column>
+                		<w2:column dataType="text" id="sGdCdNm"
+                			name="sGdCdNm">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPlanCd"
+                			name="sPlanCd">
+                		</w2:column>
+                		<w2:column dataType="text" id="sInsurStrtdate"
+                			name="sInsurStrtdate">
+                		</w2:column>
+                		<w2:column id="sTaskValue" name="name35"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sActionValue" name="name36"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sRptName" name="name37"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sDatatype" name="name38"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sBottom_arg1" name="name39"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sBottom_arg2" name="name40"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sBottom_arg3" name="name41"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_Year" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="CODE" name="CODE"></w2:column>
+                        <w2:column dataType="text" id="TEXT" name="TEXT"></w2:column>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_PRIAA02_List" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sDmCode" name="sDmCode"></w2:column>
+                        <w2:column dataType="text" id="sDmName" name="sDmName"></w2:column>
+                        <w2:column dataType="text" id="sDmType" name="sDmType"></w2:column>
+                        <w2:column dataType="text" id="sDmTpCd1" name="sDmTpCd1"></w2:column>
+                        <w2:column dataType="text" id="sDmTpCd2" name="sDmTpCd2"></w2:column>
+                        <w2:column dataType="text" id="sDmTpCd3" name="sDmTpCd3"></w2:column>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_long_mPlr" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCustNo" name="sCustNo"></w2:column>
+                        <w2:column dataType="text" id="sCstId" name="sCstId"></w2:column>
+                        <w2:column dataType="text" id="nSeqNo" name="nSeqNo"></w2:column>
+                        <w2:column dataType="text" id="sName" name="sName"></w2:column>
+                        <w2:column dataType="text" id="sCustType" name="sCustType"></w2:column>
+                        <w2:column dataType="text" id="sClass" name="sClass"></w2:column>
+                        <w2:column dataType="text" id="sMarry" name="sMarry"></w2:column>
+                        <w2:column dataType="text" id="sJobCode" name="sJobCode"></w2:column>
+                        <w2:column dataType="text" id="sJobName" name="sJobName"></w2:column>
+                        <w2:column dataType="text" id="sDrvCls" name="sDrvCls"></w2:column>
+                        <w2:column dataType="text" id="sJobCls" name="sJobCls"></w2:column>
+                        <w2:column dataType="text" id="nHomAdrsChangeNo" name="nHomAdrsChangeNo"></w2:column>
+                        <w2:column dataType="text" id="sHomZco" name="sHomZco"></w2:column>
+                        <w2:column dataType="text" id="sHomAdr1" name="sHomAdr1"></w2:column>
+                        <w2:column dataType="text" id="sHomAdr2" name="sHomAdr2"></w2:column>
+                        <w2:column dataType="text" id="nCrpAdrsChangeNo" name="nCrpAdrsChangeNo"></w2:column>
+                        <w2:column dataType="text" id="sCrpZco" name="sCrpZco"></w2:column>
+                        <w2:column dataType="text" id="sCrpAdr1" name="sCrpAdr1"></w2:column>
+                        <w2:column dataType="text" id="sCrpAdr2" name="sCrpAdr2"></w2:column>
+                        <w2:column dataType="text" id="nEtcAdrsChangeNo" name="nEtcAdrsChangeNo"></w2:column>
+                        <w2:column dataType="text" id="sEtcZco" name="sEtcZco"></w2:column>
+                        <w2:column dataType="text" id="sEtcAdr1" name="sEtcAdr1"></w2:column>
+                        <w2:column dataType="text" id="sEtcAdr2" name="sEtcAdr2"></w2:column>
+                        <w2:column dataType="text" id="sAdrsType" name="sAdrsType"></w2:column>
+                        <w2:column dataType="text" id="nAdrsChangeNo" name="nAdrsChangeNo"></w2:column>
+                        <w2:column dataType="text" id="sAdrsZco" name="sAdrsZco"></w2:column>
+                        <w2:column dataType="text" id="sAdrs1" name="sAdrs1"></w2:column>
+                        <w2:column dataType="text" id="sAdrs2" name="sAdrs2"></w2:column>
+                        <w2:column dataType="text" id="sDMAdrsTyp" name="sDMAdrsTyp"></w2:column>
+                        <w2:column dataType="text" id="nTelChangeNo" name="nTelChangeNo"></w2:column>
+                        <w2:column dataType="text" id="sHomeTel1" name="sHomeTel1"></w2:column>
+                        <w2:column dataType="text" id="sHomeTel2" name="sHomeTel2"></w2:column>
+                        <w2:column dataType="text" id="sHomeTel3" name="sHomeTel3"></w2:column>
+                        <w2:column dataType="text" id="sOfficeTel1" name="sOfficeTel1"></w2:column>
+                        <w2:column dataType="text" id="sOfficeTel2" name="sOfficeTel2"></w2:column>
+                        <w2:column dataType="text" id="sOfficeTel3" name="sOfficeTel3"></w2:column>
+                        <w2:column dataType="text" id="sCellPhone1" name="sCellPhone1"></w2:column>
+                        <w2:column dataType="text" id="sCellPhone2" name="sCellPhone2"></w2:column>
+                        <w2:column dataType="text" id="sCellPhone3" name="sCellPhone3"></w2:column>
+                        <w2:column dataType="text" id="sFax1" name="sFax1"></w2:column>
+                        <w2:column dataType="text" id="sFax2" name="sFax2"></w2:column>
+                        <w2:column dataType="text" id="sFax3" name="sFax3"></w2:column>
+                        <w2:column dataType="text" id="sEtcType" name="sEtcType"></w2:column>
+                        <w2:column dataType="text" id="sEtcTel1" name="sEtcTel1"></w2:column>
+                        <w2:column dataType="text" id="sEtcTel2" name="sEtcTel2"></w2:column>
+                        <w2:column dataType="text" id="sEtcTel3" name="sEtcTel3"></w2:column>
+                        <w2:column dataType="text" id="sEmail1" name="sEmail1"></w2:column>
+                        <w2:column dataType="text" id="sEmail2" name="sEmail2"></w2:column>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_LTIEA00_Copy" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCrNo" name="sCrNo"></w2:column>
+                        <w2:column dataType="text" id="sGdCd" name="sGdCd"></w2:column>
+                        <w2:column dataType="text" id="GdNm" name="GdNm"></w2:column>
+                        <w2:column dataType="text" id="sCrtorCd" name="sCrtorCd"></w2:column>
+                        <w2:column dataType="text" id="sCrtorName" name="sCrtorName"></w2:column>
+                        <w2:column dataType="text" id="sZip1" name="sZip1"></w2:column>
+                        <w2:column dataType="text" id="sZip2" name="sZip2"></w2:column>
+                        <w2:column dataType="text" id="addrs" name="addrs"></w2:column>
+                        <w2:column dataType="text" id="sAdrsAdd" name="sAdrsAdd"></w2:column>
+                        <w2:column dataType="text" id="sEmail1" name="sEmail1"></w2:column>
+                        <w2:column dataType="text" id="sEmail2" name="sEmail2"></w2:column>
+                        <w2:column dataType="text" id="sFax1" name="sFax1"></w2:column>
+                        <w2:column dataType="text" id="sFax2" name="sFax2"></w2:column>
+                        <w2:column dataType="text" id="sFax3" name="sFax3"></w2:column>
+                        <w2:column dataType="text" id="sInsurStrtdate" name="sInsurStrtdate"></w2:column>
+                        <w2:column dataType="text" id="nMailRvadChngSeq" name="nMailRvadChngSeq"></w2:column>
+                        <w2:column dataType="text" id="sCrtorCstId" name="sCrtorCstId"></w2:column>
+                        <w2:column dataType="text" id="sCstFlgcd" name="sCstFlgcd"></w2:column>
+                        <w2:column dataType="text" id="sAddrFlgcd" name="sAddrFlgcd"></w2:column>
+                        <w2:column dataType="text" id="nAddrChngSeq" name="nAddrChngSeq"></w2:column>
+                        <w2:column dataType="text" id="nTelnoChngSeq" name="nTelnoChngSeq"></w2:column>
+                        <w2:column dataType="text" id="sMailRvadAddrFlagCd" name="sMailRvadAddrFlagCd"></w2:column>
+                        <w2:column dataType="text" id="sPlanNo" name="sPlanNo"></w2:column>
+                        <w2:column dataType="text" id="sPsnGroupFlgcd" name="sPsnGroupFlgcd"></w2:column>
+                        <w2:column dataType="text" id="nCrChngNo" name="nCrChngNo"></w2:column>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_LTIJA01" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sIssuAvaYn" name="sIssuAvaYn"></w2:column>
+                        <w2:column dataType="text" id="sStndYear" name="sStndYear"></w2:column>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="ds_code" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_GdList" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sGdCd" name="sGdCd"></w2:column>
+                        <w2:column dataType="text" id="sGdNm" name="sGdNm"></w2:column>
+                        <w2:column dataType="text" id="sPlanCd" name="sPlanCd"></w2:column>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <sGdCd></sGdCd>
+                            <sGdNm><![CDATA[-선택-]]></sGdNm>
+                            <sPlanCd></sPlanCd>
+                        </w2:row>
+                        <w2:row>
+                            <sGdCd><![CDATA[2304]]></sGdCd>
+                            <sGdNm><![CDATA[장기 The-K 운전자보험(1206) 기본형]]></sGdNm>
+                            <sPlanCd><![CDATA[02]]></sPlanCd>
+                        </w2:row>
+                        <w2:row>
+                            <sGdCd><![CDATA[2304]]></sGdCd>
+                            <sGdNm><![CDATA[장기 The-K 운전자보험(1206) 고급형]]></sGdNm>
+                            <sPlanCd><![CDATA[03]]></sPlanCd>
+                        </w2:row>
+                        <w2:row>
+                            <sGdCd><![CDATA[2201]]></sGdCd>
+                            <sGdNm><![CDATA[장기 The-K 상해보험(1204) 운전자형]]></sGdNm>
+                            <sPlanCd><![CDATA[02]]></sPlanCd>
+                        </w2:row>
+                        <w2:row>
+                            <sGdCd><![CDATA[2201]]></sGdCd>
+                            <sGdNm><![CDATA[장기 The-K 상해보험(1204) 종합형]]></sGdNm>
+                            <sPlanCd><![CDATA[03]]></sPlanCd>
+                        </w2:row>
+                        <w2:row>
+                            <sGdCd><![CDATA[1605]]></sGdCd>
+                            <sGdNm><![CDATA[에듀카 운전자보험]]></sGdNm>
+                            <sPlanCd><![CDATA[00]]></sPlanCd>
+                        </w2:row>
+                        <w2:row>
+                            <sGdCd><![CDATA[2801]]></sGdCd>
+                            <sGdNm><![CDATA[장기 The모아 저축보험(1204)]]></sGdNm>
+                            <sPlanCd><![CDATA[00]]></sPlanCd>
+                        </w2:row>
+                        <w2:row>
+                            <sGdCd><![CDATA[2100]]></sGdCd>
+                            <sGdNm><![CDATA[장기 The하얀미소 건강보험]]></sGdNm>
+                            <sPlanCd><![CDATA[00]]></sPlanCd>
+                        </w2:row>
+                        <w2:row>
+                            <sGdCd><![CDATA[2202]]></sGdCd>
+                            <sGdNm><![CDATA[장기 The큰사랑 생활보장보험]]></sGdNm>
+                            <sPlanCd><![CDATA[00]]></sPlanCd>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_sPrintReason" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCd" name="sCd"></w2:column>
+                        <w2:column dataType="text" id="sCdNm" name="sCdNm"></w2:column>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <sCd></sCd>
+                            <sCdNm><![CDATA[선택]]></sCdNm>
+                        </w2:row>
+                        <w2:row>
+                            <sCd><![CDATA[02]]></sCd>
+                            <sCdNm><![CDATA[단순재발행]]></sCdNm>
+                        </w2:row>
+                        <w2:row>
+                            <sCd><![CDATA[03]]></sCd>
+                            <sCdNm><![CDATA[배서재발행]]></sCdNm>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DS_SAVESENDPRINT"
+                	repeatNode="map">
+                	<w2:columnInfo>
+                		<w2:column dataType="text" id="sDmCode"
+                			name="sDmCode">
+                		</w2:column>
+                		<w2:column dataType="text" id="sRelKey"
+                			name="sRelKey">
+                		</w2:column>
+                		<w2:column dataType="text" id="sCallSawon"
+                			name="sCallSawon">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPolicyNo"
+                			name="sPolicyNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="nChangeNo"
+                			name="nChangeNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sCustNo"
+                			name="sCustNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sDmMethod"
+                			name="sDmMethod">
+                		</w2:column>
+                		<w2:column dataType="text" id="sAdrEx"
+                			name="sAdrEx">
+                		</w2:column>
+                		<w2:column dataType="text" id="nSeqNo"
+                			name="nSeqNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sLoginName"
+                			name="sLoginName">
+                		</w2:column>
+                		<w2:column dataType="text" id="sNewBizCode"
+                			name="sNewBizCode">
+                		</w2:column>
+                		<w2:column dataType="text" id="sCsmNum"
+                			name="sCsmNum">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPlrNam"
+                			name="sPlrNam">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPlrZco"
+                			name="sPlrZco">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPlrAdr1"
+                			name="sPlrAdr1">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPlrAdr2"
+                			name="sPlrAdr2">
+                		</w2:column>
+                		<w2:column dataType="text" id="sBizCode"
+                			name="sBizCode">
+                		</w2:column>
+                		<w2:column dataType="text" id="sApplyType"
+                			name="sApplyType">
+                		</w2:column>
+                		<w2:column dataType="text" id="sApplyKind"
+                			name="sApplyKind">
+                		</w2:column>
+                		<w2:column dataType="text" id="sApplySer"
+                			name="sApplySer">
+                		</w2:column>
+                		<w2:column dataType="number" id="nChgNum"
+                			name="nChgNum">
+                		</w2:column>
+                		<w2:column dataType="number" id="nAdrsChangeNo"
+                			name="nAdrsChangeNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sAdrsType"
+                			name="sAdrsType">
+                		</w2:column>
+                		<w2:column dataType="text" id="nEndorseNo"
+                			name="nEndorseNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sKeyType"
+                			name="sKeyType">
+                		</w2:column>
+                		<w2:column dataType="text" id="sCrNo"
+                			name="sCrNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPlanNo"
+                			name="sPlanNo">
+                		</w2:column>
+                		<w2:column dataType="text" id="sFileName"
+                			name="sFileName">
+                		</w2:column>
+                		<w2:column dataType="text" id="sContents"
+                			name="sContents">
+                		</w2:column>
+                		<w2:column dataType="text" id="sKey"
+                			name="sKey">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPsnGroupFlgcd"
+                			name="sPsnGroupFlgcd">
+                		</w2:column>
+                		<w2:column dataType="text" id="sGdCd"
+                			name="sGdCd">
+                		</w2:column>
+                		<w2:column dataType="text" id="sDrvrGdYn"
+                			name="sDrvrGdYn">
+                		</w2:column>
+                		<w2:column dataType="text" id="pCount"
+                			name="pCount">
+                		</w2:column>
+                		<w2:column dataType="text" id="imgURL"
+                			name="imgURL">
+                		</w2:column>
+                		<w2:column dataType="text" id="sOdiName"
+                			name="sOdiName">
+                		</w2:column>
+                		<w2:column dataType="text" id="copies"
+                			name="copies">
+                		</w2:column>
+                		<w2:column dataType="text" id="sInrpsSeqNoList"
+                			name="sInrpsSeqNoList">
+                		</w2:column>
+                		<w2:column dataType="text" id="sPrintFlg"
+                			name="sPrintFlg">
+                		</w2:column>
+                		<w2:column dataType="text" id="sIssID"
+                			name="sIssID">
+                		</w2:column>
+                		<w2:column id="sTaskValue" name="name41"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sActionValue" name="name42"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sRptName" name="name43"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sDatatype" name="name44"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sBottom_arg1" name="name45"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sBottom_arg2" name="name46"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sBottom_arg3" name="name47"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_Warning" keyNode="//*/WARNING" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_Code_Warning" keyNode="//*/WARNING" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_DmMethod" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_LTIEA00" keyNode="//*/vector/data/LTIEA00ADDR" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_Email" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="ds_Save_chk" keyNode="//*/RESULT" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_SAVEFAXINFO_SaveWarning" keyNode="//*/WARNING" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_PRIAA02Warning" keyNode="//*/WARNING" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_PRIAA02_List" keyNode="//*/vector/data/PRIAA02" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_LTIJA01" keyNode="//*/vector/data/LTIJA01" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_RtnAmt" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_Warning_RtnAmt" keyNode="//*/WARNING" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_Warning_JA01" keyNode="//*/WARNING" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_getCrInfo" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_chekCrInqrAuth" keyNode="//*/AXR931" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_Cst" keyNode="//*/hashtable/data/CUSAA03" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_CstInfo" keyNode="//*/hashtable/data/CUSAA01" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_GdList" keyNode="//*/multi" repeatNode="map"></w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_RenwlPrem" keyNode="//*/vector/data/LTIDA19" repeatNode="map"></w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection></w2:workflowCollection>
+        </xf:model>
+	  <script src="/cm/js/convertJs/Global_Script.js"/>
+  <script src="/cm/js/convertJs/comm_Webservice.js"/>
+  <script src="/cm/js/convertJs/NewGen_Script.js"/>
+  <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+        <script><![CDATA[
+
+/*■■■■■■■■■■■■■■■■■■■■■스크립트 변환 결과■■■■■■■■■■■■■■■■■■■■■
+※본 주석은 수작업 변환 참고용입니다. ★개발완료 후에는 필히 삭제해주세요.★
+변환시간:  Wed Sep 06 2017 09:52:11 GMT+0900 (대한민국 표준시)
+파일ID:  D192.xml
+
+아래의 작업을 먼저 해주세요.
+
+
+1. scwin.init() 함수에 아래의 글로벌 데이터리스트를 선언합니다.
+gds.gDs_LinkArg();,
+gds.gDs_ServerTime();
+
+2. 공통.JS 파일을 include해주세요.
+</xf:model>
+ ***include 위치(하단에 주석처리 되어 있습니다.)***
+<script><![CDATA[
+
+예시)
+</xf:model>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script><![CDATA[
+
+3. 표준에 어긋난 코딩인 경우 ✖ 으로 return 되어 있습니다. 검색으로 ✖이 나온다면 ASIS 소스를 확인해주세요.
+ex) ASIS if(a = 1 and b = 2) {} ------> TOBE if (✖ = 2) {}
+
+4. dialog함수로 팝업을 호출 할 경우에는 실제 파일이 있는 경로로 변경해주세요
+ex) 현재 PROJECT_PATH_TEMP입니다. 
+
+-호출구조-
+
+호출구조는 모든 화면이 아닌 변환대상화면을 기준으로 분석하였습니다.
+선언하지 않은 변수를 사용중이라면 caller 에서 넘겼을 가능성이 높습니다.
+파일 ID는 소스의 form ID로 가정했습니다. 아래의 결과는 따로 확인해주세요.
+D192.xml에서 호출 (callee ID):  B500
+D192.xml을 호출   (caller ID):  
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+/****************************************************************************
+ * 프로그램번호   : D192
+ * 프로그램명     : 제증명서발급
+ * 파일명         : D192.xml
+ * 프로그램 내용  : 대면 간편설계 부분 안내문 출력 popUp
+ * 관련 프로그램  : 
+ * 작성자         : 이정수
+ * 작성일         : 20103-01-11
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+// <script src="/cm/js/common.js"/>
+// <script src="/cm/js/val_lib.js"/>
+// <script src="/cm/js/util.js"/>
+// <script src="/cm/js/transSub.js"/>
+// <script src="/cm/js/callService.js"/>
+// <script src="/cm/js/gds.js"/>
+// <script src="/cm/js/convertJs/conv.js"/>
+// <script src="/cm/js/convertJs/Global_Script.js"/>
+// <script src="/cm/js/convertJs/comm_Webservice.js"/>
+// <script src="/cm/js/convertJs/NewGen_Script.js"/>
+// <script src="/cm/js/convertJs/Acd_Script.js"/>
+// <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+// 날자 변수
+var sysDate = "";
+
+var sDate = "";
+
+var sTime = "";
+
+var rdo_sDmcode = "";
+
+var sCrNo = "";
+
+// 계약번호 
+var nChgNum = 0;
+
+// 계약변경번호 번호
+var sInsCode = "";
+
+// 피보험자코드
+var nChangeDMAddrNo = 0;
+
+// 주소변경회차
+var nChangeDMTelNo = 0;
+
+// 전화번호변경회차
+var sAddrFlgcd = "";
+
+// 주소구분코드
+var sRecpNo = "";
+
+// 영수증번호
+var sIsspl = "";
+
+// 발행부서명
+var sIssur = "";
+
+// 발행자명
+var sIssuDate = "";
+
+// 발행일자
+var sIssuHms = "";
+
+// 발행시간
+var sGdCdName = "";
+
+var sCrtorCd = "";
+
+var sInrpsCd = "";
+
+var sInrpsName = "";
+
+var sCardNo = "";
+
+var sAdmitNo = "";
+
+var sIssueCardComName = "";
+
+var sValidThru = "";
+
+var nReqAmt = "";
+
+var sInstall = "";
+
+var sAdmitDate = "";
+
+var sAdmitTime = "";
+
+var currentDate = "";
+
+var sIssID = "";
+
+// 청약 Parm
+var sPlanNo;
+
+var sPsnGroupFlgcd;
+
+var sGdCd;
+
+var tab;
+
+var sStdDate4 = "20120706";
+
+var sSrdoIssuDate = "";
+
+//청약서발행일
+var sToday;
+var pageSize = "";
+var pageNo = "";
+var sStdDate201701 = "20170101";
+var sRdchCrYn;
+var sCmprCrNotcSsrt;
+var sPlanProgRankCd;
+var sSimpleYn;
+var taskValue = "";
+var actionValue = "";
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_OnLoadCompleted
+// 내용        : 폼로드할때 처리할 내용
+//---------------------------------------------------------------------------
+scwin.init = function() {
+var pro = Promise.resolve();
+
+window.top.util.winTopShowModalChk = "T";
+util.winTopShowModal();
+
+ 
+
+pro = pro.then(function(rv) {
+    return util.winTopShowModalPromise();
+});
+
+ 
+
+pro = pro.then(function(rv) {
+
+    wprom.setPopupInit(689,254, "증명서출력");
+     //init 부분 함수 입력하는곳
+
+	var indata = $w.getParameter("param");
+	try {
+			fv_args = JSON.parse(indata);
+			console.log(fv_args);
+	
+		    if (wconv.length(fv_args.sPlanNo) > 0) {
+		        sPlanNo = fv_args.sPlanNo;
+		    }
+		    if (wconv.length(fv_args.sPsnGroupFlgcd) > 0) {
+		        sPsnGroupFlgcd = fv_args.sPsnGroupFlgcd;
+		    }
+		    if (wconv.length(fv_args.sGdCd) > 0) {
+		        sGdCd = fv_args.sGdCd;
+		    }
+		    if (wconv.length(fv_args.sGdCdNm) > 0) {
+		        sGdCdName = fv_args.sGdCdNm;
+		    }
+		    if (wconv.length(fv_args.sPlanProgRankCd) > 0) {
+		        sPlanProgRankCd = fv_args.sPlanProgRankCd;
+		    }
+		    if (wconv.length(fv_args.sInrpsName) > 0) {
+		        sInrpsName = fv_args.sInrpsName;
+		    }
+		    if (wconv.length(fv_args.sRdchCrYn) > 0) {
+		        sRdchCrYn = fv_args.sRdchCrYn;
+		    }
+		    if (wconv.length(fv_args.tab) > 0) {
+		        tab = fv_args.tab;
+		    }
+		    if (wconv.length(fv_args.sCmprCrNotcSsrt) > 0) {
+		        sCmprCrNotcSsrt = fv_args.sCmprCrNotcSsrt;
+		    }
+		    if (wconv.length(fv_args.sSimpleYn) > 0) {
+		        sSimpleYn = fv_args.sSimpleYn;
+		    }
+	} catch(e) {
+	};
+    /** 링크 콤보 데이터를 가저온다. 
+     반드시 링크 데이터셋 ID = Ds_LinkList, 링크콤보 ID = cmb_linkMenu !!!!!
+     링크 버튼 ID = btn_linkMenu !!!!!*/
+//    gfn_GetLinkList("D192");
+    //버튼 활성,비활성화
+    // 현재시간 setting
+    //global.http.Sync = true;
+    //getServerTime();
+    //sToday = substr(gDs_ServerTime.GetColumn(0, "sToday"),0,8);
+    //global.http.Sync = false;	
+    sToday = wconv.substr(gfn_GetSysTime(), 0, 8);
+//    gfn_ButtonEnable(true, false, false, false, false, false, false, false, true); //사용하지 않음
+
+//    nfn_getCommonData(SOBJ_Common, DOBJ_Common, "Ds_Email", "1010", "cmb_Email");
+	nfn_getCommonData( "Ds_Email", "1010", "cmb_Email");
+    if (sSimpleYn == "Y") {
+        rdo_L006.setDisabled(true);
+    }
+    if (util.getGdsValue("gUserID") == "") {
+        D192_rdo_L224.Visible = true;
+    }
+    scwin.lfn_Search(); // 조회
+ //이메일 주소 띄우기--------------------------------------------
+    if (Ds_Email.getRowCount() > 1) {
+        var insRow = util.insertRow(Ds_Email, 0);
+        /*수작업 변환 개발자 가이드(테스트 중)
+        dataList에 row를 추가하고 setCellData를 하는 경우 첫 번째 인자를 insRow로 변경해주세요.*/
+        Ds_Email.setCellData(0, "sCodeId", "");
+        Ds_Email.setCellData(0, "sCodeName", "선택");
+        cmb_Email.setSelectedIndex( 0 ); //dataTab.tab1.Cmb_Email2.index=0;\
+    }
+	gds.gDs_Email_Create();
+	cmb_Email.setNodeSet("data:gDs_Email","TEXT","CODE");
+//---------------------------------------------------------------
+ 
+
+    //init 함수를 종료하고자 할때 사용한다.
+//    return Promise.reject("오류관련처리");
+});
+
+
+pro = pro.then(function(rv) {
+    util.winTopHideModal();
+});
+
+ 
+
+pro = pro.catch(function(rj) {
+    util.winTopHideModal();
+    //alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+});
+
+ 
+
+return pro;
+};
+
+scwin.setPolicyNo = function(policyNo) {
+    gds.gDs_LinkArg.removeAll();
+    var insRow = util.insertRow(gds.gDs_LinkArg, 0);
+    /*수작업 변환 개발자 가이드(테스트 중)
+    dataList에 row를 추가하고 setCellData를 하는 경우 첫 번째 인자를 insRow로 변경해주세요.*/
+    util.insertColumn(gds.gDs_LinkArg, [
+        [
+            "sCrNo",
+            "sCrNo",
+            "text"
+        ]
+    ]);
+    util.insertColumn(gds.gDs_LinkArg, [
+        [
+            "sScrnId",
+            "sScrnId",
+            "text"
+        ]
+    ]);
+    gds.gDs_LinkArg.setCellData(0, "sCrNo", policyNo);
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_cmb_linkMenu_OnChanged
+// 내용        : 링크페이지 선택시 Event처리
+//---------------------------------------------------------------------------
+scwin.lfn_cmb_linkMenu_OnChanged = function(strCode) {
+    gfn_OpenLinkPage(strCode);
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 조회버튼 클릭 Event처리 ( 상담직원정정 조회 )
+//---------------------------------------------------------------------------
+scwin.lfn_Search_Async = function(e) { //완료
+    util.eventAsyncCall(this, scwin.lfn_Search, arguments);
+};
+
+scwin.lfn_Search = function(e) {
+    scwin.lfn_SearchData(1);
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_SearchData
+// 내용        : (계약번호로  상품,계약자,우편,E-Mail 정보등 ) 조회버튼 클릭 Event처리
+//---------------------------------------------------------------------------
+scwin.lfn_SearchData = function(obj) {
+    wconv.clear(Ds_LTIEA00);
+    wconv.clear(Ds_LTIEA00_Copy);
+    wconv.clear(DsWs_LTIEA00);
+//    SOBJ_DataSearch.WSDL = gds.gWsdlBasis;
+//    var MethodObj = gfn_CreateMethodObj(SOBJ_DataSearch, "com.inswave.longterm.psv.ens.task.EBE114TASK", "selectCertiIssueInfo", "", "");
+//
+//    /*  조회기준 */
+//    gfn_SetParam(MethodObj, "sSearchStd", "2"); // 조회기준 
+//    gfn_SetParam(MethodObj, "sPlanNo", sPlanNo); // 설계번호 
+//    gfn_CallService(SOBJ_DataSearch, DOBJ_DataSearch, MethodObj);
+	var MethodObj = new callService("com.inswave.longterm.psv.ens.task.EBE114TASK", "selectCertiIssueInfo", pageSize, pageNo);
+	MethodObj.setId("selectCertiIssueInfo");
+	MethodObj.setParam( "sPlanNo", wconv.trim(sPlanNo));
+	MethodObj.setParam( "sSearchStd", "2");  
+	
+	MethodObj.setUrl("/contract/CBSC102PController.do");//배포후변경할것(controller위치와 이름)
+	MethodObj.setXPath("//*/vector/data/LTIEA00ADDR");//(dsWS의 XPath)
+	MethodObj.addXPath("//*/WARNING"); 
+	MethodObj.sync();
+	MethodObj.send();
+
+	util.jSonDsCreate(_tranSync.getDsJson("LTIEA00ADDR"), "DsWs_LTIEA00");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+	
+	util.setCompBindRefresh("DsWs_LTIEA00");//바인딩을 해줌
+	util.setCompBindRefresh("DsWs_Warning");//바인딩을 해줌
+	util.setRowPosition(DsWs_LTIEA00, 0);
+	
+
+    if (wconv.length(DsWs_Warning.getCellData(0, "msg")) > 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+    } else {
+    	util.copyM(Ds_LTIEA00_Copy,DsWs_LTIEA00.getAllJSON());
+		util.setCompBindRefresh("Ds_LTIEA00_Copy");//바인딩을 해줌
+		util.setRowPosition(Ds_LTIEA00_Copy, 0);
+		util.copyM(Ds_LTIEA00,DsWs_LTIEA00.getAllJSON());
+		util.setCompBindRefresh("Ds_LTIEA00");//바인딩을 해줌
+		util.setRowPosition(Ds_LTIEA00, 0);
+        // 안내양식 정보 가져오기.
+        wconv.clear(DsWs_PRIAA02Warning);
+        wconv.clear(DsWs_PRIAA02_List);
+//        SOBJ_Get.WSDL = gds.gWsdlBasis;
+//        var MethodObj = gfn_CreateMethodObj(SOBJ_Get, "com.inswave.longterm.com.com.task.AXR020Task", "selectAll", "", "");
+//        gfn_CallService(SOBJ_Get, DOBJ_PRIAA02_List, MethodObj);
+		var MethodObj = new callService("com.inswave.longterm.com.com.task.AXR020Task", "selectAll", pageSize, pageNo);
+		MethodObj.setId("selectAll");
+		
+		MethodObj.setUrl("/contract/CBSC102PController.do");//배포후변경할것(controller위치와 이름)
+		MethodObj.setXPath("//*/vector/data/PRIAA02");//(dsWS의 XPath)
+		MethodObj.addXPath("//*/WARNING"); 
+		MethodObj.sync();
+		MethodObj.send();
+		util.jSonDsCreate(_tranSync.getDsJson("PRIAA02"), "DsWs_PRIAA02_List");
+		util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_PRIAA02Warning");
+		
+		util.setCompBindRefresh("DsWs_PRIAA02_List");//바인딩을 해줌
+		util.setCompBindRefresh("DsWs_PRIAA02Warning");//바인딩을 해줌
+		util.setRowPosition(DsWs_PRIAA02_List, 0);
+	    if (DsWs_PRIAA02Warning.getRowCount() != 0) {
+            wprom.alert(DsWs_PRIAA02Warning.getCellData(0, "msg"));
+            return;
+        } else {
+            if (DsWs_PRIAA02_List.getRowCount() == 0) {
+                wprom.alert("조건에 맞는 자료가 없습니다.");
+            } else {
+//                wconv.copy(Ds_PRIAA02_List, "DsWs_PRIAA02_List");
+                util.copyM(Ds_PRIAA02_List,DsWs_PRIAA02_List.getAllJSON());
+				util.setCompBindRefresh("Ds_PRIAA02_List");//바인딩을 해줌
+				util.setRowPosition(Ds_PRIAA02_List, 0);
+            }
+        }
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_edt_OnKeyDown
+// 내용        : 계약번호 입력 후 엔터 이벤트
+//---------------------------------------------------------------------------
+scwin.lfn_edt_OnKeyDown = function(nChar) {
+    if (nChar == 13) {
+        scwin.lfn_Search_Async();
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : btn_send_OnClick
+// 내용        : 발송 이벤트
+//---------------------------------------------------------------------------
+scwin.btn_send_OnClick = function(e) {
+    //데이터 유효성 확인
+    var validFlag = scwin.checkValid();
+    if (!validFlag)
+        return;
+    wconv.clear(ds_Save_chk);
+//    scwin.send_start();
+	util.eventAsyncCall(this, scwin.send_start, arguments);
+};
+
+//---------------------------------------------------------------------------
+// function 명 : send_start
+// 내용        : 발송 
+//---------------------------------------------------------------------------
+scwin.send_start = function(obj) {
+
+    if (rdo_sDmcode == "L224") {
+        scwin.lfn_RenwlPrem(); //발송전 갱신보험료 입력
+    }
+    DS_SAVESENDINFO.removeAll(); //발송물정보 
+    var insRow = util.insertRow(DS_SAVESENDINFO, "");    
+    DS_SAVEEMAILINFO.removeAll(); //e-mail정보
+    var insRow = util.insertRow(DS_SAVEEMAILINFO, "");
+    
+    if (chk_Email.getValue() == "1") {
+        var result = scwin.setEmailInfo();
+        if (!result) {
+            return;
+        }
+    }
+    DS_SAVEFAXINFO.removeAll(); //fax정보
+    var insRow = util.insertRow(DS_SAVEFAXINFO, "");
+    /*수작업 변환 개발자 가이드(테스트 중)
+    dataList에 row를 추가하고 setCellData를 하는 경우 첫 번째 인자를 insRow로 변경해주세요.*/
+    if (chk_Fax.getValue() == "1") {
+        var result = scwin.setFaxInfo();
+        if (!result) {
+            return;
+        }
+    }
+    var sCustTag = "  ";
+    var sFaxTag = "  ";
+    
+    sFaxTag = sFaxTag + "action=" + " \"PrintProcess\" ";
+    var headTag = " ";
+    if (chk_Email.getValue() == "1") {
+        headTag = headTag + "sEmailCh=\"Y\" ";
+    } else {
+        headTag = headTag + "sEmailCh=\"N\" ";
+    }
+    if (chk_Fax.getValue() == "1") {
+        headTag = headTag + "sFaxCh=\"Y\" ";
+    } else {
+        headTag = headTag + "sFaxCh=\"N\" ";
+    }
+//    headTag = headTag + "sLoginName=" + " \"" + gds.gUserEmpName + "\" ";
+	headTag = headTag + "sLoginName=" + " \"" + util.getGdsValue("gUserEmpName") + "\" ";
+    headTag = headTag + "sIssuYear=" + " \"" + " " + "\" ";
+    if (rdo_sDmcode == "L224") {
+        headTag = headTag + "sDmCode=" + " \"" + "L224" + "\" ";
+    } else {
+        if (DsWs_getCrInfo.getCellData(0, "sBunsMetdDocuClsfCd") == "3") {
+            headTag = headTag + "sDmCode=" + " \"" + "L158" + "\" "; //재물보험 대면 가입설계서일체
+        } else if (DsWs_getCrInfo.getCellData(0, "sBunsMetdDocuClsfCd") == "7") {
+            //연금 edit_by_sk
+            headTag = headTag + "sDmCode=" + " \"" + "L187" + "\" ";
+        } else {
+            headTag = headTag + "sDmCode=" + " \"" + "L164" + "\" ";
+        }
+    }
+
+
+    //alert("headTag========>>>>>"+headTag);
+//    SOBJ_Save.WSDL = gds.gWsdlBasis;
+//    var MethodObj = SOBJ_Save.CreateMethodObj("perform");
+
+    //insert  XML문 Header 문구 작성
+//    setHeader("hashtable" + headTag, "com.inswave.longterm.psv.ens.task.EBE114TASK", "PrintProcess");
+
+	var MethodObj = new callService("com.inswave.longterm.psv.ens.task.EBE114TASK", "PrintProcessClip");
+ 	MethodObj.setId("PrintProcessClip"); 
+
+	 if ( chk_Fax.getValue() == "1" ) {   
+//	  MethodObj.addSingleData("sFaxInfo", "FAX0001", DS_SAVEFAXINFO.getID(), "action=\'PrintProcess\'");
+		MethodObj.addVectorData("sFaxInfo", "FAX0001", "DS_SAVEFAXINFO:A");
+	 }
+	 if ( chk_Email.getValue() == "1" ){ 
+
+//	  MethodObj.addSingleData("sEmailInfo", "EMLC000", "DS_SAVEEMAILINFO:A", "action=\"sendEmail\""); 
+		MethodObj.addVectorData("sEmailInfo", "EMLC000", "DS_SAVEEMAILINFO:A");
+	 } 
+    //trace("111111=======post===="+DS_SAVESENDINFO.SaveXML());
+    //trace("222222=======fax===="+Ds_SAVEFAXINFO.SaveXML());
+    //trace("333333=======mail===="+DS_SAVEEMAILINFO.SaveXML());b
+//    setTail("hashtable");
+//    SOBJ_Save.CreateObj("in0");
+//    MethodObj.in0 = insertStr;
+//    gfn_CallService(SOBJ_Save, DOBJ_Save, MethodObj);
+	MethodObj.setUrl("/contract/CBSC102PController.do");   // 서버단 호출 URL (수납 확정)    
+ 	MethodObj.setXPath("//*/WARNING"); // XPath
+ 	MethodObj.addXPath("//*/RESULT"); // XPath
+ 	MethodObj.setHeaderParam(headTag);
+ 	MethodObj.setHashTable();    //  전문의 앞이 hashtable로 보낼 때
+ 	MethodObj.sync();     // 동기 처리[기본(async:비동기)]
+ 	MethodObj.send();      // 최종 전송   // TEST @@@ ===>
+ 	 util.interfaceKey(_tranSync.result.serviceDs); 
+ 	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "Ds_SAVEFAXINFO_SaveWarning");	
+	util.setCompBindRefresh("Ds_SAVEFAXINFO_SaveWarning");//바인딩을 해줌
+	util.jSonDsCreate(_tranSync.getDsJson("RESULT"), "ds_Save_chk");	
+	util.setCompBindRefresh("ds_Save_chk");//바인딩을 해줌
+	
+	console.log("ds_Save_chk 값=======================>\n"
+		+ds_Save_chk.getAllData());
+	
+    if (Ds_SAVEFAXINFO_SaveWarning.getRowCount() != 0) {
+        wprom.alert(Ds_SAVEFAXINFO_SaveWarning.getCellData(0, "msg"));
+        return;
+    }
+    
+    var message = "";
+    if (chk_Fax.getValue() == "1") {
+        if (ds_Save_chk.getCellData(0, "faxFlag") == "1") {
+            message += "팩스발송이 요청되었습니다.\n";
+        } else {
+            message += "팩스발송중 오류가 발생 했습니다.\n";
+        }
+    } 
+    if (chk_Email.getValue() == "1") {
+        if (ds_Save_chk.getCellData(0, "mailFlag") == "1") {
+            message += "메일발송이 요청되었습니다.";
+        } else {
+            message += "메일발송중 오류가 발생 했습니다.";
+        }
+    }
+    wprom.alert(message);
+};
+
+// 이메일 주소 선택시 데이터 셋팅.
+scwin.lfn_eMail_OnChanged = function() {
+    eMailDomainAppend(edt_sEmail1.getValue(), cmb_Email.getValue());
+//    if (wconv.mid(cmb_Email.getValue(), 0, 1) == "@") {
+//        edt_sEmail1.setValue(wconv.mid(cmb_Email.getValue(), 1, wconv.length(cmb_Email.getValue())));
+//    }
+//wconv.mid(cmb_Email.getValue(), 0, 1) == "@"
+    if (wconv.substr(cmb_Email.getValue(), 0, 1) == "@") {
+//    edt_sEmail1.setValue(wconv.mid(cmb_Email.getValue(), 1, wconv.length(cmb_Email.getValue())));
+		edt_sEmail1.setValue(wconv.substr(cmb_Email.getValue(), 1, wconv.length(cmb_Email.getValue())));
+	    edt_sEmail1.setDisabled(false);
+	    edt_sEmail.setDisabled(false);
+    }else{
+	    edt_sEmail1.setValue(cmb_Email.getValue());
+//    edt_sEmail1.setDisabled(true);
+//    edt_sEmail.setDisabled(true);
+    }
+    
+};
+
+//---------------------------------------------------------------------------
+// function 명 : Div_common_OnChanged
+// 내용        : Div  안에 모든 Radio  버튼 제어.
+//---------------------------------------------------------------------------
+scwin.Div_common_OnChanged = function(info) {
+//    rdo_sDmcode = obj.CodeColumn;
+var keystr = Object.keys(info);
+rdo_sDmcode = info[keystr[1]];
+
+if(rdo_sDmcode=="L006"){
+	rdo_Select.setValue( "");
+}else{
+	rdo_L006.setValue( "" );
+}
+    // 우편발송 , 이메일 , 팩스 제어.
+    scwin.OnPrintControl();
+};
+
+//---------------------------------------------------------------------------
+// function 명 : OnPrintControl
+// 내용        : 안내문의 종류에 따라 [우편발송 . 이메일 , 팩스]  Componunt Event처리
+//---------------------------------------------------------------------------
+scwin.OnPrintControl = function() {
+    gfn_getServerTime();
+    sysDate = gds.gDs_ServerTime.getCellData(0, "sToday"); // 서버시간
+//    crntYMD = wconv.mid(sysDate, 0, 8);
+	crntYMD = wconv.substr(sysDate, 0, 8);
+
+    //chk_Post.Value = false;
+    chk_Email.setValue(false);
+    chk_Fax.setValue(false);
+    var sDmTpCd1;
+    var sDmTpCd2;
+    var sDmTpCd3;
+    
+    //trace(rdo_sDmcode);
+    // 라디오버튼 클릭시 우편, 이메일 ,팩스 콤보박스 제어.
+//    wconv.filter(Ds_PRIAA02_List, "sDmCode==" + wconv.quote(rdo_sDmcode));
+	wconv.filter(Ds_PRIAA02_List, "sDmCode==" + "'"+rdo_sDmcode+"'" , true);
+
+    //trace(Ds_PRIAA02_List.SaveXML());    		
+    sDmTpCd1 = Ds_PRIAA02_List.getCellData(0, "sDmTpCd1");
+    sDmTpCd2 = Ds_PRIAA02_List.getCellData(0, "sDmTpCd2");
+    sDmTpCd3 = Ds_PRIAA02_List.getCellData(0, "sDmTpCd3");
+    Ds_PRIAA02_List.removeColumnFilterAll();
+    if (rdo_sDmcode == "L001" && cmd_SearchStd.getValue() == "3") {
+        chk_Email.setValue(false);
+        chk_Fax.setValue(false);
+        cmb_DmMethod.Enable = false;
+        // Fax
+        chk_Fax.setDisabled(false);
+        edt_fax1.setDisabled(false);
+        edt_fax2.setDisabled(false);
+        edt_fax3.setDisabled(false);
+        edt_ContName.setDisabled(false);
+        if (rdo_sDmcode == "L001" && crntYMD <= "20120401") {
+            chk_Email.setDisabled(true);
+            edt_sEmail.setDisabled(true);
+            edt_sEmail1.setDisabled(true);
+            cmb_Email.setDisabled(true);
+        } else {
+            chk_Email.setDisabled(false);
+            edt_sEmail.setDisabled(false);
+            edt_sEmail1.setDisabled(false);
+            cmb_Email.setDisabled(false);
+        }
+        return;
+    } else {
+        chk_Email.setValue(false);
+        chk_Fax.setValue(false);
+        // Fax
+        chk_Fax.setDisabled(true);
+        edt_fax1.setDisabled(true);
+        edt_fax2.setDisabled(true);
+        edt_fax3.setDisabled(true);
+        edt_ContName.setDisabled(true);
+        chk_Email.setDisabled(true);
+        edt_sEmail.setDisabled(true);
+        edt_sEmail1.setDisabled(true);
+        cmb_Email.setDisabled(true);
+    }
+    if (sDmTpCd1 == "2" && sDmTpCd2 == "2" && sDmTpCd3 == "2") //   우편발송 , E-MAIL ,  FAX 
+    {
+        // E-Mail
+        chk_Email.setDisabled(false);
+        edt_sEmail.setDisabled(false);
+        edt_sEmail1.setDisabled(false);
+        cmb_Email.setDisabled(false);
+        // Fax
+        chk_Fax.setDisabled(false);
+        if (gds.gProdYN == "Y") {
+            edt_fax1.setDisabled(false);
+            edt_fax2.setDisabled(false);
+            edt_fax3.setDisabled(false);
+        } else {
+            edt_fax1.setDisabled(false);
+            edt_fax2.setDisabled(false);
+            edt_fax3.setDisabled(false);
+        }
+        edt_ContName.setDisabled(false);
+    } else if (sDmTpCd1 == "2" && sDmTpCd2 == "2") //   우편발송 , E-MAIL
+    {
+        chk_Fax.setValue(false);
+        // E-Mail
+        chk_Email.setDisabled(false);
+        edt_sEmail.setDisabled(false);
+        edt_sEmail1.setDisabled(false);
+        cmb_Email.setDisabled(false);
+        // Fax
+        chk_Fax.setDisabled(true);
+        edt_fax1.setDisabled(true);
+        edt_fax2.setDisabled(true);
+        edt_fax3.setDisabled(true);
+        edt_ContName.setDisabled(true);
+    } else if (sDmTpCd2 == "2" && sDmTpCd3 == "2") //   E-MAIL ,  FAX 
+    {
+        // E-Mail
+        chk_Email.setDisabled(false);
+        edt_sEmail.setDisabled(false);
+        edt_sEmail1.setDisabled(false);
+        cmb_Email.setDisabled(false);
+        // Fax
+        chk_Fax.setDisabled(false);
+        if (gds.gProdYN == "Y") {
+            edt_fax1.setDisabled(false);
+            edt_fax2.setDisabled(false);
+            edt_fax3.setDisabled(false);
+        } else {
+            edt_fax1.setDisabled(false);
+            edt_fax2.setDisabled(false);
+            edt_fax3.setDisabled(false);
+        }
+        edt_ContName.setDisabled(false);
+    } else if (sDmTpCd1 == "2") //   우편발송 
+    {
+        chk_Email.setValue(false);
+        chk_Fax.setValue(false);
+        // E-Mail
+        chk_Email.setDisabled(true);
+        edt_sEmail.setDisabled(true);
+        edt_sEmail1.setDisabled(true);
+        cmb_Email.setDisabled(true);
+        // Fax
+        chk_Fax.setDisabled(true);
+        edt_fax1.setDisabled(true);
+        edt_fax2.setDisabled(true);
+        edt_fax3.setDisabled(true);
+        edt_ContName.setDisabled(true);
+    } else if (sDmTpCd3 == "2") // fax
+    {
+        chk_Email.setValue(false);
+        // E-Mail
+        chk_Email.setDisabled(true);
+        edt_sEmail.setDisabled(true);
+        edt_sEmail1.setDisabled(true);
+        cmb_Email.setDisabled(true);
+        // Fax
+        chk_Fax.setDisabled(false);
+        if (gds.gProdYN == "Y") {
+            edt_fax1.setDisabled(false);
+            edt_fax2.setDisabled(false);
+            edt_fax3.setDisabled(false);
+        } else {
+            edt_fax1.setDisabled(false);
+            edt_fax2.setDisabled(false);
+            edt_fax3.setDisabled(false);
+        }
+        edt_ContName.setDisabled(false);
+    } else if (sDmTpCd2 == "2") //   E-MAIL
+    {
+        // E-Mail
+        chk_Email.setDisabled(false);
+        edt_sEmail.setDisabled(false);
+        edt_sEmail1.setDisabled(false);
+        cmb_Email.setDisabled(false);
+        chk_Fax.setDisabled(false);
+        edt_fax1.setDisabled(true);
+        edt_fax2.setDisabled(true);
+        edt_fax3.setDisabled(true);
+        edt_ContName.setDisabled(true);
+    } else if (rdo_sDmcode == "LL01" || rdo_sDmcode == "LL02") // 증권팩
+    {
+        chk_Email.setValue(false);
+        chk_Fax.setValue(false);
+        // E-Mail
+        chk_Email.setDisabled(true);
+        edt_sEmail.setDisabled(true);
+        edt_sEmail1.setDisabled(true);
+        cmb_Email.setDisabled(true);
+        // Fax
+        chk_Fax.setDisabled(true);
+        edt_fax1.setDisabled(true);
+        edt_fax2.setDisabled(true);
+        edt_fax3.setDisabled(true);
+        edt_ContName.setDisabled(true);
+        if (rdo_sDmcode == "LL02") {
+            // E-Mail
+            chk_Email.setDisabled(false);
+            edt_sEmail.setDisabled(false);
+            edt_sEmail1.setDisabled(false);
+            cmb_Email.setDisabled(false);
+        }
+    } else if (rdo_sDmcode == "LL04") // 변경팩
+    {
+        chk_Email.setValue(false);
+        chk_Fax.setValue(false);
+        // E-Mail
+        chk_Email.setDisabled(true);
+        edt_sEmail.setDisabled(true);
+        edt_sEmail1.setDisabled(true);
+        cmb_Email.setDisabled(true);
+        // Fax
+        chk_Fax.setDisabled(false);
+        edt_fax1.setDisabled(false);
+        edt_fax2.setDisabled(false);
+        edt_fax3.setDisabled(false);
+        edt_ContName.setDisabled(false);
+    }
+
+
+
+    //   우편발송 , FAX 			
+    if (sDmTpCd1 == "2" && sDmTpCd2 == "1" && sDmTpCd3 == "2") {
+        chk_Email.setValue(false);
+        // E-Mail
+        chk_Email.setDisabled(true);
+        edt_sEmail.setDisabled(true);
+        edt_sEmail1.setDisabled(true);
+        cmb_Email.setDisabled(true);
+        // Fax
+        chk_Fax.setDisabled(false);
+        if (util.getGdsValue("gProdYN") == "Y") {
+            edt_fax1.setDisabled(false);
+            edt_fax2.setDisabled(false);
+            edt_fax3.setDisabled(false);
+        } else {
+            edt_fax1.setDisabled(false);
+            edt_fax2.setDisabled(false);
+            edt_fax3.setDisabled(false);
+        }
+        edt_ContName.setDisabled(false);
+    }
+
+
+    //   E-Mail
+    if (sDmTpCd1 == "1" && sDmTpCd2 == "2" && sDmTpCd3 == "1") {
+        chk_Email.setValue(false);
+        // E-Mail
+        chk_Email.setDisabled(false);
+        edt_sEmail.setDisabled(false);
+        edt_sEmail1.setDisabled(false);
+        cmb_Email.setDisabled(false);
+        // Fax
+        chk_Fax.setDisabled(true);
+        edt_fax1.setDisabled(true);
+        edt_fax2.setDisabled(true);
+        edt_fax3.setDisabled(true);
+        edt_ContName.setDisabled(true);
+    }
+    sDmTpCd1 = "";
+    sDmTpCd2 = "";
+    sDmTpCd3 = "";
+};
+
+/*-----------------------------------
+// function 명 : chk_Print
+// 내용        : 증명서매칭
+-----------------------------------*/
+scwin.chk_Print = function(obj) {
+
+    sysDate = gds.gDs_ServerTime.getCellData(0, "sToday"); // 서버시간
+//    currentDate = wconv.mid(sysDate, 2, 6);
+	currentDate = wconv.substr(sysDate, 2, 6);
+//    sIssID = gds.gUserID + currentDate;
+	sIssID = util.getGdsValue("gUserID") + currentDate;
+    scwin.lfn_getCrInfo(sPlanNo, "1");
+    DS_SAVESENDPRINT.removeAll();
+    var j;
+    if (rdo_sDmcode == "L164") {
+        util.appendRow(DS_SAVESENDPRINT);
+        j = DS_SAVESENDPRINT.getRowPosition();
+        if (DsWs_getCrInfo.getCellData(0, "sBunsMetdDocuClsfCd") == "3") {
+            DS_SAVESENDPRINT.setCellData(j, "sFileName", "B870_Rep");
+            DS_SAVESENDPRINT.setCellData(j, "sOdiName", "B870_Rep");
+            DS_SAVESENDPRINT.setCellData(j, "sContents", "재물보험 대면 가입설계서일체");
+            DS_SAVESENDPRINT.setCellData(j, "sDmCode", "L158");
+        } else if (DsWs_getCrInfo.getCellData(0, "sBunsMetdDocuClsfCd") == "7") {
+            //연금 edit_by_sk
+            DS_SAVESENDPRINT.setCellData(j, "sFileName", "C400_Rep");
+            DS_SAVESENDPRINT.setCellData(j, "sOdiName", "C400_Rep");
+            DS_SAVESENDPRINT.setCellData(j, "sContents", "가입설계서일체");
+            DS_SAVESENDPRINT.setCellData(j, "sDmCode", "L187");
+        } else {
+            DS_SAVESENDPRINT.setCellData(j, "sFileName", "B400_Rep");
+            DS_SAVESENDPRINT.setCellData(j, "sOdiName", "B400_Rep");
+            DS_SAVESENDPRINT.setCellData(j, "sContents", "가입설계서일체");
+            DS_SAVESENDPRINT.setCellData(j, "sDmCode", "L164");
+        }
+        DS_SAVESENDPRINT.setCellData(j, "sPlanNo", sPlanNo);
+        DS_SAVESENDPRINT.setCellData(j, "sIssID", sIssID);
+        DS_SAVESENDPRINT.setCellData(j, "sGdCd", DsWs_getCrInfo.getCellData(0, "sGdCd"));
+        DS_SAVESENDPRINT.setCellData(j, "pCount", 3);
+        DS_SAVESENDPRINT.setCellData(j, "copies", 1); //lfn_save();
+        //대면 가입설계동의서
+    } else if (rdo_sDmcode == "L140") {
+        util.appendRow(DS_SAVESENDPRINT);
+        j = DS_SAVESENDPRINT.getRowPosition();
+        DS_SAVESENDPRINT.setCellData(j, "sFileName", "B741_Rep");
+        DS_SAVESENDPRINT.setCellData(j, "sOdiName", "B741_Rep");
+        DS_SAVESENDPRINT.setCellData(j, "sContents", "가입설계동의서");
+        DS_SAVESENDPRINT.setCellData(j, "sDmCode", "L140");
+        DS_SAVESENDPRINT.setCellData(j, "sPlanNo", sPlanNo);
+        DS_SAVESENDPRINT.setCellData(j, "sIssID", sIssID);
+        DS_SAVESENDPRINT.setCellData(j, "pCount", 3);
+        DS_SAVESENDPRINT.setCellData(j, "copies", 1); //lfn_save();  동의서 출력은 청약서 출력일자 업데이트 안함.
+        //대면 알릴의무
+    } else if (rdo_sDmcode == "L006") {
+        if (wconv.substr(DsWs_getCrInfo.getCellData(0, "sGdCd"), 0, 2) == "21") {
+            util.appendRow(DS_SAVESENDPRINT);
+            j = DS_SAVESENDPRINT.getRowPosition();
+            DS_SAVESENDPRINT.setCellData(j, "sFileName", "B744_Rep");
+            DS_SAVESENDPRINT.setCellData(j, "sOdiName", "B744_Rep");
+            DS_SAVESENDPRINT.setCellData(j, "sContents", "알릴의무");
+            DS_SAVESENDPRINT.setCellData(j, "sPlanNo", sPlanNo);
+            DS_SAVESENDPRINT.setCellData(j, "sDmCode", "L141");
+            DS_SAVESENDPRINT.setCellData(j, "sIssID", sIssID);
+            DS_SAVESENDPRINT.setCellData(j, "pCount", 3);
+            DS_SAVESENDPRINT.setCellData(j, "copies", 1); //lfn_save();
+        } else {
+            util.appendRow(DS_SAVESENDPRINT);
+            j = DS_SAVESENDPRINT.getRowPosition();
+            DS_SAVESENDPRINT.setCellData(j, "sFileName", "B680_Rep");
+            DS_SAVESENDPRINT.setCellData(j, "sOdiName", "B680_Rep");
+            DS_SAVESENDPRINT.setCellData(j, "sContents", "알릴의무");
+            DS_SAVESENDPRINT.setCellData(j, "sPlanNo", sPlanNo);
+            DS_SAVESENDPRINT.setCellData(j, "sDmCode", "L006");
+            DS_SAVESENDPRINT.setCellData(j, "sIssID", sIssID);
+            DS_SAVESENDPRINT.setCellData(j, "pCount", 3);
+            DS_SAVESENDPRINT.setCellData(j, "copies", 1); //lfn_save();
+        }
+    } else if (rdo_sDmcode == "L224") {
+        //상품설명서
+        util.appendRow(DS_SAVESENDPRINT);
+        j = DS_SAVESENDPRINT.getRowPosition();
+        if (DsWs_getCrInfo.getCellData(0, "sInsurStrtdate") < sStdDate201701) {
+            DS_SAVESENDPRINT.setCellData(j, "sFileName", "B999_Rep_20170101");
+        } else {
+            DS_SAVESENDPRINT.setCellData(j, "sFileName", "B999_Rep");
+        }
+        DS_SAVESENDPRINT.setCellData(j, "sOdiName", "B999_Rep");
+        DS_SAVESENDPRINT.setCellData(j, "sContents", "상품설명서");
+        DS_SAVESENDPRINT.setCellData(j, "sDmCode", "L224");
+        DS_SAVESENDPRINT.setCellData(j, "sGdCd", DsWs_getCrInfo.getCellData(0, "sGdCd"));
+        DS_SAVESENDPRINT.setCellData(j, "sPlanNo", sPlanNo);
+        DS_SAVESENDPRINT.setCellData(j, "sIssID", sIssID);
+        DS_SAVESENDPRINT.setCellData(j, "pCount", 4);
+        DS_SAVESENDPRINT.setCellData(j, "copies", 1);
+    }
+
+
+    //trace("1111111111111111111111111111===>"+DS_SAVESENDPRINT.SaveXML());
+    return true;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_save()
+// 내용        : 청약서발행후 발행일자update
+//---------------------------------------------------------------------------
+scwin.lfn_save = function() {
+    //데이터셋 초기화
+//    SOBJ_Save.WSDL = gds.gWsdlBasis; //기본 웹서비스
+//    DsWs_Warning.DataObject = "DOBJ_Save";
+//    var MethodObj = gfn_CreateMethodObj(SOBJ_Save, "com.inswave.longterm.ssr.out.task.DBB410Task", "setPrintSave", "", "");
+//    gfn_SetParam(MethodObj, "sPlanNo", sPlanNo);
+//    var result = gfn_CallService(SOBJ_Save, DOBJ_Save, MethodObj);
+	var MethodObj = new callService("com.inswave.longterm.ssr.out.task.DBB410Task", "setPrintSave", 0, 0);
+	MethodObj.setId("setPrintSave");
+	MethodObj.setParam("sPlanNo", sPlanNo);
+	MethodObj.setUrl("/csbc/CBSC102MController.do");
+	MethodObj.setXPath("//*/RESULT");
+	MethodObj.addXPath("//*/WARNING");	
+	MethodObj.sync();
+	MethodObj.send();    
+	util.interfaceKey(_tranSync.result.serviceDs);	
+	ds_Save_chk.setJSON (_tranSync.getDsJson("RESULT")); // dataset 데이터
+	ds_Wanning.setJSON (_tranSync.getDsJson("WARNING")); // dataset 데이터
+	Ds_SAVEFAXINFO_SaveWarning.setJSON (_tranSync.getDsJson("WARNING")); // SchemaInfo="DataObject:DOBJ_AddUser" ★확인필요
+	
+    //trace("DOBJ_Save.Value ==> " + DOBJ_Save.Value);
+    if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    }
+
+
+    //청약서발행일
+    sSrdoIssuDate = sToday;
+};
+
+//  발송 버튼 이벤트시 유효성검사.
+scwin.checkValid = function() {
+    if (chk_Email.getValue() != "1" && chk_Fax.getValue() != "1") {
+        wprom.alert("Email or Fax 발송 종류를 선택하십시오.");
+        return false;
+    }
+    if (chk_Email.getValue() == "1") {
+        if (wconv.length(edt_sEmail.getValue()) == 0) {
+            wprom.alert("Email 주소를 입력하십시오.");
+            return false;
+        }
+        if (wconv.length(edt_sEmail1.getValue()) == 0) {
+            wprom.alert("Email 주소를 선택 하십시오.");
+            return false;
+        }
+    }
+    if (chk_Fax.getValue() == "1") {
+        if (wconv.length(edt_fax1.getValue()) == 0) {
+            wprom.alert("Fax 정보를 정확히 입력하십시오.");
+            return false;
+        }
+        if (wconv.length(edt_fax2.getValue()) == 0) {
+            wprom.alert("Fax 정보를 정확히 입력하십시오.");
+            return false;
+        }
+        if (wconv.length(edt_fax3.getValue()) == 0) {
+            wprom.alert("Fax 정보를 정확히 입력하십시오.");
+            return false;
+        }
+    }
+    return true;
+};
+
+//  E-Mail 정보 셋팅.
+scwin.setEmailInfo = function() {
+
+    //trace("=======================================================================>>> GdNm : " + Ds_LTIEA00.GetColumn(0, "GdNm") );
+    var sEmail = wconv.trim(edt_sEmail.getValue()) + "@" + wconv.trim(edt_sEmail1.getValue());
+    if (wconv.length(sEmail) < 3) {
+        wprom.alert("E-mail을 입력하세요");
+        return false;
+    }
+	wconv.clear(DS_SAVEEMAILINFO); 
+	util.appendRow(DS_SAVEEMAILINFO); 
+
+    //    var filePath   = "/home/tmax/jeus/webhome/servlet_home/webapps/printing/HTMLdone/";
+    var filePath = "/home/tmax/jeus/webhome/servlet_home/webapps/printing/HTMLdone/longterm/";
+    var fromName = "더케이손해보험";
+    var fromEmail = "master@educar.co.kr";
+    
+    DS_SAVEEMAILINFO.setCellData(0, "sBizCode", sPlanNo);
+    DS_SAVEEMAILINFO.setCellData(0, "nChgNum", "");
+    DS_SAVEEMAILINFO.setCellData(0, "sCustNo", ""); //Ds_LTIEA00.GetColumn(0, "sCrtorCd")  );
+    
+    if (rdo_sDmcode == "L224") {
+        DS_SAVEEMAILINFO.setCellData(0, "sDmCode", rdo_sDmcode);
+        DS_SAVEEMAILINFO.setCellData(0, "sCustNo", parent.Ds_Pibo.getCellData(wconv.findRow(parent.Ds_Pibo, "sel", "1"), "sInrpsCd"));
+    } else {
+        if (DsWs_getCrInfo.getCellData(0, "sBunsMetdDocuClsfCd") == "7") {
+            //연금 edit_by_sk
+            DS_SAVEEMAILINFO.setCellData(0, "sDmCode", "L187");
+        } else {
+            DS_SAVEEMAILINFO.setCellData(0, "sDmCode", "L164");
+        }
+    }
+    DS_SAVEEMAILINFO.setCellData(0, "sTargetDate", "");
+//    DS_SAVEEMAILINFO.setCellData(0, "sUserID", gds.gUserID);
+    DS_SAVEEMAILINFO.setCellData(0, "sUserID", util.getGdsValue("gUserID"));
+    DS_SAVEEMAILINFO.setCellData(0, "sFromName", fromName);
+    DS_SAVEEMAILINFO.setCellData(0, "sFromEmail", fromEmail);
+    DS_SAVEEMAILINFO.setCellData(0, "sToName", sInrpsName); //Ds_LTIEA00.GetColumn(0, "sCrtorName")  );	// 피보험자명?	
+    DS_SAVEEMAILINFO.setCellData(0, "GdNm", ""); //Ds_LTIEA00.GetColumn(0, "GdNm")  );
+//	alert(Ds_LTIEA00.getCellData(0, "sCrtorName")+":::::::"+Ds_LTIEA00.getCellData(0, "GdNm"));
+    DS_SAVEEMAILINFO.setCellData(0, "sToEmail", sEmail);
+    
+//    DS_SAVEEMAILINFO.setCellData(0, "sApplyType", wconv.mid(sPlanNo, 0, 1));
+//    DS_SAVEEMAILINFO.setCellData(0, "sApplyKind", wconv.mid(sPlanNo, 1, 4));
+//    DS_SAVEEMAILINFO.setCellData(0, "sApplySer", wconv.mid(sPlanNo, 5, 7));
+    DS_SAVEEMAILINFO.setCellData(0, "sApplyType", wconv.substr(sPlanNo, 0, 1));
+    DS_SAVEEMAILINFO.setCellData(0, "sApplyKind", wconv.substr(sPlanNo, 1, 4));
+    DS_SAVEEMAILINFO.setCellData(0, "sApplySer", wconv.substr(sPlanNo, 5, 7));
+    DS_SAVEEMAILINFO.setCellData(0, "nEndorseNo", "");
+    
+    DS_SAVEEMAILINFO.setCellData(0, "sContactSerial", "1001");
+    DS_SAVEEMAILINFO.setCellData(0, "sRelkey", sPlanNo);
+    
+    DS_SAVEEMAILINFO.setCellData(0, "sRelkeyType", "N");
+    DS_SAVEEMAILINFO.setCellData(0, "sBodyHTML", "");
+//    DS_SAVEEMAILINFO.setCellData(0, "sLoginName", gds.gUserEmpName);
+    DS_SAVEEMAILINFO.setCellData(0, "sLoginName", util.getGdsValue("gUserEmpName"));
+    DS_SAVEEMAILINFO.setCellData(0, "sSecureFlag", "N");
+    DS_SAVEEMAILINFO.setCellData(0, "sSecurePWD", "");
+    DS_SAVEEMAILINFO.setCellData(0, "sCheckSecureFlag", "Y");
+    DS_SAVEEMAILINFO.setCellData(0, "sAction", "sendEmail");
+    DS_SAVEEMAILINFO.setCellData(0, "sInsurStrtdate", DsWs_getCrInfo.getCellData(0, "sInsurStrtdate"));
+    DS_SAVEEMAILINFO.setCellData(0, "nBussPrem", DsWs_getCrInfo.getCellData(0, "nBussPrem")); //Ds_LTIEA00.GetColumn(0, "nBussPrem") );		
+//    scwin.lfn_getCrInfo(sPlanNo, "1");
+    //trace("* sSsrtDate : " + DsWs_getCrInfo.GetColumn(0, "sSsrtDate"));
+    
+//    if (DsWs_getCrInfo.getCellData(0, "sSsrtDate") < "20111001") {
+//        DS_SAVEEMAILINFO.setCellData(0, "sFileName", "DYB402_20110930");
+//    } else {
+//        if (DsWs_getCrInfo.getCellData(0, "sBunsMetdDocuClsfCd") == "7") {
+//            연금 edit_by_sk		
+//            DS_SAVEEMAILINFO.setCellData(0, "sFileName", "DYB402_annt");
+//        } else {
+//            DS_SAVEEMAILINFO.setCellData(0, "sFileName", "DYB402");
+//        }
+//    }
+//2017.12.12 update***********************************************************************************
+
+	if(rdo_sDmcode == "L164"){
+		if(DsWs_getCrInfo.getCellData(0, "sBunsMetdDocuClsfCd") == "3"){
+		    DS_SAVEEMAILINFO.setCellData( 0 , "sFileName" ,  "B870_Rep" );	
+			DS_SAVEEMAILINFO.setCellData( 0 , "sContents" , "재물보험 대면 가입설계서일체");
+		}else if(DsWs_getCrInfo.getCellData(0, "sBunsMetdDocuClsfCd") == "7"){ //연금 edit_by_sk
+		    DS_SAVEEMAILINFO.setCellData( 0 , "sFileName" ,  "C400_Rep" );	
+			DS_SAVEEMAILINFO.setCellData( 0 , "sContents" , "가입설계서일체"  );
+		}else{
+		    DS_SAVEEMAILINFO.setCellData( 0 , "sFileName" ,  "B400_Rep" );	
+			DS_SAVEEMAILINFO.setCellData( 0 , "sContents" , "가입설계서일체"  );	
+		}
+	//대면 가입설계동의서
+	}else if(rdo_sDmcode == "L140"){
+		DS_SAVEEMAILINFO.setCellData( 0 , "sFileName" ,  "B741_Rep" );		
+		DS_SAVEEMAILINFO.setCellData( 0 , "sContents" , "가입설계동의서"  );	
+	//대면 알릴의무
+	}else if(rdo_sDmcode == "L006"){
+		if(substr(DsWs_getCrInfo.getCellData(0, "sGdCd"), 0, 2) == "21"){
+			DS_SAVEEMAILINFO.setCellData( 0 , "sFileName" ,  "B744_Rep" );		
+			DS_SAVEEMAILINFO.setCellData( 0 , "sContents" , "알릴의무"  );	
+			//DS_SAVEFAXINFO.SetColumn( 0  , "copies", 2);//인쇄매수설정
+		}else{
+		    DS_SAVEEMAILINFO.setCellData( 0 , "sFileName" ,  "B680_Rep" );		
+			DS_SAVEEMAILINFO.setCellData( 0 , "sContents" , "알릴의무"  );
+			//DS_SAVEFAXINFO.SetColumn( 0  , "copies", 2);//인쇄매수설정
+		}
+	}else if(rdo_sDmcode == "L224"){
+		DS_SAVEEMAILINFO.setCellData( 0 , "sFileName" ,  "B999_Rep" );	
+		DS_SAVEEMAILINFO.setCellData( 0 , "sContents" , "상품설명서"  );	
+	//대면 알릴의무
+	}
+//*************************************************************************************
+
+    //trace(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> " + DsWs_getCrInfo.SaveXML() + "\n sPlanNo : "+sPlanNo+"   sSsrtDate : " +DsWs_getCrInfo.GetColumn(0, "sSsrtDate")+ "   sFileName : " + DS_SAVEEMAILINFO.getColumn(0, "sFileName"));
+    //DS_SAVEEMAILINFO.setColumn( 0 , "sFileName" ,  "DYB402" );		
+//    DS_SAVEEMAILINFO.setCellData(0, "sContents", "가입설계서");
+    //DS_SAVEEMAILINFO.setColumn( 0 , "xslPath"  , filePath + "G001_Email.xsl");
+    DS_SAVEEMAILINFO.setCellData(0, "sPsnGroupFlgcd", DsWs_getCrInfo.getCellData(0, "sPsnGroupFlgcd")); //Ds_LTIEA00.GetColumn(0, "sPsnGroupFlgcd")  );	// 개인단체구분코드	
+    DS_SAVEEMAILINFO.setCellData(0, "sGdCd", DsWs_getCrInfo.getCellData(0, "sGdCd")); //Ds_LTIEA00.GetColumn(0, "sGdCd")  );	// 상품코드	
+    DS_SAVEEMAILINFO.setCellData(0, "sGdCdNm", ""); //Ds_LTIEA00.GetColumn(0, "GdNm")  );	// 상품코드	
+    //	trace(DS_SAVEEMAILINFO.SaveXML());
+    
+//2017.12.12 update *****************************************************************************************
+    var repoService = scwin.getRepoServiceNm(DS_SAVEEMAILINFO.getCellData(0, "sFileName")).split("^");
+		
+	taskValue = repoService[0];
+	actionValue = repoService[1];
+	
+	console.log("taskValue:"+taskValue+"/actionValue:"+actionValue);
+	
+	DS_SAVEEMAILINFO.setCellData( 0 , "sTaskValue" ,  taskValue );
+	DS_SAVEEMAILINFO.setCellData( 0 , "sActionValue" , actionValue );
+	DS_SAVEEMAILINFO.setCellData( 0 , "sRptName" ,  "longterm/"+ DS_SAVEEMAILINFO.getCellData(0, "sFileName"));//오즈명
+	DS_SAVEEMAILINFO.setCellData( 0 , "sDatatype" ,  "jason" );
+
+	DS_SAVEEMAILINFO.setCellData( 0 , "sBottom_arg1" ,  Ds_LTIEA00.getCellData(0, "sEmpName") );
+	DS_SAVEEMAILINFO.setCellData( 0 , "sBottom_arg2" ,  Ds_LTIEA00.getCellData(0, "sFrstDoerCentrCdNm") );
+	DS_SAVEEMAILINFO.setCellData( 0 , "sBottom_arg3" ,  Ds_LTIEA00.getCellData(0, "sEmpTel") );	
+
+//******************************************************************************************************************
+
+	console.log("이메일 발송 =================>\n"
+				+"sTaskValue:"+DS_SAVEEMAILINFO.getCellData(0,"sTaskValue")+"\n"
+				+"sActionValue:"+DS_SAVEEMAILINFO.getCellData(0,"sActionValue")+"\n"
+				+"sRptName:"+DS_SAVEEMAILINFO.getCellData(0,"sRptName")+"\n"
+				+"sFileName:"+DS_SAVEEMAILINFO.getCellData(0,"sFileName")+"\n"
+				+"sContents:"+DS_SAVEEMAILINFO.getCellData(0,"sContents")+"\n"
+				+"sBizCode:"+DS_SAVEEMAILINFO.getCellData(0,"sBizCode")+"\n"
+				+"sType:"+DS_SAVEEMAILINFO.getCellData(0,"sType")+"\n"
+				+"sCustNo:"+DS_SAVEEMAILINFO.getCellData(0,"sCustNo")+"\n"
+				);
+				
+    return true;
+};
+
+// Fax 정보 셋팅.
+scwin.setFaxInfo = function() {
+
+//    scwin.lfn_getCrInfo(sPlanNo, "1");
+	wconv.clear(DS_SAVEFAXINFO); 
+	util.appendRow(DS_SAVEFAXINFO); 
+    var sFax1 = wconv.trim(edt_fax1.getValue());
+    var sFax2 = wconv.trim(edt_fax2.getValue());
+    var sFax3 = wconv.trim(edt_fax3.getValue());
+    DS_SAVEFAXINFO.setCellData(0, "nChgNum", ""); // 계약변경번호
+    DS_SAVEFAXINFO.setCellData(0, "sBizCode", sPlanNo); // 계약번호 
+    DS_SAVEFAXINFO.setCellData(0, "sIssuYear", ""); // 대상년도 정보
+    DS_SAVEFAXINFO.setCellData(0, "sType", "1");
+    DS_SAVEFAXINFO.setCellData(0, "sCustNo", ""); //Ds_LTIEA00.GetColumn(0, "sCrtorCd") ); // 계약자코드
+    DS_SAVEFAXINFO.setCellData(0, "nSeqNo", "0");
+    DS_SAVEFAXINFO.setCellData(0, "sGdCd", DsWs_getCrInfo.getCellData(0, "sGdCd")); //Ds_LTIEA00.GetColumn(0, "sGdCd") ); // 상품코드	
+    if (rdo_sDmcode == "L006") {
+        //갱신형 상품	
+        if (wconv.substr(DsWs_getCrInfo.getCellData(0, "sGdCd"), 0, 2) == "21") {
+            DS_SAVEFAXINFO.setCellData(0, "sDmCode", "L141");
+        } else {
+            DS_SAVEFAXINFO.setCellData(0, "sDmCode", rdo_sDmcode);
+        }
+    } else if (rdo_sDmcode == "L164") {
+        if (DsWs_getCrInfo.getCellData(0, "sBunsMetdDocuClsfCd") == "3") {
+            DS_SAVEFAXINFO.setCellData(0, "sDmCode", "L158");
+        } else if (DsWs_getCrInfo.getCellData(0, "sBunsMetdDocuClsfCd") == "7") {
+            //연금 edit_by_sk
+            DS_SAVEFAXINFO.setCellData(0, "sDmCode", "L187");
+        } else {
+            DS_SAVEFAXINFO.setCellData(0, "sDmCode", rdo_sDmcode);
+        }
+    } else {
+        DS_SAVEFAXINFO.setCellData(0, "sDmCode", rdo_sDmcode);
+    }
+    DS_SAVEFAXINFO.setCellData(0, "sFax1", sFax1); // 팩스번호
+    DS_SAVEFAXINFO.setCellData(0, "sFax2", sFax2);
+    DS_SAVEFAXINFO.setCellData(0, "sFax3", sFax3);
+    DS_SAVEFAXINFO.setCellData(0, "sStatus", "0");
+    DS_SAVEFAXINFO.setCellData(0, "sRequiredDate", "0");
+//    DS_SAVEFAXINFO.setCellData(0, "sUserID", gds.gUserID);
+//    DS_SAVEFAXINFO.setCellData(0, "sUserName", gds.gUserEmpName);
+//    DS_SAVEFAXINFO.setCellData(0, "sLoginName", gds.gUserEmpName);
+//    DS_SAVEFAXINFO.setCellData(0, "sDepartName", gds.gUserDepartName); // gUserDepartCode
+	DS_SAVEFAXINFO.setCellData(0, "sUserID", util.getGdsValue("gUserID"));
+    DS_SAVEFAXINFO.setCellData(0, "sUserName", util.getGdsValue("gUserEmpName"));
+    DS_SAVEFAXINFO.setCellData(0, "sLoginName", util.getGdsValue("gUserEmpName"));
+    DS_SAVEFAXINFO.setCellData(0, "sDepartName", util.getGdsValue("gUserDepartName")); // gUserDepartCode
+    DS_SAVEFAXINFO.setCellData(0, "sCrNo", ""); //Ds_LTIEA00.GetColumn(0, "sCrNo") ); // 계약번호	
+    DS_SAVEFAXINFO.setCellData(0, "sPlanNo", sPlanNo); // 설계번호
+    DS_SAVEFAXINFO.setCellData(0, "sPsnGroupFlgcd", DsWs_getCrInfo.getCellData(0, "sPsnGroupFlgcd")); //Ds_LTIEA00.GetColumn(0, "sPsnGroupFlgcd") ); // 개인단체구분코드	
+//    DS_SAVEFAXINFO.setCellData(0, "imgURL", gds.gLtiUrl);
+	DS_SAVEFAXINFO.setCellData(0, "imgURL",  util.getGdsValue("gLtiUrl"));
+    DS_SAVEFAXINFO.setCellData(0, "sContName", edt_ContName.getValue());
+    DS_SAVEFAXINFO.setCellData(0, "nBussPrem", DsWs_getCrInfo.getCellData(0, "nBussPrem")); //Ds_LTIEA00.GetColumn(0, "nBussPrem") );		
+//    DS_SAVEFAXINFO.setCellData(0, "sApplyType", wconv.mid(sPlanNo, 0, 1)); // 계약번호 
+//    DS_SAVEFAXINFO.setCellData(0, "sApplyKind", wconv.mid(sPlanNo, 1, 4));
+//    DS_SAVEFAXINFO.setCellData(0, "sApplySer", wconv.mid(sPlanNo, 5, 7));
+DS_SAVEFAXINFO.setCellData(0, "sApplyType", wconv.substr(sPlanNo, 0, 1)); // 계약번호 
+    DS_SAVEFAXINFO.setCellData(0, "sApplyKind", wconv.substr(sPlanNo, 1, 4));
+    DS_SAVEFAXINFO.setCellData(0, "sApplySer", wconv.substr(sPlanNo, 5, 7));
+    DS_SAVEFAXINFO.setCellData(0, "nEndorseNo", ""); // 계약변경번호 
+    // 가입설계서일체
+    if (rdo_sDmcode == "L164") {
+        if (DsWs_getCrInfo.getCellData(0, "sBunsMetdDocuClsfCd") == "3") {
+            DS_SAVEFAXINFO.setCellData(0, "sFileName", "B870_Rep");
+            DS_SAVEFAXINFO.setCellData(0, "sContents", "재물보험 대면 가입설계서일체");
+        } else if (DsWs_getCrInfo.getCellData(0, "sBunsMetdDocuClsfCd") == "7") {
+            //연금 edit_by_sk
+            DS_SAVEFAXINFO.setCellData(0, "sFileName", "C400_Rep");
+            DS_SAVEFAXINFO.setCellData(0, "sContents", "가입설계서일체");
+        } else {
+            DS_SAVEFAXINFO.setCellData(0, "sFileName", "B400_Rep");
+            DS_SAVEFAXINFO.setCellData(0, "sContents", "가입설계서일체");
+        }
+    } else if (rdo_sDmcode == "L140") {
+        DS_SAVEFAXINFO.setCellData(0, "sFileName", "B741_Rep");
+        DS_SAVEFAXINFO.setCellData(0, "sContents", "가입설계동의서"); //대면 알릴의무
+    } else if (rdo_sDmcode == "L006") {
+        if (wconv.substr(DsWs_getCrInfo.getCellData(0, "sGdCd"), 0, 2) == "21") {
+            DS_SAVEFAXINFO.setCellData(0, "sFileName", "B744_Rep");
+            DS_SAVEFAXINFO.setCellData(0, "sContents", "알릴의무"); //DS_SAVEFAXINFO.SetColumn( 0  , "copies", 2);//인쇄매수설정
+        } else {
+            DS_SAVEFAXINFO.setCellData(0, "sFileName", "B680_Rep");
+            DS_SAVEFAXINFO.setCellData(0, "sContents", "알릴의무"); //DS_SAVEFAXINFO.SetColumn( 0  , "copies", 2);//인쇄매수설정
+        }
+    } else if (rdo_sDmcode == "L224") {
+        if (DsWs_getCrInfo.getCellData(0, "sInsurStrtdate") < sStdDate201701) {
+            DS_SAVEFAXINFO.setCellData(0, "sFileName", "B999_Rep_20170101");
+        } else {
+            DS_SAVEFAXINFO.setCellData(0, "sFileName", "B999_Rep");
+        }
+        DS_SAVEFAXINFO.setCellData(0, "sContents", "상품설명서"); //대면 알릴의무
+    }
+
+    console.log("Fax =================>\n"
+    		+"sContents:"+DS_SAVEFAXINFO.getCellData(0, "sContents")+"\n"
+    		+"sFileName:"+DS_SAVEFAXINFO.getCellData(0, "sFileName")+"\n"
+    		+"sDmCode:"+DS_SAVEFAXINFO.getCellData(0, "sDmCode")+"\n"
+    	//	+"sDmCode:"+DS_SAVEEMAILINFO.getCellData(0, "sDmCode")+"\n"
+    );
+    //trace("FAXINFO==>222222222222===>"+DS_SAVEFAXINFO.SaveXML());
+    
+    	
+	var repoService = scwin.getRepoServiceNm(DS_SAVEFAXINFO.getCellData(0, "sFileName")).split("^");
+		
+	taskValue = repoService[0];
+	actionValue = repoService[1];
+	
+	DS_SAVEFAXINFO.setCellData( 0 , "sTaskValue" ,  taskValue );
+	DS_SAVEFAXINFO.setCellData( 0 , "sActionValue" , actionValue );
+	DS_SAVEFAXINFO.setCellData( 0 , "sRptName" ,  "longterm/"+ DS_SAVEFAXINFO.getCellData(0, "sFileName"));//오즈명
+	    console.log("Fax =================>\n"
+    		+"sContents:"+DS_SAVEFAXINFO.getCellData(0, "sContents")+"\n"
+    		+"sFileName:"+DS_SAVEFAXINFO.getCellData(0, "sFileName")+"\n"
+    		+"sDmCode:"+DS_SAVEFAXINFO.getCellData(0, "sDmCode")+"\n"
+    		+"sTaskValue:"+DS_SAVEFAXINFO.getCellData(0, "sTaskValue")+"\n"
+    		+"sActionValue:"+DS_SAVEFAXINFO.getCellData(0, "sActionValue")+"\n"
+    		+"sRptName:"+DS_SAVEFAXINFO.getCellData(0, "sRptName")+"\n"
+    	//	+"sDmCode:"+DS_SAVEEMAILINFO.getCellData(0, "sDmCode")+"\n"
+    );
+    return true;
+};
+
+scwin.chk_Email_OnClick = function(obj, strValue) {
+    if (rdo_sDmcode == "LL02" && strValue == true) {} else if (rdo_sDmcode == "LL02" && strValue == false) {}
+};
+
+scwin.lfn_getCrInfo = function(sCrNo, sFlg) {
+    wconv.clear(DsWs_getCrInfo);
+//    SOBJ_getCrInfo.WSDL = gds.gWsdlBasis;
+//    if (sFlg == "1") {
+//        DsWs_getCrInfo.Xpath = "//*/LTIDA00";
+//    } else if (sFlg == "2") {
+//        DsWs_getCrInfo.Xpath = "//*/LTIEA00";
+//    }
+//    var MethodObj = gfn_CreateMethodObj(SOBJ_getCrInfo, "com.inswave.longterm.com.com.task.AXR041Task", "getCrInfo", "", "");
+//    gfn_SetParam(MethodObj, "sFlg", sFlg); // 1 설계번호, 2 계약번호
+    var MethodObj = new callService("com.inswave.longterm.com.com.task.AXR041Task", "getCrInfo", pageSize, pageNo);
+	MethodObj.setId("getCrInfo");
+	MethodObj.setParam( "sFlg", sFlg); ;
+	
+    if (sFlg == "1") {
+//        gfn_SetParam(MethodObj, "sPlanNo", sCrNo);
+		MethodObj.setParam( "sPlanNo", sCrNo);
+    } else if (sFlg == "2") {
+//        gfn_SetParam(MethodObj, "sCrNo", sCrNo);
+		MethodObj.setParam( "sCrNo", sCrNo); ;
+    }
+//    gfn_CallService(SOBJ_getCrInfo, DOBJ_getCrInfo, MethodObj); //trace(replace(gfn_XmlEncoder(DOBJ_getCrInfo.Contents), "><", ">\n<"));
+	
+	MethodObj.setUrl("/contract/CBSC102PController.do");//배포후변경할것(controller위치와 이름)
+	MethodObj.setXPath("//*/LTIDA00");//(dsWS의 XPath)
+	MethodObj.addXPath("//*/WARNING"); 
+	MethodObj.sync();
+	MethodObj.send();
+
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDA00"), "DsWs_getCrInfo");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+	
+	util.setCompBindRefresh("DsWs_getCrInfo");//바인딩을 해줌
+	util.setCompBindRefresh("DsWs_Warning");//바인딩을 해줌
+	util.setRowPosition(DsWs_getCrInfo, 0);
+};
+
+/**
+ * @function	search
+ * @desc		고객정보, 주소, 연락처 검색
+ * @param		custNo : 주민등록번호/사업자 번호
+ * search(custNo, seqNo,nPlrAddrSeq,nPlrTelSeq,nPlrDMAddrSeq);
+ **/
+scwin.lfn_SearchCstEmail = function(custNo) {
+    wconv.clear(DsWs_Cst);
+//    SOBJ_Cst.WSDL = gds.gWsdlBasis; // 서비스 Obj WSDC 설정 
+//    var MethodObj = gfn_CreateMethodObj(SOBJ_Cst, "com.inswave.longterm.cst.cst.task.CAA070Task", "getCustomerInfo", 0, 0);
+
+    // 주민등록번호/사업자번호 세팅
+//    gfn_SetParam(MethodObj, "sCustNo", custNo);
+//    gfn_CallService(SOBJ_Cst, DOBJ_Cst, MethodObj);
+	var MethodObj = new callService("com.inswave.longterm.cst.cst.task.CAA070Task", "getCustomerInfo", pageSize, pageNo);
+	MethodObj.setId("getCustomerInfo");
+	MethodObj.setParam( "sCustNo", custNo); 
+	
+	MethodObj.setUrl("/contract/CBSC102PController.do");//배포후변경할것(controller위치와 이름)
+	MethodObj.setXPath("//*/hashtable/data/CUSAA03");//(dsWS의 XPath)
+	MethodObj.addXPath("//*/WARNING"); 
+	MethodObj.sync();
+	MethodObj.send();
+
+	util.jSonDsCreate(_tranSync.getDsJson("CUSAA03"), "DsWs_Cst");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+	
+	util.setCompBindRefresh("DsWs_Cst");//바인딩을 해줌
+	util.setCompBindRefresh("DsWs_Warning");//바인딩을 해줌
+	util.setRowPosition(DsWs_Cst, 0);
+	
+	console.log("DsWS_Cst 데이터=========>\n"+
+	DsWs_Cst.getAllJSON());
+    //trace("\n\n\n\n ***********************" + replace(gfn_XmlEncoder(DOBJ_Cst.Contents), "><", ">\n<") + "\n\n\n\n");
+    //trace("\n\n\n\n ***********************" + DsWs_Cst.SaveXML() + "\n\n\n\n");
+    var sEmail1Arry;
+    if (DsWs_Cst.getCellData(0, "sEmail1") != "") {
+        sEmail1Arry = wconv.split(DsWs_Cst.getCellData(0, "sEmail1"), "@");
+    } else {
+        sEmail1Arry = wconv.split(DsWs_Cst.getCellData(0, "sEmail2"), "@");
+    }
+
+
+    //trace(DsWs_CstInfo.SaveXML());
+    if (Div2_edt_CstName.getValue() == "") {
+        Div2_edt_CstName.setValue(DsWs_CstInfo.getCellData(0, "sName"));
+    }
+    console.log("sEmail1Arry 확인============>\n"+sEmail1Arry[0]+sEmail1Arry[0]);
+    edt_sEmail.setValue(sEmail1Arry[0]);
+    edt_sEmail1.setValue(sEmail1Arry[1]);
+};
+
+scwin.lfn_msk_CstNo_OnCharChanged = function(obj, strPreText, strPostText) {
+    if (isBizRegNo(obj.getValue()) || wconv.length(obj.getValue()) == 13) {
+        scwin.lfn_Search_Async();
+    }
+};
+
+scwin.Btn_Close_OnClick = function(obj) {
+    var ret = "";
+    wprom.close(ret);
+};
+
+scwin.lfn_Print = function(obj) {
+
+    var promise = Promise.resolve();
+    
+    console.log("프린트 출력 rdo_sDmcode 확인 " +rdo_sDmcode);
+    
+    if (rdo_sDmcode == "L224") {
+        scwin.lfn_RenwlPrem(); //발송전 갱신보험료 입력
+    }
+    if (chk_Print.getValue() != "1") {
+        wprom.alert("프린트 출력을 선택하십시오.");
+        return false;
+    }
+    	
+//    scwin.chk_Print();
+	promise = promise.then(function(rv) {
+		scwin.chk_Print();	//증명서 매칭
+	});
+	promise = promise.then(function(rtnVal) {
+            return scwin.fn_chkPrintView(); //미리보기
+        });
+    //trace("DS_SAVESENDINFO ==> " + DS_SAVESENDINFO.SaveXML());
+//    if (util.getGdsValue("gUserID") == "5160035" || util.getGdsValue("gUserID") == "2030061") {
+//	if (util.getGdsValue("gUserID") != "") {
+//        promise = promise.then(function(rtnVal) {
+//            return scwin.fn_chkPrintView(); //미리보기
+//        });
+//    } else {
+//        scwin.fn_chkPrint();
+//    }
+    return promise;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : fn_chkPrint()
+// 내용        : 증명서발급
+//---------------------------------------------------------------------------
+scwin.fn_chkPrint = function(obj) {
+    //심사정보복사
+    //DS_SAVESENDPRINT.copy(parent.DS_SAVESENDPRINT);	
+    //	if (DS_SAVESENDPRINT.GetCount() > 0){
+    for (var i = 0; i < DS_SAVESENDPRINT.getRowCount(); i++) {
+        var sOdiId = DS_SAVESENDPRINT.getCellData(i, "sFileName");
+        var sPlanNo = DS_SAVESENDPRINT.getCellData(i, "sPlanNo");
+        var sPsnGroupFlgcd = DS_SAVESENDPRINT.getCellData(i, "sPsnGroupFlgcd");
+        var sGdCd = DS_SAVESENDPRINT.getCellData(i, "sGdCd");
+        var copies = DS_SAVESENDPRINT.getCellData(i, "copies");
+        var sDmCode = DS_SAVESENDPRINT.getCellData(i, "sDmCode");
+        var sIssID = DS_SAVESENDPRINT.getCellData(i, "sIssID");
+        //var sPlanNo = parent.medt_PlanNo.Value;
+        var strParam;
+        strParam = "viewer.namespace=KW_Testozviewer\n";
+        strParam += "connection.compressedform=true\n";
+//        strParam += "connection.servlet=" + gds.gLtiUrl + "/newoz/server\n";
+        strParam += "connection.servlet=" + util.getGdsValue("gLtiUrl") + "/newoz/server\n";
+        strParam += "connection.reportname=/longterm/" + sOdiId + ".ozr\n";
+        //	strParam += "odi.odinames=/longterm/" + sOdiId + "\n";
+        strParam += "odi.odinames=" + sOdiId + "\n";
+        strParam += "information.debug=true\n";
+        strParam += "viewer.isframe=false\n";
+        strParam += "toolbar.all=false\n"; //툴바 감춤
+        strParam += "viewer.useprogressbar=false\n"; //프로그래스바 감춤
+        strParam += "viewer.mode =print"; //미리보기없이 바로 인쇄
+        strParam += "print.copies=" + copies + "\n"; //인쇄매수설정
+        //strParam += "print.copies ="+v_pageCnt;	//인쇄매수설정
+        strParam += "print.once=false\n"; //보고서인쇄를 한번만 할지를 설정
+        strParam += "print.printername=DEFAULT_PRINTER\n"; //인쇄할 프린터설정
+        strParam += "print.size=A4\n"; //인쇄용지크기	
+        strParam += "print.mode=silent\n"; //인쇄창 없이 바로 인쇄	
+        if (sDmCode == "L224")
+            strParam += "odi." + sOdiId + ".pcount=4\n";
+        else
+            strParam += "odi." + sOdiId + ".pcount=3\n";
+        strParam += "odi." + sOdiId + ".args1=sPlanNo=" + sPlanNo + "\n";
+        strParam += "odi." + sOdiId + ".args2=sDmCode=" + sDmCode + "\n";
+        strParam += "odi." + sOdiId + ".args3=sIssID=" + sIssID + "\n";
+        if (sDmCode == "L224")
+            strParam += "odi." + sOdiId + ".args4=sGdCd=" + sGdCd + "\n";
+
+
+        //alert(strParam);
+        //gfn_beforOz(this, strParam);	  
+        scwin.lfn_beforOz(this, strParam);
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : fn_chkPrintView()
+// 내용        : 증명서발급미리보기
+//---------------------------------------------------------------------------
+scwin.fn_chkPrintView = function(obj) {
+   
+
+    var taskValue = "";
+    var actionValue = "";   
+	//기간계 서비스 정보 조회
+	var repoService = scwin.getRepoServiceNm(DS_SAVESENDPRINT.getCellData(0, "sFileName")).split("^");
+
+	taskValue = repoService[0];
+	actionValue = repoService[1];
+
+	if(taskValue == "" && actionValue == ""){
+		wprom.alertF("해당 계약/설계건은 본 화면에서 증명서 발급이 불가 합니다.\n장기 업무팀에 문의 주세요.", {});	
+		return;	
+	}else{
+	    var setParam;
+	    var reportInfo  = {};
+	    
+		for(var i=0; i < DS_SAVESENDPRINT.getRowCount(); i++){
+		
+	  		setParam = [
+	  			 "sFileName|" 		+ DS_SAVESENDPRINT.getCellData(i, "sFileName")
+	 			//,"sOdiId:" 		+ DS_SAVESENDPRINT.getCellData(i, "sOdiName")	  
+	 			,"sPlanNo|" 		+ DS_SAVESENDPRINT.getCellData(i,"sPlanNo")	
+				,"sGdCd|" 			+ DS_SAVESENDPRINT.getCellData(i, "sGdCd")	 
+				,"sDmCode|" 		+ DS_SAVESENDPRINT.getCellData(i, "sDmCode")	   
+				,"sIssID|" 			+ DS_SAVESENDPRINT.getCellData(i, "sIssID")		 
+//				,"sCrNo|" 			+ DS_SAVESENDPRINT.getCellData(i,"sCrNo")		  
+//				,"sGubun|" 			+ DS_SAVESENDPRINT.getCellData(i, "sGubun")
+				,"sPsnGroupFlgcd|"	+ DS_SAVESENDPRINT.getCellData(i, "sPsnGroupFlgcd")
+				,"copies|" 			+ DS_SAVESENDPRINT.getCellData(i, "copies")  
+		 	];
+		 	console.log(
+		 	 "sFileName|" 		+ DS_SAVESENDPRINT.getCellData(i, "sFileName")+"\n"+
+	 			//,"sOdiId:" 		+ DS_SAVESENDPRINT.getCellData(i, "sOdiName")	  
+	 			"sPlanNo|" 		+ DS_SAVESENDPRINT.getCellData(i,"sPlanNo")	+"\n"+
+				"sGdCd|" 			+ DS_SAVESENDPRINT.getCellData(i, "sGdCd")	 +"\n"+
+				"sDmCode|" 		+ DS_SAVESENDPRINT.getCellData(i, "sDmCode")	   +"\n"+
+				"sIssID|" 			+ DS_SAVESENDPRINT.getCellData(i, "sIssID")		 +"\n"+
+//				"sCrNo|" 			+ DS_SAVESENDPRINT.getCellData(i,"sCrNo")		  
+//				"sGubun|" 			+ DS_SAVESENDPRINT.getCellData(i, "sGubun")
+				"sPsnGroupFlgcd|"	+ DS_SAVESENDPRINT.getCellData(i, "sPsnGroupFlgcd")+"\n"+
+				"copies|" 			+ DS_SAVESENDPRINT.getCellData(i, "copies") 
+		 	);
+		 				 	
+		 		    
+			reportInfo.rptName        	= "longterm/"+ DS_SAVESENDPRINT.getCellData(i, "sFileName");	//레포트 파일명       (필수) ex) "sc/A0001" 
+			reportInfo.dataType       	= "xml";					//인터페이스 Task Value      ex) com.inswave.admin.task.JsonConvertorTask
+			reportInfo.sInterfaceType 	= "Y";						//인터페이스 Action Value    ex) sample_PrintEndObjectList 
+			reportInfo.taskValue 		= taskValue;				// 인터페이스: B640_Rep.ozr(단체명세서	장기보험)
+			reportInfo.actionValue 		= actionValue;				//인터페이스 사용유무 (필수) ex) "Y" or "N" 
+		 	reportInfo.gUserID        	= util.getGdsValue("gUserID");			 		//레포트 하단에 출력될 발급자명 ex) "홍길동"
+			reportInfo.sDirectPrint     = "0";						//바로출력 1: 바로출력 바로출력할경우 EXE설치파일 설치 필요 ex) "1" or "0"
+			reportInfo.setParam  		= setParam;					//인테페이스에서 사용하는 파라미터 정보 배열로 파라미터 개수만큼 입력한다.
+			reportInfo.sFormParam  		= setParam;					//레포트 에서 사용하는 파라미터 정보 배열로 파라미터 개수만큼 입력한다.
+			reportInfo.title    	 	= DS_SAVESENDPRINT.getCellData(i, "sContents");				//팝업창 타이틀
+			reportInfo.export
+			 		
+		 	console.log("rptName : " + "longterm/"+ DS_SAVESENDPRINT.getCellData(i, "sFileName")+"\n"
+		 		+"dataType : " + "xml"+"\n"
+		 		+"sInterfaceType : " + "Y"+"\n"
+		 		+"taskValue : " + taskValue+"\n"
+		 		+"actionValue : " + actionValue+"\n"
+		 		+"gUserID : " + util.getGdsValue("gUserID")+"\n"
+		 		+"sDirectPrint : " + "0"+"\n"
+		 		+"setParam : " + setParam+"\n"
+		 		+"sFormParam : " + setParam+"\n"
+		 		+"title : " + DS_SAVESENDPRINT.getCellData(i, "sContents")+"\n"
+		 		);	 	
+			wprom.reportOpen(reportInfo);	     
+		}
+	}
+};
+
+//---------------------------------------------------------------------------
+// tobe : scwin.getRepoServiceNm
+// asis : 
+// 내용 : oz에 해당하는 기간계 서비스 명가져옴.
+//---------------------------------------------------------------------------
+scwin.getRepoServiceNm = function(ozName){	
+	
+	taskValue = "";
+	actionValue = "";
+	
+	if( ozName == "B410_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB410_RepV01";}
+	else if( ozName == "B400_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB400_RepV01";}
+	else if( ozName == "B200_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE250Task"; actionValue =	"printB200_RepV01";}
+	else if( ozName == "B410_Rep_1"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB410_Rep_1V01";}
+	else if( ozName == "B410_Rep_2"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB410_Rep_2V01";}
+	else if( ozName == "B610_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB610_RepV01";}
+	else if( ozName == "B580_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE230Task"; actionValue =	"printB580_RepV01";}
+	else if( ozName == "B510_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE250Task"; actionValue =	"printB510_RepV01";}
+	else if( ozName == "B550_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE240Task"; actionValue =	"printB550_RepV01";}
+	else if( ozName == "B490_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB490_RepV01";}
+	else if( ozName == "B460_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB460_RepV01";}
+	else if( ozName == "B590_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE230Task"; actionValue =	"printB590_RepV01";}
+	else if( ozName == "B640_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE230Task"; actionValue =	"printB640_RepV01";}
+	else if( ozName == "B681_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB681_RepV01";}
+	else if( ozName == "E410_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE220Task"; actionValue =	"printE410_RepV01";}
+	else if( ozName == "B680_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB680_RepV01";}
+	else if( ozName == "B620_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB620_RepV01";}
+	else if( ozName == "B630_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB630_RepV01";}
+	else if( ozName == "B621_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB621_RepV01";}
+	else if( ozName == "B681_Rep_20120705"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB681_Rep_20120705V01";}
+	else if( ozName == "B471_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB471_RepV01";}
+	else if( ozName == "B473_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB473_RepV01";}
+	else if( ozName == "B451_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE220Task"; actionValue =	"printB451_RepV01";}
+	else if( ozName == "B472_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB472_RepV01";}
+	else if( ozName == "B684_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB684_RepV01";}
+	else if( ozName == "B683_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB683_RepV01";}
+	else if( ozName == "B730_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE240Task"; actionValue =	"printB730_RepV01";}
+	else if( ozName == "B741_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE250Task"; actionValue =	"printB741_RepV01";}
+	else if( ozName == "B744_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB744_RepV01";}
+	else if( ozName == "B746_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE240Task"; actionValue =	"printB746_RepV01";}
+	else if( ozName == "B745_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE240Task"; actionValue =	"printB745_RepV01";}
+	else if( ozName == "B800_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB800_RepV01";}
+	else if( ozName == "B810_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB810_RepV01";}
+	else if( ozName == "B820_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB820_RepV01";}
+	else if( ozName == "B840_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB840_RepV01";}
+	else if( ozName == "B870_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB870_RepV01";}
+	else if( ozName == "B860_Rep_2"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB860_Rep_2V01";}
+	else if( ozName == "B860_Rep_1"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB860_Rep_1V01";}
+	else if( ozName == "B880_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB880_RepV01";}
+	else if( ozName == "B890_Rep_1"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE220Task"; actionValue =	"printB890_RepV01";}
+	else if( ozName == "B890_Rep_2"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE220Task"; actionValue =	"printB890_RepV01";}
+	else if( ozName == "B760_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB760_RepV01";}
+	else if( ozName == "B757_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB757_RepV01";}
+	else if( ozName == "B755_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB755_RepV01";}
+	else if( ozName == "B761_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB761_RepV01";}
+	else if( ozName == "B759_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB759_RepV01";}
+	else if( ozName == "C590_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE230Task"; actionValue =	"printC590_RepV01";}
+	else if( ozName == "C400_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printC400_RepV01";}
+	else if( ozName == "C410_Rep_1"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printC410_Rep_1V01";}
+	else if( ozName == "C580_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printC580_RepV01";}
+	else if( ozName == "C550_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printC550_RepV01";}
+	else if( ozName == "C410_Rep_2"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printC410_Rep_2V01";}
+	else if( ozName == "C757_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printC757_RepV01";}
+	else if( ozName == "C760_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printC760_RepV01";}
+	else if( ozName == "C610_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printC610_RepV01";}
+	else if( ozName == "C755_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printC755_RepV01";}
+	else if( ozName == "E411_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE220Task"; actionValue =	"printE41_RepV01";}
+	else if( ozName == "B756_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB756_RepV01";}
+	else if( ozName == "B758_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB758_RepV01";}
+	else if( ozName == "B472_Rep_05"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB472_Rep_05V01";}
+	else if( ozName == "B472_Rep_06"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB472_Rep_06V01";}
+	else if( ozName == "B472_Rep_06_20160701"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB472_Rep_06_20160701V01";}
+	else if( ozName == "B472_Rep_20160701"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB472_Rep_20160701V01";}
+	else if( ozName == "B472_Rep_05_20160701"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB472_Rep_05_20160701V01";}
+	else if( ozName == "B999_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue =	"printB999_RepV01";}
+	else if( ozName == "B952_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE210Task"; actionValue =	"printB952_RepV01";}
+	else if( ozName == "B000_Rep"){ taskValue = " "; actionValue = " ";}
+	else if( ozName == "B770_Rep"){ taskValue = " "; actionValue = " ";}
+	else if( ozName == "B780_Rep"){ taskValue = " "; actionValue = " ";}
+	else if( ozName == "B763_Rep"){ taskValue = " "; actionValue = " ";}
+ 	else if( ozName == "B998_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE200Task"; actionValue = "printB999_RepV01";}
+  	else if( ozName == "B747_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE220Task"; actionValue = "printB747_RepV01";}
+  	else if( ozName == "B743_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE250Task"; actionValue = "printB743_RepV01";}
+  	//2차개발건
+  	else if( ozName == "B955_Rep"){ taskValue = " "; actionValue = " ";}//계약변경(배서)신청서   	
+  	else if( ozName == "B965_Rep"){ taskValue = " "; actionValue = " ";}//환급금청구서           	
+  	else if( ozName == "B970_Rep"){ taskValue = " "; actionValue = " ";}//수익자 변경 신청서     	
+  	else if( ozName == "B960_Rep"){ taskValue = " "; actionValue = " ";}//질권설정(해제)신청서   	
+  	else if( ozName == "B975_Rep"){ taskValue = " "; actionValue = " ";}//제지급금 지급 동의서   	
+  	else if( ozName == "B980_Rep"){ taskValue = " "; actionValue = " ";}//대표 수익자 지정 동의서	
+  	else if( ozName == "B985_Rep"){ taskValue = " "; actionValue = " ";}//위임장                 	
+  	else if( ozName == "B995_Rep"){ taskValue = " "; actionValue = " ";}//보험계약대출신청서     	  	
+  	
+	else if( ozName == "L022_Rep"){ taskValue = " "; actionValue = " ";}   //대출약정서                                                                                 
+	else if( ozName == "L231_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE240Task"; actionValue = "printL231_RepV01";} //대출원리금납입내역서                       
+	else if( ozName == "L232_Rep"){ taskValue = "com.inswave.longterm.psv.ens.task.EBE230Task"; actionValue = "printL232_RepV01";} //부채잔액증명의뢰서
+
+
+	console.log("레포트=====================>\n"
+		+"ozName:"+ozName+"/\n"
+		+"taskValue:"+taskValue+"/\n"
+		+"actionValue:"+actionValue+"/\n"
+		+"====================================\n"
+		);
+		
+	return taskValue+"^"+actionValue;
+};
+
+
+
+
+//*************************************
+//  oz 컴포넌트  동적으로 binding
+//*************************************
+scwin.lfn_beforOz = function(awForm, strParam) {
+    if (chk_test.Value == "1") {
+        wprom.alert(strParam);
+        return;
+    }
+    var oOz = null;
+    var oZtransfer = null;
+
+    //마우스 커서 Wait상태설정
+    SetWaitCursor(true);
+    SetCapture();
+
+    //ZTransferX 컨트롤 생성
+    oOz = find("EXOZViewer40_OCX");
+    oZtransfer = find("ZtransferX_OCX");
+    if (oOz != null) {
+        Destroy("EXOZViewer40_OCX");
+        oOz = null;
+    }
+    if (oZtransfer != null) {
+        Destroy("ZtransferX_OCX");
+        oZtransfer = null;
+    }
+
+
+
+    //ZTransferX 컨트롤 생성
+    Create("ZTransferX", "ZtransferX_OCX", "left=\"0\" top=\"0\" width=\"0\" height=\"0\"");
+    oZtransfer = find("ZtransferX_OCX");
+    ZtransferX_OCX.InstallNamespace = "KW_Test";
+    ZtransferX_OCX.InstallBase = "<PROGRAMS>/Forcs";
+
+    //ZtransferX_OCX.InstallRegistOnly = true;
+    if (indexOf(gds.gGenUrl, "http://10.1.1.129") > -1 || indexOf(gds.gGenUrl, "http://10.1.1.131") > -1) {
+        ZtransferX_OCX.DownloadServer = "http://10.1.1.129/newozviewer/";
+        ZtransferX_OCX.DownloadPort = "8182";
+    } else {
+        ZtransferX_OCX.DownloadServer = "http://10.1.1.60/newozviewer/";
+        ZtransferX_OCX.DownloadPort = "8000";
+    }
+    ZtransferX_OCX.DownloadInstruction = "ozrviewer.idf";
+    ZtransferX_OCX.StartInstall();
+
+
+    //오즈 컨트롤 존재 여부 확인
+    oOz = find("EXOZViewer40_OCX");
+
+
+    //오즈 컨트롤 생성
+    create("EXOZViewer40", "EXOZViewer40_OCX", "left=\"0\" right=\"0\" top=\"0\" width=\"0\" height=\"0\" bottom=\"0\"");
+    EXOZViewer40_OCX.CreateReport(strParam);
+    EXOZViewer40_OCX.OZPostCommand = "EXOZViewer400_OZPostCommand";
+
+
+    //오즈 컨트롤 생성시까지 대기
+    while (wconv.isEmpty(awForm)) {
+        oOz = find("EXOZViewer40_OCX");
+        if (oOz != null)
+            break;
+        Idle();
+    }
+
+    //마우스 커서 입력상태로 설정
+    ReleaseCapture();
+    SetWaitCursor(false);
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_RenwlPrem
+// 내용        : 갱신보험료 산출처리
+//---------------------------------------------------------------------------
+scwin.lfn_RenwlPrem = function() {
+
+    //데이터셋 초기화
+    wconv.clear(DsWs_RenwlPrem);
+//    SOBJ_RenwlPrem.WSDL = gds.gWsdlBasis; //기본 웹서비스
+//    DsWs_Warning.DataObject = "DOBJ_RenwlPrem";
+//    var MethodObj = gfn_CreateMethodObj(SOBJ_RenwlPrem, "com.inswave.longterm.ssr.sst.task.DBB190Task", "getRenwlPremList", "", "");
+//    gfn_SetParam(MethodObj, "sPlanNo", parent.parent.medt_PlanNo.Value);
+//    gfn_SetParam(MethodObj, "sNewCalc", "Y");
+//    gfn_SetParam(MethodObj, "gUserID", gds.gUserID);
+//    gfn_SetParam(MethodObj, "gUserIP", gds.gUserIP);
+	var MethodObj = new callService("com.inswave.longterm.ssr.sst.task.DBB190Task", "getRenwlPremList", pageSize, pageNo);
+	MethodObj.setId("getRenwlPremList");
+//	MethodObj.setParam( "sPlanNo", parent.parent.medt_PlanNo.getValue()); 
+	MethodObj.setParam( "sPlanNo", sPlanNo.getValue());
+	MethodObj.setParam( "sNewCalc", "Y");
+	MethodObj.setParam( "gUserID", util.getGdsValue("gUserID"));
+	MethodObj.setParam( "gUserIP", util.getGdsValue("gUserIP"));
+
+    if (sPsnGroupFlgcd == "1") {
+//        gfn_SetParam(MethodObj, "sPsnGroupFlgcd", "20");
+		MethodObj.setParam( "sPsnGroupFlgcd", "20");
+    } else {
+//        gfn_SetParam(MethodObj, "sPsnGroupFlgcd", "10");
+		MethodObj.setParam( "sPsnGroupFlgcd", "10");
+    }
+//    var result = gfn_CallService(SOBJ_RenwlPrem, DOBJ_RenwlPrem, MethodObj);
+	MethodObj.setUrl("/contract/CBSC102PController.do");//배포후변경할것(controller위치와 이름)
+	MethodObj.setXPath("//*/vector/data/LTIDA19");//(dsWS의 XPath)
+	MethodObj.addXPath("//*/WARNING"); 
+	MethodObj.sync();
+	MethodObj.send();
+
+	util.jSonDsCreate(_tranSync.getDsJson("LTIDA19"), "DsWs_RenwlPrem");
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+	
+	util.setCompBindRefresh("DsWs_RenwlPrem");//바인딩을 해줌
+	util.setCompBindRefresh("DsWs_Warning");//바인딩을 해줌
+	util.setRowPosition(DsWs_RenwlPrem, 0);
+    if (result == false) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    }
+};
+
+	]]></script>
+    </head>
+    <body>
+    	<xf:group class="cont_wrap layer" id="D192"
+    		style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;/*  height:240px;*/ left:0px; top:0px;/* width:710px;"
+    		userData1="안내문출력"
+    		userData2=" OnLoadCompleted:scwin.lfn_OnLoadCompleted; ">
+    		<DataObjects>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    			<DataObject></DataObject>
+    		</DataObjects>
+    		<ServiceObjects>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    			<ServiceObject></ServiceObject>
+    		</ServiceObjects>
+    		<xf:group arcsize="8" class="sty_area_form" id="Shape4"
+    			style="position:absolute;height:26px;width:655px;bottom:77px;border-color:user23;left:0px;right:704px;top:30px;"
+    			userData3="RoundRect">
+    		</xf:group>
+    		<xf:group arcsize="8" class="sty_area_form" id="Shape2"
+    			style="position:absolute;height:76px;width:655px;bottom:192px;border-color:user23;left:0px;right:704px;top:66px;"
+    			userData3="RoundRect">
+    		</xf:group>
+    		<w2:textbox class="sty_lb_Basic" id="Static0"
+    			style="position:absolute;height:24px;width:90px;left:0px;VAlign:Middle;top:66px;"
+    			tagname="">
+    		</w2:textbox>
+    		<w2:textbox class="sty_lb_Basic" id="Static1"
+    			style="position:absolute;height:24px;width:90px;left:0px;VAlign:Middle;top:91px;"
+    			tagname="">
+    		</w2:textbox>
+    		<xf:select appearance="full"
+    			ev:onclick="scwin.chk_Email_OnClick" id="chk_Email"
+    			style="position:absolute;Value:FALSE;height:18px;width:90px;left:9px;top:71px;"
+    			tabIndex="19" cols="" rows="">
+    			<xf:choices>
+    				<xf:item>
+    					<xf:label><![CDATA[E_mail]]></xf:label>
+    					<xf:value><![CDATA[1]]></xf:value>
+    				</xf:item>
+    			</xf:choices>
+    		</xf:select>
+    		<w2:textbox id="Static2" label="안내문출력"
+    			style="position:absolute; VAlign:Middle;  height:24px; left:0px; top:0px; "
+    			tagname="" class="sub_pop_title01">
+    		</w2:textbox>
+
+    		<w2:textbox class="sty_lb_Basic" id="Static19" label="청약"
+    			style="position:absolute;height:24px;width:90px;left:0px;VAlign:Middle;top:30px;"
+    			tagname="">
+    		</w2:textbox>
+    		<w2:textbox class="sty_lb_Basic" id="Static12"
+    			label="E-Mail 주소"
+    			style="position:absolute; VAlign:Middle;    height:24px;left:106px;top:66px; width:88px;"
+    			tagname="">
+    		</w2:textbox>
+    		<w2:textbox class="sty_lb_Basic" id="Static14" label="FAX"
+    			style="position:absolute;height:24px;width:88px;left:106px;VAlign:Middle;top:91px;"
+    			tagname="">
+    		</w2:textbox>
+    		<w2:textbox class="sty_lb_Basic" id="Static15" label="수신인"
+    			style="position:absolute;height:24px;width:50px;min-width:50px;left:365px;VAlign:Middle;top:91px;"
+    			tagname="">
+    		</w2:textbox>
+    		<xf:input class="sty_ipt_form" dataType="number"
+    			disabled="true" id="edt_fax1" maxlength="4"
+    			ref="data:Ds_LTIEA00."
+    			style="position:absolute;   height:20px;left:216px;top:94px; width:40px;"
+    			tabIndex="3">
+    		</xf:input>
+    		<xf:input class="sty_ipt_form" dataType="number"
+    			disabled="true" id="edt_fax2" maxlength="4"
+    			ref="data:Ds_LTIEA00."
+    			style="position:absolute;   height:20px;left:264px;top:94px; width:41px;"
+    			tabIndex="4">
+    		</xf:input>
+    		<xf:input class="sty_ipt_form" dataType="number"
+    			disabled="true" id="edt_fax3" maxlength="4"
+    			ref="data:Ds_LTIEA00."
+    			style="position:absolute;   height:20px;left:314px;top:94px; width:41px;"
+    			tabIndex="5">
+    		</xf:input>
+    		<xf:input class="sty_ipt_form" disabled="true"
+    			id="edt_ContName" maxlength="30"
+    			style="position:absolute; ImeMode:none;    height:20px;left:437px;top:94px; width:207px;"
+    			tabIndex="6">
+    		</xf:input>
+    		<w2:textbox id="Static18" label="-"
+    			style="position:absolute; VAlign:Middle;  height:24px;left:308px;top:94px; width:20px;"
+    			tagname="">
+    		</w2:textbox>
+    		<w2:textbox id="Static20" label="-"
+    			style="position:absolute; VAlign:Middle;  height:24px;left:258px;top:94px; width:20px;"
+    			tagname="">
+    		</w2:textbox>
+    		<xf:trigger class="popup_top_btn"
+    			ev:onclick="scwin.btn_send_OnClick" id="btn_send"
+    			style="position:absolute;ImageID:btn_Input_02;height:20px;Transparent:TRUE;width:25px;left:555px;top:0px;"
+    			tabIndex="15" type="anchor">
+    			<xf:label><![CDATA[발송]]></xf:label>
+    		</xf:trigger>
+    		<xf:input class="sty_ipt_form" disabled="true"
+    			id="edt_sEmail1"
+    			style="position:absolute; ImeMode:none;    height:20px;left:374px;top:69px; width:141px;"
+    			tabIndex="2">
+    		</xf:input>
+    		<xf:select appearance="full" id="chk_Fax"
+    			style="position:absolute;Value:FALSE;height:18px;width:90px;left:9px;top:97px;"
+    			tabIndex="20" cols="" rows="">
+    			<xf:choices>
+    				<xf:item>
+    					<xf:label><![CDATA[FAX]]></xf:label>
+    					<xf:value><![CDATA[1]]></xf:value>
+    				</xf:item>
+    			</xf:choices>
+    		</xf:select>
+    		<w2:textbox class="Basic_text" id="Static26"
+    			label="※ 팩스 발급요청 중 시간이 오래 걸릴 수 있습니다.11"
+    			style="position:absolute; VAlign:Middle;  height:20px;left:0px;top:148px; width:288px;"
+    			tagname="">
+    		</w2:textbox>
+    		<w2:textbox class="Basic_text" id="Static111" label="@"
+    			style="position:absolute; VAlign:Middle;  height:24px;left:360px;top:69px; width:16px;"
+    			tagname="">
+    		</w2:textbox>
+    		<xf:input class="sty_ipt_form" disabled="true"
+    			id="edt_sEmail" maxlength="30"
+    			style="position:absolute; ImeMode:none;    height:20px;left:216px;top:69px; width:141px;"
+    			tabIndex="1">
+    		</xf:input>
+    		<xf:group class="" id="Div2"
+    			style="position:absolute; display:none;  background-color:#adadad; height:32px; left:192px; top:408px; width:625px;"
+    			tabIndex="25" userData1="Div2">
+    			<xf:trigger class="btn_Input_Search"
+    				ev:onclick="scwin.lfn_sCstSerch_OnClick" id="Div2_btn_sCstSerch"
+    				style="position:absolute; Transparent:TRUE;  ImageID:btn_Input_Search;  height:20px; left:101px; width:20px;"
+    				tabIndex="1">
+    			</xf:trigger>
+    			<xf:input class="sty_ipt_search" disabled="true"
+    				id="Div2_edt_CstName" readOnly="TRUE"
+    				style="position:absolute;   height:20px; left:123px; width:224px;"
+    				tabIndex="2">
+    			</xf:input>
+    			<xf:input class="sty_ipt_search" dataType="text"
+    				displayFormat="######-#######"
+    				ev:onblur="scwin.lfn_edt_OnKeyDown"
+    				ev:oneditkeyup="scwin.lfn_msk_CstNo_OnCharChanged"
+    				id="Div2_msk_CstNo"
+    				style="position:absolute;   height:20px; width:99px;"
+    				tabIndex="3">
+    			</xf:input>
+    		</xf:group>
+    		<xf:select1 appearance="minimal" class="sty_ipt_form"
+    			emptyItem="true" ev:oneditkeyup="scwin.cmb_GdList_OnChanged"
+    			id="cmb_GdList"
+    			style="position:absolute; display:none;    height:20px; left:352px; top:160px; width:224px;"
+    			tabIndex="26">
+    			<xf:choices>
+    				<xf:itemset nodeset="data:Ds_GdList">
+    					<xf:label ref="sGdNm"></xf:label>
+    					<xf:value ref="sGdCd"></xf:value>
+    				</xf:itemset>
+    			</xf:choices>
+    		</xf:select1>
+    		<xf:trigger class="popup_top_btn"
+    			ev:onclick="scwin.Btn_Close_OnClick" id="Button3"
+    			style="position:absolute;ImageID:btn_Comm_Close;height:20px;width:25px;left:606px;top:0px;"
+    			tabIndex="27" type="anchor">
+    			<xf:label><![CDATA[닫기]]></xf:label>
+    		</xf:trigger>
+    		<w2:textbox class="sty_lb_Basic" id="Static3"
+    			style="position:absolute;height:24px;width:638px;left:0px;VAlign:Middle;top:116px;"
+    			tagname="">
+    		</w2:textbox>
+    		<xf:select appearance="full" id="chk_Print"
+    			style="position:absolute;Value:FALSE;height:18px;width:90px;left:9px;top:121px;"
+    			tabIndex="31" cols="" rows="">
+    			<xf:choices>
+    				<xf:item>
+    					<xf:label><![CDATA[프린터 출력]]></xf:label>
+    					<xf:value><![CDATA[1]]></xf:value>
+    				</xf:item>
+    			</xf:choices>
+    		</xf:select>
+    		<xf:trigger class="popup_top_btn"
+    			ev:onclick="scwin.lfn_Print" id="Button0"
+    			style="position:absolute;ImageID:btn_Input_02;height:20px;Transparent:TRUE;width:25px;left:505px;top:0px;"
+    			tabIndex="33" type="anchor">
+    			<xf:label><![CDATA[인쇄]]></xf:label>
+    		</xf:trigger>
+    		<xf:select1 appearance="full" class="sty_lb_Search"
+    			ev:onchange="scwin.Div_common_OnChanged" id="rdo_L224"
+    			ref="data:Ds_PRIAA02_List.sDmCode" rows="1"
+    			style="position:absolute; display:none;  height:22px; left:512px; top:44px; width:105px;"
+    			tabIndex="34">
+    			<xf:choices>
+    				<xf:value ref="L224"></xf:value>
+    			</xf:choices>
+    		</xf:select1><xf:select1 appearance="full" class="sty_lb_Search" cols="" ev:onchange="" id="rdo_L006" ref="" rows="1" style="position:absolute; height:22px;left:331px;top:33px; width:105px;" tabIndex="30" ev:onviewchange="scwin.Div_common_OnChanged">
+    		<xf:choices>
+    			<xf:item>
+    				<xf:label><![CDATA[알릴의무]]></xf:label>
+    				<xf:value><![CDATA[L006]]></xf:value>
+    			</xf:item>
+    		</xf:choices>
+    	</xf:select1>
+    		<xf:select1 appearance="full" class="sty_lb_Search" cols=""
+    			ev:onchange="" id="rdo_Select" ref="" rows="1"
+    			style="position:absolute; height:22px;left:111px;top:33px; width:220px;"
+    			tabIndex="28" ev:onviewchange="scwin.Div_common_OnChanged">
+    			<xf:choices>
+    				<xf:item>
+    					<xf:label><![CDATA[가입설계서일체]]></xf:label>
+    					<xf:value><![CDATA[L164]]></xf:value>
+    				</xf:item>
+    				<xf:item>
+    					<xf:label><![CDATA[가입설계동의서]]></xf:label>
+    					<xf:value><![CDATA[L140]]></xf:value>
+    				</xf:item>
+    			</xf:choices>
+    		</xf:select1>
+    		<xf:select1 disabledClass="" appearance="minimal"
+    			direction="" chooseOption="" id="cmb_Email"
+    			style="position:absolute; INDEX:0;    height:20px;left:520px;top:69px; width:122px;"
+    			displayMode="label" selectedData="" optionOrder="" allOption=""
+    			disabled="true" submenuSize="" renderType="native"
+    			class="sty_ipt_form" ev:onchange="scwin.lfn_eMail_OnChanged">
+    			<xf:choices>
+    				<xf:itemset nodeset="data:Ds_Email">
+    					<xf:label ref="sCodeName"></xf:label>
+    					<xf:value ref="sCodeNameEng"></xf:value>
+    				</xf:itemset>
+    			</xf:choices>
+    		</xf:select1>
+    	</xf:group>
+
+    	
+    	
+    	
+    </body>
+</html>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="DsWs_EmpList"
+                	repeatNode="map" userData2="//*/vector/data/ADMAB01">
+                	<w2:columnInfo>
+                		<w2:column id="sManageEmpNo" name="name1"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sEmpNo" name="name2"
+                			dataType="text">
+                		</w2:column>
+                		<w2:column id="sEmpName" name="name3"
+                			dataType="text">
+                		</w2:column>
+                	</w2:columnInfo>
+                </w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+ <script src="/cm/js/convertJs/Global_Script.js"/>
+ <script src="/cm/js/convertJs/comm_Webservice.js"/>
+ <script src="/cm/js/convertJs/Accounting_Script.js"/>
+        <script><![CDATA[
+/*
+ *===================================File description================================================
+ * Create Date : 2017/09/06
+ * Creater     : 구종식 
+ * Description : 대리점 소속 사용인을 조회한다.
+ *====================================================================================================
+ */
+var args;
+
+scwin.init = function() {
+    //Parent에서 넘어온 값을 설정한다.
+	var indata = $w.getParameter("param");//
+	try {
+		args = JSON.parse(indata);
+	} catch(e) {}
+   
+    Edt_sManageEmpNo.setValue(args.pManageNo);
+    Edt_sMangeEmpName.setValue(args.pManageName);
+
+    //조회한다.
+    scwin.getDoerUserListByManage();
+};
+//비동기 호출
+//scwin.getDoerUserListByManage = function() {
+//	util.eventAsyncCall(this, scwin.getDoerUserListByManage_sync, arguments);
+//};
+scwin.getDoerUserListByManage = function() {
+    wconv.clear(DsWs_EmpList);
+	/*orign
+    SOBJ_Accounting.WSDL = gds.gWsdlAccounting;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Accounting, "AccountingCommonTask", "selectDoerUserListByManage", "", "");
+    gfn_SetParam(MethodObj, "sManageEmpNo", Edt_sManageEmpNo.getValue());
+
+    //trace(MethodObj.in0);	
+    var result = gfn_CallService(SOBJ_Accounting, DOBJ_EmpList, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingCommonTask", "selectDoerUserListByManage");
+	MethodObj.setId("selectDoerUserListByManage");
+	MethodObj.setParam("sManageEmpNo", Edt_sManageEmpNo.getValue());
+	MethodObj.setUrl("/sales/CBSB017MController.do");
+	MethodObj.setXPath("//*/vector/data/ADMAB01");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+
+	util.interfaceKey(_tranSync.result.serviceDs);
+	DsWs_EmpList.setJSON (_tranSync.getDsJson("ADMAB01")); // dataset 데이터 
+	    
+    //trace(DOBJ_EmpList.Contents);
+    //trace(DsWs_EmpList.savexml());
+    if (DsWs_EmpList.getCellData(0, "result") < 1) {
+        wprom.alert("조회된 자료가 없습니다.");
+        return;
+    }
+};
+
+//**************************************************************************************************
+// 닫기
+//**************************************************************************************************
+scwin.Btn_Close_OnClick = function(e) {
+    wprom.close();
+};
+
+//**************************************************************************************************
+// 그리드 선택
+//**************************************************************************************************
+scwin.Grd_EmpNoList_OnCellClick = function(row,col){
+    if (col != 0)
+        return;
+    var sArg = DsWs_EmpList.getCellData(row, "sEmpNo");
+    sArg += "^" + DsWs_EmpList.getCellData(row, "sEmpName");
+    wprom.close(sArg);
+};
+
+scwin.doEnter = function(e){
+    if (e.keyCode == 13) {
+        scwin.getDoerUserListByManage();
+    }
+};
+]]></script>
+    </head>
+    <body>
+    	<xf:group class="cont_wrap" id="5611" style="position:absolute;  height:345px;left:0px;top:0px; width:455px;min-width:455px;border:0px solid #fff;" userData1="대리점사용인조회[7013]"
+    		userData2=" OnLoadCompleted:scwin.OnLoadCompleted; ">
+    		<DataObjects>
+    			<DataObject />
+    		</DataObjects>
+    		<ServiceObjects>
+    			<ServiceObject />
+    		</ServiceObjects>
+    		<xf:trigger class="popup_top_btn" ev:onclick="scwin.Btn_Close_OnClick" id="Btn_Close" style="position:absolute; ImageID:btn_Comm_Close;left:389px;top:0px;"
+    			tabIndex="4" type="anchor">
+    			<xf:label><![CDATA[닫기]]></xf:label>
+    		</xf:trigger>
+    		<w2:textbox id="Static5" label="대리점 사용인 조회" style="position:absolute; VAlign:Middle;  height:22px;left:0px;top:-1px; width:141px;" tagname="" class="sub_pop_title01" />
+    		<w2:textbox class="sty_lb_Search" id="Static0" label="대리점명" style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:202px;top:39px; width:64px;" tagname="" />
+    		<w2:textbox class="sty_lb_Search" id="Static1" label="대리점코드" style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:6px;top:39px; width:64px;" tagname="" />
+    		<xf:input class="sty_ipt_search" disabled="true" id="Edt_sManageEmpNo" maxlength="7" readOnly="TRUE"
+    			style="position:absolute; border-style:solid; height:20px;left:85px;top:37px; width:106px;" tabIndex="2" />
+    		<xf:switch id="switch_14" style=" ">
+    			<xf:case id="Default_15" style=" ">
+    				<w2:gridView autoFit="allColumn" autoFitMinWidth="100" class="sty_Grid" dataList="DsWs_EmpList" ev:oncellclick="scwin.Grd_EmpNoList_OnCellClick" focusMode="row" id="Grid1"
+    					inputType="text" readOnly="true" style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  height:264px; left:0px; top:72px; width:452px;"
+    					tabIndex="5" evenRowBackgroundColor="" rowMouseOverColor="" selectedCellColor="">
+    					<w2:header>
+    						<w2:row>
+    							<w2:column dataType="text" id="head_id_94" inputType="text" readOnly="true" style="height:20px;" textAlign="center" userData1="0" userData3="0" value="사용인코드"
+    								width="80" />
+    							<w2:column dataType="text" id="head_id_95" inputType="text" readOnly="true" style="height:20px;" textAlign="center" userData1="1" userData3="0" value="사용인명"
+    								width="110" />
+    							<w2:column dataType="text" id="head_id_96" inputType="text" readOnly="true" style="height:20px;" textAlign="center" userData1="2" userData3="0" value="대리점" width="70" />
+    						</w2:row>
+    					</w2:header>
+    					<w2:gBody>
+    						<w2:row>
+    							<w2:column dataType="text" id="sEmpNo" inputType="link" readOnly="true" style="height:20px; cursor:hand; ;" textAlign="center" userData1="0" userData3="0" width="80" />
+    							<w2:column dataType="text" id="sEmpName" inputType="text" readOnly="true" style="height:20px;" textAlign="left" userData1="1" userData3="0" width="110" value=""/>
+    							<w2:column dataType="text" id="sManageEmpNo" inputType="text" readOnly="true" style="height:20px;" textAlign="center" userData1="2" userData3="0" width="70" />
+    						</w2:row>
+    					</w2:gBody>
+    				</w2:gridView>
+    			</xf:case>
+    		</xf:switch>
+    		<xf:input class="sty_ipt_search" disabled="true" ev:onblur="" id="Edt_sMangeEmpName" maxlength="20" readOnly="TRUE"
+    			style="position:absolute; ImeMode:native;  border-style:solid; height:20px;left:281px;top:37px; width:140px;" tabIndex="1" ev:onkeydown="scwin.doEnter"/>
+    	</xf:group>
+    	<xf:group arcsize="6" class="search_area" id="Shape9" style="left:0px;top:30px;width:452px;" userData3="RoundRect"></xf:group>
+    </body>
+</html>

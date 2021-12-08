@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+    <!-- 
+        ###################################################
+         파일명 : CBSC070P.xml
+         프로그램명 : 수익자등록[B111_Pop]
+         설 명 :  수익자등록[B111_Pop]
+         작성자 : 진태만
+         작성일 : 2017.10.06
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.10.06        진태만          최초작성
+        ###################################################
+     -->
+	 <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+            		<!-- 수익자코드 정보 Ds(Ds_cd) -->
+            	 <w2:dataList baseNode="list" id="Ds_cd" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCd" name="sCd"/>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <sCd/>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                
+                <w2:dataList baseNode="list" id="Ds_Reln" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="Ds_B111" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sRelnCdPop" name="sRelnCdPop"/>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <sRelnCdPop/>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_long_mPlr" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCustNo" name="sCustNo"/>
+                        <w2:column dataType="text" id="sCstId" name="sCstId"/>
+                        <w2:column dataType="text" id="nSeqNo" name="nSeqNo"/>
+                        <w2:column dataType="text" id="sName" name="sName"/>
+                        <w2:column dataType="text" id="sCustType" name="sCustType"/>
+                        <w2:column dataType="text" id="sClass" name="sClass"/>
+                        <w2:column dataType="text" id="sMarry" name="sMarry"/>
+                        <w2:column dataType="text" id="sJobCode" name="sJobCode"/>
+                        <w2:column dataType="text" id="sJobName" name="sJobName"/>
+                        <w2:column dataType="text" id="sDrvCls" name="sDrvCls"/>
+                        <w2:column dataType="text" id="sJobCls" name="sJobCls"/>
+                        <w2:column dataType="text" id="nHomAdrsChangeNo" name="nHomAdrsChangeNo"/>
+                        <w2:column dataType="text" id="sHomZco" name="sHomZco"/>
+                        <w2:column dataType="text" id="sHomAdr1" name="sHomAdr1"/>
+                        <w2:column dataType="text" id="sHomAdr2" name="sHomAdr2"/>
+                        <w2:column dataType="text" id="nCrpAdrsChangeNo" name="nCrpAdrsChangeNo"/>
+                        <w2:column dataType="text" id="sCrpZco" name="sCrpZco"/>
+                        <w2:column dataType="text" id="sCrpAdr1" name="sCrpAdr1"/>
+                        <w2:column dataType="text" id="sCrpAdr2" name="sCrpAdr2"/>
+                        <w2:column dataType="text" id="nEtcAdrsChangeNo" name="nEtcAdrsChangeNo"/>
+                        <w2:column dataType="text" id="sEtcZco" name="sEtcZco"/>
+                        <w2:column dataType="text" id="sEtcAdr1" name="sEtcAdr1"/>
+                        <w2:column dataType="text" id="sEtcAdr2" name="sEtcAdr2"/>
+                        <w2:column dataType="text" id="sAdrsType" name="sAdrsType"/>
+                        <w2:column dataType="text" id="nAdrsChangeNo" name="nAdrsChangeNo"/>
+                        <w2:column dataType="text" id="sAdrsZco" name="sAdrsZco"/>
+                        <w2:column dataType="text" id="sAdrs1" name="sAdrs1"/>
+                        <w2:column dataType="text" id="sAdrs2" name="sAdrs2"/>
+                        <w2:column dataType="text" id="sDMAdrsTyp" name="sDMAdrsTyp"/>
+                        <w2:column dataType="text" id="nTelChangeNo" name="nTelChangeNo"/>
+                        <w2:column dataType="text" id="sHomeTel1" name="sHomeTel1"/>
+                        <w2:column dataType="text" id="sHomeTel2" name="sHomeTel2"/>
+                        <w2:column dataType="text" id="sHomeTel3" name="sHomeTel3"/>
+                        <w2:column dataType="text" id="sOfficeTel1" name="sOfficeTel1"/>
+                        <w2:column dataType="text" id="sOfficeTel2" name="sOfficeTel2"/>
+                        <w2:column dataType="text" id="sOfficeTel3" name="sOfficeTel3"/>
+                        <w2:column dataType="text" id="sCellPhone1" name="sCellPhone1"/>
+                        <w2:column dataType="text" id="sCellPhone2" name="sCellPhone2"/>
+                        <w2:column dataType="text" id="sCellPhone3" name="sCellPhone3"/>
+                        <w2:column dataType="text" id="sFax1" name="sFax1"/>
+                        <w2:column dataType="text" id="sFax2" name="sFax2"/>
+                        <w2:column dataType="text" id="sFax3" name="sFax3"/>
+                        <w2:column dataType="text" id="sEtcType" name="sEtcType"/>
+                        <w2:column dataType="text" id="sEtcTel1" name="sEtcTel1"/>
+                        <w2:column dataType="text" id="sEtcTel2" name="sEtcTel2"/>
+                        <w2:column dataType="text" id="sEtcTel3" name="sEtcTel3"/>
+                        <w2:column dataType="text" id="sEmail1" name="sEmail1"/>
+                        <w2:column dataType="text" id="sEmail2" name="sEmail2"/>
+                    </w2:columnInfo>
+                </w2:dataList> 
+                <w2:dataList baseNode="list" id="DsWs_Reln" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="DsWs_Dmcy" repeatNode="map" userData2="//*/DMCY"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        
+		<!--// js Script include //--> 
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/> 
+		<script src="/cm/js/convertJs/Marine_Script.js"/> 
+		<script src="/cm/js/convertJs/LongTerm_Script.js"/> 
+		<script src="/cm/js/convertJs/GrdPassword_Script.js"/> 
+		
+        <script><![CDATA[
+ 
+ /****************************************************************************
+ * 프로그램번호   : B111
+ * 프로그램명     : 수익자 등록
+ * 파일명         : B111_Pop.xml
+ * 프로그램 내용  : 수익자 등록...
+ * 관련 프로그램  : 
+ * 작성자         : 김경일
+ * 작성일         : 2010-10-10
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+ 
+var fAgntFlagPop = "";	//만기시수익자(ed_Mangi), 사망시수익자(ed_Dead), 지정대리인(ed_Proxy),사망시수익자(ed_Xcpt)  구분자 
+var fAgntFlagIdx = 0;	//수익자정보
+var sPopupFlag = "";	 //이중 open 방지 flag.
+var sRelnCdPop = "";	//계약자/피보험자관계
+var sCdPop = "";		// 수익자코드(주민번호)
+var sNamePop = "";		//성명
+var sTelnoPop = "";		//연락처
+var sAdrs1Pop = "";
+var sAdrsAddPop = "";
+var sMailFlagCdPop = "";
+var sHomeTel1Pop = "";
+var sHomeTel2Pop = "";
+var sHomeTel3Pop = "";
+var sOfficeTel1Pop = "";
+var sOfficeTel2Pop = "";
+var sOfficeTel3Pop = "";
+var sCellPhone1Pop = "";
+var sCellPhone2Pop = "";
+var sCellPhone3Pop = "";
+var sCrtorCdPop = "";
+var sAsmtAgntMailAddFlagPop = "";
+var nAsmtAgntMailChngSeqPop = "";
+var sAsmtAgntAddFlagPop = "";
+var sAsmtAgntAddrPop = "";
+var sEndPftbpMailAddFlagPop = "";
+var nEndPftbpMailChngseqPop = "";
+var sEndPftbpAddrPop = "";
+var sEndPftbpAddFlagPop = "";
+var sPftbpMailAddFlagPop = "";
+var nPftbpMailChngSeqPop = "";
+var sPftbpAddFlagPop = "";
+var sPftbpAddrPop = "";
+var sXcptPftbpAddFlagPop = "";
+var sXcptPftbpAddrPop = "";
+var sXcptPftbpMailAddFlagPop = "";
+var nXcptPftbpMailChngSeqPop = "";	//계약자/피보험자의 정보
+var sInrpsCdPop = "";	//계약자/피보험자코드(주민번호)
+var sInrpsNamePop = "";	//계약자/피보험자 성명
+var sAddrFlgcd = "";
+var nPftbpChngSeqPop = "";
+var sXcptPftbpAddFlag = "";
+var nXcptPftbpChngSeq = ""; 
+var sOnlySrarch = "";	//조회만 가능하게 처리
+var sAgncYn = "N";
+var nCell = "";
+var edt_Cd_Event;	// 수익자코드(InputBox) MaskEdit 정규식 입력
+
+//---------------------------------------------------------------------------
+// function 명 : B111_OnLoadCompleted
+// 내용        : 화면로딩시 파라메터값 담음
+//---------------------------------------------------------------------------
+scwin.init = function() {
+	//console.log("[/CBSC070P.xml] [init()] ==> [폼 로딩] [TEST_01]" );
+	
+	var pro = Promise.resolve();
+	window.top.util.winTopShowModalChk = "T";
+	util.winTopShowModal();
+
+	pro = pro.then(function(rv) {
+		return util.winTopShowModalPromise();
+	});
+
+	pro = pro.then(function(rv) {
+		// init 부분 함수 입력하는곳  // =================================================>
+		
+		btn_IvrInput.hide();
+	 
+		var indata = $w.getParameter("param");
+		var inJSON = JSON.parse(indata); 	// 부모창에서 받아온 값( 예) inJSON.sMyPlan)
+	
+		if (!util.isNull(inJSON.fAgntFlag)) 	fAgntFlagPop = inJSON.fAgntFlag;	 //만기시수익자, 사망시수익자, 지정대리인 구분자  
+		if (!util.isNull(inJSON.sRelnCd)) 	sRelnCdPop = inJSON.sRelnCd;	 //계약자/피보험자 관계  	
+		if (!util.isNull(inJSON.sCd)) 	sCdPop = inJSON.sCd;		// 수익자코드(주민번호) 
+		if (!util.isNull(inJSON.sName)) 	sNamePop = inJSON.sName;	// 성명 
+		if (!util.isNull(inJSON.sTelno)) 	sTelnoPop = inJSON.sTelno;	// 연락처
+		if (!util.isNull(inJSON.sHomeTel1)) 	sHomeTel1Pop = inJSON.sHomeTel1;	//  
+		if (!util.isNull(inJSON.sHomeTel2)) 	sHomeTel2Pop = inJSON.sHomeTel2;	//  
+		if (!util.isNull(inJSON.sHomeTel3)) 	sHomeTel3Pop = inJSON.sHomeTel3;	//  
+		if (!util.isNull(inJSON.sOfficeTel1)) 	sOfficeTel1Pop = inJSON.sOfficeTel1;	//  
+		if (!util.isNull(inJSON.sOfficeTel2)) 	sOfficeTel2Pop = inJSON.sOfficeTel2;	//  
+		if (!util.isNull(inJSON.sOfficeTel3)) 	sOfficeTel3Pop = inJSON.sOfficeTel3;	//  
+		if (!util.isNull(inJSON.sCellPhone1)) 	sCellPhone1Pop = inJSON.sCellPhone1;	//  
+		if (!util.isNull(inJSON.sCellPhone2)) 	sCellPhone2Pop = inJSON.sCellPhone2;	//  
+		if (!util.isNull(inJSON.sCellPhone3)) 	sCellPhone3Pop = inJSON.sCellPhone3;	//  
+		if (!util.isNull(inJSON.sCrtorCd)) 	sCrtorCdPop = inJSON.sCrtorCd;	//  
+		if (!util.isNull(inJSON.sInrpsCd)) 	sInrpsCdPop = inJSON.sInrpsCd;		// 계약자/피보험자코드(주민번호)
+		if (!util.isNull(inJSON.sInrpsName)) 	sInrpsNamePop = inJSON.sInrpsName;	// 계약자/피보험자 성명  
+		if (!util.isNull(inJSON.sAdrs1)) 	sAdrs1Pop = inJSON.sAdrs1;	// 주소추가
+		if (!util.isNull(inJSON.sAdrsAdd)) 	sAdrsAddPop = inJSON.sAdrsAdd;		// 주소추가2
+		if (!util.isNull(inJSON.sMailFlagCd)) 	sMailFlagCdPop = inJSON.sMailFlagCd;	//  	
+		if (!util.isNull(inJSON.sPftbpAddFlag)) 	sPftbpAddFlagPop = inJSON.sPftbpAddFlag;	//  
+		if (!util.isNull(inJSON.nPftbpChngSeq)) 	nPftbpChngSeqPop = inJSON.nPftbpChngSeq;		//  
+		if (!util.isNull(inJSON.sPftbpAddr)) 	sPftbpAddrPop = inJSON.sPftbpAddr;	//  
+		if (!util.isNull(inJSON.fAgntFlagIdx)) 	fAgntFlagIdx = inJSON.fAgntFlagIdx;	//  계약자/피보험자 성명  
+		if (!util.isNull(inJSON.sAddrFlgcd)) 	sAddrFlgcd = inJSON.sAddrFlgcd;
+		if (!util.isNull(inJSON.sXcptPftbpAddFlag)) 	sXcptPftbpAddFlag = inJSON.sXcptPftbpAddFlag;	 
+		if (!util.isNull(inJSON.nXcptPftbpChngSeq)) 	nXcptPftbpChngSeq = inJSON.nXcptPftbpChngSeq;	  
+		if (!util.isNull(inJSON.sEndPftbpAddFlag)) 	sEndPftbpAddFlag = inJSON.sEndPftbpAddFlag;	  
+		if (!util.isNull(inJSON.sEndPftbpAddr)) 	sEndPftbpAddr = inJSON.sEndPftbpAddr;	  
+		if (!util.isNull(inJSON.sMaildress)) 	sMaildress = inJSON.sMaildress;	  
+		if (!util.isNull(inJSON.sMaildressFlag)) 	sMaildressFlag = inJSON.sMaildressFlag;	  
+		if (!util.isNull(inJSON.sMailFlagCd)) 	sMailFlagCd = inJSON.sMailFlagCd;	  
+	
+		sAddrFlgcd = "";
+		//console.log("[/CBSC070P.xml] [init()] ==> [폼 로딩] [TEST_02] [수익자코드(주민번호)_sCdPop]"+ sCdPop );
+			
+	 	var pObj = wprom.getParamObject();  
+		parent_Ds_LTIDA00 = pObj.Ds_LTIDA00;	// 부모창 피보험자 정보 Ds Set 
+		//console.log("[/CBSC070P.xml] [init()] ==> [폼 로딩] [parent_Ds_LTIDA00_갯수]"+ parent_Ds_LTIDA00.getRowCount() +"[parent_Ds_LTIDA00]"+ WebSquare.xml.serialize(parent_Ds_LTIDA00.getAllXML()) );  
+	 
+		sPopupFlag = "1"; 	// 이중 open 방지 flag.
+		
+		//대리점인지 여부(30:대리점,33:사용인,35:TM사용인)
+		if(util.getGdsValue("gUserDuty") == "30" || util.getGdsValue("gUserDuty") == "33" || util.getGdsValue("gUserDuty") == "35"){
+			//sAgncYn = "Y";
+			btn_IvrInput.Enable = false;
+		}
+		
+		scwin.lfn_Search();  // 수익자관계 조회
+	  
+	    if ( wconv.length(parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd")) > 0) {	 // 진행상태가 00 완료 90 수납대기, 52~58 조건부 승인일 경우 ==> 화면 비활성화
+	        if (parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd") == "00" || parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd") == "90" 
+	        	|| (wconv.toNumber(parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd")) >= 52 
+	        	&& wconv.toNumber(parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd")) <= 58)) {
+	            sOnlySrarch = "1";		//조회만 가능하게 처리
+	        }
+	    }
+	 
+	    if (wconv.length(sOnlySrarch) > 0) {		//조회만 가능하게 처리
+			scwin.lfn_ComponentEnable(B111_Pop, "btn_close", false);	// 계약상태별 화면 비활성 처리 
+	   		console.log("[/CBSC070P.xml] [init()] ==> [TEST_72] [계약상태별 화면 비활성 처리_OK] [조회만 가능하게 처리]"+ sOnlySrarch +"[진행상태]"+ parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd") );
+  		}
+		// edt_Cd(InputBox) MaskEdit 정규식 입력  
+		var maskRegExp = [ /^[0-9\s]{7}[A-Z0-9\s]{6}$/			// 01. 주민번호 이면("######-#ZZZZZZ")  : 13자리
+									, /^[0-9\s]{3}^[0-9\s]{2}[A-Z0-9\s]{5}$/	   // 02. 법인번호 이면("###-##-#####")  : 10자리 
+								 ]; 			// 07. 청약번호 이면 : 12자리
+		var maxLength  = [13, 10];
+		var chkIndex   = 0; 
+		edt_Cd_Event = new wMaskEditObj(edt_Cd, maskRegExp, maxLength, chkIndex);		// 수익자코드 마스크 설정
+		
+		if (sCdPop.length == 10) {		// 피보험자와 관계가 법인인 경우 mask edit 수정 
+			edt_Cd_Event.setIndex(1);  	// edt_Cd(InputBox) MaskEdit 정규식 입력 2번째(02. 법인번호)
+			edt_Cd.setPlaceholder("______-_______");		// Placeholder 설정   
+			edt_Cd.setDisplayFormat("####-##-#####"); 	// MaskEdit 처리
+		} else {
+			edt_Cd_Event.setIndex(0);  	// edt_Cd(InputBox) MaskEdit 정규식 입력 0번째(01. 피보험자코드)
+			edt_Cd.setPlaceholder("______-_______");		// Placeholder 설정   
+			edt_Cd.setDisplayFormat("######-#######");  	// MaskEdit 처리
+		}
+	 
+	    if (sAgncYn == "Y") {	  //대리점인지
+	        var obj_list = ["edt_Cd"]; //maskEdit 오브젝트 리스트
+	        var ds_list = ["Ds_cd"]; //데이터셋 리스트
+	        var column_list = ["sCd"]; //실제값이 보관될 데이터셋의 컬럼
+	        var mask_list = ["######-#******"]; //화면에 표시될 마스크
+	        //gfn_mkEditPassWord(obj_list, ds_list, column_list, mask_list);
+	    }  
+	    
+		// TEST @@@ ===> 
+		//	cmb_RelnCd.setValue("11"); 		// 피보험자와 관계(10: 봉인, 11: 배우자, 12:자)
+		//	edt_Telno1.setValue("02"); 
+		//	edt_Telno2.setValue("123"); 
+		//	edt_Telno3.setValue("4567");  
+		//	edt_Cd.setValue("8001021234563"); 		// 수익자코드
+		// 	edt_Name.setValue("김케이"); 		// 성명 
+		 
+ 		
+		return ;		// init 함수를 종료하고자 할때 사용
+		// return Promise.reject("오류관련처리"); // =================================================>
+	});
+
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});
+	
+	//pro = pro.catch(function(rj) {
+		//util.winTopHideModal();
+		//alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+	//});
+	 
+	return pro;
+ 
+	//console.log("[/CBSC070P.xml] [init()] ==> [폼 로딩] [TEST_end]" );	
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 수익자관계 조회
+//---------------------------------------------------------------------------
+scwin.lfn_Search = function(obj) {
+	//console.log("[/CBSC070P.xml] [lfn_Search()] ==> [수익자관계 조회] [TEST_01]" ); 
+  
+    //타이틀변경 
+    if (fAgntFlagPop == "ed_Mangi") {	  	//만기수익자일 경우
+    	//console.log("[/CBSC070P.xml] [lfn_Search()] ==> [수익자관계 조회] [TEST_03]" );   
+        st_Tit.setValue("만기수익자등록");
+        cap_tit.setValue("계약자와의관계");     
+        
+    } else if (fAgntFlagPop == "ed_Insur") {		//보험수익자일 경우
+        st_Tit.setValue("보험수익자등록");
+        cap_tit.setValue("계약자와의관계"); //지정대리인
+        
+    } else if (fAgntFlagPop == "ed_Proxy") {	//지정대리인일 경우      
+        st_Tit.setValue("지정대리인등록");
+        cap_tit.setValue("계약자와의관계");
+               
+    } else if (fAgntFlagPop == "ed_Dead") {	//사망시 수익자 경우  	 
+        st_Tit.setValue("사망시수익자등록"); 
+        
+    } else if (fAgntFlagPop == "ed_Xcpt") {		//사망외 수익자 경우
+        st_Tit.setValue("사망외수익자등록");  
+    }
+ 
+	scwin.lfn_getCommonCodes();		   // 공통코드 조회  
+ 
+    //화면에 정보값 세팅
+    Ds_B111.setCellData(0, "sRelnCdPop", sRelnCdPop); 	//계약자/피보험자 관계   
+  
+    //전화번호
+    if (sTelnoPop.length > 0) {
+        var hpNumTmpArr = scwin.lfn_TellCheck(sTelnoPop);
+        edt_Telno1.setValue(hpNumTmpArr[0]);
+        edt_Telno2.setValue(hpNumTmpArr[1]);
+        edt_Telno3.setValue(hpNumTmpArr[2]);
+    }
+ 	
+ 	edt_Name.setValue(sNamePop);	//성명
+ 	
+    var insRow = Ds_cd.insertRow(0);  
+     Ds_cd.setCellData(insRow, "sCd", sCdPop); 		// 수익자코드(주민번호) Ds 셋팅 
+   
+    //만기수익자, 지정대리인일경우 수익자미지정버튼 활성화
+    if (fAgntFlagPop == "ed_Mangi" || fAgntFlagPop == "ed_Proxy") {
+        btn_cancel.setDisabled(false);
+    } else if (fAgntFlagPop == "ed_Insur" || fAgntFlagPop == "ed_Proxy") {
+    } else {
+        btn_cancel.hide();
+    } 
+ 
+    //console.log("[/CBSC070P.xml] [lfn_Search()] ==> [수익자관계 조회] [TEST_end]" );
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_getCommonCodes
+// 내용        : 공통코드 조회 
+//---------------------------------------------------------------------------
+scwin.lfn_getCommonCodes = function() {
+	//console.log("[/CBSC085P.xml] [lfn_getCommonCodes()] ==> [공통코드 조회] [TEST_01]" );
+ 
+	var dataSets = "DsWs_Reln";
+	var columns = "CrtorRelnCd"; 
+    var objects = "cmb_RelnCd";
+    var titleTypes = "S"; 		// A:전체, S:선택, N:안넣기
+ 
+	gfn_getCommonCodes(dataSets, columns, objects, titleTypes);     
+	//console.log("[/CBSC085P.xml] [lfn_getCommonCodes()] ==> [DsWs_Reln_갯수_01]"+ DsWs_Reln.getRowCount() +"[DsWs_Reln]"+ WebSquare.xml.serialize(DsWs_Reln.getAllXML()) );  
+	
+}; 
+ 
+//---------------------------------------------------------------------------
+// function 명 : lfn_SearchCst_OnClick
+// 내용        : 고객조회 ==> 수익자코드 버튼 클릭 이벤트
+//---------------------------------------------------------------------------
+scwin.lfn_SearchCst_OnClick = function() {
+
+	//console.log("[/CBSC070P.xml] [lfn_SearchCst_OnClick()] ==> [고객조회] [TEST_01]" );
+
+ 	var promise = Promise.resolve();
+      
+	promise = promise.then(function(rtnVal) {
+		var indata = new Object();
+		
+		//Ds_cd.setCellData(0, "sCd", "8001021234563"); 	//주민번호   // TEST @@@ ====>
+		//Ds_cd.setCellData(0, "sCd", "1208627419"); 	//주민번호   // TEST @@@ ====> 
+		Ds_cd.setCellData(0, "sCd", edt_Cd.getValue() );  	 // 수익자 코드 셋팅(주민번호)
+		//console.log("[/CBSC070P.xml] [lfn_SearchCst_OnClick()] ==> [고객조회] [Ds_cd.sCd]"+ Ds_cd.getCellData(0, "sCd") );
+		
+		if (wconv.length(Ds_cd.getCellData(0, "sCd")) > 0 && wconv.length(Ds_cd.getCellData(0, "sCd")) == 13) {
+		} else if (wconv.length(Ds_cd.getCellData(0, "sCd")) > 0 && wconv.length(Ds_cd.getCellData(0, "sCd")) == 10) {
+       		edt_Cd.setDisplayFormat("###-##-#####");
+	    } else {
+	        wprom.alert("수익자코드를 정확히 입력해 주세요");
+	       // edt_Cd.focus();
+	        return false;
+	    }
+	    
+	   	var parentInfo= ""; 
+	    parentInfo += "^"; //고객ID
+		parentInfo += Ds_cd.getCellData(0, "sCd") + "^"; //주민번호
+	    parentInfo += "0^"; //순번
+	 
+ 		if(wconv.length(Ds_cd.getCellData(0, "sCd")) == 10) { 
+	        parentInfo += "2^"; // 고객유형 ==> 내국인 개인경우 : 1(내국인), 2(사업자), 3(외국인) // 법인경우 : 개인,법인,단체 
+	    } else {
+	        parentInfo += "^";
+    	} 
+	    parentInfo += "^"; 	//주소구분코드 자택
+	    parentInfo += "^"; 	//주소변경회차
+	    parentInfo += "^"; 	//전화회차
+	    parentInfo += "^"; 	//발송지주소구분
+	    parentInfo += "^"; 	//발송지회차
+	    parentInfo += "Ds_long_mPlr"; //데이터셋명 
+		//console.log("[/CBSC070P.xml] [lfn_SearchCst_OnClick()] ==> [고객조회 등록 팝업 Para] [parentInfo]"+ parentInfo );
+	  
+		var sHandlerID = util.getGdsValue("gUserID");
+		
+		var indata  = {"parentInfo" : parentInfo,
+	               "screenId" : "long",
+	               "sStandDate" : "20170906",
+	               "fAgntFlagPop" : "",
+	               "sPlanNo" : "",
+	               "sHandlerID" : sHandlerID,
+	               "sScanObjtYn" : "Y"};  
+		
+		//대면/비대면체크  0 :  대면 , 1 : 비대면
+		if (util.getGdsValue("gUserInterviewYN") != "0") {
+			 if (wconv.length(Ds_cd.getCellData(0, "sCd")) == 13) { 
+			 	var popInfo = {
+						"width"     : 800,
+						"height"    : 580,  
+						"indata"    : indata,
+						"title"     : "개인고객 등록",
+						"callback"  : scwin.popupCallback
+				}; 
+		
+				return wprom.popupOpen("/ui/cbso/CBSO002P.xml", popInfo);		// 개인고객 등록 팝업(/CBSO002P.xml,  cst_cst::A070_Pop.xml)
+		   	
+		   	} else {		   	
+		   		var popInfo = {
+						"width"     : 820,
+						"height"    : 580,  
+						"indata"    : indata,
+						"title"     : "법인고객 등록",
+						"callback"  : scwin.popupCallback
+				}; 
+		   		return wprom.popupOpen("/ui/cbso/CBSO012P.xml", popInfo);		// 법인고객 등록 팝업(/CBSO012P.xml,  cst_cst::A075_Pop.xml) 
+		   	}
+		} else {
+ 			if (wconv.length(Ds_cd.getCellData(0, "sCd")) == 13) { 
+ 				var popInfo = {
+						"width"     : 800,
+						"height"    : 580,  
+						"indata"    : indata,
+						"title"     : "개인고객 등록",
+						"callback"  : scwin.popupCallback
+				}; 
+				
+				return wprom.popupOpen("/ui/cbso/CBSO002P.xml", popInfo);		// 개인고객 등록 팝업
+				
+		   	} else {
+		   		var popInfo = {
+						"width"     : 820,
+						"height"    : 580,  
+						"indata"    : indata,
+						"title"     : "법인고객 등록",
+						"callback"  : scwin.popupCallback
+				}; 
+		   		return wprom.popupOpen("/ui/cbso/CBSO012P.xml", popInfo);		// 법인고객 등록 팝업
+		   	}  
+		}   	
+	});
+      
+	promise = promise.then(function(rv) {	
+		//console.log("[/CBSC070P.xml] [lfn_SearchCst_OnClick()] ==> [고객조회] [TEST_71]" );
+		
+		var rtnValue = wprom.getReturnData(); 
+		 
+		if (rtnValue.ds_long_mPlr != "") {
+			Ds_long_mPlr.setJSON(rtnValue.Ds_long_mPlr);   
+		}
+		
+		if (rtnValue.Callback != "") {
+			eval(rtnValue.Callback);
+		}  
+	});
+	 
+	scwin.lfn_custConfirm = function() { 
+		//console.log("[/CBSC070P.xml] [lfn_custConfirm()] ==> [팝업 처리 결과] [Ds_long_mPlr.getRowCount()]"+ Ds_long_mPlr.getRowCount() +"[Ds_long_mPlr]"+ WebSquare.xml.serialize(Ds_long_mPlr.getAllXML()) ); 
+ 
+		if(Ds_long_mPlr.getRowCount() > 0){
+			if (wconv.length(Ds_long_mPlr.getCellData(0, "sCellPhone1")) > 0) {
+					edt_Telno1.setValue(Ds_long_mPlr.getCellData(0 , "sCellPhone1")); 
+					edt_Telno2.setValue(Ds_long_mPlr.getCellData(0 , "sCellPhone2")); 
+					edt_Telno3.setValue(Ds_long_mPlr.getCellData(0 , "sCellPhone3"));  
+		 
+			} else  {  
+					edt_Telno1.setValue(Ds_long_mPlr.getCellData(0 , "sHomeTel1")); 
+					edt_Telno2.setValue(Ds_long_mPlr.getCellData(0 , "sHomeTel2")); 
+					edt_Telno3.setValue(Ds_long_mPlr.getCellData(0 , "sHomeTel3")); 
+			}
+			//console.log("[/CBSC070P.xml] [lfn_custConfirm()] ==> [팝업 처리 결과] [수익자코드_Ds_long_mPlr.sCustNo]"+ Ds_long_mPlr.getCellData(0 , "sCustNo") );
+			
+			edt_Cd.setValue(Ds_long_mPlr.getCellData(0 , "sCustNo")); 		// 수익자코드 
+			edt_Name.setValue(Ds_long_mPlr.getCellData(0 , "sName")); 		// 성명 
+			 
+		}  
+	}; 
+		
+	return promise; 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Input_OnClick
+// 내용        : 등록클릭시 메인에 수익자 정보 넘김
+//---------------------------------------------------------------------------
+scwin.lfn_Input_OnClick = function(obj) {
+	//console.log("[/CBSC070P.xml] [lfn_SearchCst_OnClick()] ==> [입력 클릭 Event] [TEST_01]" );
+	
+    if (fAgntFlagPop == "ed_Mangi") {		// 만기 수익자 이면
+        //휴면계약 존재여부 확인
+        var rtnValue = gfn_checkDmcyInsurByCustNo("DsWs_Dmcy", wconv.trim(edt_Cd.getValue()));
+        if (rtnValue != "") {
+            wprom.alert(rtnValue);
+        }
+    }
+ 
+    //본인이 아닌데 수익자코드와 계약자코드가 같으면 에러처리
+    if (cmb_RelnCd.getValue() != "10") {   
+    	//console.log("[/CBSC070P.xml] [lfn_SearchCst_OnClick()] ==> [입력 클릭 Event] [수익자코드_.sCd]"+ Ds_cd.getCellData(0, "sCd") +"[계약자/피보험자코드(주민번호)_sInrpsCdPop]"+ sInrpsCdPop );
+    	
+        if (Ds_cd.getCellData(0, "sCd") == sInrpsCdPop) {
+            wprom.alert("수익자코드와 피보험자 코드가 같습니다.");
+            return false;
+        }
+    } 
+	//console.log("[/CBSC070P.xml] [lfn_SearchCst_OnClick()] ==> [입력 클릭 Event] [cmb_RelnCd.getValue()]"+ cmb_RelnCd.getValue() );
+	 
+    // 법정상속인일 경우는 체크하지 않음
+    if (cmb_RelnCd.getValue() != "99") {  
+        if (cmb_RelnCd.getValue() == "") {		//유효값 체크
+         	wprom.alert("계약자/피보험자관계를 선택하세요.");
+            cmb_RelnCd.focus();
+            return false;
+        }
+     
+   		if (wconv.length(edt_Telno1) == 0) {
+            wprom.alert("연락처를 입력하세요");
+            edt_Telno1.focus();
+            return false;
+            
+        } else {
+        	//console.log("[/CBSC070P.xml] [lfn_SearchCst_OnClick()] ==> [입력 클릭 Event] [TEST_21]" );
+        	
+            var hpNumArr = Array(6);
+            var exNumArr = Array(17);
+            
+            hpNumArr[0] = "010";
+            hpNumArr[1] = "011";
+            hpNumArr[2] = "017";
+            hpNumArr[3] = "016";
+            hpNumArr[4] = "018";
+            hpNumArr[5] = "019";
+            exNumArr[0] = "02";
+            exNumArr[1] = "031";
+            exNumArr[2] = "032";
+            exNumArr[3] = "033";
+            exNumArr[4] = "041";
+            exNumArr[5] = "042";
+            exNumArr[6] = "043";
+            exNumArr[7] = "051";
+            exNumArr[8] = "052";
+            exNumArr[9] = "053";
+            exNumArr[10] = "054";
+            exNumArr[11] = "055";
+            exNumArr[12] = "061";
+            exNumArr[13] = "062";
+            exNumArr[14] = "063";
+            exNumArr[15] = "064";
+            exNumArr[16] = "070";
+            
+            var fFlag = false;
+            var sVal = edt_Telno1.getValue();
+            var hpNumTmpArr = Array(3);
+       
+            for (var i = 0; i < hpNumArr.length; i++) {
+                if (hpNumArr[i] == sVal) {
+                    fFlag = true;
+                    break;
+                }
+            }
+		 
+            //핸드폰국번호가 같은게 없으면 지역국번 조회함
+            if (fFlag != true) {
+                if (wconv.substr(sVal, 0, 2) == "02" && wconv.length(sVal) == 2) {
+                    fFlag = true;
+                } else {
+                    for (var i = 0; i < exNumArr.length; i++) {
+                        if (exNumArr[i] == sVal) {
+                            fFlag = true;
+                            break;
+                        }
+                    }
+                }
+            }
+           
+            if (fFlag != true) {
+                wprom.alert("연락처를 정확히 입력하세요");
+                edt_Telno1.focus();
+                return false;
+            }
+        }
+	 	  
+       if(wconv.length(edt_Telno2.getValue()) == 0 || wconv.length(edt_Telno2.getValue()) < 3 || wconv.length(edt_Telno3.getValue()) == 0 || wconv.length(edt_Telno3.getValue()) < 4) {
+      	  wprom.alert("연락처를 입력하세요");
+            edt_Telno2.focus();
+            return false;
+        }
+      	//console.log("[/CBSC070P.xml] [lfn_SearchCst_OnClick()] ==> [입력 클릭 Event] [TEST_31]" );
+      	
+		///Ds_cd.setCellData(0, "sCd", "8001021234563"); 	//주민번호   // TEST @@@ ====> 
+		Ds_cd.setCellData(0, "sCd", edt_Cd.getValue() );  	 // 수익자 코드 셋팅(주민번호)
+		//console.log("[/CBSC070P.xml] [lfn_SearchCst_OnClick()] ==> [입력 클릭 Event] [Ds_cd_갯수]"+ Ds_cd.getRowCount() +"[Ds_cd]"+ WebSquare.xml.serialize(Ds_cd.getAllXML()) );  
+		
+        // 연속숫자체크	
+        // 주석처리. 2013.11.21 김응남 cj 요청(배서시 실제 전화번호 있음으로 인해 체크를 빼달라고 함) 
+         if (wconv.length(Ds_cd.getCellData(0, "sCd"))> 0 && wconv.length(Ds_cd.getCellData(0, "sCd")) == 13) {
+         } else if (wconv.length(Ds_cd.getCellData(0, "sCd"))> 0 && wconv.length(Ds_cd.getCellData(0, "sCd")) == 10) { 
+  		 } else {	
+  			wprom.alert("수익자코드를 정확히 입력해 주세요");
+            edt_Cd.focus();
+            return false;
+        }
+        
+        if(util.isNull(edt_Name.getValue())) {
+            wprom.alert("고객을 조회하세요");
+            return false;
+        }
+    }
+ 
+    if (cmb_RelnCd.getValue() == "99") {
+        edt_Name.setValue("법정상속인");
+    }
+  
+	var sTmp = cmb_RelnCd.getValue(); //계약자/피보험자관계
+     sTmp += "^" + cmb_RelnCd.getValue(); //계약자/피보험자관계명
+     sTmp += "^" + edt_Telno1.getValue() + edt_Telno2.getValue() + edt_Telno3.getValue(); //연락처
+     sTmp += "^" + Ds_cd.getCellData(0, "sCd"); //수익자코드(주민번호)
+     sTmp += "^" + edt_Name.getValue(); //성명
+//     sTmp += "^" + edt_add.getValue();
+//     sTmp += "^" + cmb_sAddrFlagCd.getValue();
+ 
+     if (cmb_RelnCd == "10") {
+         sTmp += "^" + sAddrFlgcd;
+         sTmp += "^" + nAddrChngSeq;
+     }
+
+     if (sXcptPftbpMailAddFlagPop != "") {
+         sTmp += "^" + sXcptPftbpMailAddFlagPop;
+     } else { 
+         sTmp += "^" + sXcptPftbpAddFlag;    
+     }
+    
+     if (nXcptPftbpMailChngSeqPop != "") {
+         sTmp += "^" + nXcptPftbpMailChngSeqPop;
+     } else {
+         sTmp += "^" + nXcptPftbpChngSeq;
+          //sTmp += "^" + nXcptPftbpChngSeqPop;  
+	} 
+	sPopupFlag = "";
+  	
+  	var rtnJSON = {};  	//parent접근불가. returnParam으로 변경
+	
+   	rtnJSON = {	"edt_sB111PopValue" : sTmp,   
+		"fAgntFlag" : fAgntFlagPop,		// 지정대리인 구분자
+		"fAgntFlagIdx" : fAgntFlagIdx	,	// 수익자관계코드 
+		"sPopupFlag" : sPopupFlag		// 수익자관계코드 
+	}; 
+	  
+	wprom.close(rtnJSON);   
+ 
+    //console.log("[/CBSC070P.xml] [lfn_SearchCst_OnClick()] ==> [입력 클릭 Event] [TEST_end]" );
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_ConseCheck
+// 내용        : 연속문자 체크
+//---------------------------------------------------------------------------
+scwin.lfn_ConseCheck = function(obj) {
+
+    var str = obj.getValue();
+    var temp = "";
+    var temp2 = wconv.substr(str, 0, 1);
+    var con = 1;
+    
+    for (i = 1; i < wconv.length(str); i++) {
+        temp = wconv.substr(str, i, 1);
+        if (temp == temp2) {
+            con++;
+        } else {
+            con = 1;
+            temp2 = temp;
+        }
+        if (con == 4) {
+            wprom.alert("연속해서 입력하시면 안 됩니다.");
+            obj.focus();
+            return false;
+            break;
+        }
+    }
+    
+    return true;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Close_OnClick
+// 내용        : 계약자/피보험자관계 선택에 따른 화면 활성/비활성처리
+//---------------------------------------------------------------------------
+scwin.lfn_Reln_OnChange = function(obj, strCode, strText, nOldIndex, nNewIndex) {
+		
+	//console.log("[/CBSC070P.xml] [lfn_Reln_OnChange()] ==> [활성/비활성처리] [TEST_01]" );
+		
+//    edt_Telno1.setValue("");
+//    edt_Telno2.setValue("");
+//    edt_Telno3.setValue("");
+//    edt_Name.setValue("");
+//    edt_Cd.setValue("");
+//    edt_add.setValue("");
+//    cmb_sAddrFlagCd.setValue("");
+//    
+//    edt_Cd.setDisabled(false);
+//    btn_search.setDisabled(false);
+    
+    //사망시수익자, 지정대리인일경우 본인 선택불가
+    if (fAgntFlagPop == "ed_Dead" || fAgntFlagPop == "ed_Proxy") {
+        if (cmb_RelnCd.getValue() == "10") {
+            wprom.alert("본인은 선택할수 없습니다.");
+            cmb_RelnCd.setSelectedIndex(0);
+            return false;
+        }
+    }
+ 
+    //법정상속인일 경우 주민번호,관계,연락처가 비활성화
+    if (cmb_RelnCd.getValue() == "99") {
+        edt_Telno1.setValue("");
+        edt_Telno2.setValue("");
+        edt_Telno3.setValue("");
+        Ds_cd.setCellData(0, "sCd", "");
+        edt_Name.setValue("");
+        edt_Cd.setDisabled("true");
+    }
+
+    //본인일 경우 주민번호,성명 자동으로 표시되어야 함
+    if (cmb_RelnCd.getValue() == "10") {
+        if (fAgntFlagPop == "ed_Xcpt" && (sCrtorCdPop != sInrpsCdPop)) {
+            wconv.clear(Ds_XcptList);
+            wconv.clear(DsWs_XcptList);
+            /*
+            SOBJ_DataSearch.WSDL = gds.gWsdlBasis;
+            var MethodObj = gfn_CreateMethodObj(SOBJ_DataSearch, "com.inswave.longterm.ssr.pln.task.DBB330Task", "SelectXcptList", "", "");
+            gfn_SetParam(MethodObj, "sInrpsCd", sInrpsCdPop);
+            gfn_CallService(SOBJ_DataSearch, DOBJ_DataSearch, MethodObj);
+            */
+			var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB330Task", "SelectXcptList", "", "");
+			MethodObj.setId("SelectXcptList");
+			MethodObj.setParam("sInrpsCd", sInrpsCdPop);			
+			MethodObj.setUrl("/contract/CBSC070PController.do");
+			MethodObj.setXPath("//*/LTIDA01");
+			MethodObj.addXPath("//WARNING");
+			MethodObj.sync();
+			MethodObj.send();
+			util.jSonDsCreate(_tranSync.getDsJson("LTIDA01"), "DsWs_XcptList");
+			util.jSonDsCreate(_tranSync.getDsJson("LTIDA01"), "Ds_XcptList");
+			util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "WARNING");            
+            
+            if (wconv.length(WARNING.getCellData(0, "msg")) > 0) {
+                wprom.alert(WARNING.getCellData(0, "msg"));
+            } else {
+                if (DsWs_XcptList.getRowCount() == 0) {
+                    wprom.alert("보험계약 대출 조회 건이 없습니다.");
+                } else {
+                    wconv.copy(Ds_XcptList, "DsWs_XcptList");
+                }
+            }
+            
+            if (DsWs_XcptList.getCellData(0, "sCellPhone1") != null && DsWs_XcptList.getCellData(0, "sCellPhone1") != "") {
+                edt_Telno1.setValue(DsWs_XcptList.getCellData(0, "sCellPhone1"));
+                edt_Telno2.setValue(DsWs_XcptList.getCellData(0, "sCellPhone2"));
+                edt_Telno3.setValue(DsWs_XcptList.getCellData(0, "sCellPhone3"));
+                wconv.trace("aaa");
+            } else if (DsWs_XcptList.getCellData(0, "sHomeTel1") != null && DsWs_XcptList.getCellData(0, "sHomeTel1") != "") {
+                edt_Telno1.setValue(DsWs_XcptList.getCellData(0, "sHomeTel1"));
+                edt_Telno2.setValue(DsWs_XcptList.getCellData(0, "sHomeTel2"));
+                edt_Telno3.setValue(DsWs_XcptList.getCellData(0, "sHomeTel3"));
+                wconv.trace("bbb");
+            } else if (DsWs_XcptList.getCellData(0, "sOfficeTel1") != null && DsWs_XcptList.getCellData(0, "sOfficeTel1") != "") {
+                edt_Telno1.setValue(DsWs_XcptList.getCellData(0, "sOfficeTel1"));
+                edt_Telno2.setValue(DsWs_XcptList.getCellData(0, "sOfficeTel2"));
+                edt_Telno3.setValue(DsWs_XcptList.getCellData(0, "sOfficeTel3"));
+                wconv.trace("ccc");
+            }
+            wconv.trace(DsWs_XcptList.getCellData(0, "sCellPhone1"));
+            wconv.trace(DsWs_XcptList.getCellData(0, "sCellPhone2"));
+            wconv.trace(DsWs_XcptList.getCellData(0, "sCellPhone3"));
+            edt_Cd.setDisabled("true");
+            btn_IvrInput.setDisabled("true");
+            edt_Name.setDisabled("true");
+            Ds_cd.setCellData(0, "sCd", sInrpsCdPop);
+            edt_Name.setValue(sInrpsNamePop);
+            btn_search.setDisabled(true);
+        } else {
+            
+            if (sCellPhone1Pop != "") {
+                edt_Telno1.setValue(sCellPhone1Pop);
+                edt_Telno2.setValue(sCellPhone2Pop);
+                edt_Telno3.setValue(sCellPhone3Pop);
+                wconv.trace("aaa");
+            } else if (sHomeTel1Pop != "") {
+                edt_Telno1.setValue(sHomeTel1Pop);
+                edt_Telno2.setValue(sHomeTel2Pop);
+                edt_Telno3.setValue(sHomeTel3Pop);
+                wconv.trace("bbb");
+            } else if (sOfficeTel1Pop != "") {
+                edt_Telno1.setValue(sOfficeTel1Pop);
+                edt_Telno2.setValue(sOfficeTel2Pop);
+                edt_Telno3.setValue(sOfficeTel3Pop);
+                wconv.trace("ccc");
+            }
+            edt_Cd.setDisabled("true");
+            btn_IvrInput.setDisabled("true");
+            edt_Name.setDisabled("true");
+            Ds_cd.setCellData(0, "sCd", sInrpsCdPop);
+            edt_Name.setValue(sInrpsNamePop);
+            btn_search.setDisabled(true); 
+        }
+    }
+    
+    //console.log("[/CBSC070P.xml] [lfn_Reln_OnChange()] ==> [활성/비활성처리] [TEST_end]" );
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_cancel
+// 내용        : 수익자미지정
+//---------------------------------------------------------------------------
+scwin.lfn_cancel = function(obj) {
+
+	//console.log("[/CBSC070P.xml] [lfn_Reln_OnChange()] ==> [활성/비활성처리] [TEST_01]" );
+	
+    cmb_RelnCd.setValue("");
+    edt_Telno1.setValue("");
+    edt_Telno2.setValue("");
+    edt_Telno3.setValue("");
+    Ds_cd.setCellData(0, "sCd", "");
+    edt_Name.setValue("");
+    
+    var sTmp = cmb_RelnCd.getValue(); //계약자/피보험자관계
+    sTmp += "^" + cmb_RelnCd.getValue(); //계약자/피보험자관계명
+    sTmp += "^" + edt_Telno1.getValue() + edt_Telno2.getValue() + edt_Telno3.getValue(); //연락처
+    sTmp += "^" + Ds_cd.getCellData(0, "sCd"); //수익자코드(주민번호)
+    sTmp += "^" + edt_Name.getValue(); //성명
+//    sTmp += "^" + edt_add.getValue();
+//    sTmp += "^" + cmb_sAddrFlagCd.getValue();
+  
+    //wconv.close(sTmp);
+    
+   	var rtnJSON = {};  	//parent접근불가. returnParam으로 변경
+		
+ 	rtnJSON = {	"edt_sB111PopValue" : sTmp,   
+		"fAgntFlag" : fAgntFlagPop,		// 지정대리인 구분자
+		"fAgntFlagIdx" : fAgntFlagIdx		// 수익자관계코드 
+	  }; 
+	  
+	wprom.close(rtnJSON);   
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Close_OnClick
+// 내용        : 팝업닫기
+//---------------------------------------------------------------------------
+scwin.lfn_Close_OnClick = function(obj) {
+    sPopupFlag = "";
+    wprom.close("");
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_ComponentEnable
+// 내용        : 계약상태별 화면 비활성 처리
+//---------------------------------------------------------------------------
+scwin.lfn_ComponentEnable = function(step, exList, enable) {
+ 
+	var comp;
+    var compCnt = step.getChildrenCount();  // Components 총 수  
+    //console.log("[/CBSC070P.xml] [lfn_ComponentEnable()] ==> [계약상태별 화면 비활성 처리] [TEST_01] [compCnt]"+ compCnt +"[step]"+ step +"[exList]"+ exList +"[enable]"+ enable );
+    
+    for (var i = 0; i < compCnt; i++) {
+	    comp = step.getAllChildren()[i];  // Components 담기 
+        var Objects = WebSquare.util.getComponentById(comp.id); 
+	    var getType = Objects.getPluginName();  // Component 타입
+	    
+	    if(getType == "group"|| getType =="textbox"){
+	    }else{
+            if (exList.indexOf(comp.id) < 0) {     // exList(btn_close)이 아니면
+                Objects.setDisabled(!enable);  //  비활성화 처리(enable = false 이면 비활성화)
+                //console.log("[/CBSC070P.xml] [lfn_ComponentEnable()] ==> [비활성 처리★★] [comp.id]"+ comp.id +"[enable]"+ enable )
+            }                	
+	    };
+	 }       
+};
+
+//---------------------------------------------------------------------------
+// function 명 : Btn_IVR_OnClick
+// 내용        :  IVR 3자 통화를 위한 버튼 이벤트 발생
+// param 
+// 1: (J : 주민등록번호, C : 카드번호, A : 계좌번호)
+// 2: lfn_IVR_CallBack (콜백 함수명)
+// 3 : ""  (콜백 받는 변수명 1)
+// 4 : nRow (콜백 받는 변수명 2)
+//---------------------------------------------------------------------------
+scwin.Btn_IVR_OnClick = function(obj, nRow) {
+		wprom.alert("추후 개발 예정 입니다.[대면고객정보]");
+  	return;  
+   	 			
+   	 			
+    //ivrOpenPop("J", "", "lfn_IVR_CallBack", "", ""); // IVR 3자 통화 팝업 호출  (J : 주민등록번호, C : 카드번호, A : 계좌번호)
+    // obj는 결과값을 셋팅할 fieldName				
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_IVR_CallBack
+// 내용        :  IVR 콜백함수
+//---------------------------------------------------------------------------
+scwin.lfn_IVR_CallBack = function(id, nRow, val) {
+    if (wconv.length(val) > 0) {
+        edt_Cd.setValue(val);
+        Ds_cd.setCellData(0, "sCd", val);
+    }
+};
+ 
+//---------------------------------------------------------------------------
+// function 명 : lfn_TellCheck
+// 내용        : 핸드폰/전화번호에 따라 자리수 잘라서 배열에 담음
+//---------------------------------------------------------------------------
+scwin.lfn_TellCheck = function(val) {
+ 
+    var sVal = wconv.substr(val, 0, 3);
+    var hpNumTmpArr = Array(3);
+    if (wconv.substr(val, 0, 2) == "02") {
+        if (val.length == 10) {
+            hpNumTmpArr[0] = wconv.substr(val, 0, 2);
+            hpNumTmpArr[1] = wconv.substr(val, 2, 4);
+            hpNumTmpArr[2] = wconv.substr(val, 6, 4);
+        } else {
+            hpNumTmpArr[0] = wconv.substr(val, 0, 2);
+            hpNumTmpArr[1] = wconv.substr(val, 2, 3);
+            hpNumTmpArr[2] = wconv.substr(val, 5, 4);
+        }
+    } else {
+        if (val.length == 11) {
+            hpNumTmpArr[0] = wconv.substr(val, 0, 3);
+            hpNumTmpArr[1] = wconv.substr(val, 3, 4);
+            hpNumTmpArr[2] = wconv.substr(val, 7, 4);
+        } else {
+            hpNumTmpArr[0] = wconv.substr(val, 0, 3);
+            hpNumTmpArr[1] = wconv.substr(val, 3, 3);
+            hpNumTmpArr[2] = wconv.substr(val, 6, 4);
+        }
+    }
+    return hpNumTmpArr;
+};
+ 
+//---------------------------------------------------------------------------
+// function 명 : 
+// 내용        : 스마트폰앱고객 버튼클릭시 처리
+//--------------------------------------------------------------------------- 
+scwin.btn_SearchCust_OnClick = function(e) {
+		
+	//console.log("[/CBSC070P.xml] [btn_SearchCust_OnClick()] ==> [대면고객정보 버튼 클릭] [TEST_end]" );
+	
+	wprom.alert("추후 개발 예정 입니다.[대면고객정보]");
+  	return;  
+   	 			
+//    var promise = Promise.resolve();
+//    var arg = "sUserID=" + wconv.quote(gds.gUserID);
+//    promise = promise.then(function(rtnVal) {
+//        return wprom.promise.popupOpen("PROJECT_PATH_TEMP/com_pop/LongDirectChPop.xml", arg, 800, 550);
+//    });
+//    promise = promise.then(function(result) {
+//        /*wprom.popupOpen(가이드참조)*/
+//        args = wconv.split(result, "^", true);
+//        if (wconv.bound(args) > 2) {
+//            edt_Cd.setValue(wconv.trim(args[2]));
+//        }
+//    });
+//    
+//    return promise;
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B111_Pop"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;/*  height:84px;*/ left:0px; top:0px;/* width:584px;"
+            userData1="수익자등록[B111_Pop]" userData2=" OnLoadCompleted:scwin.B111_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+                <ServiceObject/>
+            </ServiceObjects>
+            <w2:textbox id="st_Tit" label="수익자등록" style="position:absolute; VAlign:Middle;  height:24px; left:0px; top:0px; " tagname="" class="sub_pop_title01">
+</w2:textbox>
+            
+            <xf:group arcsize="8" class="sty_area_form" id="Shape1"
+                style="position:absolute;  bottom:80px; height:51px; left:0px; top:30px; width:576px;" userData3="RoundRect">
+            	<xf:group class="form_w_line" id="" style="top:24px;"></xf:group>
+            </xf:group>
+            <w2:textbox class="sty_lb_Basic" id="cap_tit" label="피보험자와 관계"
+                style="position:absolute; VAlign:Middle;  height:24px;left:0px;top:30px; width:100px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static3" label="수익자코드"
+                style="position:absolute; VAlign:Middle;  height:24px;left:0px;top:55px; width:100px;" tagname=""/>
+            <xf:select1 appearance="minimal" class="sty_ipt_form" emptyItem="true" ev:onchange="scwin.lfn_Reln_OnChange" id="cmb_RelnCd"
+                ref="data:Ds_B111.sRelnCdPop"
+                style="position:absolute; Text:선택;  INDEX:0;  border-style:solid;  height:20px;left:122px;top:33px; width:161px;" tabIndex="1" renderType="native">
+                <xf:choices>
+                    <xf:itemset nodeset="data:DsWs_Reln">
+                        <xf:label ref="sHnglCdName"/>
+                        <xf:value ref="sCd"/>
+                    </xf:itemset>
+                </xf:choices>
+            </xf:select1>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Close_OnClick" id="btn_close"
+                style="position:absolute;height:20px;ImageID:btn_Comm_Close;width:58px;left:527px;top:0px;" tabIndex="10" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+            <w2:textbox class="sty_lb_Basic" id="Static4" label="성명"
+                style="position:absolute;height:24px;min-width:65px;width:65px;left:293px;VAlign:Middle;top:55px;" tagname=""/>
+            <xf:input class="sty_ipt_form" dataType="text" displayFormat="######-#ZZZZZZ" id="edt_Cd" maxlength="13" ref="data:Ds_cd.sCd"
+                style="position:absolute; border-style:solid;  height:20px;left:122px;top:58px; width:115px;" tabIndex="5"/>
+            <xf:input class="sty_ipt_form" id="edt_Name" maxByteLength="25"
+                style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:380px;top:58px; width:180px;" tabIndex="12"/>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Input_OnClick" id="btn_input"
+                style="position:absolute;height:20px;ImageID:btn_Comm_Input;width:58px;left:476px;top:0px;" tabIndex="13" type="anchor">
+                <xf:label><![CDATA[입력]]></xf:label>
+            </xf:trigger>
+            <xf:input class="sty_ipt_form" dataType="number" editType="select" id="edt_Telno3" maxByteLength="4"
+                style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:464px;top:33px; width:40px;" tabIndex="4"/>
+            <xf:input class="sty_ipt_form" dataType="number" editType="select" id="edt_Telno2" maxByteLength="4"
+                style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:422px;top:33px; width:40px;" tabIndex="3"/>
+            <xf:input class="sty_ipt_form" dataType="number" editType="select" id="edt_Telno1" maxByteLength="3"
+                style="position:absolute; ImeMode:native;  border-style:solid;  height:20px;left:380px;top:33px; width:40px;" tabIndex="2"/>
+            <w2:textbox class="sty_lb_Basic" id="Static2" label="☏ 연락처"
+                style="position:absolute;height:24px;min-width:65px;width:65px;left:293px;VAlign:Middle;top:30px;" tagname=""/>
+            <xf:trigger class="detail_search" ev:onclick="scwin.lfn_SearchCst_OnClick" id="btn_search"
+                style="position:absolute; ImageID:btn_Input_Search;  height:20px;left:260px;top:58px; width:20px;" tabIndex="16" type="anchor"/>
+            <xf:trigger class="popup_top_btn" disabled="true" ev:onclick="scwin.lfn_cancel" id="btn_cancel"
+                style="position:absolute;height:20px;ImageID:btn_Input_06;width:102px;left:377px;top:0px;" tabIndex="17" type="anchor">
+                <xf:label><![CDATA[수익자미지정]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="detail_phone" ev:onclick="scwin.Btn_IVR_OnClick" id="btn_IvrInput"
+                style="position:absolute; ImageID:btn_Input_IVR;  height:20px;left:238px;top:58px; width:20px;" tabIndex="18" type="anchor"/>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.btn_SearchCust_OnClick" id="btn_SearchCust"
+                style="position:absolute;height:20px;ImageID:btn_Input_06;Transparent:TRUE;width:102px;left:278px;top:0px;" tabIndex="19" type="anchor">
+                <xf:label><![CDATA[대면고객정보]]></xf:label>
+            </xf:trigger>
+        </xf:group>
+    </body>
+</html>

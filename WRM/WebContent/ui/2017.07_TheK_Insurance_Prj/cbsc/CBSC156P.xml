@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    <!-- 
+        ###################################################
+         파일명 : CBSC156P.xml
+         프로그램명 : 장기보험 해지/취소 접수
+         설 명 :  장기보험 해지/취소 접수 화면
+         작성자 : 이경일
+         작성일 : 2017.09.25
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.09.25           이경일                  최초작성
+        ###################################################
+     -->
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="Ds_telType" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="CODE" name="CODE"/>
+                        <w2:column dataType="text" id="TEXT" name="TEXT"/>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <CODE><![CDATA[1]]></CODE>
+                            <TEXT><![CDATA[자택]]></TEXT>
+                        </w2:row>
+                        <w2:row>
+                            <CODE><![CDATA[2]]></CODE>
+                            <TEXT><![CDATA[직장]]></TEXT>
+                        </w2:row>
+                        <w2:row>
+                            <CODE><![CDATA[3]]></CODE>
+                            <TEXT><![CDATA[휴대폰]]></TEXT>
+                        </w2:row>
+                        <w2:row>
+                            <CODE><![CDATA[4]]></CODE>
+                            <TEXT><![CDATA[기타]]></TEXT>
+                        </w2:row>
+                        <w2:row>
+                            <CODE><![CDATA[5]]></CODE>
+                            <TEXT><![CDATA[지정]]></TEXT>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_Insert" repeatNode="map"/>
+                <w2:dataList baseNode="list" id="DsWs_polInfo" repeatNode="map" userData2="//*/hashtable/data[@hashkey=&quot;POLINFO&quot;]/CCCMA03"/>
+                <w2:dataList baseNode="list" id="DsWs_reqInfo" repeatNode="map" userData2="//*/hashtable/data[@hashkey=&quot;REQINFO&quot;]/CCCMA03"/>
+                <w2:dataList baseNode="list" id="DsWs_custInfo" repeatNode="map" userData2="//*/hashtable/data[@hashkey=&quot;CUSTINFO&quot;]/CCCMA03"/>
+                <w2:dataList baseNode="list" id="DsWs_RootAttr" repeatNode="map" userData2="//*/CCCMA03"/>
+                <w2:dataList baseNode="list" id="DsWs_Warning" repeatNode="map" userData2="//*/WARNING"/>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+		<script src="/cm/js/common.js"/>
+		<script src="/cm/js/val_lib.js"/>
+		<script src="/cm/js/util.js"/>
+		<script src="/cm/js/transSub.js"/>
+		<script src="/cm/js/callService.js"/>
+		<script src="/cm/js/gds.js"/>
+		<script src="/cm/js/wconv.js"/>
+		<script src="/cm/js/wprom.js"/>
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/>
+        <script><![CDATA[
+/*■■■■■■■■■■■■■■■■■■■■■스크립트 변환 결과■■■■■■■■■■■■■■■■■■■■■
+※본 주석은 수작업 변환 참고용입니다. ★개발완료 후에는 필히 삭제해주세요.★
+변환시간:  Fri Sep 01 2017 14:10:26 GMT+0900 (대한민국 표준시)
+파일ID:  B400_Pop.xml
+
+아래의 작업을 먼저 해주세요.
+
+
+1. scwin.init() 함수에 아래의 글로벌 데이터리스트를 선언합니다.
+gds.gDs_ServerTime();
+
+2. 공통.JS 파일을 include해주세요.
+</xf:model>
+ ***include 위치(하단에 주석처리 되어 있습니다.)***
+<script><![CDATA[
+
+예시)
+</xf:model>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script src="/cm/js/convertJs/예시입니다.js"/>
+<script><![CDATA[
+
+3. 표준에 어긋난 코딩인 경우 ✖ 으로 return 되어 있습니다. 검색으로 ✖이 나온다면 ASIS 소스를 확인해주세요.
+ex) ASIS if(a = 1 and b = 2) {} ------> TOBE if (✖ = 2) {}
+
+4. dialog함수로 팝업을 호출 할 경우에는 실제 파일이 있는 경로로 변경해주세요
+ex) 현재 PROJECT_PATH_TEMP입니다. 
+
+-호출구조-
+
+호출구조는 모든 화면이 아닌 변환대상화면을 기준으로 분석하였습니다.
+선언하지 않은 변수를 사용중이라면 caller 에서 넘겼을 가능성이 높습니다.
+파일 ID는 소스의 form ID로 가정했습니다. 아래의 결과는 따로 확인해주세요.
+B400_Pop.xml에서 호출 (callee ID):  
+B400_Pop.xml을 호출   (caller ID):  D010
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+// <script src="/cm/js/convertJs/Global_Script.js"/>
+// <script src="/cm/js/common.js"/>
+// <script src="/cm/js/val_lib.js"/>
+// <script src="/cm/js/util.js"/>
+// <script src="/cm/js/transSub.js"/>
+// <script src="/cm/js/callService.js"/>
+// <script src="/cm/js/gds.js"/>
+// <script src="/cm/js/convertJs/conv.js"/>
+// <script src="/cm/js/convertJs/comm_Webservice.js"/>
+var nDivFlag = 1;
+var sGroupCode = "0000000004";
+var nEducationCode = "7";
+var sPolicyType;
+var sPolicyKind;
+var sPolicySer;
+var getSysDate;
+var sPolicyNo;
+
+//var sGroupCode 		= "0000000039";	// 지우자.
+//var nEducationCode 	= "46";			// 지우자.
+scwin.init = function() {
+	var inJson; 
+	var indata = $w.getParameter("param");
+	inJson = JSON.parse(indata);
+	//alert(inJson.sPolicyNo);  //{"id" : "ddd", "name" : "ddd"}; 출력
+	sPolicyNo = inJson.sPolicyNo; 
+
+    //alert(sPolicyNo);
+    //if (length(trim(gUserID)) == 0) gUserID = "3031000";
+    //if (length(trim(sPolicyNo)) == 0) sPolicyNo = "D16050100884";
+    sPolicyType = wconv.substr(sPolicyNo, 0, 1);
+    sPolicyKind = wconv.substr(sPolicyNo, 1, 4);
+    sPolicySer = wconv.substr(sPolicyNo, 5);
+    
+    util.gfn_getServerTime();
+	scwin._getServerTime("getServerTime", 0, "");    
+    /*
+    ServiceObject.WSDL = gds.gWsdlBasis;
+    //현재시간 가져오기
+    transaction("getServerTime", "NewGen::getServerTime.jsp", "", "gDs_ServerTime=output", "", "_getServerTime");
+    */
+};
+
+scwin._getServerTime = function(ServiceId, errorCd, errorMsg) {
+    if (ServiceId == "getServerTime") {
+        if (errorCd != 0) {
+            wprom.alert("errorCd:::[" + errorCd + "] errorMsg:::[" + errorMsg + "]");
+        } else {
+            scwin.initialize();
+        }
+    }
+};
+
+//**************************************************************************
+// 기초셋팅
+//**************************************************************************
+scwin.initialize = function() {
+    getSysDate = gds.gDs_ServerTime.getCellData(0, "sToday");
+    
+    cal_CallReserveDate.setValue(wconv.substr(getSysDate,0,8) );
+    
+    edt_CallReserveTime.setValue( wconv.substr(scwin.lf_getDateTime(scwin.lf_getTimeM(getSysDate), 1000 * 300), 8, 4)); // +5분
+    
+    scwin.initialize_txt();
+    
+    scwin.searchPolicyData("1"); // 조회(계약정보 및 접수정보)
+};
+
+//**************************************************************************
+//  초기화
+//**************************************************************************
+scwin.initialize_txt = function() {
+    edt_PolicyUserName.setValue("");
+    edt_PolicyUser.setValue("");
+    edt_CenterName.setValue("");
+    edt_DutyName.setValue("");
+    edt_CustNo.setValue("");
+    edt_PolicyNo.setValue("");
+    edt_CustName.setValue("");
+    edt_Tel1.setValue("");
+    edt_Tel2.setValue("");
+    edt_Tel3.setValue("");
+    edt_Desc.setValue("");
+    edt_Desc.focus();
+};
+
+//**************************************************************************
+//  조회(계약정보 및 접수정보)
+//**************************************************************************
+scwin.searchPolicyData = function(nType) {
+    //alert(nType);
+    Div1.hide(); // (배분정보)
+    DsWs_polInfo.removeAll();
+    DsWs_custInfo.removeAll();
+    DsWs_reqInfo.removeAll();
+    /*
+    var MethodObj = gfn_CreateMethodObj(ServiceObject, "com.inswave.longterm.ssr.sst.task.DBB400Task", "getDrvPolicyInfo");
+    gfn_SetParam(MethodObj, "sPolicyType", sPolicyType);
+    gfn_SetParam(MethodObj, "sPolicyKind", sPolicyKind);
+    gfn_SetParam(MethodObj, "sPolicySer", sPolicySer);
+    gfn_CallService(ServiceObject, DOBJ_search, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.longterm.ssr.sst.task.DBB400Task", "getDrvPolicyInfo");
+	MethodObj.setId("getDrvPolicyInfo");
+	//MethodObj.setParam("sAgentCode", gUserID);
+    MethodObj.setParam( "sPolicyType", sPolicyType);
+    MethodObj.setParam( "sPolicyKind", sPolicyKind);
+    MethodObj.setParam( "sPolicySer", sPolicySer);
+	
+	MethodObj.setUrl("/contract/CBSC156PController.do");
+	MethodObj.setXPath("//*/hashtable/data[@hashkey='POLINFO']/CCCMA03");
+	MethodObj.addXPath("//*/hashtable/data[@hashkey='REQINFO']/CCCMA03");
+	MethodObj.addXPath("//*/hashtable/data[@hashkey='CUSTINFO']/CCCMA03");
+	MethodObj.addXPath("//*/WARNING");
+	MethodObj.setXPathDs();  // XPath 전체 경로 사용할 경우
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_Team.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+	DsWs_polInfo.setJSON(_tranSync.getDsJson("//*/hashtable/data[@hashkey='POLINFO']/CCCMA03")); 
+	DsWs_reqInfo.setJSON(_tranSync.getDsJson("//*/hashtable/data[@hashkey='REQINFO']/CCCMA03"));
+	DsWs_custInfo.setJSON(_tranSync.getDsJson("//*/hashtable/data[@hashkey='CUSTINFO']/CCCMA03"));
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "WARNING");
+	//util.setCompBindRefresh("DsWs_Team");
+	//util.setRowPosition(DsWs_Team, 0);
+    
+    if (DsWs_polInfo.getRowCount() < 1) {
+        wprom.alert("계약이 존재하지 않습니다.");
+        wprom.close();
+        return;
+    }
+    scwin.setEditTxt();
+    if (DsWs_reqInfo.getRowCount() > 0) {
+        if (nType == "1") {
+            wprom.alert("이미 접수되었습니다.");
+        }
+        Div1.show(); // (배분정보)
+    }
+};
+
+//**************************************************************************
+// 입력
+//**************************************************************************
+scwin.InsertData = function() {
+    if (DsWs_reqInfo.getRowCount() > 0) {
+        wprom.alert("이미 접수되었습니다.");
+        return;
+    }
+
+
+    // 연락처 입력 체크.
+    if (edt_Tel1.getValue() == "") {
+        wprom.alert("연락처1을 입력하십시오.");
+        edt_Tel1.focus();
+        return;
+    }
+
+    // 연락처 입력 체크.
+    if (edt_Tel2.getValue() == "") {
+        wprom.alert("연락처2를 입력하십시오.");
+        edt_Tel2.focus();
+        return;
+    }
+
+    // 연락처 입력 체크.
+    if (edt_Tel3.getValue() == "") {
+        wprom.alert("연락처3을 입력하십시오.");
+        edt_Tel3.focus();
+        return;
+    }
+
+
+    // 예약일자 체크.
+    if (cal_CallReserveDate.getValue() == "") {
+        wprom.alert("예약일자를 확인하십시오.");
+        cal_CallReserveDate.setValue(getSysDate);
+        cal_CallReserveDate.focus();
+        return;
+    }
+    if (wconv.subStr(cal_CallReserveDate.getValue(), 0, 8) < wconv.subStr(getSysDate, 0, 8)) {
+        wprom.alert("예약일자를 확인하십시오.\n(예약일자는 과거일자를 입력하실 수 없습니다.)");
+        cal_CallReserveDate.setValue(getSysDate);
+        cal_CallReserveDate.focus();
+        return;
+    }
+
+
+    // 예약시간 체크.
+    if (!scwin.isTime(edt_CallReserveTime.getValue())) {
+        edt_CallReserveTime.setValue(wconv.subStr(scwin.lf_getDateTime(scwin.lf_getTimeM(gds.gDs_ServerTime.getCellData(0, "sToday")), 1000 * 300), 8, 4)); // +5분
+        edt_CallReserveTime.focus();
+        return;
+    }
+    if (!wprom.confirm("접수 하시겠습니까?"))
+        return; /*return wprom.confirm(가이드참조)*/
+    wconv.clear(DsWs_Warning);
+    wconv.clear(DsWs_RootAttr);
+    wconv.clear(Ds_Insert);
+    util.insertColumn(Ds_Insert, [
+        [
+            "nTaskID",
+            "nTaskID",
+            "text"
+        ]
+    ]); // 계약타입
+    util.insertColumn(Ds_Insert, [
+        [
+            "sPolicyType",
+            "sPolicyType",
+            "text"
+        ]
+    ]); // 계약타입
+    util.insertColumn(Ds_Insert, [
+        [
+            "sPolicyKind",
+            "sPolicyKind",
+            "text"
+        ]
+    ]); // 종목코드
+    util.insertColumn(Ds_Insert, [
+        [
+            "sPolicySer",
+            "sPolicySer",
+            "text"
+        ]
+    ]); // 계약번호SEQ
+    util.insertColumn(Ds_Insert, [
+        [
+            "sCallReserveDate",
+            "sCallReserveDate",
+            "text"
+        ]
+    ]); // 예약일자
+    util.insertColumn(Ds_Insert, [
+        [
+            "sCallReserveTime",
+            "sCallReserveTime",
+            "text"
+        ]
+    ]); // 예약시간
+    util.insertColumn(Ds_Insert, [
+        [
+            "sTelType",
+            "sTelType",
+            "text"
+        ]
+    ]); // 연락처구분
+    util.insertColumn(Ds_Insert, [
+        [
+            "sTel1",
+            "sTel1",
+            "text"
+        ]
+    ]); // 연락처1
+    util.insertColumn(Ds_Insert, [
+        [
+            "sTel2",
+            "sTel2",
+            "text"
+        ]
+    ]); // 연락처2
+    util.insertColumn(Ds_Insert, [
+        [
+            "sTel3",
+            "sTel3",
+            "text"
+        ]
+    ]); // 연락처3
+    util.insertColumn(Ds_Insert, [
+        [
+            "sInsertUser",
+            "sInsertUser",
+            "text"
+        ]
+    ]); // 접수자
+    util.insertColumn(Ds_Insert, [
+        [
+            "sDescription",
+            "sDescription",
+            "text"
+        ]
+    ]); // 사유
+    util.insertColumn(Ds_Insert, [
+        [
+            "sGroupCode",
+            "sGroupCode",
+            "text"
+        ]
+    ]); // 사유
+    util.insertColumn(Ds_Insert, [
+        [
+            "nEducationCode",
+            "nEducationCode",
+            "text"
+        ]
+    ]); // 사유
+    util.insertColumn(Ds_Insert, [
+        [
+            "sDsirCd",
+            "sDsirCd",
+            "text"
+        ]
+    ]); // 지정상담원(임시:김민선)
+    //입력 데이터셋 컬럼에 값 insert	
+    var insRow = util.insertRow(Ds_Insert, 0);
+    /*수작업 변환 개발자 가이드(테스트 중)
+    dataList에 row를 추가하고 setCellData를 하는 경우 첫 번째 인자를 insRow로 변경해주세요.*/
+    Ds_Insert.setCellData(0, "nTaskID", "2462"); // 계약타입	
+    Ds_Insert.setCellData(0, "sPolicyType", sPolicyType); // 계약타입
+    Ds_Insert.setCellData(0, "sPolicyKind", sPolicyKind); // 종목코드
+    Ds_Insert.setCellData(0, "sPolicySer", sPolicySer); // 계약번호SEQ
+    Ds_Insert.setCellData(0, "sCallReserveDate", wconv.subStr(cal_CallReserveDate.getValue(), 0, 8)); // 예약일자
+    Ds_Insert.setCellData(0, "sCallReserveTime", edt_CallReserveTime.getValue()); // 예약시간
+    Ds_Insert.setCellData(0, "sTelType", cbo_TelType.getValue()); // 연락처구분
+    Ds_Insert.setCellData(0, "sTel1", edt_Tel1.getValue()); // 연락처1
+    Ds_Insert.setCellData(0, "sTel2", edt_Tel2.getValue()); // 연락처2
+    Ds_Insert.setCellData(0, "sTel3", edt_Tel3.getValue()); // 연락처3
+    Ds_Insert.setCellData(0, "sInsertUser", gds.gUserID); // 접수자
+    Ds_Insert.setCellData(0, "sDescription", edt_Desc.getValue());
+    Ds_Insert.setCellData(0, "sGroupCode", sGroupCode);
+    Ds_Insert.setCellData(0, "nEducationCode", nEducationCode);
+    Ds_Insert.setCellData(0, "sDsirCd", "4110013"); // "3050190");
+    /*
+    var MethodObj = ServiceObject.CreateMethodObj("perform"); //OBJ생성
+    setHeader("CCCMA03", "com.inswave.longterm.ssr.sst.task.DBB400Task", "setDrvPolicyCancelRequest");
+    addDocumentData(Ds_Insert);
+    setTail("CCCMA03");
+    ServiceObject.CreateObj("in0");
+    MethodObj.in0 = insertStr;
+    var result = gfn_CallService(ServiceObject, DOBJ_insert, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.longterm.ssr.sst.task.DBB400Task", "setDrvPolicyCancelRequest");
+	MethodObj.setId("setDrvPolicyCancelRequest");
+	MethodObj.addSingleData("CCCMA03", "CCCMA03", "Ds_Insert");
+	//MethodObj.addSingleData("base", "sendDoc", "Ds_Send_base1");
+	MethodObj.setUrl("/contract/CBSC156PController.do");  	// 서버단 호출 URL (수납 확정)    
+	MethodObj.addXPath("//WARNING");	// XPath
+	MethodObj.setHashTable();   	//  전문의 앞이 hashtable로 보낼 때
+	MethodObj.sync();					// 동기 처리[기본(async:비동기)]
+	MethodObj.send(); 					// 최종 전송 		// TEST @@@ ===>
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_RootAttr");
+    
+    wprom.alert(DsWs_RootAttr.getCellData(0, "sMsg"));
+    scwin.searchPolicyData("2");
+};
+
+scwin.setEditTxt = function() {
+    edt_Tel1.setDisabled(true);
+    edt_Tel2.setDisabled(true);
+    edt_Tel3.setDisabled(true);
+    edt_PolicyUserName.setValue(DsWs_polInfo.getCellData(0, "sPolicyUserName"));
+    edt_PolicyUser.setValue(DsWs_polInfo.getCellData(0, "sPolicyUser"));
+    edt_CenterName.setValue(DsWs_polInfo.getCellData(0, "sCenterName"));
+    edt_DutyName.setValue(DsWs_polInfo.getCellData(0, "sDutyName"));
+    edt_PolicyNo.setValue(DsWs_polInfo.getCellData(0, "sPolicyType") + DsWs_polInfo.getCellData(0, "sPolicyKind") + DsWs_polInfo.getCellData(0, "sPolicySer"));
+    edt_CustNo.setValue(setCustNo(DsWs_custInfo.getCellData(0, "sCustNo")));
+    edt_CustName.setValue(DsWs_custInfo.getCellData(0, "sCustName"));
+    cbo_TelType.setValue("3");
+    edt_Tel1.setValue(DsWs_custInfo.getCellData(0, "sTel3Part1"));
+    edt_Tel2.setValue(DsWs_custInfo.getCellData(0, "sTel3Part2"));
+    edt_Tel3.setValue(DsWs_custInfo.getCellData(0, "sTel3Part3"));
+
+    // 기 접수건인 경우 아래 정보 출력.
+    // 예약정보
+    if (DsWs_reqInfo.getCellData(0, "sCallReserveDate") != null)
+        cal_CallReserveDate.setValue(DsWs_reqInfo.getCellData(0, "sCallReserveDate"));
+    if (DsWs_reqInfo.getCellData(0, "sCallReserveTime") != null)
+        edt_CallReserveTime.setValue(DsWs_reqInfo.getCellData(0, "sCallReserveTime"));
+    edt_Desc.setValue(DsWs_reqInfo.getCellData(0, "sDescription"));
+
+    // 배정정보
+    if (DsWs_reqInfo.getCellData(0, "sDate") != "")
+        Div1_cal_Date.setValue(DsWs_reqInfo.getCellData(0, "sDate"));
+    if (DsWs_reqInfo.getCellData(0, "sDistributionDate") != "")
+        Div1_cal_DistDate.setValue(DsWs_reqInfo.getCellData(0, "sDistributionDate"));
+    if (DsWs_reqInfo.getCellData(0, "nCallStatus") != "") {
+        if (DsWs_reqInfo.getCellData(0, "nCallStatus") == 0) {
+            Div1_edt_status.setValue("미처리");
+        } else {
+            Div1_edt_status.setValue("처리");
+        }
+    }
+    if (DsWs_reqInfo.getCellData(0, "sCallerName") != "")
+        Div1_edt_distEmpName.setValue(DsWs_reqInfo.getCellData(0, "sCallerName"));
+    if (DsWs_reqInfo.getCellData(0, "sCaller") != "")
+        Div1_edt_distEmpNo.setValue(DsWs_reqInfo.getCellData(0, "sCaller"));
+    if (DsWs_reqInfo.getCellData(0, "sCallerDuty") != "")
+        Div1_edt_distEmpDuty.setValue(DsWs_reqInfo.getCellData(0, "sCallerDutyName"));
+    if (DsWs_reqInfo.getCellData(0, "sCallerCenter") != "")
+        Div1_edt_distEmpCenter.setValue(DsWs_reqInfo.getCellData(0, "sCallerCenter"));
+    edt_Desc.focus();
+};
+
+//**************************************************************************************************
+// 컴포넌트별 이벤트 START
+//**************************************************************************************************
+//*******************************************
+// 연락처구분 . cbo_telType
+//*******************************************
+scwin.cbo_TelType_OnChanged = function() {
+    var sTel1;
+    var sTel2;
+    var sTel3;
+    edt_Tel1.setDisabled(true);
+    edt_Tel2.setDisabled(true);
+    edt_Tel3.setDisabled(true);
+    switch (strCode) {
+        case 1:
+            sTel1 = DsWs_custInfo.getCellData(0, "sTel1Part1");
+            sTel2 = DsWs_custInfo.getCellData(0, "sTel1Part2");
+            sTel3 = DsWs_custInfo.getCellData(0, "sTel1Part3");
+            break;
+        case 2:
+            sTel1 = DsWs_custInfo.getCellData(0, "sTel2Part1");
+            sTel2 = DsWs_custInfo.getCellData(0, "sTel2Part2");
+            sTel3 = DsWs_custInfo.getCellData(0, "sTel2Part3");
+            break;
+        case 3:
+            sTel1 = DsWs_custInfo.getCellData(0, "sTel3Part1");
+            sTel2 = DsWs_custInfo.getCellData(0, "sTel3Part2");
+            sTel3 = DsWs_custInfo.getCellData(0, "sTel3Part3");
+            break;
+        case 4:
+            sTel1 = DsWs_custInfo.getCellData(0, "sTel4Part1");
+            sTel2 = DsWs_custInfo.getCellData(0, "sTel4Part2");
+            sTel3 = DsWs_custInfo.getCellData(0, "sTel4Part3");
+            break;
+        case 5:
+            edt_Tel1.setDisabled(false);
+            edt_Tel2.setDisabled(false);
+            edt_Tel3.setDisabled(false);
+            break;
+    }
+    edt_Tel1.setValue(sTel1);
+    edt_Tel2.setValue(sTel2);
+    edt_Tel3.setValue(sTel3);
+};
+
+//*******************************************
+// 닫기. btn_close
+//*******************************************
+scwin.btn_close_OnClick = function(e) {
+    wprom.close();
+};
+
+//*******************************************
+// 입력. btn_Input
+//*******************************************
+scwin.btn_Input_OnClick = function(e) {
+    scwin.InsertData();
+};
+
+//*******************************************
+// 배정정보. DIV0
+//*******************************************
+scwin.Div1_Button1_OnClick = function(e) {
+    if (nDivFlag) {
+        Div1.Width = 17;
+        Div1.Height = 18;
+        Div1_Shape0.Width = 17;
+        Div1_Shape0.Height = 18;
+        Div1_Button1.ImageID = "btn_Main_reload";
+        nDivFlag = 0;
+    } else {
+        Div1.Width = 464;
+        Div1.Height = 96;
+        Div1_Shape0.Width = 464;
+        Div1_Shape0.Height = 92;
+        Div1_Button1.ImageID = "btn_Main_TabClose";
+        nDivFlag = 1;
+    }
+};
+
+//**************************************************************************************************
+// 컴포넌트별 이벤트 END
+//**************************************************************************************************
+//**************************************************************************************************
+// SCRIPT START
+//**************************************************************************************************
+//*******************************************
+// 시간관련.
+//*******************************************
+scwin.lf_getDateTime = function(tval, ival) {
+console.log(" tval : "+tval+" : "+ival);
+    var time_stamp = tval + ival;
+    time_stamp += wconv.toNumber(60 * 60 * 1000); // GMT기준으로 9시간 빠름
+    time_stamp = Math.floor(time_stamp / 1000, 0); //
+    var s_day = time_stamp / ((3600 * 24));
+    var cur_time = time_stamp % ((3600 * 24));
+console.log("s_day :	"+s_day);
+    var dayVal = wconv.addDateSimple("19700101", s_day);
+    var tot_min = cur_time / 60;
+    var s_sec = cur_time % 60;
+    var s_min = tot_min / 60;
+    var c_min = tot_min % 60;
+    return dayVal + "" + wconv.lpad(Math.floor(s_min, 0), 0, 2) + wconv.lpad(c_min, 0, 2) + wconv.lpad(s_sec, 0, 2);
+};
+
+scwin.lf_getTimeM = function(dt) {
+    var yy = parseInt(wconv.mid(dt, 0, 4));
+    var mm = parseInt(wconv.mid(dt, 4, 2));
+    var dd = parseInt(wconv.mid(dt, 6, 2));
+    var hh = parseInt(wconv.mid(dt, 8, 2)) - 1;
+    var mi = parseInt(wconv.mid(dt, 10, 2));
+    var ss = parseInt(wconv.mid(dt, 12, 2));
+    return Number(new Date(yy, mm, dd, hh, mi, ss, 0));
+    //return ((wconv.toNumber(wconv.dateTime(yy, mm, dd, hh, mi, ss)) - wconv.toNumber(wconv.dateTime(1970, 1, 1, 0, 0, 0)))) * 24 * 3600 * 1000;
+};
+
+//넘어온 시간값을 형식에 맞는지확인
+scwin.isTime = function(strings) {
+    var h_data = "";
+    var m_data = "";
+    var date_data = "";
+    var i;
+    for (i = 0; i < 4; i++) {
+        var c = strings.charAt( i);
+        if (c < "0" || c > "9") {
+            wprom.alert("시간형식에 맞는지 확인하세요!");
+            return false;
+        }
+        if (i < 2)
+            h_data += c;
+        else if (i >= 2)
+            m_data += c;
+    }
+    var hourst = h_data;
+    var hour = parseInt(hourst, 10);
+    var monst = m_data;
+    var mon = parseInt(monst, 10);
+    if (hour < 0 || hour > 24 || mon < 0 || mon > 59) {
+        wprom.alert("시간이 잘못 입력되었습니다.");
+        return false;
+    }
+    return true;
+};
+
+//**************************************************************************************************
+// SCRIPT END
+//**************************************************************************************************
+
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B400_Pop"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7; left:8px; top:8px; "
+            userData1="장기보험 해지/취소 접수" userData2=" OnLoadCompleted:scwin.GPR16203200s_P01_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+            </ServiceObjects>
+            <xf:group arcsize="8" class="sty_area_form" id="Shape0"
+                style="position:absolute; right:480px;    border-color:user23;  bottom:188px; height:151px; left:0px; top:28px; width:554px;" userData3="RoundRect">\
+                <xf:group class="form_w_line" id="" style="top:24px;"></xf:group>
+    			<xf:group class="form_w_line" id="" style="top:49px;"></xf:group>
+    			<xf:group class="form_w_line" id="" style="top:74px;"></xf:group>
+    			<xf:group class="form_w_line" id="" style="top:99px;"></xf:group>
+    			<xf:group class="form_w_line" id="" style="top:124px;"></xf:group>
+            </xf:group>
+            <w2:textbox id="Static1" label="장기보험 해지/취소 접수" style="position:absolute; VAlign:Middle;  height:22px;left:0px;top:-1px;" tagname="" class="sub_pop_title01" />
+            
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.btn_close_OnClick" id="btn_close"
+                style="position:absolute; Transparent:TRUE;  ImageID:btn_Comm_Close;  height:20px;left:505px;top:0px;" tabIndex="16" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.btn_Input_OnClick" id="btn_Input"
+                style="position:absolute; Transparent:TRUE;  ImageID:btn_Comm_Close;  height:20px;left:454px;top:0px;" tabIndex="19" type="anchor">
+                <xf:label><![CDATA[접수]]></xf:label>
+            </xf:trigger>
+            <w2:inputCalendar class="sty_ipt_search" displayFormat="yyyy-MM-dd" id="cal_CallReserveDate"
+                style="position:absolute; SundayTextColor:red;  SaturdayTextColor:blue;    height:24px;left:209px;top:131px; width:107px;"
+                tabIndex="12" validCheck="true"/>
+            <w2:textbox class="sty_lb_Basic" id="Static2" label="체결자"
+                style="position:absolute; VAlign:Middle;     height:49px; left:0px; top:28px; width:83px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static5" label="이      름"
+                style="position:absolute; VAlign:Middle;     height:24px;left:101px;top:28px; width:71px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static3" label="계약자"
+                style="position:absolute; VAlign:Middle;     height:49px;left:0px;top:78px; width:83px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static9" label="고객번호"
+                style="position:absolute; VAlign:Middle;     height:24px;left:101px;top:78px; width:71px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static7" label="사      번"
+                style="position:absolute; VAlign:Middle;     height:24px;left:328px;top:28px; width:71px;" tagname=""/>
+            <xf:input class="sty_ipt_form" id="edt_PolicyUser" readOnly="TRUE"
+                style="position:absolute;   background-color:#c8c8c8; height:20px;left:435px;top:31px; width:108px;" tabIndex="2"/>
+            <w2:textbox class="sty_lb_Basic" id="Static6" label="소      속"
+                style="position:absolute; VAlign:Middle;     height:24px;left:101px;top:53px; width:71px;" tagname=""/>
+            <xf:input class="sty_ipt_form" id="edt_CenterName" readOnly="TRUE"
+                style="position:absolute;   background-color:#c8c8c8; height:20px;left:209px;top:56px; width:108px;" tabIndex="3"/>
+            <w2:textbox class="sty_lb_Basic" id="Static8" label="직      책"
+                style="position:absolute; VAlign:Middle;     height:24px;left:328px;top:53px; width:71px;" tagname=""/>
+            <xf:input class="sty_ipt_form" id="edt_DutyName" readOnly="TRUE"
+                style="position:absolute;   background-color:#c8c8c8; height:20px;left:435px;top:56px; width:108px;" tabIndex="4"/>
+            <xf:input class="sty_ipt_form" id="edt_PolicyUserName" readOnly="TRUE"
+                style="position:absolute;   background-color:#c8c8c8; height:20px;left:209px;top:31px; width:108px;" tabIndex="1"/>
+            <xf:input class="sty_ipt_form" id="edt_CustNo" readOnly="TRUE"
+                style="position:absolute;   background-color:#c8c8c8; height:20px;left:209px;top:81px; width:108px;" tabIndex="5"/>
+            <w2:textbox class="sty_lb_Basic" id="Static10" label="고 객 명"
+                style="position:absolute; VAlign:Middle;     height:24px;left:101px;top:103px; width:71px;" tagname=""/>
+            <xf:input class="sty_ipt_form" id="edt_CustName" readOnly="TRUE"
+                style="position:absolute;   background-color:#c8c8c8; height:20px;left:209px;top:106px; width:108px;" tabIndex="7"/>
+            <w2:textbox class="sty_lb_Basic" id="Static11" label="계약번호"
+                style="position:absolute; VAlign:Middle;     height:24px;left:328px;top:78px; width:71px;" tagname=""/>
+            <xf:input class="sty_ipt_form" id="edt_PolicyNo" readOnly="TRUE"
+                style="position:absolute;   background-color:#c8c8c8; height:20px;left:435px;top:81px; width:108px;" tabIndex="6"/>
+            <xf:select1 appearance="minimal" emptyItem="true" ev:onchange="scwin.cbo_telType_OnChanged" id="cbo_TelType"
+                style="position:absolute; Text:Combo0;  INDEX:0;  height:20px;left:328px;top:106px; width:71px;" tabIndex="8" renderType="native">
+                <xf:choices>
+                    <xf:itemset nodeset="data:Ds_telType">
+                        <xf:label ref="TEXT"/>
+                        <xf:value ref="CODE"/>
+                    </xf:itemset>
+                </xf:choices>
+            </xf:select1>
+            <xf:input class="sty_ipt_form" dataType="number" id="edt_Tel1" maxlength="4"
+                style="position:absolute; ImeMode:none;    text-align:CENTER;  height:20px;left:402px;top:106px; width:30px;" tabIndex="9"/>
+            <xf:input class="sty_ipt_form" dataType="number" id="edt_Tel2" maxlength="4"
+                style="position:absolute;   text-align:CENTER;  height:20px;left:437px;top:106px; width:35px;" tabIndex="10"/>
+            <xf:input class="sty_ipt_form" dataType="number" id="edt_Tel3" maxlength="4"
+                style="position:absolute;   text-align:CENTER;  height:20px;left:477px;top:106px; width:66px;" tabIndex="11"/>
+            <w2:textbox class="sty_lb_Basic" id="Static4" label="예약정보"
+                style="position:absolute; VAlign:Middle;    background-color:antiquewhite;   background-color:#fbebd7; height:49px;left:0px;top:128px; width:83px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static12" label="예약일자"
+                style="position:absolute; VAlign:Middle;     height:24px;left:101px;top:128px; width:71px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static14" label="예약시간"
+                style="position:absolute; VAlign:Middle;     height:24px;left:329px;top:128px; width:71px;" tagname=""/>
+            <xf:input dataType="text" displayFormat="##:##" id="edt_CallReserveTime"
+                style="position:absolute; height:20px;left:435px;top:131px; width:108px;" tabIndex="13"/>
+            <w2:textbox class="sty_lb_Basic" id="Static13" label="사      유"
+                style="position:absolute; VAlign:Middle;     height:24px;left:101px;top:153px; width:71px;" tagname=""/>
+            <xf:input class="sty_ipt_form" id="edt_Desc"
+                style="position:absolute; ImeMode:native;    height:20px;left:209px;top:156px; width:334px;" tabIndex="14"/>
+            <xf:group class="" id="Div1" style="position:absolute;height:118px;left:-3px;top:78px;width:553px;"
+                tabIndex="33" userData1="Div0">
+                <xf:group arcsize="8" class="" id="Div1_Shape0"
+                    style="position:absolute; right:463px;    border-color:user23;  background-color:#d7e3f8; bottom:92px;height:115px; left:0px;top:-1px;width:553px;" userData3="RoundRect"/>
+                <w2:textbox class="sty_lb_Basic" id="Div1_Static15" label="배정정보"
+                    style="position:absolute; VAlign:Middle;    background-color:antiquewhite;   background-color:#fbebd7;height:104px; left:17px; top:4px;width:83px;" tagname=""/>
+                <w2:textbox class="sty_lb_Basic" id="Div1_Static17" label="배정일자"
+                    style="position:absolute; VAlign:Middle;     height:24px;left:104px;top:31px; width:71px;" tagname=""/>
+                <w2:inputCalendar class="sty_ipt_search" id="Div1_cal_Date" readOnly="true"
+                    style="position:absolute; SundayTextColor:red;  SaturdayTextColor:blue;    height:24px;left:207px;top:4px; width:100px;"
+                    tabIndex="2" validCheck="true"/>
+                <w2:textbox class="sty_lb_Basic" id="Div1_Static18" label="이      름"
+                    style="position:absolute; VAlign:Middle;     height:24px;left:104px;top:58px; width:71px;" tagname=""/>
+                <w2:textbox class="sty_lb_Basic" id="Div1_Static16" label="접수일자"
+                    style="position:absolute; VAlign:Middle;     height:24px; left:104px; top:4px; width:71px;" tagname=""/>
+                <w2:inputCalendar class="sty_ipt_search" id="Div1_cal_DistDate" readOnly="true"
+                    style="position:absolute; SundayTextColor:red;  SaturdayTextColor:blue;    height:24px;left:207px;top:31px; width:100px;"
+                    tabIndex="7" validCheck="true"/>
+                <xf:input class="sty_ipt_form" disabled="true" id="Div1_edt_distEmpName" readOnly="TRUE"
+                    style="position:absolute;   text-align:CENTER;  height:24px;left:207px;top:59px; width:100px;" tabIndex="8"/>
+                <w2:textbox class="sty_lb_Basic" id="Div1_Static19" label="소      속"
+                    style="position:absolute; VAlign:Middle;     height:24px;left:104px;top:83px; width:71px;" tagname=""/>
+                <xf:input class="sty_ipt_form" disabled="true" id="Div1_edt_distEmpCenter" readOnly="TRUE"
+                    style="position:absolute;   text-align:CENTER;  height:24px;left:207px;top:83px; width:100px;" tabIndex="10"/>
+                <xf:input class="sty_ipt_form" disabled="true" id="Div1_edt_status" readOnly="TRUE"
+                    style="position:absolute;   height:24px;left:424px;top:4px; width:100px;" tabIndex="11"/>
+                <w2:textbox class="sty_lb_Basic" id="Div1_Static22" label="직      책"
+                    style="position:absolute; VAlign:Middle;     height:24px;left:321px;top:83px; width:71px;" tagname=""/>
+                <xf:input class="sty_ipt_form" disabled="true" id="Div1_edt_distEmpDuty" readOnly="TRUE"
+                    style="position:absolute;   text-align:CENTER;  height:24px;left:423px;top:83px; width:100px;" tabIndex="13"/>
+                <w2:textbox class="sty_lb_Basic" id="Div1_Static21" label="사      번"
+                    style="position:absolute; VAlign:Middle;     height:24px;left:321px;top:62px; width:71px;" tagname=""/>
+                <xf:input class="sty_ipt_form" disabled="true" id="Div1_edt_distEmpNo" readOnly="TRUE"
+                    style="position:absolute;   text-align:CENTER;  height:24px;left:423px;top:62px; width:100px;" tabIndex="15"/>
+                <w2:textbox class="sty_lb_Basic" id="Div1_Static20" label="상      태"
+                    style="position:absolute; VAlign:Middle;     height:24px;left:321px;top:4px; width:71px;" tagname=""/>
+                <xf:trigger class="w2trigger_anchor.btn_Close" ev:onclick="scwin.Div1_Button1_OnClick" id="Div1_Button1"
+                    style="position:absolute;  height:20px;left:0px;top:4px; width:20px;" tabIndex="17" type="anchor"/>
+            </xf:group>
+        </xf:group>
+    </body>
+</html>

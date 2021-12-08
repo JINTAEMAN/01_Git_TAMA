@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataMap baseNode="map" id="dma_setting">
+					<w2:keyInfo>
+						<w2:key id="MAIN_LAYOUT_PAGE_CODE" name="메인 레이아웃" dataType="text"></w2:key>
+						<w2:key id="IS_USE_SHORTCUT" name="단축키 사용여부" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+			<xf:submission id="sbm_selectMainSetting" ref="" target="data:json,dma_setting" action="/main/selectBmMainSetting"
+				method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous"
+				processMsg="" ev:submit="" ev:submitdone="" ev:submiterror="">
+			</xf:submission>
+			<xf:submission id="sbm_updateMainSetting" ref="data:json,dma_setting" target="" action="/main/updateBmMainSetting"
+				method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous"
+				processMsg="" ev:submit="" ev:submitdone="scwin.setUpdateMainSetCallback" ev:submiterror="" abortTrigger="">
+			</xf:submission>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+		
+	scwin.mainSetPop = "";
+
+	scwin.onpageload = function() {
+		var param = com.getParameter();
+		scwin.closeCallbackFncName = param.callbackFn;
+		com.executeSubmission(sbm_selectMainSetting);
+	};
+
+	scwin.onpageunload = function() {
+
+	};
+
+	scwin.btn_save_onclick = function() {
+		com.executeSubmission(sbm_updateMainSetting);
+	};
+
+	scwin.btn_cancel_onclick = function() {
+		com.closePopup();
+	};
+	
+	scwin.setUpdateMainSetCallback = function(e) {
+		var rsMsg = e.responseJSON.rsMsg;
+		if (rsMsg.statusCode === "S") {
+			com.isUseShortCut(rad_shortcut.getValue());
+			com.closePopup(scwin.closeCallbackFncName);
+		} else {
+			com.resultMsg(rsMsg);
+		}
+	};
+
+	scwin.btn_shortcutSetting_onclick = function() {
+		var options = { 
+			id : "ShortcutEventPop",
+			popupName : "단축키 설정", 
+			modal : true, 
+			width : 1200, height: 800 
+		};
+		var data = { data : "", callbackFn : ""};
+		com.openPopup("/cm/common/settingShortCut.xml", options, data);
+	};
+	]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="pop_S" id="" style="">
+		<xf:group id="" style="" class="pop_con"><xf:group id="" style="width:100%;" class="w2tb tb" tagname="table">
+				<w2:attributes>
+					<w2:summary></w2:summary>
+				</w2:attributes>
+				<xf:group tagname="colgroup">
+					<xf:group style="width:130px;" tagname="col"></xf:group>
+					<xf:group style="" tagname="col"></xf:group>
+				</xf:group>
+				<xf:group style="" tagname="tr">
+					<xf:group style="" class="w2tb_th" tagname="th">메인&amp;nbsp;화면</xf:group>
+					<xf:group style="" class="w2tb_td" tagname="td">
+						<xf:select1 id="rdo_main" ref="data:dma_setting.MAIN_LAYOUT_PAGE_CODE" cols="2" selectedIndex="" appearance="full" style="height: 21px;" ev:onradioclick="" rows="">
+							<xf:choices>
+								<xf:item>
+									<xf:label><![CDATA[Tab View]]></xf:label>
+									<xf:value><![CDATA[T]]></xf:value>
+								</xf:item>
+								<xf:item>
+									<xf:label><![CDATA[Multi View]]></xf:label>
+									<xf:value><![CDATA[W]]></xf:value>
+								</xf:item>
+							</xf:choices>
+						</xf:select1>
+
+					</xf:group>
+				</xf:group>
+			<xf:group tagname="tr" style=""><xf:group tagname="th" class="w2tb_th">단축키&amp;nbsp;설정<w2:attributes><w2:scope>row</w2:scope></w2:attributes></xf:group>
+				<xf:group tagname="td" class="w2tb_td">
+					<w2:attributes></w2:attributes>
+					<xf:select1 appearance="full" cols="2" ev:onradioclick="" id="rad_shortcut" ref="data:dma_setting.IS_USE_SHORTCUT" rows="" selectedIndex=""
+						style="height: 21px;">
+						<xf:choices>
+							<xf:item>
+								<xf:label><![CDATA[사용]]></xf:label>
+								<xf:value><![CDATA[Y]]></xf:value>
+							</xf:item>
+							<xf:item>
+								<xf:label><![CDATA[미사용]]></xf:label>
+								<xf:value><![CDATA[N]]></xf:value>
+							</xf:item>
+						</xf:choices>
+					</xf:select1>
+					<w2:anchor class="btn_com mr5" ev:onclick="scwin.btn_shortcutSetting_onclick" id="btn_shortcutSetting" outerDiv="" style="float: right;">
+						<xf:label><![CDATA[설정]]></xf:label>
+					</w2:anchor>
+				</xf:group></xf:group></xf:group>
+			<xf:group id="grp_btn" style="text-align:center;padding-top:20px;" class="">
+				<w2:anchor id="btn_save" style="" ev:onclick="scwin.btn_save_onclick" class="btn_com mr5" outerDiv="">
+					<xf:label><![CDATA[저장]]></xf:label>
+				</w2:anchor>
+				<w2:anchor id="btn_cancel" style="" ev:onclick="scwin.btn_cancel_onclick" class="btn_com" outerDiv="">
+					<xf:label><![CDATA[취소]]></xf:label>
+				</w2:anchor>
+			</xf:group></xf:group></xf:group>
+	</body>
+</html>

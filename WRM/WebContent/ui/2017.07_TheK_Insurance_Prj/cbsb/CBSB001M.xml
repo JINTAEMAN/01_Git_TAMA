@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/new.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataList id="dst_BussActDataSendListInfoVo"
+					baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="bussActDataSendId"
+							name="bussActDataSendId" dataType="text">
+						</w2:column>
+						<w2:column id="sendDate" name="sendDate"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sendSeqno" name="sendSeqno"
+							dataType="text">
+						</w2:column>
+						<w2:column id="custNo" name="custNo"
+							dataType="text">
+						</w2:column>
+						<w2:column id="name" name="name"
+							dataType="text">
+						</w2:column>
+						<w2:column id="cstFlgcd" name="cstFlgcd"
+							dataType="text">
+						</w2:column>
+						<w2:column id="rgtrEmpno" name="rgtrEmpno"
+							dataType="text">
+						</w2:column>
+						<w2:column id="rgstDate" name="rgstDate"
+							dataType="text">
+						</w2:column>
+						<w2:column id="seqno" name="seqno"
+							dataType="text">
+						</w2:column>
+						<w2:column id="bussActDataFlag"
+							name="bussActDataFlag" dataType="text">
+						</w2:column>
+						<w2:column id="sendFlgcd" name="sendFlgcd"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sendHms" name="sendHms"
+							dataType="text">
+						</w2:column>
+						<w2:column id="senrEmpno" name="senrEmpno"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sndrTitl" name="sndrTitl"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sndrCont" name="sndrCont"
+							dataType="text">
+						</w2:column>
+						<w2:column id="cellPhone" name="cellPhone"
+							dataType="text">
+						</w2:column>
+						<w2:column id="email" name="email"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sndrTelno" name="sndrTelno"
+							dataType="text">
+						</w2:column>
+						<w2:column id="sndrEmail" name="sndrEmail"
+							dataType="text">
+						</w2:column>
+						<w2:column id="bussActDataName" name="bussActDataName"
+							dataType="text">
+						</w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map"
+					id="dst_BussActDataSendInparamVO">
+					<w2:keyInfo>
+						<w2:key id="custNo" name="name3"
+							dataType="text">
+						</w2:key>
+						<w2:key id="name" name="name4"
+							dataType="text">
+						</w2:key>
+						<w2:key id="senrEmpno" name="name11"
+							dataType="text">
+						</w2:key>
+						<w2:key id="dateFr" name="name18"
+							dataType="text">
+						</w2:key>
+						<w2:key id="dateTo" name="name19"
+							dataType="text">
+						</w2:key>
+						<w2:key id="cstFlgcd" name="name6"
+							dataType="text">
+						</w2:key>
+						<w2:key id="bussActDataFlag" name="name7"
+							dataType="text">
+						</w2:key>
+						<w2:key id="sendFlgcd" name="name8"
+							dataType="text">
+						</w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>
+			
+		</xf:model>
+		<script type="javascript"><![CDATA[
+    var gsSysDate;			// global 현재일자
+	var gUserID; 			// global 사용자 ID
+	var gUserEmpName; 	    // global 부서명
+			
+	//**********************************************************
+	// 초기화
+	//**********************************************************
+	scwin.init = function() {
+		gsSysDate 		= WebSquare.date.getCurrentServerDate("yyyyMMdd"); 	// global 현재일자
+		gUserID 		= util.getGdsValue("gUserID");    					// global 사용자 ID
+		gUserEmpName 	= util.getGdsValue("gUserEmpName");    				// global 부서명
+						
+	    //----- 버튼 처리(입력, 수정, 삭제, 결재, 취소, 인쇄, 엑셀, 닫기)
+		gfn_btnEnable(false, false, false, false, false, false, false, true);
+	        
+	    ic_dateFr.setValue(gsSysDate.substring(0, 6)+"01");
+	    ic_dateTo.setValue(gsSysDate.substring(0, 6) + util.getLastDay(gsSysDate));	        
+	    	    
+	    //발송내역조회
+	    scwin.getBussActDataSendList();
+	};			
+	
+	//**********************************************************
+	// 
+	//**********************************************************
+	scwin.subCallBackfunction = function(e){
+		// e.subID : 서브미션 ID
+		// e.flag  : s성공;
+		// e.msg   : 트렌젝션 처리후 메세지
+		// e."받을데이타셋"
+		switch(e.subID){
+		
+			//SMS이메일 발송
+			case "retrieveBussActDataSendInfo":
+				if(e.flag =="s"){
+					dst_BussActDataSendListInfoVo.setJSON(e.result.bussActDataSendInfoVo);		
+					
+					if(dst_BussActDataSendListInfoVo.getRowCount()==0){
+			        	wprom.alert("조회결과가 없습니다.");        	
+			        	return;	
+					}
+								
+				}else{
+					wprom.alert(e.msg);
+				}
+			break;	
+		}
+	};
+	
+	
+	//**********************************************************
+	// 조회버튼클릭
+	//**********************************************************
+	scwin.btn_Search_onclick = function() {	
+		var dateFr = ic_dateFr.getValue();
+		var dateTo = ic_dateTo.getValue();
+		var searchFlag = sel_searchFlag.getValue();		
+		var cont = ib_cont.getValue();	
+		
+		if(util.isNull(dateFr)){			
+        	wprom.alertF("조회 시작일자를 입력해 주세요.",{}, ic_dateFr);        	
+        	return;		
+		}		
+		if(util.isNull(dateTo)){			
+        	wprom.alertF("조회 종료일자를 입력해 주세요.",{}, ic_dateTo);        	
+        	return;		
+		}	
+		if(parseInt(dateFr-dateTo)>0){
+			wprom.alertF("조회시작일이 조회종료일보다 큽니다.",{},ic_dateFr);						
+			return;
+		}	
+		if(WebSquare.date.dateDiff(dateFr,dateTo)>31){
+			wprom.alertF("최대 31일까지 조회 가능합니다.",{},ic_dateTo);
+			return;
+		}		
+		
+	    //사원번호(발송자사원번호)
+		if("01" == searchFlag){		
+			if(cont.length>7){
+				wprom.alertF("사원번호(7자리) 확인해주세요.",{},ib_cont);
+				return;
+			}		
+		}//고객번호
+		else if("02" == searchFlag){		
+			if(cont.length!=13){
+				wprom.alertF("고객번호(13자리) 확인해주세요.",{},ib_cont);
+				return;
+			}		
+			
+		//고객명
+		}else if("03" == searchFlag){
+			
+		}	
+
+
+		//발송내역조회
+		scwin.getBussActDataSendList();
+	};
+	
+//---------------------------------------------------------------------------
+// function 명 : lfn_getRealNo (기간계B370)
+// 내용        : 실주민번호 조회
+//---------------------------------------------------------------------------
+	scwin.lfn_getRealNo = function(sCustKeyNo) {
+		DsWs_CustNo.removeAll();
+		
+		var MethodObj = new callService("com.inswave.longterm.com.com.task.AXR300Task", "selectRealCustNo", 0, 0);
+		MethodObj.setId("selectRealCustNo");
+		MethodObj.setParam("sCustKeyNo", sCustKeyNo);
+		MethodObj.setUrl("/common/CBSO028MController.do");
+		MethodObj.setXPath("//*/LTI0000");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();    
+
+		DsWs_CustNo.setJSON(_tranSync.getDsJson("LTI0000"));
+		
+		if(DsWs_CustNo.getRowCount() > 0 && wconv.length(DsWs_CustNo.getCellData(0,"sRealCustNo")) >  0) {
+			return DsWs_CustNo.getCellData(0,"sRealCustNo");
+		}else{
+			return sCustKeyNo;
+		}
+	};
+	
+//---------------------------------------------------------------------------
+// function 명 : lfn_getCustNo
+// 내용        : 고객번호 조회
+//---------------------------------------------------------------------------
+	scwin.lfn_getCustNo = function(sRealCustNo) {
+		DsWs_CustNo.removeAll();		
+		
+		var MethodObj = new callService("com.inswave.longterm.com.com.task.AXR300Task", "selectCustKeyNo", 0, 0);
+		MethodObj.setId("selectCustKeyNo");
+		MethodObj.setParam("sRealCustNo", sRealCustNo);
+		MethodObj.setUrl("/common/CBSO028MController.do");
+		MethodObj.setXPath("//*/LTI0000");
+		MethodObj.addXPath("//WARNING");
+		MethodObj.sync();
+		MethodObj.send();    
+
+		DsWs_CustNo.setJSON(_tranSync.getDsJson("LTI0000"));
+		
+		if(DsWs_CustNo.getRowCount() > 0 && wconv.length(DsWs_CustNo.getCellData(0,"sCustKeyNo")) >  0) {
+			return DsWs_CustNo.getCellData(0,"sCustKeyNo");
+		}else{
+			return "";
+		}
+	};
+	
+	//**********************************************************
+	// 발송내역조회
+	//**********************************************************
+	scwin.getBussActDataSendList = function() {		
+		dst_BussActDataSendInparamVO.set("dateFr",ic_dateFr.getValue());
+		dst_BussActDataSendInparamVO.set("dateTo",ic_dateTo.getValue());
+		
+		dst_BussActDataSendInparamVO.set("cstFlgcd",sel_CstFlgcd.getValue());
+		dst_BussActDataSendInparamVO.set("bussActDataFlag",sel_BussActDataFlag.getValue());
+		dst_BussActDataSendInparamVO.set("sendFlgcd",sel_SendFlgcd.getValue());
+				
+		dst_BussActDataSendInparamVO.set("senrEmpno","");
+		dst_BussActDataSendInparamVO.set("custNo","");
+		dst_BussActDataSendInparamVO.set("name","");
+		
+		var searchFlag = sel_searchFlag.getValue();
+		var cont = ib_cont.getValue();
+		
+		//사원번호(발송자사원번호)
+		if("01" == searchFlag){
+			dst_BussActDataSendInparamVO.set("senrEmpno",cont);			
+		//고객번호
+		}else if("02" == searchFlag){
+			//고객 주민번호 -> 치환키
+			var custKey = "";
+			if(!util.isNull(cont)){
+				//custKey = scwin.lfn_getCustNo(cont);
+				custKey = cont;
+				dst_BussActDataSendInparamVO.set("custNo", custKey);	//치환고객번호
+			}else{
+				dst_BussActDataSendInparamVO.set("custNo",cont);
+			}			
+			
+		//고객명
+		}else if("03" == searchFlag){
+			dst_BussActDataSendInparamVO.set("name",cont);
+		}	
+		
+		var trans = new transSub();                   // transaction 보낼 객체 생성
+		trans.setId("retrieveBussActDataSendInfo");    // transaction 보낼 SubmissionID
+		trans.setUrl("/sales/support/CBSB0006.do");    // Controller 쪽으로 보낼 주소
+		trans.setDs("dst_BussActDataSendInparamVO");					
+		trans.targetDs("dst_BussActDataSendListInfoVo");			
+		trans.callBack("scwin.subCallBackfunction");  // 받을 Dataset을 처리시 콜백함수
+		trans.send();	
+	};
+	
+	//**********************************************************
+	// 발송구분코드에 따라 그리드컬럼 세팅 
+	//**********************************************************
+	scwin.setSendInfo = function(data, formattedData, rowIndex, colIndex) {
+		// 발송구분코드
+		var sendFlgcd = dst_BussActDataSendListInfoVo.getCellData(rowIndex, "sendFlgcd");
+		// 핸드폰번호
+		var cellPhone = dst_BussActDataSendListInfoVo.getCellData(rowIndex, "cellPhone");
+		// 이메일
+		var email = dst_BussActDataSendListInfoVo.getCellData(rowIndex, "email");
+		
+		if(sendFlgcd == "01") {
+			formattedData = common.transPhone(cellPhone);
+		} else if(sendFlgcd == "02") {
+			formattedData = email;
+		}
+		
+		//console.log("발송구분:"+sendFlgcd+"/핸드폰번호:"+cellPhone+"/이메일:"+email+"/formattedData:"+formattedData);
+		
+		return formattedData;	
+	};
+	
+	scwin.ib_cont_onkeydown = function(e) {
+		// 고객명 인풋박스 엔터키 키다운이벤트시 조회버튼 클릭이벤트와 연결  
+		if(e.keyCode == 13) {
+			scwin.btn_Search_onclick();
+		}	
+	}; 
+	
+	/* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+	+------------------------------------------------// script 종료 //------------------------------------------------------------+
+	■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
+]]></script>
+	</head>
+	<body>
+		<xf:group class="contentWrap" id="" style="">
+			<w2:wframe id="" style=""
+				initScript="scwin.wfTitleFavInit();"
+				src="/cm/common/wf_titleFav.xml">
+			</w2:wframe>
+			
+
+			<!-- group:s -->
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="" class="tbl_search">
+					<xf:group id="" style="" adaptive=""
+						class="w2tb tbl_sc" adaptiveThreshold="" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:80px"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:20px;"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:80px;"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:80px;"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:80px;"
+								tagname="col">
+							</xf:group>
+
+
+
+
+							<xf:group style="width:80px"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:80px"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:80px"
+								tagname="col">
+							</xf:group>
+							<xf:group style="width:80px"
+								tagname="col">
+							</xf:group>
+						</xf:group>
+
+
+						<xf:group tagname="tr" style="">
+							<xf:group style="" class="w2tb_th"
+								tagname="th">
+								조회기간
+							</xf:group>
+							<xf:group style="" class="w2tb_td"
+								tagname="td">
+								<w2:attributes>
+									<w2:colspan>3</w2:colspan>
+									<w2:rowspan>1</w2:rowspan>
+								</w2:attributes>
+								<xf:group class="" style=""
+									tagname="">
+									<w2:inputCalendar
+										calendarValueType="yearMonthDate" focusOnDateSelect="false"
+										footerDiv="false" id="ic_dateFr" renderDiv="true"
+										renderType="component" rightAlign="false" style="width:100px"
+										weekStartsOn="0">
+									</w2:inputCalendar>
+									<w2:textbox class="txt_bw" id=""
+										label="~" style="" tagname="span">
+									</w2:textbox>
+									<w2:inputCalendar
+										calendarValueType="yearMonthDate" focusOnDateSelect="false"
+										footerDiv="false" id="ic_dateTo" renderDiv="true"
+										renderType="component" rightAlign="false" style="width:100px"
+										weekStartsOn="0">
+									</w2:inputCalendar>
+								</xf:group>
+							</xf:group>
+							<xf:group class="w2tb_th"
+								style="width:80px;" tagname="th">
+								고객구분
+							</xf:group>
+							<xf:group class="w2tb_td" style="width:80px"
+								tagname="td">
+								<xf:select1 allOption=""
+									appearance="minimal" chooseOption="" direction="auto"
+									disabled="false" disabledClass="" displayMode="label"
+									ev:onviewchange="" id="sel_CstFlgcd" optionOrder="" ref=""
+									renderType="native" style="" submenuSize="" ev:onchange="">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[전체]]></xf:label>
+											<xf:value><![CDATA[]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[가망고객]]></xf:label>
+											<xf:value><![CDATA[01]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[계약고객]]></xf:label>
+											<xf:value><![CDATA[02]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group class="w2tb_th" style="width:80px"
+								tagname="th">
+								자료구분
+							</xf:group>
+							<xf:group class="w2tb_td" style="width:80px"
+								tagname="td">
+								<xf:select1 allOption=""
+									appearance="minimal" chooseOption="" direction="auto"
+									disabled="false" disabledClass="" displayMode="label"
+									ev:onviewchange="" id="sel_BussActDataFlag" optionOrder=""
+									ref="" renderType="native" style="" submenuSize="">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[전체]]></xf:label>
+											<xf:value><![CDATA[]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[교안]]></xf:label>
+											<xf:value><![CDATA[01]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[리플렛]]></xf:label>
+											<xf:value><![CDATA[02]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[니즈]]></xf:label>
+											<xf:value><![CDATA[03]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[안내장]]></xf:label>
+											<xf:value><![CDATA[04]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group class="w2tb_th" style="width:80px"
+								tagname="th">
+								발송구분
+							</xf:group>
+							<xf:group class="w2tb_td" style="width:80px"
+								tagname="td">
+								<xf:select1 allOption=""
+									appearance="minimal" chooseOption="" direction="auto"
+									disabled="false" disabledClass="" displayMode="label"
+									ev:onviewchange="" id="sel_SendFlgcd" optionOrder="" ref=""
+									renderType="native" style="" submenuSize="">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[전체]]></xf:label>
+											<xf:value><![CDATA[]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[SMS]]></xf:label>
+											<xf:value><![CDATA[01]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[e-mail]]></xf:label>
+											<xf:value><![CDATA[02]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+
+						</xf:group>
+						<xf:group style="" tagname="tr">
+							<xf:group class="w2tb_th" style=""
+								tagname="th">
+								조회구분
+							</xf:group>
+							<xf:group class="w2tb_td" style=""
+								tagname="td">
+								<w2:attributes>
+									<w2:rowspan>1</w2:rowspan>
+									<w2:colspan>3</w2:colspan>
+								</w2:attributes>
+								<xf:select1 allOption=""
+									appearance="minimal" chooseOption="" direction="auto"
+									disabled="false" disabledClass="" displayMode="label"
+									ev:onviewchange="" id="sel_searchFlag" optionOrder="" ref=""
+									renderType="native" style="" submenuSize="">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[전체]]></xf:label>
+											<xf:value><![CDATA[00]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[사원번호]]></xf:label>
+											<xf:value><![CDATA[01]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[고객번호]]></xf:label>
+											<xf:value><![CDATA[02]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[고객명]]></xf:label>
+											<xf:value><![CDATA[03]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+							</xf:group>
+							<xf:group class="w2tb_th" style=""
+								tagname="th">
+								검색어
+							</xf:group>
+							<xf:group class="w2tb_td" style=""
+								tagname="td">
+								<w2:attributes>
+									<w2:colspan>3</w2:colspan>
+									<w2:rowspan>1</w2:rowspan>
+								</w2:attributes>
+								<xf:input
+									ev:onkeydown="scwin.ib_cont_onkeydown" id="ib_cont" style="">
+								</xf:input>
+							</xf:group>
+						</xf:group>
+					</xf:group>
+
+					<w2:anchor id="btn_Search" style=""
+						ev:onclick="scwin.btn_Search_onclick" class="btn_sh"
+						outerDiv="true" disabled="false">
+						<xf:label><![CDATA[조회]]></xf:label>
+					</w2:anchor>
+				</xf:group>
+			</xf:group>
+			<!-- group:e -->
+
+			<!-- group:s -->
+			<xf:group id="" style="" class="section"><w2:gridView autoFit="allColumn" class="cm_grid" dataList="dst_BussActDataSendListInfoVo" ev:onafteredit="" ev:oncellclick="" ev:onrowindexchange="" ev:onviewchange="" fixedColumnWithHidden="" id="gridView2" ignoreCellClick="false" readOnly="true" rowNumHeaderValue="No" rowNumVisible="true" rowNumWidth="30" rowStatusHeaderValue="상태" rowStatusVisible="" rowStatusWidth="20" scrollByColumn="false" style="height:479px;" useShiftKey="true" visibleRowNum="" wheelRows="">
+				<w2:header id="header1" style="">
+					<w2:row id="row2" style="">
+						<w2:column blockSelect="false" displayMode="label" id="column2" inputType="text" style="height:20px;" value="고객명" width="85">
+						</w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="column3" inputType="text" style="height:20px;" value="고객번호" width="110">
+						</w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="column4" inputType="text" style="height:20px;" value="구분" width="115">
+						</w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="column5" inputType="text" style="height:20px;" value="활동자료구분" width="100">
+						</w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="column6" inputType="text" style="height:20px;" value="영업활동자료" width="105">
+						</w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="column7" inputType="text" style="height:20px;" value="발송자" width="100">
+						</w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="column8" inputType="text" style="height:20px;" value="발송일" width="100">
+						</w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="column9" inputType="text" style="height:20px;" value="발송시간" width="90">
+						</w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="column10" inputType="text" style="height:20px;" value="발송방법" width="100">
+						</w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="column11" inputType="text" style="height:20px;" value="핸드폰/이메일" width="150">
+						</w2:column>
+					</w2:row>
+				</w2:header>
+				<w2:gBody id="gBody4" style="">
+					<w2:row id="row5" style="">
+						<w2:column blockSelect="false" displayMode="label" id="name" inputType="" style="" width="85">
+						</w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="custNo" inputType="" style="" width="110">
+						</w2:column>
+						<w2:column allOption="" blockSelect="false" chooseOption="" displayMode="label" id="cstFlgcd" inputType="select" style="" width="115">
+							<w2:choices>
+								<w2:item>
+									<w2:label><![CDATA[가망고객]]></w2:label>
+									<w2:value><![CDATA[01]]></w2:value>
+								</w2:item>
+								<w2:item>
+									<w2:label><![CDATA[계약고객]]></w2:label>
+									<w2:value><![CDATA[02]]></w2:value>
+								</w2:item>
+							</w2:choices>
+						</w2:column>
+						<w2:column allOption="" blockSelect="false" chooseOption="" displayMode="label" id="bussActDataFlag" inputType="select" style="" width="100">
+							<w2:choices>
+								<w2:item>
+									<w2:label><![CDATA[교안]]></w2:label>
+									<w2:value><![CDATA[01]]></w2:value>
+								</w2:item>
+								<w2:item>
+									<w2:label><![CDATA[리플렛]]></w2:label>
+									<w2:value><![CDATA[02]]></w2:value>
+								</w2:item>
+								<w2:item>
+									<w2:label><![CDATA[니즈]]></w2:label>
+									<w2:value><![CDATA[03]]></w2:value>
+								</w2:item>
+								<w2:item>
+									<w2:label><![CDATA[안내장]]></w2:label>
+									<w2:value><![CDATA[04]]></w2:value>
+								</w2:item>
+							</w2:choices>
+						</w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="bussActDataName" inputType="" style="" width="105">
+						</w2:column>
+						<w2:column blockSelect="false" displayMode="label" id="senrEmpno" inputType="" style="" width="100">
+						</w2:column>
+						<w2:column blockSelect="false" dataType="date" displayFormat="" displayMode="label" id="sendDate" inputType="" style="" width="100">
+						</w2:column>
+						<w2:column blockSelect="false" displayFormat="##:##" displayMode="label" id="sendHms" inputType="" style="" width="90">
+						</w2:column>
+						<w2:column allOption="" blockSelect="false" chooseOption="" displayMode="label" id="sendFlgcd" inputType="select" style="" width="100">
+							<w2:choices>
+								<w2:item>
+									<w2:label><![CDATA[SMS]]></w2:label>
+									<w2:value><![CDATA[01]]></w2:value>
+								</w2:item>
+								<w2:item>
+									<w2:label><![CDATA[e-mail]]></w2:label>
+									<w2:value><![CDATA[02]]></w2:value>
+								</w2:item>
+							</w2:choices>
+						</w2:column>
+						<w2:column blockSelect="false" customFormatter="scwin.setSendInfo" displayFormatter="" displayMode="label" id="sendInfo" inputType="text" style="height:20px" width="150">
+						</w2:column>
+					</w2:row>
+				</w2:gBody>
+			</w2:gridView></xf:group>
+			<!-- group:e -->
+
+		</xf:group>
+	</body>
+</html>

@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+    <!-- 
+        ###################################################
+         파일명 : CBSC009P.xml
+         프로그램명 : EDD고객확인
+         설 명 :  EDD고객확인
+         작성자 : 진태만
+         작성일 : 2017.10.06
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.10.06        진태만          최초작성
+        ###################################################
+     -->
+	 <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+                <w2:dataList baseNode="list" id="ds_combo" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="id_nm" name="id_nm"/>
+                        <w2:column dataType="text" id="id_cd" name="id_cd"/>
+                        <w2:column dataType="text" id="id_gubun" name="id_gubun"/>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <id_cd><![CDATA[1]]></id_cd>
+                            <id_gubun><![CDATA[0]]></id_gubun>
+                            <id_nm><![CDATA[개인]]></id_nm>
+                        </w2:row>
+                        <w2:row>
+                            <id_cd><![CDATA[2]]></id_cd>
+                            <id_gubun><![CDATA[0]]></id_gubun>
+                            <id_nm><![CDATA[법인]]></id_nm>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_Addr" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCustNo" name="sCustNo"/>
+                        <w2:column dataType="text" id="nSeqNo" name="nSeqNo"/>
+                        <w2:column dataType="text" id="sAdrsType" name="sAdrsType"/>
+                        <w2:column dataType="text" id="nChangeNo" name="nChangeNo"/>
+                        <w2:column dataType="text" id="sLast" name="sLast"/>
+                        <w2:column dataType="text" id="sZip1" name="sZip1"/>
+                        <w2:column dataType="text" id="sZip2" name="sZip2"/>
+                        <w2:column dataType="text" id="sAdrs1" name="sAdrs1"/>
+                        <w2:column dataType="text" id="sAdrs2" name="sAdrs2"/>
+                        <w2:column dataType="text" id="sAdrs3" name="sAdrs3"/>
+                        <w2:column dataType="text" id="sAdrsAdd" name="sAdrsAdd"/>
+                        <w2:column dataType="text" id="sAdrsAdd2" name="sAdrsAdd2"/>
+                        <w2:column dataType="text" id="sUserID" name="sUserID"/>
+                        <w2:column dataType="text" id="sAdrs" name="sAdrs"/>
+                        <w2:column dataType="text" id="cType" name="cType"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="Ds_LTIDC93" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sPlanNo" name="sPlanNo"/>
+                        <w2:column dataType="text" id="nCrChngNo" name="nCrChngNo"/>
+                        <w2:column dataType="text" id="sCustNo" name="sCustNo"/>
+                        <w2:column dataType="text" id="sClass" name="sClass"/>
+                        <w2:column dataType="text" id="sName" name="sName"/>
+                        <w2:column dataType="text" id="sJobCode" name="sJobCode"/>
+                        <w2:column dataType="text" id="sJobName" name="sJobName"/>
+                        <w2:column dataType="text" id="sWorkName" name="sWorkName"/>
+                        <w2:column dataType="text" id="sDept" name="sDept"/>
+                        <w2:column dataType="text" id="sJobPos" name="sJobPos"/>
+                        <w2:column dataType="text" id="sCorpType" name="sCorpType"/>
+                        <w2:column dataType="text" id="sCorpInfo" name="sCorpInfo"/>
+                        <w2:column dataType="text" id="sTelNo" name="sTelNo"/>
+                        <w2:column dataType="text" id="sZipNo" name="sZipNo"/>
+                        <w2:column dataType="text" id="sAddr" name="sAddr"/>
+                        <w2:column dataType="text" id="sWebAddr" name="sWebAddr"/>
+                        <w2:column dataType="text" id="sCorpBldDate" name="sCorpBldDate"/>
+                        <w2:column dataType="text" id="sTrAim" name="sTrAim"/>
+                        <w2:column dataType="text" id="sTrSource" name="sTrSource"/>
+                        <w2:column dataType="text" id="sExtraCont" name="sExtraCont"/>
+                        <w2:column dataType="text" id="sInptDler" name="sInptDler"/>
+                        <w2:column dataType="text" id="sInptDlerIP" name="sInptDlerIP"/>
+                        <w2:column dataType="text" id="sInptDate" name="sInptDate"/>
+                        <w2:column dataType="text" id="sInptHms" name="sInptHms"/>
+                        <w2:column dataType="text" id="sMdfcDler" name="sMdfcDler"/>
+                        <w2:column dataType="text" id="sMdfcDlerIP" name="sMdfcDlerIP"/>
+                        <w2:column dataType="text" id="sMdfcDate" name="sMdfcDate"/>
+                        <w2:column dataType="text" id="sMdfcHms" name="sMdfcHms"/>
+                        <w2:column dataType="text" id="sCrNo" name="sCrNo"/>
+                        <w2:column dataType="text" id="sProcGB" name="입력,수정,삭제를 구분 코드"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="ds_corpType" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="id_nm" name="id_nm"/>
+                        <w2:column dataType="text" id="id_cd" name="id_cd"/>
+                        <w2:column dataType="text" id="id_gubun" name="id_gubun"/>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <id_cd><![CDATA[1]]></id_cd>
+                            <id_gubun><![CDATA[0]]></id_gubun>
+                            <id_nm><![CDATA[대기업]]></id_nm>
+                        </w2:row>
+                        <w2:row>
+                            <id_cd><![CDATA[2]]></id_cd>
+                            <id_gubun/>
+                            <id_nm><![CDATA[중견기업]]></id_nm>
+                        </w2:row>
+                        <w2:row>
+                            <id_cd><![CDATA[3]]></id_cd>
+                            <id_gubun><![CDATA[0]]></id_gubun>
+                            <id_nm><![CDATA[중소기업]]></id_nm>
+                        </w2:row>
+                        <w2:row>
+                            <id_cd><![CDATA[9]]></id_cd>
+                            <id_gubun><![CDATA[0]]></id_gubun>
+                            <id_nm><![CDATA[기타]]></id_nm>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="ds_corpInfo" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="id_nm" name="id_nm"/>
+                        <w2:column dataType="text" id="id_cd" name="id_cd"/>
+                        <w2:column dataType="text" id="id_gubun" name="id_gubun"/>
+                    </w2:columnInfo>
+                    <w2:data use="true">
+                        <w2:row>
+                            <id_cd><![CDATA[1]]></id_cd>
+                            <id_gubun><![CDATA[0]]></id_gubun>
+                            <id_nm><![CDATA[거래소]]></id_nm>
+                        </w2:row>
+                        <w2:row>
+                            <id_cd><![CDATA[2]]></id_cd>
+                            <id_gubun><![CDATA[0]]></id_gubun>
+                            <id_nm><![CDATA[코스닥]]></id_nm>
+                        </w2:row>
+                        <w2:row>
+                            <id_cd><![CDATA[3]]></id_cd>
+                            <id_gubun><![CDATA[0]]></id_gubun>
+                            <id_nm><![CDATA[미상장]]></id_nm>
+                        </w2:row>
+                        <w2:row>
+                            <id_cd><![CDATA[9]]></id_cd>
+                            <id_gubun><![CDATA[0]]></id_gubun>
+                            <id_nm><![CDATA[기타]]></id_nm>
+                        </w2:row>
+                    </w2:data>
+                </w2:dataList>
+                <w2:dataList baseNode="list" id="DsWs_LTIDC93" repeatNode="map" userData2="//*/LTIDC93"/>
+                <w2:dataList baseNode="list" id="DsWs_Addr" repeatNode="map">
+                    <w2:columnInfo>
+                        <w2:column dataType="text" id="sCustNo" name="sCustNo"/>
+                        <w2:column dataType="text" id="nSeqNo" name="nSeqNo"/>
+                        <w2:column dataType="text" id="sAdrsType" name="sAdrsType"/>
+                        <w2:column dataType="text" id="nChangeNo" name="nChangeNo"/>
+                        <w2:column dataType="text" id="sLast" name="sLast"/>
+                        <w2:column dataType="text" id="sZip1" name="sZip1"/>
+                        <w2:column dataType="text" id="sZip2" name="sZip2"/>
+                        <w2:column dataType="text" id="sAdrs1" name="sAdrs1"/>
+                        <w2:column dataType="text" id="sAdrs2" name="sAdrs2"/>
+                        <w2:column dataType="text" id="sAdrs3" name="sAdrs3"/>
+                        <w2:column dataType="text" id="sAdrsAdd" name="sAdrsAdd"/>
+                        <w2:column dataType="text" id="sAdrsAdd2" name="sAdrsAdd2"/>
+                        <w2:column dataType="text" id="sUserID" name="sUserID"/>
+                        <w2:column dataType="text" id="sAdrs" name="sAdrs"/>
+                        <w2:column dataType="text" id="cType" name="cType"/>
+                    </w2:columnInfo>
+                </w2:dataList>
+                
+                <w2:dataList baseNode="list" id="DsWs_Warning" repeatNode="map" userData2="//*/WARNING">                
+	                <w2:columnInfo>
+	                	<w2:column dataType="text" id="msg" name="msg"/>
+						<w2:column dataType="text" id="timestamp" name="timestamp"/>
+						<w2:column dataType="text" id="detail" name="detail"/>
+						<w2:column dataType="text" id="level" name="level"/>						 
+					</w2:columnInfo>
+				</w2:dataList>
+				
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        
+        <!--// js Script include //--> 
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/> 
+		<script src="/cm/js/convertJs/Marine_Script.js"/> 
+		<script src="/cm/js/convertJs/LongTerm_Script.js"/> 
+		<script src="/cm/js/convertJs/NewGen_Script.js"/> 
+				
+        <script><![CDATA[
+				
+/****************************************************************************
+ * 프로그램번호   : B013_Pop
+ * 프로그램명     : EDD고객확인
+ * 파일명         : B1013_Pop.xml
+ * 작성자         : 신동주
+ * 작성일         : 2014-09-12
+ ****************************************************************************/
+ 
+var addr;  // 주소
+var sYn; 
+var sGb = "";			// 설계/조회 구분
+var sCustNo = "";	// 설계/계약 구분(주민번호)
+var sName = "";		// 성명
+var sPlanNo = "";	 // 설계/조회 구분  
+var nCrChngNo = "";		// 변경번호
+var sStandDate = ""; //기준일자(직업코드찾기) 2014.04.01 제도개정
+var sSaveFlg = "";		// 저장 모드
+var sSaveFlgNm = "";		// 저장 모드
+var medt_sCustNo_Event;	// 주민번호(InputBox) MaskEdit 정규식 입력
+ 
+//---------------------------------------------------------------------------
+// function 명 : B013_OnLoadCompleted
+// 내용        : 화면로딩시 메인으로부터 파라메터값 담음
+//---------------------------------------------------------------------------
+scwin.init = function() {
+	console.log("[/CBSC003P.xml] [init()] ==> [폼 로딩] [TEST_01]" );
+	
+	var pro = Promise.resolve();
+	window.top.util.winTopShowModalChk = "T";
+	util.winTopShowModal();
+
+	pro = pro.then(function(rv) {
+		return util.winTopShowModalPromise();
+	});
+
+	pro = pro.then(function(rv) {
+		// init 부분 함수 입력하는곳  // =================================================>
+		
+		var indata = $w.getParameter("param");
+		var inJSON = JSON.parse(indata); 	// 부모창에서 받아온 값( 예) inJSON.sMyPlan)
+		
+		if (!util.isNull(inJSON.sGb)) 	sGb = inJSON.sGb;				// 설계/조회 구분 
+		if (!util.isNull(inJSON.sCustNo)) 	sCustNo = inJSON.sCustNo;	 //설계/계약 구분(주민번호)   
+		if (!util.isNull(inJSON.sName)) 	sName = inJSON.sName;	// 성명  
+		if (!util.isNull(inJSON.sPlanNo)) 	sPlanNo = inJSON.sPlanNo;	 // 설계/조회
+		if (!util.isNull(inJSON.nCrChngNo)) 	nCrChngNo = inJSON.nCrChngNo;	// 변경번호	
+		
+		// medt_sCustNo(InputBox) MaskEdit 정규식 입력  
+		var maskRegExp = [ /^[0-9\s]{7}[A-Z0-9\s]{6}$/			// 01. 주민번호 이면("######-#ZZZZZZ")  : 13자리
+									, /^[0-9\s]{3}^[0-9\s]{2}[A-Z0-9\s]{5}$/	   // 02. 법인번호 이면("###-##-#####")  : 10자리 
+								 ]; 			// 07. 청약번호 이면 : 12자리
+		var maxLength  = [13, 10];
+		var chkIndex   = 0;
+		medt_sCustNo_Event = new wMaskEditObj(medt_sCustNo, maskRegExp, maxLength, chkIndex);
+		
+		sStandDate = WebSquare.date.getCurrentServerDate("yyyyMMdd"); 		// /기준일자(global 현재일자)
+	 
+	 	// TEST 데이타: 2017.10.20, by 진태만
+//		sGb = "1";	// 설계/조회 구분[설계(1),계약(2) 여부] 
+//		sCustNo = "8808251A00003";	// 설계/계약 구분(주민번호)  
+//		sName = "정한진";	// 성명  
+//		sPlanNo = "M20170002245";	// 설계/계약 번호  
+		//console.log("[/CBSC003P.xml] [init()] ==> [폼 로딩] [TEST_02] [sGb]"+ sGb +"[sCustNo]"+ sCustNo +"[sPlanNo]"+ sPlanNo +"[sName]"+ sName );		
+	    
+		scwin.lfn_init();	  //화면초기화
+ 		
+		return ;		// init 함수를 종료하고자 할때 사용
+		// return Promise.reject("오류관련처리"); // =================================================>
+	});
+
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});
+	
+	//pro = pro.catch(function(rj) {
+		//util.winTopHideModal();
+		//alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+	//});
+	 
+	return pro;
+	
+   //console.log("[/CBSC003P.xml] [init()] ==> [폼 로딩] [TEST_end]" );
+};
+
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_init()
+// 내용        : 화면초기화
+//---------------------------------------------------------------------------
+scwin.lfn_init = function() { 
+	//console.log("[/CBSC003P.xml] [lfn_init()] ==> [화면초기화] [TEST_01]" );
+	 
+	wconv.clear(Ds_LTIDC93);
+  
+    medt_sCustNo.setValue(sCustNo);		// 주민번호
+    medt_sPlanNo.setValue(sPlanNo);		// 설계번호(청약번호)
+ 
+    if ( sGb == "2") {  	 // 법인 이면
+        Static0.setValue("계약번호"); 
+        
+    } else { 	 // 개인 이면
+    	//console.log("[/CBSC003P.xml] [lfn_init()] ==> [화면초기화] [개인 이면]" );
+    		
+    	cmb_sCorpType.hide();  // 직장명 콤보
+		cmb_sCorpInfo.hide();  // 직업/업종 콤보	
+    	Static7.hide(); 	// 홈페이지(이메일)주소 
+    	edt_sWebAddr.hide(); 
+    	Static32.setValue("직위");		// 직위
+        Static32.show();       
+  	} 
+    //console.log("[/CBSC003P.xml] [init()] ==> [화면초기화] [TEST_02] [medt_sCustNo]"+ medt_sCustNo.getValue() +"[medt_sPlanNo]"+ medt_sPlanNo.getValue() );		
+ 
+    scwin.lfn_Search();	 // 조회
+     
+ 	scwin.cmb_sClass_Changed();  
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : EDD,CDD  조회
+//---------------------------------------------------------------------------
+scwin.lfn_Search = function() {
+
+ 	//console.log("[/CBSC003P.xml] [lfn_Search()] ==> [조회 처리] [TEST_01]" );
+	
+	var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB013Task", "getLtidc93");		// EDD고객 조회 Obj
+	MethodObj.setId("getLtidc93");	// ID 셋팅 
+	MethodObj.setParam("sPlanNo", sPlanNo);	// Param 셋팅(설계번호)  
+	MethodObj.setParam("sGb", sGb);	// Param 셋팅(설계/조회 구분)  
+	MethodObj.setParam("sCustNo", medt_sCustNo.getValue() );	// Param 셋팅(설계/계약 구분(주민번호))   
+	MethodObj.setUrl("/contract/CBSC003PController.do");  			// 서버단 호출 URL 
+	MethodObj.setXPath("//*/LTIDC93");					// XPath(Ds_LTIDC93) 
+	MethodObj.addXPath("//*/WARNING");		// XPath(DsWs_Warning)
+	MethodObj.setXPathDs(); 	// XPath 전체 경로 사용할 경우
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)]
+	MethodObj.setXPathDs();
+	MethodObj.send();		// 최종 전송
+	//console.log("[/CBSC003P.xml] [lfn_Search()] ==> [01. EDD고객 조회, 전송_완료] [TEST_91]");
+
+	//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+	
+	Ds_LTIDC93.setJSON(_tranSync.getDsJson("//*/LTIDC93"));				// 보험 기본사항 Ds 셋팅 
+	DsWs_Warning.setJSON(_tranSync.getDsJson("//*/WARNING"));  		// Warning DS 셋팅(조회 결과)  
+	//console.log("[/CBSC003P.xml] [lfn_Search()] ==> [Ds_LTIDA09,_갯수]"+ Ds_LTIDC93.getRowCount() +"[Ds_LTIDC93]"+ WebSquare.xml.serialize(Ds_LTIDC93.getAllXML()) );  
+	
+  	if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    }
+    
+    if (Ds_LTIDC93.getRowCount() == 0) {
+        //wprom.alert("청약사항 조회건이 없습니다.");
+        
+   		btn_input.setDisabled(false);
+        btn_modify.setDisabled(true);
+        btn_delete.setDisabled(true);
+        
+    } else {
+    	//console.log("[/CBSC003P.xml] [lfn_Search()] ==> [조회 성공] [TEST_71]" );
+    	
+  		Ds_LTIDC93.setRowPosition(0);	 // Row 위치 0번째로 지정 
+    		
+     	edt_sTelNo1.setValue(wconv.substr(Ds_LTIDC93.getCellData(0, "sTelNo"), 0, 3));
+        edt_sTelNo2.setValue(wconv.substr(Ds_LTIDC93.getCellData(0, "sTelNo"), 3, 4));
+        edt_sTelNo3.setValue(wconv.substr(Ds_LTIDC93.getCellData(0, "sTelNo"), 7, 4));
+        edt_sZip1.setValue(wconv.substr(Ds_LTIDC93.getCellData(0, "sZipNo"), 0, 3));
+        edt_sZip2.setValue(wconv.substr(Ds_LTIDC93.getCellData(0, "sZipNo"), 3, 3));
+    
+		addr = Ds_LTIDC93.getCellData(0, "sAddr").split("^");	// split 처리
+ 
+        edt_sAddr1.setValue(addr[0]);
+        edt_sAddr2.setValue(addr[1]);
+        cmb_sClass.setValue(Ds_LTIDC93.getCellData(0, "sClass"));
+        
+        btn_input.setDisabled(true);
+        btn_modify.setDisabled(false);
+        btn_delete.setDisabled(false);
+         
+        if (DsWs_LTIDC93.getCellData(0, "sCnFmYn") == "Y") {	//심사자가 확인한 경우는 수정,삭제 불가
+            btn_modify.setDisabled(true);
+            btn_delete.setDisabled(true);
+        } 
+    }
+    
+    if (wconv.trim(sYn) == "D" || wconv.trim(sGb) == "2") {	//심사 또는 계약조회화면에서 넘어올경우
+         
+        btn_input.setDisabled(true);
+        btn_modify.setDisabled(true);
+        btn_delete.setDisabled(true);
+    }    
+ 
+	//console.log("[/CBSC003P.xml] [lfn_Search()] ==> [TEST_end]" ); 
+};
+
+scwin.btn_input_Onclick = function(e) { 
+ 	sSaveFlg = "I";		// 저장 모드(I:입력, U:수정, D: 삭제)	
+ 	sSaveFlgNm = "입력";	
+	scwin.lfn_Save();	
+};
+
+scwin.btn_modify_Onclick = function(e) {	
+	sSaveFlg = "U";		// 저장 모드(I:입력, U:수정, D: 삭제)	
+	sSaveFlgNm = "수정";	
+	scwin.lfn_Save();	
+};
+
+scwin.btn_delete_Onclick = function(e) {
+	sSaveFlg = "D";		// 저장 모드(I:입력, U:수정, D: 삭제)	
+	sSaveFlgNm = "삭제";	
+	scwin.lfn_Save();	
+};
+	
+//---------------------------------------------------------------------------
+// function 명 : lfn_Save
+// 내용        : EDD,CDD  조회
+//---------------------------------------------------------------------------
+scwin.lfn_Save = function() {
+	//console.log("[/CBSC003P.xml] [lfn_Save()] ==> [저장] [TEST_01]" );
+ 
+    //개인,법인에 따른 항목 입력 값 초기화
+    if (cmb_sClass.getValue() == "1") {	 //개인         
+        cmb_sCorpType.setValue(""); 
+        cmb_sCorpInfo.setValue("");       
+        edt_sCorpBldDate.setValue("");
+        edt_sWebAddr.setValue("");
+        
+    } else if (cmb_sClass.getValue() == "2") {	  //법인       
+        edt_sWorkName.setValue("");
+        edt_sJobCode.setValue("");
+        edt_sJobName.setValue("");
+        edt_sDept.setValue("");
+        edt_sJobPos.setValue("");
+    } 
+  
+    Ds_LTIDC93.setCellData(0, "sPlanNo", sPlanNo);
+    Ds_LTIDC93.setCellData(0, "sCustNo", sCustNo);
+    Ds_LTIDC93.setCellData(0, "nCrChngNo", nCrChngNo);
+    Ds_LTIDC93.setCellData(0, "sClass", cmb_sClass.getValue());
+    Ds_LTIDC93.setCellData(0, "sName", edt_sName.getValue());
+    Ds_LTIDC93.setCellData(0, "sJobCode", edt_sJobCode.getValue());
+    Ds_LTIDC93.setCellData(0, "sJobName", edt_sJobName.getValue());
+    Ds_LTIDC93.setCellData(0, "sWorkName", edt_sWorkName.getValue());
+    Ds_LTIDC93.setCellData(0, "sDept", edt_sDept.getValue());
+    Ds_LTIDC93.setCellData(0, "sJobPos", edt_sJobPos.getValue());
+    Ds_LTIDC93.setCellData(0, "sTelNo", edt_sTelNo1.getValue() + edt_sTelNo2.getValue() + edt_sTelNo3.getValue());
+    Ds_LTIDC93.setCellData(0, "sZipNo", edt_sZip1.getValue() + edt_sZip2.getValue());
+    Ds_LTIDC93.setCellData(0, "sAddr", edt_sAddr1.getValue() + "^" + edt_sAddr2.getValue());
+    Ds_LTIDC93.setCellData(0, "sTrAim", txa_sTrAim.getValue());
+    Ds_LTIDC93.setCellData(0, "sTrSource", txa_sTrSource.getValue());
+    Ds_LTIDC93.setCellData(0, "sExtraCont", txa_sExtraCont.getValue());
+    Ds_LTIDC93.setCellData(0, "gUserID", gds.gUserID);
+    Ds_LTIDC93.setCellData(0, "gUserIP", gds.gUserIP);
+     
+	if (sSaveFlg == "I") {	 // 저장 모드(I:등록, U:수정, D: 삭제)
+       Ds_LTIDC93.setCellData(0, "sProcGB", "I");
+    } else if (sSaveFlg == "U") {	 
+        Ds_LTIDC93.setCellData(0, "sProcGB", "U");
+    } else if (sSaveFlg == "D") {	 
+        Ds_LTIDC93.setCellData(0, "sProcGB", "D");
+    }   
+    //console.log("[/CBSC003P.xml] [lfn_Input()] ==> [Ds_LTIDC93,_갯수]"+ Ds_LTIDC93.getRowCount() +"[Ds_LTIDC93]"+ WebSquare.xml.serialize(Ds_LTIDC93.getAllXML()) );
+    
+    var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB013Task", "saveLtidc93"); 	// 01. 저장 처리 
+	MethodObj.setId("saveLtidc93");		// ID 셋팅 
+	MethodObj.addSingleData("LTIDC93", "LTIDC93", "Ds_LTIDC93:A");  	// Param 셋팅(부담보정보 Ds): A(전체), I(등록), U(수정), R  
+	MethodObj.setUrl("/contract/CBSC003PController.do");  			// 서버단 호출 URL  
+	MethodObj.addXPath("//WARNING");	// XPath(No) 
+	MethodObj.setXPathDs(); 	// XPath 전체 경로 사용할 경우
+	MethodObj.setHashTable();   	// 전문의 앞이 hashtable로 보낼 때  
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)]  
+	MethodObj.send();		// 최종 전송  		 
+	//console.log("[/CBSC003P.xml] [lfn_Input()] ==> [02. 저장 처리_완료] [TEST_71]");  	
+ 
+	util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+ 	 	
+ 	DsWs_Warning.setJSON(_tranSync.getDsJson("WARNING"));  		// Warning DS 셋팅(조회 결과) 
+  	//console.log("[/CBSC003P.xml] [lfn_Input()] ==> [저장 처리] [DsWs_Warning.getRowCount()]"+ DsWs_Warning.getRowCount() +"[DsWs_Warning]"+ WebSquare.xml.serialize(DsWs_Warning.getAllXML()) ); 
+   
+    if (DsWs_Warning.getRowCount() != 0) {	 //에러 처리
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    }
+ 
+    wprom.alert("EDD/CDD 관리항목이 " + sSaveFlgNm + " 되었습니다.");
+ 
+    if (sSaveFlg == "I") {	 // 저장 모드(I:등록, U:수정, D: 삭제)	
+        btn_input.setDisabled(true);
+        btn_modify.setDisabled(false);
+        btn_delete.setDisabled(false);
+    }
+      
+    if (sSaveFlg == "D") {	 // 저장 모드(I:등록, U:수정, D: 삭제)	
+        wconv.clear(Ds_LTIDC93);
+        edt_sTelNo1.setValue("");
+        edt_sTelNo2.setValue("");
+        edt_sTelNo3.setValue("");
+        edt_sZip1.setValue("");
+        edt_sZip2.setValue("");
+        edt_sAddr1.setValue("");
+        edt_sAddr2.setValue("");
+        cmb_sClass.setValue("");
+        
+        btn_input.setDisabled(true);
+        btn_modify.setDisabled(true);
+        btn_delete.setDisabled(true);
+        btn_search.setDisabled(true);
+    } 
+	//console.log("[/CBSC003P.xml] [lfn_Input()] ==> [저장] [TEST_end]");  
+};
+
+//---------------------------------------------------------------------------
+// function 명 : Validation_Check
+// 내용        : 
+//---------------------------------------------------------------------------
+scwin.Validation_Check = function() {};
+
+//---------------------------------------------------------------------------
+// function 명 : bt_search_onclick
+// 내용        : 직업정보 조회 
+//---------------------------------------------------------------------------
+scwin.Btn_JobSearch_OnClick = function(obj) {
+ 	//console.log("[/CBSC069P.xml] [Btn_JobSearch_OnClick()] ==> [직업정보 조회] [TEST_01]" );
+ 	
+	var pro = Promise.resolve();
+
+	pro = pro.then(function(rv) {
+		var indata  = {	"flag" : "bt_search",
+						"sStandDate" : sStandDate
+					  };
+			
+		var popInfo = {
+			"width"     : 845,
+			"height"    : 565,  
+			"indata"    : indata,
+			"title"     : "직업코드 조회",
+			"callback"  : scwin.popupCallback
+		};
+				
+		return wprom.popupOpen("/ui/cbso/CBSO021P.xml", popInfo);		// 직업정보 팝업
+	});
+		
+	pro = pro.then(function(rv) {
+		var rtnValue = wprom.getReturnData();
+			//console.log("[/CBSC069P.xml] [Btn_JobSearch_OnClick()] ==> [직업정보 팝업 결과값] [TEST_01]"+ rtnValue );
+
+		if (rtnValue != "") {
+			scwin.search_val(rtnValue);
+		}
+	});
+};
+ 
+//---------------------------------------------------------------------------
+// function 명 : bt_search_onclick
+// 내용        : 직업 검색한 ds 셋팅
+//---------------------------------------------------------------------------
+scwin.search_val = function(result) {
+ 	console.log("[/CBSC069P.xml] [search_val()] ==> [직업정보 팝업 결과값] [result]"+ result );
+ 	
+	var jobretArr = result.split("^");
+	 
+	edt_sJobCode.setValue(jobretArr[1]); //직업코드 
+	edt_sJobName.setValue(jobretArr[0]); //직업명  
+};
+
+//---------------------------------------------------------------------------
+// function 명 : Btn_AddrSearch1_OnClick
+// 내용        : 주소 검색
+//---------------------------------------------------------------------------
+scwin.Btn_AddrSearch_OnClick = function(obj) {
+	//console.log("[/CBSC003P.xml] [Btn_AddrSearch_OnClick()] ==> [조회 처리] [TEST_01]" );
+ 
+	var args = "Ds_Addr^0^sZip1^sZip2^sAdrs^sAdrsAdd^sAdrs1^sAdrs2^sAdrs3^dataTab.tab1.Edt_1_AdrsAdd^" + 
+   				Ds_Addr.getCellData(0, "sZip1") + Ds_Addr.getCellData(0, "sZip2") + "^" + Ds_Addr.getCellData(0, "sAdrs") + 
+   				"^sZipType" + "^sAddrMgtNo^nAddrStdSeq^sOrgZipType^sOrgZipCode^sOrgAddr";
+ 
+	var indata  = {	"parentInfo" : args,
+					"sTableNm" : "CUSAA01",
+					"sAdrsType" : "1"
+				}; 
+				
+   	scwin.zipPopup(indata); 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : zipPopup
+// 내용        : 주소찾기창을 띄움 
+//---------------------------------------------------------------------------
+scwin.zipPopup = function(indata) { 
+	//console.log("[/CBSC003P.xml] [zipPopup()] ==> [주소찾기창을 띄움] [ indata.parentInfo]"+ indata.parentInfo );
+	//console.log("[/CBSC003P.xml] [zipPopup()] ==> [주소찾기창을 띄움]"+ Ds_Addr.getRowCount() +"[Ds_Addr]"+ WebSquare.xml.serialize(Ds_Addr.getAllXML()) );  
+	 
+   	// 우편번호창 오픈 
+   	var pro = Promise.resolve();
+
+	pro = pro.then(function(rv) { 
+		var pObj = {
+				"Ds_Addr" : Ds_Addr 			// 피보험자 정보 Ds  
+		} 	// 자식으로 보낼 부모 Ds OBJECT 리스트
+	  
+		var popInfo = {
+			"width"     : 780,
+			"height"    : 786,   
+			"indata"    : indata,	 			// 자식으로 보낼 부모 파라미터  리스트
+		 	"parentObject"   : pObj,	 	// 자식으로 보낼 부모 Ds OBJECT 리스트 
+			"title"     : "우편번호 찾기",
+			"callback"  : scwin.popupCallback
+		};
+		
+		pro = pro.then(function(rv) {
+			//console.log("[/CBSC003P.xml] [zipPopup()] ==> [주소찾기_결과] [TEST_41]" );
+			
+			var rtnValue = wprom.getReturnData();
+			 console.log("[/CBSC003P.xml] [zipPopup()] ==> [주소찾기_결과] [rtnValue]"+ rtnValue );
+		 
+			if (rtnValue != "") {			 
+			 	var sAddrAll =  rtnValue.split("^");		// split 처리 
+			 	//console.log("[/CBSC003P.xml] [zipPopup()] ==> [주소찾기_결과] [sAddrAll]"+ sAddrAll );
+			 	 
+		 	 	edt_sZip1.setValue(sAddrAll[0]);		// 우편번호
+		        edt_sZip2.setValue(sAddrAll[1]);
+		        edt_sAddr1.setValue(sAddrAll[2]);	// 주소
+		        edt_sAddr2.setValue(sAddrAll[3]);  
+				//  [/CBSC003P.xml] [zipPopup()] ==> [주소찾기_결과] [rtnValue]074 ^20 ^서울 영등포구 도림천로13길  ^6, 2222호 (대림동) ^ ^서울 ^영등포구 ^도림천로13길  ^ ^1156013300110600035037866 ^1700112771 ^1 ^150825 ^서울 영등포구 도림천로13길  6, 2222 (대림동) ^1156013300
+         	} 
+		}); 
+			
+		return wprom.popupOpen("/ui/cbso/CBSO019P.xml", popInfo);		// 우편번호창 팝업
+	});
+};
+ 
+ //---------------------------------------------------------------------------
+// function 명 : search_val1
+// 내용        : 주소검색결과 세팅
+//---------------------------------------------------------------------------
+scwin.Set_ZipAddr = function(result) {
+
+    var ZipretArr = wconv.split(result, "^");
+    edt_sZip1.setValue(ZipretArr[0]); //우편번호1
+    edt_sZip2.setValue(ZipretArr[1]); //우편번호2
+    edt_sAddr1.setValue(ZipretArr[2]); //우편번호2
+    edt_sAddr2.setValue(ZipretArr[3]); //우편번호2
+};
+
+//---------------------------------------------------------------------------
+// function 명 : cmb_sClass_Changed
+// 내용        : 고객구분에 따른 입력 항목 세팅
+//---------------------------------------------------------------------------
+scwin.cmb_sClass_Changed = function() {
+	//console.log("[/CBSC003P.xml] [lfn_Search()] ==> [고객구분 콤보 변경 이멘트] [TEST_01] [cmb_sClass.getValue()]"+ cmb_sClass.getValue() );
+	
+    if (cmb_sClass.getValue() == "2") { 	//법인
+    	//console.log("[/CBSC003P.xml] [lfn_Search()] ==> [고객구분 콤보 변경 이멘트] [TEST_01] [02. 법인 이면]" );    	
+    	medt_sCustNo_Event.setIndex(1);  	// medt_sCustNo(InputBox) MaskEdit 정규식 입력 0번째(02. 법인코드)
+    	medt_sCustNo.setPlaceholder("___-__-____");		// Placeholder 설정   
+   		medt_sCustNo.setDisplayFormat("######-#######");   	// MaskEdit 처리  	   		
+        Static2.setValue("사업자번호"); 
+        Static71.setValue("법인구분");
+        edt_sWorkName.hide()
+        cmb_sCorpType.show();
+        Static73.setValue("상장정보");
+        cmb_sCorpInfo.show();
+        edt_sJobCode.hide();
+        edt_sJobName.hide();
+        bt_search.hide();
+        Static4.setValue("법인설립일자");
+        edt_sCorpBldDate.show();
+        edt_sDept.hide();
+        Static7.setValue("홈페이지(이메일)주소");
+        Static7.show();		//홈페이지(이메일)주소
+        Static32.hide();		// 직위
+        edt_sWebAddr.show();
+        edt_sJobPos.hide();
+        
+    } else {   //개인   
+    	//console.log("[/CBSC003P.xml] [lfn_Search()] ==> [고객구분 콤보 변경 이멘트] [TEST_01] [02. 개인 이면]" );    	
+    	medt_sCustNo_Event.setIndex(0);  	// medt_sCustNo(InputBox) MaskEdit 정규식 입력 0번째(01. 피보험자코드)
+    	medt_sCustNo.setPlaceholder("______-_______");		// Placeholder 설정   
+ 		medt_sCustNo.setDisplayFormat("######-#######");   // MaskEdit 처리  	 	
+        Static2.setValue("주민번호"); 
+        Static71.setValue("직장명");
+        edt_sWorkName.show(); 
+        cmb_sCorpType.hide();      
+        Static73.setValue("직업/업종");
+        cmb_sCorpInfo.hide();
+        edt_sJobCode.show();
+        edt_sJobName.show();
+        bt_search.show();
+        Static4.setValue("부서");
+        edt_sCorpBldDate.hide();
+        edt_sDept.show();
+        Static32.setValue("직위");		// 직위
+        Static32.show();
+        Static7.hide();			//홈페이지(이메일)주소 
+        edt_sWebAddr.hide();
+        edt_sJobPos.show();
+    }
+};
+ 
+//---------------------------------------------------------------------------
+// function 명 : 
+// 내용        : 연락처 번호 길이 체크
+//---------------------------------------------------------------------------
+scwin.edt_sTelNo1_OnKillFocus = function(obj) {
+    scwin.check_telno(wconv.trim(edt_sTelNo1.getValue()), 3);
+};
+
+scwin.edt_sTelNo2_OnKillFocus = function(obj) {
+    scwin.check_telno(wconv.trim(edt_sTelNo2.getValue()), 4);
+};
+
+scwin.edt_sTelNo3_OnKillFocus = function(obj) {
+    scwin.check_telno(wconv.trim(edt_sTelNo3.getValue()), 4);
+};
+
+scwin.check_telno = function(telno, len) {
+    if (wconv.length(telno) < len) {
+        wprom.alert("연락처 번호의 자리수를 확인하시기 바랍니다.");
+        return false;
+    }
+};
+
+/**
+ * @function	phoneCheck
+ * @desc		전화번호 체크
+ * @param      
+ * 				tel1Cpt : 전화번호 컴포넌트
+ * 				tel2Cpt : 전화번호 컴포넌트
+ * 				tel3Cpt : 전화번호 컴포넌트
+ * 				errStr  : 에러 메세지
+ * @return		true/false
+ **/
+scwin.phoneCheck = function(tel1Cpt, tel2Cpt, tel3Cpt, errStr) {
+    if (wconv.length(wconv.trim(tel1Cpt.Text)) > 0)
+        or;
+    wconv.length(wconv.trim(tel2Cpt.Text)) > 0;
+    or;
+    wconv.length(wconv.trim(tel3Cpt.Text)) > 0; {
+        if (wconv.length(wconv.trim(tel1Cpt.Text)) < 2) {
+            wprom.alert(errStr + " 바르게 입력해 주세요."); 
+			util.focus(tel1Cpt);	// 포커스 설정 
+            return false;
+        }
+        if (wconv.length(wconv.trim(tel2Cpt.Text)) < 3) {
+            wprom.alert(errStr + " 바르게 입력해 주세요."); 
+			util.focus(tel2Cpt);	// 포커스 설정 
+            return false;
+        }
+        if (wconv.length(wconv.trim(tel3Cpt.Text)) != 4) {
+            wprom.alert(errStr + " 바르게 입력해 주세요."); 
+			util.focus(tel3Cpt);	// 포커스 설정 
+            return false;
+        }
+    }
+    if (wconv.length(tel1Cpt + tel2Cpt + tel3Cpt) > 0) {
+        if (isValidPhone(tel1Cpt + tel2Cpt + tel3Cpt)) {
+            return true;
+        } else {
+            //alert(errStr + " 무효한 번호입니다. \n재입력해 주세요");
+            return false; //alert("무효");
+        }
+    }
+    return true;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_OnClose
+// 내용        : 화면종료
+//---------------------------------------------------------------------------
+scwin.lfn_OnClose = function() {
+    wprom.close();
+};
+
+
+	]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B013_Pop"
+        	style="position:absolute; WorkArea:true;left:0px;top:0px;"
+        	userData1="EDD고객확인"
+        	userData2=" OnLoadCompleted:scwin.lfn_Init; ">
+        	<DataObjects>
+        		<DataObject />
+        		<DataObject />
+        		<DataObject />
+        	</DataObjects>
+        	<ServiceObjects>
+        		<ServiceObject />
+        		<ServiceObject />
+        		<ServiceObject />
+        	</ServiceObjects>
+        	<xf:group arcsize="6" class="sty_area_form" id="group1"
+        		style="position:absolute;  bottom:608px;height:356px;left:0px;top:77px;width:745px;"
+        		userData3="RoundRect">
+        		<xf:group class="form_w_line" id=""
+        			style="top:26px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id=""
+        			style="top:54px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id=""
+        			style="top:81px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id=""
+        			style="top:108px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id=""
+        			style="top:134px;left:0px;">
+        		</xf:group>
+        	</xf:group>
+        	<xf:group arcsize="6" class="sty_area_form" id="group2"
+        		style="position:absolute;  bottom:608px;height:99px;left:0px;top:470px;width:745px;"
+        		userData3="RoundRect">
+        		<xf:group class="form_w_line" id=""
+        			style="top:26px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id=""
+        			style="position:absolute;height:1px;left:188px;top:70px;width:555px;">
+        		</xf:group>
+        		<xf:group class="form_h_line" id=""
+        			style="position:absolute;top:0px;left:520px;width:1px;height:97px;">
+        		</xf:group>
+        	</xf:group>
+        	<xf:group arcsize="6" class="sty_area_form" id="group3"
+        		style="position:absolute;  bottom:608px;height:99px;left:0px;top:631px;width:745px;"
+        		userData3="RoundRect">
+        		<xf:group class="form_w_line" id=""
+        			style="top:26px;left:0px;">
+        		</xf:group>
+        		<xf:group class="form_w_line" id=""
+        			style="position:absolute;height:1px;left:188px;top:70px;width:555px;">
+        		</xf:group>
+        		<xf:group class="form_h_line" id=""
+        			style="position:absolute;top:0px;left:520px;width:1px;height:97px;">
+        		</xf:group>
+        		<w2:textbox id="Static26"
+        			style="position:absolute;WordWrap:TRUE;VAlign:Middle;top:26px;width:184px;height:70px;text-align:center;border-right:1px solid #eee;background:#f9f9f9;left:-1px;"
+        			class="sty_lb_Basic" label="&lt;br/&gt;개인,법인 공통"
+        			tagname="">
+        		</w2:textbox>
+        	</xf:group>
+        	<xf:group arcsize="6" class="search_area" id="Shape9"
+        		style="left:0px;top:30px; width:745px;"
+        		userData3="RoundRect">
+        	</xf:group>
+        	<w2:textbox class="sty_lb_Basic" id="Static32" label="직위"
+        		style="position:absolute;width:130px;left:316px;VAlign:Middle;top:185px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static7"
+        		label="홈페이지(이메일)주소"
+        		style="position:absolute;width:130px;left:316px;VAlign:Middle;top:185px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Detail" id="Static17"
+        		label=" 월납보험료"
+        		style="position:absolute;height:20px;text-align:right;WordWrap:TRUE;width:208px;left:182px;VAlign:Middle;top:546px;"
+        		tagname="" />
+        	<w2:textbox id="Static5" label="EDD_강화된 고객확인"
+        		style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; width:249px;"
+        		tagname="" class="sub_pop_title01" />
+        	<xf:input class="sty_ipt_form" id="edt_sWorkName"
+        		maxlength="50" ref="data:Ds_LTIDC93.sWorkName"
+        		style="position:absolute; border-style:solid;  height:20px;left:92px;top:162px; width:204px;"
+        		tabIndex="4" />
+        	<xf:input class="sty_ipt_form" id="edt_sName" maxlength="30"
+        		readOnly="TRUE" ref="data:Ds_LTIDC93.sName"
+        		style="position:absolute; border-style:solid;  height:20px;left:92px;top:80px; width:202px;"
+        		tabIndex="3" />
+        	<w2:textbox class="sty_lb_Basic" id="Static63" label="고객명"
+        		style="position:absolute;min-width:70px;width:70px;left:0px;VAlign:Middle;top:77px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static71" label="직장명"
+        		style="position:absolute;min-width:70px;width:70px;left:0px;VAlign:Middle;top:158px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static3" label="주소"
+        		style="position:absolute;min-width:70px;width:70px;left:0px;VAlign:Middle;top:104px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static73" label="직업/업종"
+        		style="position:absolute;width:130px;left:316px;VAlign:Middle;top:158px;"
+        		tagname="" />
+        		
+        	<xf:group arcsize="8" class="" id="Shape0"
+        		style="position:absolute;  bottom:400px;height:201px;left:0px;top:212px;width:735px;"
+        		userData3="RoundRect">
+        		
+        		<xf:input id="edt_sWebAddr"
+        			ref="data:Ds_LTIDC93.sWebAddr" maxlength="20"
+        			style="position:absolute; ImeMode:none;  border-style:solid;  height:20px;left:461px;top:211px; width:266px;"
+        			tabIndex="70" class="sty_ipt_form">
+        		</xf:input>
+        		
+        	</xf:group>
+        	
+        	<xf:textarea class="sty_ipt_form" id="txa_sTrAim"
+        		maxlength="1000" ref="data:Ds_LTIDC93.sTrAim"
+        		style="position:absolute; VScroll:TRUE;  ImeMode:native;  border-style:solid;  height:37px;left:10px;top:312px;width:723px;"
+        		tabIndex="11" />
+        	<xf:textarea class="sty_ipt_form" id="txa_sExtraCont"
+        		maxlength="1000" ref="data:Ds_LTIDC93.sExtraCont"
+        		style="position:absolute; VScroll:TRUE;  ImeMode:native;  border-style:solid;  height:37px;left:10px;top:381px;width:723px;"
+        		tabIndex="12" />
+        	<w2:textbox class="sub_pop_title02" id="Static6"
+        		label="거래자금의 원천 및 출처"
+        		style="position:absolute; VAlign:Middle;  height:20px;left:11px;top:225px; width:168px;"
+        		tagname="" />
+        	<w2:textbox class="sub_pop_title02" id="Static8"
+        		label="거래목적"
+        		style="position:absolute; VAlign:Middle;  height:20px;left:11px;top:292px; width:168px;"
+        		tagname="" />
+        	<w2:textbox class="sub_pop_title02" id="Static9"
+        		label="재산현황"
+        		style="position:absolute; VAlign:Middle;  height:20px;left:11px;top:362px; width:168px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Search" id="Static0" label="청약번호"
+        		style="position:absolute;height:20px;min-width:50px;width:51px;left:419px;border:none;VAlign:Middle;top:39px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Search" id="Static1" label="고객구분"
+        		style="position:absolute;height:20px;min-width:50px;width:51px;left:11px;border:none;VAlign:Middle;top:39px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Search" id="Static2" label="주민번호"
+        		style="position:absolute;height:20px;min-width:50px;width:60px;left:211px;border:none;VAlign:Middle;top:39px;"
+        		tagname="" />
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.btn_input_Onclick" id="btn_input"
+        		style="position:absolute;ImageID:btn_Comm_Input;height:20px;left:548px;top:0px;"
+        		tabIndex="18" type="anchor">
+        		<xf:label><![CDATA[입력]]></xf:label>
+        	</xf:trigger>
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.lfn_OnClose" id="btn_close"
+        		style="position:absolute;ImageID:btn_Comm_Close;height:20px;left:696px;top:0px;"
+        		tabIndex="17" type="anchor">
+        		<xf:label><![CDATA[닫기]]></xf:label>
+        	</xf:trigger>
+        	<xf:trigger class="btn_Comm_Search"
+        		ev:onclick="scwin.lfn_search" id="btn_search"
+        		style="position:absolute; ImageID:btn_Comm_Search;  height:20px;left:674px;top:38px; width:45px;"
+        		tabIndex="19" type="anchor">
+        		<xf:label><![CDATA[조회]]></xf:label>
+        	</xf:trigger>
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.btn_delete_Onclick" id="btn_delete"
+        		style="position:absolute;ImageID:btn_Comm_Delete;height:20px;left:647px;top:0px;"
+        		tabIndex="20" type="anchor">
+        		<xf:label><![CDATA[삭제]]></xf:label>
+        	</xf:trigger>
+        	<xf:trigger class="popup_top_btn"
+        		ev:onclick="scwin.btn_modify_Onclick" id="btn_modify"
+        		style="position:absolute;ImageID:btn_Comm_Modify;height:20px;left:598px;top:0px;"
+        		tabIndex="21" type="anchor">
+        		<xf:label><![CDATA[수정]]></xf:label>
+        	</xf:trigger>
+        	<xf:input class="sty_ipt_form" dataType="text"
+        		displayFormat="######-#ZZZZZZ" id="medt_sCustNo"
+        		maxlength="13" readOnly="true" ref="data:Ds_LTIDC93.sCustNo"
+        		style="position:absolute; border-style:solid;  height:20px;left:283px;top:38px; width:126px;"
+        		tabIndex="2" />
+        	<xf:select1 appearance="minimal" class="sty_ipt_search"
+        		emptyItem="true" ev:onchange="scwin.cmb_sClass_Changed"
+        		id="cmb_sClass"
+        		style="position:absolute; ImeMode:none;  INDEX:0;  border-style:solid;  height:20px;left:76px;top:38px; width:119px;"
+        		tabIndex="1" renderType="native">
+        		<xf:choices>
+        			<xf:itemset nodeset="data:ds_combo">
+        				<xf:label ref="id_nm" />
+        				<xf:value ref="id_cd" />
+        			</xf:itemset>
+        		</xf:choices>
+        	</xf:select1>
+        	<xf:input class="sty_ipt_form" dataType="text"
+        		displayFormat="A-####-#######" id="medt_sPlanNo"
+        		maxlength="13" readOnly="true" ref="data:Ds_LTIDC93.sPlanNo"
+        		style="position:absolute; border-style:solid;  height:20px;left:484px;top:38px; width:124px;"
+        		tabIndex="30" />
+        	<xf:trigger class="detail_search"
+        		ev:onclick="scwin.Btn_JobSearch_OnClick" id="bt_search"
+        		style="position:absolute; ImageID:btn_Input_Search;  height:18px;left:464px;top:161px; width:20px;"
+        		tabIndex="5" type="anchor" />
+        	<xf:input class="sty_ipt_form" id="edt_sJobName"
+        		ref="data:Ds_LTIDC93.sJobName"
+        		style="position:absolute; border-style:solid;  height:20px;left:573px;top:161px; width:160px;"
+        		tabIndex="22" />
+        	<xf:trigger class="detail_search"
+        		ev:onclick="scwin.Btn_AddrSearch_OnClick" id="Btn_AddrSearch1"
+        		style="position:absolute; ImageID:btn_Input_Search;left:92px;top:107px;"
+        		tabIndex="6" type="anchor" />
+        	<xf:input class="sty_ipt_form"
+        		ev:oneditkeyup="scwin.dataTab_tab1_Edt_1_sAdrs1_OnCharChanged"
+        		id="edt_sAddr1" maxlength="100" ref="data:Ds_Addr.sAdrs"
+        		style="position:absolute; border-style:solid;height:20px;left:208px;top:107px;width:525px;"
+        		tabIndex="23" />
+        	<w2:textbox class="sty_lb_Basic" id="Static4" label="부서"
+        		style="position:absolute;min-width:70px;width:80px;left:0px;VAlign:Middle;top:185px;"
+        		tagname="" />
+        	<xf:input class="sty_ipt_form" id="edt_sDept" maxlength="30"
+        		ref="data:Ds_LTIDC93.sDept"
+        		style="position:absolute; border-style:solid;  height:20px;left:92px;top:189px; width:204px;"
+        		tabIndex="24" />
+        	<xf:input class="sty_ipt_form" id="edt_sJobPos"
+        		maxlength="20" ref="data:Ds_LTIDC93.sJobPos"
+        		style="position:absolute; border-style:solid;  height:20px;left:467px;top:189px; width:261px;"
+        		tabIndex="25" />
+        	<xf:textarea class="sty_ipt_form" id="txa_sTrSource"
+        		maxlength="1000" ref="data:Ds_LTIDC93.sTrSource"
+        		style="position:absolute; VScroll:TRUE;  ImeMode:native;  border-style:solid;height:37px;left:10px;top:245px;width:723px;"
+        		tabIndex="10" />
+        	<w2:textbox class="sty_lb_Basic" id="Static10" label="연락처"
+        		style="position:absolute;width:77px;left:324px;VAlign:Middle;top:77px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static11" label="기타주소"
+        		style="position:absolute;min-width:70px;width:70px;left:0px;VAlign:Middle;top:131px;"
+        		tagname="" />
+        	<xf:input class="sty_ipt_form"
+        		ev:oneditkeyup="scwin.dataTab_tab1_Edt_1_sAdrs1_OnCharChanged"
+        		id="edt_sAddr2" maxlength="100" ref="data:Ds_Addr.sAdrsAdd"
+        		style="position:absolute; border-style:solid;height:20px;left:92px;top:135px;width:641px;"
+        		tabIndex="26" />
+        	<xf:input class="sty_ipt_form" dataType="number"
+        		ev:onblur="scwin.edt_sTelNo1_OnKillFocus" id="edt_sTelNo1"
+        		maxlength="3"
+        		style="position:absolute; border-style:solid;  height:20px;left:431px;top:80px; width:40px;"
+        		tabIndex="7" />
+        	<xf:input class="sty_ipt_form" dataType="number"
+        		ev:onblur="scwin.edt_sTelNo2_OnKillFocus" id="edt_sTelNo2"
+        		maxlength="4"
+        		style="position:absolute; border-style:solid;  height:20px;left:479px;top:80px; width:45px;"
+        		tabIndex="8" />
+        	<xf:input class="sty_ipt_form" dataType="number"
+        		ev:onblur="scwin.edt_sTelNo3_OnKillFocus" id="edt_sTelNo3"
+        		maxlength="4"
+        		style="position:absolute; border-style:solid;  height:20px;left:532px;top:80px; width:45px;"
+        		tabIndex="9" />
+        	<xf:input class="sty_ipt_form" dataType="number"
+        		ev:onblur="scwin.edt_sTelNo1_OnKillFocus" id="edt_sZip1"
+        		maxlength="3" ref="data:Ds_Addr.sZip1"
+        		style="position:absolute; border-style:solid;  height:20px;left:121px;top:107px; width:40px;"
+        		tabIndex="27" />
+        	<xf:input class="sty_ipt_form" dataType="number"
+        		ev:onblur="scwin.edt_sTelNo1_OnKillFocus" id="edt_sZip2"
+        		maxlength="3" ref="data:Ds_Addr.sZip2"
+        		style="position:absolute; border-style:solid;  height:20px;left:164px;top:107px; width:40px;"
+        		tabIndex="28" />
+        	<xf:input class="sty_ipt_form" id="edt_sJobCode"
+        		readOnly="TRUE" ref="data:Ds_LTIDC93.sJobCode"
+        		style="position:absolute; border-style:solid;  height:20px;left:491px;top:161px; width:74px;"
+        		tabIndex="29" />
+        	<w2:textbox id="Static12" label="고액보험계약Ⅰ"
+        		style="position:absolute; VAlign:Middle;  height:20px;left:1px;top:447px; width:249px; font-weight:bold;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static13" label="구분"
+        		style="position:absolute;WordWrap:TRUE;width:505px;height:26px;text-align:center;left:0px;VAlign:Middle;top:470px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static14"
+        		label="저축성/연금보험"
+        		style="position:absolute;WordWrap:TRUE;height:26px;text-align:center;width:207px;left:521px;VAlign:Middle;top:470px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Detail" id="Static16"
+        		label="일시납보험료&lt;br/&gt;(비월납 포함)"
+        		style="position:absolute;line-height:15px;height:42px;text-align:right;WordWrap:TRUE;width:208px;left:182px;VAlign:Middle;top:504px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static15"
+        		label="&lt;br/&gt;개인,법인 공통"
+        		style="position:absolute;WordWrap:TRUE;left:0px;VAlign:Middle;top:497px;width:184px;height:70px;text-align:center;border-right:1px solid #eee;background:#f9f9f9;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Detail" id="Static19"
+        		label=" 5백만원 초과"
+        		style="position:absolute;height:25px;text-align:right;WordWrap:TRUE;width:276px;left:388px;VAlign:Middle;top:546px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Detail" id="Static18"
+        		label="2억원 초과"
+        		style="position:absolute;height:24px;text-align:right;WordWrap:TRUE;width:276px;left:388px;VAlign:Middle;top:507px;"
+        		tagname="" />
+        	<w2:textbox class="other_text02" id="Static20"
+        		label="주) 고액보험계약Ⅰ에 해당하는 경우 상기 EDD 항목을 입력해야 함"
+        		style="position:absolute; VAlign:Middle;  height:20px;left:8px;top:577px; width:384px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Detail" id="Static21"
+        		label=" 월납보험료"
+        		style="position:absolute;height:20px;text-align:right;WordWrap:TRUE;width:208px;left:182px;VAlign:Middle;top:708px;"
+        		tagname="" />
+        	<w2:textbox id="Static22" label="고액보험계약Ⅱ"
+        		style="position:absolute; VAlign:Middle;  height:20px;left:1px;top:610px; width:249px; font-weight:bold;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static23" label="구분"
+        		style="position:absolute;WordWrap:TRUE;top:631px;width:505px;height:26px;text-align:center;left:0px;VAlign:Middle;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Basic" id="Static24"
+        		label="저축성/연금보험"
+        		style="position:absolute;WordWrap:TRUE;top:631px;height:26px;text-align:center;width:207px;left:521px;VAlign:Middle;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Detail" id="Static25"
+        		label="일시납보험료 &lt;br/&gt;(비월납 포함)"
+        		style="position:absolute;line-height:15px;height:36px;text-align:right;WordWrap:TRUE;width:208px;left:182px;VAlign:Middle;top:666px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Detail" id="Static27"
+        		label=" 2천5백만원 초과"
+        		style="position:absolute;height:18px;text-align:right;WordWrap:TRUE;width:276px;left:388px;VAlign:Middle;top:707px;"
+        		tagname="" />
+        	<w2:textbox class="sty_lb_Detail" id="Static28"
+        		label="7억원 초과"
+        		style="position:absolute;height:22px;text-align:right;WordWrap:TRUE;width:276px;left:388px;VAlign:Middle;top:670px;"
+        		tagname="" />
+        	<w2:textbox class="other_text02" id="Static29"
+        		label="주) 고액보험계약Ⅱ에 해당하는 경우 상기 EDD 항목을 입력함과 동시에 소득 및 자금 출처를 확인할 수 있는       자료를 추가로 징구해야 함"
+        		style="position:absolute;line-height:15px;height:35px;width:640px;left:8px;VAlign:Middle;top:738px;"
+        		tagname="" />
+        	<w2:textbox id="Static30" label="* 소득 및 자금출처 확인자료·정보"
+        		style="position:absolute; VAlign:Middle;  height:20px;left:8px;top:779px; width:249px;"
+        		tagname="" class="other_text03" />
+        	<w2:textbox class="sty_lb_Detail" id="Static31"
+        		label="국가공인면허증(의사,변호사,회계사등), 사업자등록증, 근로소득 원천징수영수증, 종합소득과세표준 확정신고서 및 자진납부 계산서, 대차대조표, 손익계산서, 토지·건물 등기부등본, 재산세 납부영수증, 기타 자금출처를  확인할 수 있는 서류"
+        		style="position:absolute;line-height:15px;height:56px;WordWrap:TRUE;width:661px;left:7px;VAlign:Middle;top:799px;"
+        		tagname="" />
+        	<xf:input class="sty_ipt_form" id="edt_sCorpBldDate"
+        		maxlength="30" ref="data:Ds_LTIDC93.sCorpBldDate"
+        		style="position:absolute; border-style:solid;  height:20px;left:92px;top:189px; width:208px;"
+        		tabIndex="69" />
+        	<xf:select1 appearance="minimal" class="sty_ipt_search"
+        		emptyItem="true" ev:onchange="scwin.cmb_sClass_Changed"
+        		id="cmb_sCorpInfo"
+        		style="position:absolute; ImeMode:none;  INDEX:0;  border-style:solid;  height:20px;left:467px;top:161px; width:264px;"
+        		tabIndex="72" renderType="native">
+        		<xf:choices>
+        			<xf:itemset nodeset="data:ds_corpInfo">
+        				<xf:label ref="id_nm" />
+        				<xf:value ref="id_cd" />
+        			</xf:itemset>
+        		</xf:choices>
+        	</xf:select1>
+        	<xf:select1 appearance="minimal" class="sty_ipt_search"
+        		emptyItem="true" ev:onchange="scwin.cmb_sClass_Changed"
+        		id="cmb_sCorpType"
+        		style="position:absolute; ImeMode:none;  INDEX:0;  border-style:solid;  height:20px;left:92px;top:162px; width:206px;"
+        		tabIndex="73" renderType="native">
+        		<xf:choices>
+        			<xf:itemset nodeset="data:ds_corpType">
+        				<xf:label ref="id_nm" />
+        				<xf:value ref="id_cd" />
+        			</xf:itemset>
+        		</xf:choices>
+        	</xf:select1>
+
+
+        </xf:group>
+    </body>
+</html>

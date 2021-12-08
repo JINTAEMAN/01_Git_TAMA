@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+            	<w2:dataList baseNode="list" id="DsWs_Warning"
+            		repeatNode="map" userData2="//*/WARNING" />
+            	<w2:dataList baseNode="list" id="DsWs_ScanImagList"
+            		repeatNode="map" userData2="//*/vector/data/LTIDB06" />
+            	<w2:dataList baseNode="list" id="DsWs_ImagKindCd_srch"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="DsWs_MaxImagSeq"
+            		repeatNode="map" userData2="//*/IMGMAXSEQ" />
+            	<w2:dataList id="WARNING" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+            <script src="/cm/js/convertJs/Global_Script.js" />
+	<script src="/cm/js/convertJs/LongTerm_Script.js" />
+	<script src="/cm/js/convertJs/comm_Webservice.js" />   
+	
+        <script><![CDATA[
+/*B210_Pop.xml에서 호출 (callee ID):  
+B210_Pop.xml을 호출   (caller ID):  O210_Pop1*/
+var sImagClsfCd;
+var sPlanNo;
+var sResno;
+var nProgDgre;
+var chld_open_flag = false;
+
+var fv_args;
+var pageSize;
+var pageNo;
+var grd_scanImagList;
+var sImagKindCd;
+//---------------------------------------------------------------------------
+// function 명 : B210_OnLoadCompleted
+// 내용        : 화면로딩시 메인으로부터 파라메터값 담음
+//---------------------------------------------------------------------------
+scwin.init = function() {
+	var pro = Promise.resolve();
+		window.top.util.winTopShowModalChk = "T";
+		util.winTopShowModal();
+	pro = pro.then(function(rv) {
+    	return util.winTopShowModalPromise();
+	}); 
+	pro = pro.then(function(rv) {
+     //init 부분 함수 입력하는곳
+	wprom.setPopupInit(499,402, "이미지리스트");
+	var indata = $w.getParameter("param");
+	try {
+		fv_args = JSON.parse(indata);	
+		sImagClsfCd = fv_args.sImagClsfCd;
+		sPlanNo = fv_args.sPlanNo;
+		sResno = fv_args.sResno;
+		nProgDgre = fv_args.nProgDgre;				
+	} catch(e) {
+	};
+
+if(sImagClsfCd == "JCD10001" || sImagClsfCd == "JCD10002" || sImagClsfCd == "JCD10003" || sImagClsfCd == "JCD10004" || sImagClsfCd == "JCA10001"){
+	wconv.clear(DsWs_Warning);
+	wconv.clear(DsWs_ScanImagList);
+	if(sImagClsfCd == "JCA10001"){
+	if(nProgDgre == "") {      	
+        	nProgDgre = scwin.getMaxImagSeqno(sImagClsfCd, "", sPlanNo);
+        	}
+        }
+    var MethodObj = new callService("com.inswave.longterm.ssr.sst.task.DBB321Task", "getScanImagList", pageSize, pageNo);
+		MethodObj.setId("getNewDepartbyLevel");
+		MethodObj.setParam("sImagClsfCd", sImagClsfCd);
+		MethodObj.setParam("sPlanNo", sPlanNo);	
+		MethodObj.setParam("sResno", sResno);	
+		MethodObj.setParam("nProgDgre", nProgDgre);	
+		MethodObj.setUrl("/contract/CBSC083PController.do");//배포후변경할것(controller위치와 이름)
+		        
+    if(sImagClsfCd == "JCD10001" || sImagClsfCd == "JCD10002" || sImagClsfCd == "JCD10003" || sImagClsfCd == "JCD10004"){   
+    	if(sImagClsfCd == "JCD10001") {sImagKindCd = "InsWrcsImagKindCd";} //가입설계 동의
+    	if(sImagClsfCd == "JCD10002") {sImagKindCd = "MktgWrcsImagKindCd";} //상품소개 동의
+    	if(sImagClsfCd == "JCD10003") {sImagKindCd = "CrWrcsImagKindCd";} // 계약체결 동의
+    	if(sImagClsfCd == "JCD10004") {sImagKindCd = "PaymImagKindCd";} // 제3자 납입 동의    
+    	   
+    	gfn_getCommonCodes("DsWs_ImagKindCd_srch", sImagKindCd, "cmb_sImagKindCd_srch", " ");		
+		MethodObj.setXPath("//*/vector/data/LTIDB08");
+		MethodObj.addXPath("//*/WARNING"); 
+		MethodObj.sync();
+		MethodObj.send();
+		util.jSonDsCreate(_tranSync.getDsJson("LTIDB08"), "DsWs_ScanImagList");
+		util.setCompBindRefresh("DsWs_ScanImagList");
+		util.setRowPosition(DsWs_ScanImagList, 0);	 
+		      
+	}else if (sImagClsfCd == "JCA10001") {
+        sImagKindCd = "SrdoImagKindCd"; //청약서
+     	gfn_getCommonCodes("DsWs_ImagKindCd_srch", sImagKindCd, "cmb_sImagKindCd_srch", " ");
+
+			MethodObj.setXPath("//*/vector/data/LTIDB06");
+			MethodObj.addXPath("//*/WARNING"); 
+			MethodObj.sync();
+			MethodObj.send();
+	
+			util.jSonDsCreate(_tranSync.getDsJson("LTIDB06"), "DsWs_ScanImagList");
+			util.setCompBindRefresh("DsWs_ScanImagList");
+			util.setRowPosition(DsWs_ScanImagList, 0);	
+    
+    }
+    util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+		
+    var result = MethodObj;
+   
+	if(sImagClsfCd == "JCD10001" || sImagClsfCd == "JCD10002" || sImagClsfCd == "JCD10003" || sImagClsfCd == "JCD10004"){
+	grd_scanImagList.setHeaderValue("head_id_1474" , "주민번호" , "" );       
+    grd_scanImagList.setColumnVisible("sPlanNo" , false );
+    grd_scanImagList.setColumnVisible("nImagSeqno" , false );
+    } else if(sImagClsfCd == "JCA10001") {
+    grd_scanImagList.setHeaderValue("head_id_1474" , "청약번호" , "" );       
+    grd_scanImagList.setColumnVisible("sResno" , false );
+    grd_scanImagList.setColumnVisible("nImagDocuSeqno" , false );
+    }
+        
+    if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    } else if((DsWs_ScanImagList.getRowCount() == 0) && (DsWs_MaxImagSeq.getRowCount() == 0)) {
+            wprom.alert("이미지 등록건이 없습니다.");
+    }
+    return result;
+    }else{
+    grd_scanImagList.setColumnVisible("sResno" , false );
+    grd_scanImagList.setColumnVisible("nImagDocuSeqno" , false );
+    wprom.alert("이미지 등록건이 없습니다.");
+    }
+        return ;		// init 함수를 종료하고자 할때 사용
+		// return Promise.reject("오류관련처리"); 
+	});
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});	
+	pro = pro.catch(function(rj) {
+		util.winTopHideModal();
+		//alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+	});	 
+	return pro; 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Close
+// 내용        : 팝업닫기
+//---------------------------------------------------------------------------
+scwin.lfn_Close_OnClick = function() {
+    wprom.close("");
+};
+scwin.grd_scanList_OnCellClick = function(row, col) {
+	return;
+    if (col == 1) {
+        var arg = "sPath=" + DsWs_ScanImagList.getCellData(row, "sImagPath");
+        arg += " sFileName=" + DsWs_ScanImagList.getCellData(row, "sSaveFileName");
+        var url = gds.gLtiUrl + "/theK/jsp/imageFileDownload.jsp?";
+        url = url + "path=" + DsWs_ScanImagList.getCellData(row, "sImagPath");
+        url = url + "&name=" + DsWs_ScanImagList.getCellData(row, "sSaveFileName");
+        var sWidth = "Width=" + ((wconv.toNumber(GetDeviceInfo("CYScreen")) - 200));
+        var sHeight = "Height=" + ((wconv.toNumber(GetDeviceInfo("CYScreen")) - 200));
+        AxMsie0.Navigate("about:blank");
+        AxMsie0.Navigate("javascript:window.open('" + url + "', 'FaxContentView', 'Width=" + sWidth + ", Height=" + sHeight + ",left=100, top=100, scrollbars=yes, resizable=no')"); //var result = Dialog("ssr_sst::B341_Pop.xml", arg, -1, -1);
+        //var result = Open("ssr_sst::B341_Pop.xml", arg , 800, 550, "TaskBar=true Resize=true"); 
+        /*
+        if(!chld_open_flag){
+        	Open("ssr_sst::B341_Pop.xml", arg , 780, 800, "TaskBar=true Resize=true", 0, 0); 
+        }else{
+        	B341_Pop.sPath = DsWs_ScanImagList.getColumn(nRow, "sImagPath");
+        	B341_Pop.sFileName = DsWs_ScanImagList.getColumn(nRow, "sSaveFileName");
+        	B341_Pop.OnLoadCompleted();
+        }
+        */
+    }
+};
+//---------------------------------------------------------------------------
+// function 명 : getMaxImagSeqno()
+// 내용        : 고객이미지 최대값 조회
+//---------------------------------------------------------------------------
+scwin.getMaxImagSeqno = function(sImagClsfCd, sImagKindCd, sImagKey) {
+    wconv.clear(DsWs_Warning);
+    //DsWs_Warning.DataObject = "DOBJ_MaxSeq";
+    wconv.clear(DsWs_MaxImagSeq);
+//    DsWs_MaxImagSeq.DataObject = "DOBJ_MaxSeq";
+//    SOBJ.WSDL = gds.gWsdlBasis;
+//    var MethodObj = gfn_CreateMethodObj(SOBJ, "com.inswave.longterm.ssr.sst.task.DBB321Task", "getMaxImagSeqno", "", "");
+//    gfn_SetParam(MethodObj, "sImagClsfCd", sImagClsfCd);
+//    gfn_SetParam(MethodObj, "sPlanNo", sImagKey);
+//    var result = gfn_CallService(SOBJ, DOBJ_MaxSeq, MethodObj);
+    
+    var MethodObj = new callService("com.inswave.longterm.ssr.sst.task.DBB321Task", "getMaxImagSeqno", pageSize, pageNo);
+	MethodObj.setId("getMaxImagSeqno");
+	MethodObj.setParam("sImagClsfCd", sImagClsfCd);
+	MethodObj.setParam("sPlanNo", sImagKey);	
+	MethodObj.setUrl("/contract/CBSC083PController.do");//배포후변경할것(controller위치와 이름)
+	MethodObj.setXPath("//*/IMGMAXSEQ");//(DsWs_MaxImagSeq의 XPath)
+	MethodObj.addXPath("//*/WARNING"); 
+	MethodObj.sync();
+	MethodObj.send();
+    util.jSonDsCreate(_tranSync.getDsJson("IMGMAXSEQ"), "DsWs_MaxImagSeq");//Json에 자동적으로 생성되게 해줌	
+	util.setCompBindRefresh("DsWs_MaxImagSeq");//바인딩을 해줌
+	util.setRowPosition(DsWs_MaxImagSeq, 0);			
+    var result = MethodObj;
+    
+    util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");
+    if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    }    	
+    return eval(DsWs_MaxImagSeq.getCellData(0, "nMaxImgSeq"));
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B210_Pop"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;/*  height:352px;*/ left:0px; top:0px;/* width:480px;"
+            userData1="이미지리스트" userData2="" ev:onfocus="" ev:onmouseover="">
+            <DataObjects>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+                <ServiceObject/>
+            </ServiceObjects>
+            <w2:textbox id="Static5" label="이미지 리스트" style="position:absolute; VAlign:Middle;  height:24px; left:0px; top:0px; " tagname="" class="sub_pop_title01">
+</w2:textbox>
+            
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Close_OnClick" id="btn_close"
+                style="position:absolute; ImageID:btn_Comm_Close;  height:20px;left:415px;top:0px; width:25px;" tabIndex="3" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+            <xf:switch id="switch_159" style=" ">
+                <xf:case id="Default_160" style=" ">
+                    <w2:gridView autoFit="allColumn"
+                    	autoFitMinWidth="100" class="sty_Grid"
+                    	dataList="DsWs_ScanImagList"
+                    	ev:oncellclick="scwin.grd_scanList_OnCellClick"
+                    	focusMode="row" id="grd_scanImagList"
+                    	inputType="text" readOnly="true"
+                    	style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  height:312px; left:0px; right:471px;top:20px; width:464px;"
+                    	tabIndex="4" ev:onviewchange=""
+                    	ev:onbodymouseover="">
+                    	<w2:header>
+                    		<w2:row>
+                    			<w2:column colSpan="3" dataType="text"
+                    				id="head_id_1474" inputType="text"
+                    				readOnly="true" style="height:30px;"
+                    				userData1="0" userData3="0" width="237"
+                    				value="" textAlign="center" disabled="true"
+                    				rowSpan="" />
+                    			<w2:column dataType="text"
+                    				id="head_id_1475" inputType="text"
+                    				readOnly="true" style="height:30px;"
+                    				userData1="2" userData3="0" value="차수"
+                    				width="30" textAlign="center" />
+                    			<w2:column dataType="text"
+                    				id="head_id_1476" inputType="text"
+                    				readOnly="true" style="height:30px;"
+                    				textAlign="center" userData1="3" userData3="0"
+                    				value="이미지분류" width="107" />
+                    			<w2:column dataType="text"
+                    				id="head_id_1477" inputType="text"
+                    				readOnly="true" style="height:30px;"
+                    				userData1="4" userData3="0" value="순번"
+                    				width="101" textAlign="center" colSpan="2"
+                    				rowSpan="" />
+                    			<w2:column dataType="text"
+                    				id="head_id_1478" inputType="text"
+                    				readOnly="true" style="height:30px;"
+                    				userData1="5" userData3="0" value="스캔일자"
+                    				width="85" textAlign="center" />
+                    		</w2:row>
+                    	</w2:header>
+                    	<w2:gBody>
+                    		<w2:row>
+                    			<w2:column dataType="text" id="sPlanNo"
+                    				inputType="text" readOnly=""
+                    				style="height:27px;text-align: center;"
+                    				textAlign="center" userData1="0" userData3="0"
+                    				width="135" displayType="" displayFormat="">
+                    			</w2:column>
+                    			<w2:column blockSelect="" id="sResno"
+                    				style="height:27px;text-align: center;"
+                    				inputType="text" width="135" displayMode=""
+                    				textAlign="center" userData1="0" userData3="0"
+                    				dataType="text" displayFormat="######-#######">
+                    			</w2:column>
+                    			<w2:column dataType="text"
+                    				id="temp_id_1479" inputType="image"
+                    				readOnly="true" userData1="1" userData3="0"
+                    				width="16"
+                    				imageSrc="/cm/images/contents/ico_btn_input_sch.png" />
+                    			<w2:column dataType="text"
+                    				id="nProgDgre" inputType="text" readOnly="true"
+                    				style="text-align: center;" textAlign="center"
+                    				userData1="2" userData3="0" width="30" />
+                    			<w2:column dataType="text"
+                    				id="sImagKindCd" inputType="select"
+                    				readOnly="true" style="text-align: center;"
+                    				textAlign="center" userData1="3" userData3="0"
+                    				width="107" hidden="">
+                    				<w2:choices>
+                    					<w2:itemset
+                    						nodeset="data:DsWs_ImagKindCd_srch">
+                    						<w2:value ref="sCd" />
+                    						<w2:label ref="sHnglCdName" />
+                    					</w2:itemset>
+                    				</w2:choices>
+                    			</w2:column>
+                    			<w2:column dataType="text"
+                    				id="nImagSeqno" inputType="text" readOnly=""
+                    				style="text-align: center;" userData1="4"
+                    				userData3="0" width="31" />
+                    			<w2:column blockSelect=""
+                    				id="nImagDocuSeqno" style="" inputType="text"
+                    				width="31" displayMode="" dataType="text"
+                    				userData1="4" userData3="0">
+                    			</w2:column>
+                    			<w2:column dataType="text"
+                    				displayFormat="####-##-##" id="sScanDate"
+                    				inputType="text" readOnly="true"
+                    				style="text-align: center;" textAlign="center"
+                    				userData1="5" userData3="0" width="85" />
+                    		</w2:row>
+                    	</w2:gBody>
+                    </w2:gridView>
+                </xf:case>
+            </xf:switch>
+            <xf:select1 appearance="minimal" class="sty_ipt_search"
+            	emptyItem="true" id="cmb_sImagKindCd_srch"
+            	style="position:absolute;display: none;   INDEX:2;  border-style:solid;  height:20px; left:120px; top:4px; width:16px;"
+            	tabIndex="5" allOption="" chooseOption="">
+            	<xf:choices></xf:choices>
+            </xf:select1>
+            <AxMsie/>
+        </xf:group>
+    </body>
+</html>

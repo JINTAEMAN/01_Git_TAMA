@@ -1,0 +1,2162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    	<head>
+    <!-- 
+        ###################################################
+         파일명 : CBSC056P.xml
+         프로그램명 : 보험계약정보조회
+         설 명 :  보험계약정보조회
+         작성자 : 진태만
+         작성일 : 2017.09.20
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.09.20        진태만          최초작성
+        ###################################################
+     -->
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+
+            	<w2:dataList baseNode="list" id="Ds_LTIDA00"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sPlanNo"
+            				name="sPlanNo">
+            			</w2:column>
+            			<w2:column dataType="text" id="sCrNoType"
+            				name="sCrNoType">
+            			</w2:column>
+            			<w2:column dataType="text" id="sItemCd"
+            				name="sItemCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sCrNoSeq"
+            				name="sCrNoSeq">
+            			</w2:column>
+            			<w2:column dataType="text" id="nCrChngNo"
+            				name="nCrChngNo">
+            			</w2:column>
+            			<w2:column dataType="text" id="sHsecFlagCd"
+            				name="sHsecFlagCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sSaleChnlFlagCd"
+            				name="sSaleChnlFlagCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sGdNm"
+            				name="sGdNm">
+            			</w2:column>
+            			<w2:column dataType="text" id="sGdCd"
+            				name="sGdCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sGnrzCd"
+            				name="sGnrzCd">
+            			</w2:column>
+            			<w2:column dataType="text"
+            				id="sBunsAchvDgrmClsfCd" name="sBunsAchvDgrmClsfCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sApplDclrRato"
+            				name="sApplDclrRato">
+            			</w2:column>
+            			<w2:column dataType="text" id="sDvdnFlagCd"
+            				name="sDvdnFlagCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sPpayAvaYn"
+            				name="sPpayAvaYn">
+            			</w2:column>
+            			<w2:column dataType="text" id="sTaxPrfrYn"
+            				name="sTaxPrfrYn">
+            			</w2:column>
+            			<w2:column dataType="text" id="sCrStatCd"
+            				name="sCrStatCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sCrStatFlgcd"
+            				name="sCrStatFlgcd">
+            			</w2:column>
+            			<w2:column dataType="text" id="nCrStatCarrSeqno"
+            				name="nCrStatCarrSeqno">
+            			</w2:column>
+            			<w2:column dataType="text" id="sInsurStrtdate"
+            				name="sInsurStrtdate">
+            			</w2:column>
+            			<w2:column dataType="text" id="sInsurEndDate"
+            				name="sInsurEndDate">
+            			</w2:column>
+            			<w2:column dataType="text" id="sSsrtDate"
+            				name="sSsrtDate">
+            			</w2:column>
+            			<w2:column dataType="text" id="sCpayDate"
+            				name="sCpayDate">
+            			</w2:column>
+            			<w2:column dataType="text" id="sPaymExptDate"
+            				name="sPaymExptDate">
+            			</w2:column>
+            			<w2:column dataType="text" id="sPaymTermCd"
+            				name="sPaymTermCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="nRealPaymTerm"
+            				name="nRealPaymTerm">
+            			</w2:column>
+            			<w2:column dataType="text" id="sInsurTermCd"
+            				name="sInsurTermCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="nRealInsurTerm"
+            				name="nRealInsurTerm">
+            			</w2:column>
+            			<w2:column dataType="text" id="nDefrYct"
+            				name="nDefrYct">
+            			</w2:column>
+            			<w2:column dataType="text" id="nPaymAge"
+            				name="nPaymAge">
+            			</w2:column>
+            			<w2:column dataType="text" id="nEndAge"
+            				name="nEndAge">
+            			</w2:column>
+            			<w2:column dataType="text" id="sPaymCyclCd"
+            				name="sPaymCyclCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sCmMetd"
+            				name="sCmMetd">
+            			</w2:column>
+            			<w2:column dataType="text" id="nGrntPrem"
+            				name="nGrntPrem">
+            			</w2:column>
+            			<w2:column dataType="text" id="nAccuPrem"
+            				name="nAccuPrem">
+            			</w2:column>
+            			<w2:column dataType="text" id="nBussPrem"
+            				name="nBussPrem">
+            			</w2:column>
+            			<w2:column dataType="text" id="nDcPrem"
+            				name="nDcPrem">
+            			</w2:column>
+            			<w2:column dataType="text" id="nApplPrem"
+            				name="nApplPrem">
+            			</w2:column>
+            			<w2:column dataType="text" id="nMinPrem"
+            				name="nMinPrem">
+            			</w2:column>
+            			<w2:column dataType="text" id="nMaxPrem"
+            				name="nMaxPrem">
+            			</w2:column>
+            			<w2:column dataType="text" id="sPsnGroupFlgcd"
+            				name="sPsnGroupFlgcd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sGroupCrAdmNo"
+            				name="sGroupCrAdmNo">
+            			</w2:column>
+            			<w2:column dataType="text" id="sBsmnRgstNo"
+            				name="sBsmnRgstNo">
+            			</w2:column>
+            			<w2:column dataType="text" id="sAnntOpnAgeCd"
+            				name="sAnntOpnAgeCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sAnntPymTermCd"
+            				name="sAnntPymTermCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sAnntPymCyclCd"
+            				name="sAnntPymCyclCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sAnntPymTypeCd"
+            				name="sAnntPymTypeCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sAnntPymStrtDate"
+            				name="sAnntPymStrtDate">
+            			</w2:column>
+            			<w2:column dataType="text" id="nAnntPymCt"
+            				name="nAnntPymCt">
+            			</w2:column>
+            			<w2:column dataType="text" id="nFinalPaymSeq"
+            				name="nFinalPaymSeq">
+            			</w2:column>
+            			<w2:column dataType="text" id="sFinalPaymMthy"
+            				name="sFinalPaymMthy">
+            			</w2:column>
+            			<w2:column dataType="text" id="sFinalRecpDate"
+            				name="sFinalRecpDate">
+            			</w2:column>
+            			<w2:column dataType="text" id="nTotPaymPrem"
+            				name="nTotPaymPrem">
+            			</w2:column>
+            			<w2:column dataType="text" id="sInsurCrLoanYn"
+            				name="sInsurCrLoanYn">
+            			</w2:column>
+            			<w2:column dataType="text" id="sFinalReviDate"
+            				name="sFinalReviDate">
+            			</w2:column>
+            			<w2:column dataType="text" id="sLapsDate"
+            				name="sLapsDate">
+            			</w2:column>
+            			<w2:column dataType="text" id="sFrstSaleChnlCd"
+            				name="sFrstSaleChnlCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sFrstDoerHdqtCd"
+            				name="sFrstDoerHdqtCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sFrstDoerCentrCd"
+            				name="sFrstDoerCentrCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sFrstDoerTeamCd"
+            				name="sFrstDoerTeamCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sFrstDoerGroupCd"
+            				name="sFrstDoerGroupCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sFrstDoerPartCd"
+            				name="sFrstDoerPartCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sFrstDoer"
+            				name="sFrstDoer">
+            			</w2:column>
+            			<w2:column dataType="text" id="sFrstDoerUser"
+            				name="sFrstDoerUser">
+            			</w2:column>
+            			<w2:column dataType="text" id="sDoer"
+            				name="sDoer">
+            			</w2:column>
+            			<w2:column dataType="text" id="sDoerUser"
+            				name="sDoerUser">
+            			</w2:column>
+            			<w2:column dataType="text" id="sCrNo"
+            				name="sCrNo">
+            			</w2:column>
+            			<w2:column dataType="text" id="sPlanProgRankCd"
+            				name="sPlanProgRankCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sPlanProgTbNo"
+            				name="sPlanProgTbNo">
+            			</w2:column>
+            			<w2:column dataType="text" id="sJugmAuthCd"
+            				name="sJugmAuthCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sJugmGradCd"
+            				name="sJugmGradCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sConuResltCd"
+            				name="sConuResltCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sHndwritJugmYn"
+            				name="sHndwritJugmYn">
+            			</w2:column>
+            			<w2:column dataType="text" id="nInrpsPsct"
+            				name="nInrpsPsct">
+            			</w2:column>
+            			<w2:column dataType="text" id="nObjtNum"
+            				name="nObjtNum">
+            			</w2:column>
+            			<w2:column dataType="text" id="nGroupInsPsct"
+            				name="nGroupInsPsct">
+            			</w2:column>
+            			<w2:column dataType="text" id="sCedeStndYm"
+            				name="sCedeStndYm">
+            			</w2:column>
+            			<w2:column dataType="text" id="nEndRtnrt"
+            				name="nEndRtnrt">
+            			</w2:column>
+            			<w2:column dataType="text" id="nExptEndRetrnAmt"
+            				name="nExptEndRetrnAmt">
+            			</w2:column>
+            			<w2:column dataType="text" id="nExptEndRtnrt"
+            				name="nExptEndRtnrt">
+            			</w2:column>
+            			<w2:column dataType="text" id="sPectSaleYn"
+            				name="sPectSaleYn">
+            			</w2:column>
+            			<w2:column dataType="text" id="sScanObjtYn"
+            				name="sScanObjtYn">
+            			</w2:column>
+            			<w2:column dataType="text" id="sApplPlanCd"
+            				name="sApplPlanCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sApplPlanName"
+            				name="sApplPlanName">
+            			</w2:column>
+            			<w2:column dataType="text" id="sSaleChnlDtal"
+            				name="sSaleChnlDtal">
+            			</w2:column>
+            			<w2:column dataType="text"
+            				id="sInsurTermPaymTermName"
+            				name="sInsurTermPaymTermName">
+            			</w2:column>
+            			<w2:column dataType="text" id="gUserID"
+            				name="gUserID">
+            			</w2:column>
+            			<w2:column dataType="text" id="gUserIP"
+            				name="gUserIP">
+            			</w2:column>
+            			<w2:column dataType="text"
+            				id="sPlanProgRankName" name="sPlanProgRankName">
+            			</w2:column>
+            			<w2:column dataType="text" id="sConuResltName"
+            				name="sConuResltName">
+            			</w2:column>
+            			<w2:column dataType="text" id="sGdTypeFlgCd"
+            				name="sGdTypeFlgCd">
+            			</w2:column>
+            			<w2:column dataType="text" id="sTaxPrfrGdYn"
+            				name="sTaxPrfrGdYn">
+            			</w2:column>
+            			<w2:column dataType="text"
+            				id="nEndRtnAmtCalElmnt1" name="nEndRtnAmtCalElmnt1">
+            			</w2:column>
+            			<w2:column dataType="text"
+            				id="nEndRtnAmtCalElmnt2" name="nEndRtnAmtCalElmnt2">
+            			</w2:column>
+            			<w2:column dataType="text"
+            				id="nEndRtnAmtCalElmnt3" name="nEndRtnAmtCalElmnt3">
+            			</w2:column>
+            			<w2:column dataType="text"
+            				id="nEndRtnAmtCalElmnt4" name="nEndRtnAmtCalElmnt4">
+            			</w2:column>
+            			<w2:column dataType="text"
+            				id="nEndRtnAmtCalElmnt5" name="nEndRtnAmtCalElmnt5">
+            			</w2:column>
+            			<w2:column dataType="text"
+            				id="nEndRtnAmtCalElmnt6" name="nEndRtnAmtCalElmnt6">
+            			</w2:column>
+            			<w2:column dataType="text" id="sSrdoIssuDate"
+            				name="sSrdoIssuDate">
+            			</w2:column>
+            			<w2:column dataType="text" id="sGdName"
+            				name="sGdName">
+            			</w2:column>
+            			<w2:column dataType="text"
+            				id="nEndRtnAmtCalElmnt10" name="nEndRtnAmtCalElmnt10">
+            			</w2:column>
+            			<w2:column dataType="text" id="sPeriMwayWdraYn"
+            				name="sPeriMwayWdraYn">
+            			</w2:column>
+            			<w2:column dataType="text"
+            				id="sPeriMwayRqstDate" name="sPeriMwayRqstDate">
+            			</w2:column>
+            			<w2:column dataType="text" id="nAddPaymPrem"
+            				name="nAddPaymPrem">
+            			</w2:column>
+            			<w2:column dataType="text" id="sHealDcYn"
+            				name="sHealDcYn">
+            			</w2:column>
+            		</w2:columnInfo>
+            		<w2:data use="false">
+            			<w2:row></w2:row>
+            		</w2:data>
+            	</w2:dataList>
+
+            	<w2:dataList id="Ds_List01" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sInsTypeName"
+            				name="보험타입">
+            			</w2:column>
+            			<w2:column dataType="text" id="sOfcCod"
+            				name="">
+            			</w2:column>
+            			<w2:column dataType="text" id="sInsCtrTpdPed"
+            				name="보험기간">
+            			</w2:column>
+            			<w2:column dataType="text" id="nAcdImt"
+            				name="가입금액">
+            			</w2:column>
+            			<w2:column dataType="text" id="sInsrdRel"
+            				name="타계약 사항">
+            			</w2:column>
+            			<w2:column dataType="text" id="sTranCode"
+            				name="">
+            			</w2:column>
+            			<w2:column dataType="text" id="sKNIA" name=""></w2:column>
+            			<w2:column dataType="text" id="sClsA" name=""></w2:column>
+            			<w2:column dataType="text" id="sClsB" name=""></w2:column>
+            			<w2:column dataType="text" id="sProcDate"
+            				name="">
+            			</w2:column>
+            			<w2:column dataType="text" id="nProcSeq"
+            				name="">
+            			</w2:column>
+            			<w2:column dataType="text" id="sInputDate"
+            				name="">
+            			</w2:column>
+            			<w2:column dataType="text" id="sInputTime"
+            				name="">
+            			</w2:column>
+            			<w2:column dataType="text" id="sUserId"
+            				name="">
+            			</w2:column>
+            			<w2:column dataType="text" id="sPolStat"
+            				name="계약상태">
+            			</w2:column>
+            			<w2:column dataType="text" id="sCovName"
+            				name="담보명">
+            			</w2:column>
+            			<w2:column dataType="text" id="sCovDateFrom"
+            				name="담보기간From">
+            			</w2:column>
+            			<w2:column dataType="text" id="sCovDateTo"
+            				name="담보기간To">
+            			</w2:column>
+            			<w2:column dataType="text" id="sGuaranteeCod"
+            				name="보장내용코드">
+            			</w2:column>
+            			<w2:column dataType="text" id="sCovSpecificCod"
+            				name="담보특성코드">
+            			</w2:column>
+            			<w2:column dataType="text" id="sCopaymentCod"
+            				name="copayment코드">
+            			</w2:column>
+            			<w2:column dataType="text"
+            				id="sGuaranteeDateCod" name="보상기간">
+            			</w2:column>
+            			<w2:column dataType="text" id="sGuaranteeName"
+            				name="보장내용코드">
+            			</w2:column>
+            			<w2:column dataType="text" id="sCovSpecificName"
+            				name="sCovSpecificName">
+            			</w2:column>
+            			<w2:column dataType="text" id="sCopaymentName"
+            				name="copayment코드">
+            			</w2:column>
+            			<w2:column dataType="text"
+            				id="sGuaranteeDateName" name="보상기간">
+            			</w2:column>
+            			<w2:column dataType="text" id="sProcOffcName"
+            				name="회사명">
+            			</w2:column>
+            			<w2:column dataType="text" id="sClsA" name=""></w2:column>
+            			<w2:column dataType="text" id="sClsB" name=""></w2:column>
+            			<w2:column dataType="text" id="sProcDate"
+            				name="">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+
+            	<w2:dataList id="Ds_FixCoverKCIS" baseNode="list" saveRemovedData="true" repeatNode="map">
+					 <w2:columnInfo>
+						<w2:column dataType="text" id="nLifeCtB" name="nLifeCtB"/>
+						<w2:column dataType="text" id="nLifeCtA" name="nLifeCtA"/>
+						<w2:column dataType="text" id="sCnclYn" name="sCnclYn"/>
+						<w2:column dataType="text" id="nLifeInsAmtB" name="nLifeInsAmtB"/>
+						<w2:column dataType="text" id="nLifeInsAmtA" name="nLifeInsAmtA"/>
+						<w2:column dataType="text" id="nDedCtA" name="nDedCtA"/>
+						<w2:column dataType="text" id="nAllCtB" name="nAllCtB"/>
+						<w2:column dataType="text" id="nDedCtB" name="nDedCtB"/>
+						<w2:column dataType="text" id="nAllInsAmtB" name="nAllInsAmtB"/>
+						<w2:column dataType="text" id="nAllCtA" name="nAllCtA"/>
+						<w2:column dataType="text" id="nAllInsAmtA" name="nAllInsAmtA"/>
+						<w2:column dataType="text" id="nCvrgeInsAmt" name="nCvrgeInsAmt"/>
+						<w2:column dataType="text" id="nNonLifeInsAmtB" name="nNonLifeInsAmtB"/>
+						<w2:column dataType="text" id="nNonLifeInsAmtA" name="nNonLifeInsAmtA"/>
+						<w2:column dataType="text" id="sCvrgeCd" name="sCvrgeCd"/>
+						<w2:column dataType="text" id="nNonLifeCtB" name="nNonLifeCtB"/>
+						<w2:column dataType="text" id="nDedInsAmtA" name="nDedInsAmtA"/>
+						<w2:column dataType="text" id="nDedInsAmtB" name="nDedInsAmtB"/>
+						<w2:column dataType="text" id="nNonLifeCtA" name="nNonLifeCtA"/>
+						<w2:column dataType="text" id="nCvrgeCt" name="nCvrgeCt"/>
+				</w2:columnInfo>
+			</w2:dataList>
+
+    			<w2:dataList id="Ds_FixCoverKCISRecv" baseNode="list" saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="LTIDA55" name="name1" dataType="text"/>
+            			<w2:column id="sAnswCd" name="name2" dataType="text"/>
+            			<w2:column id="afterEJBCall" name="name3" dataType="text"/>
+            			<w2:column id="beforeEJBCall" name="name4" dataType="text"/>
+            			<w2:column id="nDataLength" name="name5" dataType="text"/>
+            			<w2:column id="sUserId" name="name6" dataType="text"/>
+            			<w2:column id="sUserIp" name="name7" dataType="text"/>
+            			<w2:column id="sSndRcvCod" name="name8" dataType="text"/>
+            			<w2:column id="sSpclAdmNo" name="name9" dataType="text"/>
+            			<w2:column id="sSpclCd" name="name10" dataType="text"/>
+            			<w2:column id="nCvrgeTct" name="name11" dataType="text"/>
+            			<w2:column id="sCisSpclAdmNo" name="name12" dataType="text"/>
+            			<w2:column id="sSpclDtlCd" name="name13" dataType="text"/>
+            			<w2:column id="sCisSendDateTime" name="name14" dataType="text"/>
+            			<w2:column id="sTrrvFlgcd" name="name15" dataType="text"/>
+            		</w2:columnInfo>
+            	</w2:dataList>
+
+            	<w2:dataList id="Ds_List" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sInsCtrTpdPed" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sClsB" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sClsA" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCovSpecificCod" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTranCode" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCovSpecificName" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sProcDate" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCovDateFrom" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGuaranteeName" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sKNIA" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nAcdImt" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGuaranteeDateCod" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsCond" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nProcSeq" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsCondName" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCopaymentName" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCopaymentCod" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCovDateTo" name="name18"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGuaranteeDateName" name="name19"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sProcOffcName" name="name20"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGuaranteeCod" name="name21"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sProcOffcCode" name="name22"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+
+            	<w2:dataList id="Ds_FinalList" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sInsCtrTpdPed" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sClsB" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sClsA" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCovSpecificCod" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTranCode" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCovSpecificName" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sProcDate" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCovDateFrom" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGuaranteeName" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sKNIA" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nAcdImt" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGuaranteeDateCod" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsCond" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nProcSeq" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsCondName" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCopaymentName" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCopaymentCod" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCovDateTo" name="name18"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGuaranteeDateName" name="name19"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sProcOffcName" name="name20"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGuaranteeCod" name="name21"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sProcOffcCode" name="name22"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	
+           		<w2:dataList id="Ds_ErrorList" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sInsCtrTpdPed" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sClsB" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sClsA" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCovSpecificCod" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTranCode" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCovSpecificName" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sProcDate" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCovDateFrom" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGuaranteeName" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sKNIA" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nAcdImt" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGuaranteeDateCod" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsCond" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nProcSeq" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsCondName" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCopaymentName" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCopaymentCod" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCovDateTo" name="name18"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGuaranteeDateName" name="name19"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sProcOffcName" name="name20"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sGuaranteeCod" name="name21"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sProcOffcCode" name="name22"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+
+            	<!--            	<w2:dataList baseNode="list" id="Ds_List01"-->
+            	<!--            		repeatNode="map" />-->
+            	<w2:dataList baseNode="list" id="Ds_List02"
+            		repeatNode="map" />
+            	<!--            	<w2:dataList baseNode="list" id="Ds_FinalList"-->
+            	<!--            		repeatNode="map" />-->
+
+            	<w2:dataList id="Ds_Guart" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sCodeAbrv" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeName" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeNameEng" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeType" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeId" name="name5"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList id="Ds_Copay" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sCodeAbrv" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeName" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeNameEng" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeType" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeId" name="name5"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList id="Ds_Covge" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sCodeAbrv" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeName" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeNameEng" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeType" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeId" name="name5"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList id="Ds_GuartDate" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sCodeAbrv" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeName" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeNameEng" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeType" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeId" name="name5"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+
+            	<w2:dataList baseNode="list" id="Ds" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sImpFlg"
+            				name="sImpFlg" />
+            			<w2:column dataType="text" id="sImpCod"
+            				name="sImpCod" />
+            			<w2:column dataType="text" id="sMbkDrvFlg"
+            				name="sMbkDrvFlg" />
+            			<w2:column dataType="text" id="sRskHbyFlg"
+            				name="sRskHbyFlg" />
+            			<w2:column dataType="text" id="sHbyEtc"
+            				name="sHbyEtc" />
+            			<w2:column dataType="text" id="sDrvFlg"
+            				name="sDrvFlg" />
+            			<w2:column dataType="text" id="sCarEtc"
+            				name="sCarEtc" />
+            			<w2:column dataType="text" id="sAnoInsFlg"
+            				name="sAnoInsFlg" />
+            			<w2:column dataType="text" id="sAnoInsDes"
+            				name="sAnoInsDes" />
+            			<w2:column dataType="text" id="sBizTyp"
+            				name="sBizTyp" />
+            			<w2:column dataType="text" id="sYym"
+            				name="sYym" />
+            			<w2:column dataType="text" id="sSeq"
+            				name="sSeq" />
+            			<w2:column dataType="number" id="nIsdSeq"
+            				name="nIsdSeq" />
+            			<w2:column dataType="text" id="sRegister"
+            				name="sRegister" />
+            			<w2:column dataType="text" id="sUpdateUser"
+            				name="sUpdateUser" />
+            			<w2:column dataType="text" id="result"
+            				name="result" />
+            			<w2:column dataType="text" id="sOthMedicalYN"
+            				name="sOthMedicalYN" />
+            			<w2:column dataType="text" id="sExplainProIndYN"
+            				name="sExplainProIndYN" />
+            			<w2:column dataType="text" id="sCurSickStatus"
+            				name="sCurSickStatus" />
+            			<w2:column dataType="text" id="sCurStay"
+            				name="sCurStay" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_Yn"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="CODE"
+            				name="CODE" />
+            			<w2:column dataType="text" id="TEXT1"
+            				name="TEXT1" />
+            			<w2:column dataType="text" id="TEXT2"
+            				name="TEXT2" />
+            			<w2:column dataType="text" id="TEXT3"
+            				name="TEXT3" />
+            			<w2:column dataType="text" id="TEXT4"
+            				name="TEXT4" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<CODE><![CDATA[Y]]></CODE>
+            				<TEXT1><![CDATA[있다]]></TEXT1>
+            				<TEXT2><![CDATA[한다]]></TEXT2>
+            				<TEXT3><![CDATA[예]]></TEXT3>
+            				<TEXT4><![CDATA[예]]></TEXT4>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[N]]></CODE>
+            				<TEXT1><![CDATA[없다]]></TEXT1>
+            				<TEXT2><![CDATA[안한다]]></TEXT2>
+            				<TEXT3><![CDATA[아니오]]></TEXT3>
+            				<TEXT4><![CDATA[아니오 (아니오 선택시 계약체결 불가)]]></TEXT4>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_ImpCod"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="name"
+            				name="name" />
+            			<w2:column dataType="text" id="code"
+            				name="code" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<code><![CDATA[01]]></code>
+            				<name><![CDATA[지체장애]]></name>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[02]]></code>
+            				<name><![CDATA[시각장애]]></name>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[03]]></code>
+            				<name><![CDATA[청각장애]]></name>
+            			</w2:row>
+            			<w2:row>
+            				<code><![CDATA[04]]></code>
+            				<name><![CDATA[언어장애]]></name>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds2"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sImpFlg"
+            				name="sImpFlg" />
+            			<w2:column dataType="text" id="sImpCod"
+            				name="sImpCod" />
+            			<w2:column dataType="text" id="sMbkDrvFlg"
+            				name="sMbkDrvFlg" />
+            			<w2:column dataType="text" id="sRskHbyFlg"
+            				name="sRskHbyFlg" />
+            			<w2:column dataType="text" id="sHbyEtc"
+            				name="sHbyEtc" />
+            			<w2:column dataType="text" id="sDrvFlg"
+            				name="sDrvFlg" />
+            			<w2:column dataType="text" id="sCarEtc"
+            				name="sCarEtc" />
+            			<w2:column dataType="text" id="sAnoInsFlg"
+            				name="sAnoInsFlg" />
+            			<w2:column dataType="text" id="sAnoInsDes"
+            				name="sAnoInsDes" />
+            			<w2:column dataType="text" id="sBizTyp"
+            				name="sBizTyp" />
+            			<w2:column dataType="text" id="sYym"
+            				name="sYym" />
+            			<w2:column dataType="text" id="sSeq"
+            				name="sSeq" />
+            			<w2:column dataType="number" id="nIsdSeq"
+            				name="nIsdSeq" />
+            			<w2:column dataType="text" id="sRegister"
+            				name="sRegister" />
+            			<w2:column dataType="text" id="sUpdateUser"
+            				name="sUpdateUser" />
+            			<w2:column dataType="text" id="result"
+            				name="result" />
+            			<w2:column dataType="text" id="sOthMedicalYN"
+            				name="sOthMedicalYN" />
+            			<w2:column dataType="text" id="sExplainProIndYN"
+            				name="sExplainProIndYN" />
+            			<w2:column dataType="text" id="sCurSickStatus"
+            				name="sCurSickStatus" />
+            			<w2:column dataType="text" id="sCurStay"
+            				name="sCurStay" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+			
+				<!-- DsWs_Warning DS(추가) -->
+            	<w2:dataList baseNode="list" id="DsWs_Warning" keyNode="//*/WARNING" repeatNode="map">            		
+            		<w2:columnInfo>
+            			<w2:column id="message" name="name1" dataType="text"/>
+            			<w2:column id="msg" name="name1" dataType="text"/>
+            			<w2:column id="level" name="name1" dataType="text"/>
+            			<w2:column id="detail" name="name1" dataType="text"/>
+            			<w2:column id="timestamp" name="name1" dataType="text"/> 
+						<w2:column id="sRespCode" name="sRespCode" dataType="text"/> 
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	
+            	<!-- Warning DS(추가) -->
+            	<w2:dataList baseNode="list" id="Ds_Warning" keyNode="//*/WARNING" repeatNode="map">            		
+            		<w2:columnInfo>
+            			<w2:column id="message" name="name1" dataType="text"/>
+            			<w2:column id="msg" name="name1" dataType="text"/>
+            			<w2:column id="level" name="name1" dataType="text"/>
+            			<w2:column id="detail" name="name1" dataType="text"/>
+            			<w2:column id="timestamp" name="name1" dataType="text"/>
+						<w2:column id="sRespCode" name="sRespCode" dataType="text"/> 
+            		</w2:columnInfo>
+            	</w2:dataList>
+
+<!--            	 <w2:dataList baseNode="list" id="Ds_FixWarning"  keyNode="//*/WARNING" repeatNode="map">-->
+<!--            		<w2:columnInfo>-->
+<!--            			<w2:column id="msg" name="name1"-->
+<!--            				dataType="text">-->
+<!--            			</w2:column>-->
+<!--            		</w2:columnInfo>-->
+<!--            	</w2:dataList>-->
+  
+				<w2:dataList baseNode="list" id="Ds_FixWarning"   repeatNode="map">
+            		<w2:columnInfo>
+						<w2:column dataType="text" id="timestamp" name="timestamp"/>
+						<w2:column dataType="text" id="detail" name="detail"/>
+						<w2:column dataType="text" id="level" name="level"/>
+						<w2:column dataType="text" id="msg" name="msg"/>
+					</w2:columnInfo>
+            	</w2:dataList>
+            	
+            	<w2:dataList baseNode="list" id="Ds_StopSrvc"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="result"
+            				name="result" />
+            			<w2:column dataType="text" id="afterEJBCall"
+            				name="afterEJBCall" />
+            			<w2:column dataType="text" id="beforeEJBCall"
+            				name="beforeEJBCall" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+
+            	<w2:dataList baseNode="list" id="DsWs_StopSrvc"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="Ds_FixCoverLfinr"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="Ds_warning"
+            		repeatNode="map" userData2="//*/hashtable/data/msg" />
+            	<w2:dataList baseNode="list" id="ds_Combo01"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="ds_Combo02"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="DsWs_List"
+            		repeatNode="map"
+            		userData2="//*/hashtable/data/vector/data/MEDI1010251" />
+            	<w2:dataList baseNode="list" id="warning"
+            		repeatNode="map" userData2="//*/WARNING" />
+
+            	<w2:dataList baseNode="list" id="DsWs_ErrorList"
+            		repeatNode="map" userData2="//*/hashtable/data/sendKey" />
+            		
+            	<w2:dataList baseNode="list" id="DsWs_FixCover"
+            		repeatNode="map"
+            		userData2="//*/vector/data/FIX1000540V">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sOfcCod"
+            				name="sOfcCod" />
+            			<w2:column dataType="text" id="sInsurStDate"
+            				name="sInsurStDate" />
+            			<w2:column dataType="text" id="sInsurEdDate"
+            				name="sInsurEdDate" />
+            			<w2:column dataType="text" id="nInsAmt"
+            				name="nInsAmt" />
+            			<w2:column dataType="text" id="sCvrgeCd"
+            				name="sCvrgeCd" />
+            			<w2:column dataType="text" id="sCrStatCd"
+            				name="sCrStatCd" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_FixWarning"
+            		repeatNode="map" userData2="//*/WARNING" />
+            	<w2:dataList baseNode="list" id="DsWs_FixDetail"
+            		repeatNode="map" userData2="//*/data/info">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sInrpsName"
+            				name="sInrpsName" />
+            			<w2:column dataType="text" id="nCrInfoTotRgstCt"
+            				name="nCrInfoTotRgstCt" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_AnswCd"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="DsWs_NlisrFxCrStatCd"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="DsWs_FinaOrgnCd"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="DsWs_NlisrAssoCvrgeCd"
+            		repeatNode="map" />
+            	<w2:dataList baseNode="list" id="DsWs_Search42"
+            		repeatNode="map" userData2="//*/CUSAA42" />
+            	<w2:dataList baseNode="list" id="DsWs_CustNo"
+            		repeatNode="map" userData2="//*/LTI0000" />
+            	<w2:dataList baseNode="list" id="DsWs_FixCoverLfinr"
+            		repeatNode="map" userData2="//*/vector/data/LTIDA53" />
+            	<w2:dataList baseNode="list" id="DsWs_FixCoverKCIS"
+            		repeatNode="map" userData2="//*/vector/data/LTIDA55" />
+            		
+            	<w2:dataList baseNode="list" id="DsWs_FixCoverKCISRecv"  repeatNode="map" userData2="//*/recvDoc" />
+            		
+            	<w2:dataList id="Ds_Search42" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sAgmRecvCode" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="result" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmUser" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCallSerial" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="afterEJBCall" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sLast" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sExpired" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmDt" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmYn5" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmUserIp" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="beforeEJBCall" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmYn4" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmYn3" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMdfUserIp" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmYn2" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMdfTime" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmYn1" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRecStartTime" name="name18"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmTime" name="name19"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRecEndDate" name="name20"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sExpireDate" name="name21"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmCheckInfo" name="name22"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCustType" name="name23"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name24"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sProductType" name="name25"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCustNo" name="name26"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMdfUser" name="name27"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRetentionDate" name="name28"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmYn" name="name29"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputIP" name="name30"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputID" name="name31"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nChangeNo" name="name32"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmCheckType" name="name33"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmMethod" name="name34"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmRecvName" name="name35"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputTime" name="name36"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRecStartDate" name="name37"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRecEndTime" name="name38"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMdfDt" name="name39"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAgmReq" name="name40"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUserName" name="name41"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+
+<!--            	<w2:dataList id="Ds_FixCoverKCIS" baseNode="list"-->
+<!--            		saveRemovedData="true" repeatNode="map">-->
+<!--            		<w2:columnInfo>-->
+<!--            			<w2:column id="nCvrgeInsAmt" name="name1"-->
+<!--            				dataType="text">-->
+<!--            			</w2:column>-->
+<!--            			<w2:column id="nRdchSupcCt" name="name2"-->
+<!--            				dataType="text">-->
+<!--            			</w2:column>-->
+<!--            			<w2:column id="sCvrgeCd" name="name3"-->
+<!--            				dataType="text">-->
+<!--            			</w2:column>-->
+<!--            			<w2:column id="nCvrgeCt" name="name4"-->
+<!--            				dataType="text">-->
+<!--            			</w2:column>-->
+<!--            		</w2:columnInfo>-->
+<!--            	</w2:dataList>-->
+
+            	<w2:dataList id="Ds_CustNo" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="afterEJBCall" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="beforeEJBCall" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRealCustNo" name="name3"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        
+       <!--// js Script include //--> 
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/>
+	 	<script src="/cm/js/convertJs/NewGen_Script.js"/>
+	 	<script src="/cm/js/convertJs/LongTerm_Script.js"/>
+	 	<script src="/cm/js/convertJs/Marine_Script.js"/>
+  
+        <script><![CDATA[
+
+// ###################################################
+//  파일명 : CBSC056P.xml
+//  프로그램명 : 보험계약정보조회
+//  설 명 :  보험계약정보조회
+//  작성자 : 진태만
+//  작성일 : 2017.09.20
+// 
+//  수정일자            수정자                  수정내용
+// ==================================================
+// 2017.09.20        진태만Btn_NewReg_OnClick          최초작성
+// ###################################################
+     
+var gUserIP = "";    // 사용자 IP
+var gUserID = "";    // 사용자 ID
+var sBizCode = "";  		//청약 번호 
+var sSaveYN = "";		 	//저장여부 번호 	
+var sEtnTyp = "";	 		//가입유형 
+var sMyInsCode = "";	 	//주피보험자코드	
+var sMyInsName = "";	 	//주피보험자명 
+var sMyInsRel = "" 			//주피관계 
+var sMyInsJob = ""; 		//주피직업 
+var sMyInsGrade = "";	 	//주피등급 
+var sCtrDte = "";	 			//보험시기
+var bConfirm = true;	 
+var bOthIns1 = false;
+var bOthIns2 = false;
+var sInrpsCd;
+var sInrpsName;
+var sPlanNo;				// 설계번호
+var sMediMsg = "";
+var sFixMsg = "";
+var hasPronCmpsTrty; 
+var hasFxamtCmps;	 //실손가입여부(2011.05.13  김상운) 
+var sAgncYn = "N";		//정액가입여부(2011.05.13  김상운)
+var sSvtYn;				//상품구분코드 여부
+var sRealCustNo = "";
+var sAgreDocuRecpYn = "0";	// 단체보험의 단체협약서여부(1:협약서접수, 0:협약서미접수)
+var sPsnGroupFlgcd = "";
+var args; 
+ 	
+//---------------------------------------------------------------------------
+// function 명 : init
+// 내용        : 폼로드할때 처리할 내용 
+//---------------------------------------------------------------------------
+scwin.init = function() {
+	console.log("[/CBSC056P.xml] [init()] ==> [사전조회 폼 로딩] [TEST_01]" );
+//	 
+ 	var pro = Promise.resolve();
+	window.top.util.winTopShowModalChk = "T";
+	util.winTopShowModal();
+
+	pro = pro.then(function(rv) {
+		return util.winTopShowModalPromise();
+	});
+
+	pro = pro.then(function(rv) {
+		// init 부분 함수 입력하는곳  // =================================================>
+		
+		var pObj = wprom.getParamObject(); 
+		parent_Ds_Pibo = pObj.Ds_Pibo;	// 부모창 피보험자 정보 Ds Set 
+		parent_Ds_LTIDA00 = pObj.Ds_LTIDA00;		//  부모창 보험 기본사항 정보 Ds Set
+		parent_Ds_Pibo_BackUp = pObj.Ds_Pibo_BackUp;	// 부모창 보험 기본사항 정보 Ds Set
+		//console.log("[CBSC056P.xml] [init()] ==> [폼 로딩] ==> [parent_Ds_Pibo_갯수_01]"+ parent_Ds_Pibo.getRowCount() +"[parent_Ds_Pibo]"+ WebSquare.xml.serialize(parent_Ds_Pibo.getAllXML()) );    
+	 
+		var indata = $w.getParameter("param");
+		var inJSON = JSON.parse(indata); 	// 부모창에서 받아온 값( 예) inJSON.sPlanNo)
+		
+		if (!util.isNull(inJSON.sInrpsCd)) 	sInrpsCd = inJSON.sInrpsCd; 		//주민번호 
+		if (!util.isNull(inJSON.sPlanNo)) 	sPlanNo = inJSON.sPlanNo; 	//설계번호 
+		if (!util.isNull(inJSON.sInrpsName)) 	sInrpsName = inJSON.sInrpsName; 		//피보험자명 
+		if (!util.isNull(inJSON.hasPronCmpsTrty)) 	hasPronCmpsTrty = inJSON.hasPronCmpsTrty; 		//실손가입여부(2011.05.13 김상운추가) 
+		if (!util.isNull(inJSON.hasFxamtCmps)) 	hasFxamtCmps = inJSON.hasFxamtCmps; 					// 정액담보가입여부(2011.05.13 김상운추가)
+		if (!util.isNull(inJSON.sSvtYn)) 	sSvtYn = inJSON.sSvtYn; 		//상품구분코드 여부 
+		if (!util.isNull(inJSON.sAgreDocuRecpYn)) sAgreDocuRecpYn = inJSON.sAgreDocuRecpYn; 		// 가입설계 동의 여부 조회: 추가(2017.11.24)
+		if (!util.isNull(inJSON.sHandlerID)) sHandlerID = inJSON.sHandlerID; 	// 우선순위(사용인ID, 취급자ID, 로그인사번): 추가(2017.11.24)
+		console.log("[/CBSC056P.xml] [init()] ==> [사전조회 폼 로딩] [주민번호]"+ sInrpsCd +"[피보험자명]"+ sInrpsName +"[설계번호]"+ sPlanNo +"[01. 실손가입여부]"+ hasPronCmpsTrty +"[02. 정액담보가입여부]"+ hasFxamtCmps +"[상품구분코드 여부]"+ sSvtYn );
+	   
+	    //청약번호 누락여부 체크
+	    if (wconv.length(sPlanNo) < 1) {
+	        wprom.alert("청약번호가 누락되었습니다. 확인하세요");
+	        return;
+	    } 
+	    
+	    //대리점인지 여부(30:대리점,33:사용인,35:TM사용인)
+	    if (util.getGdsValue("gUserDuty") == "30" || util.getGdsValue("gUserDuty") == "33" || util.getGdsValue("gUserDuty") == "35") {}
+	    /*
+	    if(sSvtYn == "Y"){
+	    	stc_basic1.Visible = false;
+	    	stc_basic2.Visible = false;
+	    	stc_basic3.Text = "";
+	    	stc_basic4.Top = 218;
+	    	stc_Svt1.Visible = true;
+	    	stc_Svt2.Visible = true;
+	    	stc_Svt1.Left = 42;
+	    	stc_Svt1.Top = 79;
+	    	stc_Svt2.Left = 42;
+	    	stc_Svt2.Top = 155;
+	    }
+	    */
+	    //대리점인지 여부(30:대리점,33:사용인,35:TM사용인)
+	    if (sAgncYn == "Y") {
+	    	gfn_obj_convertMask(msk_sInrpsCd, sInrpsCd, "######-#ZZZZZZ"); 
+	    } else {
+	        msk_sInrpsCd.setValue(sInrpsCd); 		//주피 피보험자 코드
+	    }
+	    
+	    edt_sInrpsName.setValue(sInrpsName); // 주피 피보험자명
+	    edt_sRelnName.setValue("본인"); 	// 주피 계약자와의관계
+	  
+	    // 의료비 관련 공통코드 불러오기 
+		var dataSetStr = "Ds_Guart Ds_Covge Ds_Copay Ds_GuartDate";
+	    var codTypeStr = "7076 7077 7078 7080";
+	    var componentIds = ""; 		//"ipt_Hby sel_Imp Div0.wf_ipt_Hby Div0.wf_sel_Imp";
+	    var selectAdds = "";
+	    nfn_getCommonData(dataSetStr, codTypeStr, componentIds, selectAdds);
+	  
+		var pi_nRow = wconv.findRow(parent_Ds_Pibo, "sel", "1");		// 선택한 칼럼값 Row 찾기
+	 
+	 	Ds.insertRow();
+	 	Ds.setCellData(0, "sOthMedicalYN", parent_Ds_Pibo.getCellData(pi_nRow, "sPsnInfoOferAgreYn")); //개인정보제공동의여부 
+	 	Ds.setCellData(0, "sExplainProIndYN", parent_Ds_Pibo.getCellData(pi_nRow, "sMNumCrInsAgreYn")); //다수계약가입동의여부 
+	 	Ds.setCellData(0, "sOthMedicalYN", "Y"); //강제 셋팅(ldh)
+		Ds.setCellData(0, "sExplainProIndYN", "Y"); //강제 셋팅(ldh) 
+		//console.log("[/CBSC056P.xml] [init()] ==> [Ds, 총갯수]"+ Ds.getTotalRow() +"[Ds]"+ WebSquare.xml.serialize(Ds.getAllXML()) ); 
+	 
+		util.setCompBindRefresh(Ds.getID());  	// Ds Binding 처리
+	 	
+	    // 공통코드 내용 삭제
+	    wconv.clear(DsWs_NlisrFxCrStatCd);
+	    wconv.clear(DsWs_FinaOrgnCd);
+	    gfn_getCommonCodes("DsWs_NlisrFxCrStatCd DsWs_FinaOrgnCd DsWs_AnswCd DsWs_NlisrAssoCvrgeCd", "NlisrFxCrStatCd FinaOrgnCd FixAnswCd NlisrAssoCvrgeCd", "Cmb_NlisrFxCrStatCd Cmb_FinaOrgnCd Cmb_AnswCd Cmb_NlisrAssoCvrgeCd", "B B B B");
+	  
+		gfn_LogCreditInfo("", "", "S", sInrpsCd);		//개인정보 조회 이력 쌓기
+	   
+		scwin.btn_search_OnClick(btn_search01); 	 //조회처리 
+ 		
+		return ;		// init 함수를 종료하고자 할때 사용	 // =================================================> 
+	});
+
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});
+ 
+	return pro;
+};
+
+/* ***************************************** */
+// 조회 버튼 클릭시
+/* ***************************************** */
+scwin.btn_search_OnClick = function(e) { 
+	//console.log("[/CBSC056P.xml] [btn_search_OnClick()] ==> [조회 버튼 클릭] [TEST_01] [e.id]"+ e.id );
+ 
+    var sIsdCsmNum = "";
+    var currDate = "";
+    var currTime = "";
+ 
+    currDate = WebSquare.date.getCurrentServerDate("yyyyMMdd"); 		// global 현재일자 
+    currTime = wconv.substr(WebSquare.date.getCurrentServerDate("yyyyMMddHHmmss"), 8, 6); 		// global 현재시각
+         
+	 //청약번호 누락여부 체크
+    if (wconv.length(sPlanNo) < 1) {
+        wprom.alert("청약번호가 누락되었습니다. 확인하세요");
+        return;
+    } 
+    
+    //고객정보 실주민번호 셋팅(20140508) 
+	if (sInrpsCd.indexOf("A") > 0) { 
+		sInrpsCd = scwin.lfn_getRealNo(sInrpsCd);
+    } 
+ 
+     if (e.id == "btn_search01") {
+    	//console.log("[/CBSC056P.xml] [btn_search_OnClick()] ==> [조회 버튼 클릭] [Radio0.getValue()]"+ Radio0.getValue() +"[Radio7.getValue()]"+ Radio7.getValue() );
+ 		//console.log("[/CBSC056P.xml] [btn_search_OnClick()] ==> [조회 버튼 클릭] [Ds, 총갯수]"+ Ds.getTotalRow() +"[Ds]"+ WebSquare.xml.serialize(Ds.getAllXML()) ); 
+ 		
+		if ((Radio0.getValue() == null || Radio0.getValue() == "") || ((Radio7.getValue() == null || Radio7.getValue() == "")) 
+			|| ((Radio0.getValue() == "N" || Radio7.getValue() == "N"))) {
+			wprom.alert("본인 비례보상조회 동의여부를 확인하세요.");
+			return;
+		}
+        sIsdCsmNum = sInrpsCd;
+        wconv.clear(Ds_List01);
+        bOthIns1 = true;
+    }
+	//console.log("[/CBSC056P.xml] [btn_search_OnClick()] ==> [조회 버튼 클릭] [TEST_21]" );
+  		
+    //손보협회 서비스 중지여부 체크
+    if (gfn_hasStopSrvc("011^012")) {  
+       // parent.MediFlag = true;
+        for (var i = 0; i < parent_Ds_Pibo.getRowCount(); i++) {	 // 손보협회 서비스 중지 이면
+            parent_Ds_Pibo.setCellData(i, "sPsnInfoOferAgreYn", Ds.getCellData(0, "sOthMedicalYN")); //개인정보제공동의여부
+            parent_Ds_Pibo.setCellData(i, "sMNumCrInsAgreYn", Ds.getCellData(0, "sExplainProIndYN")); //다수계약가입동의여부
+            parent_Ds_Pibo_BackUp.setCellData(i, "MediFlag", "Y");		// 본인 실손의료비 중복조회 여부 Flag(Y: 조회 했음)
+            parent_Ds_Pibo_BackUp.setCellData(i, "fixFlag", "Y");			// 정액가입 중복조회 여부 Flag(Y: 조회 했음)
+        }
+		//console.log("[/CBSC056P.xml] [btn_search_OnClick()] ==> [gfn_hasStopSrvc(011^012)]"+ parent_Ds_Pibo_BackUp.getCellData(pi_nRow, "MediFlag") +"[parent_Ds_Pibo_BackUp.fixFlag]"+ parent_Ds_Pibo_BackUp.getCellData(pi_nRow, "fixFlag") ); 
+ 
+        wprom.alert(gfn_getStopSrvcMsg());
+        return;
+    }
+    var sSumMsg = "";
+  
+    //가입설계 동의 여부 조회 
+    //N1608-00179:장기 단체보험 전산시스템 개발 요청(단체일 경우 단체 협약서를 받았으면 가입설계 동의 없이도 조회)
+    if (sAgreDocuRecpYn != "1") {
+        if (scwin.lfn_getCUSAA42Info(sInrpsCd) == "Y") {
+        	//console.log("[/CBSC056P.xml] [btn_search_OnClick()] ==> [TEST_31] [sAgreDocuRecpYn]"+ sAgreDocuRecpYn +"[scwin.lfn_getCUSAA42Info(sInrpsCd)]"+ scwin.lfn_getCUSAA42Info(sInrpsCd) );
+            wprom.alert(edt_sInrpsName.getValue() + "님의 가입설계 동의여부를 확인하세요");
+            return;
+        }
+    }
+      	 
+    //N1608-00179:장기 단체보험 전산시스템 개발 요청(단체일 경우 개인실손 조회하지 않는다.) 
+    //추후 단체 기타실손도 대상이 될 경우 단체실손 사전 조회 및 집중 추가
+    if (sPsnGroupFlgcd != "21") {
+        var midiRes = scwin.lfn_selectMediCover(btn_search01, sIsdCsmNum, currDate, currTime);	 // 실손 사전조회 
+ 		//console.log("[/CBSC056P.xml] [init()] ==> [01. 실손가입여부_확인]"+ midiRes +"[sPsnGroupFlgcd]"+ hasFxamtCmps );
+   
+        if (midiRes == false) { 
+            wprom.alert("실손사전조회: " + sMediMsg);		// 실손사전 조회 에러 메시지 띄우기 --> 예) 정액담보조회: 조회되었으나 [조회 해당자료 없음401] 의 이유로 메세지가 표시되었습니다.
+            return;
+        }
+    }
+    //console.log("[/CBSC056P.xml] [init()] ==> [02. 정액담보 조회_hasFxamtCmps]"+ hasFxamtCmps );
+  
+    if (hasFxamtCmps == "Y") { 
+		var fixRes = scwin.selectKCIS0200240();		// 정액담보 조회
+		//console.log("[/CBSC056P.xml] [init()] ==> [02. 정액담보 조회_확인]"+ fixRes +"[hasFxamtCmps]"+ hasFxamtCmps );
+		
+        if (fixRes == false) {
+            wprom.alert("정액담보조회: " + sMediMsg);	// 정액담보 조회 에러 메시지 띄우기
+            return;
+        }
+    }
+ 	
+    //실손조회 + 정액담보조회 메세지 
+    sSumMsg = sMediMsg + sFixMsg;
+
+    //메세지 출력
+    if (sSumMsg != "") {
+        wprom.alert(sSumMsg);	// 2개의 에러 메시지 띄우기
+    }
+  
+	scwin.Btn_NewReg_OnClick();   // 저장
+};
+
+//---------------------------------------------------------------------------
+// function 명 : Btn_NewReg_OnClick
+// 내용        : 저장
+//---------------------------------------------------------------------------
+scwin.Btn_NewReg_OnClick = function(e) { 
+	//console.log("[/CBSC056P.xml] [Btn_NewReg_OnClick()] ==> [저장 처리] [TEST_01]" );
+	
+	gUserID = util.getGdsValue("gUserID");    // 사용자 ID
+   	gUserIP = util.getGdsValue("gUserIP");    // 사용자 IP
+	
+    if (!bOthIns1) {
+        // alert("실손의료비 중복조회를 확인하세요.");
+        wprom.alert("비례보상 조회를 확인하세요.");
+        return;
+    }
+ 
+    //주피보험자
+    //if(sSaveYN == "N") //  save yn 여부에 따라 저장 
+    Ds.setCellData(0, "sOthMedicalYN", Radio0.getValue());
+    Ds.setCellData(0, "sExplainProIndYN", Radio7.getValue());
+    
+    if (wconv.length(parent_Ds_LTIDA00.getCellData(0, "sPlanNo")) < 1) {
+        parent_Ds_LTIDA00.setCellData(0, "sPlanNo", sPlanNo);
+    }
+   
+    var pi_nRow = wconv.findRow(parent_Ds_Pibo, "sel", "1"); 
+    parent_Ds_LTIDA00.setCellData(0, "gUserID", gUserID);
+    parent_Ds_LTIDA00.setCellData(0, "gUserIP", gUserIP); 
+	parent_Ds_LTIDA00.setCellData(0, "sDoer", util.getGdsValue("gDoer")); 	//취급자 
+	
+	wconv.copy(Ds_LTIDA00, parent_Ds_LTIDA00);		// Ds_LTIDA00t Ds에 parent_Ds_LTIDA00를 복사 
+ 
+	var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB250Task", "saveReward"); 	// 01. 저장 처리 Obj 
+	MethodObj.setId("saveReward");		// ID 셋팅
+ 
+	util.jSonDsCreate([{"sInrpsCd":""}], "Ds_sInrpsCd");
+	$w.data["Ds_sInrpsCd"].setCellData(0, "sInrpsCd", sInrpsCd); 
+    MethodObj.addSingleData("sInrpsCd", "sInrpsCd", "Ds_sInrpsCd", "type02");
+ 
+	util.jSonDsCreate([{"nInrpsSeqno":""}], "nInrpsSeqno");
+	$w.data["nInrpsSeqno"].setCellData(0, "nInrpsSeqno", parent_Ds_Pibo.getCellData(pi_nRow, "nInrpsSeqno"));	// Param 셋팅(피보험자 순번)    
+    MethodObj.addSingleData("nInrpsSeqno", "nInrpsSeqno", "nInrpsSeqno", "type02"); 
+	MethodObj.addSingleData("LTIDA00", "LTIDA00", "Ds_LTIDA00:A");  	// 계약 정보 Ds: A(전체), I(등록), U(수정), R
+	MethodObj.addVectorData("vLTIDA44", "LTIDA44", "Ds_List01:A");   	// 실손사전 정보 Ds  
+	MethodObj.setUrl("/contract/CBSC056PController.do");  				// 서버단 호출 URL
+	MethodObj.addXPath("//WARNING");	// XPath(No) 
+	MethodObj.setHashTable();   	// 전문의 앞이 hashtable로 보낼 때 
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)] 
+	MethodObj.send();		// 최종 전송  		 
+	//console.log("[/CBSC056P.xml] [Btn_NewReg_OnClick()] ==> [02. 저장 처리_완료] [TEST_71]");  	
+
+	//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+ 
+ 	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "Ds_Warning");  		// Warning DS 셋팅(조회 결과)  
+	console.log("[/CBSC056P.xml] [Btn_NewReg_OnClick()] ==> [저장 처리] [Ds_Warning.getRowCount()]"+ Ds_Warning.getRowCount()  +"[Ds_Warning]"+ WebSquare.xml.serialize(Ds_Warning.getAllXML()) ); 
+  
+    if (Ds_Warning.getRowCount() != 0) {
+        wprom.alert("warn" + Ds_Warning.getCellData(0, "msg"));
+        return;
+        
+    } else { 
+    	//console.log("[/CBSC056P.xml] [Btn_NewReg_OnClick()] ==> [저장 성공]");
+    	
+        parent_Ds_Pibo.setCellData(pi_nRow, "sPsnInfoOferAgreYn", Ds.getCellData(0, "sOthMedicalYN")); 	// 개인정보제공동의여부
+        parent_Ds_Pibo.setCellData(pi_nRow, "sMNumCrInsAgreYn", Ds.getCellData(0, "sExplainProIndYN")); // 다수계약가입동의여부
+        
+        if (hasPronCmpsTrty == "Y") {
+            parent_Ds_Pibo_BackUp.setCellData(pi_nRow, "MediFlag", "Y"); 	// 본인 실손의료비 중복조회 여부 Flag(Y: 조회 했음)
+        }
+        if (hasFxamtCmps == "Y") {
+            parent_Ds_Pibo_BackUp.setCellData(pi_nRow, "fixFlag", "Y");	// 정액가입 중복조회 여부 Flag(Y: 조회 했음)
+        } 
+       // console.log("[/CBSC056P.xml] [Btn_NewReg_OnClick()] ==> [저장 처리] [저장 성공] [parent_Ds_Pibo_BackUp.MediFlag]"+ parent_Ds_Pibo_BackUp.getCellData(pi_nRow, "MediFlag") +"[parent_Ds_Pibo_BackUp.fixFlag]"+ parent_Ds_Pibo_BackUp.getCellData(pi_nRow, "fixFlag") ); 
+  	} 
+	// console.log("[/CBSC056P.xml] [Btn_NewReg_OnClick()] ==> [저장 처리 완료] [TEST_end]"); 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_selectMediCover
+// 내용        : 실손담보 가입현황 조회
+//---------------------------------------------------------------------------
+scwin.lfn_selectMediCover = function(obj, sIsdCsmNum, currDate, currTime) {
+	//console.log("[/CBSC056P.xml] [lfn_selectMediCover()] ==> [실손담보 가입현황 조회] [TEST_01] [obj]"+ obj +"[sIsdCsmNum]"+ sIsdCsmNum +"[currDate]"+ currDate +"[currTime]"+ currTime );
+	 
+ 	wconv.clear(Ds_List01);
+	wconv.clear(Ds_List);
+    wconv.clear(Ds_FinalList);
+ 	wconv.clear(Ds_ErrorList);
+    
+   	gUserID = util.getGdsValue("gUserID");    // 사용자 ID
+   	gUserIP = util.getGdsValue("gUserIP");    // 사용자 IP
+	
+ 	var sProcShopCode =  "";	 
+  
+	if (wconv.length(util.getGdsValue("gManageEmpNo")) > 0) {
+        if (wconv.charAt(util.getGdsValue("gManageEmpNo"), 0) == "A" || wconv.charAt(util.getGdsValue("gManageEmpNo"), 0) == "B") { 
+            sProcShopCode = util.getGdsValue("gManageEmpNo");	
+        } else {
+            if (wconv.length(util.getGdsValue("gUserCenterCode")) > 0) { 
+               sProcShopCode = util.getGdsValue("gUserCenterCode");	
+            } else if (wconv.length(util.getGdsValue("gDptOfficeCode")) > 0) { 
+               sProcShopCode = util.getGdsValue("gDptOfficeCode");
+            }
+        }
+    } else {
+        if (wconv.length(util.getGdsValue("gUserCenterCode")) > 0) {
+        	sProcShopCode = util.getGdsValue("gUserCenterCode"); 
+        } else if (wconv.length(util.getGdsValue("gDptOfficeCode")) > 0) {
+        	sProcShopCode = util.getGdsValue("gDptOfficeCode");   
+        } else { 
+        	sProcShopCode = "5000014"; 
+        }
+    }
+   	
+   	var MethodObj = new callService("com.inswave.newgen.cla.mgr.task.CMC00431500Task", "sendSelectMedicalPeeAPP");  	// 01. 실손담보 가입현황 조회 Obj 
+	MethodObj.setId("sendSelectMedicalPeeAPP");			// ID 셋팅
+	MethodObj.setParam("sIsdCsmNum", sIsdCsmNum);			// Param 셋팅 
+	MethodObj.setParam("sProcDate", currDate + currTime);		// Param 셋팅 ==>   // 현재일자 -> 보험시기  수정. 시분초는 16시00분00초 로 고정. 2009-04-16 박건규
+	MethodObj.setParam("sCtrDte", sCtrDte);					// Param 셋팅 
+	MethodObj.setParam("sInputDate", currDate);				// Param 셋팅 
+	MethodObj.setParam("sInputTime", currTime);			// Param 셋팅 
+	MethodObj.setParam("sUserID", gUserID);					// Param 셋팅(사용자 ID) 
+	MethodObj.setParam("sAgreeYN", "Y");						// Param 셋팅 
+	MethodObj.setParam("sTermNo", gUserIP);				// Param 셋팅(사용자 IP) 
+	MethodObj.setParam("sTermUserID", gUserID);	// Param 셋팅 
+	MethodObj.setParam("sProcShopCode", sProcShopCode);			// Param 셋팅  
+	MethodObj.setUrl("/contract/CBSC056PController.do");  				// 서버단 호출 URL	
+	MethodObj.setXPath("//*/hashtable/data/vector/data/MEDI1010251");		// XPath 
+	MethodObj.addXPath("//*/WARNING");		// XPath 
+	MethodObj.addXPath("//*/hashtable/data/msg");	// XPath 
+	MethodObj.addXPath("//*/hashtable/data/sendKey");	// XPath  
+	MethodObj.setXPathDs(); 	// XPath 전체 경로 사용할 경우
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)]
+	MethodObj.send();		// 최종 전송 
+	//console.log("[/CBSC056P.xml] [lfn_selectMediCover()] ==> [01. 실손담보 가입현황 조회, 전송_완료] [TEST_91]");  
+ 	 
+	//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+ 
+	Ds_List.setJSON(_tranSync.getDsJson("//*/hashtable/data/vector/data/MEDI1010251"));		// Ds_List DS 셋팅(조회 결과)  
+	DsWs_Warning.setJSON(_tranSync.getDsJson("//*/WARNING"));  					// DsWs_Warning DS 셋팅(조회 결과) 
+	Ds_Warning.setJSON(_tranSync.getDsJson("//*/hashtable/data/msg"));  		// Ds_Warning DS 셋팅(조회 결과) 
+	Ds_ErrorList.setJSON(_tranSync.getDsJson("//*/hashtable/data/sendKey"));  	// Ds_ErrorList DS 셋팅(조회 결과)  
+	console.log("[/CBSC056P.xml] [lfn_selectMediCover()] ==> [01. 실손담보 가입현황 조회] [DS_갯수]"+ Ds_List.getRowCount()   ); 
+ 	//console.log("[/CBSC056P.xml] [lfn_selectMediCover()] ==> [Ds_Warning,_갯수]"+ Ds_Warning.getRowCount() +"[Ds_Warning]"+ WebSquare.xml.serialize(Ds_Warning.getAllXML()) ); ; 
+ 	
+ 	 if (Ds_Warning.getRowCount() != 0) {
+        //alert("조회되었으나 [" + DsWs_Warning.GetColumn(0,"message") + "] 의 이유로 메세지가 표시되었습니다.");	
+        sMediMsg = "실손사전조회: 조회 되었으나 [" + Ds_Warning.getCellData(0, "message") + "] 의 이유로 메세지가 표시되었습니다.\n"; 
+    }
+    if (warning.getRowCount() != 0) { 
+        if (obj.id == "btn_search01") {	 // 전문전송 실패(무응답)시 다시 조회 하게 수정. 
+            bOthIns1 = false;
+        }
+        sMediMsg = warning.getCellData(0, "msg");
+        return false;
+    }
+    if (wconv.trim(sEtnTyp) == "10") {
+        if (bOthIns1 == true) {
+            //parent.dateModFlag = true;
+        }
+    }
+  
+    // 전송성공Ds와 전송성공 후 에러 DS에 데이터 유무 체크
+    if (Ds_List.getRowCount() > 0) {  
+        wconv.copy(Ds_FinalList, Ds_List);		// Ds_FinalList Ds에 전송 내용 복사
+       // console.log("[/CBSC056P.xml] [lfn_selectMediCover()] ==> [실손담보 가입현황 조회] [Ds_FinalList Ds에 전송 내용 복사_ 성공]" );
+        
+    } else if (DsWs_ErrorList.getRowCount() > 0) {
+ 		wconv.copy(Ds_FinalList, Ds_ErrorList);	// Ds_FinalList Ds에 전송 에러 내용 복사
+    }
+ 	  
+	if (obj.id == "btn_search01") {   
+   		for (var i = 0; i < Ds_FinalList.getRowCount(); i++) { 
+            var row = Ds_List01.insertRow();   // 줄 추가
+             
+            Ds_List01.setCellData(row, "sInsTypeName", Ds_FinalList.getCellData(i, "sInsNam"));
+            // 보험회사명 공백 처리. 20090813
+            //Ds_List01.SetColumn(row,"sOfcCod", Ds_FinalList.GetColumn(i, "sOfcCod"));
+            Ds_List01.setCellData(row, "sOfcCod", "");
+            Ds_List01.setCellData(row, "sInsCtrTpdPed", Ds_FinalList.getCellData(i, "sInsCtrTpdPed"));		// 보험기간
+            Ds_List01.setCellData(row, "nAcdImt", Ds_FinalList.getCellData(i, "nAcdImt"));	// 가입금액
+            Ds_List01.setCellData(row, "sInsrdRel", "1001");
+            Ds_List01.setCellData(row, "sTranCode", Ds_FinalList.getCellData(i, "sTranCode"));
+            Ds_List01.setCellData(row, "sKNIA", Ds_FinalList.getCellData(i, "sKNIA"));
+            Ds_List01.setCellData(row, "sClsA", Ds_FinalList.getCellData(i, "sClsA"));
+            Ds_List01.setCellData(row, "sClsB", Ds_FinalList.getCellData(i, "sClsB"));
+            Ds_List01.setCellData(row, "sProcDate", Ds_FinalList.getCellData(i, "sProcDate"));
+            Ds_List01.setCellData(row, "nProcSeq", Ds_FinalList.getCellData(i, "nProcSeq"));
+            Ds_List01.setCellData(row, "sInputDate", currDate);
+            Ds_List01.setCellData(row, "sInputTime", currTime);
+            Ds_List01.setCellData(row, "sUserId", gds.gUserID);
+            Ds_List01.setCellData(row, "sPolStat", Ds_FinalList.getCellData(i, "sInsCond"));		// 계약상태
+            Ds_List01.setCellData(row, "sCovName", Ds_FinalList.getCellData(i, "sCoverName"));	// 담보명(담보특성코드 한글화.)
+            Ds_List01.setCellData(row, "sCovDateFrom", Ds_FinalList.getCellData(i, "sCovDateFrom"));		// 담보기간From
+            Ds_List01.setCellData(row, "sCovDateTo", Ds_FinalList.getCellData(i, "sCovDateTo"));				// 담보기간To
+            Ds_List01.setCellData(row, "sGuaranteeCod", Ds_FinalList.getCellData(i, "sGuaranteeCod"));
+            Ds_List01.setCellData(row, "sCovSpecificCod", Ds_FinalList.getCellData(i, "sCovSpecificCod"));	// 담보특성코드
+            Ds_List01.setCellData(row, "sCopaymentCod", Ds_FinalList.getCellData(i, "sCopaymentCod"));
+            Ds_List01.setCellData(row, "sGuaranteeDateCod", Ds_FinalList.getCellData(i, "sGuaranteeDateCod"));	// 보상기간
+            Ds_List01.setCellData(row, "sProcOffcName", Ds_FinalList.getCellData(i, "sProcOffcName")); 
+           // console.log("[/CBSC056P.xml] [lfn_selectMediCover()] ==> [실손담보 가입현황 조회] [i_번째]"+ i +"[row]"+ row +"[sCovDateFrom]"+ Ds_List01.getCellData(row, "sCovDateFrom") +"[sCovDateTo]"+ Ds_FinalList.getCellData(i, "sCovDateFrom") );
+        
+            // 공통코드에서 이름 맵핑
+			Ds_List01.setCellData(row, "sGuaranteeName", wconv.lookup("Ds_Guart", "sCodeId", Ds_FinalList.getCellData(i, "sGuaranteeCod"), "sCodeName") );   // 보장 내용
+			Ds_List01.setCellData(row, "sCovSpecificName", wconv.lookup("Ds_Covge", "sCodeId", Ds_FinalList.getCellData(i, "sCovSpecificCod"), "sCodeName") );   // 보장 내용
+			Ds_List01.setCellData(row, "sCopaymentName", wconv.lookup("Ds_Copay", "sCodeId", Ds_FinalList.getCellData(i, "sCopaymentCod"), "sCodeName") );   // 보장 내용
+			Ds_List01.setCellData(row, "sGuaranteeDateName", wconv.lookup("Ds_GuartDate", "sCodeId", Ds_FinalList.getCellData(i, "sGuaranteeDateCod"), "sCodeName") );   // 보장 내용
+			//console.log("[/CBSC056P.xml] [lfn_selectMediCover()] ==> [실손담보 가입현황 조회] [i_번째]"+ i +"[row]"+ row +"[ Ds_Guart_sCodeName]"+ Ds_Guart.getCellData(row, "sCodeName") +"[s_List01_sGuaranteeName]"+ Ds_List01.getCellData(row, "sGuaranteeName") +"[Ds_FinalList_sGuaranteeCod]"+ Ds_FinalList.getCellData(i, "sGuaranteeCod") );
+	  	}
+    } 
+  	//console.log("[/CBSC056P.xml] [lfn_selectMediCover()] ==> [실손담보 가입현황 조회] [TEST_end]" );
+ 
+    return true;
+};
+ 
+//---------------------------------------------------------------------------
+// function 명 : selectKCIS0200240
+// 내용        : 정액담보 가입현황 조회(신정원) - new
+//---------------------------------------------------------------------------
+scwin.selectKCIS0200240 = function() {
+	//console.log("[/CBSC056P.xml] [selectKCIS0200240()] ==> [정액담보 가입현황 조회] [TEST_01]" );
+ 
+    wconv.clear(Ds_FixCoverKCIS); 	// 정액담보 DS 결과 리스트 내용삭제
+    
+   	gUserID = util.getGdsValue("gUserID");    // 사용자 ID
+   	gUserIP = util.getGdsValue("gUserIP");    // 사용자 IP 
+	//console.log("[/CBSC056P.xml] [selectKCIS0200240()] ==> [TEST_41] [gUserEmpName]"+ util.getGdsValue("gUserEmpName") +"[gUserCenterCode]"+ util.getGdsValue("gUserCenterCode"));  
+   
+    var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB250Task", "selectKCIS0200240");  	// 02. 정액담보 가입현황 조회 Obj 
+ 
+ 	 if (sInrpsCd.indexOf("A") > 0) {		    //고객정보 실주민 번호 셋팅  
+		MethodObj.setParam("sInrpsCd",  lfn_getRealNo(msk_sInrpsCd.getValue()));	// Param 셋팅 
+	 } else { 
+		MethodObj.setParam("sInrpsCd", msk_sInrpsCd.getValue());		// Param 셋팅 
+ 	}
+  
+	MethodObj.setId("selectKCIS0200240");			// ID 셋팅
+	MethodObj.setParam("sInqrDate", WebSquare.date.getCurrentServerDate("yyyyMMdd"));			// Param 셋팅 
+	MethodObj.setParam("sPlanNo", sPlanNo) 	// Param 셋팅 
+ 	MethodObj.setParam("sUserId", gUserID);		// Param 셋팅(사용자 ID)
+ 	MethodObj.setParam("sUserIp", gUserIP);		// Param 셋팅(사용자 IP)     
+	MethodObj.setParam("sUserName", util.getGdsValue("gUserEmpName"));		// Param 셋팅 
+	MethodObj.setParam("sOffcCd", util.getGdsValue("gUserCenterCode"));		// Param 셋팅 
+	MethodObj.setParam("sDataInqrObjctCd", "P"); 			//P:가입설계, U:인수심사, C:지급심사		// Param 셋팅
+	MethodObj.setParam("sResno", msk_sInrpsCd.getValue());		// Param 셋팅 
+	MethodObj.setParam("sInqrAgreYn", "Y");		// Param 셋팅  
+	MethodObj.setParam("nsUseTerm", "00");		// Param 셋팅  
+	MethodObj.setParam("nPoseTerm", "99");		// Param 셋팅  
+	MethodObj.setParam("sInqrObjtTermA", "99");	// Param 셋팅  
+	MethodObj.setParam("sInqrObjtTermB", "00");		 //업권구분코드(A:전체, L:생보, N:손보, M:공제 및 체신관서)	 
+	MethodObj.setParam("sGroupIncldYn", "Y");
+	MethodObj.setParam("sSfcmpIncldYn", "Y");	 //자사계약포함여부
+	MethodObj.setParam("sLapsIncldYn", "N");	 //실효계약포함여부
+	MethodObj.setParam("sSsIncldYn", "Y"); 		//여행자보험포함여부 
+	MethodObj.setUrl("/contract/CBSC056PController.do"); 	// 서버단 호출 URL 
+	MethodObj.setXPath("//*/recvDoc");							// XPath  
+ 	MethodObj.addXPath("//*/vector/data/LTIDA55");			// XPath   
+	MethodObj.addXPath("//WARNING");		// XPath
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)]
+	MethodObj.send();		// 최종 전송 
+	//console.log("[/CBSC056P.xml] [selectKCIS0200240()] ==> [02. 정액담보 가입현황 조회, 전송_완료] [TEST_71]");  
+  
+	//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+  
+	Ds_FixCoverKCIS.setJSON(_tranSync.getDsJson("LTIDA55"));		// DS 셋팅(정액담보 DS 결과)   
+ 	Ds_FixCoverKCISRecv.setJSON(_tranSync.getDsJson("recvDoc"));		// DS 셋팅(정액담보 조회 결과 Ds 결과)  
+	Ds_FixWarning.setJSON(_tranSync.getDsJson("WARNING"));  	// Warning DS 셋팅 
+	console.log("[/CBSC056P.xml] [selectKCIS0200240()] ==> [02. 정액담보 조회 결과] [Ds_FixCoverKCIS,_갯수]"+ Ds_FixCoverKCIS.getRowCount() +"[Ds_FixCoverKCISRecv, 조회수]"+ Ds_FixCoverKCISRecv.getRowCount() ); 
+  	//console.log("[/CBSC056P.xml] [selectKCIS0200240()] ==> [02. 정액담보 조회 결과] [Ds_FixCoverKCIS,_갯수]"+ Ds_FixCoverKCIS.getRowCount() +"[Ds_FixCoverKCIS]"+ WebSquare.xml.serialize(Ds_FixCoverKCIS.getAllXML()) ); 
+ 	//console.log("[/CBSC056P.xml] [selectKCIS0200240()] ==> [03. 정액담보 조회 결과] [Ds_FixCoverKCISRecv, 조회수]"+ Ds_FixCoverKCISRecv.getRowCount() +"[Ds_FixCoverKCISRecv]"+ WebSquare.xml.serialize(Ds_FixCoverKCISRecv.getAllXML()) ); 
+   
+  	 wconv.filter(Ds_FixCoverKCIS, "sCvrgeCd=='A6000' || sCvrgeCd=='A6300' || sCvrgeCd=='A6100' || sCvrgeCd=='A4200' || sCvrgeCd=='A4209' "
+	                      + " || sCvrgeCd=='A4210' || sCvrgeCd=='A4299' || sCvrgeCd=='A1300' || sCvrgeCd=='A2000' || sCvrgeCd=='A1000' "
+	                      + " || sCvrgeCd=='A2800' || sCvrgeCd=='A3300' || sCvrgeCd=='A3100' || sCvrgeCd=='A5000' || sCvrgeCd=='A5100' "
+	                      + " || sCvrgeCd=='A5199' || sCvrgeCd=='A5300' || sCvrgeCd=='A4101' || sCvrgeCd=='A4102' || sCvrgeCd=='A4103' "
+	                      + " || sCvrgeCd=='A4104' || sCvrgeCd=='A4105' || sCvrgeCd=='A9504' || sCvrgeCd=='A9509' || sCvrgeCd=='A9510' ",true); 
+	//console.log("[/CBSC056P.xml] [selectKCIS0200240()] ==> [DS_갯수_91]"+ Ds_FixCoverKCIS.getRowCount()  ); 
+ 	
+    //에러처리
+    if (Ds_FixWarning.getRowCount() != 0) {
+        sFixMsg = "정액담보조회: " + Ds_FixWarning.getCellData(0, "msg");
+        return false;
+    }
+    //console.log("[/CBSC056P.xml] [selectKCIS0200240()] ==> [DS_갯수_92] [Ds_FixCoverKCISRecv.sAnswCd]"+ Ds_FixCoverKCISRecv.getCellData(0, "sAnswCd")  ); 
+    
+    if (Ds_FixCoverKCISRecv.getCellData(0, "sAnswCd") == "900") {
+        sFixMsg = "정액담보조회: 전문전송이 실패하였습니다.다시 조회 해 주세요.";
+        return false;
+        
+    } else if (Ds_FixCoverKCISRecv.getCellData(0, "sAnswCd") != "000") { 
+   		var sAnswMsg = DsWs_AnswCd.getCellData(wconv.findRow(DsWs_AnswCd, "sCd", Ds_FixCoverKCISRecv.getCellData(0, "sAnswCd")), "sHnglCdName");
+ 
+        sFixMsg = "정액담보조회: 조회되었으나 [" + sAnswMsg + Ds_FixCoverKCISRecv.getCellData(0, "sAnswCd") + "] 의 이유로 메세지가 표시되었습니다.";
+      
+        return true;
+    }
+    
+    return true;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_setsInsurDate
+// 내용        : 그리드 보험기간 셋팅
+//---------------------------------------------------------------------------
+scwin.lfn_setsInsurDate = function(sInsurStDate, sInsurEdDate) {
+    return wconv.mid(sInsurStDate, 0, 4) + "." + wconv.mid(sInsurStDate, 4, 2) + "." + wconv.mid(sInsurStDate, 6) + " ~ " + wconv.mid(sInsurEdDate, 0, 4) + "." + wconv.mid(sInsurEdDate, 4, 2) + "." + wconv.mid(sInsurEdDate, 6);
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_getCUSAA42Info()
+// 내용        : 가입설계 동의여부 확인 
+//---------------------------------------------------------------------------
+scwin.lfn_getCUSAA42Info = function(insrdID) {
+	 //console.log("[/CBSC056P.xml] [lfn_getCUSAA42Info()] ==> [가입설계 동의여부 확인] [insrdID]"+ insrdID );
+	 
+    //신용정보 동의 23조 동의여부 확인	 
+    wconv.clear(Ds_Search42);
+    
+    var RejectYN = "";    // 가입설계 동의 여부 체크 
+    
+   	var MethodObj = new callService("com.inswave.customer.task.CustTask", "getHandlerCUSAA42Info");  	// 01. 가입설계 동의 여부 조회 Obj 
+	MethodObj.setId("selectCollSettledListByDate");		// ID 셋팅
+	MethodObj.setParam("sCustNo", insrdID);				// Param 셋팅 
+	MethodObj.setParam("sProductType", "3");			// Param 셋팅 
+	MethodObj.setParam("sHandlerID", sHandlerID);	 	// Param 셋팅(우선순위: 사용인ID, 취급자ID, 로그인사번): 추가(2017.11.24) 
+	MethodObj.setUrl("/contract/CBSC056PController.do");  				// 서버단 호출 URL
+	MethodObj.setXPath("//*/CUSAA42");		// XPath 
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)]
+	MethodObj.send();		// 최종 전송 
+	//console.log("[/CBSC056P.xml] [lfn_getCUSAA42Info()] ==> [01. 가입설계 동의 여부 조회, 전송_완료] [TEST_91]");  
+ 
+	//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+ 
+	Ds_Search42.setJSON(_tranSync.getDsJson("CUSAA42"));		// DS 셋팅(조회 결과)  
+	//console.log("[/CBSC056P.xml] [lfn_getCUSAA42Info()] ==> [DS_갯수]"+ Ds_Search42.getRowCount() +"[Ds_Search42]"+ WebSquare.xml.serialize(Ds_Search42.getAllXML()) ); 
+ 
+    if (Ds_Search42.getCellData(0, "result") > 0) {
+        if (Ds_Search42.getCellData(0, "sAgmReq") == "Y") {
+            RejectYN = "Y"; //유효일자가 지난경우 다시 받기. 해당 칼럼이 다 체크해줌 
+            //2016.09.12(N1609-00035) : 배서에서 들어오는 경우는 유효일자 체크안함
+            if (!wconv.isExistVar(sPlanNo, true)) {		// 특정 Variable이 존재하는지 여부를 검색
+                if (wconv.left(sPlanNo, 1) == "N") { 
+              		RejectYN = "";
+                }
+            }
+        }
+    } else {
+        RejectYN = "Y"; 	// 가입설계 동의 여부 체크 (Y: 동의)
+    }
+	//onsole.log("[/CBSC056P.xml] [lfn_getCUSAA42Info()] ==> [가입설계 동의여부 확인] [RejectYN]"+ RejectYN );
+     
+    return RejectYN;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_getRealNo
+// 내용        : 실주민번호 조회
+//---------------------------------------------------------------------------
+scwin.lfn_getRealNo = function(sCustKeyNo) {
+	//console.log("[/CBSC056P.xml] [lfn_getRealNo()] ==> [실주민번호 조회] [sCustKeyNo]"+ sCustKeyNo );
+	
+	wconv.clear(Ds_CustNo);
+
+	var MethodObj = new callService("com.inswave.longterm.com.com.task.AXR300Task", "selectRealCustNo");  	// 01. 실주민번호 조회 Obj 
+	MethodObj.setId("selectCollSettledListByDate");		// ID 셋팅
+	MethodObj.setParam("sCustKeyNo", sCustKeyNo);			// Param 셋팅 
+	MethodObj.setUrl("/contract/CBSC056PController.do");  		// 서버단 호출 URL
+	MethodObj.setXPath("//*/LTI0000");		// XPath 
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)]
+	MethodObj.send();		// 최종 전송 
+	//console.log("[/CBSC056P.xml] [lfn_getRealNo()] ==> [01. 실주민번호 조회, 전송_완료] [TEST_91]");  
+ 
+	//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+ 
+	Ds_CustNo.setJSON(_tranSync.getDsJson("CUSAA42"));		// DS 셋팅(조회 결과)  
+	//console.log("[/CBSC056P.xml] [lfn_getRealNo()] ==> [DS_갯수]"+ Ds_CustNo.getRowCount() +"[Ds_CustNo]"+ WebSquare.xml.serialize(Ds_CustNo.getAllXML()) ); 
+  
+    if (Ds_CustNo.getRowCount() > 0 && wconv.length(Ds_CustNo.getCellData(0, "sRealCustNo")) > 0) {
+        return Ds_CustNo.getCellData(0, "sRealCustNo");
+        
+    } else {
+        return sCustKeyNo;
+    }
+};
+ 
+//**************************************************************************************************
+// Grid 칼럼 expression  처리 함수
+//**************************************************************************************************
+scwin.lfn_getColumnValue = function(data, formattedData, rowIndex, colIndex) { 
+	//console.log("[/CBSC056P.xml] [lfn_getColumnValue()] ==> [TEST_01] [grd_List.getColumnID(colIndex)]"+ grd_List.getColumnID(colIndex) +"[rowIndex]"+ rowIndex +"[colIndex]"+ colIndex  ); 
+ 
+	var sRslt = "";
+ 
+	if (grd_List.getColumnID(colIndex)  == "sInsCtrTpdPed") {  		// Grid 칼럼이 '보험기간' 이면  
+		var sInsCtrTpdPed = Ds_List01.getCellData(rowIndex, "sInsCtrTpdPed");   // 보험기간
+		sRslt = wconv.substr(sInsCtrTpdPed, 0, 4) +"-"+ wconv.substr(sInsCtrTpdPed, 4, 2) +"-"+  wconv.substr(sInsCtrTpdPed, 6, 2)
+		 		 +" ~ "+ wconv.substr(sInsCtrTpdPed, 8, 4) +"-"+ wconv.substr(sInsCtrTpdPed, 12, 2) +"-"+  wconv.substr(sInsCtrTpdPed, 14, 2);	// 보험기간 
+	 
+	 } else if (grd_List.getColumnID(colIndex)  == "sCovSpecificNm") {  		// Grid 칼럼이 '특약명' 이면    
+		var sCovSpecificName2 = Ds_List01.getCellData(rowIndex, "sCovSpecificName");   // 특약명  
+		var sCovName2 = Ds_List01.getCellData(rowIndex, "sCovName");    
+		//console.log("[/CBSC056P.xml] [lfn_getColumnValue()] ==> [TEST_04] [sCovSpecificName2]"+ sCovSpecificName2 +"[sCovName2]"+ sCovName2  ); 
+		   
+		if (wconv.length(sCovSpecificName2) > 0) {
+	    	sRslt = sCovSpecificName2;   // 특약명  
+		} else { 
+	     	sRslt =  sCovName2;  
+		} 
+ 
+   	 } else if (grd_List.getColumnID(colIndex)  == "sCovDatePed") {  		// Grid 칼럼이 '특약기간' 이면    
+		 if (util.isNull(Ds_List01.getCellData(rowIndex, "sCovDateFrom")) == false) {  		// Grid 칼럼이 '특약기간' 이면   
+			sCovDateFrom = Ds_List01.getCellData(rowIndex, "sCovDateFrom");   // 특약기간From 
+			sCovDateTo = Ds_List01.getCellData(rowIndex, "sCovDateTo");   		// 특약기간To 
+			sRslt = wconv.substr(sCovDateFrom, 0, 4) +"-"+ wconv.substr(sCovDateFrom, 4, 2) +"-"+  wconv.substr(sCovDateFrom, 6, 2)
+					+" ~ "+ wconv.substr(sCovDateTo, 0, 4) +"-"+ wconv.substr(sCovDateTo, 4, 2) +"-"+  wconv.substr(sCovDateTo, 6, 2);		// 특약기간  
+		 	//console.log("[/CBSC056P.xml] [lfn_getColumnValue2()] ==> [특약기간] [sRslt]"+ sRslt +"[sCovDateFrom]"+ sCovDateFrom +"[sCovDateTo]"+ sCovDateTo  ); 
+ 		}  
+ 	}  else if (grd_List.getColumnID(colIndex)  == "sPolStat") {  		// Grid 칼럼이 '계약상태' 이면  
+		var sPolStat = Ds_List01.getCellData(rowIndex, "sPolStat");   // 계약상태 
+		sRslt = wconv.decode(sPolStat, "1", "정상", "2", "만기", "3", "해지", "4", "실효", "5", "기타");		// 계약상태   
+	}
+  
+	return sRslt;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Close_OnClick
+// 내용        : 팝업닫기
+//---------------------------------------------------------------------------
+scwin.Button2_OnClick = function(e) {
+	wprom.close("");		
+};]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B250_Pop"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;  height:637px; left:0px; top:0px; overflow: hidden; width:794px;"
+            userData1="보험계약정보조회[B250_Pop]" userData2=" OnLoadCompleted:scwin.doInit; ">
+            <DataObjects>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+                <ServiceObject/>
+                <ServiceObject/>
+                <ServiceObject/>
+                <ServiceObject/>
+                <ServiceObject/>
+                <ServiceObject/>
+                <ServiceObject/>
+            </ServiceObjects>
+            <xf:group arcsize="8" class="sty_area_form" id="Shape2"
+                style="position:absolute; right:796px;  bottom:680px; height:26px;left:0px;top:53px; width:792px;" userData3="RoundRect"/>
+            <w2:textbox class="sty_lb_Basic" id="Static0" label="피보험자코드"
+                style="position:absolute; VAlign:Middle;  height:24px;left:0px;top:53px; width:80px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static1" label="피보험자명"
+                style="position:absolute; VAlign:Middle;  height:24px;left:270px;top:53px; width:80px;" tagname=""/>
+            <w2:textbox class="sty_lb_Basic" id="Static2" label="피보험자와관계"
+                style="position:absolute; VAlign:Middle;  height:24px;left:531px;top:53px; width:96px;" tagname=""/>
+            <w2:textbox id="Static95" label="피보험자" style="position:absolute;height:20px;width:129px;left:0px;VAlign:Middle;top:33px;" tagname="" class="sub_pop_title02"/>
+            <xf:input class="sty_ipt_form" disabled="true" id="edt_sInrpsName"
+                style="position:absolute; border-style:solid;  height:20px;left:377px;top:56px; width:144px;" tabIndex="5"/>
+            <xf:input class="sty_ipt_form" disabled="true" id="edt_sRelnName"
+                style="position:absolute; border-style:solid;  height:20px;left:649px;top:56px; width:132px;" tabIndex="6"/>
+            <xf:input class="sty_ipt_form" dataType="text" displayFormat="######-#######" id="msk_sInrpsCd"  
+                style="position:absolute; border-style:solid;  height:20px;left:107px;top:56px; width:153px;" tabIndex="7" disabled="true"/>
+            <xf:trigger class="detail_bu02" ev:onclick="scwin.Button2_OnClick" id="Button2"
+                style="position:absolute;   ImageID:btn_Comm_Cancel;  height:20px; left:876px; top:16px; width:27px; min-width:27px;" tabIndex="10" userData1="" type="anchor">
+                <xf:label><![CDATA[취소]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="detail_bu02" ev:onclick="scwin.Btn_NewReg_OnClick" id="Button0"
+                style="position:absolute;   ImageID:btn_Comm_Confirmation;  height:20px; left:816px; top:16px; width:27px; min-width:27px;" tabIndex="11" userData1="" type="anchor">
+                <xf:label><![CDATA[확인]]></xf:label>
+            </xf:trigger>
+            <w2:textbox id="Static6" label="보험계약정보조회" style="position:absolute; VAlign:Middle;  height:24px; left:0px; top:0px; " tagname="" class="sub_pop_title01"></w2:textbox>
+            
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.Button2_OnClick" id="Button1"
+                style="position:absolute;height:20px;ImageID:btn_Comm_Close;width:58px;left:743px;top:0px;" tabIndex="13" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+            <xf:switch id="switch_129" style=" ">
+                <xf:case id="Default_130" style=" ">
+                	<!--//  01. 실손사전조회 Grid //-->
+                    <w2:gridView autoFit="allColumn" autoFitMinWidth="100" class="sty_Grid" dataList="Ds_List01" focusMode="row"
+                        id="grd_List" inputType="text" readOnly="true"
+                        style="position:absolute;height:197px;EndLineColor:default;width:792px;left:0px;InputPanel:FALSE;border:Flat;AutoFitEndLine:Hide;UseDBuff:true;right:791px;FixedColSizing:TRUE;top:109px;" tabIndex="15">
+                        <w2:header>
+                            <w2:row>
+                                <w2:column dataType="text" id="head_id_1098" inputType="text" readOnly="true" style="height:20px;"
+                                    textAlign="center" userData1="0" userData3="0" value="보험기간" width="171"/> 
+                                <w2:column dataType="text" id="head_id_1100" inputType="text" readOnly="true" style="height:20px;"
+                                    textAlign="center" userData1="2" userData3="0" value="보상기간" width="140"/> 
+                                <w2:column dataType="text" id="head_id_1102" inputType="text" readOnly="true" style="height:20px;"
+                                    textAlign="center" userData1="4" userData3="0" value="특약명" width="224"/>
+                                <w2:column dataType="text" id="head_id_1103" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="5" userData3="0" value="회사명" width="116"/>
+                                <w2:column dataType="text" id="head_id_1104" inputType="text" readOnly="true" style="height:20px;"
+                                    textAlign="center" userData1="6" userData3="0" value="copayment" width="116"/>
+                    		 </w2:row>
+    						<w2:row id="row3" style=""> 
+                                <w2:column dataType="text" id="head_id_1106" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="0" userData3="1" value="특약기간" width="171"/> 
+                                <w2:column dataType="text" id="head_id_1108" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="2" userData3="1" value="가입금액(천원)" width="140"/> 
+                                <w2:column colSpan="2" dataType="text" id="head_id_1110" inputType="text" readOnly="true"
+                                    style="height:20px;" userData1="4" userData3="1" value="보장내용" width="340"/>  
+                                     <w2:column dataType="text" id="head_id_1105" inputType="text" readOnly="true" style="height:20px;"
+                                    textAlign="center" userData1="7" userData3="0" value="계약상태" width="0"/>
+                            </w2:row>
+                        </w2:header>
+ 						<w2:gBody>
+                           <w2:row>
+                               <w2:column dataType="text" expression=''
+                               	id="sInsCtrTpdPed" inputType="text"
+                               	readOnly="true" style=""
+                               	textAlign="center" userData1="0"
+                               	userData3="0" width="171"
+                               	customFormatter="scwin.lfn_getColumnValue" /> <!-- 보험기간 -->   
+                               <w2:column dataType="text" id="sGuaranteeDateName" inputType="text" readOnly="true" style=""
+                                   textAlign="center" userData1="2" userData3="0" width="140"/>	<!-- 보상기간 -->   
+                               <w2:column dataType="text"
+                               	expression=""
+                               	id="sCovSpecificNm" inputType="text"
+                               	readOnly="true" style=""
+                               	textAlign="center" userData1="4"
+                               	userData3="0" width="224" customFormatter="scwin.lfn_getColumnValue"/><!-- 특약명 -->  
+                               <w2:column dataType="text" id="sProcOffcName" inputType="text" readOnly="true" style="" textAlign="center"
+                                   userData1="5" userData3="0" width="116"/>		<!-- 회사명 -->  
+                               <w2:column dataType="text" id="sCopaymentName" inputType="text" readOnly="true" style="" textAlign="center"
+                                   userData1="6" userData3="0" width="116"/>		<!-- copayment -->  
+							 </w2:row>
+    						<w2:row id="row4" style="">
+                               <w2:column dataType="text"
+                               	expression=""
+                               	id="sCovDatePed" inputType="text"
+                               	readOnly="true" style=""
+                               	textAlign="center" userData1="7"
+                               	userData3="0" width="171" customFormatter="scwin.lfn_getColumnValue"/><!-- 특약기간 -->   
+                               <w2:column dataType="number"
+                               	expression=""
+                               	id="nAcdImt" inputType="text"
+                               	readOnly="true" style=""
+                               	textAlign="right" userData1="2"
+                               	userData3="1" width="140" customFormatter="" displayFormat="#,###"/><!-- 가입금액(천원) -->   
+                               <w2:column colSpan="2" dataType="text" id="sGuaranteeName" inputType="text" readOnly="true" style=""
+                                   textAlign="center" userData1="4" userData3="1" width="340"/>	<!-- 보장내용 -->    
+                               <w2:column dataType="text"
+                               	expression=""
+                               	id="sPolStat" inputType="text"
+                               	readOnly="true" style=""
+                               	textAlign="center" userData1="6"
+                               	userData3="1" width="116" customFormatter="scwin.lfn_getColumnValue"/><!-- 계약상태 -->     
+                           </w2:row>
+                       </w2:gBody>  
+                    </w2:gridView>
+                </xf:case>
+            </xf:switch>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.btn_search_OnClick" id="btn_search01"
+                style="position:absolute;height:20px;ImageID:btn_Comm_Search;width:58px;left:692px;top:0px;" tabIndex="16" type="anchor">
+                <xf:label><![CDATA[조회]]></xf:label>
+            </xf:trigger>
+            <xf:select1 appearance="minimal" emptyItem="true" id="Cmb_AnswCd"
+                style="position:absolute;   Text:Combo0;  height:21px; left:912px; top:424px; width:40px;" tabIndex="19" renderType="native">
+                <xf:choices/>
+            </xf:select1>
+            <xf:select1 appearance="minimal" emptyItem="true" id="Cmb_NlisrFxCrStatCd"
+                style="position:absolute;   Text:Combo0;  height:21px; left:808px; top:424px; width:48px;" tabIndex="17" renderType="native">
+                <xf:choices/>
+            </xf:select1>
+            <xf:select1 appearance="minimal" emptyItem="true" id="Cmb_FinaOrgnCd"
+                style="position:absolute;   Text:Combo0;  height:21px; left:864px; top:424px; width:40px;" tabIndex="18" renderType="native">
+                <xf:choices/>
+            </xf:select1>
+            <xf:select1 appearance="minimal" emptyItem="true" id="Cmb_NlisrAssoCvrgeCd"
+                style="position:absolute;   Text:Combo0;  height:21px; left:952px; top:424px; width:40px;" tabIndex="20" renderType="native">
+                <xf:choices/>
+            </xf:select1>
+            <w2:textbox id="Static10" label="실손사전조회"
+                style="position:absolute;height:20px;width:96px;left:0px;VAlign:Middle;top:89px;" tagname="" class="sub_pop_title02"/>
+            <w2:textbox id="Static11" label="정액담보조회"
+                style="position:absolute;height:20px;width:80px;left:0px;VAlign:Middle;top:322px;" tagname="" class="sub_pop_title02"/>
+            <xf:trigger ev:onclick="scwin.selectKCIS0200200" id="Button3"
+                style="position:absolute;   height:32px; left:808px; top:464px;width:80px;min-width:80px;" tabIndex="25" class="detail_bu02" userData1="" type="anchor">
+                <xf:label><![CDATA[정액담보조회]]></xf:label>
+            </xf:trigger>
+            <xf:trigger ev:onclick="scwin.selelctFxamtCvrge1000660" id="Button4"
+                style="position:absolute;   height:32px; left:808px; top:504px; width:80px;min-width:80px;" tabIndex="26" class="detail_bu02" userData1="" type="anchor">
+                <xf:label><![CDATA[생보정액담보]]></xf:label>
+            </xf:trigger>
+            <xf:switch id="switch_130" style=" ">
+                <xf:case id="Default_131" style=" "> 
+                	<!--//  02. 정액담보조회 Grid //-->
+			     	<w2:gridView autoFit="allColumn" autoFitMinWidth="100" class="sty_Grid" dataList="Ds_FixCoverKCIS"
+                        ev:onblur="scwin.nfn_CopyGridCell" focusMode="row" id="Grid1" inputType="text" readOnly="true"
+                        style="position:absolute;height:293px;EndLineColor:default;width:792px;left:0px;InputPanel:FALSE;border:Flat;AutoFitEndLine:Hide;UseDBuff:true;right:791px;FixedColSizing:TRUE;top:344px;" tabIndex="27">
+                        <w2:header>
+                            <w2:row>
+                                <w2:column rowspan="2" dataType="text" id="head_id_1120" inputType="text" readOnly="true" style="height:20px;" userData1="0" userData3="0" value="담보명"  width="160" rowSpan="2"/>
+								<w2:column colspan="2" dataType="text" id="head_id_1121" inputType="text" readOnly="true" style="height:20px;" userData1="1" userData3="0" value="전업권"  width="100" colSpan="2"/>
+                                <w2:column colspan="2" dataType="text" id="head_id_1122" inputType="text" readOnly="true" style="height:20px;" userData1="2" userData3="0" value="생보 "  width="140" colSpan="2"/>
+                                <w2:column colspan="2" dataType="text" id="head_id_1123" inputType="text" readOnly="true" style="height:20px;" userData1="3" userData3="0" value="공제"  width="140" colSpan="2"/>
+								<w2:column colspan="2" dataType="text" id="head_id_1124" inputType="text" readOnly="true" style="height:20px;" userData1="4" userData3="0" value="손보"  width="140" colSpan="2"/>
+                            </w2:row>
+							<w2:row> 
+								<w2:column dataType="text" id="head_id_1125" inputType="text" readOnly="true" style="height:20px;" userData1="5" userData3="0" value="건수"  width="40"/>
+                                <w2:column dataType="text" id="head_id_1126" inputType="text" readOnly="true" style="height:20px;" userData1="6" userData3="0" value="가입금액(만원)"  width="100"/>
+                                <w2:column dataType="text" id="head_id_1127" inputType="text" readOnly="true" style="height:20px;" userData1="7" userData3="0" value="건수"  width="40"/>
+                                <w2:column dataType="text" id="head_id_1128" inputType="text" readOnly="true" style="height:20px;" userData1="8" userData3="0" value="가입금액(만원)"  width="100"/>
+								<w2:column dataType="text" id="head_id_1129" inputType="text" readOnly="true" style="height:20px;" userData1="9" userData3="0" value="건수"  width="40"/>
+                                <w2:column dataType="text" id="head_id_1130" inputType="text" readOnly="true" style="height:20px;" userData1="10" userData3="0" value="가입금액(만원)"  width="100"/>
+                                <w2:column dataType="text" id="head_id_1131" inputType="text" readOnly="true" style="height:20px;" userData1="11" userData3="0" value="건수"  width="40"/>
+                                <w2:column dataType="text" id="head_id_1132" inputType="text" readOnly="true" style="height:20px;" userData1="12" userData3="0" value="가입금액(만원) "  width="100"/>
+                            </w2:row> 
+                        </w2:header>
+						 <w2:gBody>
+                             <w2:row>
+                                <w2:column tdataType="text" id="sCvrgeCd" inputType="select" readOnly="true" style="height:27px; combodisplaynltext:true; " textAlign="left" userData1="0" userData3="0" width="160">	<!-- 담보명  -->
+                                    <w2:choices>
+                                        <w2:itemset nodeset="data:DsWs_NlisrAssoCvrgeCd">
+                                            <w2:value ref="sCd"/>
+                                            <w2:label ref="sHnglCdName"/>
+                                        </w2:itemset>
+                                    </w2:choices>
+                                </w2:column>
+								<w2:column dataType="number" displayFormat="#,###" id="nCvrgeCt" inputType="text" readOnly="true" style="" textAlign="right" userData1="1" userData3="0" width="40"/>			<!-- 건수[전업권]  - -->
+                                <w2:column dataType="number" displayFormat="#,###" id="nCvrgeInsAmt" inputType="text" readOnly="true" style="" textAlign="right" userData1="2" userData3="0" width="100"/>	<!-- 가입 금액(만원)[전업권]  -->
+								<w2:column dataType="number" displayFormat="#,###" id="nLifeCtA" inputType="text" readOnly="true" style="" textAlign="right" userData1="3" userData3="0" width="40"/>			<!-- 건수[생보]   -->
+                                <w2:column dataType="number" displayFormat="#,###" id="nLifeInsAmtA" inputType="text" readOnly="true" style="" textAlign="right" userData1="4" userData3="0" width="100"/>	<!-- 가입 금액(만원)[생보]  -->
+								<w2:column dataType="number" displayFormat="#,###" id="nDedCtA" inputType="text" readOnly="true" style="" textAlign="right" userData1="5" userData3="0" width="40"/>			<!-- 건수[공제]   -->
+                                <w2:column dataType="number" displayFormat="#,###" id="nDedInsAmtA" inputType="text" readOnly="true" style="" textAlign="right" userData1="6" userData3="0" width="100"/>	<!-- 가입 금액(만원)[공제]  -->
+								<w2:column dataType="number" displayFormat="#,###" id="nNonLifeCtA" inputType="text" readOnly="true" style="" textAlign="right" userData1="7" userData3="0" width="40"/>			<!-- 건수[손보]   -->
+                                <w2:column dataType="number" displayFormat="#,###" id="nNonLifeInsAmtA" inputType="text" readOnly="true" style="" textAlign="right" userData1="8" userData3="0" width="100"/>	<!-- 가입 금액(만원)[손보]  -->                                
+                            </w2:row>	
+                        </w2:gBody>		
+                    </w2:gridView>
+                    
+                </xf:case>
+            </xf:switch>
+            <w2:textbox class="sty_lb_Detail" id="stc_basic1"
+                label="벌금이나 교통사고처리지원금,자동차사고 변호사선임비용의 경우 비레보상되는 담보로, 해당 담보의 중복가입여부를 확인하기 위해 보험계약과 관련 손해보험협회 및 보험개발원에 개인식별 정보를 제공하여 다른 보험회사에 가입된 본인의 보험계약정보 및 비례보상특약을 조회하는데 동의하십니까?"
+                style="position:absolute;height:52px;WordWrap:TRUE;background:#eff5fb;width:749px;left:39px;border:1px solid #b0c6dd;VAlign:Middle;top:704px;" tagname=""/>
+            <w2:textbox id="stc_basic4"
+                label="(실손담보 중복가입 조회 - 실손담보가 없는 경우) 고객님께서는 향후에 실손담보를 타사에 중복가입하시게 되면, 실제 부담하신 금액내에서 비례보상되므로 이 점 유념해 주시기 바랍니다."
+                style="position:absolute;   height:32px;left:161px;top:818px; width:744px;" tagname="" class="txt_red"/>
+            <w2:textbox class="sty_lb_Detail" id="Static9" label="A"
+                style="position:absolute;height:65px;text-align:center;background:#eff5fb;width:31px;left:7px;font-weight:bold;border:1px solid #b0c6dd;VAlign:Middle;top:838px;" tagname=""/>
+            <w2:textbox class="sty_lb_Detail" id="Static8" label="Q"
+                style="position:absolute;height:58px;text-align:center;background:#eff5fb;width:31px;left:7px;font-weight:bold;border:1px solid #b0c6dd;VAlign:Middle;top:779px;" tagname=""/>
+            <w2:textbox class="sty_lb_Detail" id="Static7" label="Q"
+                style="position:absolute;height:74px;text-align:center;background:#eff5fb;width:31px;left:7px;font-weight:bold;border:1px solid #b0c6dd;VAlign:Middle;top:704px;" tagname=""/>
+            <w2:textbox class="sty_lb_Detail" id="stc_basic3"
+                label="보험계약정보를 조회후 조회된 내용을 고객에게 설명(반드시 고객에게 타사에 가입된 내용을 다시 한번 확인하라고 안내함) 보험계약정보조회를 통하여 조회한 내역을 기재"
+                style="position:absolute;height:65px;WordWrap:TRUE;background:#eff5fb;width:749px;left:39px;border:1px solid #b0c6dd;top:838px;" tagname=""/>
+            <w2:textbox class="sty_lb_Detail" id="stc_basic2" label="다수의 보험계약이 체결되어 있을 경우 각각의 계약에서 실제로 발생한 금액을 한도로 비례보상하여 드립니다."
+                style="position:absolute;height:36px;WordWrap:TRUE;background:#eff5fb;width:749px;left:39px;border:1px solid #b0c6dd;VAlign:Middle;top:779px;" tagname=""/>
+            <xf:select1 appearance="full" class="" cols="2" id="Radio0" ref="data:Ds.sOthMedicalYN" rows="1" selectedIndex="0"
+                style="position:absolute;height:20px;width:110px;left:45px;ColumnCount:2;top:760px;" tabIndex="35">
+                <xf:choices>
+                    <xf:itemset nodeset="data:Ds_Yn">
+                        <xf:label ref="TEXT3"/>
+                        <xf:value ref="CODE"/>
+                    </xf:itemset>
+                </xf:choices>
+            </xf:select1>
+            <xf:select1 appearance="full" class="" cols="2" id="Radio7" ref="data:Ds.sExplainProIndYN" rows="1"
+                selectedIndex="0"
+                style="position:absolute;height:20px;width:110px;left:45px;ColumnCount:2;top:818px;" tabIndex="36">
+                <xf:choices>
+                    <xf:itemset nodeset="data:Ds_Yn">
+                        <xf:label ref="TEXT3"/>
+                        <xf:value ref="CODE"/>
+                    </xf:itemset>
+                </xf:choices>
+            </xf:select1>
+            <w2:textbox class="sty_lb_Detail" id="Static4"
+                label="다수의 보험계약이 체결되어 있을 경우 각각의 계약에서 실제로 발생한 금액을 한도로 비례보상하여 드립니다. 다수계약이 있으신데 가입하시겠습니까?"
+                style="position:absolute; WordWrap:TRUE;    VAlign:Middle;  border:1px solid #b0c6dd;  background:#eff5fb;  height:36px; left:874px; top:146px; width:747px;" tagname=""/>
+            <w2:textbox class="sty_lb_Detail" id="stc_Svt1"
+                label="『개인정보보호법』 제15조,제22조,제23조,제24조 및 『신용정보의 이용 및 보호에 관한 법률』 제32조 및 제33조에 따라 귀사가 아래와  같은 내용으로 본인의 개인(신용)정보를 수집ㆍ이용하는 것에 동의합니다 "
+                style="position:absolute;height:52px;WordWrap:TRUE;background:#eff5fb;width:749px;left:808px;border:1px solid #b0c6dd;VAlign:Middle;top:200px;" tagname=""/>
+            <w2:textbox class="sty_lb_Detail" id="stc_Svt2"
+                label="『신용정보의 이용 및 보호에 관한 법률』 제32조 및 제33조에 따라 귀사가 아래와같은 내용으로 손해보험협회 등  신용정보집중기관으로부터 본인의 신용정보를 조회하는 것에 대하여 동의합니다"
+                style="position:absolute;height:36px;WordWrap:TRUE;background:#eff5fb;width:749px;left:808px;border:1px solid #b0c6dd;VAlign:Middle;top:276px;" tagname=""/>
+        </xf:group>
+    </body>
+</html>

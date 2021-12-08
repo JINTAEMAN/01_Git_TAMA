@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+    <!-- 
+        ###################################################
+         파일명 : CBSC114P.xml
+         프로그램명 : 타보험 가입 사항[B220_Pop]
+         설 명 :  타보험 가입 사항[B220_Pop]
+         작성자 : 진태만
+         작성일 : 2017.10.06
+ 
+         수정일자            수정자                  수정내용
+        ==================================================
+        2017.10.06        진태만          최초작성
+        ###################################################
+     -->
+	 <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+            
+					<!-- 타보험료 사항 정보 Ds(Ds_LTIDA06) -->
+	            	<w2:dataList id="Ds_LTIDA06"  baseNode="list" saveRemovedData="true" repeatNode="map">
+	            		<w2:columnInfo>
+							<w2:column id="sPlanNo" name="설계번호" dataType="text"/>
+							<w2:column id="sOthrIscoCrNo" name="계약번호" dataType="text"/>
+	            			<w2:column id="sMdfcDate" name="name1" dataType="text"/>	            			 
+	            			<w2:column id="sInptDate" name="name3" dataType="text"/>
+	            			<w2:column id="sInptHms" name="name4" dataType="text"/>
+	            			<w2:column id="sMdfcHms" name="name5" dataType="text"/>
+	            			<w2:column id="sGdName" name="name6" dataType="text"/>
+	            			<w2:column id="sInsurStrtdate" name="name7" dataType="text"/>
+	            			<w2:column id="sInsurEndDate" name="name8" dataType="text"/>
+	            			<w2:column id="nPrem" name="name9" dataType="text"/>
+	            			<w2:column id="sPsnPrprtGroupFlgcd" name="name10" dataType="text"/>
+	            			<w2:column id="sFinaOrgNm" name="name11" dataType="text"/>
+	            			<w2:column id="sInptDlerIP" name="name12" dataType="text"/>
+	            			<w2:column id="sMdfcDlerIP" name="name13" dataType="text"/>
+	            			<w2:column id="sMdfcDler" name="name14" dataType="text"/>
+	            			<w2:column id="nOthrInsurSeqno" name="name15" dataType="text"/> 
+	            			<w2:column id="nCrChngNo" name="name17" dataType="text"/>
+	            			<w2:column id="nInsAmt" name="name18" dataType="text"/>
+	            			<w2:column id="nPsnPrprtGroupSeqno" name="name19" dataType="text"/>
+	            			<w2:column id="sInptDler" name="name20" dataType="text"/>
+	            			<w2:column id="execFlag" name="저장Flag" dataType="text"/>
+	            		</w2:columnInfo>
+	            	</w2:dataList>
+            	
+   					<!-- 타사보험 Ds(Ds_LTIDA06Tran) -->
+					<w2:dataList baseNode="list" id="Ds_LTIDA06Tran" repeatNode="map">
+	            		<w2:columnInfo>
+	            			<w2:column dataType="text" id="nSeqno" 		name="nSeqno" />
+	            			<w2:column dataType="text" id="sFinaOrgnCd" 		name="sFinaOrgnCd" />
+	            			<w2:column dataType="text" id="sOthrIscoCrNo" 		name="계약번호" />
+	            			<w2:column dataType="text" id="sGdName" 		name="sGdName" />
+	            			<w2:column dataType="text" id="sInsurStrtdate" 		name="sInsurStrtdate" />
+	            			<w2:column dataType="text" id="sInsurEndDate" 		name="sInsurEndDate" />
+	            			<w2:column dataType="text" id="nInsAmt" 		name="nInsAmt" />
+	            			<w2:column dataType="text" id="nPrem" 		name="nPrem" />
+	            			<w2:column dataType="text" id="nOthrInsurSeqno" 		name="nOthrInsurSeqno" />
+	            			<w2:column dataType="text" id="execFlag" 		name="execFlag" />
+	            			<w2:column dataType="text" id="sFinaOrgNm" 		name="sFinaOrgNm" />
+	            		</w2:columnInfo>
+	            	</w2:dataList>
+					
+					<!-- 기타 정보 Dss(Ds_LTIDA06TranReq) -->
+						<w2:dataList baseNode="list" id="Ds_LTIDA06TranReq" repeatNode="map">
+	            		<w2:columnInfo>
+	            			<w2:column dataType="text" id="sPlanNo" 		name="설계번호" />
+	            			<w2:column dataType="text" id="sPsnGroupFlgcd" 		name="sPsnGroupFlgcd" />
+	            			<w2:column dataType="text" 		id="sPsnPrprtGroupSeqno" name="sPsnPrprtGroupSeqno" />
+	            			<w2:column dataType="text" id="nCrChngNo" 		name="nCrChngNo" />
+	            			<w2:column dataType="text" 		id="nOthrInsurSeqnoMax" name="nOthrInsurSeqnoMax" />
+	            			<w2:column dataType="text" id="gUserID" 		name="gUserID" />
+	            			<w2:column dataType="text" id="gUserIP" 		name="gUserIP" />
+	            		</w2:columnInfo>
+	            	</w2:dataList>            	            	
+            	  
+            	<w2:dataList baseNode="list" id="DsWs_LTIDA06"
+            		repeatNode="map"
+            		userData2="//hashtable/data[@hashkey='lTIDA06ListDoc']/vector/data/LTIDA06" />
+            	<w2:dataList baseNode="list" id="DsWs_InsIsco"
+            		repeatNode="map"
+            		userData2="//hashtable/data[@hashkey='itemVt']/vector/data/LTIAX01" />
+            	             		            	 
+            	<w2:dataList id="Ds_InsIsco" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sMdfcDate" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInptDate" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInptHms" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sClsfCd" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMdfcHms" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInptDlerNm" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInptDlerIP" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sKDICd" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEngCdName" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCdType" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMdfcDlerIP" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMdfcDlerNm" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMdfcDler" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplStrtDate" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHnglCdName" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplEndDate" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSeqno" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCd" name="name18"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCdTypeName" name="name19"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sClsfName" name="name20"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInptDler" name="name21"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>            	
+            	
+            	<w2:dataList baseNode="list" id="DsWs_Warning" keyNode="//*/WARNING" repeatNode="map"></w2:dataList>              	
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        
+		<!--// js Script include //--> 
+		<script src="/cm/js/convertJs/Global_Script.js"/>
+		<script src="/cm/js/convertJs/comm_Webservice.js"/> 
+		<script src="/cm/js/convertJs/Marine_Script.js"/> 
+	 	
+        <script><![CDATA[
+		 
+ /****************************************************************************
+ * 프로그램번호   : B220
+ * 프로그램명     : 타보험 가입사항
+ * 파일명         : B220_Pop.xml
+ * 프로그램 내용  : 타보험 가입사항
+ * 관련 프로그램  : sCrNoPop
+ * 작성자         : 김경일
+ * 작성일         : 2010-10-12
+ * 저작권         : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역       : 
+ ****************************************************************************/
+
+var sPlanNoPop = ""; 
+var sPsnGroupFlgcdPop = "";	//설계번호 
+var sPsnPrprtGroupSeqnoPop = "";	//피보험자단체구분코드 
+var sCrChngNoPop = "";	//피보험자단체일련번호 
+var nCountPop = 0;		//계약변경번호 
+var sCrNoPop = "";	//조회된 타사보험건수(없으면 0) 
+var nOthrInsurSeqnoMax = 0;	 //조회된 타보험 일련번호 중 맥스값
+var sOnlySrarch = "";	//조회만 가능하게 처리  
+var parent_Ds_LTIDA00 = "";		// 부모창 보험 기본사항 정보 Ds Set
+ 
+//---------------------------------------------------------------------------
+// function 명 : B220_OnLoadCompleted
+// 내용        : 화면로딩시 메인으로부터 파라메터값 담음
+//---------------------------------------------------------------------------
+scwin.init = function() {
+	console.log("[/CBSC114P.xml] [init()] ==> [폼 로딩] [TEST_01]" );
+ 	
+	var pro = Promise.resolve();
+	window.top.util.winTopShowModalChk = "T";
+	util.winTopShowModal();
+
+	pro = pro.then(function(rv) {
+		return util.winTopShowModalPromise();
+	});
+
+	pro = pro.then(function(rv) {
+		// init 부분 함수 입력하는곳  // =================================================>
+		
+		var indata = $w.getParameter("param");
+		var inJSON = JSON.parse(indata); 	// 부모창에서 받아온 값( 예) inJSON.sMyPlan)
+		
+		if (!util.isNull(inJSON.sPlanNo)) 	sPlanNoPop = inJSON.sPlanNo;	 //설계번호  
+		if (!util.isNull(inJSON.sPsnGroupFlgcd)) 	sPsnGroupFlgcdPop = inJSON.sPsnGroupFlgcd;	 //설계번호  
+		if (!util.isNull(inJSON.sPsnPrprtGroupSeqno)) 	sPsnPrprtGroupSeqnoPop = inJSON.sPsnPrprtGroupSeqno;		//seq 
+		if (!util.isNull(inJSON.nCrChngNo)) 	nCrChngNoPop = inJSON.nCrChngNo;	//변경일련번호 
+		if (!util.isNull(inJSON.sCrChngNo)) 	sCrChngNoPop = inJSON.sCrChngNo;	//변경일련번호S
+		if (!util.isNull(inJSON.sCrNo)) 	sCrNoPop = inJSON.sCrNo;		//조회된 타사보험건수
+		if (!util.isNull(inJSON.nCount)) 	nCountPop = inJSON.nCount;	//계약변경번호 
+		//console.log("[/CBSC114P.xml] [init()] ==> [폼 로딩] [nCountPop]"+ nCountPop +"[sPsnGroupFlgcdPop]"+ sPsnGroupFlgcdPop +"[sPsnPrprtGroupSeqnoPop]"+ sPsnPrprtGroupSeqnoPop +"[sCrChngNoPop]"+ sCrChngNoPop );  
+	   
+	   	var pObj = wprom.getParamObject(); 
+		parent_Ds_LTIDA00 = pObj.Ds_LTIDA00;	// 부모창 피보험자 정보 Ds Set 
+		//console.log("[/CBSC114P.xml] [init()] ==> [폼 로딩] ==> [parent_Ds_LTIDA00, 갯수]"+ parent_Ds_LTIDA00.getRowCount() );  
+	  
+	    scwin.lfn_Search();		// 타보험료사항 조회
+	 
+	    if (wconv.length(sOnlySrarch) > 0) {		//조회만 가능하게 처리
+	    	//console.log("[/CBSC114P.xml] [init()] ==> [폼 로딩] [조회만 가능하게 처리] [sOnlySrarch]"+ sOnlySrarch );
+			btn_save.setDisabled(true);	 	// 저장 버튼 비활성화
+	    }
+  
+		if (wconv.length(sPlanNoPop) > 0) {  	// 활성화 처리 
+			if (wconv.length(parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd")) > 0) {	   // 진행상태가 00 완료 90 수납대기, 52~58 조건부 승인일 경우 ==> 화면 비활성화
+			  	if (parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd") == "00" || parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd") == "90"  
+	               	|| (wconv.toNumber(parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd")) >= 52 && wconv.toNumber(parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd")) <= 58)) {
+	             	//console.log("[/CBSC114P.xml] [init()] ==> [폼 로딩] [TEST_51]  [활성화 처리] [진행상태]"+ parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd") );
+	             	scwin.lfn_ComponentEnable(B220_Pop, "btn_close", false);   // 계약상태별 화면 비활성 처리 
+	             	console.log("[/CBSC114P.xml] [lfn_Search()] ==> [조회 처리_완료] [TEST_72] [계약상태별 화면 비활성 처리_OK] [설계번호]"+ sPlanNoPop +"[진행상태]"+ parent_Ds_LTIDA00.getCellData(0, "sPlanProgRankCd") );
+                }
+	      	}
+		} 
+ 		
+		return ;		// init 함수를 종료하고자 할때 사용
+		// return Promise.reject("오류관련처리"); // =================================================>
+	});
+
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});
+	
+	//pro = pro.catch(function(rj) {
+		//util.winTopHideModal();
+		//alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+	//});
+	 
+	return pro;
+	 
+	//console.log("[/CBSC114P.xml] [init()] ==> [폼 로딩] [TEST_end]" );  
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Search
+// 내용        : 조회버튼 클릭시 처리
+//---------------------------------------------------------------------------
+scwin.lfn_Search = function() {
+	//console.log("[/CBSC114P.xml] [lfn_Search()] ==> [조회 처리] [TEST_01]" );
+	
+	var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB220Task", "getOtcmPremList");	// 타보험료사항 조회 Obj
+	MethodObj.setId("getOtcmPremList");	// ID 셋팅  
+	MethodObj.setParam("sCrNo", sCrNoPop);	// Param 셋팅(계약번호)  
+	MethodObj.setParam("sPlanNo", sPlanNoPop);	// Param 셋팅(계약번호)  
+	MethodObj.setParam("sPsnGroupFlgcd", sPsnGroupFlgcdPop);	// Param 셋팅(계약번호)  
+	MethodObj.setParam("sPsnPrprtGroupSeqno", sPsnPrprtGroupSeqnoPop);	// Param 셋팅(계약번호)  
+	MethodObj.setParam("sCrChngNo", sCrChngNoPop);	// Param 셋팅(계약번호)  
+	MethodObj.setParam("nCount", nCountPop);	// Param 셋팅(계약번호)    
+	MethodObj.setUrl("/contract/CBSC114PController.do");  // 서버단 호출 URL  
+	MethodObj.setXPath("//*/LTIDA06");					// XPath(Ds_LTIDA00)
+	MethodObj.addXPath("//*/LTIAX01");		// XPath(Ds_Pibo)  
+	MethodObj.addXPath("//*/WARNING");		// XPath(DsWs_Warning)
+	MethodObj.setXPathDs(); 	// XPath 전체 경로 사용할 경우
+	MethodObj.sync();		// 동기 처리[기본(async:비동기)]
+	MethodObj.setXPathDs();
+	MethodObj.send();		// 최종 전송
+	//console.log("[/CBSC114P.xml] [lfn_Search()] ==> [01. 타보험료사항 조회, 전송_완료] [TEST_91]");
+
+	//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+ 
+	Ds_LTIDA06.setJSON(_tranSync.getDsJson("//*/LTIDA06"));				// 타보험료 사항 정보 Ds 셋팅
+	Ds_InsIsco.setJSON(_tranSync.getDsJson("//*/LTIAX01"));					// 피보험자 정보 Ds 셋팅 
+	DsWs_Warning.setJSON(_tranSync.getDsJson("//*/WARNING"));  		// Warning DS 셋팅(조회 결과)  
+	//console.log("[/CBSC114P.xml] [lfn_Search()] ==> [Ds_LTIDA06_갯수]"+ Ds_LTIDA06.getRowCount() +"[Ds_LTIDA06]"+ WebSquare.xml.serialize(Ds_LTIDA06.getAllXML()) );  
+ 	console.log("[/CBSC114P.xml] [lfn_Search()] ==>  [I/F 조회 완료] [Ds_LTIDA06_갯수]"+ Ds_LTIDA06.getRowCount() );  
+ 	
+  	if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    }
+   
+    if (Ds_LTIDA06.getRowCount() == 0) {
+        //wprom.alert("조회건이 없습니다.");
+        
+    } else { 
+    	//console.log("[/CBSC114P.xml] [lfn_Search()] ==> [조회 처리] [TEST_81]" );
+    	
+        //타보험 일련번호를 담는다.
+        nOthrInsurSeqnoMax = wconv.toNumber(Ds_LTIDA06.getCellData(Ds_LTIDA06.getTotalRow()-1, "nOthrInsurSeqno")); 	//조회된 타보험 일련번호 중 맥스값        
+  	}
+ 
+	util.setRowPosition(Ds_LTIDA06, 0);		// Ds에서 포커스가 위치한 row 설정
+  
+    //console.log("[/CBSC114P.xml] [lfn_Search()] ==> [TEST_end]" ); 
+};
+ 
+//---------------------------------------------------------------------------
+// function 명 : lfn_addRow
+// 내용        : 행추가
+//---------------------------------------------------------------------------
+scwin.lfn_addRow = function(obj) { 
+    util.appendRow(Ds_LTIDA06); // Dataset에 빈 Record한줄 추가 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_deleteRow
+// 내용        : 행 삭제
+//---------------------------------------------------------------------------
+scwin.lfn_deleteRow = function(obj) { 
+	//console.log("[/CBSC114P.xml] [lfn_deleteRow()] ==> [행 삭제] [Ds_LTIDA06.getRowPosition()]"+ Ds_LTIDA06.getRowPosition() );
+ 
+	util.removeRow(Ds_LTIDA06, Ds_LTIDA06.getRowPosition());		// Ds에서 해당 Row 삭제 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Input
+// 내용        : 저장
+//---------------------------------------------------------------------------
+scwin.lfn_Input = function(obj) {
+	console.log("[/CBSC114P.xml] [lfn_Input()] ==> [저장] [TEST_01]" ); 
+	
+	var gUserIP = "";    // 사용자 IP
+	var gUserID = "";    // 사용자 ID
+
+	gUserID = util.getGdsValue("gUserID");    // 사용자 ID
+	gUserIP = util.getGdsValue("gUserIP");    // 사용자 IP
+	
+//	if (wconv.length(util.getGdsValue("gUserID")) > 0) {		// TEST @@@ ===>
+//    	gUserID = util.getGdsValue("gUserID");    // 사용자 ID
+//	} else { 
+//     	gUserID =  "2140026";     // 사용자 ID(백승철)
+//	} 
+//	gUserID =  "2140026";     // 사용자 ID(백승철)		// TEST @@@ ===>
+//	   
+//	if (wconv.length(util.getGdsValue("gUserIP")) > 0) {		// TEST @@@ ===>
+//    	gUserIP = util.getGdsValue("gUserIP");    // 사용자 IP
+//	} else { 
+//     	gUserIP =  "10.1.9.138";	   // 사용자 IP
+//	}
+	
+	var rsData2 = Ds_LTIDA06.getRemovedJSON();
+ 
+    if (rsData2.length < 1 && Ds_LTIDA06.getRowCount() == 0 && DsWs_LTIDA06.getRowCount() == 0) {
+        wprom.alert("저장할 타사보험사항이 없습니다.");
+    
+    } else {    	 
+        var colID = ""; 
+        var idx = Ds_LTIDA06.getModifiedIndex(); 		// dlt_Menu 변경 상태(상태값:C,U,D)행들의 index를 배열로 반환
+		  
+		for ( i = 0; i < idx.length; i++ ){  
+	    	if ( Ds_LTIDA06.getRowStatus(i) == "C" || Ds_LTIDA06.getRowStatus(i) == "U" ){ 
+				if ( Ds_LTIDA06.getCellData(idx[i],"sFinaOrgNm") == "" ) { 
+					Grd_list.setFocusedCell(idx[i], "sFinaOrgNm" , true ); 
+					wprom.alert("타보험사명을 넣어주세요");
+					 return false;
+				}
+			}
+		}	 
+     	var cnt = 0;
+        var execFlag = ""; //상태 
+        wconv.clear(Ds_LTIDA06Tran); 			// 타사보험 정보 Ds
+        wconv.clear(Ds_LTIDA06TranReq); 		// 기타 정보 Ds
+   
+        //그리드에서 insert, update 구분
+        for (var i = 0; i < Ds_LTIDA06.getRowCount(); i++) { 
+            execFlag = "";
+                
+            if (Ds_LTIDA06.getRowStatus(i) == "C") { 		// cbs - 초기상태:"R", 갱신:"U", 삽입:"C", 삭제:"D", 삽입 후 삭제:"V"
+                execFlag = "I";
+            } else if (Ds_LTIDA06.getRowStatus(i) == "U") {
+                execFlag = "U";
+            }
+      		//console.log("[/CBSC114P.xml] [lfn_Input()] ==> [저장_insert, update 구분] [i_번째]"+ i +"[Ds_LTIDA06.getRowStatus(i)]"+ Ds_LTIDA06.getRowStatus(i) +"[execFlag]"+ execFlag ); 
+      
+            if (execFlag == "I" || execFlag == "U")  {
+                Ds_LTIDA06.setCellData(i, "execFlag", execFlag);		// 저장Flag
+ 
+				//Ds_LTIDA06Tran.insertRow(cnt);  // 줄 추가 
+				Ds_LTIDA06Tran.setRowJSON(cnt, Ds_LTIDA06.getRowJSON(i));		// JSON Data를 set 또는 append 한다	
+        		//console.log("[/CBSC114P.xml] [lfn_Input()] ==> [저장_insert, update 구분] [TEST_07] [i_번째]"+ i +"[cnt]"+ cnt +"[Ds_LTIDA06.getRowJSON(i)]"+ Ds_LTIDA06.getRowJSON(i) ); 
+      
+         		cnt++;
+            }
+        }  
+ 
+		var rsData = Ds_LTIDA06.getRemovedJSON();
+	 
+        // 그리드에서 delete 구분 
+	    for (var i = 0; i < rsData.length; i++) {  
+			Ds_LTIDA06Tran.insertRow(cnt);	// 줄 추가	
+	 
+	 	 	 for (var j = 0; j < Ds_LTIDA06.getTotalCol(); j++) {
+	            if (Ds_LTIDA06.getColumnID(j) == "execFlag") {
+	                Ds_LTIDA06Tran.setCellData(i, Ds_LTIDA06.getColumnID(j), "D");		// 저장Flag 삭제(D) 입력
+	                //console.log("[/CBSC114P.xml] [lfn_Input()] ==> [저장_delete 구분] [j_번째_01]"+ j  ); 
+	            } else {  
+	                Ds_LTIDA06Tran.setCellData(i, Ds_LTIDA06.getColumnID(j), rsData[i][Ds_LTIDA06.getColumnID(j)]);  // 칼럼 데이타 셋팅
+	        		//console.log("[/CBSC114P.xml] [lfn_Input()] ==> [저장_delete 구분] [i_번째_02]"+ i +"[ rsData[i][Ds_LTIDA06.getColumnID(j)]]"+ rsData[i][Ds_LTIDA06.getColumnID(j)] ); 
+	             }
+	        }
+      
+	        cnt++;
+	    }
+ 
+        //console.log("[/CBSC114P.xml] [lfn_Input()] ==> [저장] [TEST_31]" ); 
+  	 	
+  		var iRow = Ds_LTIDA06TranReq.insertRow(); 		// 줄 추가
+        Ds_LTIDA06TranReq.setCellData(0, "sPlanNo", sPlanNoPop); //설계번호
+        Ds_LTIDA06TranReq.setCellData(0, "sPsnGroupFlgcd", sPsnGroupFlgcdPop); //피보험자단체구분코드
+        Ds_LTIDA06TranReq.setCellData(0, "sPsnPrprtGroupSeqno", sPsnPrprtGroupSeqnoPop); //피보험자단체일련번호
+        Ds_LTIDA06TranReq.setCellData(0, "sCrChngNo", sCrChngNoPop); //계약변경번호
+        Ds_LTIDA06TranReq.setCellData(0, "nOthrInsurSeqnoMax", wconv.toString(nOthrInsurSeqnoMax));
+        Ds_LTIDA06TranReq.setCellData(0, "gUserID", gUserID);
+        Ds_LTIDA06TranReq.setCellData(0, "gUserIP", gUserIP); 
+       // console.log("[/CBSC114P.xml] [lfn_Input()] ==> [저장 처리_전] [Ds_LTIDA06Tran.getRowCount()]"+ Ds_LTIDA06Tran.getRowCount() +"[Ds_LTIDA06Tran]"+ WebSquare.xml.serialize(Ds_LTIDA06Tran.getAllXML()) ); 
+		//console.log("[/CBSC114P.xml] [lfn_Input()] ==> [저장 처리_전] [Ds_LTIDA06TranReq.getRowCount()]"+ Ds_LTIDA06TranReq.getRowCount() +"[Ds_LTIDA06TranReq]"+ WebSquare.xml.serialize(Ds_LTIDA06TranReq.getAllXML()) ); 
+ 		
+ 		var MethodObj = new callService("com.inswave.longterm.ssr.pln.task.DBB220Task", "setOtcmPrem"); 	// 01. 타사 보험 정보 저장  처리 
+		MethodObj.setId("setOtcmPrem");		// ID 셋팅  
+		MethodObj.addVectorData("vLTIDA06Tran", "vLTIDA06", "Ds_LTIDA06Tran:A");  			// Param 셋팅(타사 보험 정보 Ds): A(전체), I(등록), U(수정), R 
+		MethodObj.addSingleData("LTIDA06TranReq", "tranReq", "Ds_LTIDA06TranReq:A");	// Param 셋팅(기타 정보 Ds): A(전체), I(등록), U(수정), R	  
+  		MethodObj.setUrl("/contract/CBSC114PController.do");  			// 서버단 호출 URL  
+		MethodObj.addXPath("//WARNING");	// XPath(No) 
+		MethodObj.setXPathDs(); 	// XPath 전체 경로 사용할 경우
+		MethodObj.setHashTable();   	// 전문의 앞이 hashtable로 보낼 때 
+		MethodObj.sync();		// 동기 처리[기본(async:비동기)] 
+		MethodObj.send();		// 최종 전송  		 
+		//console.log("[/CBSC114P.xml] [lfn_Input()] ==> [02. 타사 보험 정보 저장  처리_완료] [TEST_71]");  	
+	
+		//util.interfaceKey(_tranSync.result.serviceDs); 		// interface 조회 후 Data 리스트 Display
+	   	 
+	 	DsWs_Warning.setJSON(_tranSync.getDsJson("WARNING"));  		// Warning DS 셋팅(조회 결과)  
+	 	console.log("[/CBSC114P.xml] [lfn_Input()] ==> [I/F  저장 처리 완료] [DsWs_Warning.getRowCount()]"+ DsWs_Warning.getRowCount()  +"[DsWs_Warning]"+ WebSquare.xml.serialize(DsWs_Warning.getAllXML()) ); 
+  
+        if (DsWs_Warning.getRowCount() != 0) {
+            wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+            return;
+        } else {
+            wprom.alert("정상 처리되었습니다.");
+            //console.log("[/CBSC114P.xml] [lfn_Input()] ==> [저장 성공] [wconv.toString(Ds_LTIDA06.getRowCount())]"+ wconv.toString(Ds_LTIDA06.getRowCount()) ); 
+ 
+        	wprom.close(wconv.toString(Ds_LTIDA06.getRowCount()));  // 창닫기
+        }
+    }
+    
+    //console.log("[/CBSC114P.xml] [[lfn_Input()] ==> [저장] [TEST_end]" ); 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Close
+// 내용        : 팝업닫기
+//---------------------------------------------------------------------------
+scwin.lfn_Close_OnClick = function(obj) {
+    wprom.close("");
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_ComponentEnable
+// 내용        : 계약상태별 화면 비활성 처리
+//---------------------------------------------------------------------------
+scwin.lfn_ComponentEnable = function(step, exList, enable) {
+ 
+	var comp;
+    var compCnt = step.getChildrenCount();  // Components 총 수  
+    //console.log("[/CBSC114P.xml] [lfn_ComponentEnable()] ==> [계약상태별 화면 비활성 처리] [TEST_01] [compCnt]"+ compCnt +"[step]"+ step +"[exList]"+ exList +"[enable]"+ enable );
+    
+    for (var i = 0; i < compCnt; i++) {
+	    comp = step.getAllChildren()[i];  // Components 담기 
+        var Objects = WebSquare.util.getComponentById(comp.id); 
+	    var getType = Objects.getPluginName();  // Component 타입
+	    
+	    if(getType == "group"|| getType =="textbox"){
+	    }else{
+            if (exList.indexOf(comp.id) < 0) {     // comp.id가 exList(btn_close)이 아니면
+                Objects.setDisabled(!enable);  //  비활성화 처리(enable = false 이면 비활성화)
+                //console.log("[/CBSC114P.xml] [lfn_ComponentEnable()] ==> [비활성 처리★★] [comp.id]"+ comp.id +"[enable]"+ enable )
+            }                	
+	    };
+	 }       
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B220_Pop"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;  /*height:365px;*/ left:0px; top:0px;/* width:780px;"
+            userData1="타보험 가입 사항[B220_Pop]" userData2=" OnLoadCompleted:scwin.B220_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+                <ServiceObject/>
+            </ServiceObjects>
+            <w2:textbox id="Static5" label="타보험 가입 사항" style="position:absolute; VAlign:Middle;  height:20px; left:0px; top:0px; " tagname="" class="sub_pop_title01"></w2:textbox>
+            
+            <xf:switch id="switch_128" style=" ">
+                <xf:case id="Default_129" style=" ">
+                    <w2:gridView dataList="Ds_LTIDA06" focusMode="row" id="Grd_list" inputType="text" readOnly="true"
+                        style="position:absolute; UseDBuff:true;  InputPanel:FALSE;  EndLineColor:default;  border:Flat;  AutoEnter:TRUE;  height:301px; left:0px; right:771px; top:55px; width:762px;" tabIndex="3" class="sty_Grid">
+                        <w2:header>
+                            <w2:row>
+                                <w2:column dataType="text" id="head_id_1090" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="0" userData3="0" value="순번" width="45"/>
+                                <w2:column dataType="text" id="head_id_1091" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="1" userData3="0" value="보험사" width="107"/>
+                                <w2:column dataType="text" id="head_id_1092" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="2" userData3="0" value="계약번호" width="110"/>
+                                <w2:column dataType="text" id="head_id_1093" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="3" userData3="0" value="상품명" width="163"/>
+                                <w2:column dataType="text" id="head_id_1094" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="4" userData3="0" value="보험시기" width="80"/>
+                                <w2:column dataType="text" id="head_id_1095" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="5" userData3="0" value="보험종기" width="80"/>
+                                <w2:column dataType="text" id="head_id_1096" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="6" userData3="0" value="가입금액" width="97"/>
+                                <w2:column dataType="text" id="head_id_1097" inputType="text" readOnly="true" style="height:20px;"
+                                    userData1="7" userData3="0" value="보험료" width="78"/>
+                            </w2:row>
+                        </w2:header>
+                        <w2:gBody>
+                            <w2:row>
+                                <w2:column dataType="text" expression="rowIndex+1" id="nSeqno" inputType="expression" readOnly="true"
+                                    style="height:20px;" textAlign="center" userData1="0" userData3="0" width="45"/> 
+                                <w2:column dataType="text" id="sFinaOrgNm" inputType="text" readOnly="false" style="height:20px;" textAlign="center"
+                                    userData1="1" userData3="0"  width="107"/> 	<!--  보험사  -->
+                                <w2:column dataType="text" id="sOthrIscoCrNo" inputType="text" readOnly="false" style="height:20px;" textAlign="center"
+                                    userData1="2" userData3="0"  width="110"/>	<!--  계약번호  -->
+                                <w2:column dataType="text" id="sGdName" inputType="text" readOnly="false" style="height:20px;" textAlign="center"
+                                    userData1="3" userData3="0" width="163" value=""/>		<!--  상품명  -->
+                                <w2:column dataType="text" displayFormat="####-##-##" id="sInsurStrtdate" inputType="text" readOnly="false"
+                                    style="height:20px;" textAlign="center" userData1="4" userData3="0" width="80"/>
+                                <w2:column dataType="text" displayFormat="####-##-##" id="sInsurEndDate" inputType="text" readOnly="false"
+                                    style="height:20px;" textAlign="center" userData1="5" userData3="0" width="80"/>
+                                <w2:column dataType="number" displayFormat="#,###" id="nInsAmt" inputType="text" readOnly="false" style="height:20px;"
+                                    textAlign="right" userData1="6" userData3="0" width="97"/>
+                                <w2:column dataType="number" displayFormat="#,###" id="nPrem" inputType="text" readOnly="false" style="height:20px;"
+                                    textAlign="right" userData1="7" userData3="0" width="78"/>
+                            </w2:row>
+                        </w2:gBody>
+                    </w2:gridView>
+                </xf:case>
+            </xf:switch>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Input" id="btn_save"
+                style="position:absolute;ImageID:btn_Input_02;height:20px;width:25px;left:663px;top:0px;" tabIndex="6" type="anchor">
+                <xf:label><![CDATA[저장]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="btn_Grid_Add" ev:onclick="scwin.lfn_addRow" id="btnAddPibo"
+                style="position:absolute; ImageID:btn_Grid_Add;  height:20px;left:709px;top:28px; width:21px;" tabIndex="4" type="anchor"/>
+            <xf:trigger class="btn_Grid_Del" ev:onclick="scwin.lfn_deleteRow" id="btnDelPibo"
+                style="position:absolute; ImageID:btn_Grid_Del;  height:20px;left:736px;top:28px; width:21px;" tabIndex="5" type="anchor"/>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Close_OnClick" id="btn_close"
+                style="position:absolute;ImageID:btn_Comm_Close;height:20px;Transparent:TRUE;width:25px;left:713px;top:0px;" tabIndex="7" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+        </xf:group>
+    </body>
+</html>

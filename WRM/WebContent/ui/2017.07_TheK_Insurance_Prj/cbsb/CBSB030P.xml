@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/new.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataMap baseNode="map" id="param">
+					<w2:keyInfo>
+						<w2:key id="rgtrEmpno" name="rgtrEmpno"
+							dataType="text">
+						</w2:key>
+						<w2:key id="rgtrName" name="rgtrName"
+							dataType="text">
+						</w2:key>
+						<w2:key id="cstSchdFlgcd" name="cstSchdFlgcd"
+							dataType="text">
+						</w2:key>
+						<w2:key id="name" name="name" dataType="text">
+						</w2:key>
+						<w2:key id="vistDate" name="vistDate"
+							dataType="text">
+						</w2:key>
+						<w2:key id="vistHms" name="vistHms"
+							dataType="text">
+						</w2:key>
+						<w2:key id="cont" name="cont" dataType="text">
+						</w2:key>
+						<w2:key id="schdResltFlgcd"
+							name="schdResltFlgcd" dataType="text">
+						</w2:key>
+						<w2:key id="cstVistAdmId" name="cstVistAdmId"
+							dataType="text">
+						</w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" id="dst_BussActDataInfoVo">
+					<w2:keyInfo>
+						<w2:key id="bussActDataId" name="영업활동자료Id"
+							dataType="int">
+						</w2:key>
+						<w2:key id="bussActDataFlag" name="영업활동자료구분"
+							dataType="text">
+						</w2:key>
+						<w2:key id="bussActDataName" name="영업활동자료명"
+							dataType="text">
+						</w2:key>
+						<w2:key id="cont" name="내용" dataType="text">
+						</w2:key>
+						<w2:key id="rgtrEmpno" name="등록자사번"
+							dataType="text">
+						</w2:key>
+						<w2:key id="deptCd" name="부서코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="rgstDate" name="등록일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="apdxFileName" name="첨부파일명"
+							dataType="text">
+						</w2:key>
+						<w2:key id="apdxFilePath" name="첨부파일경로"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inqrNum" name="조회수"
+							dataType="int">
+						</w2:key>
+						<w2:key id="drctMangAuthYn" name="직영권한여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="crossAuthYn" name="교차권한여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="atchAuthYn" name="전속권한여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gAAuthYn" name="GA권한여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="delYn" name="삭제여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptDler" name="입력처리자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptDlerIP" name="입력처리자IP"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptDate" name="입력일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="inptHms" name="입력시간"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcDler" name="수정처리자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcDlerIP" name="수정처리자IP"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcDate" name="수정일자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="mdfcHms" name="수정시간"
+							dataType="text">
+						</w2:key>
+						<w2:key id="rgtrEmpNm" name="등록자이름"
+							dataType="text">
+						</w2:key>
+						<w2:key id="seqNo" name="name25"
+							dataType="text">
+						</w2:key>
+						<w2:key id="apdxFileUrl" name="name26"
+							dataType="text">
+						</w2:key>
+						<w2:key id="noticDate" name="조회시작일"
+							dataType="text">
+						</w2:key>
+						<w2:key id="noticEnddt" name="조회종료일"
+							dataType="text">
+						</w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" id="dst_LginAuthInqrVo">
+					<w2:keyInfo>
+						<w2:key id="empNo" name="사번" dataType="text">
+						</w2:key>
+						<w2:key id="name" name="이름" dataType="text">
+						</w2:key>
+						<w2:key id="pstnDeptCd" name="소속부서코드"
+							dataType="text">
+						</w2:key>
+						<w2:key id="bizAdmrYn" name="업무관리자"
+							dataType="text">
+						</w2:key>
+						<w2:key id="agncyAdmrYn" name="대리점사용인관리자여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="geafAdmrYn" name="대면총무여부,지점장여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gaEducMngrAdmrYn" name="GA교육매니저여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="drctMangYn" name="직영여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="crossYn" name="교차여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="atchYn" name="전속여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gAYn" name="GA여부" dataType="text">
+						</w2:key>
+						<w2:key id="superAuthYn" name="전체권한여부"
+							dataType="text">
+						</w2:key>
+						<w2:key id="drctMangAdmrYn" name="name13"
+							dataType="text">
+						</w2:key>
+						<w2:key id="atchAdmrYn" name="name14"
+							dataType="text">
+						</w2:key>
+						<w2:key id="gAAdmrYn" name="name15"
+							dataType="text">
+						</w2:key>
+						<w2:key id="clprAdmrYn" name="name16"
+							dataType="text">
+						</w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>			
+		</xf:model>
+<script src="/cm/js/common.js"/>
+<script src="/cm/js/val_lib.js"/>
+<script src="/cm/js/util.js"/>
+<script src="/cm/js/transSub.js"/>
+<script src="/cm/js/callService.js"/>
+<script src="/cm/js/gds.js"/>
+<script src="/cm/js/wconv.js"/>
+<script src="/cm/js/wprom.js"/>		
+<script src="/cm/js/convertJs/Global_Script.js"/>
+<script src="/cm/js/convertJs/comm_Webservice.js"/>
+<script src="/cm/js/convertJs/NewGen_Script.js"/>
+<script src="/cm/js/convertJs/LongTerm_Script.js"/>			
+		<script type="javascript"><![CDATA[
+	/*
+ 	 *===================================File description================================================
+ 	 * Create Date : 2017/09/15
+ 	 * Creater     : KMJ
+ 	 *====================================================================================================
+	 */
+
+	var gsSysDate;			// global 현재일자
+	var gUserID; 			// global 사용자 ID
+	var gUserEmpName; 	    // global 부서명
+	var gBussActDataId;		// global 영업활동자료Id
+	var ggelementId;
+	var ggfileName;				
+	//**********************************************************
+	// 초기화
+	//**********************************************************
+	scwin.init = function() {
+		gfn_getServerTime();//서버시간
+		gsSysDate 			= wconv.substr(gds.gDs_ServerTime.getCellData(0, "sToday"), 0, 8);	
+		gUserID 		= util.getGdsValue("gUserID");    					// global 사용자 ID
+		gUserEmpName 	= util.getGdsValue("gUserEmpName");    				// global 부서명
+						
+	    //Parent에서 넘어온 값을 설정한다.
+		var indata = $w.getParameter("param");
+		var args;
+		try {
+			args = JSON.parse(indata);
+		} catch(e) {
+		
+		}		
+					
+		//파일업로드초기화
+		scwin.fileUploadInit();
+	
+	    // 상위화면(CBSB018M)에서 영업활동자료Id 를 넘겨주면 글로벌변수로 담아둔다.   
+	    if(!util.isNull(args) && !util.isNull(args.bussActDataId)){
+	    	gBussActDataId = args.bussActDataId;
+	    	// 화면명 [영업활동자료 상세조회]  로 세팅 
+	    	txt_popupTitle.setValue("[영업활동자료 상세조회]");
+	    	
+	    }
+	    else{
+	    	// 신규 자료 등록시, 
+ 			// 화면 명은 [영업활동자료 신규등록]으로 SETTING				    
+	    	txt_popupTitle.setValue("[영업활동자료 신규등록]");
+	    	ib_rgstDate.setValue( gsSysDate );		//등록일자
+	    	ic_noticDate.setValue( gsSysDate );		//게시시작일자
+	    	ic_noticEnddt.setValue(wconv.addMonth(gsSysDate,3));	//게시종료일자	
+	    }
+	           	
+	   	var promise = Promise.resolve();
+	    promise = promise.then(function(rtnVal) {
+	     	// /common/CBSO0015.do 로그인자 권한조회	 
+			return scwin.getLginAuthInfo();	
+		});	
+
+	};
+		
+	//**********************************************************
+	// 
+	//**********************************************************
+	scwin.subCallBackfunction = function(e){
+		// e.subID : 서브미션 ID
+		// e.flag  : S성공;
+		// e.msg   : 트렌젝션 처리후 메세지
+		// e."받을데이타셋"
+		switch(e.subID){
+			// 로그인ID권한조회
+			case "retrieveLginIDAuthInqr":
+				dst_LginAuthInqrVo.setJSON(e.result);	
+				// 권한에 따라 버튼및 게시조직 체크 	
+				var promise = Promise.resolve();
+				promise = promise.then(function(rtnVal) {
+					// 권한에 따라 버튼및 게시조직 체크 		
+					return scwin.setCtrlByAuth();
+				});
+				promise = promise.then(function(rtnVal) {
+  					// /sales/support/CBSB0003.do 영업활동자료조회 Call 
+					if(!util.isNull(gBussActDataId)) {	
+			   			scwin.getBussActData();
+			   		}   	
+  				});										
+			break;
+			// 영업활동자료조회
+			case "retrieveBussActData":
+				if(e.flag == "s") {
+					dst_BussActDataInfoVo.setJSON(e.result);	
+					// 조회데이터로 화면세팅 		
+					scwin.setBussActDataAdm();	
+				} else {
+					wprom.alert(e.msg);
+				}
+														
+			break;
+			// 영업활동자료등록
+			case "registerBussActData":
+				if(e.flag == "s") {
+					dst_BussActDataInfoVo.setJSON(e.result);
+					wprom.alert("등록이 완료되었습니다.");
+					gBussActDataId = dst_BussActDataInfoVo.get("bussActDataId");
+					scwin.setCtrlByAuth();
+					// 등록완료후 화면 닫기 
+					var returnMsg = "I";
+                	if (wprom.isPopup()){
+			        	wprom.close(returnMsg);
+			        }	        
+				} else {
+					wprom.alert(e.msg);
+				}
+			break;	
+			// 영업활동자료삭제					
+			case "modifyBussActDataDelYn":	
+				if(e.flag == "s") {
+					dst_BussActDataInfoVo.setJSON(e.result);	
+					wprom.alert("삭제가 완료되었습니다.");	
+					// 등록완료후 화면 닫기 
+					var returnMsg = "U";
+                	if (wprom.isPopup()){
+			        	wprom.close(returnMsg);
+			        }	  	
+				} else {
+					wprom.alert(e.msg);
+				}
+			break;
+		}
+	};
+	
+	//**********************************************************
+	// 로그인자 권한조회 /common/CBSO0015.do 로그인자 권한조회
+	//**********************************************************
+	scwin.getLginAuthInfo = function() {
+		// 사번으로 로그인자 권한조회	
+		dst_LginAuthInqrVo.set("empNo" , gUserID);
+		
+		var trans = new transSub();                  	// transaction 보낼 객체 생성
+		trans.setId("retrieveLginIDAuthInqr");        	// transaction 보낼 SubmissionID
+		trans.setUrl("/common/CBSO0015.do");   			// Controller 쪽으로 보낼 주소
+		trans.setDs("dst_LginAuthInqrVo");					
+		trans.targetDs("dst_LginAuthInqrVo");		
+		trans.callBack("scwin.subCallBackfunction");  	// 받을 Dataset을 처리시 콜백함수
+		trans.send();
+	
+	};
+	
+	//**********************************************************
+	// 영업활동자료조회
+	//**********************************************************
+	scwin.getBussActData = function() {
+		// 영업활동자료Id로 영업활동자료 조회 	   		
+		dst_BussActDataInfoVo.set("bussActDataId" , gBussActDataId);
+				
+		var trans = new transSub();                  // transaction 보낼 객체 생성
+		trans.setId("retrieveBussActData");           // transaction 보낼 SubmissionID
+		trans.setUrl("/sales/support/CBSB0003.do");   // Controller 쪽으로 보낼 주소
+		trans.setDs("dst_BussActDataInfoVo");					
+		trans.targetDs("dst_BussActDataInfoVo");		
+		trans.callBack("scwin.subCallBackfunction");  // 받을 Dataset을 처리시 콜백함수
+		trans.send();
+	
+	};
+	
+	//**********************************************************
+	// 영업활동자료등록
+	//**********************************************************
+	scwin.rgstBussActData = function() {	
+		if(util.isNull(ic_noticDate.getValue())){			
+        	wprom.alertF("게시 시작일을 입력해 주세요.",{},ic_noticDate);        	
+        	return;			
+		}
+			
+		if(util.isNull(ic_noticEnddt.getValue())){			
+        	wprom.alertF("게시 종료일을 입력해 주세요.",{},ic_noticEnddt);        	
+        	return;			
+		}
+		
+		if(parseInt(gsSysDate-ic_noticDate.getValue())>0){			
+        	wprom.alertF("게시 시작일은 현재일 이전이 될 수 없습니다.",{},ic_noticDate);        	
+        	return;			
+		}
+				
+		if(parseInt(ic_noticDate.getValue()-ic_noticEnddt.getValue())>0){
+			wprom.alertF("게시 시작일이 게시 종료일보다 큽니다.",{},ic_noticDate);						
+			return;
+		}				
+	
+		//활동자료명 
+		if(util.isNull(wconv.trim(ib_bussActDataName.getValue()))) {
+			wprom.alertF("활동자료명을 입력하세요.", {}, ib_bussActDataName);
+			return;			
+		}	
+		
+		//내용
+		if(util.isNull(wconv.trim(ta_Cont.getValue()))) {
+			wprom.alertF("내용을 입력하세요.", {}, ta_Cont);
+			return;			
+		}	
+		
+		// 게시조직
+		if(!chk_superAuthYn.getValue() &&
+   		    !chk_drctMangAuthYn.getValue() &&
+   		    !chk_crossAuthYn.getValue() &&
+   		    !chk_atchAuthYn.getValue() &&
+   		    !chk_gAAuthYn.getValue()) {
+   		    		
+        	wprom.alert("게시조직을 확인하세요.");
+        	return;
+   		}
+   		
+   		// 등록자
+   		var rgtrEmpno = ib_rgtrEmp.getValue();
+   		if(util.isNull(wconv.trim(rgtrEmpno))) {
+			wprom.alertF("등록자를 입력하세요.", {}, ib_rgtrEmp);
+			return;			
+		}	
+   		// 등록일자 
+   		var rgstDate = ib_rgstDate.getValue();
+   		if(util.isNull(wconv.trim(rgstDate))) {
+			wprom.alertF("등록일자를 입력하세요.", {}, ib_rgstDate);
+			return;			
+		}	
+		
+		//활동자료명 
+//		if(wconv.isTrimNull(SingleFileUploadText.getValue())) {
+//			wprom.alertF("첨부파일을 등록 하세요.", {}, SingleFileUploadComponent);
+//			return;			
+//		}	
+   		
+		var sApdtFileName = ggfileName;
+		var sApdtFilePath = ggelementId;
+				
+		// 첨부파일명 
+		dst_BussActDataInfoVo.set("apdxFileName", sApdtFileName);
+		// 첨부파일경로 
+		dst_BussActDataInfoVo.set("apdxFilePath", sApdtFilePath);
+		// 등록자사번 
+		dst_BussActDataInfoVo.set("rgtrEmpno", gUserID);
+		// 등록일자 
+		dst_BussActDataInfoVo.set("rgstDate", gsSysDate);
+		// 직영권한여부 
+		dst_BussActDataInfoVo.set("drctMangAuthYn", chk_drctMangAuthYn.getValue());	   
+		// 교차권한여부 
+		dst_BussActDataInfoVo.set("crossAuthYn", chk_crossAuthYn.getValue());	   
+		// 전속권한여부 
+		dst_BussActDataInfoVo.set("atchAuthYn", chk_atchAuthYn.getValue());	   
+		// GA권한여부 
+		dst_BussActDataInfoVo.set("gAAuthYn", chk_gAAuthYn.getValue());	   
+		// 삭제여부 				
+		dst_BussActDataInfoVo.set("delYn", "N");	
+		
+		//게시시작일자
+		dst_BussActDataInfoVo.set("noticDate",ic_noticDate.getValue());	
+		//게시종료일자		
+		dst_BussActDataInfoVo.set("noticEnddt",ic_noticEnddt.getValue());			
+		   	
+					
+		var trans = new transSub();                  // transaction 보낼 객체 생성
+		trans.setId("registerBussActData");           // transaction 보낼 SubmissionID
+		trans.setUrl("/sales/support/CBSB0001.do");   // Controller 쪽으로 보낼 주소
+		trans.setDs("dst_BussActDataInfoVo");					
+		trans.targetDs("dst_BussActDataInfoVo");		
+		trans.callBack("scwin.subCallBackfunction");  // 받을 Dataset을 처리시 콜백함수
+		trans.send();
+	
+	};
+	
+	//**********************************************************
+	// 영업활동자료삭제
+	//**********************************************************
+	scwin.modBussActDataDelYn = function() {
+		// 삭제여부 Y로 세팅 				
+		dst_BussActDataInfoVo.set("delYn", "Y");	
+			
+		var trans = new transSub();                  // transaction 보낼 객체 생성
+		trans.setId("modifyBussActDataDelYn");        // transaction 보낼 SubmissionID
+		trans.setUrl("/sales/support/CBSB0005.do");   // Controller 쪽으로 보낼 주소
+		trans.setDs("dst_BussActDataInfoVo");					
+		trans.targetDs("dst_BussActDataInfoVo");		
+		trans.callBack("scwin.subCallBackfunction");  // 받을 Dataset을 처리시 콜백함수
+		trans.send();
+	
+	};
+	
+	//**********************************************************
+	// 권한에 따라 화면컨트롤 
+	//**********************************************************
+	scwin.setCtrlByAuth = function() {
+		// 영업활동자료Id 가 null 이면 신규자료등록, id가 존재하면 기존등록자료 조회     
+	    if(!util.isNull(gBussActDataId)){
+	   		// 기존자료 등록 
+	   		// 기존 자료값 활동자료구분 비활성 
+	   		rad_bussActDataFlag.setDisabled(true);
+	   		// 활동자료명 비활성 
+	   		ib_bussActDataName.setDisabled(true);
+	   		// 내용 비활성 
+	   		ta_Cont.setDisabled(true);
+ 
+	   		// 첨부서류 비활성 
+	   		SingleFileUploadText.setDisabled(false);
+	   		SingleFileUploadComponent.setDisabled(true);
+	   		btn_fileDel.setDisabled(true);
+	   		
+	   		// 등록자 
+	   		ib_rgtrEmp.setDisabled(true);
+	    	// 등록일자  
+	    	ib_rgstDate.setDisabled(true);
+	    	
+	   		// 등록버튼 비활성화
+	 		btn_rgst.setDisabled(true); 
+	 		// 삭제버튼 활성화
+	 		btn_delete.setDisabled(false);
+			// 활동자료발송 버튼 활성화
+			btn_dataSend.setDisabled(false);
+			
+			ic_noticDate.setDisabled(true);
+			ic_noticEnddt.setDisabled(true);
+    		
+	    }else{
+	    	// 신규 자료 등록시, 
+ 			// 등록자, 등록일자는 로그인자 사번 및 현재일자 SETTING 비활성화.   	
+	    	// 등록자 : 로그인자 이름(사번) 세팅     	
+	    	ib_rgtrEmp.setValue(gUserEmpName + "(" + gUserID + ")");
+	    	// 등록일자 : 현재일자 세팅 
+	    	ib_rgstDate.setValue(gsSysDate);	    	
+	   		// 등록자 
+	   		ib_rgtrEmp.setDisabled(true);
+	    	// 등록일자  
+	    	ib_rgstDate.setDisabled(true);
+	    	
+	    	// 활동자료구분 활성 
+	   		rad_bussActDataFlag.setDisabled(false);
+	   		// 활동자료명 활성 
+	   		ib_bussActDataName.setDisabled(false);
+	   		// 내용 비활성 
+	   		ta_Cont.setDisabled(false);
+	   		
+			// 첨부서류 활성 
+	   		SingleFileUploadText.setDisabled(false);
+	   		SingleFileUploadComponent.setDisabled(false);
+	   		btn_fileDel.setDisabled(false);
+	   			    	
+ 			// 등록버튼 활성화.
+	 		btn_rgst.setDisabled(false); 
+ 			// 삭제버튼 비활성화.
+ 			btn_delete.setDisabled(true);
+			// 활동자료발송 버튼 비활성화
+ 			btn_dataSend.setDisabled(true);		
+ 			
+			ic_noticDate.setDisabled(false);
+			ic_noticEnddt.setDisabled(false);
+ 			
+ 			// LginAuthInqrVo.bizAdmrYn "Y"인경우, 리플렛 등록가능 나머지는 등록불가(안보이게 처리)
+ 			if(dst_LginAuthInqrVo.get("bizAdmrYn") == "Y") { 	
+// 				rad_bussActDataFlag.addItem( "02" , "리플렛" , 1 );
+ 			}	 	
+ 			else
+ 			{
+ 				rad_bussActDataFlag.deleteItem(1);	// 리플렛 삭제
+ 			}	
+ 			
+ 			// *게시조직 LginAuthInqrVo.superAuthYn "Y"인경우 
+	    	if(dst_LginAuthInqrVo.get("superAuthYn") == "Y") {	
+	   			// 게시조직 전체, 직영, 교차, 전속, GA 모두 활성화.
+	   			chk_superAuthYn.setDisabled(false);
+	   			chk_drctMangAuthYn.setDisabled(false);
+	   			chk_crossAuthYn.setDisabled(false);
+	   			chk_atchAuthYn.setDisabled(false);
+	   			chk_gAAuthYn.setDisabled(false);
+	   		}
+	   		else {   		
+		   		chk_superAuthYn.setStyle("display" , "none");
+				chk_drctMangAuthYn.setStyle("display" , "none");
+		   		chk_crossAuthYn.setStyle("display" , "none");
+		   		chk_atchAuthYn.setStyle("display" , "none");
+				chk_gAAuthYn.setStyle("display" , "none");   	
+	   		
+		   		// 직영권한여부 LginAuthInqrVo.drctMangYn "Y"이면 
+	   			if(dst_LginAuthInqrVo.get("drctMangYn") == "Y") {
+	   				// 직영만 체크됨 나머지는 안보이도록 처리
+		   			chk_drctMangAuthYn.setStyle("display" , "");
+		   			chk_drctMangAuthYn.setDisabled(false);
+		   			
+	   			}
+		    	// 교차권한여부 LginAuthInqrVo.crossYn    "Y"이면 
+		    	if(dst_LginAuthInqrVo.get("crossYn") == "Y") {
+		   			// 교차만 체크됨 나머지는 안보이도록 처리
+		   			chk_crossAuthYn.setStyle("display" , "");
+		   			chk_crossAuthYn.setDisabled(false);
+		   		}
+		    	
+		    	// 전속권한여부 LginAuthInqrVo.atchYn     "Y"이면 
+		    	if(dst_LginAuthInqrVo.get("atchYn") == "Y") {
+		    		// 전속만 체크됨 나머지는 안보이도록 처리
+		   			chk_atchAuthYn.setStyle("display" , "");
+		   			chk_atchAuthYn.setDisabled(false);
+		    	}
+		    	// ga권한여부   LginAuthInqrVo.gAYn       "Y"이면 
+		    	if(dst_LginAuthInqrVo.get("gAYn") == "Y") {
+		    		//GA만 체크됨 나머지는 안보이도록 처리
+		   			chk_gAAuthYn.setStyle("display" , "");
+		   			chk_gAAuthYn.setDisabled(false);
+		   		}	
+    		
+	    	}    
+	    }
+    	
+	};
+	
+	//**********************************************************
+	// 게시조직 전체 체크박스 뷰체인지이벤트 발생 
+	//**********************************************************
+	scwin.chk_superAuthYn_onviewchange = function(info) {
+		// 전체 클릭시, 직영, 교차, 전속, GA모두 비활성화 및 체크
+		if(info.checked){
+			chk_drctMangAuthYn.setDisabled(true);
+   			chk_crossAuthYn.setDisabled(true);
+   			chk_atchAuthYn.setDisabled(true);
+   			chk_gAAuthYn.setDisabled(true);
+   			
+  			chk_drctMangAuthYn.setValue("Y");
+   			chk_crossAuthYn.setValue("Y");
+   			chk_atchAuthYn.setValue("Y");
+   			chk_gAAuthYn.setValue("Y");
+		}
+		else{
+			// 전체 클릭이 안된경우,직영, 교차, 전속,GA 활성화.
+			chk_drctMangAuthYn.setDisabled(false);
+   			chk_crossAuthYn.setDisabled(false);
+   			chk_atchAuthYn.setDisabled(false);
+   			chk_gAAuthYn.setDisabled(false);
+  			
+   			chk_drctMangAuthYn.setValue("");
+   			chk_crossAuthYn.setValue("");
+   			chk_atchAuthYn.setValue("");
+   			chk_gAAuthYn.setValue("");  			
+		}
+		
+	};
+		
+	//**********************************************************
+	// 영업활동자료조회데이터로 화면 세팅
+	//**********************************************************
+	scwin.setBussActDataAdm = function() {
+		// 첨부서류는 첨부 다운로드 가능 및 활성화. 나머지 조회 값은 비활성화
+		// 활동자료구분 
+		rad_bussActDataFlag.setValue(dst_BussActDataInfoVo.get("bussActDataFlag"));
+		// 활동자료명 
+		ib_bussActDataName.setValue(dst_BussActDataInfoVo.get("bussActDataName"));
+		// 내용
+		ta_Cont.setValue(dst_BussActDataInfoVo.get("cont"));
+		// 첨부파일		
+		SingleFileUploadText.setValue(dst_BussActDataInfoVo.get("apdxFileName"));
+		ggelementId = dst_BussActDataInfoVo.get("apdxFilePath"); 
+		ggfileName = dst_BussActDataInfoVo.get("apdxFileName");		
+	
+		// 등록자이름(등록자사번)  
+		var rgstEmpInfo = dst_BussActDataInfoVo.get("rgtrEmpNm") + "(" + dst_BussActDataInfoVo.get("rgtrEmpno") + ")";  	
+    	ib_rgtrEmp.setValue(rgstEmpInfo);
+    	// 등록일자 
+    	ib_rgstDate.setValue(dst_BussActDataInfoVo.get("rgstDate"));
+    	
+		// 삭제버튼: 로그인사번과 등록사번이 동일 한 경우,
+      	// BUT LginAuthInqrVo.bizAdmrYn "Y"인경우 삭제 가능.	
+      	if(gUserID == dst_BussActDataInfoVo.get("rgtrEmpno")) {
+	 		btn_delete.setDisabled(false);
+    	}
+    	else if(dst_LginAuthInqrVo.get("bizAdmrYn") == "Y") { 	
+    		btn_delete.setDisabled(false);
+    	}
+    	else {
+    		btn_delete.setDisabled(true);
+    	}
+    	
+    	//영업활동자료 발송은 리플렛, 니즈, 안내장만 가능.
+    	if(dst_BussActDataInfoVo.get("bussActDataFlag") == "01"){
+    		btn_dataSend.setDisabled(true);
+    	}else{
+    		//권한 있는 사람만 발송가능 (슈퍼권한자, 직영)
+    		if(dst_LginAuthInqrVo.get("superAuthYn") == "Y"
+  				|| dst_LginAuthInqrVo.get("drctMangAdmrYn") == "Y"
+  				|| dst_LginAuthInqrVo.get("drctMangYn") == "Y"){
+    			btn_dataSend.setDisabled(false);
+    		}else{
+    			btn_dataSend.setDisabled(true);
+    		}    		
+    	}
+    	
+    	if(dst_LginAuthInqrVo.get("superAuthYn") == "Y") {	
+   			// 슈퍼권한자는 다 보이도록 한다.
+   			chk_superAuthYn.setStyle("display" , "");
+			chk_drctMangAuthYn.setStyle("display" , "");
+	   		chk_crossAuthYn.setStyle("display" , "");
+	   		chk_atchAuthYn.setStyle("display" , "");
+			chk_gAAuthYn.setStyle("display" , "");   	
+			
+			chk_drctMangAuthYn.setValue(dst_BussActDataInfoVo.get("drctMangAuthYn"));
+	   		chk_crossAuthYn.setValue(dst_BussActDataInfoVo.get("crossAuthYn"));
+	   		chk_atchAuthYn.setValue(dst_BussActDataInfoVo.get("atchAuthYn"));
+	   		chk_gAAuthYn.setValue(dst_BussActDataInfoVo.get("gAAuthYn"));
+	   	}
+    	
+    	// 게시조직 체크박스 컨트롤 설정
+    	scwin.setAuthCtrl();
+    	
+	};
+	
+	//**********************************************************
+	// 등록 버튼 클릭이벤트 
+	//**********************************************************
+	scwin.btn_rgst_onclick = function() {
+		//첨부파일이 있는 경우 ggfileName
+		if(SingleFileUploadText.getValue() != null
+			&& SingleFileUploadText.getValue().trim() != ""
+			&& SingleFileUploadComponent.getFileCount()>0){
+			//첨부파일업로드 후, 내용저장.
+			util.startSingleFileUpload(SingleFileUploadComponent, "support");	   	
+		//첨부파일이 없는 경우
+		}else{	
+			// /sales/support/CBSB0001.do 영업활동자료등록
+			scwin.rgstBussActData();	
+		}		
+	};
+	
+	//**********************************************************
+	// 삭제 버튼 클릭이벤트 
+	//**********************************************************
+	scwin.btn_delete_onclick = function() {
+		// /sales/support/CBSB0005.do 영업활동자료삭제	
+		scwin.modBussActDataDelYn();
+	};
+	
+	//**********************************************************
+	// 활동자료발송 버튼 클릭이벤트 
+	//**********************************************************	
+	scwin.btn_dataSend_onclick = function() {
+		
+		var file = "";
+		var apdxFileUrl = "";
+		
+		if(ggelementId.trim() != "" && ggfileName.trim() != ""){
+			file = dst_BussActDataInfoVo.get("apdxFileName").split(".");
+			apdxFileUrl = dst_BussActDataInfoVo.get("apdxFileUrl")+"&fileName=TheK_Insurance."+file[file.length-1];
+		}else{
+			apdxFileUrl = "";
+		}			
+		console.log("첨부파일명:"+file+"/확장자:"+file[file.length-1]+"/길이:"+file.length);										
+		console.log("첨부파일url : "+apdxFileUrl);
+				
+		
+		// SMS이메일발송[CBSB029P] 팝업 오픈		
+		var indata  = {"bussActDataId" 	: gBussActDataId,
+						"apdxFileUrl"   : apdxFileUrl,
+						"ggelementId"	: ggelementId,
+						"ggfileName"	: ggfileName
+						};
+		var popInfo = {
+		    "width"     : 900,
+		    "height"    : 600,
+		    "indata"    : indata,
+		    //"callback"  : scwin.popupCallback,
+		    "title"     : " SMS이메일발송"
+		};
+		return wprom.popupOpen("/ui/cbsb/CBSB029P.xml", popInfo);	
+	};
+	
+	//**********************************************************
+	// 게시조직 컨트롤 설정  
+	//**********************************************************	
+	scwin.setAuthCtrl = function() {
+		// 기존자료 조회시에는 비활성 
+		chk_superAuthYn.setDisabled(true);
+   		chk_drctMangAuthYn.setDisabled(true);
+   		chk_crossAuthYn.setDisabled(true);
+   		chk_atchAuthYn.setDisabled(true);
+   		chk_gAAuthYn.setDisabled(true);  		
+
+   		if(dst_LginAuthInqrVo.get("superAuthYn") == "Y") {	
+	   	}
+	   	else {
+	   		chk_superAuthYn.setStyle("display" , "none");
+			chk_drctMangAuthYn.setStyle("display" , "none");
+	   		chk_crossAuthYn.setStyle("display" , "none");
+	   		chk_atchAuthYn.setStyle("display" , "none");
+			chk_gAAuthYn.setStyle("display" , "none");   	
+	   			
+			// 직영권한여부 dst_LginAuthInqrVo.drctMangYn "Y"이면 
+	   		if(dst_LginAuthInqrVo.get("drctMangYn") == "Y") {
+	   			// 직영만 체크됨 나머지는 안보이도록 처리
+	   			chk_drctMangAuthYn.setValue("Y");
+	   			chk_drctMangAuthYn.setStyle("display" , "");
+	   			chk_drctMangAuthYn.setDisabled(true);   			   			
+	   		}
+	    	// 교차권한여부 dst_LginAuthInqrVo.crossYn    "Y"이면 
+	    	if(dst_LginAuthInqrVo.get("crossYn") == "Y") {
+	   			// 교차만 체크됨 나머지는 안보이도록 처리
+	   			chk_crossAuthYn.setValue("Y");
+	   			chk_crossAuthYn.setStyle("display" , "");
+	   			chk_crossAuthYn.setDisabled(true);
+	   		}
+	    	
+	    	// 전속권한여부 dst_LginAuthInqrVo.atchYn     "Y"이면 
+	    	if(dst_LginAuthInqrVo.get("atchYn") == "Y") {
+	    		// 전속만 체크됨 나머지는 안보이도록 처리
+	    		chk_atchAuthYn.setValue("Y");
+	   			chk_atchAuthYn.setStyle("display" , "");
+	   			chk_atchAuthYn.setDisabled(true);
+	   			   			
+	    	}
+	    	// ga권한여부   dst_LginAuthInqrVo.gAYn       "Y"이면 
+	    	if(dst_LginAuthInqrVo.get("gAYn") == "Y") {
+	    		//GA만 체크됨 나머지는 안보이도록 처리
+	   			chk_gAAuthYn.setValue("Y");
+	   			chk_gAAuthYn.setStyle("display" , "");
+	   			chk_gAAuthYn.setDisabled(true);	   			
+	    	}
+	    }
+
+	};
+	
+	//**********************************************************
+	// 파일업로드 완료후 CALLBACK 
+	//**********************************************************
+	scwin.fileUploadCallback = function(status, upCompId, UpFileCount, UpFileInfo) {		
+		switch (status) {
+			case "SUCCESS" :
+				console.log("upCompId : " + upCompId);
+				console.log("UpFileCount : " + UpFileCount);
+				console.log("UpFileCount : ");
+				console.log(UpFileInfo);
+				console.log("elementId : " + UpFileInfo[0].elementId);
+				
+				ggelementId = UpFileInfo[0].elementId;
+				ggfileName  = UpFileInfo[0].fileName;
+				// /sales/support/CBSB0001.do 영업활동자료등록
+				scwin.rgstBussActData();	
+				
+				break;
+			case "ERROR" :
+				alert("파일 업로드 실패");
+				return;
+				break;
+		}			
+	};
+
+	//**********************************************************
+	// 첨부파일업로드 초기화
+	//**********************************************************
+	scwin.fileUploadInit = function() {	
+		var info = {};
+		info = {
+			 "uploadObj"  : SingleFileUploadComponent  //UPLOAD Component ID
+			,"uploadText" : SingleFileUploadText       //파일명표시 InputBox ID
+			,"maxsize"    : 1                          //첨부파일 최대 크기 (MB)
+			,"callback"   : "scwin.fileUploadCallback"
+		};
+		util.setSingleFileUploadInit(info);
+	}
+	
+
+	
+	//**********************************************************
+	// 첨부파일다운로드
+	//**********************************************************
+	scwin.SingleFileUploadText_onclick = function(e) {
+		if(!util.isNull(SingleFileUploadText.getValue())
+			&& SingleFileUploadText.getValue().trim()!= ""){
+			util.fileDownload(ggelementId, ggfileName);
+		}
+	};
+	
+	//**********************************************************
+	// 첨부파일삭제
+	//**********************************************************
+	scwin.btn_fileDel_onclick = function() {
+		ggelementId = "";
+		ggfileName  = "";
+		SingleFileUploadText.setValue("");	
+	//	SingleFileUploadComponent.removeAllFiles();	
+	};
+
+
+	//**********************************************************
+	// 닫기버튼
+	//**********************************************************
+	scwin.btn_close_onclick = function() {
+		var returnMsg = "";
+        if (wprom.isPopup()){
+        	wprom.close(returnMsg);
+        }
+	};
+	]]></script>
+	</head>
+	<body>
+		<xf:group class="contentWrap layer" id="" style="">
+
+			<!-- group:s -->
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="" class="defaultbox">
+					<w2:textbox id="txt_popupTitle" style=""
+						class="df_tt fl" label="영업활동자료 등록 / 상세">
+					</w2:textbox>
+					<xf:group id="" style="" class="fr">
+						<w2:anchor id="btn_rgst"
+							ev:onclick="scwin.btn_rgst_onclick" class="btn_nml"
+							outerDiv="true">
+							<xf:label><![CDATA[등록]]></xf:label>
+						</w2:anchor>
+						<w2:anchor id="btn_delete"
+							ev:onclick="scwin.btn_delete_onclick" class="btn_nml"
+							outerDiv="true">
+							<xf:label><![CDATA[삭제]]></xf:label>
+						</w2:anchor>
+						<w2:anchor class="btn_nml"
+							ev:onclick="scwin.btn_close_onclick" id="btn_close"
+							outerDiv="true" style="">
+							<xf:label><![CDATA[닫기]]></xf:label>
+						</w2:anchor>
+					</xf:group>
+
+				</xf:group>
+				<xf:group id="" style="" class="w2tb tb"
+					tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:90.00px;"
+							tagname="col">
+						</xf:group>
+						<xf:group style="width: 300px" tagname="col"></xf:group>
+						<xf:group style="width:80.00px;"
+							tagname="col">
+						</xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th"
+							tagname="th">
+							활동자료구분
+						</xf:group>
+						<xf:group style="" class="w2tb_td"
+							tagname="td">
+							<w2:attributes>
+								<w2:colspan>3</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:select1 appearance="full"
+								id="rad_bussActDataFlag" style="" selectedIndex="0" cols=""
+								rows="1" ref="data:dst_BussActDataInfoVo.bussActDataFlag">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[교안]]></xf:label>
+										<xf:value><![CDATA[01]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[리플렛]]></xf:label>
+										<xf:value><![CDATA[02]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[니즈]]></xf:label>
+										<xf:value><![CDATA[03]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[안내장]]></xf:label>
+										<xf:value><![CDATA[04]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select1>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group class="w2tb_th" style=""
+							tagname="th">게시기간</xf:group>
+						<xf:group class="w2tb_td" style=""
+							tagname="td">
+							<w2:attributes>
+								<w2:colspan>3</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:group class="" style="">
+								<w2:inputCalendar
+									calendarValueType="yearMonthDate" focusOnDateSelect="false"
+									footerDiv="false" id="ic_noticDate" renderDiv="true"
+									renderType="component" rightAlign="false" style="width:100px"
+									weekStartsOn="0" ref="data:dst_BussActDataInfoVo.noticDate">
+								</w2:inputCalendar>
+								<w2:textbox class="txt_bw" id=""
+									label="~" tagname="span">
+								</w2:textbox>
+								<w2:inputCalendar
+									calendarValueType="yearMonthDate" focusOnDateSelect="false"
+									footerDiv="false" id="ic_noticEnddt" renderDiv="true"
+									renderType="component" rightAlign="false" style="width:100px"
+									weekStartsOn="0" ref="data:dst_BussActDataInfoVo.noticEnddt">
+								</w2:inputCalendar>
+							</xf:group>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th"
+							tagname="th">
+							활동자료명
+						</xf:group>
+						<xf:group style="" class="w2tb_td"
+							tagname="td">
+							<w2:attributes>
+								<w2:colspan>3</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:input id="ib_bussActDataName" style=""
+								ref="data:dst_BussActDataInfoVo.bussActDataName"
+								maxByteLength="" maxlength="40">
+							</xf:input>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th"
+							tagname="th">
+							내용
+						</xf:group>
+						<xf:group style="" class="w2tb_td"
+							tagname="td">
+							<w2:attributes>
+								<w2:colspan>3</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:textarea id="ta_Cont"
+								style="height: 100px;" ref="data:dst_BussActDataInfoVo.cont"
+								maxByteLength="" maxlength="1800" />
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th"
+							tagname="th">
+							첨부서류
+						</xf:group>
+						<xf:group class="w2tb_td" style=""
+							tagname="td">
+							<xf:group class="" id=""
+								style="position: relative ;width:230px;height:20px;">
+								<xf:group class="" id=""
+									style="position: absolute ;left: 0px;top: 0px;right : 50px;height:100%;">
+									<xf:input ev:onchange=""
+										ev:onclick="scwin.SingleFileUploadText_onclick"
+										ev:onfocus="scwin.SingleFileUploadText_onfocus"
+										id="SingleFileUploadText" readOnly="true"
+										style="position: absolute;width: 100%;height: 100%;">
+									</xf:input>
+								</xf:group>
+								<xf:group class="" id=""
+									style="position: absolute ;right:0px;top: 0px;width: 50px;height: 100%;">
+									<w2:anchor class="btn_nml"
+										ev:onclick="scwin.trigger1_onclick"
+										id="SingleFileUploadButton"
+										style="position: absolute;width: 100%;height: 100%;"
+										type="">
+										<xf:label><![CDATA[첨부]]></xf:label>
+									</w2:anchor>
+									<w2:multiupload action=""
+										ev:onComplete="" ev:ondone="util._setSingleFileCallback"
+										ev:onerror="" filter="*:*.*" fireEventOnError=""
+										id="SingleFileUploadComponent" maxcount="" maxsize="10000"
+										mode="html5_transparent" selectCallback=""
+										style="position: absolute;width: 100%;height: 100%;"
+										uploadButton="true" wmode="false">
+									</w2:multiupload>
+								</xf:group>
+							</xf:group>
+							<w2:anchor class="btn_nml"
+								ev:onclick="scwin.btn_fileDel_onclick" id="btn_fileDel"
+								outerDiv="true" style="margin-top:-20px;margin-left:233px;">
+								<xf:label><![CDATA[삭제]]></xf:label>
+							</w2:anchor>
+						</xf:group>
+						<xf:group class="w2tb_th" tagname="th">
+							게시조직
+						</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<xf:select appearance="full"
+								id="chk_superAuthYn" style="" selectedindex="-1" cols=""
+								rows="1" ref="" disabled="true" ev:oncheckboxclick=""
+								ev:onviewchange="scwin.chk_superAuthYn_onviewchange"
+								class="ml0">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[전체]]></xf:label>
+										<xf:value><![CDATA[Y]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select>
+							<xf:select appearance="full" cols=""
+								id="chk_drctMangAuthYn" rows="1" selectedindex="-1"
+								style="margin-left:1px;" ref='' disabled="true" class="ml0">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[직영]]></xf:label>
+										<xf:value><![CDATA[Y]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select>
+							<xf:select appearance="full" cols=""
+								id="chk_crossAuthYn" rows="1" selectedindex="-1"
+								style="margin-left:1px;" ref="" disabled="true" class="ml0">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[교차]]></xf:label>
+										<xf:value><![CDATA[Y]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select>
+							<xf:select appearance="full" cols=""
+								id="chk_atchAuthYn" rows="1" selectedindex="-1"
+								style="margin-left:1px;" ref="" disabled="true" class="ml0">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[전속]]></xf:label>
+										<xf:value><![CDATA[Y]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select>
+							<xf:select appearance="full" cols=""
+								id="chk_gAAuthYn" rows="1" selectedindex="-1"
+								style="margin-left:1px;" ref="" disabled="true" class="ml0">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[GA]]></xf:label>
+										<xf:value><![CDATA[Y]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th"
+							tagname="th">
+							등록자
+						</xf:group>
+						<xf:group style="" class="w2tb_td"
+							tagname="td">
+							<xf:input id="ib_rgtrEmp" style="" ref=""></xf:input>
+						</xf:group>
+						<xf:group class="w2tb_th" tagname="th">
+							등록일자
+						</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<xf:input id="ib_rgstDate" style=""
+								displayFormat="" dataType="date"
+								ref="data:dst_BussActDataInfoVo.rgstDate">
+							</xf:input>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<!-- group:e -->
+
+			<!-- group:s -->
+			<!-- group:e -->
+
+		</xf:group>
+		<xf:group class="defaultbox" id="" style="margin-top: 10px">
+			<xf:group class="fr" id="" style="">
+				<w2:anchor class="btn_nml"
+					ev:onclick="scwin.btn_dataSend_onclick" id="btn_dataSend"
+					outerDiv="true" style="">
+					<xf:label><![CDATA[활동자료발송]]></xf:label>
+				</w2:anchor>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

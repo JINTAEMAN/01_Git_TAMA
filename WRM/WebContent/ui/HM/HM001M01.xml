@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<!-- 
+		#####################################################################
+		파일명 : HM001M01.xml
+		프로그램명 : 조직 관리 
+		설 명 : 조직을 관리(등록,수정,삭제)하는 화면
+		작성자 : Inswave Systems
+		작성일 : 2016.10.24
+		
+		수정일자	  수정자			 수정내용
+		=====================================================================
+		2016.10.24	Inswave Systems	최초작성
+		2018.01.26	Inswave Systems	WebSquare5 SP2 기능을 적용하도록 소스 업그레이드
+		2018.11.12	Inswave Systems	WebSquare5 SP3 기능을 적용하도록 소스 업그레이드
+		#####################################################################
+		-->
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataList id="dlt_organizationBasic" baseNode="list" saveRemovedData="true" repeatNode="map" ev:oncelldatachange="" undoRecursiveRow="true">
+					<w2:columnInfo>
+						<w2:column id="chk" name="선택" dataType="text" ignoreStatus="true"></w2:column>
+						<w2:column id="ORG_CD" name="소속코드" dataType="text"></w2:column>
+						<w2:column id="ORG_NM" name="소속명칭" dataType="text"></w2:column>
+						<w2:column id="PARENT_ORG_CD" name="상위소속코드" dataType="text"></w2:column>
+						<w2:column id="ORG_LEVEL" name="조직레벨" dataType="text"></w2:column>
+						<w2:column id="SORT_ORDER" name="정렬순서" dataType="text"></w2:column>
+						<w2:column id="ORG_CLASS_CD" name="조직구분" dataType="text"></w2:column>
+						<w2:column id="ORG_ALIAS_NM" name="소속약칭" dataType="text"></w2:column>
+						<w2:column id="ORG_EN_NM" name="소속영문명" dataType="text"></w2:column>
+						<w2:column id="ORG_EN_ALIAS_NM" name="소속영문약명" dataType="text"></w2:column>
+						<w2:column id="ORG_BOSS_EMP_NM" name="직책자" dataType="text"></w2:column><w2:column id="START_DATE" name="개설일" dataType="text"></w2:column>
+						<w2:column id="END_DATE" name="폐쇄일" dataType="text"></w2:column>
+						<w2:column id="NOTE" name="비고" dataType="text"></w2:column>
+						<w2:column id="PARENT_ORG_NM" name="상위소속명" dataType="text"></w2:column>
+					<w2:column id="ORG_BOSS_EMP_CD" name="직책자코드" dataType="text"></w2:column></w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList id="dlt_organizationBoss" baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="EMP_CD" name="사원코드" dataType="text"></w2:column>
+						<w2:column id="EMP_NM" name="사원명" dataType="text"></w2:column>
+					</w2:columnInfo>
+					<w2:data></w2:data>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" id="dma_search">
+					<w2:keyInfo>
+						<w2:key id="TYPE" name="name1" dataType="text"></w2:key>
+						<w2:key id="CONTENT" name="name2" dataType="text"></w2:key>
+						<w2:key id="IS_USE" name="name3" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataMap baseNode="map" id="dma_result">
+					<w2:keyInfo>
+						<w2:key id="STATUS" name="name1" dataType="text"></w2:key>
+						<w2:key id="ICNT" name="name2" dataType="text"></w2:key>
+						<w2:key id="UCNT" name="name3" dataType="text"></w2:key>
+						<w2:key id="DCNT" name="name4" dataType="text"></w2:key>
+						<w2:key id="TYPE" name="name5" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList id="dlt_organizationSearchItem" baseNode="list" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="ORG_CD" name="name1" dataType="text"></w2:column>
+						<w2:column id="ORG_NM" name="name2" dataType="text"></w2:column>
+						<w2:column id="PARENT_ORG_CD" name="name3" dataType="text"></w2:column>
+						<w2:column id="PARENT_ORG_NM" name="name4" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+			<xf:submission id="sbm_searchOrganization" ref="data:json,dma_search" target='data:json,dlt_organizationBasic'
+				action="/organization/searchOrganization" method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler=""
+				customHandler="" mode="asynchronous" processMsg="" ev:submit="" ev:submitdone="scwin.sbm_searchOrganization_submitdone" ev:submiterror="" abortTrigger="">
+			</xf:submission>
+			<xf:submission id="sbm_saveOrganizationBasic" ref='data:json,{"id":"dlt_organizationBasic","action":"modified"}'
+				target="data:json,dlt_organizationBasic" action="/organization/updateOrganizationBasic" method="post" mediatype="application/json" encoding="UTF-8"
+				instance="" replace="" errorHandler="" customHandler="" mode="asynchronous" processMsg="저장중 입니다..." ev:submit=""
+				ev:submitdone="scwin.sbm_saveOrganizationBasic_submitdone" ev:submiterror="">
+			</xf:submission>
+			<xf:submission id="sbm_organizationSearchItem" ref="" target='data:json,["dlt_organizationSearchItem","dlt_organizationBoss"]' action="/organization/selectOrganizaionSearchItem"
+				method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous" processMsg=""
+				ev:submit="" ev:submitdone="" ev:submiterror="" abortTrigger="">
+			</xf:submission>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+	/**
+	 * 초기 스크립트 수행 함수 정의
+	 */
+	scwin.onpageload = function() {
+		var codeOptions = [ { "code" : "00020", "compID" : "sbx_OrgClassCd, grd_organizationBasic:ORG_CLASS_CD" } ];
+		com.setCommonCode(codeOptions);
+		com.executeSubmission(sbm_organizationSearchItem);
+		com.setEnterKeyEvent(tbl_search, scwin.btn_Search_onclick);
+		com.setGridViewDelCheckBox([grd_organizationBasic]);
+	};
+	
+	scwin.onpageunload = function() {
+
+	};
+	
+	/**
+	 * 조회된 건수와 조직 레벨에 따른 소속명칭, 상위소속명의 폰트색을 변경한다. 
+	 * Level 1 : #FF0000 (붉은색) Level 2 : #2F9D27 (초록색) Level 3 : #0054FF (파란색)
+	 */
+	scwin.setFontFormat = function(data, fData, rowIndex, colIndex) {
+		var val_level = dlt_organizationBasic.getCellData(rowIndex, "ORG_LEVEL");
+		if (val_level == "1") {
+			grd_organizationBasic.setCellColor(rowIndex, "ORG_NM", "#FF0000");
+			grd_organizationBasic.setCellColor(rowIndex, "PARENT_ORG_NM", "#FF0000");
+		} else if (val_level == "2") {
+			grd_organizationBasic.setCellColor(rowIndex, "ORG_NM", "#2F9D27");
+			grd_organizationBasic.setCellColor(rowIndex, "PARENT_ORG_NM", "#2F9D27");
+		} else if (val_level == "3") {
+			grd_organizationBasic.setCellColor(rowIndex, "ORG_NM", "#0054FF");
+			grd_organizationBasic.setCellColor(rowIndex, "PARENT_ORG_NM", "#0054FF");
+		}
+		return fData;
+	};
+	
+	/**
+	 * 검색항목(selectBox)의 내용이 변경되었을 때 실행된다
+	 */
+	scwin.sbx_ChoiceBox_onviewchange = function(info) {
+		if (info.newValue == "ORG_CD") {
+			acb_autoChoiceBox.setNodeSet("data:dlt_organizationSearchItem", "ORG_CD", "ORG_CD");
+			sbx_ParentCd.hide();
+			acb_autoChoiceBox.show("");
+		} else if (info.newValue == "ORG_NM") {
+			acb_autoChoiceBox.setNodeSet("data:dlt_organizationSearchItem", "ORG_NM", "ORG_NM");
+			sbx_ParentCd.hide();
+			acb_autoChoiceBox.show("");
+		} else if (info.newValue == "ORG_BOSS_EMP_CD") {
+			acb_autoChoiceBox.setNodeSet("data:dlt_organizationBoss", "EMP_NM", "EMP_CD");
+			sbx_ParentCd.hide();
+			acb_autoChoiceBox.show("");
+		} else if (info.newValue == "PARENT_ORG_CD") {
+			acb_autoChoiceBox.hide();
+			sbx_ParentCd.show("");
+		}
+	};
+	
+	/**
+	 * 조직기본관리 조회버튼 클릭시 발생하며, 조건에 따른 조직기본관리 리스트를 조회한다.
+	 */
+	scwin.btn_Search_onclick = function() {
+		if (sbx_ChoiceBox.getValue() == "PARENT_ORG_CD") {
+			dma_search.set("CONTENT", sbx_ParentCd.getValue());
+		} else {
+			dma_search.set("CONTENT", acb_autoChoiceBox.getValue());
+		}
+		com.executeSubmission(sbm_searchOrganization);
+	};
+	
+	/**
+	 * 조직기본관리 버튼 클릭의 콜백메소드 건수 조회, ReadOnly 그리드뷰 컬럼색 변경, 조직 레벨에 따른 소속명칭, 상위소속명의 폰트색을 변경한다.
+	 */
+	scwin.sbm_searchOrganization_submitdone = function(e) {
+		spn_organizationCnt.setValue(dlt_organizationBasic.getRowCount());
+	};
+	
+	/**
+	 * 조직기본관리 등록 버튼 클릭
+	 */
+	scwin.btn_addOrganization_onclick = function() {
+		var org_cnt = dlt_organizationBasic.getTotalRow();
+		if (org_cnt == 0) {
+			com.alert("조회 후 이용하세요.");
+			return;
+		}
+	
+		if (grd_organizationBasic.getFocusedRealRowIndex() === -1) {
+			grd_organizationBasic.setFocusedCell(0, "ORG_CD");
+		}
+		var currOrgNm = dlt_organizationBasic.getCellData(grd_organizationBasic.getFocusedRealRowIndex(), "ORG_NM");
+		var currOrgLevel = WebSquare.util.getNumber(dlt_organizationBasic.getCellData(grd_organizationBasic.getFocusedRealRowIndex(), "ORG_LEVEL"));
+		if (org_cnt != "0" && grd_organizationBasic.getFocusedRowIndex() == "-1") {
+			com.alert("소속코드를 클릭하셔야 합니다.");
+		} else {
+			if (currOrgLevel < 3) {
+				scwin.selectLevel(currOrgNm);
+			} else {
+				scwin.equalLevel();
+			}
+		}
+	};
+	
+	/**
+	 * 조직레벨이 1 또는 2일 경우에 실행되는 함수 Yes, No에 따라서 하위에 만들 것인지, 동일한 레벨로 만들 것인지 결정한다.
+	 */
+	scwin.selectLevel = function(returnValue) {
+		grd_organizationBasic.spanAll(true);
+		com.confirm(returnValue + " 메뉴 하위에 새로운 메뉴를 추가하시겠습니까?\n 취소를 누르면 동일한 레벨에 메뉴가 생성됩니다.", "scwin.selectLevelCallbak");
+	};
+	
+	scwin.selectLevelCallbak = function(value) {
+		if (value == true) {
+			scwin.lowerLevel();
+		} else {
+			scwin.equalLevel();
+		}
+	};	
+	
+	/**
+	 * 하위 레벨의 노드에 조직을 추가한다.
+	 */
+	scwin.lowerLevel = function() {
+		var focusedRowIndex = grd_organizationBasic.getFocusedRealRowIndex();
+		var parentOrgCd = dlt_organizationBasic.getCellData(focusedRowIndex, "ORG_CD");
+		var orgLevel = WebSquare.util.getNumber(dlt_organizationBasic.getCellData(focusedRowIndex, "ORG_LEVEL")) + 1;
+		var sortOrder = 1;
+		var insertRowIndex = scwin.getInsertRowIndex(parentOrgCd);
+	
+		if (insertRowIndex === -1) {
+			insertRowIndex = focusedRowIndex + 1;
+		}
+		var orgCd = scwin.getInsertRowOrgCd(parentOrgCd, orgLevel, true);
+	
+		var insertJson = [ { "ORG_CD" : orgCd, "PARENT_ORG_CD" : parentOrgCd, "ORG_LEVEL" : orgLevel, "SORT_ORDER" : sortOrder } ];
+		dlt_organizationBasic.insertJSON(insertRowIndex, insertJson);
+		grd_organizationBasic.setFocusedCell(insertRowIndex, "ORG_CD");
+		ibx_orgNm.focus();
+	};
+	
+	/**
+	 * 같은 레벨의 노트에 조직을 추가한다.
+	 */
+	scwin.equalLevel = function() {
+		var focusedRowIndex = grd_organizationBasic.getFocusedRealRowIndex();
+		var parentOrgCd = dlt_organizationBasic.getCellData(focusedRowIndex, "PARENT_ORG_CD");
+		var rowIndexArr = dlt_organizationBasic.getMatchedIndex("PARENT_ORG_CD", parentOrgCd, true, 0, dlt_organizationBasic.getRowCount());
+		var orgLevel = WebSquare.util.getNumber(dlt_organizationBasic.getCellData(rowIndexArr[rowIndexArr.length - 1], "ORG_LEVEL"));
+		var sortOrder = WebSquare.util.getNumber(dlt_organizationBasic.getCellData(rowIndexArr[rowIndexArr.length - 1], "SORT_ORDER")) + 1;
+		var insertRowIndex = scwin.getInsertRowIndex(parentOrgCd);
+		var orgCd = scwin.getInsertRowOrgCd(parentOrgCd, orgLevel, false);
+	
+		var insertJson = [ { "ORG_CD" : orgCd, "PARENT_ORG_CD" : parentOrgCd, "ORG_LEVEL" : orgLevel, "SORT_ORDER" : sortOrder } ];
+	
+		dlt_organizationBasic.insertJSON(insertRowIndex, insertJson);
+		grd_organizationBasic.setFocusedCell(insertRowIndex, "ORG_CD");
+		ibx_orgNm.focus();
+	};
+	
+	/**
+	 * 새로 추가되는 조직의 조직 코드를 반환한다.
+	 */
+	scwin.getInsertRowOrgCd = function(parentOrgCd, orgLevel, isBottom) {
+		var OrgCdArr = dlt_organizationBasic.getMatchedColumnData("PARENT_ORG_CD", parentOrgCd, "ORG_CD", true, 0, dlt_organizationBasic.getRowCount());
+	
+		if (OrgCdArr.length > 0) {
+			var lastOrgCd = OrgCdArr[OrgCdArr.length - 1];
+			var nodeIndex = (orgLevel - 1) * 2;
+			var preNodeCd = lastOrgCd.substr(nodeIndex, 2);
+			var newNodeCd = com.fillZero(WebSquare.util.getNumber(preNodeCd) + 1, 2);
+			return lastOrgCd.substr(0, nodeIndex) + lastOrgCd.substr(nodeIndex).replace(preNodeCd, newNodeCd);
+		} else {
+			if (isBottom) {
+				var nodeIndex = parentOrgCd.indexOf("00");
+				return parentOrgCd.substr(0, nodeIndex) + parentOrgCd.substr(nodeIndex).replace("00", "01");
+			} else {
+				var nodeIndex = parentOrgCd.indexOf("00");
+				var preNodeCd = parentOrgCd.substr(nodeIndex, 2);
+				var newNodeCd = com.fillZero(WebSquare.util.getNumber(preNodeCd) + 1, 2);
+				return parentOrgCd.substr(0, nodeIndex) + parentOrgCd.substr(nodeIndex).replace(preNodeCd, newNodeCd);
+			}
+		}
+	};
+	
+	/**
+	 * 새로 추가되는 조직으로 RowIndex를 반환한다.
+	 */
+	scwin.getInsertRowIndex = function(parentOrgCd) {
+		var rowIndexArr = dlt_organizationBasic.getMatchedIndex("PARENT_ORG_CD", parentOrgCd, true, 0, dlt_organizationBasic.getRowCount());
+		if (rowIndexArr.length > 0) {
+			var lastOrgCd = dlt_organizationBasic.getCellData(rowIndexArr[rowIndexArr.length - 1], "ORG_CD");
+			var rowIndex = scwin.getInsertRowIndex(lastOrgCd);
+			if (rowIndex !== -1) {
+				return rowIndex;
+			} else {
+				return rowIndexArr[rowIndexArr.length - 1] + 1;
+			}
+		} else {
+			return -1;
+		}
+	};
+	
+	/**
+	 * 조직기본관리 삭제 버튼 클릭
+	 */
+	scwin.btn_delOrganization_onclick = function() {
+		dlt_organizationBasic.deleteRows(grd_organizationBasic.getCheckedIndex("chk"));
+	};
+	
+	/**
+	 * 조직기본관리 취소 버튼 클릭
+	 */
+	scwin.btn_cancelOrganization_onclick = function() {
+		dlt_organizationBasic.undoAll();
+		dlt_organizationBasic.removeRows(dlt_organizationBasic.getInsertedIndex());
+	};
+	
+	/**
+	 * 조직기본관리 저장 버튼 클릭
+	 */
+	scwin.btn_saveOrganization_onclick = function() {
+		var modifiedCount = dlt_organizationBasic.getModifiedIndex().length;
+		
+		if (modifiedCount > 0) {
+			if (com.validateGroup(grp_organizationBasic)) {
+				com.confirm(modifiedCount + "건의 데이타를 반영하시겠습니까", function(rtn) {
+					if (rtn) { 
+						com.executeSubmission(sbm_saveOrganizationBasic);
+					}
+				});
+			}
+		} else {
+			com.alert("저장할 데이터가 없습니다.");
+		}
+	};
+	
+	/**
+	 * 조직기본관리 저장 버튼의 콜백메소드
+	 */
+	scwin.sbm_saveOrganizationBasic_submitdone = function(e) {
+		com.executeSubmission(sbm_searchOrganization);
+	};
+	
+	scwin.btn_excelOrganization_onclick = function() {
+		com.downLoadExcel(grd_organizationBasic);
+	};
+	]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="contentWrap" id="" style="">
+			<w2:wframe id="" style="" src="/cm/common/wf_titleFav.xml" scope="true"></w2:wframe>
+			<xf:group id="" style="" class="section">
+				<xf:group id="tbl_search" style="" class="tbl_search">
+					<xf:group id="" style="width:100%;" adaptive="layout" class="w2tb tbl_sc" adaptiveThreshold="768" tagname="table">
+						<w2:attributes>
+							<w2:summary></w2:summary>
+						</w2:attributes>
+						<xf:group tagname="colgroup">
+							<xf:group style="width:80px;" tagname="col"></xf:group>
+							<xf:group style="" tagname="col"></xf:group>
+							<xf:group style="width:200px;" tagname="col"></xf:group>
+						</xf:group>
+						<xf:group tagname="tr">
+							<xf:group style="" class="w2tb_th" tagname="th">검색항목</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" direction="auto" chooseOption=""
+									displayMode="label" optionOrder="false" ev:onviewchange="scwin.sbx_ChoiceBox_onviewchange" id="sbx_ChoiceBox"
+									ref="data:dma_search.TYPE" style="height:20px;width:80px;margin-right: 10px;float:left;" allOption="" submenuSize="auto"
+									disabled="false" textAlign="left">
+									<xf:choices>
+										<xf:item>
+											<xf:label><![CDATA[소속명칭]]></xf:label>
+											<xf:value><![CDATA[ORG_NM]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[소속코드]]></xf:label>
+											<xf:value><![CDATA[ORG_CD]]></xf:value>
+										</xf:item>
+										<xf:item>
+											<xf:label><![CDATA[직책자]]></xf:label>
+											<xf:value><![CDATA[ORG_BOSS_EMP_CD]]></xf:value>
+										</xf:item>
+									</xf:choices>
+								</xf:select1>
+								<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" chooseOptionLabel="-전체-" direction="auto"
+									chooseOption="true" displayMode="label" ev:onblur="scwin.sbx_PositionCd_onblur" optionOrder="false" id="sbx_ParentCd" ref=""
+									style="width: 20.5%;height: 21px;float:left;display: none;" allOption="" textAlign="center" submenuSize="auto" disabled="false">
+									<xf:choices>
+										<xf:itemset nodeset="data:dlt_organizationSearchItem">
+											<xf:label ref="PARENT_ORG_NM"></xf:label>
+											<xf:value ref="PARENT_ORG_CD"></xf:value>
+										</xf:itemset>
+									</xf:choices>
+								</xf:select1>
+								<w2:autoComplete interactionMode="" chooseOptionValue="" chooseOptionLabel="-전체-" visibleRowNum="" chooseOption="true"
+									caseSensitive="false" displayMode="label" ev:onviewchange="" id="acb_autoChoiceBox" useKeywordHighlight="false" ref=""
+									style="height: 21px;float: left;" search="start" ev:onchange="" allOption="" submenuSize="auto" editType="select" textAlign="left" noResult="useData" class="calc120">
+									<w2:choices>
+										<w2:itemset nodeset="data:dlt_organizationSearchItem">
+											<w2:label ref="ORG_NM"></w2:label>
+											<w2:value ref="ORG_NM"></w2:value>
+										</w2:itemset>
+									</w2:choices>
+								</w2:autoComplete>
+							</xf:group>
+							<xf:group style="" class="w2tb_td" tagname="td">
+								<w2:anchor id="" style="" ev:onclick="scwin.btn_Search_onclick" class="btn_sh" outerDiv="true">
+									<xf:label><![CDATA[조회]]></xf:label>
+								</w2:anchor>
+							</xf:group>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group id="" style="" class="section">
+				<xf:group id="" style="" class="defaultbox">
+					<w2:textbox id="" style="" class="df_tt fl" label="조직"></w2:textbox>
+					<xf:group id="" style="height:22px;" class="fr">
+						<w2:span id="spn_organizationCnt" style="" class="df_total" label="" displayFormat="건"></w2:span>
+						<xf:group id="" style="" class="ml5 fr">
+							<w2:anchor id="btn_addOrganization" style="" clickEventElement="outerDiv"
+								ev:onclick="scwin.btn_addOrganization_onclick" class="btn_gcm" outerDiv="true">
+								<xf:label><![CDATA[등록]]></xf:label>
+							</w2:anchor>
+							<w2:anchor id="btn_delOrganization" style="display:none;" clickEventElement="outerDiv"
+								ev:onclick="scwin.btn_delOrganization_onclick" class="btn_gcm" outerDiv="true">
+								<xf:label><![CDATA[삭제]]></xf:label>
+							</w2:anchor>
+							<w2:anchor id="btn_cancelOrganization" style="" clickEventElement="outerDiv"
+								ev:onclick="scwin.btn_cancelOrganization_onclick" class="btn_gcm" outerDiv="true">
+								<xf:label><![CDATA[취소]]></xf:label>
+							</w2:anchor>
+							<w2:anchor id="btn_saveOrganization" style="" clickEventElement="outerDiv"
+								ev:onclick="scwin.btn_saveOrganization_onclick" class="btn_gcm" outerDiv="true">
+								<xf:label><![CDATA[저장]]></xf:label>
+							</w2:anchor>
+							<w2:anchor class="btn_gcm" clickEventElement="outerDiv" ev:onclick="scwin.btn_excelOrganization_onclick"
+								id="btn_excelOrganization" outerDiv="true" style="">
+								<xf:label><![CDATA[엑셀]]></xf:label>
+							</w2:anchor>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+				<w2:gridView ignoreCellClick="false" ev:onrowindexchange="" autoFit="allColumn" visibleRowNum="10" sortable="true"
+					sortEvent="onclick" class="cm_grid" showSortableImage="" fixedColumnWithHidden="true" dataList="dlt_organizationBasic"
+					id="grd_organizationBasic" readOnly="true" style="height: 280px;" overflowX="hidden" scrollByColumn="false" useShiftKey="true"
+					overflowY="scroll" rowStatusVisible="true" rowStatusHeaderValue="상태" ev:oncellclick="" adaptive="crosstab">
+					<w2:header id="header1" style="">
+						<w2:row id="row2" style="">
+							<w2:column id="chk" blockSelect="false" style="height:25px;" width="40" inputType="checkbox" displayMode="label"
+								fixColumnWidth="true">
+							</w2:column>
+							<w2:column id="column9" blockSelect="false" style="height:25px;" width="50" inputType="text" value="소속코드"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column17" blockSelect="false" style="height:25px;" width="120" inputType="text" value="소속명칭"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column30" blockSelect="false" style="height:25px;" width="70" inputType="text" value="상위소속명"></w2:column>
+							<w2:column id="column11" blockSelect="false" style="height:25px;" width="80" inputType="text" value="조직구분"
+								displayMode="label">
+							</w2:column>
+							<w2:column id="column28" blockSelect="false" style="height:25px;" width="70" inputType="text" value="직책자"></w2:column>
+							<w2:column id="column18" blockSelect="false" style="height:25px;" width="70" inputType="text" value="개설일"></w2:column>
+							<w2:column id="column38" blockSelect="false" style="height:25px;" width="70" inputType="text" value="폐쇄일"></w2:column>
+						</w2:row>
+					</w2:header>
+					<w2:gBody id="gBody4" style="" width="40">
+						<w2:row id="row5" style="">
+							<w2:column id="chk" blockSelect="false" readOnly="false" style="height:25px;" width="40" inputType="checkbox"
+								displayMode="label" fixColumnWidth="true">
+							</w2:column>
+							<w2:column id="ORG_CD" blockSelect="false" style="height:25px;" width="50" inputType="text"
+								customFormatter="scwin.setFontFormat" displayMode="label">
+							</w2:column>
+							<w2:column depthColumn="ORG_LEVEL" id="ORG_NM" blockSelect="false" showDepth="3" style="height:25px;"
+								depthType="div" width="120" inputType="drilldown" displayMode="label" textAlign="left">
+							</w2:column>
+							<w2:column id="PARENT_ORG_NM" blockSelect="false" style="height:25px;" width="70" inputType="select">
+								<w2:choices>
+									<w2:itemset nodeset="data:dlt_organizationBasic">
+										<w2:label ref="PARENT_ORG_NM"></w2:label>
+										<w2:value ref="PARENT_ORG_NM"></w2:value>
+									</w2:itemset>
+								</w2:choices>
+							</w2:column>
+							<w2:column id="ORG_CLASS_CD" blockSelect="false" style="height:25px;" width="80" inputType="select"
+								displayMode="label" textAlign="center">
+								<w2:choices>
+									<w2:itemset nodeset="">
+										<w2:label ref=""></w2:label>
+										<w2:value ref=""></w2:value>
+									</w2:itemset>
+								</w2:choices>
+							</w2:column>
+							<w2:column id="ORG_BOSS_EMP_CD" blockSelect="false" style="height:25px;" width="70" inputType="select">
+								<w2:choices>
+									<w2:itemset nodeset="data:dlt_organizationBoss">
+										<w2:label ref="EMP_NM"></w2:label>
+										<w2:value ref="EMP_CD"></w2:value>
+									</w2:itemset>
+								</w2:choices>
+							</w2:column>
+							<w2:column id="START_DATE" blockSelect="false" calendarValueType="yearMonthDate" style="height:25px;" width="70"
+								inputType="text" displayFormat="####-##-##">
+							</w2:column>
+							<w2:column id="END_DATE" blockSelect="false" calendarValueType="yearMonthDate" style="height:25px;" width="70"
+								inputType="text" displayFormat="####-##-##">
+							</w2:column>
+						</w2:row>
+					</w2:gBody>
+				</w2:gridView>
+			</xf:group>
+			<xf:group id="grp_organizationBasic" style="" class="section">
+				<xf:group id="" style="width:100%;" class="w2tb tb" tagname="table" adaptive="layout">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:150px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+						<xf:group style="width:150px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">소속코드</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:input id="ibx_orgCd" ref="data:dlt_organizationBasic.ORG_CD" style="height:24px;" disabled="true"></xf:input>
+						</xf:group>
+						<xf:group class="w2tb_th req" tagname="th">소속명칭</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<xf:input id="ibx_orgNm" ref="data:dlt_organizationBasic.ORG_NM" style="height:24px;" class="req" mandatory="true"></xf:input>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th req" tagname="th">조직구분</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" chooseOptionLabel="전체" direction="auto"
+								chooseOption="false" mandatory="true" displayMode="label" optionOrder="" id="sbx_OrgClassCd" ref="data:dlt_organizationBasic.ORG_CLASS_CD"
+								style="height:24px;" allOption="" submenuSize="auto" disabled="false" class="req" renderType="component">
+								<xf:choices></xf:choices>
+							</xf:select1>
+						</xf:group>
+						<xf:group class="w2tb_th" tagname="th">소속약칭</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<xf:input id="ibx_orgAliasNm" ref="data:dlt_organizationBasic.ORG_ALIAS_NM" style="height:24px;"></xf:input>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">소속영문명</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:input id="ibx_orgEnNm" ref="data:dlt_organizationBasic.ORG_EN_NM" style="height:24px;"></xf:input>
+						</xf:group>
+						<xf:group class="w2tb_th" tagname="th">소속영문약명</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<xf:input id="ibx_orgEnAliasNm" ref="data:dlt_organizationBasic.ORG_EN_ALIAS_NM" style="height:24px;"></xf:input>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">조직레벨</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:input id="ibx_orgLevel" ref="data:dlt_organizationBasic.ORG_LEVEL" style="height:24px;" disabled="true"></xf:input>
+						</xf:group>
+						<xf:group class="w2tb_th" tagname="th">직책자</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<xf:select1 disabledClass="w2selectbox_disabled" appearance="minimal" chooseOptionLabel="전체" direction="auto"
+								chooseOption="true" displayMode="label" optionOrder="false" id="sbx_OrgBossEmpCd" ref="data:dlt_organizationBasic.ORG_BOSS_EMP_CD"
+								style="height:24px;" allOption="" submenuSize="auto" disabled="false" renderType="component">
+								<xf:choices>
+									<xf:itemset nodeset="data:dlt_organizationBoss">
+										<xf:label ref="EMP_NM"></xf:label>
+										<xf:value ref="EMP_CD"></xf:value>
+									</xf:itemset>
+								</xf:choices>
+							</xf:select1>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">개설일</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<w2:inputCalendar renderType="component" id="cal_startDate" renderDiv="true" ref="data:dlt_organizationBasic.START_DATE"
+								footerDiv="false" calendarValueType="yearMonthDate" style="height:24px;" rightAlign="false" weekStartsOn="0"
+								focusOnDateSelect="false" class="">
+							</w2:inputCalendar>
+						</xf:group>
+						<xf:group class="w2tb_th" tagname="th">폐쇄일</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<w2:inputCalendar renderType="component" id="cal_endDate" renderDiv="true" ref="data:dlt_organizationBasic.END_DATE"
+								footerDiv="false" calendarValueType="yearMonthDate" style="height:24px;" rightAlign="false" weekStartsOn="0"
+								focusOnDateSelect="false" class="">
+							</w2:inputCalendar>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">비고</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<w2:attributes>
+								<w2:colspan>3</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:input id="ibx_note" ref="data:dlt_organizationBasic.NOTE" style="height:24px;"></xf:input>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>

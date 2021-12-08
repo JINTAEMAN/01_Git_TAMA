@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection/>
+            <w2:workflowCollection/>
+        </xf:model>
+ <script src="/cm/js/convertJs/Global_Script.js"/>
+ <script src="/cm/js/convertJs/comm_Webservice.js"/>
+ <script src="/cm/js/convertJs/NewGen_Script.js"/>
+ <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+ <script src="/cm/js/convertJs/Marine_Script.js"/>        
+        <script><![CDATA[
+/****************************************************************************
+ * 프로그램번호   : CBSC162P - O210_Pop4
+ * 프로그램명      : 인수심의결재-ICPS 로그인정보
+ * 파일명            : CBSC162P - O210_Pop4.xml
+ * 프로그램 내용  : 인수심의결재-ICPS 로그인정보
+ * 관련 프로그램  : 
+ * 작성자            : 구종식
+ * 작성일            : 2017-09-19
+ * 저작권            : Copyright ⓒ 2004. the K 손해보험㈜. All Right Reserved.
+ * 변경내역         : 
+ ****************************************************************************/
+scwin.init = function(){
+};
+/****************************************************************************
+ * function 명 : lfn_Btn_Confirm_OnClick  
+ * 내용        : 팝업닫기.
+ ****************************************************************************/
+scwin.lfn_Btn_Confirm_OnClick = function() {
+    var sArg = edt_icpsId.getValue();
+    sArg += "^" + edt_icpsPw.getValue();
+    //SetReg("UserDefICPSInfo", sArg);
+    wprom.close(sArg);
+};
+
+/****************************************************************
+ * function 명 : lfn_EnterKey_OnKeyDown
+ * 내용        : 조회조건 엔터 이벤트
+ ****************************************************************/
+scwin.lfn_EnterKey_OnKeyDown = function(e){//obj, nChar, bShift, bCtrl, bAlt, LLParam, HLParam) {
+    if (e.keyCode == 13) {
+        var sArg = edt_icpsId.getValue();
+        sArg += "^" + edt_icpsPw.getValue();
+        //SetReg("UserDefICPSInfo", sArg);
+        wprom.close(sArg);
+    }
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="O210_Pop4"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;  /*height:150px;*/ left:0px; top:0px;/* width:328px;*/ border:0;"
+            userData1="인수심사결재_ICPS로그인정보[O210_Pop4]" userData2=" OnLoadCompleted:scwin.O210_Pop2_OnLoadCompleted; ">
+            <xf:group arcsize="6" class="search_area" id="Shape0"
+                style="position:absolute;  border-color:user7;  bottom:112px; height:84px; left:0px; top:28px; width:328px;" userData3="RoundRect"/>
+            <w2:textbox id="Static5" label="ICPS로그인정보" style="position:absolute; VAlign:Middle;  height:22px;left:0px;top:-1px; width:141px;" tagname="" class="sub_pop_title01" />
+            <w2:textbox class="sty_lb_Search" id="Static0" label="사용자ID"
+                style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:17px;top:42px; width:68px;" tagname=""/>
+            <xf:secret class="sty_ipt_form" ev:onblur="" id="edt_icpsPw" maxlength="20"
+                style="position:absolute; ImeMode:english;  border-style:solid;  height:20px;left:99px;top:72px; width:180px;" tabIndex="2" ev:onkeydown="scwin.lfn_EnterKey_OnKeyDown"/>
+            <xf:input class="sty_ipt_form" id="edt_icpsId" maxlength="20"
+                style="position:absolute; ImeMode:english;  border-style:solid;  height:20px;left:99px;top:42px; width:180px;" tabIndex="1"/>
+            <w2:textbox class="sty_lb_Search" id="Static4" label="비밀번호"
+                style="position:absolute; VAlign:Middle;  text-align:right; height:20px;left:17px;top:73px; width:68px;" tagname=""/>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Btn_Confirm_OnClick" id="btn_Confirm"
+                style="position:absolute; ImageID:btn_Comm_Confirmation;  height:20px;left:279px;top:0px; width:58px;" tabIndex="3" type="anchor">
+                <xf:label><![CDATA[확인]]></xf:label>
+            </xf:trigger>
+        </xf:group>
+    </body>
+</html>

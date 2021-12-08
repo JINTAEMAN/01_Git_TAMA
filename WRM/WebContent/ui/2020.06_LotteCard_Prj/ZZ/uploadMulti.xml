@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    	<w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+            <w2:dataCollection baseNode="map">
+            </w2:dataCollection>
+            <w2:workflowCollection>
+            </w2:workflowCollection>
+        </xf:model>
+        <script type="javascript"><![CDATA[ 
+//	       ###################################################
+//	        파일명 : upload.xml
+//	        프로그램명 : Multi 파일 업로드 화면
+//	        설 명 :   
+//	        작성자 : 진태만
+//	        작성일 : 2020.06.26
+//	
+//	        수정일자            수정자                  수정내용
+//	       ==================================================
+//	       2020.06.26       진태만     				 최초작성
+//	       ###################################################
+
+	var pageSize = "10";		//  페이지수(총 조회 수)
+	var pageCount = "10";		//  보여지는 페이지수[총 8 Page]
+	var sToday = ""; 
+	var bAuthFlag = false;		//전역변수
+	var slevel = "";
+	var medt_Str_Event;	// medt_Str(InputBox) MaskEdit 정규식 입력
+
+	/** 
+	 * 초기 스크립트 수행 함수 정의
+	 */ 
+	function multiupload1_ondone(data) {
+		console.log("[/uploadMulti.xml] [onpageload()] ==> [TEST_01] [파일 업로드 화면 로딩]" );
+		alert("[/uploadMulti.xml] [onpageload()] ==> [폼 로딩] [TEST_01]" );
+		
+		debugger;
+		var str = "";
+		
+		for (var i=0; i<data.length; i++) 
+		{
+	   			console.log(i+"번째 deniedFile==="+data[i].deniedCode);
+	   			console.log(i+"번째 deniedFile==="+data[i].deniedFile);
+	   			console.log(i+"번째 file==="+data[i].file);
+	   			console.log(i+"번째 key==="+data[i].key);
+	   			console.log(i+"번째 localFile==="+data[i].localFile);
+	   			console.log(i+"번째 maxUploadSize==="+data[i].maxUploadSize);
+	   			console.log(i+"번째 size==="+data[i].size);
+	   			
+				str = str + "\r\n"+i+"번째 deniedFile==="+data[i].deniedCode;
+	   			str = str + "\r\n"+i+"번째 deniedFile==="+data[i].deniedFile;
+	   			str = str + "\r\n"+i+"번째 file==="+data[i].file;
+	   			str = str + "\r\n"+i+"번째 key==="+data[i].key;
+	   			str = str + "\r\n"+i+"번째 localFile==="+data[i].localFile;
+	   			str = str + "\r\n"+i+"번째 maxUploadSize==="+data[i].maxUploadSize;
+	   			str = str + "\r\n"+i+"번째 size==="+data[i].size; 
+		}	
+ 		
+   		textarea1.setValue( textarea1.getValue() +str );	
+	}
+		  
+	scwin.trigger1_onclick = function(e) {
+		console.log("[/uploadMulti.xml] [trigger1_onclick()] ==> [TEST_01" );
+		alert("[/uploadMulti.xml] [trigger1_onclick()] ==> [[TEST_01]" );
+		
+		var cnt = multiupload1.getFileCount();
+		
+		for(i=0;i<cnt;i++){
+			console.log("cnt:"+i);
+			multiupload1.setParam( i , "param"+i , "param"+i+"_value" );
+		}
+		
+		multiupload1.startUpload(); 
+	};
+	 
+	/* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+	+------------------------------------------------// script 종료 //------------------------------------------------------------+
+	■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
+]]></script>
+    </head>
+    <body>
+    	<xf:group id="grp1" style="height:173px;width: 510px;float:left;">
+<!--     		<w2:textbox id="txt1"style="position: relative;width: 500px;height: 23px;" label="uoload2.do controller 실행 "> -->
+<!--     		</w2:textbox> -->
+    		<xf:trigger ev:onclick="scwin.trigger1_onclick" id="trigger1" style="position: relative;width: 80px;height: 23px;" type="button">
+    			<xf:label><![CDATA[uploadStart]]></xf:label>
+    		</xf:trigger>
+			<!--// 파일 업로드 처리 추가[변경일:2020.06.22, by 진태만] //-->
+    		<w2:multiupload id="multiupload1" maxcount="" maxsize=""
+    			ev:ondone="multiupload1_ondone"
+    			style="position: relative;width: 500px;height: 150px;"
+    			action="/uploadMulti2.do" uploadButton="false" filter="" wmode="false"
+    			mode="flash">
+    		</w2:multiupload>
+    	</xf:group>
+    	<xf:group id="grp2" style="position:relative;height:173px;width: 510px;float:left;">
+    		<w2:textbox id="" style="position: relative;width: 500px;height: 23px;" label="uploadTest.jsp 로 실행한경우"></w2:textbox>
+			<!--// 파일 업로드 처리_2 추가[변경일:2020.06.22, by 진태만] //-->
+    		<w2:multiupload maxcount="" id="multiupload2" maxsize="" ev:ondone="multiupload1_ondone"
+    			style="position: relative;width: 500px;height: 150px;" action="/test/uploadMultiTest.jsp" uploadButton="" wmode="false" filter=""
+    			mode="flash">
+    		</w2:multiupload>
+    	</xf:group><xf:group id="grp3" style="position:relative;height:304px;width:900px;float:left;"><xf:textarea id="textarea1" style="position: relative;width: 800px;height: 300px;" invalidMessage=""></xf:textarea></xf:group></body>
+</html>

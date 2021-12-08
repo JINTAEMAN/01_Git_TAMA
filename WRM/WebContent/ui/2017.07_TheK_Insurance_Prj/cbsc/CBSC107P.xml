@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+            	<w2:dataList baseNode="list" id="DsWs_ImagJugmReslt"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            		</w2:columnInfo>
+            		<w2:data>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_Warning"
+            		repeatNode="map" userData2="//*/WARNING" />
+            	<w2:dataList baseNode="list" id="DsWs_Login"
+            		repeatNode="map" userData2="//*/PWD">
+            		<w2:columnInfo>
+            		</w2:columnInfo>
+            		<w2:data>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList id="WARNING" baseNode="list"
+            		saveRemovedData="true" repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+    <script src="/cm/js/convertJs/Global_Script.js" />
+	<script src="/cm/js/convertJs/LongTerm_Script.js" />
+	<script src="/cm/js/convertJs/comm_Webservice.js" />  
+	<script src="/cm/js/convertJs/Marine_Script.js" />  
+        <script><![CDATA[
+//B520_Pop.xml에서 호출 (callee ID):  
+//B520_Pop.xml을 호출   (caller ID):  O310,O311
+var sPlanNoPop = "";//설계번호
+//var sCrNoPop = '';//계약번호
+var sImagClsfCdPop = "";//이미지분류코드
+var nFinalDgrePop = "";//최종차수
+//var sFinalImagJugmStatPop = '';//상태
+
+var fv_args;
+var pageSize = "";
+var pageNo = "";
+var sPlanNo;
+var sImagClsfCd;
+var nProgDgre;
+//---------------------------------------------------------------------------
+// function 명 : B520_OnLoadCompleted
+// 내용        :  화면로드시 처리
+//---------------------------------------------------------------------------
+scwin.init = function() {
+	var pro = Promise.resolve();
+		window.top.util.winTopShowModalChk = "T";
+		util.winTopShowModal();
+	pro = pro.then(function(rv) {
+    	return util.winTopShowModalPromise();
+	}); 
+	pro = pro.then(function(rv) {
+     //init 부분 함수 입력하는곳
+	wprom.setPopupInit(650,175, "청약 이미지 검사");
+	var indata = $w.getParameter("param");
+	try {
+		fv_args = JSON.parse(indata);		
+		sPlanNo = fv_args.sPlanNo; 
+		sImagClsfCd = fv_args.sImagClsfCd; 
+		nProgDgre = fv_args.nProgDgre; 				
+	} catch(e) {
+	};
+	
+    if (wconv.length(sPlanNo) > 0)  sPlanNoPop = sPlanNo;
+    //if(sCrNo.length > 0) sCrNoPop = sCrNo;
+    if (wconv.length(sImagClsfCd) > 0) sImagClsfCdPop = sImagClsfCd;
+    if (wconv.length(nProgDgre) > 0) nFinalDgrePop = nProgDgre;
+    
+    //if(sFinalImagJugmStat.length > 0) sFinalImagJugmStatPop = sFinalImagJugmStat;
+    //심사코드복사
+  //parentWin = wprom.getParamObject();//obj받기
+  //  wconv.copy(DsWs_ImagJugmReslt, parentWin.DsWs_ImagJugmReslt);
+  	gfn_getCommonCodes("DsWs_ImagJugmReslt", "ImagJugmReslt", "cmb_ImagJugmReslt", "A");
+    wconv.filter(DsWs_ImagJugmReslt," wconv.pos(sCd, '01') < 0 ", true);	
+    DsWs_ImagJugmReslt.setCellData(0, "sHnglCdName", "- 선택 -");
+    cmb_ImagJugmReslt.setSelectedIndex(0);    
+    edt_sJudg.setValue(util.getGdsValue("gUserID"));
+    
+    return ;		// init 함수를 종료하고자 할때 사용
+		// return Promise.reject("오류관련처리"); 
+	});
+	pro = pro.then(function(rv) {
+		util.winTopHideModal();
+	});	
+	pro = pro.catch(function(rj) {
+		util.winTopHideModal();
+		//alert(rj); //Promise reject 시 처리 "오류관련처리" 값출력
+	});	 
+	return pro; 
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Input_OnClick
+// 내용        : 입력
+//---------------------------------------------------------------------------
+scwin.lfn_Input_OnClick = function() {
+    //유효값 체크
+    if (wconv.length(edt_passWord.getValue()) == 0) {
+        wprom.alert("비밀번호를 입력하세요.");
+        edt_passWord.focus();
+        return false;
+    }
+    if (wconv.length(txt_sJugmCont.getValue()) == 0) {
+        wprom.alert("승인자 의견을 입력하세요.");
+        txt_sJugmCont.focus();
+        return false;
+    }
+//    if (!mfn_validate_combo(cmb_ImagJugmReslt, "심사상태를")) {
+	if (wconv.length(cmb_ImagJugmReslt.getValue()) == 0) {
+		wprom.alert("심사상태를 선택하세요");
+        cmb_ImagJugmReslt.focus();
+        return false;
+    }    
+    if (scwin.lfn_check_pass() == false) {  // 비밀번호 체크  
+        return false;
+    }
+    //심사완료건은 다시 심사완료로 처리할수 없음
+    /*if(sFinalImagJugmStatPop == cmb_ImagJugmReslt.Value){
+    	alert("이미 심사완료한 건입니다.");
+    	return false;
+    }*/
+//    SOBJ.WSDL = gds.gWsdlBasis; //기본 웹서비스
+//    var MethodObj = gfn_CreateMethodObj(SOBJ, "com.inswave.longterm.ssr.sst.task.DBB521Task", "setScanJugm", "", "");
+//    gfn_SetParam(MethodObj, "sPlanNo", sPlanNoPop); //설계번호
+//    //gfn_SetParam(MethodObj, "sCrNo", sCrNoPop);//계약번호
+//    gfn_SetParam(MethodObj, "sImagClsfCd", sImagClsfCdPop); //이미지분류코드
+//    gfn_SetParam(MethodObj, "nProgDgre", nFinalDgrePop); //최종차수
+//    gfn_SetParam(MethodObj, "sCnfm", gds.gUserID); //사번(심사자)
+//    gfn_SetParam(MethodObj, "sJugmCont", txt_sJugmCont.getValue()); //의견
+//    gfn_SetParam(MethodObj, "sPassWord", edt_passWord.getValue()); //비밀번호
+//    gfn_SetParam(MethodObj, "sImagJugmReslt", cmb_ImagJugmReslt.getValue()); //심사상태
+//    gfn_SetParam(MethodObj, "sMdfcDler", gds.gUserID);
+//    gfn_SetParam(MethodObj, "sMdfcDlerIP", gds.gUserIP);
+//    gfn_CallService(SOBJ, DOBJ, MethodObj);
+
+    var MethodObj = new callService("com.inswave.longterm.ssr.sst.task.DBB521Task", "setScanJugm", pageSize, pageNo);
+	MethodObj.setId("setScanJugm");
+	MethodObj.setParam("sPlanNo", sPlanNoPop); //설계번호
+	MethodObj.setParam("sImagClsfCd", sImagClsfCdPop); //이미지분류코드	
+	MethodObj.setParam("nProgDgre", nFinalDgrePop); //최종차수	
+	MethodObj.setParam("sCnfm", util.getGdsValue("gUserID")); //사번(심사자)	
+	MethodObj.setParam("sJugmCont", txt_sJugmCont.getValue()); //의견	
+	MethodObj.setParam("sPassWord", edt_passWord.getValue()); //비밀번호	
+	MethodObj.setParam("sImagJugmReslt", eval(cmb_ImagJugmReslt).getValue()); //심사상태	
+	MethodObj.setParam("sMdfcDler", util.getGdsValue("gUserID"));	
+	MethodObj.setParam("sMdfcDlerIP", util.getGdsValue("gUserIP"));	
+	MethodObj.setUrl("/contract/CBSC107PController.do");//배포후변경할것(controller위치와 이름)
+	MethodObj.setXPath("//*/WARNING"); 
+	MethodObj.sync();
+	MethodObj.send();
+	util.jSonDsCreate(_tranSync.getDsJson("WARNING"), "DsWs_Warning");   
+    
+    if (DsWs_Warning.getRowCount() != 0) {
+        wprom.alert(DsWs_Warning.getCellData(0, "msg"));
+        return;
+    } else {
+        wprom.alert("처리되었습니다.");
+        //메인에 심사상태를 변경한다.
+//        parent.scwin.lfn_Search();
+        wprom.getOpener().scwin.lfn_Search();
+        scwin.lfn_Close_OnClick();
+    }
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_check_pass
+// 내용        : 비밀번호 체크 
+//---------------------------------------------------------------------------
+scwin.lfn_check_pass = function() {
+//    var flag_login = false;
+//    SOBJ_LOGIN.WSDL = gds.gWsdlAdmin;
+//    var MethodObj = gfn_CreateMethodObj(SOBJ_LOGIN, "LoginTask", "checkApprovalPwd", "", "");
+//    gfn_SetParam(MethodObj, "sEmpNo", edt_sJudg.getValue());
+//    gfn_SetParam(MethodObj, "sPassword", edt_passWord.getValue());
+//    gfn_CallService(SOBJ_LOGIN, DOBJ_LOGIN, MethodObj);
+
+    var MethodObj = new callService("com.inswave.admin.task.LoginTask", "checkApprovalPwd", pageSize, pageNo);
+	MethodObj.setId("checkApprovalPwd");
+	MethodObj.setParam("sEmpNo", edt_sJudg.getValue());
+	MethodObj.setParam("sPassword", edt_passWord.getValue());	
+	MethodObj.setUrl("/contract/CBSC107PController.do");//배포후변경할것(controller위치와 이름)
+	MethodObj.setXPath("//*/PWD");//(dsWS의 XPath)
+	MethodObj.sync();
+	MethodObj.send();
+	
+	util.jSonDsCreate(_tranSync.getDsJson("PWD"), "DsWs_Login");//Json에 자동적으로 생성되게 해줌
+	util.setCompBindRefresh(DsWs_Login.getID());//바인딩을 해줌
+	util.setRowPosition(DsWs_Login, 0);	
+    
+    if (DsWs_Login.getCellData(0, "sPass") == "Y") {
+//        flag_login = true;
+		edt_passWord.setValue("");
+        return true;
+    } else {
+        wprom.alert("비밀번호가 틀렸습니다.");
+        edt_passWord.setValue("");
+        edt_passWord.focus();
+        return false;
+    }
+    return true;
+};
+
+//---------------------------------------------------------------------------
+// function 명 : lfn_Close_OnClick
+// 내용        : 팝업닫기
+//---------------------------------------------------------------------------
+scwin.lfn_Close_OnClick = function() {
+    wprom.close();
+};
+]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="B520_Pop"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;/*  height:144px;*/ left:0px; top:0px;/* width:620px;"
+            userData1="청약 이미지 심사[B520_Pop]" userData2=" OnLoadCompleted:scwin.B520_OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+                <ServiceObject/>
+            </ServiceObjects>
+            <xf:group arcsize="8" class="sty_area_form" id="Shape3"
+                style="position:absolute; right:616px;  border-color:user23;  bottom:140px; height:85px; left:0px; top:30px; width:612px;" userData3="RoundRect">
+            	<xf:group class="form_w_line" id="" style="top:58px;" />
+            </xf:group>
+            <w2:textbox class="sty_lb_Basic" id="Static0" label="심사상태"
+                style="position:absolute;
+ VAlign:Middle;
+  height:24px;left:386px;top:89px;
+width:60px;
+min-width:60px;" tagname=""/>
+            <w2:textbox id="" label="청약 이미지 심사" style="position:absolute; VAlign:Middle;  height:22px;left:0px;top:-1px; width:141px;" tagname="" class="sub_pop_title01" />
+            
+            <w2:textbox class="sty_lb_Basic" id="Static21" label="승인권자사번"
+                style="position:absolute; VAlign:Middle;  height:24px;left:0px;top:89px; width:96px;" tagname=""/>
+            <xf:textarea class="sty_ipt_form" id="txt_sJugmCont" maxlength="95"
+                style="position:absolute; VScroll:TRUE;  border-style:solid;  height:54px;left:118px;top:33px; width:483px;" tabIndex="1"/>
+            <w2:textbox class="sty_lb_Basic" id="Static8" label="승인자의견"
+                style="position:absolute; VAlign:Middle;  border-style:solid; height:58px;left:0px;top:30px; width:96px;" tagname=""/>
+            <xf:input class="sty_ipt_form" disabled="true" id="edt_sJudg"
+                style="position:absolute; border-style:solid;  height:20px;left:118px;top:92px; width:97px;" tabIndex="7"/>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Close_OnClick" id="Button0"
+                style="position:absolute;height:20px;ImageID:btn_Comm_Close;Transparent:TRUE;width:25px;left:563px;top:0px;" tabIndex="14" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.lfn_Input_OnClick" id="Button1"
+                style="position:absolute;height:20px;ImageID:btn_Comm_Input;Transparent:TRUE;width:25px;left:512px;top:0px;" tabIndex="13" type="anchor">
+                <xf:label><![CDATA[입력]]></xf:label>
+            </xf:trigger>
+            <w2:textbox class="sty_lb_Basic" id="Static2" label="비밀번호"
+                style="position:absolute; VAlign:Middle;  height:24px;left:225px;top:89px;width:60px;min-width:60px;" tagname=""/>
+            <xf:select1 appearance="minimal" class="sty_ipt_form"
+            	emptyItem="true" id="cmb_ImagJugmReslt"
+            	style="position:absolute; border-style:solid;  height:20px;left:468px;top:92px; width:131px;"
+            	tabIndex="3" renderType="native" allOption=""
+            	chooseOption="">
+            	<xf:choices>
+            		<xf:itemset nodeset="data:DsWs_ImagJugmReslt">
+            			<xf:label ref="sHnglCdName" />
+            			<xf:value ref="sCd" />
+            		</xf:itemset>
+            	</xf:choices>
+            </xf:select1>
+            <xf:secret class="sty_ipt_form" id="edt_passWord" maxlength="10"
+                style="position:absolute;  border-style:solid;  height:20px;left:307px;top:92px; width:69px;" tabIndex="2"/>
+        </xf:group>
+    </body>
+</html>

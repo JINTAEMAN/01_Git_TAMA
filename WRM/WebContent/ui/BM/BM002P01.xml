@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<!--
+			#####################################################################
+			파일명 : BM002P01.xml
+			프로그램명 : 직원 조회 팝업
+			설 명 : 직원 리스트를 조회하는 팝업
+			작성자 : Inswave Systems
+			작성일 : 2016.10.25
+			
+			수정일자	  수정자			 수정내용
+			=====================================================================
+			2016.10.25	Inswave Systems	최초작성
+			2018.01.26	Inswave Systems	WebSquare5 SP2 기능을 적용하도록 소스 업그레이드
+			2018.11.12	Inswave Systems	WebSquare5 SP3 기능을 적용하도록 소스 업그레이드
+			#####################################################################
+		-->
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataList id="dlt_member" baseNode="list" style="" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="chk" name="선택" dataType="text"></w2:column>
+						<w2:column id="EMP_CD" name="사원코드" dataType="text"></w2:column>
+						<w2:column id="EMP_NM" name="사원명" dataType="text"></w2:column>
+						<w2:column id="ORG_NM" name="조직" dataType="text"></w2:column>
+						<w2:column id="ASSIGNED_TASK" name="담당업무" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" id="dma_search">
+					<w2:keyInfo>
+						<w2:key id="AUTHORITY_CD" name="name1" dataType="text"></w2:key>
+						<w2:key id="TYPE" name="name2" dataType="text"></w2:key>
+						<w2:key id="CONTENT" name="name3" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+			<xf:submission id="sbm_member" ref='data:json,dma_search' target='data:json,dlt_member'
+				action="/authority/excludeSelectAuthorityMemberList" method="post" mediatype="application/json" encoding="UTF-8" instance="" replace=""
+				errorHandler="" customHandler="" mode="asynchronous" processMsg="" ev:submit="" ev:submitdone="" ev:submiterror="">
+			</xf:submission>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+	/**
+	 * 초기 스크립트 수행 함수 정의
+	 */
+	scwin.onpageload = function() {
+		scwin.param = com.getParameter();
+		dma_search.set("AUTHORITY_CD" , scwin.param.data.AUTHORITY_CD);
+		scwin.closeCallbackFncName = scwin.param.callbackFn;
+		com.setEnterKeyEvent(tbl_search, scwin.btn_search_onclick);
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+		
+	/**
+	 * 권한이 부여되지 않은 사용자 조회 
+	 */			
+	scwin.btn_search_onclick = function() {
+		com.executeSubmission(sbm_member);
+	};
+		
+	/**
+	 * 선택된 사원정보를 반환한다.
+	 */
+	scwin.btn_confirm_onclick = function() {
+		var data = grd_member.getCheckedJSON( "chk" );
+		com.closePopup(scwin.closeCallbackFncName, data);
+	};
+		
+	/**
+	 * 사원정보 선택을 취소한다.
+	 */
+	scwin.btn_cancel_onclick = function() {
+		com.closePopup();
+	};
+	]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<xf:group class="pop_L" id="" style="">
+		<xf:group id="" style="" class="pop_con"><xf:group id="tbl_search" style="" class="tbl_search mb10">
+				<xf:group id="" style="" adaptive="layout" class="w2tb tbl_sc" adaptiveThreshold="768" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:80.00px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+						<xf:group style="width:80.00px;" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group style="" class="w2tb_th" tagname="th">검색항목</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td">
+							<xf:select1 id="" disabledClass="w2selectbox_disabled" ref="data:dma_search.TYPE" appearance="minimal" style="height:20px;width:80px;margin-right: 10px;" direction="auto" chooseOption="" displayMode="label" allOption="" optionOrder="false" submenuSize="auto" disabled="false" textAlign="left">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[사원명]]></xf:label>
+										<xf:value><![CDATA[EMP_NM]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[사원코드]]></xf:label>
+										<xf:value><![CDATA[EMP_CD]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select1>
+							<xf:input id="" ref="data:dma_search.CONTENT" style="" class="calc100"></xf:input>
+						</xf:group>
+						<xf:group style="" class="w2tb_td" tagname="td"><w2:anchor id="btn_search" style="" clickEventElement="outerDiv" ev:onclick="scwin.btn_search_onclick" class="btn_sh" outerDiv="true">
+								<xf:label><![CDATA[조회]]></xf:label>
+							</w2:anchor></xf:group>
+					</xf:group>
+				</xf:group>
+			</xf:group><xf:group style="" id="" class="section"><w2:gridView adaptive="crosstab" fixedColumnWithHidden="true" dataList="dlt_member" useShiftKey="false" readOnly="true" style="height:240px;" scrollByColumn="false" id="grd_member" autoFit="allColumn" class="cm_grid">
+				<w2:header style="" id="header1">
+					<w2:row style="" id="row1">
+						<w2:column width="39" style="height:20px" inputType="checkbox" id="chkHeader" value="선택" blockSelect="false"></w2:column>
+						<w2:column width="101" style="height:20px" inputType="text" id="column7" value="사원코드" blockSelect="false"></w2:column>
+						<w2:column width="90" style="height:20px" inputType="text" id="column5" value="사원명" blockSelect="false"></w2:column>
+						<w2:column width="130" style="height:20px" inputType="text" id="column3" value="조직" blockSelect="false"></w2:column>
+						<w2:column width="201" style="height:20px" inputType="text" id="column1" value="담당업무" blockSelect="false"></w2:column>
+					</w2:row>
+				</w2:header>
+				<w2:gBody style="" id="gBody1">
+					<w2:row style="" id="row2">
+						<w2:column falseValue="0" defaultValue="" trueValue="1" width="39" readOnly="false" style="height:20px" inputType="checkbox" id="chk" blockSelect="false">
+						</w2:column>
+						<w2:column width="101" style="height:20px" inputType="text" id="EMP_CD" blockSelect="false"></w2:column>
+						<w2:column width="90" style="height:20px" inputType="text" id="EMP_NM" blockSelect="false"></w2:column>
+						<w2:column width="130" style="height:20px" inputType="text" id="ORG_NM" blockSelect="false"></w2:column>
+						<w2:column width="201" style="height:20px" inputType="text" id="ASSIGNED_TASK" blockSelect="false"></w2:column>
+					</w2:row>
+				</w2:gBody>
+			</w2:gridView></xf:group><xf:group id="group10" style="text-align:center;" class="section">
+				<w2:anchor id="btn_confirm" style="" ev:onclick="scwin.btn_confirm_onclick" class="btn_cm">
+					<xf:label><![CDATA[확인]]></xf:label>
+				</w2:anchor>
+				<w2:anchor id="btn_cancel" style="" ev:onclick="scwin.btn_cancel_onclick" class="btn_cm" outerDiv="">
+					<xf:label><![CDATA[취소]]></xf:label>
+				</w2:anchor>
+			</xf:group></xf:group></xf:group>
+	</body>
+</html>

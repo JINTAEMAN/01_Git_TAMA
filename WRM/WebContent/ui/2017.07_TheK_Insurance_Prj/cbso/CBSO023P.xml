@@ -1,0 +1,3681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/cm/css/all.css" type="text/css"?>
+<?xml-stylesheet href="/cm/css/convert.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data/>
+            </xf:instance>
+            <w2:dataCollection>
+            	<w2:dataList baseNode="list" id="Ds_Month"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="CODE"
+            				name="CODE" />
+            			<w2:column dataType="text" id="TEXT"
+            				name="TEXT" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<CODE />
+            				<TEXT><![CDATA[==]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[01]]></CODE>
+            				<TEXT><![CDATA[01]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[02]]></CODE>
+            				<TEXT><![CDATA[02]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[03]]></CODE>
+            				<TEXT><![CDATA[03]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[04]]></CODE>
+            				<TEXT><![CDATA[04]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[05]]></CODE>
+            				<TEXT><![CDATA[05]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[06]]></CODE>
+            				<TEXT><![CDATA[06]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[07]]></CODE>
+            				<TEXT><![CDATA[07]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[08]]></CODE>
+            				<TEXT><![CDATA[08]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[09]]></CODE>
+            				<TEXT><![CDATA[09]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[10]]></CODE>
+            				<TEXT><![CDATA[10]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[11]]></CODE>
+            				<TEXT><![CDATA[11]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[12]]></CODE>
+            				<TEXT><![CDATA[12]]></TEXT>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_Year_old"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="CODE"
+            				name="CODE" />
+            			<w2:column dataType="text" id="TEXT"
+            				name="TEXT" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<CODE />
+            				<TEXT><![CDATA[====]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2013]]></CODE>
+            				<TEXT><![CDATA[2013]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2014]]></CODE>
+            				<TEXT><![CDATA[2014]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2015]]></CODE>
+            				<TEXT><![CDATA[2015]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2016]]></CODE>
+            				<TEXT><![CDATA[2016]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2017]]></CODE>
+            				<TEXT><![CDATA[2017]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2018]]></CODE>
+            				<TEXT><![CDATA[2018]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2019]]></CODE>
+            				<TEXT><![CDATA[2019]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2020]]></CODE>
+            				<TEXT><![CDATA[2020]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2021]]></CODE>
+            				<TEXT><![CDATA[2021]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2022]]></CODE>
+            				<TEXT><![CDATA[2022]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2023]]></CODE>
+            				<TEXT><![CDATA[2023]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2024]]></CODE>
+            				<TEXT><![CDATA[2024]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2025]]></CODE>
+            				<TEXT><![CDATA[2025]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2026]]></CODE>
+            				<TEXT><![CDATA[2026]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2027]]></CODE>
+            				<TEXT><![CDATA[2027]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2028]]></CODE>
+            				<TEXT><![CDATA[2028]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2029]]></CODE>
+            				<TEXT><![CDATA[2029]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[2030]]></CODE>
+            				<TEXT><![CDATA[2030]]></TEXT>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_PointCardType1"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="CODE"
+            				name="CODE" />
+            			<w2:column dataType="text" id="TEXT"
+            				name="TEXT" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<CODE><![CDATA[00]]></CODE>
+            				<TEXT><![CDATA[대상아님]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[10]]></CODE>
+            				<TEXT><![CDATA[일반BC Top Point]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[11]]></CODE>
+            				<TEXT><![CDATA[기업BC Top Point]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[20]]></CODE>
+            				<TEXT><![CDATA[마이신한포인트]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[30]]></CODE>
+            				<TEXT><![CDATA[외환 Yes Point]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[40]]></CODE>
+            				<TEXT><![CDATA[세이브포인트]]></TEXT>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_PointCardType2"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="CODE"
+            				name="CODE" />
+            			<w2:column dataType="text" id="TEXT"
+            				name="TEXT" />
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<CODE><![CDATA[20]]></CODE>
+            				<TEXT><![CDATA[마이신한포인트]]></TEXT>
+            			</w2:row>
+            			<w2:row>
+            				<CODE><![CDATA[40]]></CODE>
+            				<TEXT><![CDATA[세이브포인트]]></TEXT>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_Agree"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="sApplyNo"
+            				name="sApplyNo" />
+            			<w2:column dataType="text" id="sCustNo"
+            				name="sCustNo" />
+            			<w2:column dataType="text" id="sAgmGvs"
+            				name="sAgmGvs" />
+            			<w2:column dataType="text" id="sCustType"
+            				name="sCustType" />
+            			<w2:column dataType="text" id="sName"
+            				name="sName" />
+            			<w2:column dataType="text" id="sAgmYn"
+            				name="sAgmYn" />
+            			<w2:column dataType="text" id="sAgmUser"
+            				name="sAgmUser" />
+            			<w2:column dataType="text" id="sAgmUserIp"
+            				name="sAgmUserIp" />
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_JoinCardType"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="sCode" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeName" name="name2"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="Ds_Year"
+            		repeatNode="map">
+            		<w2:columnInfo>
+            			<w2:column id="code" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="text" name="name2"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_AlterAdmitState"
+            		repeatNode="map" userData2="//*/ACCZA12">
+            		<w2:columnInfo>
+            			<w2:column id="sRemark" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="result" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCode" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="afterEJBCall" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="beforeEJBCall" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeName" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOption1" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCodeType" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOption2" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sExpireDate" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sOption" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name12"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_CardAlterAdmit"
+            		repeatNode="map" userData2="//*/ACCAB02">
+            		<w2:columnInfo>
+            			<w2:column id="sSettleStat" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAcctDate" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqGroup" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCollBranch" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDoerUser" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sIssueCardComName" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqDptOffice" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqTime" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardNo" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEduCardYN" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="beforeEJBCall" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUserID" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardJoinNo" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSameCnt" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sJoinCardApplyDate" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nReqAmt" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsGrp" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardCom" name="name18"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nInstall" name="name19"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBuyCardCom" name="name20"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sVanCode" name="name21"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSetPointAmt" name="name22"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitTime" name="name23"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqCenter" name="name24"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputTime" name="name25"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCollNo" name="name26"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCertType" name="name27"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCollCancelDate" name="name28"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPointCardType" name="name29"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqPart" name="name30"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSendDate" name="name31"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSupportAmt" name="name32"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="result" name="name33"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMatchCode" name="name34"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTrueSettleDate" name="name35"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="afterEJBCall" name="name36"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nReqCnt" name="name37"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPassword" name="name38"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSetPointYN" name="name39"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitCancelDate" name="name40"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sIssueCardCom" name="name41"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsType" name="name42"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSetCardAmt" name="name43"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqTeam" name="name44"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBeginDate" name="name45"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitDate" name="name46"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitCancelAgnt" name="name47"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardOwnerID" name="name48"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name49"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqAgnt" name="name50"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSupportUseYN" name="name51"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitNo" name="name52"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReturnCode" name="name53"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSrcType" name="name54"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRspCode" name="name55"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHandleCode" name="name56"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplyNo" name="name57"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBndlApvlFlag" name="name58"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRemainPoint" name="name59"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitCancelTime" name="name60"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardType" name="name61"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqDate" name="name62"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSetSupportAmt" name="name63"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardOwner" name="name64"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sValidThru" name="name65"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sJoinCardType" name="name66"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_CardBinCode"
+            		repeatNode="map" userData2="//*/ACCAB10">
+            		<w2:columnInfo>
+            			<w2:column id="sCardBinCode" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRemark" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSupportCardTypeName"
+            				name="name3" dataType="text">
+            			</w2:column>
+            			<w2:column id="result" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="afterEJBCall" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSupportCardType" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardComName" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardCom" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplySer" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplyNo" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardType" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplyYM" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="beforeEJBCall" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplyType" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUseYN" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputTime" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUserID" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPointCardType" name="name18"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardName" name="name19"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name20"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="" name="name21"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="util.js?postfix=15063188712173467.290795761848:1043" name="name22"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_SameAdmit"
+            		repeatNode="map" userData2="//*/ACCAB02">
+            		<w2:columnInfo>
+            			<w2:column id="sSettleStat" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAcctDate" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqGroup" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCollBranch" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDoerUser" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sIssueCardComName" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqDptOffice" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqTime" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardNo" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEduCardYN" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="beforeEJBCall" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUserID" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardJoinNo" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSameCnt" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sJoinCardApplyDate" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nReqAmt" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsGrp" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardCom" name="name18"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nInstall" name="name19"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBuyCardCom" name="name20"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sVanCode" name="name21"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSetPointAmt" name="name22"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitTime" name="name23"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqCenter" name="name24"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputTime" name="name25"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCollNo" name="name26"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCertType" name="name27"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCollCancelDate" name="name28"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPointCardType" name="name29"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqPart" name="name30"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSendDate" name="name31"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSupportAmt" name="name32"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="result" name="name33"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMatchCode" name="name34"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTrueSettleDate" name="name35"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="afterEJBCall" name="name36"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nReqCnt" name="name37"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPassword" name="name38"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSetPointYN" name="name39"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitCancelDate" name="name40"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sIssueCardCom" name="name41"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsType" name="name42"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSetCardAmt" name="name43"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqTeam" name="name44"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBeginDate" name="name45"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitDate" name="name46"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitCancelAgnt" name="name47"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardOwnerID" name="name48"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name49"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqAgnt" name="name50"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSupportUseYN" name="name51"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitNo" name="name52"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReturnCode" name="name53"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSrcType" name="name54"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRspCode" name="name55"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHandleCode" name="name56"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplyNo" name="name57"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBndlApvlFlag" name="name58"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRemainPoint" name="name59"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitCancelTime" name="name60"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardType" name="name61"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqDate" name="name62"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSetSupportAmt" name="name63"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardOwner" name="name64"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sValidThru" name="name65"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sJoinCardType" name="name66"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_CardAdmitResult"
+            		repeatNode="map" userData2="//*/ACCAB02">
+            		<w2:columnInfo>
+            			<w2:column id="sSettleStat" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAcctDate" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nFreeInstall" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardComName" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sForceConfUserID" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCashbagYN" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqGroup" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCollBranch" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDoerUser" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sIssueCardComName" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqDptOffice" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqTime" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBeginDtChangeDate" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRspCodeName" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardNo" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEduCardYN" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="beforeEJBCall" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUserID" name="name18"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRecvWorkDate" name="name19"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAccAuthYN" name="name20"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardJoinNo" name="name21"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sJoinCardApplyDate" name="name22"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nReqAmt" name="name23"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsGrp" name="name24"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardCom" name="name25"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAddWorkType" name="name26"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBeginDtChangeID" name="name27"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSettleStatName" name="name28"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDoerUserName" name="name29"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nInstall" name="name30"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBuyCardCom" name="name31"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sVanCode" name="name32"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSetPointAmt" name="name33"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitTime" name="name34"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqCenter" name="name35"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputTime" name="name36"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCollNo" name="name37"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCertType" name="name38"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqAgntName" name="name39"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCollCancelDate" name="name40"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPointCardType" name="name41"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqPart" name="name42"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSendDate" name="name43"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBndlApvlFlagName" name="name44"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSupportAmt" name="name45"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardNoDisplay" name="name46"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sForceYN" name="name47"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="result" name="name48"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMatchCode" name="name49"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTrueSettleDate" name="name50"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="afterEJBCall" name="name51"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nReqCnt" name="name52"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPointCardTypeName" name="name53"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPassword" name="name54"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nCancelTotAmt" name="name55"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSetPointYN" name="name56"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitCancelDate" name="name57"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sValidThruDisplay" name="name58"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sIssueCardCom" name="name59"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBeginDtChangeIdName"
+            				name="name60" dataType="text">
+            			</w2:column>
+            			<w2:column id="sJoinCardTypeName" name="name61"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsType" name="name62"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sProcType" name="name63"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSetCardAmt" name="name64"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqTeam" name="name65"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sForceConfUserIDName"
+            				name="name66" dataType="text">
+            			</w2:column>
+            			<w2:column id="sBeginDate" name="name67"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitDate" name="name68"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitCancelAgnt" name="name69"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardOwnerID" name="name70"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name71"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqAgnt" name="name72"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSupportUseYN" name="name73"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitNo" name="name74"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReturnCode" name="name75"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSrcType" name="name76"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRspCode" name="name77"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHandleCode" name="name78"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplyNo" name="name79"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nReqAmt2" name="name80"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBndlApvlFlag" name="name81"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRemainPoint" name="name82"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitCancelTime" name="name83"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardType" name="name84"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqDate" name="name85"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSetSupportAmt" name="name86"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardOwner" name="name87"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sValidThru" name="name88"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sManageYN" name="name89"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sJoinCardType" name="name90"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_CardCert"
+            		repeatNode="map" userData2="//*/ACCAB02">
+            		<w2:columnInfo>
+            			<w2:column id="sSettleStat" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAcctDate" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqGroup" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCollBranch" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDoerUser" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sIssueCardComName" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqDptOffice" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqTime" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardNo" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEduCardYN" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="beforeEJBCall" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUserID" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardJoinNo" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSameCnt" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sJoinCardApplyDate" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nReqAmt" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsGrp" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardCom" name="name18"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nInstall" name="name19"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBuyCardCom" name="name20"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sVanCode" name="name21"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSetPointAmt" name="name22"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitTime" name="name23"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqCenter" name="name24"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputTime" name="name25"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCollNo" name="name26"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCertType" name="name27"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCollCancelDate" name="name28"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPointCardType" name="name29"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqPart" name="name30"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSendDate" name="name31"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSupportAmt" name="name32"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="result" name="name33"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMatchCode" name="name34"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTrueSettleDate" name="name35"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="afterEJBCall" name="name36"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nReqCnt" name="name37"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPassword" name="name38"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSetPointYN" name="name39"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitCancelDate" name="name40"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sIssueCardCom" name="name41"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsType" name="name42"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSetCardAmt" name="name43"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqTeam" name="name44"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBeginDate" name="name45"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitDate" name="name46"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitCancelAgnt" name="name47"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardOwnerID" name="name48"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name49"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqAgnt" name="name50"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSupportUseYN" name="name51"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitNo" name="name52"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReturnCode" name="name53"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSrcType" name="name54"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRspCode" name="name55"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHandleCode" name="name56"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplyNo" name="name57"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBndlApvlFlag" name="name58"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRemainPoint" name="name59"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitCancelTime" name="name60"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardType" name="name61"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqDate" name="name62"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSetSupportAmt" name="name63"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardOwner" name="name64"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sValidThru" name="name65"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sJoinCardType" name="name66"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_CardAdmit"
+            		repeatNode="map" userData2="//*/ACCAB02">
+            		<w2:columnInfo>
+            			<w2:column id="sSettleStat" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAcctDate" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqGroup" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCollBranch" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDoerUser" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sIssueCardComName" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqDptOffice" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqTime" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardNo" name="name9"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sEduCardYN" name="name10"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="beforeEJBCall" name="name11"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUserID" name="name12"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardJoinNo" name="name13"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSameCnt" name="name14"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sJoinCardApplyDate" name="name15"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nReqAmt" name="name16"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsGrp" name="name17"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardCom" name="name18"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nInstall" name="name19"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBuyCardCom" name="name20"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sVanCode" name="name21"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSetPointAmt" name="name22"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitTime" name="name23"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqCenter" name="name24"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputTime" name="name25"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCollNo" name="name26"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCertType" name="name27"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCollCancelDate" name="name28"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPointCardType" name="name29"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqPart" name="name30"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSendDate" name="name31"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSupportAmt" name="name32"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="result" name="name33"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sMatchCode" name="name34"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sTrueSettleDate" name="name35"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="afterEJBCall" name="name36"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nReqCnt" name="name37"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sPassword" name="name38"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSetPointYN" name="name39"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitCancelDate" name="name40"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sIssueCardCom" name="name41"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInsType" name="name42"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSetCardAmt" name="name43"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqTeam" name="name44"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBeginDate" name="name45"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitDate" name="name46"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitCancelAgnt" name="name47"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardOwnerID" name="name48"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name49"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqAgnt" name="name50"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSupportUseYN" name="name51"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitNo" name="name52"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReturnCode" name="name53"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sSrcType" name="name54"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRspCode" name="name55"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sHandleCode" name="name56"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sApplyNo" name="name57"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sBndlApvlFlag" name="name58"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sRemainPoint" name="name59"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sAdmitCancelTime" name="name60"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardType" name="name61"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sReqDate" name="name62"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nSetSupportAmt" name="name63"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sCardOwner" name="name64"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sValidThru" name="name65"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sJoinCardType" name="name66"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_CardPoint"
+            		repeatNode="map" userData2="//*/ACCAB02" />
+            	<w2:dataList baseNode="list" id="DsWs_SelectEmpName"
+            		repeatNode="map" userData2="//*/ADMAB01" />
+            	<w2:dataList baseNode="list" id="DsWs_Support"
+            		repeatNode="map" userData2="//*/ACCAB02" />
+            	<w2:dataList baseNode="list" id="DsWs_Auth"
+            		repeatNode="map" userData2="/*//ADMAA04">
+            		<w2:columnInfo>
+            			<w2:column id="nAuthType" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="result" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="afterEJBCall" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="beforeEJBCall" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDuty" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nAuthID" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUserID" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDepartCode" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name9"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_Agree"
+            		repeatNode="map" userData2="/*//CUSAA35" />
+            	<w2:dataList baseNode="list" id="DsWs_AgreeCheck"
+            		repeatNode="map" userData2="/*//CUSAA35" />
+            	<w2:dataList baseNode="list" id="DsWs_Free"
+            		repeatNode="map"
+            		userData2="//*/hashtable/data[@hashkey='freeMonth']/vector/data/CUSZA06">
+            		<w2:columnInfo>
+            			<w2:column id="sMonth" name="name1"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_ApplyNo"
+            		repeatNode="map" userData2="/*//ACCBA01" />
+            	<w2:dataList baseNode="list" id="DsWs_FundAuth"
+            		repeatNode="map" userData2="/*//ADMAA04">
+            		<w2:columnInfo>
+            			<w2:column id="nAuthType" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="result" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="afterEJBCall" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="beforeEJBCall" name="name4"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDuty" name="name5"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="nAuthID" name="name6"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sUserID" name="name7"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sDepartCode" name="name8"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="sInputDate" name="name9"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="DsWs_JoinCardType"
+            		repeatNode="map" userData2="//*/vector/data/ACCZA12" />
+            	<w2:dataList baseNode="list" repeatNode="map"
+            		id="WARNING" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column id="msg" name="name1"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="level" name="name2"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="detail" name="name3"
+            				dataType="text">
+            			</w2:column>
+            			<w2:column id="timestamp" name="name4"
+            				dataType="text">
+            			</w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+ <script src="/cm/js/common.js"/>
+ <script src="/cm/js/val_lib.js"/>
+ <script src="/cm/js/util.js"/>
+ <script src="/cm/js/transSub.js"/>
+ <script src="/cm/js/callService.js"/>
+ <script src="/cm/js/gds.js"/>
+ <script src="/cm/js/wconv.js"/>
+ <script src="/cm/js/convertJs/Global_Script.js"/>
+ <script src="/cm/js/convertJs/LongTerm_Script.js"/>
+ <script src="/cm/js/convertJs/comm_Webservice.js"/>
+ <script src="/cm/js/convertJs/Accounting_Script.js"/>        
+ <script><![CDATA[
+/*
+ *===================================File description================================================
+ * Create Date : 2017/09/25
+ * Creater     : 구종식
+ * Description : 카드승인요청/결과 화면
+ *====================================================================================================
+ */
+var gsSysDate;
+var gbAlterAdmit;
+var gsRspCode;
+var gsAdmitNo;
+var gnReqCnt;
+var gsVanCode;
+var gMsgShowYN;
+var gnCount;			//화면 처음 로드 되는 것을 체크하기 위해 사용. 2010-10-29 KCBI 세이브결제 관련
+var gsPopupYN;		//2010-11-05 서영지. 하나은행지원금 관련 추가
+var gsSupportCardTypeName;
+var gsDoerUser;		//2011-08-22 서영지 추가
+var gsInsrdID;			//피보험자. 2011-08-22 서영지 추가
+var gsPolHolderID;	//계약자. 2011-08-22 서영지 추가
+var gsTMAuthYN;	//TM대리점관리권한 여부. 2011-08-22 서영지 추가
+var gsManageYN;	//2012-02-29 서영지. 개인정보보호법관련 관리자승인여부 추가.
+var gsForceYN;		//2012-02-29 서영지. 개인정보보호법관련 강제승인여부 추가.
+var gsForceConfUserID;	//2012-02-29 서영지. 개인정보보호법관련 강제승인확인자 추가.
+var gsFundAuthYN;	//2012-03-14 서영지. 자금관리권한 추가
+var gsJoinCardType;	//2012-04-25 서영지. 제휴카드구분 추가// 호출카드 입력 인덱스
+var parentWind;
+var fv_args;
+var fv_sBtnNew = "N";
+var parentWin;
+
+scwin.init = function() {
+    //getParamObject
+    //ds_AccCardReq
+    //
+    if (fv_sBtnNew = "N"){
+		var indata = $w.getParameter("param");//
+		try {
+			fv_args = JSON.parse(indata); //idx,flag
+			parentWin = wprom.getParamObject();
+		} catch(e) {}    
+	};
+	
+    gnCount = 0;
+    gsPopupYN = "N";
+    gsManageYN = "N"; 		//관리자승인여부. 2012-02-29 서영지 추가
+    gsForceYN = "N"; 			//강제승인여부.   2012-02-29 서영지 추가
+    gsForceConfUserID = ""; 	//강제승인확인자. 2012-02-29 서영지 추가
+    gsJoinCardType = ""; 		//제휴카드구분. 2012-04-25 서영지 추가
+//div0.setSrc("/ui/cbsc/CBSC139S.xml");// = "accpopup::9990_Div2.xml"; //카드승인결과화면
+
+    //-----서버 시간 받기
+    //transaction("getServerTime", "NewGen::getServerTime.jsp", "", "gDs_ServerTime=output", "", "tr_callback");
+    gfn_getServerTime();
+    scwin.tr_callback("getServerTime","0","");
+    
+};
+
+//**************************************************************************************************
+// CallBack
+//**************************************************************************************************
+scwin.tr_callback = function(ServiceId, errorCd, errorMsg) {
+    if (ServiceId == "getServerTime") {
+        if (errorCd != 0) {
+            wprom.alert("errorCd:::[" + errorCd + "] errorMsg:::[" + errorMsg + "]");
+        } else {
+            gsSysDate = gds.gDs_ServerTime.getCellData(0, "sToday").substr(0, 8);
+            gbAlterAdmit = false;
+
+            //지원금 정보를 비활성화한다. 2010-11-05 서영지. 하나은행지원금 관련 추가
+            sSupportUseYN.setDisabled(true);
+
+            //장현 N1603-00190 카드승인 유효기간 년도 추가요청 (유효기간 Dataset만들기)
+            var sSysYear = gsSysDate.substr(0, 4);
+            makeCountData(parseInt(sSysYear), 15, "", Ds_Year, sValidThruYYYY, "", "choose^====");
+
+            //권한 조회
+            //getAuthID();
+            //자금관리권한 조회. 2012-03-14 서영지 추가
+            scwin.getFundAuthID();
+        }
+    }
+};
+
+//****************************************************************************
+//  자금관리권한 조회. 2012-03-14 서영지 추가
+//****************************************************************************
+scwin.getFundAuthID = function() {
+console.log("★★★★★ getFundAuthID ");
+    wconv.clear(DsWs_FundAuth);
+    wconv.clear(WARNING);
+	/*
+    SOBJ_Admin.WSDL = gds.gWsdlAdmin;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Admin, "AdminTask", "selectForAuthCheck");
+    gfn_SetParam(MethodObj, "sUserID", util.getGdsValue("gUserID"));
+    gfn_SetParam(MethodObj, "nAuthID", 40002); //자금관리권한
+    var result = gfn_CallService(SOBJ_Admin, DOBJ_FundAuth, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.admin.task.AdminTask", "selectForAuthCheck");
+	MethodObj.setId("selectForAuthCheck");
+	MethodObj.setParam("sUserID", util.getGdsValue("gUserID") );
+	MethodObj.setParam("nAuthID", 40002); //자금관리권한
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("/*//ADMAA04");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_FundAuth.setJSON (_tranSync.getDsJson("ADMAA04")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("ADMAA04"), "DsWs_FundAuth");
+	util.setCompBindRefresh("DsWs_FundAuth");
+	util.setRowPosition(DsWs_FundAuth, 0);
+    
+    //trace(MethodObj.in0);
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+
+    //trace(DsWs_FundAuth.savexml());
+    if (DsWs_FundAuth.getCellData(0, "result") == "1") {
+        gsFundAuthYN = "Y";
+    } else {
+        gsFundAuthYN = "N";
+    }
+
+
+    //권한 조회
+    scwin.getAuthID();
+};
+
+//****************************************************************************
+//  권한 조회. 2011-08-22 서영지. 
+//****************************************************************************
+scwin.getAuthID = function() {
+console.log("★★★★★ getAuthID 22222222222222 ");
+    wconv.clear(DsWs_Auth);
+    wconv.clear(WARNING);
+	/*
+    SOBJ_Admin.WSDL = gds.gWsdlAdmin;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Admin, "AdminTask", "selectForAuthCheck");
+    gfn_SetParam(MethodObj, "sUserID", util.getGdsValue("gUserID"));
+    gfn_SetParam(MethodObj, "nAuthID", 40100); //TM대리점수납 관리자 권한
+    var result = gfn_CallService(SOBJ_Admin, DOBJ_Auth, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.admin.task.AdminTask", "selectForAuthCheck");
+	MethodObj.setId("selectForAuthCheck");
+	MethodObj.setParam("sUserID", util.getGdsValue("gUserID") );
+	MethodObj.setParam("nAuthID", 40100); //TM대리점수납 관리자 권한
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("/*//ADMAA04");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_Auth.setJSON (_tranSync.getDsJson("ADMAA04")); // dataset 데이터     
+	util.jSonDsCreate(_tranSync.getDsJson("ADMAA04"), "DsWs_Auth");
+	util.setCompBindRefresh("DsWs_Auth");
+	util.setRowPosition(DsWs_Auth, 0);
+    
+    //trace(MethodObj.in0);
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+
+    //trace(DsWs_Auth.savexml());
+    if (DsWs_Auth.getCellData(0, "result") == "1") {
+        gsTMAuthYN = "Y";
+    } else {
+        gsTMAuthYN = "N";
+    }
+
+
+    //무이자행사 초기값 세팅. 2012-02-29 서영지 추가.	
+    wconv.clear(DsWs_Free);
+    //util.insertColumn(DsWs_Free, [        [            "sMonth",            "sMonth",            "text"        ]    ]);
+    //var insRow = util.insertRow(DsWs_Free, 0);
+    DsWs_Free.insertRow( 0 );
+    DsWs_Free.setCellData(0, "sMonth", "무이자행사");
+
+    //setCardAdmit();
+    //2012-04-25 서영지 추가.
+    scwin.getJoinCardType();
+};
+
+//**************************************************************************************************
+//  제휴카드구분 조회한다.  2012-04-25 서영지 추가
+//**************************************************************************************************
+scwin.getJoinCardType = function() {
+console.log("★★★★★ getJoinCardType 3333333333333333 ");
+
+    wconv.clear(DsWs_JoinCardType);
+    wconv.clear(Ds_JoinCardType);
+    wconv.clear(WARNING);
+    /*
+    SOBJ_Accounting.WSDL = gds.gWsdlAccounting;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Accounting, "com.inswave.accounting.task.AccountingCommonTask", "getACCZA12", "", "");
+    gfn_SetParam(MethodObj, "sCodeType", "JT");
+    //trace(MethodObj.in0);	
+    var result = gfn_CallService(SOBJ_Accounting, DOBJ_JoinCardType, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingCommonTask", "getACCZA12", "", "");
+	MethodObj.setId("getACCZA12");
+	MethodObj.setParam("sCodeType", "JT");
+	MethodObj.setUrl("/common/CBSO025PController.do");
+	MethodObj.setXPath("//*/vector/data/ACCZA12");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//console.log("★★★★★★★DsWs_JoinCardType★★★★★★★★★★");
+	util.jSonDsCreate(_tranSync.getDsJson("ACCZA12"), "DsWs_JoinCardType");
+
+    //trace(DsWs_JoinCardType.SaveXML());
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+    //wconv.copy(Ds_JoinCardType, "DsWs_JoinCardType");
+    Ds_JoinCardType.setJSON(DsWs_JoinCardType.getAllJSON());
+    //var insRow = util.insertRow(Ds_JoinCardType, 0);
+	Ds_JoinCardType.insertRow( 0 );
+    Ds_JoinCardType.setCellData(0, "sCode", "");
+    Ds_JoinCardType.setCellData(0, "sCodeName", "해당사항없음");
+    sJoinCardType.setSelectedIndex(0);
+    //trace(Ds_JoinCardType.savexml());
+    //파라미터 세팅
+    scwin.setCardAdmit();
+};
+
+//**************************************************************************************************
+// Parameter로 받은 값들을 화면에 보여준다.
+//**************************************************************************************************
+scwin.setCardAdmit = function() {
+    //opener에서 받은 파라미터를 세팅한다.
+console.log("[★★★★★ setCardAdmit ] " + parentWin.ds_AccCardReq.getCellData(0, "sApplyNo"));
+    sApplyNo.setValue(parentWin.ds_AccCardReq.getCellData(0, "sApplyNo"));
+    //팝업으로 오픈한 경우 
+    if (parentWin.ds_AccCardReq.getID() == "ds_AccCardReq") {
+        if (sApplyNo.getValue() == "") {
+            wprom.alert("opener에서 받은 파라미터값이 없습니다. 확인하십시오.");
+        }
+        
+        sCardNo.setValue(parentWin.ds_AccCardReq.getCellData(0, "sCardNo"));
+        sCardOwner.setValue(parentWin.ds_AccCardReq.getCellData(0, "sCardOwner"));
+        sCardOwnerID.setValue(parentWin.ds_AccCardReq.getCellData(0, "sCardOwnerID"));
+        nReqAmt.setValue(parentWin.ds_AccCardReq.getCellData(0, "nReqAmt"));
+        sReqAgnt.setValue(parentWin.ds_AccCardReq.getCellData(0, "sReqAgnt"));
+        sReqAgntName.setValue(parentWin.ds_AccCardReq.getCellData(0, "sReqAgntName"));
+        //Div0.sBeginDate.value     = parentWin.ds_AccCardReq.getCellData(0,"sBeginDate");	
+        sValidThruYYYY.setValue(wconv.substr(parentWin.ds_AccCardReq.getCellData(0, "sValidThru"), 0, 4));
+        sValidThruMM.setValue(wconv.substr(parentWin.ds_AccCardReq.getCellData(0, "sValidThru"), 4));
+        nTotPayPrem.setValue(parentWin.ds_AccCardReq.getCellData(0, "nTotPayPrem")); //2010-10-11 KCBI판매관련 서영지 추가.				
+        sInsType.setValue(parentWin.ds_AccCardReq.getCellData(0, "sInsType")); //2010-10-11 KCBI판매관련 서영지 추가.					
+        sApplyType.setValue(wconv.substr(sApplyNo.getValue(), 0, 1)); //청약번호. 2012-02-29 서영지. 개인정보보호법관련 추가
+        sApplyYM.setValue(wconv.substr(sApplyNo.getValue(), 1, 4)); //청약번호. 2012-02-29 서영지. 개인정보보호법관련 추가
+        sApplySer.setValue(wconv.substr(sApplyNo.getValue(), 5)); //청약번호. 2012-02-29 서영지. 개인정보보호법관련 추가		
+        nTotPayPrem.setDisabled(true); //2010-10-11 KCBI판매관련 서영지 추가.	
+        nTotPayPrem.hide(); //2010-10-11 KCBI판매관련 서영지 추가.	
+        gsDoerUser = parentWin.ds_AccCardReq.getCellData(0, "sDoerUser"); //2011-08-22 서영지. TM대리점수납관련 사용인 추가
+        gsInsrdID = parentWin.ds_AccCardReq.getCellData(0, "sInsrdID"); //2011-08-22 서영지. TM대리점수납관련 피보험자 추가
+        gsPolHolderID = parentWin.ds_AccCardReq.getCellData(0, "sPolHolderID"); //2011-08-22 서영지. TM대리점수납관련 계약자 추가
+        if (parentWin.ds_AccCardReq.getCellData(0, "sJoinCardType") != null) {
+            gsJoinCardType = parentWin.ds_AccCardReq.getCellData(0, "sJoinCardType"); //제휴카드구분. 2012-04-25 서영지 추가
+            sJoinCardType.setValue(gsJoinCardType); //제휴카드구분. 2012-04-25 서영지 추가
+            sBeginDate.setValue(gsSysDate); //책임개시일=현재
+        } else {
+            sBeginDate.setValue(parentWin.ds_AccCardReq.getCellData(0, "sBeginDate"));
+        }
+        sJoinCardType.setDisabled(true); //2012-04-25 서영지 추가
+        //alert(parentWin.ds_AccCardReq.savexml());
+        //대체승인 상태인지 확인한다.
+        scwin.getAlterAdmitState();
+    } else {
+    
+        sCardNo.setDisabled(false);
+        sCardNo.setReadOnly( false); 
+        nReqAmt.setDisabled(false);
+        nReqAmt.setReadOnly(false); 
+        sReqAgnt.setDisabled(false);
+        sReqAgnt.setReadOnly(false); 
+        Btn_Close.setDisabled(true);
+        sInsType.setDisabled(false); //2010-10-11 KCBI판매관련 서영지 추가.	
+        sInsType.setReadOnly( false);        //2010-10-11 KCBI판매관련 서영지 추가.	
+        nTotPayPrem.setDisabled(false); //2010-10-11 KCBI판매관련 서영지 추가.	
+        nTotPayPrem.setReadOnly(false);         //2010-10-11 KCBI판매관련 서영지 추가.	
+        nTotPayPrem.show(); //2010-10-11 KCBI판매관련 서영지 추가.	 
+
+        //관리자화면에서 연 경우 주민번호, 청약번호 입력 가능하게 열어준다.
+        sCardOwnerID.setDisabled(false); 		//2012-02-29 서영지. 개인정보보호법관련 추가. 
+        sCardOwnerID.setReadOnly( false);		//2012-02-29 서영지. 개인정보보호법관련 추가	
+        sCardOwner.setDisabled(false); 			//2012-02-29 서영지. 개인정보보호법관련 추가	
+        sCardOwner.setReadOnly(false);        //2012-02-29 서영지. 개인정보보호법관련 추가			
+        sApplyType.setDisabled(false); 			//2012-02-29 서영지. 개인정보보호법관련 추가	
+        sApplyType.setReadOnly(false);         	//2012-02-29 서영지. 개인정보보호법관련 추가	
+        sApplyYM.setDisabled(false); 			//2012-02-29 서영지. 개인정보보호법관련 추가	
+        sApplyYM.setReadOnly(false);         	//2012-02-29 서영지. 개인정보보호법관련 추가	
+        sApplySer.setDisabled(false); 			//2012-02-29 서영지. 개인정보보호법관련 추가	
+        sApplySer.setReadOnly( false);         	//2012-02-29 서영지. 개인정보보호법관련 추가	
+        //Div0.sInsGrp.Enable      = true;    	//2012-02-29 서영지. 개인정보보호법관련 추가
+        sJoinCardType.setDisabled(false); 		//2012-04-25 서영지 추가. 제휴구분코드
+        
+        //2008-10-08 서영지 상품구분(sInsGrp) 추가.
+        //Div0.sInsGrp.Enable = true;	2011-01-25 서영지 막음.
+        
+        gsManageYN = "Y"; //2012-02-29 서영지. 팝업이 아닌 경우 관리자승인인 경우임.
+    }
+};
+
+//**************************************************************************************************
+// 대체승인상태 조회
+//**************************************************************************************************
+scwin.getAlterAdmitState = function() {
+console.log("★★★★★ getAlterAdmitState 5555555555 ");
+
+    wconv.clear(DsWs_AlterAdmitState);
+    wconv.clear(WARNING);
+    /*
+    SOBJ_Accounting.WSDL = gds.gWsdlAccounting;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Accounting, "AccountingCommonTask", "selectCodeInfo", "", "");
+    gfn_SetParam(MethodObj, "sCodeType", "CD");
+    gfn_SetParam(MethodObj, "sCode", "ARS");
+    var result = gfn_CallService(SOBJ_Accounting, DOBJ_getAlterAdmit, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingCommonTask", "selectCodeInfo", "", "");
+	MethodObj.setId("selectCodeInfo");
+	MethodObj.setParam("sCodeType", "CD");
+	MethodObj.setParam("sCode", "ARS");
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("//*/ACCZA12");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	util.jSonDsCreate(_tranSync.getDsJson("ACCZA12"), "DsWs_AlterAdmitState");
+	util.setCompBindRefresh("DsWs_AlterAdmitState");
+	util.setRowPosition(DsWs_AlterAdmitState, 0);
+	     
+    //trace(DOBJ_getAlterAdmit.Contents);
+    //trace(DsWs_AlterAdmitState.SaveXML());
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+    if (DsWs_AlterAdmitState.getCellData(0, "sOption") == "Y") {
+        sAlterAdmit.setValue(DsWs_AlterAdmitState.getCellData(0, "sCodeName"));
+        gbAlterAdmit = true;
+    } else {
+        sAlterAdmit.setValue("");
+        gbAlterAdmit = false;
+    }
+
+
+    //카드 Bin 코드를 확인한다. 
+    scwin.checkCardBinCode();
+};
+
+//**************************************************************************************************
+// 카드번호 앞 6자리로 카드BinCode(ACCAB10) Table을 체크
+//**************************************************************************************************
+scwin.checkCardBinCode = function(sGubun) {
+console.log("★★★★★ checkCardBinCode 6666666666666 ");
+
+    //2008-10-08 서영지 추가. 카드사 clear
+    sCardCom.setValue("");
+    sCardComName.setValue("");
+    gMsgShowYN = sGubun; //2009-09-21 서영지 추가. 카드번호가 변경될 때만 신한세이브 메세지 보여주기 위함
+    if (sCardNo.getValue() == "") {
+        return;
+    }
+    wconv.clear(DsWs_CardBinCode);
+    wconv.clear(WARNING);
+    /*
+    SOBJ_Accounting.WSDL = gds.gWsdlAccounting;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Accounting, "AccountingCardTask", "selectCardBinInfo", "", "");
+    gfn_SetParam(MethodObj, "sCardBinCode", wconv.substr(sCardNo.getValue(), 0, 6));
+    gfn_SetParam(MethodObj, "sApplyNo", sApplyType.getValue() + sApplyYM.getValue() + sApplySer.getValue()); //2012-04-25 서영지. 제휴카드구분 추가 관련 추가 
+    gfn_SetParam(MethodObj, "sApplyType", sApplyType.getValue()); //2012-04-25 서영지. 제휴카드구분 추가 관련 추가 
+    gfn_SetParam(MethodObj, "sApplyYM", sApplyYM.getValue()); //2012-04-25 서영지. 제휴카드구분 추가 관련 추가 
+    gfn_SetParam(MethodObj, "sApplySer", sApplySer.getValue()); //2012-04-25 서영지. 제휴카드구분 추가 관련 추가 
+    var result = gfn_CallService(SOBJ_Accounting, DOBJ_CardBinCode, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingCardTask", "selectCardBinInfo", "", "");
+	MethodObj.setId("selectCardBinInfo");
+    MethodObj.setParam( "sCardBinCode", wconv.substr(sCardNo.getValue(), 0, 6));
+    MethodObj.setParam( "sApplyNo", sApplyType.getValue() + sApplyYM.getValue() + sApplySer.getValue()); //2012-04-25 서영지. 제휴카드구분 추가 관련 추가 
+    MethodObj.setParam( "sApplyType", sApplyType.getValue()); //2012-04-25 서영지. 제휴카드구분 추가 관련 추가 
+    MethodObj.setParam( "sApplyYM", sApplyYM.getValue()); //2012-04-25 서영지. 제휴카드구분 추가 관련 추가 
+    MethodObj.setParam( "sApplySer", sApplySer.getValue()); //2012-04-25 서영지. 제휴카드구분 추가 관련 추가
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("//*/ACCAB10");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_CardBinCode.setJSON (_tranSync.getDsJson("ACCAB10")); // dataset 데이터   
+	util.jSonDsCreate(_tranSync.getDsJson("ACCAB10"), "DsWs_CardBinCode");
+	util.setCompBindRefresh("DsWs_CardBinCode");
+	util.setRowPosition(DsWs_CardBinCode, 0);
+	    
+    //trace(DOBJ_CardBinCode.Contents);
+    //trace(DsWs_CardBinCode.SaveXML());
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+
+
+    //2010-11-05 서영지 추가
+    gsSupportCardTypeName = ""; //지원금카드유형
+    sSupportCardType.setValue(""); //지원금카드유형
+    sSupportorName.setValue("지원금");
+
+    //포인트 부분을 초기화한다.
+    scwin.initBCPoint();
+    sMsgText.setValue("");
+    
+    if (DsWs_CardBinCode.getCellData(0, "result") != "0") {
+        //2008-10-08 서영지추가. 카드사명을 세팅한다.
+        sCardCom.setValue(DsWs_CardBinCode.getCellData(0, "sCardCom"));
+        sCardComName.setValue(DsWs_CardBinCode.getCellData(0, "sCardComName"));
+
+        //2010-11-05 서영지. 하나은행지원금 관련 추가
+        sSupportCardType.setValue(DsWs_CardBinCode.getCellData(0, "sSupportCardType")); //지원금카드유형. 
+        gsSupportCardTypeName = DsWs_CardBinCode.getCellData(0, "sSupportCardTypeName"); //지원금카드유형. 
+        if (sSupportCardType.getValue() != "10") {
+            sSupportUseYN.setDisabled(true);
+        }
+
+
+
+        //1. 체크카드 여부 확인한다.
+        if (wconv.substr(DsWs_CardBinCode.getCellData(0, "sCardType"), 0, 1) == "1") {
+            sMsgText.setValue("\u203B 해당 카드는 " + DsWs_CardBinCode.getCellData(0, "sCardName") + " 선불형카드이므로 고객의 연결계좌에서 바로 결제됩니다. 결제하시겠습니까?");
+        }
+
+
+
+        //2011-01-25 서영지. 장기보험은 포인트 사용 안함.
+        if ( sInsGrp.getValue() == "2") {
+        } else {
+            //비씨카드인 경우,
+            if (sCardCom.getValue() == "0001") {
+            
+            } else if (sCardCom.getValue() == "0004" && wconv.toNumber(nReqAmt.getValue()) >= 350000) {
+                if (DsWs_CardBinCode.getCellData(0, "sPointCardType") == "40") {
+                    sSubTitle.setValue(sCardComName.getValue() + " 세이브 포인트");
+                    sPointCardType.setValue(DsWs_CardBinCode.getCellData(0, "sPointCardType")); //포인트구분
+                    bBCPoint.setDisabled(false); //포인트조회 버튼 활성화
+                    sTypeMsg1.setValue("\u203B 세이브서비스 이용고객은 포인트결제 여부를  반드시 선택해야 합니다.");
+                    sTypeMsg2.setValue("\u203B 삼성카드로 35만원이상 결제시, 당사는 10만원만 세이브 적용 가능합니다.");
+                    sTypeMsg3.setValue("   (세이브 적용된 10만원은 12개월간 할부방식으로 포인트결제 됩니다.)");
+                    sTypeMsg4.setValue("\u203B 삼성카드는 세이브이용 보험료 결제건도 세이브포인트 적립됩니다.");
+                }
+            } else if (sCardCom.getValue() == "0010" || sCardCom.getValue() == "0005") {
+                //2009-09-21 서영지 추가.
+                
+                //sPointCardType.InnerDataset = "Ds_PointCardType2";
+                sPointCardType.setNodeSet("data:Ds_PointCardType2","TEXT","CODE");
+                
+                if (gMsgShowYN != "N") {
+                    wprom.alert("신한카드는 포인트구분에서 세이브, 마이포인트 둘 중 하나를 선택하십시오.");
+                }
+
+
+                //신한카드 마이포인트인 경우, 
+                if (DsWs_CardBinCode.getCellData(0, "sPointCardType") == "20") {
+                    sSubTitle.setValue("마이" + sCardComName.getValue() + "포인트"); //타이틀
+                    sPointCardType.setValue(DsWs_CardBinCode.getCellData(0, "sPointCardType")); //포인트구분
+                    sPointCardType.setDisabled(false); //포인트구분 활성화. 신한카드는 마이포인트,하이세이브 둘다 선택 가능
+                    bBCPoint.setDisabled(false); //포인트조회 버튼 활성화
+                    sTypeMsg1.setValue("\u203B 마이신한포인트 사용고객은 포인트결제 여부를  반드시 선택해야 합니다.");
+                    sTypeMsg2.setValue("\u203B 포인트결제는 1점 이상 단위로 조회된 포인트 점수 모두 사용만 가능합니다.(포인트 일부 사용 선택불가)");
+                    sTypeMsg3.setValue("\u203B 마이신한포인트 점수는 1점에 1원으로 적용됩니다.");
+                    sTypeMsg4.setValue("\u203B 신한하이세이브와 마이신한포인트는 동시 사용 불가합니다.");
+                } else if (DsWs_CardBinCode.getCellData(0, "sPointCardType") == "40") {
+                    sSubTitle.setValue(sCardComName.getValue() + "하이세이브"); //타이틀
+                    sPointCardType.setValue(DsWs_CardBinCode.getCellData(0, "sPointCardType")); //포인트구분
+                    sPointCardType.setDisabled(false); //포인트구분 활성화. 신한카드는 마이포인트,하이세이브 둘다 선택 가능
+                    bBCPoint.setDisabled(false); //포인트조회 버튼 활성화
+                    sTypeMsg1.setValue("\u203B 신한하이세이브 사용고객은 포인트결제 여부를 반드시 선택해야 합니다.");
+                    sTypeMsg2.setValue("\u203B 신한카드로 10만원 이상 결제시(신한BC 제외), 당사는 10만원만 세이브 적용 가능합니다.");
+                    sTypeMsg3.setValue("   (세이브 적용된 10만원은 3개월 거치 후 9개월간 할부 방식으로 포인트 결제됩니다)");
+                    sTypeMsg4.setValue("\u203B 신한카드 세이브이용 보험료 결제 건은 세이브포인트가 적립되지 않습니다.");
+                    sTypeMsg5.setValue("\u203B 신한하이세이브와 마이신한포인트는 동시 사용 불가합니다.");
+                }
+            } else if (sCardCom.getValue() == "0008" && wconv.toNumber(nReqAmt.getValue()) >= 150000) {
+                if (DsWs_CardBinCode.getCellData(0, "sPointCardType") == "40") {}
+            } else if (sCardCom.getValue() == "0024") {
+                sSubTitle.setValue(gsSupportCardTypeName); //타이틀
+                sSupportorName.setValue(gsSupportCardTypeName); //지원금타이틀
+            } else if (sCardCom.getValue() == "0003" || sCardCom.getValue() == "8003" || sCardCom.getValue() == "1003") {
+                sSubTitle.setValue("외환 Yes Point");
+                sPointCardType.setValue(DsWs_CardBinCode.getCellData(0, "sPointCardType")); //포인트구분
+                bBCPoint.setDisabled(false); //포인트조회 버튼 활성화
+                sTypeMsg1.setValue("\u203B 외환의 모든 카드가 대상이며, 법인카드는 제외됩니다.");
+                sTypeMsg2.setValue("\u203B 가용포인트 5천점 이상일 경우, 사용 가능합니다.");
+                sTypeMsg3.setValue("\u203B Yes Point 1Point는 1원에 해당하며, 1Point 단위로 이용 가능합니다.");
+                sTypeMsg4.setValue("   (포인트 부분은 외환카드사에서 운영 및 관리하므로 정확한 사항은 외환카드사로 문의하시기 바랍니다)");
+            }
+        }
+    }
+
+
+
+
+    //2012-04-25 서영지. 제휴카드구분 추가
+    if (gsJoinCardType != "90" && DsWs_CardBinCode.getCellData(0, "sJoinCardType") != null) {
+        sJoinCardType.setValue(DsWs_CardBinCode.getCellData(0, "sJoinCardType"));
+    }
+
+
+    //2010-11-05 서영지. 하나은행지원금 관련 추가. 
+    //팝업으로 처음 오픈시 지원금대상 여부 조회. 
+    if (gsPopupYN == "Y") {
+        scwin.checkSupportYN();
+        gsPopupYN = "N";
+    }
+
+
+    //카드번호 변경시에만 무이자할부행사 조회. 2012-02-29 서영지 추가. 
+    if (gMsgShowYN != "N") {
+        scwin.getInterestFree();
+    }
+
+
+    //2016-03-28 이재정. 캐쉬백대상여부 관련 추가.
+    scwin.initCashbagYN();
+};
+
+//**************************************************************************************************
+// BC카드 포인트 적립 부분을 초기화한다.
+//**************************************************************************************************
+scwin.initBCPoint = function() {
+
+console.log("★★★★★ initBCPoint 7777777777777777777 ");
+
+    //sPointCardType.InnerDataset = "Ds_PointCardType1"; 
+	sPointCardType.setNodeSet("data:Ds_PointCardType1","TEXT","CODE");//2009-09-21 서영지 추가. 포인트구분 유동적으로 세팅.
+    //Div0.sPointCardType.value = "00";//BC적립포인트
+    sEduCardYN.setSelectedIndex(1); //에듀카드여부
+    sSetPointYN.setSelectedIndex(1); //포인트결제
+    sPointScore.setValue(""); //포인트점수
+    sRemainPoint.setValue(""); //잔여포인트점수
+    sCardName.setValue(""); //카드발급사명
+    sPointReqAmt.setValue(""); //카드승인액
+    sSetPointAmt.setValue(""); //포인트사용
+    sSetCardAmt.setValue(""); //결제예정액
+    sPointCardType.setDisabled(true);
+    bBCPoint.setDisabled(true);
+    sEduCardYN.setDisabled(true);
+    sSetPointYN.setDisabled(true);
+
+    //2009-07-14 서영지 추가. 삼성세이브포인트 추가 관련.
+    sTypeMsg1.setValue(""); //카드사별 주의사항. 
+    sTypeMsg2.setValue("");
+    sTypeMsg3.setValue("");
+    sTypeMsg4.setValue("");
+    sTypeMsg5.setValue("");
+    sSubTitle.setValue("포인트"); //sub title	
+    //2010-11-09. 서영지 하나은행지원금 관련 추가. 
+    //지원금사용 '예'인 경우, 초기화한다.
+    if (sSupportUseYN.getValue() == "Y") {
+        scwin.calcSupportAmt(); //예인 경우 다시 계산한다.
+        /* 2012-03-14 서영지 막음 start
+        Div0.sSupportUseYN.value = "N";//지원금사용여부=아니오
+        Div0.nSetSupportAmt.value = 0; //지원금사용금액 
+        Div0.nFinalCardAmt.value = 0;  //지원후결제예정액 
+         2012-03-14 서영지 막음 end */
+    }
+}; 
+
+//**************************************************************************************************
+// 캐쉬백대상여부 활성화
+//**************************************************************************************************
+scwin.initCashbagYN = function() {
+console.log("★★★★★ initCashbagYN 88888888888888888888 ");
+
+    var sCardCom1 = sCardCom.getValue();
+    sCashbagYN.setDisabled(true);
+
+    //KB국민카드(0002), NH농협카드(0015) 캐쉬백대상여부 활성화
+    if (sCardCom1 == "0015" || sCardCom1 == "0002") {
+        sCashbagYN.setDisabled(false);
+    }
+};
+
+//**************************************************************************************************
+//  카드승인을 요청을 위해 동일한 승인건 존재 여부를 체크하는 함수를 호출한다. 
+//  (승인요청순서 : 동일 승인건 존재여부 체크 -> 인증요청 -> 승인요청)
+//**************************************************************************************************
+scwin.doRequestAdmit = function() {
+console.log("★★★★★ doRequestAdmit ");
+    var promise = Promise.resolve();
+    //2012-03-14 서영지 추가. 예선택시 승인요청됨. 아니오 선택시 승인요청 중지하고 지원금여부 재선택 가능.
+    if (sSupportUseYN.getValue() == "Y") {
+        if (!wprom.confirm("하나은행 지원금이 있습니다. \n사용하시겠습니까?")) {
+            return; /*return wprom.confirm(가이드참조)*/
+        }
+    }
+    //2009-07-14 삼성세이브포인트 관련. 서영지 추가
+    //포인트가 없는 상태에서 포인트결제를 선택한 경우,
+    if (sCardCom.getValue() == "0004" && sPointCardType.getValue() == "40" && 
+        sSetPointYN.getSelectedIndex() == 0 && ((sPointScore.getValue() == "" || sPointScore.getValue() == "0"))) {
+        if (!wprom.confirm("세이브포인트 잔여점수는 없지만 삼성카드와 협의되신 상태이면 세이브결제가 가능합니다. \n세이브포인트 결제로 승인요청 하시겠습니까?")) {
+            return; /*return wprom.confirm(가이드참조)*/
+        }
+    }
+    //2009-08-06. 현대 세이브포인트 관련. 서영지 추가.
+    if (sCardCom.getValue() == "0008" && sPointCardType.getValue() == "40" && sSetPointYN.getSelectedIndex() == 0) {
+        if (!wprom.confirm("현대W, V, H 카드의 경우는 세이브 적용 이후, 기존 할인 서비스가 모두 중단됩니다.  세이브 서비스를 이용하시겠습니까?")) {
+            return; /*return wprom.confirm(가이드참조)*/
+        }
+    }
+
+    //2008-09-29 서영지 추가. '5천점 단위로 사용'이 '전액사용'으로 변경됨.
+    if (sSetPointYN.getSelectedIndex() == 1 && sPointScore.getValue() != "") {
+        if (!wprom.confirm("조회된 포인트를 사용하지 않으시겠습니까? \n포인트를 사용하려면 '포인트결제'에서 '예'를 선택해주십시오.")) {
+            return; /*return wprom.confirm(가이드참조)*/
+        }
+    }
+
+    //화면의 입력값을 체크한다.
+    if (!scwin.checkValue()) {
+        return;
+    }
+
+    //동일한 승인건이 존재하는지 확인한다.
+    //checkSameAdmitCount();
+    //관리자 화면이고, 자금관리권한이 없는 경우에만 존재하는 청약번호인지 확인한다. 2012-03-14 서영지 추가
+    if (gsManageYN == "Y" && gsFundAuthYN == "N") {
+           scwin.existApplyNo();
+    } else {
+            scwin.checkSameAdmitCount();
+    }
+};
+
+//**************************************************************************************************
+// 화면의 입력값을 체크한다.
+//**************************************************************************************************
+scwin.checkValue = function() {
+console.log("★★★★★ checkValue ");
+
+    if (sApplyType.getValue() == "") {
+        //2012-02-29 서영지 추가. 개인정보보호관련.
+        wprom.alertF("'청약번호'를 입력해주십시오",{},sApplyType);
+        //sApplyType.focus();
+        return false;
+    }
+    if (sApplyYM.getValue() == "" || wconv.length(sApplyYM.getValue()) != 4) {
+        //2012-02-29 서영지 추가. 개인정보보호관련.
+        wprom.alertF("'청약번호' 4자리를 입력해주십시오",{},sApplyYM);
+        //sApplyYM.focus();
+        return false;
+    }
+    if (sApplySer.getValue() == "" || wconv.length(wconv.trim(sApplySer.getValue())) != 7) {
+        //2012-02-29 서영지 추가. 개인정보보호관련.
+        wprom.alertF("'청약번호' 7자리를 입력해주십시오",{},sApplySer);
+        //sApplySer.focus();
+        return false;
+    }
+    if (sCardNo.getValue() == "") {
+        wprom.alertF("'카드번호'를 입력해주십시오",{},sCardNo);
+        //sCardNo.focus();
+        return false;
+    }
+
+    //카드승인요청(ACCAB02) 화면 카드번호(sCardNo) 최소자릿수 유효성 체크 추가(13자리 이하는 제한)
+    if (wconv.length(sCardNo.getValue()) <= 13) {
+        wprom.alert("카드번호를 확인하십시오.");
+        return false;
+    }
+    if (sCardOwner.getValue() == "") {
+        wprom.alertF("'카드소유자명'를 입력해주십시오",{},sCardOwner);
+        //sCardOwner.focus();
+        return false;
+    }
+    if (nReqAmt.getValue() == "") {
+        wprom.alertF("'금액'를 입력해주십시오",{},nReqAmt);
+        //nReqAmt.focus();
+        return false;
+    }
+    if (sCardOwnerID.getValue() == "") {
+        wprom.alertF("'주민/사업자번호'를 입력해주십시오",{},sCardOwnerID);
+        //sCardOwnerID.focus();
+        return false;
+    }
+    if (sCardOwner.getValue() == "") {
+        wprom.alertF("'카드소유자명'를 입력해주십시오",{},sCardOwner);
+        //sCardOwner.focus();
+        return false;
+    }
+    if (sValidThruYYYY.getValue() == "") {
+        wprom.alertF("'유효기간'를 입력해주십시오",{},sValidThruYYYY);
+        //sValidThruYYYY.focus();
+        return false;
+    }
+    if (sValidThruMM.getValue() == "") {
+        wprom.alertF("'유효기간'를 입력해주십시오",{},sValidThruMM);
+        //sValidThruMM.focus();
+        return false;
+    }
+    if (sReqAgnt.getValue() == "") {
+        wprom.alertF("'취급자'를 입력해주십시오",{},sReqAgnt);
+        //sReqAgnt.focus();
+        return false;
+    }
+
+    //2014-12-16 이재정. 소액결제 가능 최소 금액을 기존의 1,000원 -> 100원 정정
+    //2015-04-21 이재정. 소액결제 가능 최소 금액을 기존의 100원 -> 10원 정정(삼성,현대,롯데,농협 100원 유지)
+    if (sCardCom.getValue() == "0004" || sCardCom.getValue() == "0008" || sCardCom.getValue() == "9998" || 
+        sCardCom.getValue() == "0009" || sCardCom.getValue() == "0020" || sCardCom.getValue() == "0021" || 
+        sCardCom.getValue() == "1009" || sCardCom.getValue() == "0015" || sCardCom.getValue() == "") {
+        if (wconv.toNumber(nReqAmt.getValue()) < 100) {
+            wprom.alertF("금액은 100원 이상이어야 합니다.",{},nReqAmt);
+            //nReqAmt.focus();
+            return false;
+        }
+    } else {
+        if (wconv.toNumber(nReqAmt.getValue()) < 10) {
+            wprom.alertF("금액은 10원 이상이어야 합니다.",{},nReqAmt);
+            //nReqAmt.focus();
+            return false;
+        }
+    }
+    if (sValidThruYYYY.getValue() + sValidThruMM.getValue() < gsSysDate.substr(0, 6)) {
+        wprom.alertF("유효기간은 현재월보다 크거나 같아야 합니다.",{},sValidThruYYYY);
+        //sValidThruYYYY.focus();
+        return false;
+    }
+    if (nInstall.getValue() < 0) {
+        wprom.alertF("할부개월을 확인하십시오.",{},nInstall);
+        //nInstall.focus();
+        return false;
+    }
+    if (wconv.length(sReqAgnt.getValue()) != 7) {
+        wprom.alertF("취급자를 확인하십시오.",{},sReqAgnt);
+        //sReqAgnt.focus();
+        return false;
+    }
+
+    //주민번호 또는 사업자번호 확인
+    if (wconv.length(sCardOwnerID.getValue()) != 13 && wconv.length(sCardOwnerID.getValue()) != 10) {
+        wprom.alertF("주민번호 또는 사업자번호를 확인하십시오.",{},sCardOwnerID);
+        //sCardOwnerID.focus();
+        return false;
+    }
+   
+    if (fv_args.flag != "101") {
+        //책임개시일 확인
+        if (wconv.length(sBeginDate.getValue()) == 0) {
+            //책임개시일을 입력하지 않은 경우 Server에서 현재일자로 세팅한다.
+            sBeginDate.setValue("");
+        } else if (wconv.length(sBeginDate.getValue()) == 8) {
+            if (sBeginDate.getValue() < gsSysDate) {
+            	var promise2 = Promise.resolve();
+            	promise2 = promise2.then(function(){
+	                return wprom.confirm("책임개시일은 오늘보다 크거나 같아야 합니다. 계속 작업하시겠습니까?");
+                });
+            	promise2 = promise2.then(function(result){
+					if(result == false){
+						return false;
+					}else{
+						return true;
+					}
+					return result;
+				});
+				return promise2;	                
+            }
+        } else {
+            wprom.alert("책임개시일을 확인하십시오.");
+            return false;
+        }
+    }
+
+
+
+    //2008-10-27 서영지 수정. 팝업이 아닌 임시 화면에서 호출시 책임개시일 체크하도록.
+    if (parentWin.ds_AccCardReq.getID()== "ds_AccCardReq") {
+    	//
+    } else {
+        //책임개시일 확인
+        if (wconv.length(sBeginDate.getValue()) == 0) {
+            //책임개시일을 입력하지 않은 경우 Server에서 현재일자로 세팅한다.
+            sBeginDate.setValue("");
+        } else if (wconv.length(sBeginDate.getValue()) == 8) {
+            if (sBeginDate.getValue() < gsSysDate) {
+
+            	var promise =Promise.resolve();
+            	promise = promise.then(function(){
+                	return wprom.confirm("1.책임개시일은 오늘보다 크거나 같아야 합니다. 계속 작업하시겠습니까?");
+                });
+            	promise = promise.then(function(result){
+            		if(result ==false){
+            			return false;
+            		}else{
+            			return true;
+            		};
+            		return;
+            	});
+            	return promise;                
+            }
+        } else {
+            wprom.alert("책임개시일을 확인하십시오.");
+            return false;
+        }
+    }
+
+
+    //2008-10-08 서영지 추가. 임시막음
+    //if ( Div0.sCardCom.value == "" || Div0.sCardComName.value == "" ) {
+    //	alert("'카드사' 오류입니다. 확인하십시오.");
+    //	return false;
+    //}	
+    if (sInsGrp.getValue() == "") {
+        wprom.alert("'상품구분'을 선택하십시오.");
+        return false;
+    }
+    return true;
+};
+
+//**************************************************************************************************
+// 청약번호가 존재하는지 확인한다. 서영지. 2012-03-14 
+//**************************************************************************************************
+scwin.existApplyNo = function() {
+console.log("★★★★★ existApplyNo ");
+
+    //var promise = Promise.resolve();
+    wconv.clear(DsWs_ApplyNo);
+    wconv.clear(WARNING);
+    /*
+    SOBJ_Accounting.WSDL = gds.gWsdlAccounting;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Accounting, "AccountingCollTask", "existApplyNo", "", "");
+    gfn_SetParam(MethodObj, "sApplyType", sApplyType.getValue());
+    gfn_SetParam(MethodObj, "sApplyYM", sApplyYM.getValue());
+    gfn_SetParam(MethodObj, "sApplySer", sApplySer.getValue());
+    var result = gfn_CallService(SOBJ_Accounting, DOBJ_ApplyNo, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingCollTask", "existApplyNo", "", "");
+	MethodObj.setId("existApplyNo");
+	MethodObj.setParam("sApplyType", sApplyType.getValue());
+	MethodObj.setParam("sApplyYM", sApplyYM.getValue());
+	MethodObj.setParam("sApplySer", sApplySer.getValue());
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("/*//ACCBA01");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_ApplyNo.setJSON (_tranSync.getDsJson("ACCBA01")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("ACCBA01"), "DsWs_ApplyNo");
+	util.setCompBindRefresh("DsWs_ApplyNo");
+	util.setRowPosition(DsWs_ApplyNo, 0);
+    
+    //trace(MethodObj.in0);
+    //trace(DsWs_ApplyNo.SaveXML());
+    //if (result == false) {
+    if(WARNING.getRowCount() != 0){
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+    if (DsWs_ApplyNo.getCellData(0, "result") < 1) {
+        wprom.alert("존재하지 않는 청약번호입니다. \n청약번호를 확인하십시오.");
+        return;
+    }
+    //동일한 승인건이 존재하는지 확인한다.
+    scwin.checkSameAdmitCount();
+};
+
+//**************************************************************************************************
+// 동일한 승인건이 존재하는지 확인한다.
+//**************************************************************************************************
+scwin.checkSameAdmitCount = function() {
+    //var promise = Promise.resolve();
+    wconv.clear(DsWs_SameAdmit);
+    wconv.clear(WARNING);
+    /*
+    SOBJ_Accounting.WSDL = gds.gWsdlAccounting;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Accounting, "AccountingCardTask", "selectSameAdmitCount", "", "");
+    gfn_SetParam(MethodObj, "sReqDate", gsSysDate);
+    var result = gfn_CallService(SOBJ_Accounting, DOBJ_SameAdmit, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingCardTask", "selectSameAdmitCount", "", "");
+	MethodObj.setId("selectSameAdmitCount");
+	MethodObj.setParam("sReqDate", gsSysDate);
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("//*/ACCAB02");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+//console.log("★★★★★★★★DsWs_SameAdmit ★★★★★★★★★★★");
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_SameAdmit.setJSON (_tranSync.getDsJson("ACCAB02")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("ACCAB02"), "DsWs_SameAdmit");
+	util.setCompBindRefresh("DsWs_SameAdmit");
+	util.setRowPosition(DsWs_SameAdmit, 0);
+    
+    //trace(DOBJ_SameAdmit.Contents);
+    //trace(DsWs_SameAdmit.SaveXML());
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+    if (DsWs_SameAdmit.getCellData(0, "nSameCnt") >= 2) {
+        wprom.alert("동일한 금액의 승인건이 " + DsWs_SameAdmit.getCellData(0, "nSameCnt") + "건 존재합니다.");
+        return;
+    }
+
+
+    //대체승인이면 정상 카드승인모듈을 거치지 않고, DB에 임의로 저장된다. 
+    //2004/05/31 카드대체승인 추가. CC팀 요청.
+    /* 2012-02-29 서영지 막음. 개인신용정보동의 루틴 추가
+    if ( gbAlterAdmit == true ) {
+    	requestCardAlterAdmit();
+    }
+    //대체승인이 아니면, 승인요청 전에 인증요청을 먼저 한다. 
+    else{
+    	requestCardCert();
+    }
+    */
+    //관리자 화면이면 팝업 오픈 전에 개인신용정보 동의 여부를 확인. 2012-02-29 서영지 추가
+    if (gsManageYN == "Y") {
+            scwin.beforeCheckInfoAgreeYN();
+    } else {
+            scwin.startRequest();
+    }
+};
+
+//**************************************************************************************************
+//  팝업 오픈 전에 개인신용정보 동의 여부를 확인한다. 2012-02-29 서영지 추가
+//**************************************************************************************************
+scwin.beforeCheckInfoAgreeYN = function() {
+    wconv.clear(DsWs_AgreeCheck);
+    wconv.clear(WARNING);
+    /*
+    SOBJ_Accounting.WSDL = gds.gWsdlAccounting;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Accounting, "AccountingCardTask", "selectCustInfoAgree", "", "");
+    gfn_SetParam(MethodObj, "sApplyNo", sApplyType.getValue() + sApplyYM.getValue() + sApplySer.getValue()); //청약번호
+    gfn_SetParam(MethodObj, "sCustNo", sCardOwnerID.getValue()); //카드소유주ID
+    gfn_SetParam(MethodObj, "sAgmGvs", "20"); //동의구분(10:계약체결, 20:관리자카드승인)
+    gfn_SetParam(MethodObj, "sCustType", "03"); //고객구분(01:계약자, 02:피보험자, 03:제3자)	
+    var result = gfn_CallService(SOBJ_Accounting, DOBJ_AgreeCheck, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingCardTask", "selectCustInfoAgree", "", "");
+	MethodObj.setId("selectCustInfoAgree");
+	MethodObj.setParam("sApplyNo", sApplyType.getValue() + sApplyYM.getValue() + sApplySer.getValue()); //청약번호
+	MethodObj.setParam("sCustNo", sCardOwnerID.getValue()); //카드소유주ID
+	MethodObj.setParam("sAgmGvs", "20"); //동의구분(10:계약체결, 20:관리자카드승인)
+	MethodObj.setParam("sCustType", "03"); //고객구분(01:계약자, 02:피보험자, 03:제3자)
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("/*//CUSAA35");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_AgreeCheck.setJSON (_tranSync.getDsJson("CUSAA35")); // dataset 데이터
+	util.jSonDsCreate(_tranSync.getDsJson("CUSAA35"), "DsWs_AgreeCheck");
+	util.setCompBindRefresh("DsWs_AgreeCheck");
+	util.setRowPosition(DsWs_AgreeCheck, 0);
+	     
+    //trace(DOBJ_AgreeCheck.Contents);
+    //trace(DsWs_AgreeCheck.SaveXML());
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+
+
+    //이미 동의했으면 승인요청하고, 비동의이면 개인신용정보동의 팝업을 오픈한다. 
+    if (DsWs_AgreeCheck.getCellData(0, "sAgmYn") == "Y") {
+            scwin.startRequest();
+    } else {
+            scwin.openInfoAgreePop();
+    }
+};
+
+//**************************************************************************************************
+// 개인신용정보 동의 팝업을 오픈하여 동의 받는다. 2012-02-29 서영지 추가
+//**************************************************************************************************
+scwin.openInfoAgreePop = function() {
+alert("openInfoAgreePop============.");
+    var promise = Promise.resolve();
+    //1. 팝업 오픈 전에 개인정보 데이터를 입력한다.
+    wconv.clear(DsWs_Agree);
+    wconv.clear(WARNING);
+    Ds_Agree.removeAll();
+    //var insRow = util.insertRow(Ds_Agree, 0);
+    Ds_Agree.insertRow( 0 );
+    Ds_Agree.setCellData(0, "sApplyNo", sApplyType.getValue() + sApplyYM.getValue() + sApplySer.getValue()); //청약번호
+    Ds_Agree.setCellData(0, "sCustNo", sCardOwnerID.getValue()); //카드소유주ID
+    Ds_Agree.setCellData(0, "sAgmGvs", "20"); //동의구분(10:계약체결, 20:관리자카드승인)
+    Ds_Agree.setCellData(0, "sCustType", "03"); //고객구분(01:계약자, 02:피보험자, 03:제3자)
+    Ds_Agree.setCellData(0, "sName", sCardOwner.getValue()); //카드소유주명
+    Ds_Agree.setCellData(0, "sAgmYn", "N"); //동의여부 (Y:동의, N:비동의)
+    Ds_Agree.setCellData(0, "sAgmUser", util.getGdsValue("gUserID")); //동의처리자
+    Ds_Agree.setCellData(0, "sAgmUserIp", replace(replace(ext_GetIPAddress(), "[", ""), "]", "")); //동의처리자IP
+	/*
+    SOBJ_Customer.WSDL = gds.gWsdlCustomer;
+    var MethodObj = SOBJ_Customer.CreateMethodObj("perform");
+    setVector("CUSAA35", Ds_Agree, "com.inswave.customer.task.CustTask", "insertPriInfoAgree");
+    SOBJ_Customer.CreateObj("in0");
+    MethodObj.in0 = insertStr;
+    //trace(replace(MethodObj.in0, "><", ">\n  <"));
+    var result = gfn_CallService(SOBJ_Customer, DOBJ_Agree, MethodObj);
+	*/
+	var MethodObj = new callService("com.inswave.customer.task.CustTask", "insertPriInfoAgree");
+	MethodObj.setId("insertPriInfoAgree");
+	MethodObj.setInput("vector");
+	MethodObj.addVectorData("CUSAA35","CUSAA35","Ds_Agree");
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+		
+    //trace(replace(gfn_XmlEncoder(DOBJ_Agree.Contents),"><",">\n<"));
+    //trace(DsWs_Agree.saveXML());
+    if (result == false) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+
+
+    //2. 팝업 오픈
+    //var sArg = "sApplyNo=" + wconv.quote(sApplyType.getValue() + sApplyYM.getValue() + sApplySer.getValue()) + 
+    //                " sAgmGvs=" + wconv.quote("20");
+    promise = promise.then(function(rtnVal) {
+    	var sArgs = {};
+    	var popInfo = {};
+        return wprom.popupOpen("/ui/cbsc/CBSC026P.xml", popInfo); //com_pop::PriInfoAgree_Pop.xml
+    });
+    promise = promise.then(function(result) {
+    	//3. 동의여부를 확인한다.
+        return scwin.checkInfoAgreeYN();
+        
+    });
+    return promise;
+};
+
+//**************************************************************************************************
+// 개인신용정보 동의 여부를 확인한다. 2012-02-29 서영지 추가
+//**************************************************************************************************
+scwin.checkInfoAgreeYN = function() {
+    //var promise = Promise.resolve();
+    wconv.clear(DsWs_AgreeCheck);
+    wconv.clear(WARNING);
+    /*
+    SOBJ_Accounting.WSDL = gds.gWsdlAccounting;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Accounting, "AccountingCardTask", "selectCustInfoAgree", "", "");
+    gfn_SetParam(MethodObj, "sApplyNo", sApplyType.getValue() + sApplyYM.getValue() + sApplySer.getValue()); //청약번호
+    gfn_SetParam(MethodObj, "sCustNo", sCardOwnerID.getValue()); //카드소유주ID
+    gfn_SetParam(MethodObj, "sAgmGvs", "20"); //동의구분(10:계약체결, 20:관리자카드승인)
+    gfn_SetParam(MethodObj, "sCustType", "03"); //고객구분(01:계약자, 02:피보험자, 03:제3자)	
+    var result = gfn_CallService(SOBJ_Accounting, DOBJ_AgreeCheck, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingCardTask","selectCustInfoAgree", "", "");
+	MethodObj.setId("selectCustInfoAgree");
+	MethodObj.setParam("sApplyNo", sApplyType.getValue() + sApplyYM.getValue() + sApplySer.getValue()); //청약번호
+	MethodObj.setParam("sCustNo", sCardOwnerID.getValue()); //카드소유주ID
+	MethodObj.setParam("sAgmGvs", "20"); //동의구분(10:계약체결, 20:관리자카드승인)
+	MethodObj.setParam("sCustType", "03"); //고객구분(01:계약자, 02:피보험자, 03:제3자)
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("/*//CUSAA35");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+//console.log("★★★★★★★★DsWs_AgreeCheck ★★★★★★★★★★★");
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_AgreeCheck.setJSON (_tranSync.getDsJson("CUSAA35")); // dataset 데이터 
+    util.jSonDsCreate(_tranSync.getDsJson("CUSAA35"), "DsWs_AgreeCheck");
+	util.setCompBindRefresh("DsWs_AgreeCheck");
+	util.setRowPosition(DsWs_AgreeCheck, 0);
+    
+    //trace(DOBJ_AgreeCheck.Contents);
+    //trace(DsWs_AgreeCheck.SaveXML());
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+
+
+    //동의했으면 승인요청, 비동의이면 에러
+    if (DsWs_AgreeCheck.getCellData(0, "sAgmYn") == "Y") {
+        //promise = promise.then(function(rtnVal) {
+            scwin.startRequest();
+        //});
+    } else {
+        wprom.alert("개인신용정보 동의를 먼저 해주십시오.");
+        return;
+    }
+    //return promise;
+};
+
+//**************************************************************************************************
+// 카드 승인요청을 한다. 2012-02-29 서영지 추가
+//**************************************************************************************************
+scwin.startRequest = function() {
+    //var promise = Promise.resolve();
+    //대체승인이면 정상 카드승인모듈을 거치지 않고, DB에 임의로 저장된다. 
+    //2004/05/31 카드대체승인 추가. CC팀 요청.
+    if (gbAlterAdmit == true) {
+        scwin.requestCardAlterAdmit();
+    } else {
+        //promise = promise.then(function(rtnVal) {
+            scwin.requestCardCert();
+        //});
+    }
+    //return promise;
+};
+
+//**************************************************************************************************
+//  대체승인의 경우에 카드승인 요청을 한다.
+//**************************************************************************************************
+scwin.requestCardAlterAdmit = function() {
+    wconv.clear(DsWs_CardAlterAdmit);
+    wconv.clear(WARNING);
+    /*
+    SOBJ_Accounting.WSDL = gds.gWsdlAccounting;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Accounting, "AccountingCardTask", "requestCardAdmit", "", "");
+    gfn_SetParam(MethodObj, "sAlterAdmit", "Y"); //대체승인 여부 = Y	
+    //gfn_SetParam(MethodObj, "sApplyNo", Div0.sApplyNo.value);
+    gfn_SetParam(MethodObj, "sApplyNo", sApplyType.getValue() + sApplyYM.getValue() + sApplySer.getValue()); //2012-02-29 서영지 수정
+    gfn_SetParam(MethodObj, "sCardNo", sCardNo.getValue());
+    gfn_SetParam(MethodObj, "nReqAmt", nReqAmt.getValue());
+    gfn_SetParam(MethodObj, "sCardOwner", sCardOwner.getValue());
+    gfn_SetParam(MethodObj, "sValidThru", sValidThruYYYY.getValue() + sValidThruMM.getValue());
+    gfn_SetParam(MethodObj, "nInstall", scwin.getInstallment());
+    gfn_SetParam(MethodObj, "sBeginDate", sBeginDate.getValue());
+    gfn_SetParam(MethodObj, "sReqAgnt", sReqAgnt.getValue());
+    gfn_SetParam(MethodObj, "sCardOwnerID", sCardOwnerID.getValue());
+    gfn_SetParam(MethodObj, "sCardOwnerType", scwin.getCardOwnerType());
+    gfn_SetParam(MethodObj, "sSettleStat", "D"); //정산상태
+    gfn_SetParam(MethodObj, "sUserID", util.getGdsValue("gUserID"));
+    gfn_SetParam(MethodObj, "sCertType", "N"); //인증구분(N=일반, 인증+승인(주민번호))	
+    gfn_SetParam(MethodObj, "sSrcType", "I"); //I=소스구분(직원을 통한 승인요청)
+    gfn_SetParam(MethodObj, "sSettleType", "CXX");
+    gfn_SetParam(MethodObj, "sSupportUseYN", sSupportUseYN.getValue()); //2010-11-05 서영지 추가. 지원금사용여부
+    gfn_SetParam(MethodObj, "nSetSupportAmt", nSetSupportAmt.getValue()); //2010-11-05 서영지 추가. 지원금사용금액
+    gfn_SetParam(MethodObj, "nSupportAmt", nSupportAmt.getValue()); //2010-11-05 서영지 추가. 지원금
+    gfn_SetParam(MethodObj, "sManageYN", gsManageYN); //2012-02-29 서영지. 개인정보보호법 관련 관리자승인여부 추가
+    gfn_SetParam(MethodObj, "sForceYN", gsForceYN); //2012-02-29 서영지. 개인정보보호법 관련 강제승인여부 추가
+    gfn_SetParam(MethodObj, "sForceConfUserID", gsForceConfUserID); //2012-02-29 서영지. 개인정보보호법 관련 강제승인확인자 추가
+    gfn_SetParam(MethodObj, "nFreeInstall", Cmb_nInstall.getValue()); //2012-02-29 서영지. 무이자행사 추가
+    gfn_SetParam(MethodObj, "sJoinCardType", sJoinCardType.getValue()); //2012-04-25 서영지. 제휴카드구분 추가.
+    gfn_SetParam(MethodObj, "sCashbagYN", sCashbagYN.getValue()); //2016-03-28 이재정. 캐쉬백대상여부 추가
+    var result = gfn_CallService(SOBJ_Accounting, DOBJ_CardAlterAdmit, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingCardTask","requestCardAdmit", "", "");
+	MethodObj.setId("requestCardAdmit");
+
+	//MethodObj.setParam("sApplyNo", sApplyType.getValue() + sApplyYM.getValue() + sApplySer.getValue()); //청약번호
+    MethodObj.setParam( "sAlterAdmit", "Y"); //대체승인 여부 = Y	
+    //MethodObj.setParam( "sApplyNo", Div0.sApplyNo.value);
+    MethodObj.setParam( "sApplyNo", sApplyType.getValue() + sApplyYM.getValue() + sApplySer.getValue()); //2012-02-29 서영지 수정
+    MethodObj.setParam( "sCardNo", sCardNo.getValue());
+    MethodObj.setParam( "nReqAmt", nReqAmt.getValue());
+    MethodObj.setParam( "sCardOwner", sCardOwner.getValue());
+    MethodObj.setParam( "sValidThru", sValidThruYYYY.getValue() + sValidThruMM.getValue());
+    MethodObj.setParam( "nInstall", scwin.getInstallment());
+    MethodObj.setParam( "sBeginDate", sBeginDate.getValue());
+    MethodObj.setParam( "sReqAgnt", sReqAgnt.getValue());
+    MethodObj.setParam( "sCardOwnerID", sCardOwnerID.getValue());
+    MethodObj.setParam( "sCardOwnerType", scwin.getCardOwnerType());
+    MethodObj.setParam( "sSettleStat", "D"); //정산상태
+    MethodObj.setParam( "sUserID", util.getGdsValue("gUserID"));
+    MethodObj.setParam( "sCertType", "N"); //인증구분(N=일반, 인증+승인(주민번호))	
+    MethodObj.setParam( "sSrcType", "I"); //I=소스구분(직원을 통한 승인요청)
+    MethodObj.setParam( "sSettleType", "CXX");
+    MethodObj.setParam( "sSupportUseYN", sSupportUseYN.getValue()); //2010-11-05 서영지 추가. 지원금사용여부
+    MethodObj.setParam( "nSetSupportAmt", nSetSupportAmt.getValue()); //2010-11-05 서영지 추가. 지원금사용금액
+    MethodObj.setParam( "nSupportAmt", nSupportAmt.getValue()); //2010-11-05 서영지 추가. 지원금
+    MethodObj.setParam( "sManageYN", gsManageYN); //2012-02-29 서영지. 개인정보보호법 관련 관리자승인여부 추가
+    MethodObj.setParam( "sForceYN", gsForceYN); //2012-02-29 서영지. 개인정보보호법 관련 강제승인여부 추가
+    MethodObj.setParam( "sForceConfUserID", gsForceConfUserID); //2012-02-29 서영지. 개인정보보호법 관련 강제승인확인자 추가
+    MethodObj.setParam( "nFreeInstall", "");//goo Cmb_nInstall.getValue()); //2012-02-29 서영지. 무이자행사 추가
+    MethodObj.setParam( "sJoinCardType", sJoinCardType.getValue()); //2012-04-25 서영지. 제휴카드구분 추가.
+    MethodObj.setParam( "sCashbagYN", sCashbagYN.getValue()); //2016-03-28 이재정. 캐쉬백대상여부 추가
+    	
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("//*/ACCAB02");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//console.log("★★★★★★★★DsWs_CardAlterAdmit ★★★★★★★★★★★");
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_CardAlterAdmit.setJSON (_tranSync.getDsJson("ACCAB02")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("ACCAB02"), "DsWs_CardAlterAdmit");
+	util.setCompBindRefresh("DsWs_CardAlterAdmit");
+	util.setRowPosition(DsWs_CardAlterAdmit, 0);
+	    
+    //trace(DOBJ_CardAlterAdmit.Contents);
+    //trace(DsWs_CardAlterAdmit.SaveXML());
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+    var sRspCode = DsWs_CardAlterAdmit.getCellData(0, "sRspCode");
+    var sRspText = DsWs_CardAlterAdmit.getCellData(0, "sRspCode");
+    var sAdmitNo = DsWs_CardAlterAdmit.getCellData(0, "sAdmitNo");
+    var nReqCnt = DsWs_CardAlterAdmit.getCellData(0, "nReqCnt");
+    var sRspMsg1 = DsWs_CardAlterAdmit.getCellData(0, "sRspMsg1");
+    var sRspMsg2 = DsWs_CardAlterAdmit.getCellData(0, "sRspMsg2");
+
+    //승인번호와 응답코드를 전역변수에 할당한다.
+    gsRspCode = sRspCode;
+    gsAdmitNo = sAdmitNo;
+    gnReqCnt = nReqCnt;
+    var promise = Promise.resolve();
+    promise = promise.then(function(){
+	    if (sRspCode == "D") {
+	        return wprom.alert("카드대체승인이 완료되었습니다.\n\n승인번호는 [" + sAdmitNo + "] 입니다.");
+	    } else {
+	        return wprom.alert("[대체승인]에러코드 : " + sRspCode + "\n에러메시지 : " + sRspMsg1 + "(" + sRspMsg2 + ")");
+	    }
+    });
+    promise = promise.then(function(result){
+	    //카드승인 결과를 조회한다.
+	    return scwin.getCardAdmitResult(DsWs_CardAlterAdmit);
+    });
+    return promise;
+};
+
+//**************************************************************************************************
+//  카드승인 결과를 조회한다.
+//**************************************************************************************************
+scwin.getCardAdmitResult = function(obj_result) {
+    wconv.clear(DsWs_CardAdmitResult);
+    wconv.clear(WARNING);
+    /*
+    SOBJ_Accounting.WSDL = gds.gWsdlAccounting;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Accounting, "AccountingCardTask", "selectCardAdmitDetail", "", "");
+    gfn_SetParam(MethodObj, "sReqDate", obj_result.getCellData(0, "sReqDate"));
+    gfn_SetParam(MethodObj, "sCardNo", obj_result.getCellData(0, "sCardNo"));
+    gfn_SetParam(MethodObj, "nReqCnt", obj_result.getCellData(0, "nReqCnt"));
+    var result = gfn_CallService(SOBJ_Accounting, DOBJ_CardAdmitResult, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingCardTask", "selectCardAdmitDetail", "", "");
+	MethodObj.setId("selectCardAdmitDetail");
+	//MethodObj.setParam("sAgentCode", gUserID);
+    MethodObj.setParam( "sReqDate", obj_result.getCellData(0, "sReqDate"));
+    MethodObj.setParam( "sCardNo", obj_result.getCellData(0, "sCardNo"));
+    MethodObj.setParam( "nReqCnt", obj_result.getCellData(0, "nReqCnt"));
+
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("//*/ACCAB02");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	console.log("★★★★★★★★DsWs_CardAdmitResult ★★★★★★★★★★★");
+	util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_CardAdmitResult.setJSON (_tranSync.getDsJson("ACCAB02")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("ACCAB02"), "DsWs_CardAdmitResult");
+	util.setCompBindRefresh("DsWs_CardAdmitResult");
+	util.setRowPosition(DsWs_CardAdmitResult, 0);
+    
+    //trace(DOBJ_CardAdmitResult.Contents);
+    //trace(DsWs_CardAdmitResult.SaveXML());
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+    if (DsWs_CardAdmitResult.getCellData(0, "result") == "0") {
+        wprom.alert("해당 데이터가 존재하지 않습니다.");
+        return;
+    } else {
+        div0.setSrc("/ui/cbsc/CBSC139S.xml");// = "accpopup::9990_Div2.xml"; //카드승인결과화면	
+        //scwin.init1();
+        Btn_Req.setDisabled(true);
+        Btn_New.setDisabled(true);
+    }
+};
+
+//**************************************************************************************************
+//  카드인증 요청을 한다.
+//**************************************************************************************************
+scwin.requestCardCert = function() {
+    var promise = Promise.resolve();
+    promise = promise.then(function(rst){
+
+    wconv.clear(DsWs_CardCert);
+    wconv.clear(WARNING);
+    /*orign
+    SOBJ_Accounting.WSDL = gds.gWsdlAccounting;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Accounting, "AccountingCardTask", "requestCardCert", "", "");
+    //gfn_SetParam(MethodObj, "sApplyNo", Div0.sApplyNo.value);
+    gfn_SetParam(MethodObj, "sApplyNo", sApplyType.getValue() + sApplyYM.getValue() + sApplySer.getValue()); //2012-02-29 서영지 수정
+    gfn_SetParam(MethodObj, "sCardNo", sCardNo.getValue());
+    gfn_SetParam(MethodObj, "nReqAmt", nReqAmt.getValue());
+    gfn_SetParam(MethodObj, "sCardOwner", sCardOwner.getValue());
+    gfn_SetParam(MethodObj, "sValidThru", sValidThruYYYY.getValue() + sValidThruMM.getValue());
+    gfn_SetParam(MethodObj, "nInstall", scwin.getInstallment());
+    gfn_SetParam(MethodObj, "sCardOwnerID", sCardOwnerID.getValue());
+    gfn_SetParam(MethodObj, "sSettleType", "CXX");
+    gfn_SetParam(MethodObj, "sReqAgnt", sReqAgnt.getValue()); //2010-10-11 서영지 추가. KCBI대리점판매관련
+    gfn_SetParam(MethodObj, "sInsType", sInsType.getValue()); //2010-10-11 서영지 추가. KCBI대리점판매관련
+    gfn_SetParam(MethodObj, "sUserID", util.getGdsValue("gUserID"));
+
+    //2008-10-08 서영지 추가. 롯데에듀카드 추가 관련
+    gfn_SetParam(MethodObj, "sCardCom", sCardCom.getValue()); //카드사
+    gfn_SetParam(MethodObj, "sInsGrp", sInsGrp.getValue()); //상품구분
+    //2012-03-26 서영지 추가. 하나sk임직원 청구할인 관련
+    gfn_SetParam(MethodObj, "sApplyType", sApplyType.getValue());
+    gfn_SetParam(MethodObj, "sApplyYM", sApplyYM.getValue());
+    gfn_SetParam(MethodObj, "sApplySer", sApplySer.getValue());
+    gfn_SetParam(MethodObj, "sSupportCardType", sSupportCardType.getValue());
+    gfn_SetParam(MethodObj, "sCashbagYN", sCashbagYN.getValue()); //2016-03-28 이재정. 캐쉬백대상여부 추가
+    var result = gfn_CallService(SOBJ_Accounting, DOBJ_CardCert, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingCardTask", "requestCardCert");
+	MethodObj.setId("requestCardCert");
+    MethodObj.setParam("sApplyNo", sApplyType.getValue() + sApplyYM.getValue() + sApplySer.getValue()); //2012-02-29 서영지 수정
+    MethodObj.setParam("sCardNo", sCardNo.getValue());
+    MethodObj.setParam("nReqAmt", nReqAmt.getValue());
+    MethodObj.setParam("sCardOwner", sCardOwner.getValue());
+    MethodObj.setParam("sValidThru", sValidThruYYYY.getValue() + sValidThruMM.getValue());
+    MethodObj.setParam("nInstall", scwin.getInstallment());
+    MethodObj.setParam("sCardOwnerID", sCardOwnerID.getValue());
+    MethodObj.setParam("sSettleType", "CXX");
+    MethodObj.setParam("sReqAgnt", sReqAgnt.getValue()); //2010-10-11 서영지 추가. KCBI대리점판매관련
+    MethodObj.setParam("sInsType", sInsType.getValue()); //2010-10-11 서영지 추가. KCBI대리점판매관련
+    MethodObj.setParam("sUserID", util.getGdsValue("gUserID"));
+    //2008-10-08 서영지 추가. 롯데에듀카드 추가 관련
+    MethodObj.setParam("sCardCom", sCardCom.getValue()); //카드사
+    MethodObj.setParam("sInsGrp", sInsGrp.getValue()); //상품구분
+    //2012-03-26 서영지 추가. 하나sk임직원 청구할인 관련
+    MethodObj.setParam("sApplyType", sApplyType.getValue());
+    MethodObj.setParam("sApplyYM", sApplyYM.getValue());
+    MethodObj.setParam("sApplySer", sApplySer.getValue());
+    MethodObj.setParam("sSupportCardType", sSupportCardType.getValue());
+    MethodObj.setParam("sCashbagYN", sCashbagYN.getValue()); //2016-03-28 이재정. 캐쉬백대상여부 추가
+
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("//*/ACCAB02");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_CardCert.setJSON (_tranSync.getDsJson("ACCAB02")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("ACCAB02"), "DsWs_CardCert");
+	util.setCompBindRefresh("DsWs_CardCert");
+	util.setRowPosition(DsWs_CardCert, 0);
+    
+    //trace(DOBJ_CardCert.Contents);
+    //trace(DsWs_CardCert.SaveXML());
+    if (WARNING.getRowCount() != 0) {
+    	var pro = Promise.resove();    	
+    	pro = pro.then(function(){
+        	return wprom.alert("웹서비스 이상입니다.");
+        });        
+        pro = pro.then(function(){
+        	return;
+        });
+    	return pro;
+    }
+    var sRspCode = DsWs_CardCert.getCellData(0, "sRspCode");
+    var sRspText = DsWs_CardCert.getCellData(0, "sRspCode");
+    var sAdmitNo = DsWs_CardCert.getCellData(0, "sAdmitNo");
+    var nReqCnt = DsWs_CardCert.getCellData(0, "nReqCnt");
+    var sRspMsg1 = DsWs_CardCert.getCellData(0, "sRspMsg1");
+    var sRspMsg2 = DsWs_CardCert.getCellData(0, "sRspMsg2");
+    gsVanCode = DsWs_CardCert.getCellData(0, "sVanCode"); //인증처리한 VAN사 코드
+    //승인번호와 응답코드를 전역변수에 할당한다.
+    gsRspCode = sRspCode;
+    gsAdmitNo = sAdmitNo;
+    gnReqCnt = nReqCnt;
+
+    //응답코드가 '0000'이 아닌 경우에는 에러코드를 보여준다.
+    //call상황에서는 인증이 실패해도 승인을 계속 진행시키지만 웹쪽 인증 실패시 승인 불가. 
+    //웹쪽에서 따로 구현할 사항이다.
+    if (sRspCode != "0000") {
+        //2015.08.04 이재정. N1507-00383 카드인증실패시 오류메시지 확인 변경 요청
+        var promise4 = Promise.resolve();
+        promise4 = promise4.then(function(){
+        	return wprom.alert("인증이 실패하였습니다. [" + sRspCode + "-" + sRspMsg1 + ":" + sRspMsg2 + "]");
+        });
+        promise4 = promise4.then(function(){
+        
+
+        //2009-07-14 서영지. 삼성세이브포인트관련 추가.
+        //2009-08-16 서영지. 현대카드 인증실패 추가
+        //2009-09-21 서영지. 신한카드 인증실패 추가
+        if (((sCardCom.getValue() == "0004" || sCardCom.getValue() == "0008" || 
+              sCardCom.getValue() == "0010" || sCardCom.getValue() == "0005")) && 
+              sSetPointYN.getValue() == "Y") {
+            //2015.08.04 이재정. N1507-00383 카드인증실패시 오류메시지 확인 변경 요청
+            //alert("인증이 실패하였습니다. [" + sRspMsg1 + "]");
+            return;
+        } else {
+            //2011-08-22 서영지. TM대리점인 경우 관리권한자만 인증을 계속할 수 있다.
+            /*if ( checkTMAgent() && gsTMAuthYN != "Y" ) {
+            	alert("인증이 실패하였습니다. [" + sRspMsg1 + "]");
+            	return;
+            } 일단 막음 */
+            var promise3 = Promise.resolve();
+            promise3 = promise3.then(function(rst){
+            	return wprom.confirm("인증이 실패하여 비밀번호를 입력하셔야 \n\n승인을 계속 진행할 수 있습니다. \n\n계속하시겠습니까?\n");
+            });
+            promise3 = promise3.then(function(result){
+            	if(result == true){
+	            	var promise2 = Promise.resolve();
+	                promise2 = promise2.then(function(rtnVal) {
+	                	var popInfo = {};
+	                    return wprom.popupOpen("/ui/cbso/CBSO034P.xml",popInfo);
+	                });
+	                promise2 = promise2.then(function(result) {
+	                    if (wconv.length(result) != 0) {
+	                        var sArgArr = wconv.split(result, "^");
+	                        gsForceYN = sArgArr[0];
+	                        gsForceConfUserID = sArgArr[1];
+	                        if (gsForceYN == "Y") {
+	                        	var promise1 = Promise.resolve();
+	                        	promise1 = promise1.then(function(){
+	                        		return wprom.alert("승인을 계속 진행합니다.");
+	                        	});                            
+	                        	promise1 = promise1.then(function(){
+		                            //카드승인 요청을 한다.
+		                            scwin.requestCardAdmit();
+	                            });//promise1
+	                            return promise1; 
+	                        } else {
+	                            wprom.alert("비밀번호 확인시 오류가 발생했습니다. 확인하십시오.");
+	                            return;
+	                        }
+	                    } else {
+	                        wprom.alert("비밀번호 확인시 오류가 발생했습니다. 확인하십시오.");
+	                        return;
+	                    }
+	                });//promise2
+	                return promise2; 
+	            } else {
+	                return;
+	            }
+            });//promise3
+            return promise3;
+          }
+          });//promise4
+          return promise4;  
+    } else {
+        //카드승인 요청을 한다.
+        return scwin.requestCardAdmit();
+    };
+    });       
+        
+    return promise;
+
+};
+//**************************************************************************************************
+//  카드승인 요청을 한다.
+//**************************************************************************************************
+scwin.requestCardAdmit = function() {
+    wconv.clear(DsWs_CardAdmit);
+    wconv.clear(WARNING);
+    /*ORIGN
+    SOBJ_Accounting.WSDL = gds.gWsdlAccounting;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Accounting, "AccountingCardTask", "requestCardAdmit", "", "");
+    gfn_SetParam(MethodObj, "sVanCode", gsVanCode);
+    //gfn_SetParam(MethodObj, "sApplyNo", Div0.sApplyNo.value);
+    gfn_SetParam(MethodObj, "sApplyNo", sApplyType.getValue() + sApplyYM.getValue() + sApplySer.getValue()); //2012-02-29 서영지 수정
+    gfn_SetParam(MethodObj, "sCardNo", sCardNo.getValue());
+    gfn_SetParam(MethodObj, "nReqAmt", nReqAmt.getValue());
+    gfn_SetParam(MethodObj, "sCardOwner", sCardOwner.getValue());
+    gfn_SetParam(MethodObj, "sValidThru", sValidThruYYYY.getValue() + sValidThruMM.getValue());
+    gfn_SetParam(MethodObj, "nInstall", scwin.getInstallment());
+    gfn_SetParam(MethodObj, "sBeginDate", sBeginDate.getValue());
+    gfn_SetParam(MethodObj, "sReqAgnt", sReqAgnt.getValue());
+    gfn_SetParam(MethodObj, "sCardOwnerID", sCardOwnerID.getValue());
+    gfn_SetParam(MethodObj, "sCardOwnerType", scwin.getCardOwnerType());
+    gfn_SetParam(MethodObj, "sSettleStat", "R"); //정산상태
+    gfn_SetParam(MethodObj, "sUserID", util.getGdsValue("gUserID"));
+    gfn_SetParam(MethodObj, "sCertType", "N"); //인증구분(N=일반, 인증+승인(주민번호))	
+    gfn_SetParam(MethodObj, "sSrcType", "I"); //I=소스구분(직원을 통한 승인요청)
+    gfn_SetParam(MethodObj, "sSettleType", "CXX");
+    gfn_SetParam(MethodObj, "sPointCardType", sPointCardType.getValue()); //포인트카드유형
+    gfn_SetParam(MethodObj, "sSetPointYN", sSetPointYN.getValue()); //포인트결제 여부
+    gfn_SetParam(MethodObj, "sEduCardYN", sEduCardYN.getValue()); //에듀카드 여부
+    gfn_SetParam(MethodObj, "sInsType", sInsType.getValue()); //2010-10-11 서영지 추가. KCBI대리점판매관련
+    //대상아님이면 포인트 관련 부분 초기화한다.
+    if (sPointCardType.getValue() == "00") {
+        gfn_SetParam(MethodObj, "sSetPointAmt", 0); //포인트사용점수
+        gfn_SetParam(MethodObj, "sSetCardAmt", 0); //결제예정액
+        gfn_SetParam(MethodObj, "sSetPointYN", "N"); //포인트결제여부	
+        gfn_SetParam(MethodObj, "sEduCardYN", "N"); //에듀카드여부
+        gfn_SetParam(MethodObj, "sRemainPoint", ""); //잔여포인트
+    } else {
+        gfn_SetParam(MethodObj, "sSetPointAmt", sSetPointAmt.getValue()); //포인트사용점수
+        gfn_SetParam(MethodObj, "sSetCardAmt", sSetCardAmt.getValue()); //결제예정액
+        gfn_SetParam(MethodObj, "sRemainPoint", sRemainPoint.getValue()); //잔여포인트
+    }
+
+
+    //2008-10-08 서영지 추가. 롯데에듀카드 추가 관련
+    gfn_SetParam(MethodObj, "sCardCom", sCardCom.getValue()); //카드사
+    gfn_SetParam(MethodObj, "sInsGrp", sInsGrp.getValue()); //상품구분
+    //2010-11-05 서영지 추가. 하나은행지원금 관련.
+    gfn_SetParam(MethodObj, "sSupportUseYN", sSupportUseYN.getValue()); //지원금사용여부
+    gfn_SetParam(MethodObj, "nSetSupportAmt", nSetSupportAmt.getValue()); //지원금사용금액
+    gfn_SetParam(MethodObj, "nSupportAmt", nSupportAmt.getValue()); //지원금
+    gfn_SetParam(MethodObj, "sDoerUser", gsDoerUser); //2011-08-22 서영지. TM대리점수납관련 사용인 추가
+    gfn_SetParam(MethodObj, "sManageYN", gsManageYN); //2012-02-29 서영지. 개인정보보호법 관련 관리자승인여부 추가
+    gfn_SetParam(MethodObj, "sForceYN", gsForceYN); //2012-02-29 서영지. 개인정보보호법 관련 강제승인여부 추가
+    gfn_SetParam(MethodObj, "sForceConfUserID", gsForceConfUserID); //2012-02-29 서영지. 개인정보보호법 관련 강제승인확인자 추가
+    gfn_SetParam(MethodObj, "nFreeInstall", Cmb_nInstall.getValue()); //2012-02-29 서영지. 무이자행사 추가
+    //2012-03-26 서영지 추가. 하나sk임직원 청구할인 관련
+    gfn_SetParam(MethodObj, "sApplyType", sApplyType.getValue());
+    gfn_SetParam(MethodObj, "sApplyYM", sApplyYM.getValue());
+    gfn_SetParam(MethodObj, "sApplySer", sApplySer.getValue());
+    gfn_SetParam(MethodObj, "sSupportCardType", sSupportCardType.getValue());
+    gfn_SetParam(MethodObj, "sJoinCardType", sJoinCardType.getValue()); //2012-04-25 서영지. 제휴카드구분 추가.
+    gfn_SetParam(MethodObj, "sCashbagYN", sCashbagYN.getValue()); //2016-03-28 이재정. 캐쉬백대상여부 추가
+    var result = gfn_CallService(SOBJ_Accounting, DOBJ_CardAdmit, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingCardTask", "requestCardAdmit");
+	MethodObj.setId("requestCardAdmit");
+	
+    MethodObj.setParam("sVanCode", gsVanCode);
+    //MethodObj.setParam("sApplyNo", Div0.sApplyNo.value);
+    MethodObj.setParam("sApplyNo", sApplyType.getValue() + sApplyYM.getValue() + sApplySer.getValue()); //2012-02-29 서영지 수정
+    MethodObj.setParam("sCardNo", sCardNo.getValue());
+    MethodObj.setParam("nReqAmt", nReqAmt.getValue());
+    MethodObj.setParam("sCardOwner", sCardOwner.getValue());
+    MethodObj.setParam("sValidThru", sValidThruYYYY.getValue() + sValidThruMM.getValue());
+    MethodObj.setParam("nInstall", scwin.getInstallment());
+    MethodObj.setParam("sBeginDate", sBeginDate.getValue());
+    MethodObj.setParam("sReqAgnt", sReqAgnt.getValue());
+    MethodObj.setParam("sCardOwnerID", sCardOwnerID.getValue());
+    MethodObj.setParam("sCardOwnerType", scwin.getCardOwnerType());
+    MethodObj.setParam("sSettleStat", "R"); //정산상태
+    MethodObj.setParam("sUserID", util.getGdsValue("gUserID"));
+    MethodObj.setParam("sCertType", "N"); //인증구분(N=일반, 인증+승인(주민번호))	
+    MethodObj.setParam("sSrcType", "I"); //I=소스구분(직원을 통한 승인요청)
+    MethodObj.setParam("sSettleType", "CXX");
+    MethodObj.setParam("sPointCardType", sPointCardType.getValue()); //포인트카드유형
+    MethodObj.setParam("sSetPointYN", sSetPointYN.getValue()); //포인트결제 여부
+    MethodObj.setParam("sEduCardYN", sEduCardYN.getValue()); //에듀카드 여부
+    MethodObj.setParam("sInsType", sInsType.getValue()); //2010-10-11 서영지 추가. KCBI대리점판매관련
+    //대상아님이면 포인트 관련 부분 초기화한다.
+    if (sPointCardType.getValue() == "00") {
+        MethodObj.setParam("sSetPointAmt", 0); //포인트사용점수
+        MethodObj.setParam("sSetCardAmt", 0); //결제예정액
+        MethodObj.setParam("sSetPointYN", "N"); //포인트결제여부	
+        MethodObj.setParam("sEduCardYN", "N"); //에듀카드여부
+        MethodObj.setParam("sRemainPoint", ""); //잔여포인트
+    } else {
+        MethodObj.setParam("sSetPointAmt", sSetPointAmt.getValue()); //포인트사용점수
+        MethodObj.setParam("sSetCardAmt", sSetCardAmt.getValue()); //결제예정액
+        MethodObj.setParam("sRemainPoint", sRemainPoint.getValue()); //잔여포인트
+    }
+
+
+    //2008-10-08 서영지 추가. 롯데에듀카드 추가 관련
+    MethodObj.setParam("sCardCom", sCardCom.getValue()); //카드사
+    MethodObj.setParam("sInsGrp", sInsGrp.getValue()); //상품구분
+    //2010-11-05 서영지 추가. 하나은행지원금 관련.
+    MethodObj.setParam("sSupportUseYN", sSupportUseYN.getValue()); //지원금사용여부
+    MethodObj.setParam("nSetSupportAmt", nSetSupportAmt.getValue()); //지원금사용금액
+    MethodObj.setParam("nSupportAmt", nSupportAmt.getValue()); //지원금
+    MethodObj.setParam("sDoerUser", gsDoerUser); //2011-08-22 서영지. TM대리점수납관련 사용인 추가
+    MethodObj.setParam("sManageYN", gsManageYN); //2012-02-29 서영지. 개인정보보호법 관련 관리자승인여부 추가
+    MethodObj.setParam("sForceYN", gsForceYN); //2012-02-29 서영지. 개인정보보호법 관련 강제승인여부 추가
+    MethodObj.setParam("sForceConfUserID", gsForceConfUserID); //2012-02-29 서영지. 개인정보보호법 관련 강제승인확인자 추가
+    MethodObj.setParam("nFreeInstall", "");//goo Cmb_nInstall.getValue()); //2012-02-29 서영지. 무이자행사 추가
+    //2012-03-26 서영지 추가. 하나sk임직원 청구할인 관련
+    MethodObj.setParam("sApplyType", sApplyType.getValue());
+    MethodObj.setParam("sApplyYM", sApplyYM.getValue());
+    MethodObj.setParam("sApplySer", sApplySer.getValue());
+    MethodObj.setParam("sSupportCardType", sSupportCardType.getValue());
+    MethodObj.setParam("sJoinCardType", sJoinCardType.getValue()); //2012-04-25 서영지. 제휴카드구분 추가.
+    MethodObj.setParam("sCashbagYN", sCashbagYN.getValue()); //2016-03-28 이재정. 캐쉬백대상여부 추가
+    	
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("//*/ACCAB02");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_CardAdmit.setJSON (_tranSync.getDsJson("ACCAB02")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("ACCAB02"), "DsWs_CardAdmit");
+	util.setCompBindRefresh("DsWs_CardAdmit");
+	util.setRowPosition(DsWs_CardAdmit, 0);
+    
+    //trace(DOBJ_CardAdmit.Contents);
+    //trace(DsWs_CardAdmit.SaveXML());
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+    var sRspCode = DsWs_CardAdmit.getCellData(0, "sRspCode");
+    var sRspText = DsWs_CardAdmit.getCellData(0, "sRspCode");
+    var sAdmitNo = DsWs_CardAdmit.getCellData(0, "sAdmitNo");
+    var nReqCnt = DsWs_CardAdmit.getCellData(0, "nReqCnt");
+    var sRspMsg1 = DsWs_CardAdmit.getCellData(0, "sRspMsg1");
+    var sRspMsg2 = DsWs_CardAdmit.getCellData(0, "sRspMsg2");
+    var sRspMsg3 = DsWs_CardAdmit.getCellData(0, "sRspMsg3"); //2009-09-21 서영지. 신한하이세이브 관련 추가. 약정해지결과메세지	
+    //승인번호와 응답코드를 전역변수에 할당한다.
+    gsRspCode = sRspCode;
+    gsAdmitNo = sAdmitNo;
+    gnReqCnt = nReqCnt;
+    
+    var promise = Promise.resolve();
+    promise = promise.then(function(rst){
+	    if (sRspCode == "0000") {
+	        //2010-05-06 유연재 추가(고객신용관련 로그)
+	        gfn_LogCreditInfo("", "", "S", sCardOwnerID.getValue());
+	        return wprom.alert("카드승인이 완료되었습니다.\n\n승인번호는 [" + sAdmitNo + "] 입니다.");
+	    } else {
+	        return wprom.alert("[승인]에러코드 : " + sRspCode + "\n에러메시지 : " + sRspMsg1 + "(" + sRspMsg2 + ")" + sRspMsg3);
+	    }
+    });
+    promise = promise.then(function(rst){
+	    //카드승인 결과를 조회한다.
+	    return scwin.getCardAdmitResult(DsWs_CardAdmit);
+	});
+	return promise;    
+};
+//**************************************************************************************************
+// 할부개월을 구한다. 
+//**************************************************************************************************
+scwin.getInstallment = function() {
+    var strInstall = nInstall.getValue();
+
+    //할부 1개월인 경우(할부가 아닌 경우)는 할부개월에 '0'을 세팅해야 한다.
+    if (wconv.length(strInstall) > 0) {
+        if (strInstall == 1) {
+            return 0;
+        }
+    } else {
+        return 0;
+    }
+    return strInstall;
+};
+
+//**************************************************************************************************
+// 카드소유자 형태(주민번호 또는 사업자번호)를 구한다.
+//**************************************************************************************************
+scwin.getCardOwnerType = function() {
+    var sCardOwnerType = "";
+    if (wconv.length(sCardOwnerID.getValue()) == 13) {
+        sCardOwnerType = "J"; //주민번호
+    } else if (wconv.length(sCardOwnerID.getValue()) == 10) {
+        sCardOwnerType = "S"; //사업자번호
+    }
+    return sCardOwnerType;
+};
+
+//**************************************************************************************************
+//  포인트 카드인 경우, 포인트를 조회한다.
+//**************************************************************************************************
+scwin.requestCardPoint = function() {
+    //2009-09-21 서영지 추가. 신한하이세이브 관련 포인트구분 체크. 마이포인트,하이세이브만 선택 가능하다.
+    if (sPointCardType.getValue() == "20" || sPointCardType.getValue() == "40") {
+    } else {
+        if (sCardCom.getValue() == "0010" || sCardCom.getValue() == "0005") {
+            wprom.alertF("신한카드의 포인트구분은 마이포인트, 하이세이브 둘 중 하나만 선택 가능합니다. 확인하십시오.",{},sPointCardType);
+            //sPointCardType.focus();
+            return;
+        }
+    }
+
+
+
+    //2009-07-14 서영지 추가. 삼성세이브포인트관련. 
+    //2009-08-06 서영지 추가. 신한마이포인트관련 신한카드(0010,0005) 추가.
+    //2009-08-16 서영지 추가. 현대세이브포인트관련 현대카드(0008) 추가.
+    //2009-09-21 서영지 추가. 신한하이세이브관련 10만원 조회조건 추가.
+    //2011-06-27 서영지 추가. 외환YESPOINT관련 외환카드(0003,1003,8003) 추가.
+    //if ( Div0.sCardCom.value == "0001" || Div0.sCardCom.value == "0008" ) {
+    if (sCardCom.getValue() == "0001" || sCardCom.getValue() == "0008" || sCardCom.getValue() == "0003" || 
+       sCardCom.getValue() == "1003" || sCardCom.getValue() == "8003") {
+       //null
+    } else if (sCardCom.getValue() == "0010" || sCardCom.getValue() == "0005") {
+        if (sPointCardType.getValue() == "40" && wconv.toNumber(nReqAmt.getValue()) < 100000) {
+            wprom.alertF("승인금액이 100,000원 이상인 경우에만 세이브포인트를 조회할 수 있습니다. 확인하십시오.",{},nReqAmt);
+            //nReqAmt.focus();
+            return;
+        }
+    } else if (sCardCom.getValue() == "0004") {
+        // [N1704-00042] 삼성카드 세이브결제 프로그램 수정 2017.04.05. 여경수 
+        if (sPointCardType.getValue() == "40" && wconv.toNumber(nReqAmt.getValue()) < 350000) {
+            wprom.alertF("승인금액이 350,000원 이상인 경우에만 포인트를 조회할 수 있습니다. 확인하십시오.",{},nReqAmt);
+            //nReqAmt.focus();
+            return;
+        }
+    } else {
+        wprom.alert("비씨카드, 삼성카드, 신한카드, 현대카드, 외환카드만 포인트를 조회할 수 있습니다. 확인하십시오.");
+        return;
+    }
+
+
+    //화면의 입력값을 체크한다.
+    if (!scwin.checkValue()) {
+        return;
+    }
+    wconv.clear(DsWs_CardPoint);
+    wconv.clear(WARNING);    
+    sSetPointYN.setDisabled(true);    
+    sSetPointYN.setValue("N"); //포인트결제=아니오
+    scwin.sSetPointYN_OnClick(); //포인트 계산 //div1 소스
+    /*
+    SOBJ_Accounting.WSDL = gds.gWsdlAccounting;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Accounting, "AccountingCardTask", "requestCardPoint", "", "");
+    gfn_SetParam(MethodObj, "sCardNo", sCardNo.getValue());
+    gfn_SetParam(MethodObj, "sValidThru", sValidThruYYYY.getValue() + sValidThruMM.getValue());
+    gfn_SetParam(MethodObj, "sPointCardType", sPointCardType.getValue()); //포인트구분
+    gfn_SetParam(MethodObj, "sCardCom", sCardCom.getValue()); //카드사코드
+    gfn_SetParam(MethodObj, "nReqAmt", wconv.toNumber(nReqAmt.getValue())); //2009-07-15 서영지 추가
+    gfn_SetParam(MethodObj, "sCardOwnerID", sCardOwnerID.getValue()); //2009-07-15 서영지 추가
+    //gfn_SetParam(MethodObj, "sVanCode", "N" );//2009-08-16 서영지. 현대카드 관련 추가. 임시로 VAN사를 NICE로 고정한다.
+    gfn_SetParam(MethodObj, "sVanCode", "K");
+    gfn_SetParam(MethodObj, "sUserID", util.getGdsValue("gUserID"));
+    var result = gfn_CallService(SOBJ_Accounting, DOBJ_CardPoint, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingCardTask", "requestCardPoint");
+	MethodObj.setId("getAgentList");
+	
+    MethodObj.setParam( "sCardNo", sCardNo.getValue());
+    MethodObj.setParam( "sValidThru", sValidThruYYYY.getValue() + sValidThruMM.getValue());
+    MethodObj.setParam( "sPointCardType", sPointCardType.getValue()); //포인트구분
+    MethodObj.setParam( "sCardCom", sCardCom.getValue()); //카드사코드
+    MethodObj.setParam( "nReqAmt", wconv.toNumber(nReqAmt.getValue())); //2009-07-15 서영지 추가
+    MethodObj.setParam( "sCardOwnerID", sCardOwnerID.getValue()); //2009-07-15 서영지 추가
+    //MethodObj.setParam( "sVanCode", "N" );//2009-08-16 서영지. 현대카드 관련 추가. 임시로 VAN사를 NICE로 고정한다.
+    MethodObj.setParam( "sVanCode", "K");
+    MethodObj.setParam( "sUserID", util.getGdsValue("gUserID"));
+
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("//*/ADMAC03");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_CardPoint.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("ADMAC03"), "DsWs_CardPoint");
+	util.setCompBindRefresh("DsWs_CardPoint");
+	util.setRowPosition(DsWs_CardPoint, 0);
+    
+    //trace(DOBJ_CardPoint.Contents);
+    //trace(DsWs_CardPoint.SaveXML());
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+    if (DsWs_CardPoint.getCellData(0, "sAdmitNo") == "00000000") {
+        sCardName.setValue(DsWs_CardPoint.getCellData(0, "sCardName")); //카드발급사명
+        sPointScore.setValue(DsWs_CardPoint.getCellData(0, "sPointScore")); //포인트점수
+        sRemainPoint.setValue(DsWs_CardPoint.getCellData(0, "sPointScore")); //잔여포인트점수
+        //2010-05-06 유연재 추가(고객신용관련 로그)
+        gfn_LogCreditInfo("", "", "S", sCardOwnerID.getValue());
+
+        //비씨탑포인트
+        if (sCardCom.getValue() == "0001") {
+            sSetPointYN.setDisabled(false); //포인트결제 radio button을 활성화한다.
+            wprom.alert("조회된 Top Point는 청구여부에 따라 변경될 수 있습니다."); //포인트가 승인시점이 아닌 청구시점에 차감됨을 사용자에게 알린다.
+        } else if (sCardCom.getValue() == "0004") {
+            var sRspCode = DsWs_CardPoint.getCellData(0, "sRspCode");
+            if (sRspCode == "01") {
+                sSetPointYN.setDisabled(false); //포인트결제 활성화
+            } else if (sRspCode == "02") {
+            	var promise1 = Promise.resolve();
+            	promise1 = promise1.then(function(rst){
+            		return wprom.confirm(DsWs_CardPoint.getCellData(0, "sRspMsg1"));
+                });
+            	promise1 = promise1.then(function(result){
+	                if (result == true) {
+	                    //물음에 예로 답하면 포인트결제 활성화.
+	                    sSetPointYN.setDisabled(false); //포인트결제 활성화
+	                    sSetPointYN.setValue("Y"); //포인트결제=예
+	                    scwin.sSetPointYN_OnClick(); //포인트 계산
+	                }
+	                return;
+                });
+				return promise1;			                
+            }
+        } else if (sCardCom.getValue() == "0010" || sCardCom.getValue() == "0005") {
+            sSetPointYN.setDisabled(false); //포인트결제 활성화
+            //신한마이포인트. 2009-09-21 서영지 추가.
+            if (sPointCardType.getValue() == "20") {
+                wprom.alert("조회된 My Point는 청구여부에 따라 변경될 수 있습니다."); //포인트가 승인시점이 아닌 청구시점에 차감됨을 사용자에게 알린다.
+                return;
+            }
+        } else if (sCardCom.getValue() == "0008") {
+            sSetPointYN.setDisabled(false); //포인트결제 활성화
+        } else if (sCardCom.getValue() == "0003" || sCardCom.getValue() == "1003" || sCardCom.getValue() == "8003") {
+            if (wconv.toNumber(DsWs_CardPoint.getCellData(0, "sPointScore")) > 5000) {
+                sSetPointYN.setDisabled(false); //포인트결제 활성화
+                wprom.alert("조회된 Yes Point는 청구여부에 따라 변경될 수 있습니다."); //포인트가 승인시점이 아닌 청구시점에 차감됨을 사용자에게 알린다.
+                return;
+            }
+        }
+    } else {
+    	var promise = Promise.resolve();
+	    promise = promise.then(function(rst){
+	        //2009-09-21 서영지. 신한하이세이브 관련 추가.	
+	        if (sCardCom.getValue() == "0004" || sCardCom.getValue() == "0010" || sCardCom.getValue() == "0005") {
+	            return wprom.alert(DsWs_CardPoint.getCellData(0, "sRspMsg1"));
+	        } else {
+	            return wprom.alert("포인트 조회시 오류가 발생하였습니다. \n[오류코드:" + DsWs_CardPoint.getCellData(0, "sAdmitNo") + "] " + DsWs_CardPoint.getCellData(0, "sRspMsg1"));
+	        }
+		});
+		promise = promise.then(function(rst){
+	        //포인트 점수 부분을 초기화한다.
+	        return scwin.initPointAmt();
+        });
+        return promise;
+    }
+};
+
+//**************************************************************************************************
+// 포인트 점수 부분을 초기화한다.
+//**************************************************************************************************
+scwin.initPointAmt = function() {
+    sPointScore.setValue(""); //포인트점수
+    sRemainPoint.setValue(""); //잔여포인트점수
+    sPointReqAmt.setValue(""); //카드승인액
+    sSetPointAmt.setValue(""); //포인트사용
+    sSetCardAmt.setValue(""); //결제예정액
+    sSetPointYN.setValue("N"); //포인트결재여부
+};
+
+//**************************************************************************************************
+// 승인번호와 응답코드를 Opener에게 넘겨준다.
+//**************************************************************************************************
+scwin.setCardResult = function() {
+    //정상승인이 되면 팝업창의 값을 넘겨준다. 오류인 경우 넘겨주지 않음. 지명근 과장님 요청 2003-12-02
+    //대체승인인 경우, gsRspCode가 "D"인 것을 정상승인으로 해서 넘겨준다. 2004-06-23. 서영지 수정. 조경현씨 요청.
+    if (gsRspCode == "0000" || gsRspCode == "D") {
+        parentWin.ds_AccCardReq.setCellData(0, "gsAdmitNo", gsAdmitNo);
+        parentWin.ds_AccCardReq.setCellData(0, "gsRspCode", gsRspCode);
+        parentWin.ds_AccCardReq.setCellData(0, "gnReqCnt", gnReqCnt);
+        var sadmin = parentWin.ds_AccCardReq.getCellData(0, "gsAdmitNo"); 
+        //trace("sadmin" + sadmin);
+    }
+};
+
+//**************************************************************************************************
+//  사원명을 조회한다.
+//**************************************************************************************************
+scwin.getEmpName = function() {
+    var sReqAgnt1 = sReqAgnt.getValue();
+    if (wconv.length(sReqAgnt1) != 7) {
+        sReqAgnt.setValue("");
+        sReqAgntName.setValue("");
+        wprom.alertF("존재하지 않는 사원번호입니다.",{},sReqAgnt);
+        //sReqAgnt.focus();
+        return;
+    }
+    wconv.clear(DsWs_SelectEmpName);
+    wconv.clear(WARNING);
+    /*
+    SOBJ_Accounting.WSDL = gds.gWsdlAccounting;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Accounting, "AccountingCommonTask", "selectAgentInfo", "", "");
+    gfn_SetParam(MethodObj, "sEmpNo", sReqAgnt);
+    var result = gfn_CallService(SOBJ_Accounting, DOBJ_SelectEmpName, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingCommonTask", "selectAgentInfo");
+	MethodObj.setId("selectAgentInfo");
+    MethodObj.setParam( "sEmpNo", sReqAgnt1);
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("//*/ADMAB01");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_SelectEmpName.setJSON (_tranSync.getDsJson("ADMAB01")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("ADMAB01"), "DsWs_SelectEmpName");
+	util.setCompBindRefresh("DsWs_SelectEmpName");
+	util.setRowPosition(DsWs_SelectEmpName, 0);
+    
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+    if (wconv.length(DsWs_SelectEmpName.getCellData(0, "sEmpNo")) == 0) {
+        sReqAgnt.setValue("");
+        sReqAgntName.setValue("");
+        wprom.alertF("존재하지 않는 사원번호입니다.",{},sReqAgnt);
+        //sReqAgnt.focus();
+    } else {
+        sReqAgntName.setValue(DsWs_SelectEmpName.getCellData(0, "sEmpName"));
+    }
+};
+
+//**************************************************************************************************
+// 닫기
+//**************************************************************************************************
+scwin.Btn_Close_OnClick = function(e) {
+    scwin.setCardResult();
+    wprom.close(fv_args.idx);
+};
+
+//장현 2014-07-24 화면의 닫기버튼을 누르지 않고 'X' 버튼으로 화면 닫을때 승인번호가 세팅되지 않아
+//Btn_Close_OnClick 메소드 호출하도록 변경 처리 함
+scwin.OnUnloadCompleted = function(obj) {
+    scwin.Btn_Close_OnClick(object(Btn_Close.id));
+};
+
+//**************************************************************************************************
+// 2010-11-05 서영지 하나은행지원금 관련 추가.
+// 자동차보험이고, 지원금대상 카드인 경우 지원금 사용 가능 여부를 조회한다.
+//**************************************************************************************************
+scwin.checkSupportYN = function() {
+    //지원금카드대상 아니면 초기화하고 return
+    if (sSupportCardType.getValue() != "10") {
+        scwin.initSupport();
+        return;
+    }
+    if (sInsGrp.getValue() != "0") {
+        return;
+    }
+    //자동차보험 아니면 return
+    if (sCardOwnerID.getValue() == "") {
+        return;
+    }
+    //카드소유자id 없으면 return
+    if (sCardCom.getValue() == "") {
+        return;
+    }
+    //카드사코드 없으면 return
+    wconv.clear(DsWs_Support);
+    wconv.clear(WARNING);
+    /*
+    SOBJ_Accounting.WSDL = gds.gWsdlAccounting;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Accounting, "AccountingCardTask", "selectSupportYN", "", "");
+    gfn_SetParam(MethodObj, "sCardOwnerID", sCardOwnerID.getValue());
+    gfn_SetParam(MethodObj, "sCardCom", sCardCom.getValue());
+    gfn_SetParam(MethodObj, "sCardBinCode", wconv.substr(sCardNo.getValue(), 0, 6));
+    var result = gfn_CallService(SOBJ_Accounting, DOBJ_Support, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.accounting.task.AccountingCardTask", "selectSupportYN");
+	MethodObj.setId("selectSupportYN");
+    MethodObj.setParam("sCardOwnerID", sCardOwnerID.getValue());
+    MethodObj.setParam("sCardCom", sCardCom.getValue());
+    MethodObj.setParam("sCardBinCode", wconv.substr(sCardNo.getValue(), 0, 6));
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("//*/ADMAC03");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_Support.setJSON (_tranSync.getDsJson("ADMAC03")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("ADMAC03"), "DsWs_Support");
+	util.setCompBindRefresh("DsWs_Support");
+	util.setRowPosition(DsWs_Support, 0);
+    
+    //trace(DOBJ_Support.Contents);
+    //trace(DsWs_Support.SaveXML());
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+    scwin.initSupport(); //지원금내역 초기화
+    //기사용내역이 없으면 지원금내역 세팅
+    if (DsWs_Support.getCellData(0, "sSupportYN") == "Y") {
+        //지원대상여부
+        sSupportUseYN.setValue("Y"); //지원금사용여부=예. 2012-03-14 서영지 추가.
+        nSupportAmt.setValue(DsWs_Support.getCellData(0, "nSupportAmt")); //지원금 
+        sSupportUseYN.setDisabled(false);
+        sSupportMsg1.setValue(":: 하나은행지원금은 1회로 한정. 잔액은 추후 사용 불가하며 TOP포인트와 함께 사용 가능합니다.");
+        sSupportMsg2.setValue("   단, Top포인트 + 하나은행지원금 중복 사용시 Top 포인트가 우선 차감됩니다.");
+        sSupportMsg3.setValue(":: 하나은행지원금은 반드시 계약자의 동의 후 진행되어야 합니다.");
+        scwin.calcSupportAmt(); //지원금 계산. 2012-03-14 서영지 추가
+    }
+};
+
+//**************************************************************************************************
+// 2010-11-05 서영지 하나은행지원금 관련 추가.
+// 지원금내역 초기화한다.
+//**************************************************************************************************
+scwin.initSupport = function() {
+    sSupportUseYN.setValue("N"); //지원금사용여부=아니오
+    nSupportAmt.setValue(0); //지원금
+    nSetSupportAmt.setValue(0); //지원금사용금액 
+    nFinalCardAmt.setValue(0); //지원후결제예정액 
+    sSupportMsg1.setValue(""); //지원금 메세지	
+    sSupportMsg2.setValue(""); //지원금 메세지	
+    sSupportMsg3.setValue(""); //지원금 메세지	
+    sSupportUseYN.setDisabled(true);
+};
+
+/*******************************************/
+//  원래 newclaim/svcxml/Script/Accounting_Script.js 에 있는 소스.
+//  2011.09.02  장현. 
+// 개인정보 별표 처리
+//  sGb(주민번호:"1",카드번호:"2",계좌번호:"3") 
+//  sPrivateNo - 실제 개인정보번호
+/*******************************************/
+scwin.convertPriInfo = function(sGb, sPrivateNo) {
+    var sConvertNo = sPrivateNo;
+    //주민번호
+    if (sGb == "1") {
+        sConvertNo = wconv.substr(sPrivateNo, 0, 6) + "-" + wconv.substr(sPrivateNo, 6, 1) + scwin.convertStar(wconv.substr(sPrivateNo, 7,6));
+    } else if (sGb == "2") {
+        sConvertNo = wconv.substr(sPrivateNo, 0, 12) + scwin.convertStar(wconv.substr(sPrivateNo, 12));
+    } else if (sGb == "3") {
+        sConvertNo = wconv.substr(sPrivateNo, 0, 5) + scwin.convertStar(wconv.substr(sPrivateNo, 5));
+    }
+    return sConvertNo;
+};
+
+/*******************************************/
+//  원래 newclaim/svcxml/Script/Accounting_Script.js 에 있는 소스.
+//  2011.09.02  장현
+// 문자길이 만큼 * 로 치환하여 리턴
+/*******************************************/
+scwin.convertStar = function(sValue) {
+    var sStar="";
+    for (var i = 0; i < wconv.length(sValue); i++) {
+        sStar += "*";
+    }
+    return sStar;
+};
+
+//**************************************************************************************************
+//  무이자할부 행사를 조회한다. 2012-02-29 서영지 추가
+//**************************************************************************************************
+scwin.getInterestFree = function() {
+    wconv.clear(DsWs_Free);
+    wconv.clear(WARNING);
+    /*
+    SOBJ_Customer.WSDL = gds.gWsdlCustomer;
+    var MethodObj = gfn_CreateMethodObj(SOBJ_Customer, "com.inswave.customer.task.CustTask", "getInterestFree", "", "");
+    gfn_SetParam(MethodObj, "sCardCom", "0" + wconv.substr(sCardCom.getValue(), 1, 3)); //카드사코드
+    gfn_SetParam(MethodObj, "sDate", gsSysDate); //현재일자
+    //trace(MethodObj.in0);	
+    var result = gfn_CallService(SOBJ_Customer, DOBJ_Free, MethodObj);
+    */
+	var MethodObj = new callService("com.inswave.customer.task.CustTask", "getInterestFree");
+	MethodObj.setId("getInterestFree");
+    MethodObj.setParam( "sCardCom", "0" + wconv.substr(sCardCom.getValue(), 1, 3)); //카드사코드
+    MethodObj.setParam( "sDate", gsSysDate); //현재일자
+	MethodObj.setUrl("/common/CBSO023PController.do");
+	MethodObj.setXPath("//*/hashtable/data[@hashkey='freeMonth']/vector/data/CUSZA06");
+	MethodObj.addXPath("//WARNING");
+	MethodObj.sync();
+	MethodObj.send();
+	//util.interfaceKey(_tranSync.result.serviceDs);
+	//DsWs_Free.setJSON (_tranSync.getDsJson("CUSZA06")); // dataset 데이터 
+	util.jSonDsCreate(_tranSync.getDsJson("CUSZA06"), "DsWs_Free");
+	util.setCompBindRefresh("DsWs_Free");
+	util.setRowPosition(DsWs_Free, 0);
+    
+    //trace(DsWs_Free.SaveXML());
+    if (WARNING.getRowCount() != 0) {
+        wprom.alert("웹서비스 이상입니다.");
+        return;
+    }
+    util.insertColumn(DsWs_Free, [        [            "sMonth",            "sMonth",            "text"        ]    ]);
+    //var insRow = util.insertRow(DsWs_Free, 0);
+    /*수작업 변환 개발자 가이드(테스트 중)
+    dataList에 row를 추가하고 setCellData를 하는 경우 첫 번째 인자를 insRow로 변경해주세요.*/
+    DsWs_Free.insertRow( 0 );
+    DsWs_Free.setCellData(0, "sMonth", "무이자행사");
+    //goo Cmb_nInstall.setSelectedIndex(0);
+    nInstall.setValue(0);
+};
+	
+	scwin.Btn_New_onclick = function(e) {
+		fv_sBtnNew = "Y";
+		scwin.init();
+	};
+	]]></script>
+    </head>
+    <body>
+        <xf:group class="cont_wrap layer" id="9990"
+            style="position:absolute; WorkArea:true;  Ver:1.0;  PidAttrib:7;height:636px; left:8px; top:8px;width:638px;"
+            userData1="카드승인요청" userData2=" OnUnloadCompleted:scwin.OnUnloadCompleted;  OnLoadCompleted:scwin.OnLoadCompleted; ">
+            <DataObjects>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+                <DataObject/>
+            </DataObjects>
+            <ServiceObjects>
+                <ServiceObject/>
+                <ServiceObject/>
+                <ServiceObject/>
+            </ServiceObjects>
+            <w2:wframe id="div0" scope="false" src="/ui/cbsc/CBSC138S.xml" style="position:absolute;height:620px; left:0px; top:0px;width:726px;" initScript=""/>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.doRequestAdmit" id="Btn_Req"
+                style="position:absolute; ImageID:btn_Input_04;  height:20px;left:424px;top:592px;width:58px;" tabIndex="2" type="anchor">
+                <xf:label><![CDATA[승인요청]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.Btn_New_onclick" id="Btn_New"
+                style="position:absolute; ImageID:btn_Input_03;  height:20px;left:505px;top:592px;width:45px;" tabIndex="4" type="anchor">
+                <xf:label><![CDATA[새작업]]></xf:label>
+            </xf:trigger>
+            <xf:trigger class="popup_top_btn" ev:onclick="scwin.Btn_Close_OnClick" id="Btn_Close"
+                style="position:absolute; ImageID:btn_Input_02;  height:20px;left:573px;top:592px;" tabIndex="3" type="anchor">
+                <xf:label><![CDATA[닫기]]></xf:label>
+            </xf:trigger>
+        </xf:group>
+    </body>
+</html>
