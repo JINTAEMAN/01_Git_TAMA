@@ -19,15 +19,15 @@ https://github.com/JINTAEMAN/01_Git_TAMA   ----> INTAEMAN/22tadhtlqenf!
 3. D:\91_Git_TAMA\01_TEST 폴더: 마우스 우 클릭 ==> GitExt Open repository
  
 03. 저장소 수정 테스트 @@@
-1. D:\91_Git_TAMA\01_TEST 폴더에서 T_01.sql 파일 생성
+1. D:\91_Git_TAMA\01_TEST 폴더에서 01. Git Extensions 설정 방법.sql 파일 생성
 2. Git Extensions 화면에서 Tab(Commit(1))로 표시됨  ==> Commit(1)): 클릭
 3. Commit 화면(새창)
- 1)  T_01.sql 파일 ==> Stage 버튼 클릭
+ 1)  01. Git Extensions 설정 방법.sql 파일 ==> Stage 버튼 클릭
  2) Comment messsage: [DEV] [SI-메뉴얼게시판] [공통] [진태만] AS 게시판 관련 수정
  3) Commit: 클릭
  4) Process(새창) 
   Done   ==> OK: 클릭
-4. ▶ main [DEV] [SI-메뉴얼게시판] [공통] [진태만] AS 게시판 관련 수정  ===> 표시됨 ■■■ 
+4. ▶ main [DEV] [SI-메뉴얼게시판] [공통] [진태만] Git Extensions 설정 방법  ===> 표시됨 ■■■ 
 ----------------------------------------------------------------------------------------------------
 
 5. Git Extensions 화면에서 Tab(▲) : 클릭
@@ -37,11 +37,9 @@ https://github.com/JINTAEMAN/01_Git_TAMA   ----> INTAEMAN/22tadhtlqenf!
    다. Process(새창) 
     Done  ==> OK: 클릭 
  2) Push 확인
-   가. https://github.com/JINTAEMAN/01_TEST ==> JINTAEMAN/01_TEST  
-JINTAEMAN [DEV] [SI-메뉴얼게시판] [공통] [진태만] Git Extensions 설정 방법_02	f0f04ba		1 minute ago	  4 commits
-T_01.sql				[DEV] [SI-메뉴얼게시판] [공통] [진태만] AS 게시판 관련 수정			5 minutes ago
-T_02_remote.txt	T_02_remote.txt					2 hours ago
-T_03.sql				[DEV] [SI-메뉴얼게시판] [공통] [진태만] Git Extensions 설정 방법_02 	2 minutes ago	===> 표시됨 ■■■ 
+   가. https://github.com/JINTAEMAN/01_Git_TAMA==> JINTAEMAN/01_Git_TAMA  
+JINTAEMAN 			[DEV] [SI-메뉴얼게시판] [공통] [진태만] Git Extensions 설정 방법 	f0f04ba		1 minute ago	  4 commits    ===> 표시됨 ■■■
+01. Git Extensions 설정 방법.sql	[DEV] [SI-메뉴얼게시판] [공통] [진태만] Git Extensions 설정 방법_02	2 minutes ago 
 ==================================================================================================================
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 
 +----------------------------------------------------// End //----------------------------------------------------+
